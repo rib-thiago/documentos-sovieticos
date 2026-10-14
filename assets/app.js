@@ -6,7 +6,12 @@
      #/doc/:id              → documento (N colunas)
    ========================================================= */
 
-const state = { manifest: null, cache: new Map(), activeCollection: null };
+const state = {
+  manifest: null,
+  cache: new Map(),
+  activeCollection: null,
+  viewMode: "reading", // "reading" | "parallel"
+};
 
 async function fetchText(url) {
   const r = await fetch(encodeURI(url), { cache: "no-cache" });
@@ -19,9 +24,7 @@ async function fetchJSON(url) {
   return r.json();
 }
 
-/* ---------- Utilidade: resolve URL relativa para absoluta ----------
-   Necessário porque o navegador resolve `url(...)` em custom properties
-   relativamente ao CSS (que está em /assets/), não ao HTML.             */
+/* ---------- Utilidade: resolve URL relativa para absoluta ---------- */
 function absURL(path) {
   return new URL(path, document.baseURI).href;
 }
@@ -114,12 +117,34 @@ function inline(text) {
     .replace(/\*(.+?)\*/g, "<em>$1</em>");
 }
 
+/* ---------- Idiomas ---------- */
+
+function baseLanguageCode(langs) {
+  if (langs.some(l => l.code === "pt")) return "pt";
+  if (langs.some(l => l.code === "en")) return "en";
+  return langs[0].code;
+}
+
+/* ---------- Modo de visualização ---------- */
+
+function setViewMode(mode) {
+  state.viewMode = mode;
+  try { localStorage.setItem("viewMode", mode); } catch (e) {}
+  document.querySelectorAll(".doc-toolbar .mode-btn").forEach(b => {
+    b.classList.toggle("active", b.dataset.mode === mode);
+  });
+  const article = document.querySelector("article.doc");
+  if (article) {
+    article.classList.remove("mode-reading", "mode-parallel");
+    article.classList.add("mode-" + mode);
+  }
+}
+
 /* ---------- Navegação no topo ---------- */
 
 function renderNav() {
   const nav = document.getElementById("docNav");
   nav.innerHTML = "";
-
   for (const c of state.manifest.collections) {
     const link = el("a", {
       class: "nav-link",
@@ -173,8 +198,32 @@ function renderCellContent(block, code) {
 function renderBlock(b, langs) {
   const isHeading = b.type === "h1" || b.type === "h2" || b.type === "h3";
   const wrap = el("div", { class: "block" + (isHeading ? " is-heading" : "") });
+  const baseCode = baseLanguageCode(langs);
+
+  // Botão de expandir (só quando há mais de uma língua)
+  if (langs.length > 1) {
+    const others = langs.filter(l => l.code !== baseCode);
+    const btn = el("button", {
+      type: "button",
+      class: "block-toggle",
+      "aria-label": "Mostrar traduções",
+      "aria-expanded": "false",
+      title: "Mostrar traduções deste parágrafo",
+    });
+    btn.textContent = others.map(l => l.code.toUpperCase()).join(" · ");
+    btn.addEventListener("click", () => {
+      const expanded = wrap.classList.toggle("expanded");
+      btn.setAttribute("aria-expanded", String(expanded));
+    });
+    wrap.appendChild(btn);
+  }
+
   for (const l of langs) {
-    const cell = el("div", { class: "cell lang-" + l.code });
+    const isBase = l.code === baseCode;
+    const cell = el("div", {
+      class: "cell lang-" + l.code + (isBase ? " base" : ""),
+    });
+    cell.setAttribute("data-lang-label", l.code.toUpperCase());
     cell.appendChild(renderCellContent(b, l.code));
     wrap.appendChild(cell);
   }
@@ -202,12 +251,30 @@ function renderDocHeader(meta, collection) {
   return header;
 }
 
+function renderToolbar() {
+  const bar = el("div", { class: "doc-toolbar" });
+  bar.appendChild(el("span", { class: "toolbar-label", text: "Modo:" }));
+  [["reading", "Leitura"], ["parallel", "Paralelo"]].forEach(([code, label]) => {
+    const btn = el("button", {
+      type: "button",
+      class: "mode-btn" + (state.viewMode === code ? " active" : ""),
+      "data-mode": code,
+      text: label,
+    });
+    btn.addEventListener("click", () => setViewMode(code));
+    bar.appendChild(btn);
+  });
+  return bar;
+}
+
 function renderDocument(meta, langs, blocks, collection) {
   const root = document.getElementById("view");
   root.innerHTML = "";
 
-  const article = el("article", { class: "doc" });
+  const article = el("article", { class: "doc mode-" + state.viewMode });
   article.appendChild(renderDocHeader(meta, collection));
+
+  if (langs.length > 1) article.appendChild(renderToolbar());
 
   const labels = el("div", { class: "col-labels cols-" + langs.length });
   for (const l of langs) {
@@ -394,6 +461,11 @@ async function route() {
 
 async function main() {
   try {
+    try {
+      const saved = localStorage.getItem("viewMode");
+      if (saved === "reading" || saved === "parallel") state.viewMode = saved;
+    } catch (e) {}
+
     state.manifest = await fetchJSON("data/manifest.json");
     renderNav();
     window.addEventListener("hashchange", route);

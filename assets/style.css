@@ -120,8 +120,10 @@ a{color:inherit}
   background:var(--accent);vertical-align:middle;margin-right:.55rem}
 
 .blocks{counter-reset:blk}
-.blocks.cols-2 .block{grid-template-columns:1fr 1fr}
-.blocks.cols-3 .block{grid-template-columns:1fr 1fr 1fr}
+/* As colunas do paralelo agora dependem do modo. O modo leitura
+   sobrescreve com uma única coluna, conforme regras ao final. */
+.doc.mode-parallel .blocks.cols-2 .block{grid-template-columns:1fr 1fr}
+.doc.mode-parallel .blocks.cols-3 .block{grid-template-columns:1fr 1fr 1fr}
 
 .block{display:grid;gap:var(--col-gap);padding:1.1rem .2rem;
   border-bottom:1px solid var(--rule-soft);position:relative;
@@ -134,7 +136,8 @@ a{color:inherit}
 .cell.lang-en{background:var(--paper);border-radius:var(--radius);
   padding:.2rem .9rem .2rem 1.1rem;border-left:2px solid var(--accent)}
 
-.block > .cell:first-child::before{content:counter(blk);position:absolute;
+/* Número do bloco, à esquerda, aplicado ao próprio bloco (não ao primeiro cell) */
+.block::before{content:counter(blk);position:absolute;
   top:1.1rem;left:-1.6rem;font-family:Inter,system-ui,sans-serif;
   font-size:.68rem;color:var(--muted);font-weight:500}
 
@@ -150,7 +153,7 @@ a{color:inherit}
 .block.is-heading{padding-top:2rem;padding-bottom:.8rem;
   border-bottom:1px solid var(--rule)}
 .block.is-heading .cell{background:transparent;border:none;padding-left:.2rem}
-.block.is-heading .cell::before{display:none}
+.block.is-heading::before{display:none}
 .block.is-heading .cell h2,
 .block.is-heading .cell h3{font-size:1.05rem;letter-spacing:.02em;
   text-transform:uppercase;color:var(--accent);
@@ -184,7 +187,7 @@ a{color:inherit}
   .blocks.cols-2 .block,
   .blocks.cols-3 .block{grid-template-columns:1fr;gap:.35rem;
     padding:1.2rem 0 1.2rem 1.6rem}
-  .block > .cell:first-child::before{top:1.3rem;left:-1.2rem}
+  .block::before{top:1.3rem;left:-1.2rem}
 }
 
 /* ---------- Navegação no topo ---------- */
@@ -266,4 +269,107 @@ a{color:inherit}
     -webkit-overflow-scrolling: touch;
   }
   .doc-nav .nav-link { flex: 0 0 auto; font-size: .78rem; }
+}
+
+/* =========================================================
+   Modos de leitura
+   ========================================================= */
+
+/* ---------- Toolbar (topo do documento) ---------- */
+.doc-toolbar{
+  max-width:820px;margin:0 auto 1.2rem;padding:.4rem .2rem;
+  display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.toolbar-label{
+  font-family:Inter,system-ui,sans-serif;font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  font-weight:600;margin-right:.4rem}
+.mode-btn{
+  font-family:Inter,system-ui,sans-serif;font-size:.82rem;
+  padding:.4rem .95rem;border:1px solid var(--rule);
+  background:var(--paper);color:var(--ink-soft);border-radius:999px;
+  cursor:pointer;transition:all .15s ease}
+.mode-btn:hover{border-color:var(--accent);color:var(--accent)}
+.mode-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ---------- Botão por parágrafo ---------- */
+.block-toggle{
+  position:absolute;top:1.1rem;right:0;
+  font-family:Inter,system-ui,sans-serif;font-size:.68rem;
+  font-weight:600;letter-spacing:.1em;padding:.3rem .7rem;
+  border:1px solid var(--rule);background:var(--paper);
+  color:var(--muted);border-radius:999px;cursor:pointer;
+  transition:all .15s ease;opacity:.55;z-index:2}
+.block:hover .block-toggle{opacity:1}
+.block-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.doc.mode-reading .block.expanded .block-toggle{
+  opacity:1;background:var(--accent);border-color:var(--accent);color:#fff}
+.doc.mode-parallel .block-toggle{display:none}
+
+/* ---------- Modo Leitura ---------- */
+.doc.mode-reading .col-labels{display:none}
+
+.doc.mode-reading .blocks .block{
+  display:grid;grid-template-columns:1fr;gap:.55rem;
+  padding:1.1rem 4rem 1.1rem 1rem;
+  border-bottom:1px solid var(--rule-soft);
+  border-radius:6px;
+  transition:background .2s ease, padding .2s ease, box-shadow .2s ease}
+.doc.mode-reading .blocks .block.is-heading{
+  padding-top:2rem;padding-bottom:.8rem;
+  border-bottom:1px solid var(--rule)}
+
+/* Ao passar o mouse, um leve aquecimento convida ao clique */
+.doc.mode-reading .blocks .block:hover:not(.expanded){
+  background:rgba(139,44,44,.018);
+}
+
+/* Bloco expandido: leve destaque visual para concentração */
+.doc.mode-reading .blocks .block.expanded{
+  background:linear-gradient(to right,
+    rgba(139,44,44,.055) 0%,
+    rgba(139,44,44,.025) 60%,
+    rgba(139,44,44,.006) 100%);
+  box-shadow:inset 3px 0 0 var(--accent);
+  padding-left:1.4rem;
+}
+.doc.mode-reading .blocks .block.is-heading.expanded{
+  background:linear-gradient(to right,
+    rgba(139,44,44,.045) 0%,
+    rgba(139,44,44,.015) 100%);
+  box-shadow:inset 3px 0 0 var(--accent);
+}
+
+.doc.mode-reading .cell.base{
+  order:1;border-left:none;padding-left:.2rem;
+  background:transparent;border-radius:0}
+
+.doc.mode-reading .cell:not(.base){
+  display:none;order:2;border-left:none;
+  padding:.75rem .2rem 0 .2rem;background:transparent;
+  border-top:1px dashed var(--rule);margin-top:.35rem;border-radius:0}
+.doc.mode-reading .block.expanded .cell:not(.base){display:block}
+
+/* Tradução: itálico + cor mais suave, texto visivelmente secundário */
+.doc.mode-reading .cell:not(.base) p,
+.doc.mode-reading .cell:not(.base) li{
+  color:#565656;
+  font-style:italic;
+}
+.doc.mode-reading .cell:not(.base) ul{
+  color:#565656;
+}
+
+/* Rótulo RU/EN — mantém o estilo de "etiqueta", não vira itálico */
+.doc.mode-reading .cell:not(.base)::before{
+  content:attr(data-lang-label);display:block;
+  font-family:Inter,system-ui,sans-serif;font-size:.65rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+  font-weight:600;margin-bottom:.4rem;
+  font-style:normal}
+.doc.mode-reading .block.is-heading .cell:not(.base)::before{display:none}
+
+@media (max-width:700px){
+  .doc.mode-reading .blocks .block{padding-right:3.5rem;padding-left:1rem}
+  .doc.mode-reading .blocks .block.expanded{padding-left:1.2rem}
+  .doc-toolbar{padding:.3rem 0}
 }
