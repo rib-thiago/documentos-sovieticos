@@ -1,0 +1,79 @@
+{
+  "collections": [
+    {
+      "id": "confronto-bukharin-astrov",
+      "title_pt": "Confronto entre Bukharin e Astrov",
+      "title_ru": "Очная ставка Бухарина и Астрова",
+      "subtitle_pt": "Três documentos de 1937",
+      "description_pt": "Depoimento de Bukharin, protocolo de interrogatório de Astrov e transcrição da acareação entre os dois no CC do VKP(b).",
+      "accent": "#8b2c2c",
+      "cover": "assets/covers/bukharin-astrov.jpg",
+      "documents": [
+        {
+          "id": "bukharin-1937-06-02",
+          "shortTitle": "Bukharin · 02.06.1937",
+          "title_pt": "Depoimento de N. Bukharin de 2 de junho de 1937",
+          "title_ru": "Показания Н.И. Бухарина (2 июня 1937 г.)",
+          "date": "2 de junho de 1937",
+          "archive": "RGASPI F. 17, Op. 171, D. 427, L. 23–44",
+          "eyebrow": "Depoimento · Processo Bukharin",
+          "languages": [
+            { "code": "ru", "label": "Русский оригинал",     "file": "originais/bukharin-1937-06-02.ru.md" },
+            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/bukharin-1937-06-02.pt.md" }
+          ]
+        },
+        {
+          "id": "astrov-1937-01-11",
+          "shortTitle": "Astrov · 11.01.1937",
+          "title_pt": "Protocolo de interrogatório de V. N. Astrov — 11 de janeiro de 1937",
+          "title_ru": "Протокол допроса В.Н. Астрова (11 января 1937 г.)",
+          "date": "11 de janeiro de 1937",
+          "archive": "RGASPI F. 17, Op. 171, D. 269, L. 118–161",
+          "eyebrow": "Interrogatório · NKVD",
+          "languages": [
+            { "code": "ru", "label": "Русский оригинал",     "file": "originais/astrov-1937-01-11.ru.md" },
+            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/astrov-1937-01-11.pt.md" }
+          ]
+        },
+        {
+          "id": "acareacao-1937-01-13",
+          "shortTitle": "Acareação · 13.01.1937",
+          "title_pt": "Transcrição da acareação entre Astrov e Bukharin no CC do VKP(b) — 13 de janeiro de 1937",
+          "title_ru": "Стенограмма очной ставки между В.Н. Астровым и Н.И. Бухариным в ЦК ВКП(б) — 13 января 1937 г.",
+          "date": "13 de janeiro de 1937",
+          "archive": "RGASPI F. 17, Op. 171, D. 270, L. 50–93",
+          "eyebrow": "Acareação · CC do VKP(b)",
+          "languages": [
+            { "code": "ru", "label": "Русский оригинал",     "file": "originais/acareacao-1937-01-13.ru.md" },
+            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/acareacao-1937-01-13.pt.md" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plataforma-ryutin",
+      "title_pt": "Plataforma Ryutin",
+      "title_ru": "Платформа Рютина",
+      "subtitle_pt": "Stalin e a Crise da Ditadura do Proletariado",
+      "description_pt": "Documento de 1932 atribuído a Martemyan Ryutin, também conhecido como «plataforma de Ryutin». Edição trilíngue: russo, português e inglês.",
+      "accent": "#2c4a8b",
+      "cover": "assets/covers/ryutin.jpg",
+      "documents": [
+        {
+          "id": "ryutin-1932",
+          "shortTitle": "Ryutin · 1932",
+          "title_pt": "Stalin e a Crise da Ditadura do Proletariado",
+          "title_ru": "Сталин и кризис пролетарской диктатуры",
+          "date": "1932",
+          "archive": "RYUTIN M. N. Não me ajoelharei. / Comp. B. A. Starkov. M.: Politizdat, 1992",
+          "eyebrow": "Plataforma · Martemyan Ryutin",
+          "languages": [
+            { "code": "ru", "label": "Русский оригинал",     "file": "originais/ryutin-1932.ru.md" },
+            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/ryutin-1932.pt.md" },
+            { "code": "en", "label": "English translation",  "file": "originais/ryutin-1932.en.md" }
+          ]
+        }
+      ]
+    }
+  ]
+}

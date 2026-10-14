@@ -1,0 +1,11 @@
+# Ambiente Python
+.venv/
+__pycache__/
+*.pyc
+
+# Originais (não versionar)
+originais/
+
+# Lixo de editor
+.DS_Store
+.vscode/
