@@ -3,14 +3,14 @@
    Roteamento por hash:
      #/                     → homepage
      #/colecao/:id          → página da coleção
-     #/doc/:id              → documento (N colunas)
+     #/doc/:id              → documento/artigo (N colunas)
    ========================================================= */
 
 const state = {
   manifest: null,
   cache: new Map(),
   activeCollection: null,
-  viewMode: "reading", // "reading" | "parallel"
+  viewMode: "reading",
 };
 
 async function fetchText(url) {
@@ -24,7 +24,6 @@ async function fetchJSON(url) {
   return r.json();
 }
 
-/* ---------- Utilidade: resolve URL relativa para absoluta ---------- */
 function absURL(path) {
   return new URL(path, document.baseURI).href;
 }
@@ -46,6 +45,7 @@ function parseMarkdown(md) {
     if (!chunk) continue;
     if (/^-{3,}$/.test(chunk)) continue;
 
+    // Título (linha única com #)
     if (!chunk.includes("\n")) {
       const h = chunk.match(/^(#{1,6})\s+(.+)$/);
       if (h) {
@@ -56,13 +56,29 @@ function parseMarkdown(md) {
         });
         continue;
       }
+      // Imagem standalone
+      const img = chunk.match(/^!\[(.*?)\]\((.+?)\)$/);
+      if (img) {
+        blocks.push({ type: "image", text: chunk });
+        continue;
+      }
     }
 
     const lines = chunk.split("\n").map(l => l.trim()).filter(Boolean);
+
+    // Lista
     if (lines.length && lines.every(l => l.startsWith("- "))) {
       blocks.push({ type: "list", text: lines.join("\n") });
       continue;
     }
+
+    // Citação em bloco
+    if (lines.length && lines.every(l => l.startsWith(">"))) {
+      const quoted = lines.map(l => l.replace(/^>\s?/, "")).join(" ");
+      blocks.push({ type: "quote", text: quoted });
+      continue;
+    }
+
     blocks.push({ type: "p", text: lines.join(" ") });
   }
   return blocks;
@@ -71,7 +87,7 @@ function parseMarkdown(md) {
 /* ---------- Alinhamento N-ário ---------- */
 
 function zipBlocks(langs) {
-  const rank = { h1: 0, h2: 1, h3: 2, list: 3, p: 3 };
+  const rank = { h1: 0, h2: 1, h3: 2, image: 3, list: 4, quote: 4, p: 5 };
   const n = Math.max(...langs.map(l => l.blocks.length));
   const out = [];
   for (let i = 0; i < n; i++) {
@@ -112,9 +128,13 @@ function escapeHTML(s) {
 }
 
 function inline(text) {
-  return escapeHTML(text)
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\*(.+?)\*/g, "<em>$1</em>");
+  let out = escapeHTML(text);
+  out = out.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  out = out.replace(/\*(.+?)\*/g, "<em>$1</em>");
+  // Imagens embutidas em parágrafos: ![alt](path)
+  out = out.replace(/!\[(.*?)\]\((.+?)\)/g, (_, alt, src) =>
+    `<img class="md-img-inline" src="${absURL(src)}" alt="${alt}" loading="lazy">`);
+  return out;
 }
 
 /* ---------- Idiomas ---------- */
@@ -171,6 +191,23 @@ function renderCellContent(block, code) {
   const raw = (block.cells[code] || "").trim();
   if (!raw) { frag.appendChild(el("p", { text: "—" })); return frag; }
 
+  // Bloco de imagem
+  if (block.type === "image") {
+    const m = raw.match(/^!\[(.*?)\]\((.+?)\)$/);
+    if (m) {
+      const fig = el("figure", { class: "md-figure" });
+      fig.appendChild(el("img", {
+        src: absURL(m[2].trim()),
+        alt: m[1].trim(),
+        loading: "lazy",
+      }));
+      if (m[1].trim()) fig.appendChild(el("figcaption", { text: m[1].trim() }));
+      frag.appendChild(fig);
+      return frag;
+    }
+  }
+
+  // Lista
   if (block.type === "list") {
     const ul = el("ul");
     for (const line of raw.split("\n")) {
@@ -181,6 +218,14 @@ function renderCellContent(block, code) {
       ul.appendChild(li);
     }
     frag.appendChild(ul);
+    return frag;
+  }
+
+  // Citação
+  if (block.type === "quote") {
+    const bq = el("blockquote");
+    bq.innerHTML = inline(raw);
+    frag.appendChild(bq);
     return frag;
   }
 
@@ -200,7 +245,6 @@ function renderBlock(b, langs) {
   const wrap = el("div", { class: "block" + (isHeading ? " is-heading" : "") });
   const baseCode = baseLanguageCode(langs);
 
-  // Botão de expandir (só quando há mais de uma língua)
   if (langs.length > 1) {
     const others = langs.filter(l => l.code !== baseCode);
     const btn = el("button", {
@@ -244,6 +288,9 @@ function renderDocHeader(meta, collection) {
     meta.title_pt,
     el("span", { class: "ru-title", text: meta.title_ru }),
   ]));
+  if (meta.author) {
+    header.appendChild(el("p", { class: "doc-author", text: meta.author }));
+  }
   const m = el("div", { class: "doc-meta" });
   [meta.date, meta.archive].filter(Boolean)
     .forEach(t => m.appendChild(el("span", { text: t })));
@@ -352,10 +399,26 @@ function renderCollection(collection) {
   const list = el("div", { class: "doc-list" });
   for (const doc of collection.documents) {
     const item = el("a", { class: "doc-list-item", href: `#/doc/${doc.id}` });
-    item.appendChild(el("p", { class: "doc-list-eyebrow", text: doc.eyebrow || "" }));
+
+    const topLine = el("div", { class: "doc-list-topline" });
+    const typeBadge = el("span", {
+      class: "doc-type doc-type-" + (doc.type || "document"),
+      text: doc.type === "article" ? "Artigo" : "Documento",
+    });
+    topLine.appendChild(typeBadge);
+    if (doc.eyebrow) {
+      topLine.appendChild(el("span", {
+        class: "doc-list-eyebrow",
+        text: doc.eyebrow,
+      }));
+    }
+    item.appendChild(topLine);
+
     item.appendChild(el("h2", { class: "doc-list-title", text: doc.title_pt }));
     item.appendChild(el("p", { class: "doc-list-ru", text: doc.title_ru }));
+
     const meta = el("div", { class: "doc-list-meta" });
+    if (doc.author) meta.appendChild(el("span", { text: doc.author }));
     if (doc.date) meta.appendChild(el("span", { text: doc.date }));
     if (doc.archive) meta.appendChild(el("span", { text: doc.archive }));
     const tags = el("span", { class: "lang-tags" });
@@ -386,7 +449,7 @@ function renderHome() {
   intro.appendChild(el("h1", {}, ["Documentos Soviéticos"]));
   intro.appendChild(el("p", {
     class: "home-subtitle",
-    text: "Edições bilíngues e trilíngues de fontes primárias do período stalinista."
+    text: "Edições bilíngues e trilíngues de fontes primárias e ensaios históricos sobre o período stalinista."
   }));
   wrap.appendChild(intro);
 
@@ -401,7 +464,7 @@ function renderHome() {
     const body = el("div", { class: "collection-card-body" });
     body.appendChild(el("p", {
       class: "collection-card-eyebrow",
-      text: c.documents.length === 1 ? "1 documento" : `${c.documents.length} documentos`
+      text: c.documents.length === 1 ? "1 item" : `${c.documents.length} itens`
     }));
     body.appendChild(el("h2", { text: c.title_pt }));
     body.appendChild(el("p", { class: "collection-card-ru", text: c.title_ru }));

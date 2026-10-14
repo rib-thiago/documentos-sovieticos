@@ -373,3 +373,82 @@ a{color:inherit}
   .doc.mode-reading .blocks .block.expanded{padding-left:1.2rem}
   .doc-toolbar{padding:.3rem 0}
 }
+
+
+/* =========================================================
+   Tipo (Documento / Artigo) + imagens em markdown
+   ========================================================= */
+
+/* Linha superior do item na lista da coleção:
+   [badge] [eyebrow]                                             */
+.doc-list-topline{
+  display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;
+  margin:0 0 .5rem;
+}
+.doc-list-topline .doc-list-eyebrow{margin:0}
+
+.doc-type{
+  display:inline-block;
+  font-family:Inter,system-ui,sans-serif;
+  font-size:.62rem;
+  font-weight:600;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  padding:.2rem .55rem;
+  border-radius:3px;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  background:transparent;
+  line-height:1.1;
+}
+.doc-type-article{
+  background:var(--accent);
+  color:#fff;
+}
+
+/* Autor, no cabeçalho do documento/artigo */
+.doc-author{
+  font-family:Inter,system-ui,sans-serif;
+  font-size:.88rem;
+  color:var(--ink-soft);
+  margin:.7rem 0 0;
+  font-style:italic;
+}
+
+/* Citação em bloco */
+.cell blockquote{
+  margin:.4rem 0;
+  padding:.1rem 0 .1rem .9rem;
+  border-left:3px solid var(--rule);
+  color:var(--ink-soft);
+  font-style:italic;
+}
+.cell blockquote p{margin:0 0 .4rem}
+.cell blockquote p:last-child{margin-bottom:0}
+
+/* Figuras (imagens) */
+.md-figure{
+  margin:.6rem 0;
+  padding:0;
+  text-align:center;
+}
+.md-figure img{
+  max-width:100%;
+  height:auto;
+  border-radius:4px;
+  display:inline-block;
+}
+.md-figure figcaption{
+  font-family:Inter,system-ui,sans-serif;
+  font-size:.78rem;
+  color:var(--muted);
+  margin-top:.5rem;
+  line-height:1.4;
+  font-style:italic;
+}
+.md-img-inline{
+  max-width:100%;
+  height:auto;
+  border-radius:4px;
+  vertical-align:middle;
+}

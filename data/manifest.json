@@ -11,6 +11,7 @@
       "documents": [
         {
           "id": "bukharin-1937-06-02",
+          "type": "document",
           "shortTitle": "Bukharin · 02.06.1937",
           "title_pt": "Depoimento de N. Bukharin de 2 de junho de 1937",
           "title_ru": "Показания Н.И. Бухарина (2 июня 1937 г.)",
@@ -24,6 +25,7 @@
         },
         {
           "id": "astrov-1937-01-11",
+          "type": "document",
           "shortTitle": "Astrov · 11.01.1937",
           "title_pt": "Protocolo de interrogatório de V. N. Astrov — 11 de janeiro de 1937",
           "title_ru": "Протокол допроса В.Н. Астрова (11 января 1937 г.)",
@@ -37,6 +39,7 @@
         },
         {
           "id": "acareacao-1937-01-13",
+          "type": "document",
           "shortTitle": "Acareação · 13.01.1937",
           "title_pt": "Transcrição da acareação entre Astrov e Bukharin no CC do VKP(b) — 13 de janeiro de 1937",
           "title_ru": "Стенограмма очной ставки между В.Н. Астровым и Н.И. Бухариным в ЦК ВКП(б) — 13 января 1937 г.",
@@ -61,6 +64,7 @@
       "documents": [
         {
           "id": "ryutin-1932",
+          "type": "document",
           "shortTitle": "Ryutin · 1932",
           "title_pt": "Stalin e a Crise da Ditadura do Proletariado",
           "title_ru": "Сталин и кризис пролетарской диктатуры",
@@ -71,6 +75,33 @@
             { "code": "ru", "label": "Русский оригинал",     "file": "originais/ryutin-1932.ru.md" },
             { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/ryutin-1932.pt.md" },
             { "code": "en", "label": "English translation",  "file": "originais/ryutin-1932.en.md" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morte-ordzhonikidze",
+      "title_pt": "A misteriosa morte de Ordzhonikidze",
+      "title_ru": "Тайна смерти Орджоникидзе",
+      "subtitle_pt": "Um ensaio de Vladimir L. Bobrov",
+      "description_pt": "Investigação sobre as circunstâncias da morte de Sergo Ordzhonikidze em 1937, confrontando as versões oficiais soviéticas e os testemunhos disponíveis.",
+      "accent": "#4a6b4a",
+      "cover": "assets/covers/sergo.jpg",
+      "documents": [
+        {
+          "id": "sergo-2008",
+          "type": "article",
+          "shortTitle": "Ordzhonikidze · 2008",
+          "title_pt": "O mistério sobre a morte de Ordzhonikidze",
+          "title_ru": "Тайна смерти Орджоникидзе",
+          "author": "Vladimir L. Bobrov",
+          "date": "2008",
+          "archive": "Ensaio publicado originalmente online",
+          "eyebrow": "Ensaio histórico",
+          "languages": [
+            { "code": "ru", "label": "Русский оригинал",     "file": "originais/sergo.ru.md" },
+            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/sergo.pt.md" },
+            { "code": "en", "label": "English version",      "file": "originais/sergo.en.md" }
           ]
         }
       ]
