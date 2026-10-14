@@ -1,9 +1,5 @@
 /* =========================================================
    Site bilíngue/trilíngue: coleções de documentos soviéticos.
-   Roteamento por hash:
-     #/                     → homepage
-     #/colecao/:id          → página da coleção
-     #/doc/:id              → documento/artigo (N colunas)
    ========================================================= */
 
 const state = {
@@ -11,6 +7,7 @@ const state = {
   cache: new Map(),
   activeCollection: null,
   viewMode: "reading",
+  parallelCols: { left: null, right: null },
 };
 
 async function fetchText(url) {
@@ -23,10 +20,7 @@ async function fetchJSON(url) {
   if (!r.ok) throw new Error(`Falha ao carregar ${url}: ${r.status}`);
   return r.json();
 }
-
-function absURL(path) {
-  return new URL(path, document.baseURI).href;
-}
+function absURL(path) { return new URL(path, document.baseURI).href; }
 
 /* ---------- Parser markdown ---------- */
 
@@ -45,7 +39,6 @@ function parseMarkdown(md) {
     if (!chunk) continue;
     if (/^-{3,}$/.test(chunk)) continue;
 
-    // Título (linha única com #)
     if (!chunk.includes("\n")) {
       const h = chunk.match(/^(#{1,6})\s+(.+)$/);
       if (h) {
@@ -56,9 +49,7 @@ function parseMarkdown(md) {
         });
         continue;
       }
-      // Imagem standalone
-      const img = chunk.match(/^!\[(.*?)\]\((.+?)\)$/);
-      if (img) {
+      if (/^!\[.*?\]\(.+?\)$/.test(chunk)) {
         blocks.push({ type: "image", text: chunk });
         continue;
       }
@@ -66,19 +57,15 @@ function parseMarkdown(md) {
 
     const lines = chunk.split("\n").map(l => l.trim()).filter(Boolean);
 
-    // Lista
     if (lines.length && lines.every(l => l.startsWith("- "))) {
       blocks.push({ type: "list", text: lines.join("\n") });
       continue;
     }
-
-    // Citação em bloco
     if (lines.length && lines.every(l => l.startsWith(">"))) {
       const quoted = lines.map(l => l.replace(/^>\s?/, "")).join(" ");
       blocks.push({ type: "quote", text: quoted });
       continue;
     }
-
     blocks.push({ type: "p", text: lines.join(" ") });
   }
   return blocks;
@@ -131,13 +118,10 @@ function inline(text) {
   let out = escapeHTML(text);
   out = out.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
   out = out.replace(/\*(.+?)\*/g, "<em>$1</em>");
-  // Imagens embutidas em parágrafos: ![alt](path)
   out = out.replace(/!\[(.*?)\]\((.+?)\)/g, (_, alt, src) =>
     `<img class="md-img-inline" src="${absURL(src)}" alt="${alt}" loading="lazy">`);
   return out;
 }
-
-/* ---------- Idiomas ---------- */
 
 function baseLanguageCode(langs) {
   if (langs.some(l => l.code === "pt")) return "pt";
@@ -154,10 +138,108 @@ function setViewMode(mode) {
     b.classList.toggle("active", b.dataset.mode === mode);
   });
   const article = document.querySelector("article.doc");
-  if (article) {
-    article.classList.remove("mode-reading", "mode-parallel");
-    article.classList.add("mode-" + mode);
+  if (!article) return;
+  article.classList.remove("mode-reading", "mode-parallel");
+  article.classList.add("mode-" + mode);
+  if (mode === "parallel") {
+    applyParallelLayout();
+  } else {
+    article.querySelectorAll(".cell.hidden").forEach(c => {
+      c.classList.remove("hidden");
+      c.style.order = "";
+    });
+    const labels = article.querySelector(".col-labels");
+    if (labels) {
+      labels.querySelectorAll(":scope > div").forEach(d => {
+        d.classList.remove("hidden");
+        d.style.order = "";
+      });
+    }
   }
+}
+
+/* ---------- Colunas paralelas ---------- */
+
+function initParallelCols(docId, langs) {
+  const key = "parallelCols:" + docId;
+  const available = langs.map(l => l.code);
+  let stored = null;
+  try { stored = localStorage.getItem(key); } catch (e) {}
+  if (stored) {
+    const parts = stored.split(",");
+    if (parts.length === 2 && available.includes(parts[0]) &&
+        available.includes(parts[1]) && parts[0] !== parts[1]) {
+      state.parallelCols = { left: parts[0], right: parts[1] };
+      return;
+    }
+  }
+  const baseCode = baseLanguageCode(langs);
+  const firstOther = available.find(c => c !== baseCode);
+  state.parallelCols = { left: baseCode, right: firstOther };
+}
+
+function applyParallelLayout() {
+  const article = document.querySelector("article.doc");
+  if (!article) return;
+  const n = parseInt(article.dataset.langCount, 10) || 0;
+  if (n <= 2) return;
+
+  const order = {};
+  order[state.parallelCols.left] = 1;
+  order[state.parallelCols.right] = 2;
+
+  article.querySelectorAll(".block .cell").forEach(cell => {
+    const lang = [...cell.classList].find(c => c.startsWith("lang-"))?.slice(5);
+    if (!lang) return;
+    const show = (lang === state.parallelCols.left) ||
+                 (lang === state.parallelCols.right);
+    cell.classList.toggle("hidden", !show);
+    cell.style.order = show ? order[lang] : "";
+  });
+
+  const labels = article.querySelector(".col-labels");
+  if (labels) {
+    labels.querySelectorAll(":scope > div").forEach(div => {
+      const lang = [...div.classList].find(c => c.startsWith("label-"))?.slice(6);
+      if (!lang) return;
+      const show = (lang === state.parallelCols.left) ||
+                   (lang === state.parallelCols.right);
+      div.classList.toggle("hidden", !show);
+      div.style.order = show ? order[lang] : "";
+    });
+  }
+}
+
+function setParallelCols(side, value) {
+  const article = document.querySelector("article.doc");
+  if (!article) return;
+  const docId = article.dataset.docId;
+
+  if (side === "left") {
+    if (value === state.parallelCols.right) {
+      state.parallelCols.right = state.parallelCols.left;
+    }
+    state.parallelCols.left = value;
+  } else {
+    if (value === state.parallelCols.left) {
+      state.parallelCols.left = state.parallelCols.right;
+    }
+    state.parallelCols.right = value;
+  }
+  try {
+    localStorage.setItem(
+      "parallelCols:" + docId,
+      state.parallelCols.left + "," + state.parallelCols.right
+    );
+  } catch (e) {}
+  applyParallelLayout();
+  updateParallelSelects();
+}
+
+function updateParallelSelects() {
+  document.querySelectorAll(".lang-select").forEach(sel => {
+    sel.value = state.parallelCols[sel.dataset.side];
+  });
 }
 
 /* ---------- Navegação no topo ---------- */
@@ -167,9 +249,7 @@ function renderNav() {
   nav.innerHTML = "";
   for (const c of state.manifest.collections) {
     const link = el("a", {
-      class: "nav-link",
-      href: `#/colecao/${c.id}`,
-      "data-id": c.id,
+      class: "nav-link", href: `#/colecao/${c.id}`, "data-id": c.id,
     });
     link.appendChild(el("span", { class: "nav-link-dot" }));
     link.appendChild(document.createTextNode(c.title_pt));
@@ -191,15 +271,12 @@ function renderCellContent(block, code) {
   const raw = (block.cells[code] || "").trim();
   if (!raw) { frag.appendChild(el("p", { text: "—" })); return frag; }
 
-  // Bloco de imagem
   if (block.type === "image") {
     const m = raw.match(/^!\[(.*?)\]\((.+?)\)$/);
     if (m) {
       const fig = el("figure", { class: "md-figure" });
       fig.appendChild(el("img", {
-        src: absURL(m[2].trim()),
-        alt: m[1].trim(),
-        loading: "lazy",
+        src: absURL(m[2].trim()), alt: m[1].trim(), loading: "lazy",
       }));
       if (m[1].trim()) fig.appendChild(el("figcaption", { text: m[1].trim() }));
       frag.appendChild(fig);
@@ -207,7 +284,6 @@ function renderCellContent(block, code) {
     }
   }
 
-  // Lista
   if (block.type === "list") {
     const ul = el("ul");
     for (const line of raw.split("\n")) {
@@ -221,7 +297,6 @@ function renderCellContent(block, code) {
     return frag;
   }
 
-  // Citação
   if (block.type === "quote") {
     const bq = el("blockquote");
     bq.innerHTML = inline(raw);
@@ -240,32 +315,41 @@ function renderCellContent(block, code) {
   return frag;
 }
 
-function renderBlock(b, langs) {
+function renderBlock(b, allLangs) {
   const isHeading = b.type === "h1" || b.type === "h2" || b.type === "h3";
+  const isImage = b.type === "image";
   const wrap = el("div", { class: "block" + (isHeading ? " is-heading" : "") });
-  const baseCode = baseLanguageCode(langs);
+  const baseCode = baseLanguageCode(allLangs);
 
-  if (langs.length > 1) {
-    const others = langs.filter(l => l.code !== baseCode);
-    const btn = el("button", {
-      type: "button",
-      class: "block-toggle",
-      "aria-label": "Mostrar traduções",
-      "aria-expanded": "false",
-      title: "Mostrar traduções deste parágrafo",
-    });
-    btn.textContent = others.map(l => l.code.toUpperCase()).join(" · ");
-    btn.addEventListener("click", () => {
-      const expanded = wrap.classList.toggle("expanded");
-      btn.setAttribute("aria-expanded", String(expanded));
-    });
-    wrap.appendChild(btn);
+  // Botões de tradução (só no modo Leitura, só se houver >1 idioma, exceto imagens)
+  if (allLangs.length > 1 && !isImage) {
+    const group = el("div", { class: "block-toggles" });
+    for (const l of allLangs) {
+      if (l.code === baseCode) continue;
+      const btn = el("button", {
+        type: "button",
+        class: "block-toggle",
+        "data-lang": l.code,
+        "aria-expanded": "false",
+        title: `Mostrar tradução em ${l.code.toUpperCase()}`,
+      });
+      btn.textContent = l.code.toUpperCase();
+      btn.addEventListener("click", () => {
+        const cell = wrap.querySelector(".cell.lang-" + l.code);
+        if (!cell) return;
+        const visible = cell.classList.toggle("visible");
+        btn.classList.toggle("active", visible);
+        btn.setAttribute("aria-expanded", String(visible));
+      });
+      group.appendChild(btn);
+    }
+    wrap.appendChild(group);
   }
 
-  for (const l of langs) {
+  for (const l of allLangs) {
     const isBase = l.code === baseCode;
     const cell = el("div", {
-      class: "cell lang-" + l.code + (isBase ? " base" : ""),
+      class: "cell lang-" + l.code + (isBase ? " base" : " secondary"),
     });
     cell.setAttribute("data-lang-label", l.code.toUpperCase());
     cell.appendChild(renderCellContent(b, l.code));
@@ -298,9 +382,11 @@ function renderDocHeader(meta, collection) {
   return header;
 }
 
-function renderToolbar() {
+function renderToolbar(langs, docId) {
   const bar = el("div", { class: "doc-toolbar" });
-  bar.appendChild(el("span", { class: "toolbar-label", text: "Modo:" }));
+
+  const modeGroup = el("div", { class: "toolbar-group" });
+  modeGroup.appendChild(el("span", { class: "toolbar-label", text: "Modo:" }));
   [["reading", "Leitura"], ["parallel", "Paralelo"]].forEach(([code, label]) => {
     const btn = el("button", {
       type: "button",
@@ -309,8 +395,30 @@ function renderToolbar() {
       text: label,
     });
     btn.addEventListener("click", () => setViewMode(code));
-    bar.appendChild(btn);
+    modeGroup.appendChild(btn);
   });
+  bar.appendChild(modeGroup);
+
+  if (langs.length > 2) {
+    const colGroup = el("div", { class: "toolbar-group parallel-only" });
+    colGroup.appendChild(el("span", { class: "toolbar-label", text: "Colunas:" }));
+    ["left", "right"].forEach(side => {
+      const sel = el("select", {
+        class: "lang-select",
+        "data-side": side,
+        "aria-label": side === "left" ? "Idioma à esquerda" : "Idioma à direita",
+      });
+      for (const l of langs) {
+        const opt = el("option", { value: l.code, text: l.code.toUpperCase() });
+        sel.appendChild(opt);
+      }
+      sel.value = state.parallelCols[side] || langs[0].code;
+      sel.addEventListener("change", () => setParallelCols(side, sel.value));
+      colGroup.appendChild(sel);
+    });
+    bar.appendChild(colGroup);
+  }
+
   return bar;
 }
 
@@ -318,10 +426,14 @@ function renderDocument(meta, langs, blocks, collection) {
   const root = document.getElementById("view");
   root.innerHTML = "";
 
-  const article = el("article", { class: "doc mode-" + state.viewMode });
-  article.appendChild(renderDocHeader(meta, collection));
+  initParallelCols(meta.id, langs);
 
-  if (langs.length > 1) article.appendChild(renderToolbar());
+  const article = el("article", { class: "doc mode-" + state.viewMode });
+  article.dataset.docId = meta.id;
+  article.dataset.langCount = String(langs.length);
+
+  article.appendChild(renderDocHeader(meta, collection));
+  if (langs.length > 1) article.appendChild(renderToolbar(langs, meta.id));
 
   const labels = el("div", { class: "col-labels cols-" + langs.length });
   for (const l of langs) {
@@ -334,6 +446,11 @@ function renderDocument(meta, langs, blocks, collection) {
   article.appendChild(blocksWrap);
 
   root.appendChild(article);
+
+  if (state.viewMode === "parallel" && langs.length > 2) {
+    applyParallelLayout();
+  }
+
   setActiveNav(collection ? collection.id : null);
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -372,19 +489,16 @@ function renderCollection(collection) {
   root.innerHTML = "";
 
   const wrap = el("section", { class: "collection" });
-
   wrap.appendChild(el("a", {
     class: "back-link", href: "#/", text: "← Todas as coleções"
   }));
 
   const hero = el("header", { class: "collection-hero" });
   hero.style.setProperty("--accent", collection.accent || "#8b2c2c");
-
   if (collection.cover) {
     hero.classList.add("has-cover");
     hero.style.setProperty("--cover", `url("${absURL(collection.cover)}")`);
   }
-
   hero.appendChild(el("p", { class: "doc-eyebrow", text: "Coleção" }));
   hero.appendChild(el("h1", {}, [
     collection.title_pt,
@@ -401,16 +515,12 @@ function renderCollection(collection) {
     const item = el("a", { class: "doc-list-item", href: `#/doc/${doc.id}` });
 
     const topLine = el("div", { class: "doc-list-topline" });
-    const typeBadge = el("span", {
+    topLine.appendChild(el("span", {
       class: "doc-type doc-type-" + (doc.type || "document"),
       text: doc.type === "article" ? "Artigo" : "Documento",
-    });
-    topLine.appendChild(typeBadge);
+    }));
     if (doc.eyebrow) {
-      topLine.appendChild(el("span", {
-        class: "doc-list-eyebrow",
-        text: doc.eyebrow,
-      }));
+      topLine.appendChild(el("span", { class: "doc-list-eyebrow", text: doc.eyebrow }));
     }
     item.appendChild(topLine);
 

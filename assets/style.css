@@ -275,14 +275,16 @@ a{color:inherit}
    Modos de leitura
    ========================================================= */
 
-/* ---------- Toolbar (topo do documento) ---------- */
+/* ---------- Toolbar ---------- */
 .doc-toolbar{
   max-width:820px;margin:0 auto 1.2rem;padding:.4rem .2rem;
+  display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
+.toolbar-group{
   display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 .toolbar-label{
   font-family:Inter,system-ui,sans-serif;font-size:.72rem;
   letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-  font-weight:600;margin-right:.4rem}
+  font-weight:600;margin-right:.2rem}
 .mode-btn{
   font-family:Inter,system-ui,sans-serif;font-size:.82rem;
   padding:.4rem .95rem;border:1px solid var(--rule);
@@ -291,40 +293,53 @@ a{color:inherit}
 .mode-btn:hover{border-color:var(--accent);color:var(--accent)}
 .mode-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
 
-/* ---------- Botão por parágrafo ---------- */
+/* O seletor de colunas só aparece no modo paralelo */
+.doc.mode-reading .parallel-only{display:none}
+
+.lang-select{
+  font-family:Inter,system-ui,sans-serif;font-size:.8rem;
+  padding:.35rem .6rem;border:1px solid var(--rule);
+  background:var(--paper);color:var(--ink-soft);border-radius:4px;
+  cursor:pointer}
+.lang-select:hover{border-color:var(--accent)}
+.lang-select:focus{outline:2px solid var(--accent);outline-offset:1px}
+
+/* ---------- Toggles por idioma dentro de cada parágrafo ---------- */
+.block-toggles{
+  position:absolute;top:1rem;right:0;
+  display:flex;gap:.3rem;z-index:2}
+.doc.mode-parallel .block-toggles{display:none}
+
 .block-toggle{
-  position:absolute;top:1.1rem;right:0;
   font-family:Inter,system-ui,sans-serif;font-size:.68rem;
-  font-weight:600;letter-spacing:.1em;padding:.3rem .7rem;
+  font-weight:600;letter-spacing:.1em;padding:.28rem .65rem;
   border:1px solid var(--rule);background:var(--paper);
   color:var(--muted);border-radius:999px;cursor:pointer;
-  transition:all .15s ease;opacity:.55;z-index:2}
+  transition:all .15s ease;opacity:.5}
 .block:hover .block-toggle{opacity:1}
 .block-toggle:hover{border-color:var(--accent);color:var(--accent)}
-.doc.mode-reading .block.expanded .block-toggle{
-  opacity:1;background:var(--accent);border-color:var(--accent);color:#fff}
-.doc.mode-parallel .block-toggle{display:none}
+.block-toggle.active{
+  opacity:1;background:var(--accent);
+  border-color:var(--accent);color:#fff}
 
 /* ---------- Modo Leitura ---------- */
 .doc.mode-reading .col-labels{display:none}
 
 .doc.mode-reading .blocks .block{
   display:grid;grid-template-columns:1fr;gap:.55rem;
-  padding:1.1rem 4rem 1.1rem 1rem;
+  padding:1.1rem 4.5rem 1.1rem 1rem;
   border-bottom:1px solid var(--rule-soft);
   border-radius:6px;
-  transition:background .2s ease, padding .2s ease, box-shadow .2s ease}
+  transition:background .2s ease,padding .2s ease,box-shadow .2s ease}
 .doc.mode-reading .blocks .block.is-heading{
   padding-top:2rem;padding-bottom:.8rem;
   border-bottom:1px solid var(--rule)}
 
-/* Ao passar o mouse, um leve aquecimento convida ao clique */
-.doc.mode-reading .blocks .block:hover:not(.expanded){
+.doc.mode-reading .blocks .block:hover:not(:has(.cell.secondary.visible)){
   background:rgba(139,44,44,.018);
 }
 
-/* Bloco expandido: leve destaque visual para concentração */
-.doc.mode-reading .blocks .block.expanded{
+.doc.mode-reading .blocks .block:has(.cell.secondary.visible){
   background:linear-gradient(to right,
     rgba(139,44,44,.055) 0%,
     rgba(139,44,44,.025) 60%,
@@ -332,7 +347,7 @@ a{color:inherit}
   box-shadow:inset 3px 0 0 var(--accent);
   padding-left:1.4rem;
 }
-.doc.mode-reading .blocks .block.is-heading.expanded{
+.doc.mode-reading .blocks .block.is-heading:has(.cell.secondary.visible){
   background:linear-gradient(to right,
     rgba(139,44,44,.045) 0%,
     rgba(139,44,44,.015) 100%);
@@ -343,112 +358,43 @@ a{color:inherit}
   order:1;border-left:none;padding-left:.2rem;
   background:transparent;border-radius:0}
 
-.doc.mode-reading .cell:not(.base){
+.doc.mode-reading .cell.secondary{
   display:none;order:2;border-left:none;
   padding:.75rem .2rem 0 .2rem;background:transparent;
   border-top:1px dashed var(--rule);margin-top:.35rem;border-radius:0}
-.doc.mode-reading .block.expanded .cell:not(.base){display:block}
+.doc.mode-reading .cell.secondary.visible{display:block}
 
-/* Tradução: itálico + cor mais suave, texto visivelmente secundário */
-.doc.mode-reading .cell:not(.base) p,
-.doc.mode-reading .cell:not(.base) li{
-  color:#565656;
-  font-style:italic;
+.doc.mode-reading .cell.secondary p,
+.doc.mode-reading .cell.secondary li,
+.doc.mode-reading .cell.secondary blockquote{
+  color:#565656;font-style:italic;
 }
-.doc.mode-reading .cell:not(.base) ul{
-  color:#565656;
-}
+.doc.mode-reading .cell.secondary ul{color:#565656}
 
-/* Rótulo RU/EN — mantém o estilo de "etiqueta", não vira itálico */
-.doc.mode-reading .cell:not(.base)::before{
+.doc.mode-reading .cell.secondary::before{
   content:attr(data-lang-label);display:block;
   font-family:Inter,system-ui,sans-serif;font-size:.65rem;
   letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
-  font-weight:600;margin-bottom:.4rem;
-  font-style:normal}
-.doc.mode-reading .block.is-heading .cell:not(.base)::before{display:none}
+  font-weight:600;margin-bottom:.4rem;font-style:normal}
+.doc.mode-reading .block.is-heading .cell.secondary::before{display:none}
+
+/* ---------- Modo Paralelo: esconde colunas não selecionadas ---------- */
+.doc.mode-parallel .cell.hidden{display:none}
+.doc.mode-parallel .col-labels > div.hidden{display:none}
+.doc.mode-parallel .block{grid-template-columns:1fr 1fr}
+.doc.mode-parallel .col-labels{grid-template-columns:1fr 1fr}
+
+/* ---------- Responsivo ---------- */
+@media (max-width:900px){
+  .doc.mode-parallel .block{grid-template-columns:1fr 1fr}
+}
 
 @media (max-width:700px){
-  .doc.mode-reading .blocks .block{padding-right:3.5rem;padding-left:1rem}
-  .doc.mode-reading .blocks .block.expanded{padding-left:1.2rem}
-  .doc-toolbar{padding:.3rem 0}
-}
-
-
-/* =========================================================
-   Tipo (Documento / Artigo) + imagens em markdown
-   ========================================================= */
-
-/* Linha superior do item na lista da coleção:
-   [badge] [eyebrow]                                             */
-.doc-list-topline{
-  display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;
-  margin:0 0 .5rem;
-}
-.doc-list-topline .doc-list-eyebrow{margin:0}
-
-.doc-type{
-  display:inline-block;
-  font-family:Inter,system-ui,sans-serif;
-  font-size:.62rem;
-  font-weight:600;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  padding:.2rem .55rem;
-  border-radius:3px;
-  border:1px solid var(--accent);
-  color:var(--accent);
-  background:transparent;
-  line-height:1.1;
-}
-.doc-type-article{
-  background:var(--accent);
-  color:#fff;
-}
-
-/* Autor, no cabeçalho do documento/artigo */
-.doc-author{
-  font-family:Inter,system-ui,sans-serif;
-  font-size:.88rem;
-  color:var(--ink-soft);
-  margin:.7rem 0 0;
-  font-style:italic;
-}
-
-/* Citação em bloco */
-.cell blockquote{
-  margin:.4rem 0;
-  padding:.1rem 0 .1rem .9rem;
-  border-left:3px solid var(--rule);
-  color:var(--ink-soft);
-  font-style:italic;
-}
-.cell blockquote p{margin:0 0 .4rem}
-.cell blockquote p:last-child{margin-bottom:0}
-
-/* Figuras (imagens) */
-.md-figure{
-  margin:.6rem 0;
-  padding:0;
-  text-align:center;
-}
-.md-figure img{
-  max-width:100%;
-  height:auto;
-  border-radius:4px;
-  display:inline-block;
-}
-.md-figure figcaption{
-  font-family:Inter,system-ui,sans-serif;
-  font-size:.78rem;
-  color:var(--muted);
-  margin-top:.5rem;
-  line-height:1.4;
-  font-style:italic;
-}
-.md-img-inline{
-  max-width:100%;
-  height:auto;
-  border-radius:4px;
-  vertical-align:middle;
+  .doc.mode-reading .blocks .block{padding-right:3.8rem;padding-left:1rem}
+  .doc.mode-reading .blocks .block:has(.cell.secondary.visible){padding-left:1.2rem}
+  .doc-toolbar{padding:.3rem 0;gap:.8rem}
+  .doc .blocks.cols-2 .block,
+  .doc .blocks.cols-3 .block,
+  .doc.mode-parallel .block{grid-template-columns:1fr}
+  .doc.mode-parallel .col-labels{display:none}
 }

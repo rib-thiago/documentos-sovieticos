@@ -105,6 +105,32 @@
           ]
         }
       ]
+    },
+    {
+      "id": "yezhov-vs-stalin",
+      "title_pt": "Yezhov vs Stalin",
+      "title_ru": "Ежов против Сталина",
+      "subtitle_pt": "Um artigo de Grover Furr",
+      "description_pt": "Ensaio sobre Nikolai Yezhov e sua relação com Stalin, em edição bilíngue português-inglês.",
+      "accent": "#6b4a2c",
+      "cover": "assets/covers/yezhov.jpg",
+      "documents": [
+        {
+          "id": "furr-yezhov",
+          "type": "article",
+          "shortTitle": "Furr · Yezhov",
+          "title_pt": "Yezhov e Stalin",
+          "title_ru": "Ежов и Сталин",
+          "author": "Grover Furr",
+          "date": "s/d",
+          "archive": "Ensaio histórico",
+          "eyebrow": "Ensaio histórico",
+          "languages": [
+            { "code": "pt", "label": "Tradução portuguesa", "file": "originais/furr.pt.md" },
+            { "code": "en", "label": "English version",     "file": "originais/furr.en.md" }
+          ]
+        }
+      ]
     }
   ]
 }
