@@ -452,10 +452,16 @@ function documentMarkdown(meta, language) {
   return lines.join("\n");
 }
 
+function markdownFilename(meta, language) {
+  const file = meta.languages.find(l => l.code === language.code)?.file;
+  const name = file?.split("/").pop();
+  return name ? name.replace(/\.(?:md|txt)$/i, "") + ".md" : `${meta.id}.${language.code}.md`;
+}
+
 function downloadMarkdown(meta, language) {
   const blob = new Blob([documentMarkdown(meta, language)], { type: "text/markdown;charset=utf-8" });
   const url = URL.createObjectURL(blob);
-  const link = el("a", { href: url, download: `${meta.id}.${language.code}.md` });
+  const link = el("a", { href: url, download: markdownFilename(meta, language) });
   document.body.appendChild(link);
   link.click();
   link.remove();
