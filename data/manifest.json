@@ -5041,10 +5041,17 @@
       "languages": [
         {
           "code": "ru",
-          "label": "Disponível em russo",
+          "label": "Texto em russo",
           "file": "originais/showtrials/showtrials-1665.ru.txt"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-1665.pt.md",
+          "format": "markdown"
         }
-      ]
+      ],
+      "title_pt": "Protocolo do interrogatório de L. V. Nikolaev"
     },
     {
       "id": "showtrials-1666",

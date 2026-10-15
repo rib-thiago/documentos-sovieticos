@@ -90,16 +90,18 @@ function zipBlocks(langs) {
   const out = [];
   for (let i = 0; i < n; i++) {
     const cells = {};
+    const cellTypes = {};
     const types = [];
     for (const l of langs) {
       const b = l.blocks[i] || null;
       cells[l.code] = (b || {}).text || "";
+      if (b) cellTypes[l.code] = b.type;
       if (b) types.push(b.type);
     }
     const btype = types.length
       ? types.reduce((a, b) => (rank[a] < rank[b] ? a : b))
       : "p";
-    out.push({ type: btype, cells });
+    out.push({ type: btype, cells, cellTypes });
   }
   return out;
 }
@@ -326,6 +328,7 @@ function setActiveNav(collectionId) {
 /* ---------- Renderização: documento ---------- */
 
 function renderCellContent(block, code) {
+  block = { ...block, type: block.cellTypes?.[code] || block.type };
   const frag = document.createDocumentFragment();
   const raw = (block.cells[code] || "").trim();
   if (!raw) { frag.appendChild(el("p", { text: "—" })); return frag; }
@@ -485,13 +488,14 @@ function escapeMarkdownText(text) {
 
 function documentMarkdown(meta, language) {
   // As edições Markdown são exportadas diretamente, sem reconstruir os parágrafos.
-  if (meta.format !== "text") return language.source;
+  const format = language.format || meta.format;
+  if (format !== "text" && meta.source_name !== "ShowTrials") return language.source;
   const title = meta[`title_${language.code}`] || meta.title_ru || meta.title_pt;
   const lines = [`# ${escapeMarkdownText(title)}`, ""];
   if (meta.source_url) lines.push(`Fonte: ${meta.source_url}`);
   if (meta.source_id) lines.push(`ID ShowTrials: ${meta.source_id}`);
   lines.push(`Idioma: ${language.code.toUpperCase()}`, "", "---", "");
-  lines.push(escapeMarkdownText(language.source));
+  lines.push(format === "text" ? escapeMarkdownText(language.source) : language.source);
   return lines.join("\n");
 }
 
@@ -593,8 +597,9 @@ function renderReadingContent(meta, langs) {
   const language = langs.find(l => l.code === readingLanguage(meta, langs));
   content.lang = language.code;
   content.innerHTML = "";
-  content.classList.toggle("plain-text", meta.format === "text");
-  if (meta.format === "text") {
+  const format = language.format || meta.format;
+  content.classList.toggle("plain-text", format === "text");
+  if (format === "text") {
     for (const block of parsePlainText(language.source)) {
       content.appendChild(el("p", { text: block.text }));
     }
@@ -668,11 +673,13 @@ async function loadDocument(collection, docMeta, subcollection) {
   const langs = await Promise.all(
     docMeta.languages.map(async l => {
       const source = await fetchText(l.file);
+      const format = l.format || docMeta.format;
       return {
         code: l.code,
         label: l.label,
         source,
-        blocks: docMeta.format === "text" ? parsePlainText(source) : parseStudyMarkdown(source),
+        format,
+        blocks: format === "text" ? parsePlainText(source) : parseStudyMarkdown(source),
       };
     })
   );

@@ -80,6 +80,8 @@ Os documentos importados usam `format: "text"`: o leitor preserva sinais e quebr
 
 Para acrescentar uma tradução manualmente, inclua o arquivo e uma entrada em `languages` no documento correspondente. Para acrescentar a capa, preencha `cover` na coleção, seguindo os exemplos existentes.
 
+As traduções dos documentos ShowTrials podem ficar em `originais/showtrials/ID.pt.md`. Cadastre também `title_pt` e, na entrada do idioma português, `format: "markdown"`, pois o documento russo pode continuar em texto simples. O formato de cada idioma tem precedência sobre o formato geral do documento. Se o arquivo veio da exportação do site, o título, a fonte, o ID e o idioma do cabeçalho devem ser cadastrados como metadados; o arquivo publicado contém o corpo, conservando seus parágrafos. A exportação recompõe esse cabeçalho. O documento `showtrials-1665` é um exemplo dessa organização.
+
 ## Publicação
 
 O site pode ser servido pelo GitHub Pages a partir da raiz, sem compilação. A publicação deve incluir `index.html`, `assets/`, `data/` e `originais/`. A pasta `temporario/` e as exportações de trabalho não precisam ser publicadas.
