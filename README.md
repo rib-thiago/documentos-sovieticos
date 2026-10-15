@@ -34,6 +34,16 @@ A leitura Markdown usa markdown-it com suporte a notas de rodapé e sanitizaçã
 
 As bibliotecas estão incluídas em `assets/vendor/`, com versões fixas e licenças. **Não é necessário npm, instalação ou compilação** para usar ou publicar o site. A procedência e os hashes estão em `assets/vendor/manifest.json`.
 
+### Índice e marcador de leitura na sessão
+
+Ao visualizar um documento, Leitura e os dois submodos de Estudo oferecem o menu **Índice e marcador** na navegação superior (**Marcador** nos textos sem títulos). Há um único painel expansível, com retomada e índice, sem um segundo dropdown interno. O menu fica oculto na página inicial e nas páginas de coleção. Fecha ao clicar fora, pressionar Escape ou selecionar uma seção/retomar a leitura. Seu estado é lembrado por documento na sessão da aba. O índice respeita a hierarquia dos títulos exibidos; em Estudo paralelo, acompanha o idioma da coluna esquerda. Seus links não alteram a rota do documento.
+
+Clique ou toque em um parágrafo para marcar o ponto; uma **bolinha vermelha** indica a marca. Outro clique no mesmo trecho remove a marca; clicar em outro parágrafo a transfere. Também é possível usar Enter ou Espaço com o trecho em foco. Selecionar texto, seguir links e usar os controles de idioma não altera a marca. Rolagem e navegação pelo índice não a substituem automaticamente.
+
+A marca fica em `sessionStorage`, por documento, com o idioma e o modo de visualização. **Retomar leitura**, dentro da barra, restaura o trecho, o idioma e o submodo em que foi marcado, expandindo a tradução quando necessário. O marcador funciona também nos TXT, sem inventar títulos ou converter conteúdo. No Estudo, a bolinha identifica o bloco correspondente.
+
+Os dados ficam na sessão daquela aba; não são enviados ao servidor nem sincronizados entre dispositivos. A marca permanece disponível ao navegar entre textos ou recarregar a página na mesma aba. Ao retomar, o conteúdo do bloco é conferido para evitar saltos para outro trecho se o documento tiver sido alterado. Se o armazenamento estiver bloqueado, a interface informa a impossibilidade de salvar. As posições antigas gravadas automaticamente continuam reconhecidas até serem removidas ou substituídas por um clique.
+
 ## Consulta local
 
 Na raiz do projeto, execute:

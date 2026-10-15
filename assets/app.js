@@ -11,6 +11,7 @@ const state = {
   studyMode: "paragraph",
   activeDocument: null,
   readingLanguages: new Map(),
+  readingTracker: null,
   parallelCols: { left: null, right: null },
 };
 
@@ -145,9 +146,17 @@ function markdown() {
     const slug = text.toLowerCase().normalize("NFC")
       .replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "") || "secao";
     const counts = env.headingCounts || (env.headingCounts = new Map());
-    const count = (counts.get(slug) || 0) + 1;
+    let count = (counts.get(slug) || 0) + 1;
+    const ids = env.headingIds || (env.headingIds = new Set());
+    let id;
+    do {
+      id = `${env.docId || "markdown"}-${slug}${count > 1 ? "-" + count : ""}`;
+      if (!ids.has(id)) break;
+      count++;
+    } while (true);
     counts.set(slug, count);
-    tokens[index].attrSet("id", `${env.docId || "markdown"}-${slug}${count > 1 ? "-" + count : ""}`);
+    ids.add(id);
+    tokens[index].attrSet("id", id);
     return renderer.renderToken(tokens, index, options);
   };
   return markdownRenderer;
@@ -287,6 +296,8 @@ function setParallelCols(side, value) {
   } catch (e) {}
   applyParallelLayout();
   updateParallelSelects();
+  const active = state.activeDocument;
+  if (active) setupStudyNavigation(active.meta, active.langs);
 }
 
 function updateParallelSelects() {
@@ -591,7 +602,320 @@ function renderToolbar(langs, meta) {
   return bar;
 }
 
+/* ---------- Índice e posição de leitura: somente nesta sessão da aba ---------- */
+
+function sessionRead(key) {
+  try { return sessionStorage.getItem(key); } catch (e) { return null; }
+}
+
+function sessionWrite(key, value) {
+  try { sessionStorage.setItem(key, value); return true; } catch (e) { return false; }
+}
+
+function readingFingerprint(text) {
+  let hash = 2166136261;
+  const normalized = text.trim().replace(/\s+/g, " ");
+  for (let i = 0; i < normalized.length; i++) {
+    hash = Math.imul(hash ^ normalized.charCodeAt(i), 16777619);
+  }
+  return (hash >>> 0).toString(36);
+}
+
+function savedReadingProgress(meta, langs) {
+  let record;
+  try { record = JSON.parse(sessionRead("readingProgress:v1:" + meta.id)); } catch (e) { return null; }
+  if (!record || record.version !== 1 || !langs.some(l => l.code === record.language) ||
+      !Number.isInteger(record.blockIndex) || record.blockIndex < 0 ||
+      typeof record.signature !== "string" || !Number.isFinite(record.offset) ||
+      record.offset < 0 || record.offset > 1) return null;
+  return record;
+}
+
+function resolveReadingBlock(record, blocks) {
+  const atIndex = blocks[record.blockIndex];
+  if (atIndex && readingFingerprint(atIndex.textContent) === record.signature) return atIndex;
+  return blocks.find(block => readingFingerprint(block.textContent) === record.signature) || null;
+}
+
+function updateReadingLayout() {
+  const header = document.querySelector(".site-header");
+  document.documentElement.style.setProperty("--site-header-height", `${header?.getBoundingClientRect().height || 0}px`);
+}
+
+function readingViewportTop() {
+  return (document.querySelector(".site-header")?.getBoundingClientRect().height || 0) + 24;
+}
+
+function closeDocumentPanel() {
+  const panel = document.querySelector(".reading-panel");
+  if (!panel || !panel.open) return;
+  panel.open = false;
+  if (state.activeDocument) sessionWrite("readingPanel:v1:" + state.activeDocument.meta.id, "false");
+}
+
+function jumpToReadingBlock(target, offset = 0) {
+  closeDocumentPanel();
+  updateReadingLayout();
+  const rect = target.getBoundingClientRect();
+  window.scrollTo({ top: Math.max(0, window.scrollY + rect.top + rect.height * offset - readingViewportTop()), behavior: "auto" });
+  target.setAttribute("tabindex", "-1");
+  target.focus({ preventScroll: true });
+}
+
+function buildReadingIndex(headings) {
+  const list = el("ol", { class: "reading-toc-list" });
+  const minLevel = Math.min(...headings.map(h => h.level));
+  const stack = [{ level: minLevel, list, item: null }];
+  for (const heading of headings) {
+    const level = heading.level;
+    while (stack.length > 1 && level < stack[stack.length - 1].level) stack.pop();
+    let frame = stack[stack.length - 1];
+    if (level > frame.level && frame.item) {
+      const nested = el("ol");
+      frame.item.appendChild(nested);
+      frame = { level, list: nested, item: null };
+      stack.push(frame);
+    }
+    const link = el("a", { href: "#" + heading.node.id, class: "reading-toc-link", text: heading.node.textContent });
+    link.dataset.target = heading.node.id;
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      jumpToReadingBlock(heading.node);
+    });
+    frame.item = el("li", {}, [link]);
+    frame.list.appendChild(frame.item);
+  }
+  return list;
+}
+
+function resolveMarkedEntry(record, entries) {
+  const sameLanguage = entries.filter(entry => entry.language === record.language);
+  const block = resolveReadingBlock(record, sameLanguage.map(entry => entry.node));
+  return sameLanguage.find(entry => entry.node === block) || null;
+}
+
+function paintReadingMarker(record) {
+  const tracker = state.readingTracker;
+  if (!tracker) return;
+  for (const entry of tracker.entries) {
+    (entry.row || entry.node).classList.remove("reading-marked");
+    entry.node.removeAttribute("aria-current");
+  }
+  const entry = record && resolveMarkedEntry(record, tracker.entries);
+  if (entry) {
+    (entry.row || entry.node).classList.add("reading-marked");
+    entry.node.setAttribute("aria-current", "location");
+  }
+}
+
+function updateMarkerControls(meta, langs, message) {
+  const record = savedReadingProgress(meta, langs);
+  const status = document.querySelector(".reading-session-status");
+  if (status) status.textContent = message || (record
+    ? "Parágrafo marcado nesta sessão. Clique novamente nele para remover a marca."
+    : "Clique ou toque em um parágrafo para marcá-lo. Também funciona com Enter ou Espaço.");
+  const resume = document.querySelector(".resume-btn");
+  if (resume) resume.hidden = !record;
+  const indicator = document.querySelector(".panel-marker");
+  if (indicator) indicator.hidden = !record;
+  paintReadingMarker(record);
+  updateReadingLayout();
+}
+
+function markReadingEntry(entry) {
+  const tracker = state.readingTracker;
+  if (!tracker) return;
+  const previous = savedReadingProgress(tracker.meta, tracker.langs);
+  const record = {
+    version: 1, language: entry.language, blockIndex: entry.blockIndex,
+    signature: readingFingerprint(entry.node.textContent), offset: 0,
+    mode: tracker.mode, studyMode: state.studyMode, parallelCols: { ...state.parallelCols },
+  };
+  const same = previous && resolveMarkedEntry(previous, tracker.entries)?.node === entry.node;
+  let saved;
+  if (same) {
+    try { sessionStorage.removeItem("readingProgress:v1:" + tracker.meta.id); saved = true; } catch (e) { saved = false; }
+  } else {
+    saved = sessionWrite("readingProgress:v1:" + tracker.meta.id, JSON.stringify(record));
+  }
+  updateMarkerControls(tracker.meta, tracker.langs, saved
+    ? same ? "Marca removida." : "Parágrafo marcado. A bolinha vermelha indica o ponto salvo nesta sessão."
+    : "Não foi possível salvar a marca neste navegador.");
+}
+
+function handleParagraphMark(event) {
+  const tracker = state.readingTracker;
+  if (!tracker || event.ctrlKey || event.metaKey || event.altKey || event.shiftKey) return;
+  if (event.target.closest("a, button, input, textarea, select, summary")) return;
+  const node = event.target.closest("[data-reading-target]");
+  const entry = tracker.entries.find(item => item.node === node);
+  if (!entry) return;
+  if (event.type === "keydown") {
+    if (event.target !== node || !["Enter", " "].includes(event.key)) return;
+    event.preventDefault();
+  } else {
+    if (event.button !== 0 || window.getSelection()?.isCollapsed === false) return;
+  }
+  markReadingEntry(entry);
+}
+
+function resumeReading(meta, langs, record) {
+  stopReadingTracking();
+  const study = record.mode === "study" && langs.length > 1;
+  state.viewMode = study ? "study" : "reading";
+  if (study && ["paragraph", "parallel"].includes(record.studyMode)) state.studyMode = record.studyMode;
+  state.readingLanguages.set(meta.id, record.language);
+  try {
+    localStorage.setItem("readingLanguage:" + meta.id, record.language);
+    localStorage.setItem("documentViewMode", state.viewMode);
+    localStorage.setItem("studyMode", state.studyMode);
+    const pair = record.parallelCols;
+    if (pair && pair.left !== pair.right && langs.some(l => l.code === pair.left) && langs.some(l => l.code === pair.right)) {
+      localStorage.setItem("parallelCols:" + meta.id, `${pair.left},${pair.right}`);
+    }
+  } catch (e) {}
+  refreshDocument();
+  const tracker = state.readingTracker;
+  const entry = tracker && resolveMarkedEntry(record, tracker.entries);
+  if (!entry) {
+    updateMarkerControls(meta, langs, "O texto mudou; não foi possível localizar o parágrafo marcado.");
+    return;
+  }
+  if (study) {
+    const cell = entry.node.closest(".cell");
+    if (state.studyMode === "paragraph" && cell.classList.contains("secondary")) {
+      cell.classList.add("visible");
+      const toggle = entry.row.querySelector(`.block-toggle[data-lang="${entry.language}"]`);
+      if (toggle) { toggle.classList.add("active"); toggle.setAttribute("aria-expanded", "true"); }
+    } else if (state.studyMode === "parallel" && cell.classList.contains("hidden")) {
+      setParallelCols("left", entry.language);
+    }
+  }
+  paintReadingMarker(record);
+  jumpToReadingBlock(entry.node, record.offset);
+}
+
+function selectableParagraphs(content) {
+  return Array.from(content.querySelectorAll("h1, h2, h3, h4, h5, h6, p, li, pre, table"))
+    .filter(block => !block.closest(".footnotes") &&
+      !(block.tagName === "LI" && block.querySelector("p")) && block.textContent.trim());
+}
+
+function setupReadingNavigation(meta, langs, language, content) {
+  const headings = Array.from(content.querySelectorAll("h1, h2, h3, h4, h5, h6"))
+    .map(node => ({ node, level: Number(node.tagName.slice(1)) }));
+  const entries = selectableParagraphs(content)
+    .map((node, blockIndex) => ({ node, blockIndex, language: language.code }));
+  setupParagraphNavigation(meta, langs, content, entries, headings, "reading");
+}
+
+function setupStudyNavigation(meta, langs) {
+  stopReadingTracking();
+  const content = document.querySelector(".blocks");
+  if (!content) return;
+  const indexLanguage = state.studyMode === "parallel" ? state.parallelCols.left : baseLanguageCode(langs);
+  const source = langs.find(l => l.code === indexLanguage);
+  const entries = [], headings = [], counts = new Map();
+  Array.from(content.querySelectorAll(".block")).forEach((row, rowIndex) => {
+    for (const cell of row.querySelectorAll(".cell")) {
+      const language = cell.getAttribute("lang");
+      for (const node of selectableParagraphs(cell)) {
+        const blockIndex = counts.get(language) || 0;
+        entries.push({ node, blockIndex, language, row });
+        counts.set(language, blockIndex + 1);
+      }
+      const type = source?.blocks[rowIndex]?.type;
+      if (language === indexLanguage && /^h[1-6]$/.test(type || "")) {
+        const node = cell.querySelector("h2, h3, h4");
+        if (node) {
+          node.id = `study-${meta.id}-${language}-section-${rowIndex}`;
+          headings.push({ node, level: Number(type.slice(1)) });
+        }
+      }
+    }
+  });
+  setupParagraphNavigation(meta, langs, content, entries, headings, "study");
+}
+
+function setupParagraphNavigation(meta, langs, content, entries, headings, mode) {
+  const tools = document.querySelector(".reading-tools");
+  tools.innerHTML = "";
+  const panel = el("details", { class: "reading-panel" });
+  const summary = el("summary", {}, [
+    el("span", { text: headings.length ? "Índice e marcador" : "Marcador" }),
+    el("span", { class: "panel-marker", text: "●", title: "Há uma posição marcada", "aria-label": "Há uma posição marcada" }),
+  ]);
+  panel.appendChild(summary);
+  const body = el("div", { class: "reading-panel-body" }, [
+    el("div", { class: "reading-panel-heading" }, [
+      el("p", { class: "reading-panel-caption", text: "Neste documento" }),
+      el("p", { class: "reading-panel-title", text: meta.title_pt || meta.title_ru }),
+    ]),
+  ]);
+  const status = el("p", { class: "reading-session-status", id: "reading-marker-instructions", role: "status" });
+  const controls = el("div", { class: "reading-session" }, [status]);
+  const resume = el("button", { type: "button", class: "resume-btn", text: "Retomar leitura" });
+  resume.addEventListener("click", () => {
+    const record = savedReadingProgress(meta, langs);
+    if (record) resumeReading(meta, langs, record);
+  });
+  controls.appendChild(resume);
+  body.appendChild(controls);
+  if (headings.length) {
+    body.appendChild(el("section", { class: "reading-index" }, [
+      el("h2", { text: "Índice do texto" }),
+      el("nav", { class: "reading-toc", "aria-label": "Índice do texto" }, [buildReadingIndex(headings)]),
+    ]));
+  }
+  panel.appendChild(body);
+  panel.open = sessionRead("readingPanel:v1:" + meta.id) === "true";
+  panel.addEventListener("toggle", () => {
+    sessionWrite("readingPanel:v1:" + meta.id, String(panel.open));
+    updateReadingLayout();
+  });
+  tools.appendChild(panel);
+  tools.hidden = false;
+  document.querySelector(".site-header")?.classList.add("has-document");
+  const tracker = { meta, langs, content, entries, headings, mode };
+  state.readingTracker = tracker;
+  for (const [index, entry] of entries.entries()) {
+    entry.previousTabindex = entry.node.getAttribute("tabindex");
+    entry.previousDescription = entry.node.getAttribute("aria-describedby");
+    entry.node.dataset.readingTarget = String(index);
+    entry.node.setAttribute("tabindex", "0");
+    entry.node.setAttribute("aria-describedby", "reading-marker-instructions");
+  }
+  content.addEventListener("click", handleParagraphMark);
+  content.addEventListener("keydown", handleParagraphMark);
+  if (typeof ResizeObserver !== "undefined") {
+    tracker.observer = new ResizeObserver(updateReadingLayout);
+    tracker.observer.observe(tools);
+  }
+  updateMarkerControls(meta, langs);
+}
+
+function stopReadingTracking() {
+  const tools = document.querySelector(".reading-tools");
+  if (tools) { tools.hidden = true; tools.innerHTML = ""; }
+  document.querySelector(".site-header")?.classList.remove("has-document");
+  updateReadingLayout();
+  const tracker = state.readingTracker;
+  if (!tracker) return;
+  tracker.observer?.disconnect();
+  tracker.content.removeEventListener("click", handleParagraphMark);
+  tracker.content.removeEventListener("keydown", handleParagraphMark);
+  for (const entry of tracker.entries) {
+    delete entry.node.dataset.readingTarget;
+    for (const [attribute, previous] of [["tabindex", entry.previousTabindex], ["aria-describedby", entry.previousDescription]]) {
+      if (previous === null) entry.node.removeAttribute(attribute);
+      else entry.node.setAttribute(attribute, previous);
+    }
+  }
+  state.readingTracker = null;
+}
+
 function renderReadingContent(meta, langs) {
+  stopReadingTracking();
   const content = document.querySelector(".reading-content");
   if (!content) return;
   const language = langs.find(l => l.code === readingLanguage(meta, langs));
@@ -607,6 +931,7 @@ function renderReadingContent(meta, langs) {
     content.dataset.anchorPrefix = `reading-${meta.id}-${language.code}`;
     content.innerHTML = safeMarkdown(language.source, { docId: content.dataset.anchorPrefix });
   }
+  setupReadingNavigation(meta, langs, language, content);
 }
 
 function handleReadingAnchor(event) {
@@ -621,12 +946,11 @@ function handleReadingAnchor(event) {
   try { id = decodeURIComponent(href.slice(1)); } catch (e) { return; }
   const target = document.getElementById(id) || document.getElementById(`${content.dataset.anchorPrefix}-${id}`);
   if (!target || !content.contains(target)) return;
-  target.scrollIntoView({ block: "start" });
-  target.setAttribute("tabindex", "-1");
-  target.focus({ preventScroll: true });
+  jumpToReadingBlock(target);
 }
 
 function renderDocument(meta, langs, blocks, collection, subcollection, scroll = true) {
+  stopReadingTracking();
   const root = document.getElementById("view");
   root.innerHTML = "";
   state.activeDocument = { meta, langs, blocks, collection, subcollection };
@@ -655,8 +979,10 @@ function renderDocument(meta, langs, blocks, collection, subcollection, scroll =
     article.appendChild(content);
   }
   root.appendChild(article);
-  if (isStudy && state.studyMode === "parallel") applyParallelLayout();
-  else if (!isStudy) renderReadingContent(meta, langs);
+  if (isStudy) {
+    if (state.studyMode === "parallel") applyParallelLayout();
+    setupStudyNavigation(meta, langs);
+  } else renderReadingContent(meta, langs);
   setActiveNav(collection ? collection.id : null);
   if (scroll) window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -699,6 +1025,7 @@ async function loadDocument(collection, docMeta, subcollection) {
 /* ---------- Renderização: coleção ---------- */
 
 function renderCollection(collection, subcollection = null, showAll = false) {
+  stopReadingTracking();
   const root = document.getElementById("view");
   root.innerHTML = "";
 
@@ -807,6 +1134,7 @@ function renderCollection(collection, subcollection = null, showAll = false) {
 /* ---------- Renderização: homepage ---------- */
 
 function renderHome() {
+  stopReadingTracking();
   const root = document.getElementById("view");
   root.innerHTML = "";
 
@@ -878,6 +1206,7 @@ function parseRoute() {
 }
 
 async function route() {
+  stopReadingTracking();
   const r = parseRoute();
   try {
     if (r.view === "home") {
@@ -918,6 +1247,25 @@ async function main() {
     state.manifest = await fetchJSON("data/manifest.json");
     state.documentIndex = new Map((state.manifest.documents || []).map(d => [d.id, d]));
     renderNav();
+    updateReadingLayout();
+    if (typeof ResizeObserver !== "undefined") {
+      new ResizeObserver(updateReadingLayout).observe(document.querySelector(".site-header"));
+    }
+    window.addEventListener("resize", updateReadingLayout);
+    document.addEventListener("click", event => {
+      const tools = document.querySelector(".reading-tools");
+      if (tools && !tools.contains(event.target)) closeDocumentPanel();
+    });
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape" && document.querySelector(".reading-panel")?.open) {
+        closeDocumentPanel();
+        document.querySelector(".reading-panel > summary")?.focus();
+      }
+    });
+    window.addEventListener("pagehide", () => stopReadingTracking());
+    window.addEventListener("pageshow", event => {
+      if (event.persisted && document.querySelector("article.doc")) refreshDocument();
+    });
     window.addEventListener("hashchange", route);
     await route();
   } catch (err) {
