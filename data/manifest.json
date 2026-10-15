@@ -110,8 +110,8 @@
       "id": "yezhov-vs-stalin",
       "title_pt": "Yezhov vs Stalin",
       "title_ru": "Ежов против Сталина",
-      "subtitle_pt": "Um artigo de Grover Furr",
-      "description_pt": "Ensaio sobre Nikolai Yezhov e sua relação com Stalin, em edição bilíngue português-inglês.",
+      "subtitle_pt": "Ensaio histórico e interrogatórios de Nikolai Yezhov",
+      "description_pt": "Ensaio de Grover Furr sobre Nikolai Yezhov e sua relação com Stalin, em português e inglês, e uma compilação de interrogatórios em russo, português e inglês.",
       "accent": "#6b4a2c",
       "cover": "assets/covers/yezhov.jpg",
       "documents": [
@@ -128,6 +128,19 @@
           "languages": [
             { "code": "pt", "label": "Tradução portuguesa", "file": "originais/furr.pt.md" },
             { "code": "en", "label": "English version",     "file": "originais/furr.en.md" }
+          ]
+        },
+        {
+          "id": "confessionezhov",
+          "type": "document",
+          "shortTitle": "Interrogatórios de Yezhov",
+          "title_pt": "Interrogatórios de Nikolai Yezhov, ex-Comissário do Povo para Assuntos Internos",
+          "title_ru": "Допросы Николая Ежова, бывшего народного комиссара внутренних дел",
+          "eyebrow": "Compilação de interrogatórios · NKVD",
+          "languages": [
+            { "code": "ru", "label": "Русская версия",       "file": "originais/confessionezhov.ru.md" },
+            { "code": "pt", "label": "Versão portuguesa",   "file": "originais/confessionezhov.pt.md" },
+            { "code": "en", "label": "English version",     "file": "originais/confessionezhov.en.md" }
           ]
         }
       ]

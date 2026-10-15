@@ -120,10 +120,7 @@ a{color:inherit}
   background:var(--accent);vertical-align:middle;margin-right:.55rem}
 
 .blocks{counter-reset:blk}
-/* As colunas do paralelo agora dependem do modo. O modo leitura
-   sobrescreve com uma única coluna, conforme regras ao final. */
-.doc.mode-parallel .blocks.cols-2 .block{grid-template-columns:1fr 1fr}
-.doc.mode-parallel .blocks.cols-3 .block{grid-template-columns:1fr 1fr 1fr}
+/* O número de colunas é definido nas regras de cada modo, ao final. */
 
 .block{display:grid;gap:var(--col-gap);padding:1.1rem .2rem;
   border-bottom:1px solid var(--rule-soft);position:relative;
