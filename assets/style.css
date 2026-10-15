@@ -237,10 +237,6 @@ a{color:inherit}
   .collection-select{width:100%}
 }
 
-/* Um único idioma mantém a largura de leitura, inclusive com Paralelo salvo. */
-.doc[data-lang-count="1"] .blocks{max-width:820px;margin:0 auto}
-.doc[data-lang-count="1"] .blocks .block{grid-template-columns:1fr;padding-right:1rem}
-.doc[data-lang-count="1"] .cell p{white-space:pre-line}
 
 /* =========================================================
    Modos de leitura
@@ -265,7 +261,7 @@ a{color:inherit}
 .mode-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
 
 /* O seletor de colunas só aparece no modo paralelo */
-.doc.mode-reading .parallel-only{display:none}
+.doc.mode-paragraph .parallel-only{display:none}
 
 .lang-select{
   font-family:Inter,system-ui,sans-serif;font-size:.8rem;
@@ -293,24 +289,24 @@ a{color:inherit}
   opacity:1;background:var(--accent);
   border-color:var(--accent);color:#fff}
 
-/* ---------- Modo Leitura ---------- */
-.doc.mode-reading .col-labels{display:none}
+/* ---------- Estudo: Por parágrafo ---------- */
+.doc.mode-paragraph .col-labels{display:none}
 
-.doc.mode-reading .blocks .block{
+.doc.mode-paragraph .blocks .block{
   display:grid;grid-template-columns:1fr;gap:.55rem;
   padding:1.1rem 4.5rem 1.1rem 1rem;
   border-bottom:1px solid var(--rule-soft);
   border-radius:6px;
   transition:background .2s ease,padding .2s ease,box-shadow .2s ease}
-.doc.mode-reading .blocks .block.is-heading{
+.doc.mode-paragraph .blocks .block.is-heading{
   padding-top:2rem;padding-bottom:.8rem;
   border-bottom:1px solid var(--rule)}
 
-.doc.mode-reading .blocks .block:hover:not(:has(.cell.secondary.visible)){
+.doc.mode-paragraph .blocks .block:hover:not(:has(.cell.secondary.visible)){
   background:rgba(139,44,44,.018);
 }
 
-.doc.mode-reading .blocks .block:has(.cell.secondary.visible){
+.doc.mode-paragraph .blocks .block:has(.cell.secondary.visible){
   background:linear-gradient(to right,
     rgba(139,44,44,.055) 0%,
     rgba(139,44,44,.025) 60%,
@@ -318,36 +314,36 @@ a{color:inherit}
   box-shadow:inset 3px 0 0 var(--accent);
   padding-left:1.4rem;
 }
-.doc.mode-reading .blocks .block.is-heading:has(.cell.secondary.visible){
+.doc.mode-paragraph .blocks .block.is-heading:has(.cell.secondary.visible){
   background:linear-gradient(to right,
     rgba(139,44,44,.045) 0%,
     rgba(139,44,44,.015) 100%);
   box-shadow:inset 3px 0 0 var(--accent);
 }
 
-.doc.mode-reading .cell.base{
+.doc.mode-paragraph .cell.base{
   order:1;border-left:none;padding-left:.2rem;
   background:transparent;border-radius:0}
 
-.doc.mode-reading .cell.secondary{
+.doc.mode-paragraph .cell.secondary{
   display:none;order:2;border-left:none;
   padding:.75rem .2rem 0 .2rem;background:transparent;
   border-top:1px dashed var(--rule);margin-top:.35rem;border-radius:0}
-.doc.mode-reading .cell.secondary.visible{display:block}
+.doc.mode-paragraph .cell.secondary.visible{display:block}
 
-.doc.mode-reading .cell.secondary p,
-.doc.mode-reading .cell.secondary li,
-.doc.mode-reading .cell.secondary blockquote{
+.doc.mode-paragraph .cell.secondary p,
+.doc.mode-paragraph .cell.secondary li,
+.doc.mode-paragraph .cell.secondary blockquote{
   color:#565656;font-style:italic;
 }
-.doc.mode-reading .cell.secondary ul{color:#565656}
+.doc.mode-paragraph .cell.secondary ul{color:#565656}
 
-.doc.mode-reading .cell.secondary::before{
+.doc.mode-paragraph .cell.secondary::before{
   content:attr(data-lang-label);display:block;
   font-family:Inter,system-ui,sans-serif;font-size:.65rem;
   letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
   font-weight:600;margin-bottom:.4rem;font-style:normal}
-.doc.mode-reading .block.is-heading .cell.secondary::before{display:none}
+.doc.mode-paragraph .block.is-heading .cell.secondary::before{display:none}
 
 /* ---------- Modo Paralelo: esconde colunas não selecionadas ---------- */
 .doc.mode-parallel .cell.hidden{display:none}
@@ -361,8 +357,8 @@ a{color:inherit}
 }
 
 @media (max-width:700px){
-  .doc.mode-reading .blocks .block{padding-right:3.8rem;padding-left:1rem}
-  .doc.mode-reading .blocks .block:has(.cell.secondary.visible){padding-left:1.2rem}
+  .doc.mode-paragraph .blocks .block{padding-right:3.8rem;padding-left:1rem}
+  .doc.mode-paragraph .blocks .block:has(.cell.secondary.visible){padding-left:1.2rem}
   .doc-toolbar{padding:.3rem 0;gap:.8rem}
   .doc .blocks.cols-2 .block,
   .doc .blocks.cols-3 .block,
@@ -382,3 +378,41 @@ a{color:inherit}
 .export-btn:hover{border-color:var(--accent);color:var(--accent)}
 .export-btn:focus-visible,.export-language:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media(max-width:700px){.export-group{margin-left:0}}
+
+/* ---------- Leitura contínua ---------- */
+.reading-content{max-width:820px;margin:0 auto;font-size:1.08rem;line-height:1.85;overflow-wrap:anywhere}
+.reading-content p{margin:0 0 1.2em}
+.reading-content h1,.reading-content h2,.reading-content h3,
+.reading-content h4,.reading-content h5,.reading-content h6{line-height:1.35;margin:1.8em 0 .7em;font-weight:600}
+.reading-content > :first-child{margin-top:0}
+.reading-content h1{font-size:1.65em}
+.reading-content h2{font-size:1.4em}
+.reading-content h3{font-size:1.2em}
+.reading-content h4,.reading-content h5,.reading-content h6{font-size:1.05em}
+.reading-content a{color:var(--accent);text-underline-offset:.15em}
+.reading-content img{max-width:100%;height:auto;display:block;margin:1.5rem auto;border-radius:var(--radius)}
+.reading-content blockquote{margin:1.5em 0;padding:.15rem 0 .15rem 1.3rem;
+  border-left:3px solid var(--rule);color:var(--ink-soft)}
+.reading-content blockquote > :last-child{margin-bottom:0}
+.reading-content ul,.reading-content ol{padding-left:1.6rem;margin:1em 0}
+.reading-content li{margin:.35em 0}
+.reading-content li > p{margin-bottom:.5em}
+.reading-content hr{border:0;border-top:1px solid var(--rule);margin:2rem 0}
+.reading-content table{display:block;width:100%;overflow-x:auto;border-collapse:collapse;margin:1.5rem 0;font-size:.92em}
+.reading-content th,.reading-content td{border:1px solid var(--rule);padding:.5rem .75rem;text-align:left}
+.reading-content th{background:var(--rule-soft)}
+.reading-content pre{padding:1rem;background:var(--rule-soft);border-radius:var(--radius);overflow-x:auto;line-height:1.5}
+.reading-content code{font-size:.85em}
+.reading-content :not(pre) > code{background:var(--rule-soft);padding:.1em .3em;border-radius:3px}
+.reading-content .footnotes{font-size:.9em;color:var(--ink-soft)}
+.reading-content .footnote-ref{font-size:.7em;line-height:0}
+.reading-content [id]{scroll-margin-top:9rem}
+.reading-content.plain-text p{white-space:pre-line}
+.study-btn{font-family:Inter,system-ui,sans-serif;font-size:.78rem;padding:.4rem .75rem;
+  border:1px solid var(--rule);background:var(--paper);color:var(--ink-soft);border-radius:6px;cursor:pointer}
+.study-btn.active{border-color:var(--accent);color:var(--accent);background:var(--rule-soft)}
+.study-btn:hover{border-color:var(--accent)}
+.reading-language{font-family:Inter,system-ui,sans-serif;font-size:.8rem;padding:.4rem .6rem;
+  border:1px solid var(--rule);background:var(--paper);color:var(--ink-soft);border-radius:4px;cursor:pointer}
+.study-btn:focus-visible,.reading-language:focus-visible,.mode-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:700px){.reading-content{font-size:1rem}.reading-content [id]{scroll-margin-top:11rem}}

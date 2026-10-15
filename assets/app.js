@@ -8,6 +8,9 @@ const state = {
   documentIndex: new Map(),
   activeCollection: null,
   viewMode: "reading",
+  studyMode: "paragraph",
+  activeDocument: null,
+  readingLanguages: new Map(),
   parallelCols: { left: null, right: null },
 };
 
@@ -23,7 +26,7 @@ async function fetchJSON(url) {
 }
 function absURL(path) { return new URL(path, document.baseURI).href; }
 
-/* ---------- Parser markdown ---------- */
+/* ---------- Segmentação legada, usada apenas nas ferramentas de estudo ---------- */
 
 function normalizeHeadingLevel(text, mdLevel) {
   if (/^[IVX]+\.\s/.test(text)) return 2;
@@ -38,7 +41,7 @@ function parsePlainText(text) {
     .map(text => ({ type: "text", text }));
 }
 
-function parseMarkdown(md) {
+function parseStudyMarkdown(md) {
   const text = md.replace(/\r\n/g, "\n").trim();
   const chunks = text.split(/\n{2,}/);
   const blocks = [];
@@ -122,13 +125,43 @@ function escapeHTML(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+let markdownRenderer = null;
+
+function markdown() {
+  if (markdownRenderer) return markdownRenderer;
+  markdownRenderer = markdownit({ html: false, linkify: true, typographer: false })
+    .use(markdownitFootnote);
+  const imageRule = markdownRenderer.renderer.rules.image;
+  markdownRenderer.renderer.rules.image = (tokens, index, options, env, renderer) => {
+    const token = tokens[index];
+    token.attrSet("src", absURL(token.attrGet("src")));
+    token.attrSet("loading", "lazy");
+    return imageRule(tokens, index, options, env, renderer);
+  };
+  markdownRenderer.renderer.rules.heading_open = (tokens, index, options, env, renderer) => {
+    const text = tokens[index + 1].content;
+    const slug = text.toLowerCase().normalize("NFC")
+      .replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-|-$/g, "") || "secao";
+    const counts = env.headingCounts || (env.headingCounts = new Map());
+    const count = (counts.get(slug) || 0) + 1;
+    counts.set(slug, count);
+    tokens[index].attrSet("id", `${env.docId || "markdown"}-${slug}${count > 1 ? "-" + count : ""}`);
+    return renderer.renderToken(tokens, index, options);
+  };
+  return markdownRenderer;
+}
+
+function safeMarkdown(source, env = {}, inlineOnly = false) {
+  const html = inlineOnly ? markdown().renderInline(source, env) : markdown().render(source, env);
+  return DOMPurify.sanitize(html, {
+    USE_PROFILES: { html: true },
+    FORBID_TAGS: ["style", "form", "input", "button"],
+    FORBID_ATTR: ["style"],
+  });
+}
+
 function inline(text) {
-  let out = escapeHTML(text);
-  out = out.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
-  out = out.replace(/\*(.+?)\*/g, "<em>$1</em>");
-  out = out.replace(/!\[(.*?)\]\((.+?)\)/g, (_, alt, src) =>
-    `<img class="md-img-inline" src="${absURL(src)}" alt="${alt}" loading="lazy">`);
-  return out;
+  return safeMarkdown(text, {}, true);
 }
 
 function baseLanguageCode(langs) {
@@ -139,31 +172,41 @@ function baseLanguageCode(langs) {
 
 /* ---------- Modo de visualização ---------- */
 
+function refreshDocument() {
+  if (!state.activeDocument) return;
+  const { meta, langs, blocks, collection, subcollection } = state.activeDocument;
+  renderDocument(meta, langs, blocks, collection, subcollection, false);
+}
+
 function setViewMode(mode) {
+  if (!["reading", "study"].includes(mode)) return;
   state.viewMode = mode;
-  try { localStorage.setItem("viewMode", mode); } catch (e) {}
-  document.querySelectorAll(".doc-toolbar .mode-btn").forEach(b => {
-    b.classList.toggle("active", b.dataset.mode === mode);
-  });
-  const article = document.querySelector("article.doc");
-  if (!article) return;
-  article.classList.remove("mode-reading", "mode-parallel");
-  article.classList.add("mode-" + mode);
-  if (mode === "parallel") {
-    applyParallelLayout();
-  } else {
-    article.querySelectorAll(".cell.hidden").forEach(c => {
-      c.classList.remove("hidden");
-      c.style.order = "";
-    });
-    const labels = article.querySelector(".col-labels");
-    if (labels) {
-      labels.querySelectorAll(":scope > div").forEach(d => {
-        d.classList.remove("hidden");
-        d.style.order = "";
-      });
-    }
+  try { localStorage.setItem("documentViewMode", mode); } catch (e) {}
+  refreshDocument();
+}
+
+function setStudyMode(mode) {
+  if (!["paragraph", "parallel"].includes(mode)) return;
+  state.studyMode = mode;
+  try { localStorage.setItem("studyMode", mode); } catch (e) {}
+  refreshDocument();
+}
+
+function readingLanguage(meta, langs) {
+  let code = state.readingLanguages.get(meta.id);
+  if (!code) {
+    try { code = localStorage.getItem("readingLanguage:" + meta.id); } catch (e) {}
   }
+  return langs.some(l => l.code === code) ? code : baseLanguageCode(langs);
+}
+
+function setReadingLanguage(meta, langs, code) {
+  if (!langs.some(l => l.code === code)) return;
+  state.readingLanguages.set(meta.id, code);
+  try { localStorage.setItem("readingLanguage:" + meta.id, code); } catch (e) {}
+  renderReadingContent(meta, langs);
+  const exportSelect = document.querySelector(".export-language");
+  if (exportSelect) exportSelect.value = code;
 }
 
 /* ---------- Colunas paralelas ---------- */
@@ -294,7 +337,7 @@ function renderCellContent(block, code) {
 
   if (block.type === "image") {
     const m = raw.match(/^!\[(.*?)\]\((.+?)\)$/);
-    if (m) {
+    if (m && markdown().validateLink(m[2].trim())) {
       const fig = el("figure", { class: "md-figure" });
       fig.appendChild(el("img", {
         src: absURL(m[2].trim()), alt: m[1].trim(), loading: "lazy",
@@ -342,7 +385,7 @@ function renderBlock(b, allLangs) {
   const wrap = el("div", { class: "block" + (isHeading ? " is-heading" : "") });
   const baseCode = baseLanguageCode(allLangs);
 
-  // Botões de tradução (só no modo Leitura, só se houver >1 idioma, exceto imagens)
+  // Botões de tradução (só em Estudo → Por parágrafo, só se houver >1 idioma, exceto imagens)
   if (allLangs.length > 1 && !isImage) {
     const group = el("div", { class: "block-toggles" });
     for (const l of allLangs) {
@@ -468,97 +511,149 @@ function downloadMarkdown(meta, language) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
+function languageSelect(langs, className, label, code) {
+  const select = el("select", { class: className, "aria-label": label });
+  const names = { pt: "Português", ru: "Russo", en: "Inglês" };
+  for (const l of langs) {
+    select.appendChild(el("option", { value: l.code, text: names[l.code] || l.label }));
+  }
+  select.value = code;
+  return select;
+}
+
 function renderToolbar(langs, meta) {
   const bar = el("div", { class: "doc-toolbar" });
+  const hasTranslations = langs.length > 1;
+  const isStudy = hasTranslations && state.viewMode === "study";
 
-  if (langs.length > 1) {
-    const modeGroup = el("div", { class: "toolbar-group" });
-    modeGroup.appendChild(el("span", { class: "toolbar-label", text: "Modo:" }));
-    [["reading", "Leitura"], ["parallel", "Paralelo"]].forEach(([code, label]) => {
-      const btn = el("button", {
-        type: "button",
-        class: "mode-btn" + (state.viewMode === code ? " active" : ""),
-        "data-mode": code,
-        text: label,
+  if (hasTranslations) {
+    const modes = el("div", { class: "toolbar-group", role: "group", "aria-label": "Modo de visualização" });
+    [["reading", "Leitura"], ["study", "Estudo"]].forEach(([code, label]) => {
+      const active = state.viewMode === code;
+      const button = el("button", {
+        type: "button", class: "mode-btn" + (active ? " active" : ""),
+        "data-mode": code, "aria-pressed": String(active), text: label,
       });
-      btn.addEventListener("click", () => setViewMode(code));
-      modeGroup.appendChild(btn);
+      button.addEventListener("click", () => setViewMode(code));
+      modes.appendChild(button);
     });
-    bar.appendChild(modeGroup);
+    bar.appendChild(modes);
+
+    if (isStudy) {
+      const submodes = el("div", { class: "toolbar-group study-controls", role: "group", "aria-label": "Visualização de estudo" });
+      [["paragraph", "Por parágrafo"], ["parallel", "Paralelo"]].forEach(([code, label]) => {
+        const active = state.studyMode === code;
+        const button = el("button", {
+          type: "button", class: "study-btn" + (active ? " active" : ""),
+          "data-study-mode": code, "aria-pressed": String(active), text: label,
+        });
+        button.addEventListener("click", () => setStudyMode(code));
+        submodes.appendChild(button);
+      });
+      bar.appendChild(submodes);
+    } else {
+      const languageGroup = el("div", { class: "toolbar-group" });
+      languageGroup.appendChild(el("span", { class: "toolbar-label", text: "Idioma:" }));
+      const select = languageSelect(langs, "reading-language", "Idioma de leitura", readingLanguage(meta, langs));
+      select.addEventListener("change", () => setReadingLanguage(meta, langs, select.value));
+      languageGroup.appendChild(select);
+      bar.appendChild(languageGroup);
+    }
   }
 
-  if (langs.length > 2) {
+  if (isStudy && state.studyMode === "parallel" && langs.length > 2) {
     const colGroup = el("div", { class: "toolbar-group parallel-only" });
     colGroup.appendChild(el("span", { class: "toolbar-label", text: "Colunas:" }));
     ["left", "right"].forEach(side => {
-      const sel = el("select", {
-        class: "lang-select",
-        "data-side": side,
-        "aria-label": side === "left" ? "Idioma à esquerda" : "Idioma à direita",
-      });
-      for (const l of langs) {
-        sel.appendChild(el("option", { value: l.code, text: l.code.toUpperCase() }));
-      }
-      sel.value = state.parallelCols[side] || langs[0].code;
-      sel.addEventListener("change", () => setParallelCols(side, sel.value));
-      colGroup.appendChild(sel);
+      const select = languageSelect(langs, "lang-select", side === "left" ? "Idioma à esquerda" : "Idioma à direita", state.parallelCols[side]);
+      select.dataset.side = side;
+      select.addEventListener("change", () => setParallelCols(side, select.value));
+      colGroup.appendChild(select);
     });
     bar.appendChild(colGroup);
   }
 
   const exportGroup = el("div", { class: "toolbar-group export-group" });
-  let exportCode = baseLanguageCode(langs);
-  if (langs.length > 1) {
-    const select = el("select", { class: "export-language", "aria-label": "Idioma para exportação" });
-    const names = { pt: "Português", ru: "Russo", en: "Inglês" };
-    for (const l of langs) {
-      select.appendChild(el("option", { value: l.code, text: names[l.code] || l.label }));
-    }
-    select.value = exportCode;
-    select.addEventListener("change", () => { exportCode = select.value; });
-    exportGroup.appendChild(select);
+  if (hasTranslations) {
+    exportGroup.appendChild(languageSelect(langs, "export-language", "Idioma para exportação", readingLanguage(meta, langs)));
   }
   const button = el("button", { type: "button", class: "export-btn", text: "Exportar Markdown" });
   button.addEventListener("click", () => {
-    downloadMarkdown(meta, langs.find(l => l.code === exportCode));
+    const code = exportGroup.querySelector(".export-language")?.value || langs[0].code;
+    downloadMarkdown(meta, langs.find(l => l.code === code));
   });
   exportGroup.appendChild(button);
   bar.appendChild(exportGroup);
   return bar;
 }
 
-function renderDocument(meta, langs, blocks, collection, subcollection) {
+function renderReadingContent(meta, langs) {
+  const content = document.querySelector(".reading-content");
+  if (!content) return;
+  const language = langs.find(l => l.code === readingLanguage(meta, langs));
+  content.lang = language.code;
+  content.innerHTML = "";
+  content.classList.toggle("plain-text", meta.format === "text");
+  if (meta.format === "text") {
+    for (const block of parsePlainText(language.source)) {
+      content.appendChild(el("p", { text: block.text }));
+    }
+  } else {
+    content.dataset.anchorPrefix = `reading-${meta.id}-${language.code}`;
+    content.innerHTML = safeMarkdown(language.source, { docId: content.dataset.anchorPrefix });
+  }
+}
+
+function handleReadingAnchor(event) {
+  const link = event.target.closest("a[href]");
+  if (!link || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  const href = link.getAttribute("href");
+  if (!href.startsWith("#") || href.startsWith("#/")) return;
+  // O roteador usa o hash; as notas navegam no texto sem alterar a rota.
+  event.preventDefault();
+  const content = event.currentTarget;
+  let id;
+  try { id = decodeURIComponent(href.slice(1)); } catch (e) { return; }
+  const target = document.getElementById(id) || document.getElementById(`${content.dataset.anchorPrefix}-${id}`);
+  if (!target || !content.contains(target)) return;
+  target.scrollIntoView({ block: "start" });
+  target.setAttribute("tabindex", "-1");
+  target.focus({ preventScroll: true });
+}
+
+function renderDocument(meta, langs, blocks, collection, subcollection, scroll = true) {
   const root = document.getElementById("view");
   root.innerHTML = "";
-
+  state.activeDocument = { meta, langs, blocks, collection, subcollection };
   initParallelCols(meta.id, langs);
 
-  const mode = langs.length === 1 ? "reading" : state.viewMode;
+  const isStudy = langs.length > 1 && state.viewMode === "study";
+  const mode = isStudy ? `study mode-${state.studyMode}` : "reading";
   const article = el("article", { class: "doc mode-" + mode });
   article.dataset.docId = meta.id;
   article.dataset.langCount = String(langs.length);
-
   article.appendChild(renderDocHeader(meta, collection, subcollection));
   article.appendChild(renderToolbar(langs, meta));
 
-  const labels = el("div", { class: "col-labels cols-" + langs.length });
-  for (const l of langs) {
-    labels.appendChild(el("div", { class: "label-" + l.code, text: l.label }));
+  if (isStudy) {
+    const labels = el("div", { class: "col-labels cols-" + langs.length });
+    for (const l of langs) {
+      labels.appendChild(el("div", { class: "label-" + l.code, text: l.label }));
+    }
+    article.appendChild(labels);
+    const blocksWrap = el("div", { class: "blocks cols-" + langs.length });
+    for (const b of blocks) blocksWrap.appendChild(renderBlock(b, langs));
+    article.appendChild(blocksWrap);
+  } else {
+    const content = el("div", { class: "reading-content" });
+    content.addEventListener("click", handleReadingAnchor);
+    article.appendChild(content);
   }
-  article.appendChild(labels);
-
-  const blocksWrap = el("div", { class: "blocks cols-" + langs.length });
-  for (const b of blocks) blocksWrap.appendChild(renderBlock(b, langs));
-  article.appendChild(blocksWrap);
-
   root.appendChild(article);
-
-  if (state.viewMode === "parallel" && langs.length > 2) {
-    applyParallelLayout();
-  }
-
+  if (isStudy && state.studyMode === "parallel") applyParallelLayout();
+  else if (!isStudy) renderReadingContent(meta, langs);
   setActiveNav(collection ? collection.id : null);
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  if (scroll) window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 async function loadDocument(collection, docMeta, subcollection) {
@@ -577,7 +672,7 @@ async function loadDocument(collection, docMeta, subcollection) {
         code: l.code,
         label: l.label,
         source,
-        blocks: docMeta.format === "text" ? parsePlainText(source) : parseMarkdown(source),
+        blocks: docMeta.format === "text" ? parsePlainText(source) : parseStudyMarkdown(source),
       };
     })
   );
@@ -807,8 +902,10 @@ async function route() {
 async function main() {
   try {
     try {
-      const saved = localStorage.getItem("viewMode");
-      if (saved === "reading" || saved === "parallel") state.viewMode = saved;
+      const saved = localStorage.getItem("documentViewMode");
+      if (saved === "reading" || saved === "study") state.viewMode = saved;
+      const studyMode = localStorage.getItem("studyMode");
+      if (studyMode === "paragraph" || studyMode === "parallel") state.studyMode = studyMode;
     } catch (e) {}
 
     state.manifest = await fetchJSON("data/manifest.json");

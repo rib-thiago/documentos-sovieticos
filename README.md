@@ -22,6 +22,18 @@ Os títulos individuais do novo acervo permanecem em russo. Traduções podem se
 
 A barra superior oferece um seletor com todas as coleções e indica a coleção atual. Na página de cada documento, o botão **Exportar Markdown** baixa a versão escolhida com o mesmo nome do arquivo no projeto, trocando apenas a extensão `.txt` por `.md` quando necessário. Edições já em Markdown mantêm o arquivo original; textos importados recebem título, fonte, ID e idioma. A exportação usa o texto completo carregado, independentemente do modo de leitura ou dos parágrafos expandidos.
 
+## Modos de visualização
+
+- **Leitura**: texto contínuo em um idioma, com seleção de versão nos documentos traduzidos. É o padrão inicial.
+- **Estudo → Por parágrafo**: versão principal com botões para expandir os outros idiomas por bloco.
+- **Estudo → Paralelo**: duas versões lado a lado; documentos trilíngues permitem escolher as colunas.
+
+Documentos com um único idioma oferecem leitura contínua. O modo e o submodo escolhidos são lembrados pelo navegador; o idioma de leitura é lembrado por documento. A preferência antiga de Leitura/Paralelo não altera o novo padrão inicial. A exportação segue disponível nos dois modos e acompanha o idioma selecionado na leitura, com opção de escolher outra versão para baixar.
+
+A leitura Markdown usa markdown-it com suporte a notas de rodapé e sanitização por DOMPurify. HTML bruto permanece desativado. Os textos `.txt` são apresentados como texto, preservando parágrafos, abreviações e sinais. As ferramentas de estudo mantêm a segmentação anterior; a leitura contínua independe do alinhamento entre idiomas. Nenhum arquivo de conteúdo é reescrito para alternar entre os modos.
+
+As bibliotecas estão incluídas em `assets/vendor/`, com versões fixas e licenças. **Não é necessário npm, instalação ou compilação** para usar ou publicar o site. A procedência e os hashes estão em `assets/vendor/manifest.json`.
+
 ## Consulta local
 
 Na raiz do projeto, execute:
