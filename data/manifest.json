@@ -609,7 +609,8 @@
         "showtrials-1621",
         "showtrials-6693"
       ],
-      "description_pt": "Documentação organizada nas subcoleções do ShowTrials: materiais da investigação, andamento do processo, caso de Piotr Nikolaev e outros documentos."
+      "description_pt": "Documentação organizada nas subcoleções do ShowTrials: materiais da investigação, andamento do processo, caso de Piotr Nikolaev e outros documentos.",
+      "cover": "assets/covers/leningrado.jpg"
     },
     {
       "id": "centro-moscovita",
@@ -1509,7 +1510,8 @@
         "showtrials-4802",
         "showtrials-9753",
         "showtrials-4803"
-      ]
+      ],
+      "cover": "assets/covers/moscou.jpg"
     },
     {
       "id": "caso-do-kremlin",
@@ -2143,7 +2145,8 @@
         "showtrials-1704",
         "showtrials-4845",
         "showtrials-4846"
-      ]
+      ],
+      "cover": "assets/covers/kremlin.jpg"
     },
     {
       "id": "processo-1936",
@@ -3241,7 +3244,8 @@
         "showtrials-10615",
         "showtrials-10591",
         "showtrials-10610"
-      ]
+      ],
+      "cover": "assets/covers/zinoviev-kamenev.jpg"
     },
     {
       "id": "processo-1937",
@@ -4243,7 +4247,8 @@
         "showtrials-7417",
         "showtrials-7428",
         "showtrials-7381"
-      ]
+      ],
+      "cover": "assets/covers/radek-piatakov.jpg"
     },
     {
       "id": "processo-1938",
@@ -4880,7 +4885,8 @@
         "showtrials-7847",
         "showtrials-7995",
         "showtrials-1612"
-      ]
+      ],
+      "cover": "assets/covers/bukharin-rykov.jpg"
     },
     {
       "id": "trotsky",
@@ -4962,7 +4968,8 @@
         "showtrials-11302",
         "showtrials-11304",
         "showtrials-11306"
-      ]
+      ],
+      "cover": "assets/covers/trotsky-sedov.jpg"
     },
     {
       "id": "artigos-showtrials",
@@ -4986,7 +4993,8 @@
       "document_ids": [
         "showtrials-9366",
         "showtrials-9470"
-      ]
+      ],
+      "cover": "assets/covers/artigos-showtrials.jpg"
     },
     {
       "id": "documentos-diversos",
@@ -5016,7 +5024,8 @@
         "showtrials-1611",
         "showtrials-6958",
         "showtrials-1612"
-      ]
+      ],
+      "cover": "assets/covers/outros-documentos.jpg"
     }
   ],
   "documents": [
