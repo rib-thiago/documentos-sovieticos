@@ -5,6 +5,7 @@
 const state = {
   manifest: null,
   cache: new Map(),
+  documentIndex: new Map(),
   activeCollection: null,
   viewMode: "reading",
   parallelCols: { left: null, right: null },
@@ -254,7 +255,8 @@ function updateParallelSelects() {
 function renderNav() {
   const nav = document.getElementById("docNav");
   nav.innerHTML = "";
-  for (const c of state.manifest.collections) {
+  nav.appendChild(el("a", { class: "nav-link", href: "#/", text: "Todas as coleções" }));
+  for (const c of state.manifest.collections.filter(c => !c.subcollections)) {
     const link = el("a", {
       class: "nav-link", href: `#/colecao/${c.id}`, "data-id": c.id,
     });
@@ -371,9 +373,15 @@ function renderBlock(b, allLangs) {
   return wrap;
 }
 
-function collectionDocumentURL(doc, subcollection) {
-  const suffix = subcollection ? `?subcolecao=${encodeURIComponent(subcollection.id)}` : "";
-  return `#/doc/${doc.id}${suffix}`;
+function collectionDocuments(collection) {
+  return collection.documents || collection.document_ids.map(id => state.documentIndex.get(id));
+}
+
+function collectionDocumentURL(doc, subcollection, collection) {
+  const params = new URLSearchParams();
+  params.set("colecao", collection.id);
+  if (subcollection) params.set("subcolecao", subcollection.id);
+  return `#/doc/${doc.id}?${params}`;
 }
 
 function renderBreadcrumbs(collection, subcollection, current) {
@@ -571,7 +579,7 @@ function renderCollection(collection, subcollection = null, showAll = false) {
     wrap.appendChild(grid);
     wrap.appendChild(el("a", {
       class: "all-documents-link", href: `#/colecao/${collection.id}/todos`,
-      text: `Ver todos os ${collection.documents.length} documentos`,
+      text: `Ver todos os ${collectionDocuments(collection).length} documentos`,
     }));
     root.appendChild(wrap);
     setActiveNav(collection.id);
@@ -585,14 +593,14 @@ function renderCollection(collection, subcollection = null, showAll = false) {
     ]));
   }
   const documents = subcollection
-    ? subcollection.document_ids.map(id => collection.documents.find(doc => doc.id === id))
-    : collection.documents;
+    ? subcollection.document_ids.map(id => collectionDocuments(collection).find(doc => doc.id === id))
+    : collectionDocuments(collection);
   wrap.appendChild(el("p", {
     class: "document-count", text: `${documents.length} ${documents.length === 1 ? "documento" : "documentos"}`,
   }));
   const list = el("div", { class: "doc-list" });
   for (const doc of documents) {
-    const item = el("a", { class: "doc-list-item", href: collectionDocumentURL(doc, subcollection) });
+    const item = el("a", { class: "doc-list-item", href: collectionDocumentURL(doc, subcollection, collection) });
 
     const topLine = el("div", { class: "doc-list-topline" });
     topLine.appendChild(el("span", {
@@ -662,8 +670,8 @@ function renderHome() {
     body.appendChild(el("p", {
       class: "collection-card-eyebrow",
       text: c.subcollections
-        ? `${c.documents.length} documentos · ${c.subcollections.length} subcoleções`
-        : c.documents.length === 1 ? "1 item" : `${c.documents.length} itens`
+        ? `${collectionDocuments(c).length} documentos · ${c.subcollections.length} subcoleções`
+        : collectionDocuments(c).length === 1 ? "1 item" : `${collectionDocuments(c).length} itens`
     }));
     body.appendChild(el("h2", { text: c.title_pt }));
     body.appendChild(el("p", { class: "collection-card-ru", text: c.title_ru }));
@@ -683,7 +691,7 @@ function renderHome() {
 
 function findCollectionByDocId(docId) {
   for (const c of state.manifest.collections) {
-    if (c.documents.some(d => d.id === docId)) return c;
+    if (collectionDocuments(c).some(d => d.id === docId)) return c;
   }
   return null;
 }
@@ -701,6 +709,7 @@ function parseRoute() {
   if (parts[0] === "doc" && parts[1]) return {
     view: "document", id: parts[1],
     subcollectionId: new URLSearchParams(query).get("subcolecao"),
+    collectionId: new URLSearchParams(query).get("colecao"),
   };
   return { view: "home" };
 }
@@ -717,9 +726,11 @@ async function route() {
       if (r.subcollectionId && !sub) { location.hash = `#/colecao/${c.id}`; return; }
       renderCollection(c, sub, r.showAll);
     } else if (r.view === "document") {
-      const c = findCollectionByDocId(r.id);
+      const context = state.manifest.collections.find(c => c.id === r.collectionId);
+      const c = context && collectionDocuments(context).some(d => d.id === r.id)
+        ? context : findCollectionByDocId(r.id);
       if (!c) { location.hash = "#/"; return; }
-      const doc = c.documents.find(d => d.id === r.id);
+      const doc = collectionDocuments(c).find(d => d.id === r.id);
       const sub = c.subcollections?.find(s => s.id === r.subcollectionId && s.document_ids.includes(doc.id));
       await loadDocument(c, doc, sub);
     }
@@ -740,6 +751,7 @@ async function main() {
     } catch (e) {}
 
     state.manifest = await fetchJSON("data/manifest.json");
+    state.documentIndex = new Map((state.manifest.documents || []).map(d => [d.id, d]));
     renderNav();
     window.addEventListener("hashchange", route);
     await route();
