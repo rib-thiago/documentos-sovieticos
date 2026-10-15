@@ -20,6 +20,8 @@ Um documento pode pertencer a várias coleções. As quantidades acima não deve
 
 Os títulos individuais do novo acervo permanecem em russo. Traduções podem ser acrescentadas por documento.
 
+A barra superior oferece um seletor com todas as coleções e indica a coleção atual. Na página de cada documento, o botão **Exportar Markdown** baixa a versão escolhida em um arquivo `ID.IDIOMA.md`. Edições já em Markdown mantêm o arquivo original; textos importados recebem título, fonte, ID e idioma. A exportação usa o texto completo carregado, independentemente do modo de leitura ou dos parágrafos expandidos.
+
 ## Consulta local
 
 Na raiz do projeto, execute:

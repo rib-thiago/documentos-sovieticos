@@ -256,21 +256,28 @@ function renderNav() {
   const nav = document.getElementById("docNav");
   nav.innerHTML = "";
   nav.appendChild(el("a", { class: "nav-link", href: "#/", text: "Todas as coleções" }));
-  for (const c of state.manifest.collections.filter(c => !c.subcollections)) {
-    const link = el("a", {
-      class: "nav-link", href: `#/colecao/${c.id}`, "data-id": c.id,
-    });
-    link.appendChild(el("span", { class: "nav-link-dot" }));
-    link.appendChild(document.createTextNode(c.title_pt));
-    nav.appendChild(link);
+  const select = el("select", {
+    class: "collection-select", "aria-label": "Abrir coleção",
+  });
+  select.appendChild(el("option", { value: "", text: "Selecionar coleção…", disabled: "disabled" }));
+  for (const c of state.manifest.collections) {
+    select.appendChild(el("option", { value: c.id, text: c.title_pt }));
   }
+  select.addEventListener("change", () => {
+    if (select.value) location.hash = `#/colecao/${select.value}`;
+  });
+  nav.appendChild(select);
 }
 
 function setActiveNav(collectionId) {
   state.activeCollection = collectionId || null;
-  document.querySelectorAll("#docNav .nav-link").forEach(a => {
-    a.classList.toggle("active", a.dataset.id === collectionId);
-  });
+  const select = document.querySelector("#docNav .collection-select");
+  if (select) select.value = collectionId || "";
+  const home = document.querySelector("#docNav .nav-link");
+  if (home) {
+    if (!collectionId) home.setAttribute("aria-current", "page");
+    else home.removeAttribute("aria-current");
+  }
 }
 
 /* ---------- Renderização: documento ---------- */
@@ -429,22 +436,50 @@ function renderDocHeader(meta, collection, subcollection) {
   return header;
 }
 
-function renderToolbar(langs, docId) {
+function escapeMarkdownText(text) {
+  return text.replace(/([\\`*_[\]<>#])/g, "\\$1");
+}
+
+function documentMarkdown(meta, language) {
+  // As edições Markdown são exportadas diretamente, sem reconstruir os parágrafos.
+  if (meta.format !== "text") return language.source;
+  const title = meta[`title_${language.code}`] || meta.title_ru || meta.title_pt;
+  const lines = [`# ${escapeMarkdownText(title)}`, ""];
+  if (meta.source_url) lines.push(`Fonte: ${meta.source_url}`);
+  if (meta.source_id) lines.push(`ID ShowTrials: ${meta.source_id}`);
+  lines.push(`Idioma: ${language.code.toUpperCase()}`, "", "---", "");
+  lines.push(escapeMarkdownText(language.source));
+  return lines.join("\n");
+}
+
+function downloadMarkdown(meta, language) {
+  const blob = new Blob([documentMarkdown(meta, language)], { type: "text/markdown;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = el("a", { href: url, download: `${meta.id}.${language.code}.md` });
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function renderToolbar(langs, meta) {
   const bar = el("div", { class: "doc-toolbar" });
 
-  const modeGroup = el("div", { class: "toolbar-group" });
-  modeGroup.appendChild(el("span", { class: "toolbar-label", text: "Modo:" }));
-  [["reading", "Leitura"], ["parallel", "Paralelo"]].forEach(([code, label]) => {
-    const btn = el("button", {
-      type: "button",
-      class: "mode-btn" + (state.viewMode === code ? " active" : ""),
-      "data-mode": code,
-      text: label,
+  if (langs.length > 1) {
+    const modeGroup = el("div", { class: "toolbar-group" });
+    modeGroup.appendChild(el("span", { class: "toolbar-label", text: "Modo:" }));
+    [["reading", "Leitura"], ["parallel", "Paralelo"]].forEach(([code, label]) => {
+      const btn = el("button", {
+        type: "button",
+        class: "mode-btn" + (state.viewMode === code ? " active" : ""),
+        "data-mode": code,
+        text: label,
+      });
+      btn.addEventListener("click", () => setViewMode(code));
+      modeGroup.appendChild(btn);
     });
-    btn.addEventListener("click", () => setViewMode(code));
-    modeGroup.appendChild(btn);
-  });
-  bar.appendChild(modeGroup);
+    bar.appendChild(modeGroup);
+  }
 
   if (langs.length > 2) {
     const colGroup = el("div", { class: "toolbar-group parallel-only" });
@@ -456,8 +491,7 @@ function renderToolbar(langs, docId) {
         "aria-label": side === "left" ? "Idioma à esquerda" : "Idioma à direita",
       });
       for (const l of langs) {
-        const opt = el("option", { value: l.code, text: l.code.toUpperCase() });
-        sel.appendChild(opt);
+        sel.appendChild(el("option", { value: l.code, text: l.code.toUpperCase() }));
       }
       sel.value = state.parallelCols[side] || langs[0].code;
       sel.addEventListener("change", () => setParallelCols(side, sel.value));
@@ -466,6 +500,24 @@ function renderToolbar(langs, docId) {
     bar.appendChild(colGroup);
   }
 
+  const exportGroup = el("div", { class: "toolbar-group export-group" });
+  let exportCode = baseLanguageCode(langs);
+  if (langs.length > 1) {
+    const select = el("select", { class: "export-language", "aria-label": "Idioma para exportação" });
+    const names = { pt: "Português", ru: "Russo", en: "Inglês" };
+    for (const l of langs) {
+      select.appendChild(el("option", { value: l.code, text: names[l.code] || l.label }));
+    }
+    select.value = exportCode;
+    select.addEventListener("change", () => { exportCode = select.value; });
+    exportGroup.appendChild(select);
+  }
+  const button = el("button", { type: "button", class: "export-btn", text: "Exportar Markdown" });
+  button.addEventListener("click", () => {
+    downloadMarkdown(meta, langs.find(l => l.code === exportCode));
+  });
+  exportGroup.appendChild(button);
+  bar.appendChild(exportGroup);
   return bar;
 }
 
@@ -481,7 +533,7 @@ function renderDocument(meta, langs, blocks, collection, subcollection) {
   article.dataset.langCount = String(langs.length);
 
   article.appendChild(renderDocHeader(meta, collection, subcollection));
-  if (langs.length > 1) article.appendChild(renderToolbar(langs, meta.id));
+  article.appendChild(renderToolbar(langs, meta));
 
   const labels = el("div", { class: "col-labels cols-" + langs.length });
   for (const l of langs) {
@@ -513,13 +565,15 @@ async function loadDocument(collection, docMeta, subcollection) {
   }
 
   const langs = await Promise.all(
-    docMeta.languages.map(async l => ({
-      code: l.code,
-      label: l.label,
-      blocks: docMeta.format === "text"
-        ? parsePlainText(await fetchText(l.file))
-        : parseMarkdown(await fetchText(l.file)),
-    }))
+    docMeta.languages.map(async l => {
+      const source = await fetchText(l.file);
+      return {
+        code: l.code,
+        label: l.label,
+        source,
+        blocks: docMeta.format === "text" ? parsePlainText(source) : parseMarkdown(source),
+      };
+    })
   );
 
   const counts = langs.map(l => `${l.code}=${l.blocks.length}`).join(" ");
@@ -608,6 +662,7 @@ function renderCollection(collection, subcollection = null, showAll = false) {
       text: doc.type === "article" ? "Artigo" : "Documento",
     }));
     if (doc.eyebrow) {
+      topLine.appendChild(document.createTextNode(" "));
       topLine.appendChild(el("span", { class: "doc-list-eyebrow", text: doc.eyebrow }));
     }
     item.appendChild(topLine);
