@@ -19,8 +19,16 @@
           "archive": "RGASPI F. 17, Op. 171, D. 427, L. 23–44",
           "eyebrow": "Depoimento · Processo Bukharin",
           "languages": [
-            { "code": "ru", "label": "Русский оригинал",     "file": "originais/bukharin-1937-06-02.ru.md" },
-            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/bukharin-1937-06-02.pt.md" }
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/bukharin-1937-06-02.ru.md"
+            },
+            {
+              "code": "pt",
+              "label": "Tradução portuguesa",
+              "file": "originais/bukharin-1937-06-02.pt.md"
+            }
           ]
         },
         {
@@ -33,8 +41,16 @@
           "archive": "RGASPI F. 17, Op. 171, D. 269, L. 118–161",
           "eyebrow": "Interrogatório · NKVD",
           "languages": [
-            { "code": "ru", "label": "Русский оригинал",     "file": "originais/astrov-1937-01-11.ru.md" },
-            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/astrov-1937-01-11.pt.md" }
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/astrov-1937-01-11.ru.md"
+            },
+            {
+              "code": "pt",
+              "label": "Tradução portuguesa",
+              "file": "originais/astrov-1937-01-11.pt.md"
+            }
           ]
         },
         {
@@ -47,8 +63,16 @@
           "archive": "RGASPI F. 17, Op. 171, D. 270, L. 50–93",
           "eyebrow": "Acareação · CC do VKP(b)",
           "languages": [
-            { "code": "ru", "label": "Русский оригинал",     "file": "originais/acareacao-1937-01-13.ru.md" },
-            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/acareacao-1937-01-13.pt.md" }
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/acareacao-1937-01-13.ru.md"
+            },
+            {
+              "code": "pt",
+              "label": "Tradução portuguesa",
+              "file": "originais/acareacao-1937-01-13.pt.md"
+            }
           ]
         }
       ]
@@ -72,9 +96,21 @@
           "archive": "RYUTIN M. N. Não me ajoelharei. / Comp. B. A. Starkov. M.: Politizdat, 1992",
           "eyebrow": "Plataforma · Martemyan Ryutin",
           "languages": [
-            { "code": "ru", "label": "Русский оригинал",     "file": "originais/ryutin-1932.ru.md" },
-            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/ryutin-1932.pt.md" },
-            { "code": "en", "label": "English translation",  "file": "originais/ryutin-1932.en.md" }
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/ryutin-1932.ru.md"
+            },
+            {
+              "code": "pt",
+              "label": "Tradução portuguesa",
+              "file": "originais/ryutin-1932.pt.md"
+            },
+            {
+              "code": "en",
+              "label": "English translation",
+              "file": "originais/ryutin-1932.en.md"
+            }
           ]
         }
       ]
@@ -99,9 +135,21 @@
           "archive": "Ensaio publicado originalmente online",
           "eyebrow": "Ensaio histórico",
           "languages": [
-            { "code": "ru", "label": "Русский оригинал",     "file": "originais/sergo.ru.md" },
-            { "code": "pt", "label": "Tradução portuguesa",  "file": "originais/sergo.pt.md" },
-            { "code": "en", "label": "English version",      "file": "originais/sergo.en.md" }
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/sergo.ru.md"
+            },
+            {
+              "code": "pt",
+              "label": "Tradução portuguesa",
+              "file": "originais/sergo.pt.md"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/sergo.en.md"
+            }
           ]
         }
       ]
@@ -126,8 +174,16 @@
           "archive": "Ensaio histórico",
           "eyebrow": "Ensaio histórico",
           "languages": [
-            { "code": "pt", "label": "Tradução portuguesa", "file": "originais/furr.pt.md" },
-            { "code": "en", "label": "English version",     "file": "originais/furr.en.md" }
+            {
+              "code": "pt",
+              "label": "Tradução portuguesa",
+              "file": "originais/furr.pt.md"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/furr.en.md"
+            }
           ]
         },
         {
@@ -138,9 +194,3219 @@
           "title_ru": "Допросы Николая Ежова, бывшего народного комиссара внутренних дел",
           "eyebrow": "Compilação de interrogatórios · NKVD",
           "languages": [
-            { "code": "ru", "label": "Русская версия",       "file": "originais/confessionezhov.ru.md" },
-            { "code": "pt", "label": "Versão portuguesa",   "file": "originais/confessionezhov.pt.md" },
-            { "code": "en", "label": "English version",     "file": "originais/confessionezhov.en.md" }
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/confessionezhov.ru.md"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/confessionezhov.pt.md"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/confessionezhov.en.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "centro-de-leningrado",
+      "title_pt": "Processo do Centro de Leningrado",
+      "title_ru": "Процесс «Ленинградского центра»",
+      "subtitle_pt": "Documentos em russo · Acervo ShowTrials",
+      "description_pt": "Documentação organizada nas subcoleções do ShowTrials: materiais da investigação, andamento do processo, caso de Piotr Nikolaev e outros documentos.",
+      "accent": "#51465f",
+      "subcollections": [
+        {
+          "id": "investigacao",
+          "title_pt": "Materiais da investigação",
+          "title_ru": "МАТЕРИАЛЫ СЛЕДСТВИЯ",
+          "source_id": "858",
+          "source_url": "http://showtrials.ru/glavnaya/lencenter/lencenter-materials/",
+          "document_ids": [
+            "showtrials-1665",
+            "showtrials-1666",
+            "showtrials-7032",
+            "showtrials-2674",
+            "showtrials-2675",
+            "showtrials-2676",
+            "showtrials-2677",
+            "showtrials-2678",
+            "showtrials-2679",
+            "showtrials-2680",
+            "showtrials-2681",
+            "showtrials-2683",
+            "showtrials-2684",
+            "showtrials-2685",
+            "showtrials-2686",
+            "showtrials-2687",
+            "showtrials-2688",
+            "showtrials-2689",
+            "showtrials-2690",
+            "showtrials-2692",
+            "showtrials-2693",
+            "showtrials-2694",
+            "showtrials-2695",
+            "showtrials-2696",
+            "showtrials-2697",
+            "showtrials-2698",
+            "showtrials-2699",
+            "showtrials-2717",
+            "showtrials-2721",
+            "showtrials-2722",
+            "showtrials-2723",
+            "showtrials-2724",
+            "showtrials-2725",
+            "showtrials-2726",
+            "showtrials-2727",
+            "showtrials-2728",
+            "showtrials-2729",
+            "showtrials-2730",
+            "showtrials-2731",
+            "showtrials-2732",
+            "showtrials-2733",
+            "showtrials-2735",
+            "showtrials-2736",
+            "showtrials-2738",
+            "showtrials-2739",
+            "showtrials-2740",
+            "showtrials-2782",
+            "showtrials-2783",
+            "showtrials-2785",
+            "showtrials-2787",
+            "showtrials-2789",
+            "showtrials-2794",
+            "showtrials-2996",
+            "showtrials-3000",
+            "showtrials-3004",
+            "showtrials-3005",
+            "showtrials-3006",
+            "showtrials-3007",
+            "showtrials-3008",
+            "showtrials-3009",
+            "showtrials-3010",
+            "showtrials-3011",
+            "showtrials-3012",
+            "showtrials-3013",
+            "showtrials-3014",
+            "showtrials-3015",
+            "showtrials-3016",
+            "showtrials-3017",
+            "showtrials-3018",
+            "showtrials-3019",
+            "showtrials-3021",
+            "showtrials-3020",
+            "showtrials-3023",
+            "showtrials-3022",
+            "showtrials-3027",
+            "showtrials-3028",
+            "showtrials-3029",
+            "showtrials-3030",
+            "showtrials-3031",
+            "showtrials-3041",
+            "showtrials-3042",
+            "showtrials-3043",
+            "showtrials-3047",
+            "showtrials-3058",
+            "showtrials-3059",
+            "showtrials-3060",
+            "showtrials-3061",
+            "showtrials-3062",
+            "showtrials-3063",
+            "showtrials-3064",
+            "showtrials-3109",
+            "showtrials-3115",
+            "showtrials-3110",
+            "showtrials-3111",
+            "showtrials-3112",
+            "showtrials-3113",
+            "showtrials-3114",
+            "showtrials-3116",
+            "showtrials-3117",
+            "showtrials-3118",
+            "showtrials-3129",
+            "showtrials-3130",
+            "showtrials-3131",
+            "showtrials-3132",
+            "showtrials-3133",
+            "showtrials-3134",
+            "showtrials-9718",
+            "showtrials-3136",
+            "showtrials-3137",
+            "showtrials-3138",
+            "showtrials-3149",
+            "showtrials-3150",
+            "showtrials-3152",
+            "showtrials-3151",
+            "showtrials-9725",
+            "showtrials-3154",
+            "showtrials-3156",
+            "showtrials-3155",
+            "showtrials-3157",
+            "showtrials-3158",
+            "showtrials-3159",
+            "showtrials-3172",
+            "showtrials-3173",
+            "showtrials-3174",
+            "showtrials-3175",
+            "showtrials-3176",
+            "showtrials-3182",
+            "showtrials-3183",
+            "showtrials-3184",
+            "showtrials-3190",
+            "showtrials-3188",
+            "showtrials-3191",
+            "showtrials-3192",
+            "showtrials-3193",
+            "showtrials-3194",
+            "showtrials-3195",
+            "showtrials-3208",
+            "showtrials-3210",
+            "showtrials-3212",
+            "showtrials-3213",
+            "showtrials-3214",
+            "showtrials-3216",
+            "showtrials-3215",
+            "showtrials-3217",
+            "showtrials-3218",
+            "showtrials-3226",
+            "showtrials-3228",
+            "showtrials-3227",
+            "showtrials-3229",
+            "showtrials-3230",
+            "showtrials-3236",
+            "showtrials-3237"
+          ]
+        },
+        {
+          "id": "andamento",
+          "title_pt": "Andamento do processo",
+          "title_ru": "ХОД ПРОЦЕССА",
+          "source_id": "1293",
+          "source_url": "http://showtrials.ru/glavnaya/lencenter/leningrad-center-trial-full-record/",
+          "document_ids": [
+            "showtrials-2617",
+            "showtrials-2618",
+            "showtrials-2619"
+          ]
+        },
+        {
+          "id": "piotr-nikolaev",
+          "title_pt": "Caso de Piotr Nikolaev",
+          "title_ru": "ДЕЛО ПЕТРА НИКОЛАЕВА",
+          "source_id": "860",
+          "source_url": "http://showtrials.ru/glavnaya/lencenter/pyotr-nikolayev-case/",
+          "document_ids": [
+            "showtrials-808",
+            "showtrials-809",
+            "showtrials-810",
+            "showtrials-1344",
+            "showtrials-1348",
+            "showtrials-1349",
+            "showtrials-1350",
+            "showtrials-1351",
+            "showtrials-1352",
+            "showtrials-1353"
+          ]
+        },
+        {
+          "id": "outros-documentos",
+          "title_pt": "Outros documentos",
+          "title_ru": "ДРУГИЕ ДОКУМЕНТЫ",
+          "source_id": "864",
+          "source_url": "http://showtrials.ru/glavnaya/lencenter/misc_docs_1934/",
+          "document_ids": [
+            "showtrials-1631",
+            "showtrials-1632",
+            "showtrials-1633",
+            "showtrials-1630",
+            "showtrials-1625",
+            "showtrials-9548",
+            "showtrials-9551",
+            "showtrials-6711",
+            "showtrials-1621",
+            "showtrials-6693"
+          ]
+        }
+      ],
+      "documents": [
+        {
+          "id": "showtrials-1665",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "1665",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-nikolaeva-3-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1665.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1666",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "1666",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-nikolaeva-4-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1666.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-7032",
+          "type": "document",
+          "title_ru": "Акт судебно-медицинского вскрытия трупа М.В. Борисова",
+          "source_id": "7032",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/akt-sudebno-mediczinskogo-vskrytiya-trupa-m-v-borisova/",
+          "document_type": "medical_act",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-7032.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2674",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2674",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2674.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2675",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2675",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2675.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2676",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2676",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2676.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2677",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2677",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2677.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2678",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2678",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2678.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2679",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2679",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-6/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2679.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2680",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2680",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-7/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2680.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2681",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2681",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-8/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2681.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2683",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2683",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-9/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2683.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2684",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2684",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-10/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2684.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2685",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2685",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-11/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2685.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2686",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "2686",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2686.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2687",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.Н. Шатского",
+          "source_id": "2687",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-n-shatskogo/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2687.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2688",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.Н. Шатского",
+          "source_id": "2688",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-n-shatskogo-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2688.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2689",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "2689",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2689.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2690",
+          "type": "document",
+          "title_ru": "Протокол допроса И.Г. Юскина",
+          "source_id": "2690",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-g-yuskina/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2690.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2692",
+          "type": "document",
+          "title_ru": "Протокол допроса И.Г. Юскина",
+          "source_id": "2692",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-g-yuskina-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2692.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2693",
+          "type": "document",
+          "title_ru": "Протокол допроса И.Г. Юскина",
+          "source_id": "2693",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-g-yuskina-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2693.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2694",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2694",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-12/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2694.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2695",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2695",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-13/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2695.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2696",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцева",
+          "source_id": "2696",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczeva/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2696.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2697",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2697",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-14/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2697.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2698",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2698",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-15/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2698.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2699",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "2699",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-16/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2699.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2717",
+          "type": "document",
+          "title_ru": "Протокол допроса В.И. Звездова",
+          "source_id": "2717",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-i-zvezdova/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2717.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2721",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "2721",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2721.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2722",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "2722",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2722.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2723",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "2723",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2723.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2724",
+          "type": "document",
+          "title_ru": "Протокол допроса И.Г. Юскина",
+          "source_id": "2724",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-g-yuskina-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2724.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2725",
+          "type": "document",
+          "title_ru": "Протокол допроса Г.В. Соколова",
+          "source_id": "2725",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-g-v-sokolova/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2725.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2726",
+          "type": "document",
+          "title_ru": "Протокол допроса В.И. Звездова",
+          "source_id": "2726",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-i-zvezdova-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2726.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2727",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцева",
+          "source_id": "2727",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczeva-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2727.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2728",
+          "type": "document",
+          "title_ru": "Протокол допроса Е.В. Рогачевой",
+          "source_id": "2728",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-e-v-rogachevoj/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2728.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2729",
+          "type": "document",
+          "title_ru": "Протокол допроса В.И. Звездова",
+          "source_id": "2729",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-i-zvezdova-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2729.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2730",
+          "type": "document",
+          "title_ru": "Протокол допроса В.И. Звездова",
+          "source_id": "2730",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-i-zvezdova-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2730.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2731",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "2731",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2731.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2732",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "2732",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2732.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2733",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "2733",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2733.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2735",
+          "type": "document",
+          "title_ru": "Протокол допроса А.И. Толмазова",
+          "source_id": "2735",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-a-i-tolmazova/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2735.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2736",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "2736",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2736.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2738",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "2738",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-6/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2738.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2739",
+          "type": "document",
+          "title_ru": "Протокол допроса А.Я. Юскиной",
+          "source_id": "2739",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-a-ya-yuskinoj/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2739.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2740",
+          "type": "document",
+          "title_ru": "Протокол допроса В.И. Звездова",
+          "source_id": "2740",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-i-zvezdova-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2740.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2782",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "2782",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2782.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2783",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "2783",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova-6/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2783.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2785",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "2785",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova-7/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2785.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2787",
+          "type": "document",
+          "title_ru": "Протокол допроса Г.В. Соколова",
+          "source_id": "2787",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-g-v-sokolova-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2787.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2789",
+          "type": "document",
+          "title_ru": "Протокол допроса Е.В. Рогачевой",
+          "source_id": "2789",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/2789-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2789.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2794",
+          "type": "document",
+          "title_ru": "Протокол допроса А.И. Толмазова",
+          "source_id": "2794",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-a-i-tolmazova-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2794.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2996",
+          "type": "document",
+          "title_ru": "Протокол допроса А.И. Толмазова",
+          "source_id": "2996",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-a-i-tolmazova-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2996.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3000",
+          "type": "document",
+          "title_ru": "Протокол допроса А.И. Толмазова",
+          "source_id": "3000",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-a-i-tolmazova-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3000.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3004",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3004",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-17/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3004.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3005",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3005",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-18/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3005.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3006",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3006",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-19/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3006.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3007",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "3007",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-7/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3007.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3008",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "3008",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-8/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3008.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3009",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцева",
+          "source_id": "3009",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczeva-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3009.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3010",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцева",
+          "source_id": "3010",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczeva-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3010.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3011",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцева",
+          "source_id": "3011",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczeva-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3011.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3012",
+          "type": "document",
+          "title_ru": "Протокол допроса В.С. Левина",
+          "source_id": "3012",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-s-levina/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3012.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3013",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.О. Ханика",
+          "source_id": "3013",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-o-hanika/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3013.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3014",
+          "type": "document",
+          "title_ru": "Протокол допроса А.И. Толмазова",
+          "source_id": "3014",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-a-i-tolmazova-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3014.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3015",
+          "type": "document",
+          "title_ru": "Заявление В.И. Звездова в СПО Ленинградского управления НКВД",
+          "source_id": "3015",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/zayavlenie-v-i-zvezdova-v-spo-leningradskogo-upravleniya-nkvd/",
+          "document_type": "statement",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3015.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3016",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3016",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-20/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3016.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3017",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3017",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-21/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3017.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3018",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3018",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-22/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3018.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3019",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3019",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-23/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3019.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3021",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3021",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-25/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3021.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3020",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3020",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-24/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3020.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3023",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3023",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-27/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3023.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3022",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3022",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-26/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3022.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3027",
+          "type": "document",
+          "title_ru": "Протокол допроса В.И. Звездова",
+          "source_id": "3027",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-i-zvezdova-6/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3027.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3028",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцева",
+          "source_id": "3028",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczeva-6/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3028.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3029",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцева",
+          "source_id": "3029",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczeva-7/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3029.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3030",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "3030",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-9/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3030.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3031",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "3031",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-10/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3031.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3041",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3041",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-28/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3041.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3042",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3042",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-29/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3042.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3043",
+          "type": "document",
+          "title_ru": "Протокол допроса А.И. Толмазова",
+          "source_id": "3043",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-a-i-tolmazova-6/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3043.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3047",
+          "type": "document",
+          "title_ru": "Протокол допроса А.И. Толмазова",
+          "source_id": "3047",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-a-i-tolmazova-7/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3047.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3058",
+          "type": "document",
+          "title_ru": "Протокол допроса И.Г. Юскина",
+          "source_id": "3058",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-g-yuskina-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3058.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3059",
+          "type": "document",
+          "title_ru": "Протокол допроса В.С. Левина",
+          "source_id": "3059",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-s-levina-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3059.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3060",
+          "type": "document",
+          "title_ru": "Протокол допроса В.С. Левина",
+          "source_id": "3060",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-s-levina-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3060.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3061",
+          "type": "document",
+          "title_ru": "Протокол допроса В.С. Левина",
+          "source_id": "3061",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-s-levina-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3061.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3062",
+          "type": "document",
+          "title_ru": "Протокол допроса Р.М. Кулишера",
+          "source_id": "3062",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-r-m-kulishera/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3062.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3063",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.П. Мясникова",
+          "source_id": "3063",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-p-myasnikova/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3063.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3064",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.П. Мясникова",
+          "source_id": "3064",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-p-myasnikova-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3064.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3109",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3109",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-30/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3109.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3115",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.О. Ханика",
+          "source_id": "3115",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-o-hanika-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3115.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3110",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3110",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-31/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3110.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3111",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3111",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-32/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3111.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3112",
+          "type": "document",
+          "title_ru": "Протокол допроса Р.М. Кулишера",
+          "source_id": "3112",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-r-m-kulishera-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3112.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3113",
+          "type": "document",
+          "title_ru": "Протокол допроса В.С. Левина",
+          "source_id": "3113",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-s-levina-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3113.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3114",
+          "type": "document",
+          "title_ru": "Протокол допроса В.С. Левина",
+          "source_id": "3114",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-s-levina-6/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3114.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3116",
+          "type": "document",
+          "title_ru": "Протокол допроса Г.В. Соколова",
+          "source_id": "3116",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-g-v-sokolova-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3116.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3117",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.П. Мясникова",
+          "source_id": "3117",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-p-myasnikova-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3117.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3118",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.П. Мясникова",
+          "source_id": "3118",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-p-myasnikova-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3118.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3129",
+          "type": "document",
+          "title_ru": "Протокол допроса Р.М. Кулишера",
+          "source_id": "3129",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-r-m-kulishera-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3129.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3130",
+          "type": "document",
+          "title_ru": "Протокол допроса Р.М. Кулишера",
+          "source_id": "3130",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-r-m-kulishera-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3130.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3131",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3131",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-33/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3131.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3132",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3132",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-34/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3132.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3133",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "3133",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-11/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3133.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3134",
+          "type": "document",
+          "title_ru": "Протокол допроса А.И. Толмазова",
+          "source_id": "3134",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-a-i-tolmazova-8/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3134.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-9718",
+          "type": "document",
+          "title_ru": "Протокол допроса С.О. Мандельштама",
+          "source_id": "9718",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa_sm/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-9718.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3136",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "3136",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova-8/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3136.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3137",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между Н.С. Антоновым и И.И. Котолыновым",
+          "source_id": "3137",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-n-s-antonovym-i-i-i-kotolynovym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3137.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3138",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между Н.С. Антоновым и В.И. Звездовым",
+          "source_id": "3138",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-n-s-antonovym-i-v-i-zvezdovym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3138.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3149",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3149",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-35/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3149.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3150",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между И.И. Котолыновым и Л.В. Николаевым",
+          "source_id": "3150",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-i-i-kotolynovym-i-l-v-nikolaevym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3150.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3152",
+          "type": "document",
+          "title_ru": "Протокол допроса И.Г. Юскина",
+          "source_id": "3152",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-g-yuskina-7/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3152.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3151",
+          "type": "document",
+          "title_ru": "Протокол допроса И.Г. Юскина",
+          "source_id": "3151",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-g-yuskina-6/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3151.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-9725",
+          "type": "document",
+          "title_ru": "Протокол допроса С.О. Мандельштама",
+          "source_id": "9725",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa_sm2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-9725.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3154",
+          "type": "document",
+          "title_ru": "Протокол допроса В.И. Звездова",
+          "source_id": "3154",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-i-zvezdova-7/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3154.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3156",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между Г.Ф. Поповым и Н.Н. Шатским",
+          "source_id": "3156",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-g-f-popovym-i-n-n-shatskim/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3156.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3155",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между В.И. Звездовым и Г.В. Соколовым",
+          "source_id": "3155",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-v-i-zvezdovym-i-g-v-sokolovym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3155.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3157",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцева",
+          "source_id": "3157",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczeva-8/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3157.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3158",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.П. Мясникова",
+          "source_id": "3158",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-p-myasnikova-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3158.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3159",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между Н.П. Мясниковым и В.В. Румянцевым",
+          "source_id": "3159",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-n-p-myasnikovym-i-v-v-rumyanczevym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3159.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3172",
+          "type": "document",
+          "title_ru": "Письмо В.В. Румянцева секретарю ЦК ВКП(б) И.В. Сталину",
+          "source_id": "3172",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/pismo-v-v-rumyanczeva-sekretaryu-czk-vkpb-i-v-stalinu/",
+          "document_type": "letter",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3172.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3173",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3173",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-36/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3173.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3174",
+          "type": "document",
+          "title_ru": "Протокол допроса Г.В. Соколова",
+          "source_id": "3174",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-g-v-sokolova-4/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3174.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3175",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между Г.В. Соколовым и Л.В. Николаевым",
+          "source_id": "3175",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-g-v-sokolovym-i-l-v-nikolaevym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3175.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3176",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между И.Г. Юскиным и Л.В. Николаевым",
+          "source_id": "3176",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-i-g-yuskinym-i-l-v-nikolaevym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3176.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3182",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3182",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-37/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3182.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3183",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между Н.Н. Шатским и Л.В. Николаевым",
+          "source_id": "3183",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-n-n-shatskim-i-l-v-nikolaevym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3183.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3184",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцева",
+          "source_id": "3184",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczeva-9/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3184.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3190",
+          "type": "document",
+          "title_ru": "Протокол допроса В.С. Левина",
+          "source_id": "3190",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-s-levina-8/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3190.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3188",
+          "type": "document",
+          "title_ru": "Протокол допроса В.С. Левина",
+          "source_id": "3188",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-s-levina-7/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3188.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3191",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "3191",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-12/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3191.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3192",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "3192",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova-9/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3192.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3193",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.И. Сосицкого",
+          "source_id": "3193",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-i-sosiczkogo/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3193.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3194",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.И. Сосицкого",
+          "source_id": "3194",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-i-sosiczkogo-2/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3194.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3195",
+          "type": "document",
+          "title_ru": "Заявление Л.О. Ханика в СПО НКВД Ленинградской области",
+          "source_id": "3195",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/zayavlenie-l-o-hanika-v-spo-nkvd-leningradskoj-oblasti/",
+          "document_type": "statement",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3195.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3208",
+          "type": "document",
+          "title_ru": "Протокол допроса В.В. Румянцнева",
+          "source_id": "3208",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-v-rumyanczneva/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3208.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3210",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.С. Антонова",
+          "source_id": "3210",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-s-antonova-10/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3210.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3212",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3212",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-38/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3212.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3213",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3213",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-39/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3213.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3214",
+          "type": "document",
+          "title_ru": "Протокол допроса В.И. Звездова",
+          "source_id": "3214",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-v-i-zvezdova-8/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3214.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3216",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.П. Мясникова",
+          "source_id": "3216",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-p-myasnikova-7/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3216.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3215",
+          "type": "document",
+          "title_ru": "Протокол допроса Н.П. Мясникова",
+          "source_id": "3215",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-n-p-myasnikova-6/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3215.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3217",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.И. Сосицкого",
+          "source_id": "3217",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-i-sosiczkogo-3/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3217.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3218",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между Н.П. Мясниковым и Л.И. Сосицким",
+          "source_id": "3218",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-n-p-myasnikovym-i-l-i-sosiczkim/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3218.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3226",
+          "type": "document",
+          "title_ru": "Протокол допроса Л.В. Николаева",
+          "source_id": "3226",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-40/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3226.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3228",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между Н.П. Мясниковым и В.С. Левиным",
+          "source_id": "3228",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-n-p-myasnikovym-i-v-s-levinym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3228.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3227",
+          "type": "document",
+          "title_ru": "Протокол допроса Г.В. Соколова",
+          "source_id": "3227",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-g-v-sokolova-5/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3227.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3229",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между Н.С. Антоновым и В.В. Румянцевым",
+          "source_id": "3229",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-n-s-antonovym-i-v-v-rumyanczevym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3229.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3230",
+          "type": "document",
+          "title_ru": "Протокол очной ставки между А.И. Толмазовым и И.И. Котолыновым",
+          "source_id": "3230",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-a-i-tolmazovym-i-i-i-kotolynovym/",
+          "document_type": "confrontation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3230.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3236",
+          "type": "document",
+          "title_ru": "Протокол допроса И.И. Котолынова",
+          "source_id": "3236",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-13/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3236.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-3237",
+          "type": "document",
+          "title_ru": "Заявление Л.И. Сосицкого в ЦК ВКП(б)",
+          "source_id": "3237",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/zayavlenie-l-i-sosiczkogo-v-czk-vkpb/",
+          "document_type": "statement",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-3237.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2617",
+          "type": "document",
+          "title_ru": "ОБВИНИТЕЛЬНОЕ ЗАКЛЮЧЕНИЕ",
+          "source_id": "2617",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/obvinitelnoe-zaklyuchenie/",
+          "document_type": "indictment",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2617.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2618",
+          "type": "document",
+          "title_ru": "ЗАСЕДАНИЕ 28 ДЕКАБРЯ 1934 Г.",
+          "source_id": "2618",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/zasedanie-voennogo-tribunala-verhovnogo-suda-sssr-28-dekabrya-1934-g/",
+          "document_type": "session_transcript",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2618.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-2619",
+          "type": "document",
+          "title_ru": "ПРИГОВОР",
+          "source_id": "2619",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/prigovor/",
+          "document_type": "verdict_or_sentence",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-2619.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-808",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева",
+          "source_id": "808",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-3-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-808.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-809",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева",
+          "source_id": "809",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-2-3-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-809.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-810",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева с приложением выдержек из дневника и писем",
+          "source_id": "810",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-3-3-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-810.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1344",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева",
+          "source_id": "1344",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-7-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1344.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1348",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева",
+          "source_id": "1348",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-8-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1348.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1349",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева",
+          "source_id": "1349",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-10-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1349.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1350",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева",
+          "source_id": "1350",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-11-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1350.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1351",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева",
+          "source_id": "1351",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-12-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1351.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1352",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева",
+          "source_id": "1352",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-1-14-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1352.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1353",
+          "type": "document",
+          "title_ru": "Протокол допроса П.А. Николаева",
+          "source_id": "1353",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-p-nikolaeva-2-14-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1353.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1631",
+          "type": "document",
+          "title_ru": "Допрос А. Румянцева 24 декабря 1934",
+          "source_id": "1631",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-a-rumyanczeva-24-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1631.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1632",
+          "type": "document",
+          "title_ru": "Дополнение к протоколу допроса А.В. Румянцева",
+          "source_id": "1632",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-a-rumyanczeva-2-24-dekabrya-1934/",
+          "document_type": "testimony",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1632.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1633",
+          "type": "document",
+          "title_ru": "Допрос А.Г. Егорова 26 декабря 1934",
+          "source_id": "1633",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/dopros-egorova-26-dekabrya-1934/",
+          "document_type": "interrogation_protocol",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1633.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1630",
+          "type": "document",
+          "title_ru": "Сообщение Агранова 31 декабря 1934",
+          "source_id": "1630",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/soobshhenie-agranova-31-dekabrya-1934/",
+          "document_type": "administrative_report",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1630.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1625",
+          "type": "document",
+          "title_ru": "Записка Сталина 4 января 1935 о рассылке документов по делу А.В. Румянцева членам Политбюро ЦК ВКП(б)",
+          "source_id": "1625",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/zapiska-stalina-4-yanvarya-1935/",
+          "document_type": "memo_note",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1625.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-9548",
+          "type": "document",
+          "title_ru": "Письмо З.Д. Ханик в Сокольнический райком ВКП(б) с отречением от сына",
+          "source_id": "9548",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/pismo-z-d-hanik-v-sokolnicheskij-rajkom-vkpb-s-otrecheniem-ot-syna/",
+          "document_type": "letter",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-9548.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-9551",
+          "type": "document",
+          "title_ru": "Письмо З.Д. Ханик в редакцию газеты “Правда” с отречением от сына",
+          "source_id": "9551",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/pismo-z-d-hanik-v-redakcziyu-gazety-pravda-s-otrecheniem-ot-syna/",
+          "document_type": "letter",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-9551.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-6711",
+          "type": "document",
+          "title_ru": "Список родственников лиц, осужденных и расстрелянных по приговору ВКВС СССР от 28 декабря 1934 г.",
+          "source_id": "6711",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/spisok-rodstvennikov-obvinyaemyh-osuzhdennyh-i-rasstrelyannyh-po-prigovoru-vkvs-sssr-ot-28-dekabrya-1934-g/",
+          "document_type": "list",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-6711.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-1621",
+          "type": "document",
+          "title_ru": "Письмо Е.Ф. Ермолаевой Н.И. Ежову от 15 марта 1935 г.",
+          "source_id": "1621",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/pismo-ermolaevoj-15-marta-1935/",
+          "document_type": "letter",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-1621.ru.txt"
+            }
+          ]
+        },
+        {
+          "id": "showtrials-6693",
+          "type": "document",
+          "title_ru": "Спецсообщение Я.С. Агранова Н.И. Ежову с приложением протокола допроса А.В. Бочарова и двух стихотворений",
+          "source_id": "6693",
+          "source_name": "ShowTrials",
+          "source_url": "http://showtrials.ru/speczsoobshhenie-ya-s-agranova-n-i-ezhovu-s-prilozheniem-protokola-doprosa-a-v-bocharova-i-dvuh-stihotvorenij/",
+          "document_type": "special_report",
+          "format": "text",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Disponível em russo",
+              "file": "originais/showtrials/showtrials-6693.ru.txt"
+            }
           ]
         }
       ]

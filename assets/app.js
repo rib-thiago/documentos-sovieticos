@@ -30,6 +30,13 @@ function normalizeHeadingLevel(text, mdLevel) {
   return mdLevel;
 }
 
+// As exportações ShowTrials são texto: asteriscos e outros sinais pertencem à fonte.
+function parsePlainText(text) {
+  return text.replace(/\r\n/g, "\n").split(/\n\s*\n/)
+    .map(text => text.trim()).filter(Boolean)
+    .map(text => ({ type: "text", text }));
+}
+
 function parseMarkdown(md) {
   const text = md.replace(/\r\n/g, "\n").trim();
   const chunks = text.split(/\n{2,}/);
@@ -74,7 +81,7 @@ function parseMarkdown(md) {
 /* ---------- Alinhamento N-ário ---------- */
 
 function zipBlocks(langs) {
-  const rank = { h1: 0, h2: 1, h3: 2, image: 3, list: 4, quote: 4, p: 5 };
+  const rank = { h1: 0, h2: 1, h3: 2, image: 3, list: 4, quote: 4, p: 5, text: 5 };
   const n = Math.max(...langs.map(l => l.blocks.length));
   const out = [];
   for (let i = 0; i < n; i++) {
@@ -271,6 +278,11 @@ function renderCellContent(block, code) {
   const raw = (block.cells[code] || "").trim();
   if (!raw) { frag.appendChild(el("p", { text: "—" })); return frag; }
 
+  if (block.type === "text") {
+    frag.appendChild(el("p", { text: raw }));
+    return frag;
+  }
+
   if (block.type === "image") {
     const m = raw.match(/^!\[(.*?)\]\((.+?)\)$/);
     if (m) {
@@ -350,6 +362,7 @@ function renderBlock(b, allLangs) {
     const isBase = l.code === baseCode;
     const cell = el("div", {
       class: "cell lang-" + l.code + (isBase ? " base" : " secondary"),
+      lang: l.code,
     });
     cell.setAttribute("data-lang-label", l.code.toUpperCase());
     cell.appendChild(renderCellContent(b, l.code));
@@ -358,20 +371,46 @@ function renderBlock(b, allLangs) {
   return wrap;
 }
 
-function renderDocHeader(meta, collection) {
-  const header = el("header", { class: "doc-header" });
+function collectionDocumentURL(doc, subcollection) {
+  const suffix = subcollection ? `?subcolecao=${encodeURIComponent(subcollection.id)}` : "";
+  return `#/doc/${doc.id}${suffix}`;
+}
+
+function renderBreadcrumbs(collection, subcollection, current) {
+  const nav = el("nav", { class: "breadcrumbs", "aria-label": "Caminho de navegação" });
+  nav.appendChild(el("a", { href: "#/", text: "Acervo" }));
   if (collection) {
-    header.appendChild(el("a", {
-      class: "back-link",
-      href: `#/colecao/${collection.id}`,
-      text: `← ${collection.title_pt}`
+    nav.appendChild(el("span", { text: " / ", "aria-hidden": "true" }));
+    nav.appendChild(el("a", { href: `#/colecao/${collection.id}`, text: collection.title_pt }));
+  }
+  if (subcollection) {
+    nav.appendChild(el("span", { text: " / ", "aria-hidden": "true" }));
+    nav.appendChild(el("a", {
+      href: `#/colecao/${collection.id}/subcolecao/${subcollection.id}`,
+      text: subcollection.title_pt,
     }));
   }
+  nav.appendChild(el("span", { text: " / ", "aria-hidden": "true" }));
+  nav.appendChild(el("span", { text: current, "aria-current": "page" }));
+  return nav;
+}
+
+function renderDocHeader(meta, collection, subcollection) {
+  const header = el("header", { class: "doc-header" });
+  header.appendChild(renderBreadcrumbs(collection, subcollection, "Documento"));
   header.appendChild(el("p", { class: "doc-eyebrow", text: meta.eyebrow || "Documento" }));
   header.appendChild(el("h1", {}, [
-    meta.title_pt,
-    el("span", { class: "ru-title", text: meta.title_ru }),
+    meta.title_pt || meta.title_ru,
+    meta.title_pt && meta.title_ru ? el("span", { class: "ru-title", lang: "ru", text: meta.title_ru }) : null,
   ]));
+  if (!meta.title_pt && meta.title_ru) header.querySelector("h1").lang = "ru";
+  if (meta.source_url) {
+    const source = el("p", { class: "source-info" }, [
+      el("a", { href: meta.source_url, text: `Fonte: ${meta.source_name || "publicação de origem"}` }),
+      meta.source_id ? ` · ID ${meta.source_id}` : "",
+    ]);
+    header.appendChild(source);
+  }
   if (meta.author) {
     header.appendChild(el("p", { class: "doc-author", text: meta.author }));
   }
@@ -422,17 +461,18 @@ function renderToolbar(langs, docId) {
   return bar;
 }
 
-function renderDocument(meta, langs, blocks, collection) {
+function renderDocument(meta, langs, blocks, collection, subcollection) {
   const root = document.getElementById("view");
   root.innerHTML = "";
 
   initParallelCols(meta.id, langs);
 
-  const article = el("article", { class: "doc mode-" + state.viewMode });
+  const mode = langs.length === 1 ? "reading" : state.viewMode;
+  const article = el("article", { class: "doc mode-" + mode });
   article.dataset.docId = meta.id;
   article.dataset.langCount = String(langs.length);
 
-  article.appendChild(renderDocHeader(meta, collection));
+  article.appendChild(renderDocHeader(meta, collection, subcollection));
   if (langs.length > 1) article.appendChild(renderToolbar(langs, meta.id));
 
   const labels = el("div", { class: "col-labels cols-" + langs.length });
@@ -455,11 +495,12 @@ function renderDocument(meta, langs, blocks, collection) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-async function loadDocument(collection, docMeta) {
+async function loadDocument(collection, docMeta, subcollection) {
+  const requestedHash = location.hash;
   const cacheKey = docMeta.id;
   if (state.cache.has(cacheKey)) {
     const { langs, blocks } = state.cache.get(cacheKey);
-    renderDocument(docMeta, langs, blocks, collection);
+    renderDocument(docMeta, langs, blocks, collection, subcollection);
     return;
   }
 
@@ -467,7 +508,9 @@ async function loadDocument(collection, docMeta) {
     docMeta.languages.map(async l => ({
       code: l.code,
       label: l.label,
-      blocks: parseMarkdown(await fetchText(l.file)),
+      blocks: docMeta.format === "text"
+        ? parsePlainText(await fetchText(l.file))
+        : parseMarkdown(await fetchText(l.file)),
     }))
   );
 
@@ -479,19 +522,22 @@ async function loadDocument(collection, docMeta) {
 
   const blocks = zipBlocks(langs);
   state.cache.set(cacheKey, { langs, blocks });
-  renderDocument(docMeta, langs, blocks, collection);
+  if (location.hash !== requestedHash) return;
+  renderDocument(docMeta, langs, blocks, collection, subcollection);
 }
 
 /* ---------- Renderização: coleção ---------- */
 
-function renderCollection(collection) {
+function renderCollection(collection, subcollection = null, showAll = false) {
   const root = document.getElementById("view");
   root.innerHTML = "";
 
   const wrap = el("section", { class: "collection" });
-  wrap.appendChild(el("a", {
-    class: "back-link", href: "#/", text: "← Todas as coleções"
-  }));
+  wrap.appendChild(renderBreadcrumbs(
+    subcollection || showAll ? collection : null,
+    null,
+    subcollection ? subcollection.title_pt : showAll ? "Todos os documentos" : collection.title_pt
+  ));
 
   const hero = el("header", { class: "collection-hero" });
   hero.style.setProperty("--accent", collection.accent || "#8b2c2c");
@@ -499,10 +545,10 @@ function renderCollection(collection) {
     hero.classList.add("has-cover");
     hero.style.setProperty("--cover", `url("${absURL(collection.cover)}")`);
   }
-  hero.appendChild(el("p", { class: "doc-eyebrow", text: "Coleção" }));
+  hero.appendChild(el("p", { class: "doc-eyebrow", text: subcollection ? "Subcoleção" : "Coleção" }));
   hero.appendChild(el("h1", {}, [
-    collection.title_pt,
-    el("span", { class: "ru-title", text: collection.title_ru }),
+    subcollection ? subcollection.title_pt : collection.title_pt,
+    el("span", { class: "ru-title", lang: "ru", text: subcollection ? subcollection.title_ru : collection.title_ru }),
   ]));
   if (collection.subtitle_pt)
     hero.appendChild(el("p", { class: "collection-subtitle", text: collection.subtitle_pt }));
@@ -510,9 +556,43 @@ function renderCollection(collection) {
     hero.appendChild(el("p", { class: "collection-description", text: collection.description_pt }));
   wrap.appendChild(hero);
 
+  if (collection.subcollections && !subcollection && !showAll) {
+    const grid = el("div", { class: "subcollection-grid" });
+    for (const sub of collection.subcollections) {
+      const card = el("a", {
+        class: "doc-list-item", href: `#/colecao/${collection.id}/subcolecao/${sub.id}`,
+      }, [
+        el("h2", { class: "doc-list-title", text: sub.title_pt }),
+        el("p", { class: "doc-list-ru", lang: "ru", text: sub.title_ru }),
+        el("p", { class: "doc-list-meta", text: `${sub.document_ids.length} documentos · Em russo` }),
+      ]);
+      grid.appendChild(card);
+    }
+    wrap.appendChild(grid);
+    wrap.appendChild(el("a", {
+      class: "all-documents-link", href: `#/colecao/${collection.id}/todos`,
+      text: `Ver todos os ${collection.documents.length} documentos`,
+    }));
+    root.appendChild(wrap);
+    setActiveNav(collection.id);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
+  if (subcollection && subcollection.source_url) {
+    wrap.appendChild(el("p", { class: "source-info" }, [
+      el("a", { href: subcollection.source_url, text: "Consultar esta subcoleção no ShowTrials" }),
+    ]));
+  }
+  const documents = subcollection
+    ? subcollection.document_ids.map(id => collection.documents.find(doc => doc.id === id))
+    : collection.documents;
+  wrap.appendChild(el("p", {
+    class: "document-count", text: `${documents.length} ${documents.length === 1 ? "documento" : "documentos"}`,
+  }));
   const list = el("div", { class: "doc-list" });
-  for (const doc of collection.documents) {
-    const item = el("a", { class: "doc-list-item", href: `#/doc/${doc.id}` });
+  for (const doc of documents) {
+    const item = el("a", { class: "doc-list-item", href: collectionDocumentURL(doc, subcollection) });
 
     const topLine = el("div", { class: "doc-list-topline" });
     topLine.appendChild(el("span", {
@@ -524,13 +604,20 @@ function renderCollection(collection) {
     }
     item.appendChild(topLine);
 
-    item.appendChild(el("h2", { class: "doc-list-title", text: doc.title_pt }));
-    item.appendChild(el("p", { class: "doc-list-ru", text: doc.title_ru }));
+    item.appendChild(el("h2", {
+      class: "doc-list-title", lang: doc.title_pt ? "pt-BR" : "ru",
+      text: doc.title_pt || doc.title_ru,
+    }));
+    if (doc.title_pt && doc.title_ru)
+      item.appendChild(el("p", { class: "doc-list-ru", lang: "ru", text: doc.title_ru }));
 
     const meta = el("div", { class: "doc-list-meta" });
     if (doc.author) meta.appendChild(el("span", { text: doc.author }));
     if (doc.date) meta.appendChild(el("span", { text: doc.date }));
     if (doc.archive) meta.appendChild(el("span", { text: doc.archive }));
+    if (doc.languages.length === 1 && doc.languages[0].code === "ru") {
+      meta.appendChild(el("span", { text: "Disponível em russo" }));
+    }
     const tags = el("span", { class: "lang-tags" });
     for (const l of doc.languages) {
       tags.appendChild(el("span", { class: "lang-tag", text: l.code.toUpperCase() }));
@@ -559,7 +646,7 @@ function renderHome() {
   intro.appendChild(el("h1", {}, ["Documentos Soviéticos"]));
   intro.appendChild(el("p", {
     class: "home-subtitle",
-    text: "Edições bilíngues e trilíngues de fontes primárias e ensaios históricos sobre o período stalinista."
+    text: "Fontes primárias e ensaios históricos sobre o período stalinista, em russo e em edições com traduções para português e inglês."
   }));
   wrap.appendChild(intro);
 
@@ -574,7 +661,9 @@ function renderHome() {
     const body = el("div", { class: "collection-card-body" });
     body.appendChild(el("p", {
       class: "collection-card-eyebrow",
-      text: c.documents.length === 1 ? "1 item" : `${c.documents.length} itens`
+      text: c.subcollections
+        ? `${c.documents.length} documentos · ${c.subcollections.length} subcoleções`
+        : c.documents.length === 1 ? "1 item" : `${c.documents.length} itens`
     }));
     body.appendChild(el("h2", { text: c.title_pt }));
     body.appendChild(el("p", { class: "collection-card-ru", text: c.title_ru }));
@@ -602,9 +691,17 @@ function findCollectionByDocId(docId) {
 function parseRoute() {
   const hash = location.hash.replace(/^#\/?/, "").trim();
   if (!hash) return { view: "home" };
-  const parts = hash.split("/");
-  if (parts[0] === "colecao" && parts[1]) return { view: "collection", id: parts[1] };
-  if (parts[0] === "doc" && parts[1])     return { view: "document",   id: parts[1] };
+  const [path, query = ""] = hash.split("?");
+  const parts = path.split("/");
+  if (parts[0] === "colecao" && parts[1]) return {
+    view: "collection", id: parts[1],
+    subcollectionId: parts[2] === "subcolecao" ? parts[3] : null,
+    showAll: parts[2] === "todos",
+  };
+  if (parts[0] === "doc" && parts[1]) return {
+    view: "document", id: parts[1],
+    subcollectionId: new URLSearchParams(query).get("subcolecao"),
+  };
   return { view: "home" };
 }
 
@@ -616,12 +713,15 @@ async function route() {
     } else if (r.view === "collection") {
       const c = state.manifest.collections.find(x => x.id === r.id);
       if (!c) { location.hash = "#/"; return; }
-      renderCollection(c);
+      const sub = c.subcollections?.find(s => s.id === r.subcollectionId);
+      if (r.subcollectionId && !sub) { location.hash = `#/colecao/${c.id}`; return; }
+      renderCollection(c, sub, r.showAll);
     } else if (r.view === "document") {
       const c = findCollectionByDocId(r.id);
       if (!c) { location.hash = "#/"; return; }
       const doc = c.documents.find(d => d.id === r.id);
-      await loadDocument(c, doc);
+      const sub = c.subcollections?.find(s => s.id === r.subcollectionId && s.document_ids.includes(doc.id));
+      await loadDocument(c, doc, sub);
     }
   } catch (err) {
     console.error(err);
