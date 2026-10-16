@@ -545,8 +545,8 @@ function renderCollectionPagination(total,page,collection,subcollection) {
   return nav;
 }
 
-function renderDocumentSequence(meta,collection,subcollection,compact=false) {
-  const nav=el("nav",{class:"document-sequence"+(compact?" is-compact":""),"aria-label":compact?"Navegação no início do documento":"Navegação no fim do documento"});
+function renderDocumentSequence(meta,collection,subcollection) {
+  const nav=el("nav",{class:"document-sequence","aria-label":"Navegação no fim do documento"});
   if(!collection)return nav;
   const all=collectionDocuments(collection);const map=new Map(all.map(doc=>[doc.id,doc]));
   const documents=subcollection?subcollection.document_ids.map(id=>map.get(id)).filter(Boolean):all;
@@ -575,7 +575,7 @@ function renderDocumentSequence(meta,collection,subcollection,compact=false) {
   const list=collectionListURL(collection,subcollection,Math.floor(index/COLLECTION_PAGE_SIZE)+1);
   nav.append(adjacent(-1),el("div",{class:"sequence-context"},[
     el("span",{text:`${index+1} de ${documents.length} · ${subcollection?"Subcoleção":"Coleção"}`}),
-    el("a",{href:list,text:compact?"Voltar à lista":subcollection?.title_pt||collection.title_pt}),
+    el("a",{href:list,text:subcollection?.title_pt||collection.title_pt}),
   ]),adjacent(1));
   return nav;
 }
@@ -717,7 +717,7 @@ function renderToolbar(langs, meta) {
     updateReadingLayout();
   };
   expand.addEventListener("click",()=>{expanded=!expanded;applyExpanded();});
-  const section=(title,description,className)=>{
+  const section=(title,className)=>{
     const body=el("div",{class:"control-section-body"});
     const group=el("section",{class:"control-section "+className},[
       el("div",{class:"control-section-heading"},[el("h2",{text:title})]),body
@@ -725,30 +725,26 @@ function renderToolbar(langs, meta) {
     controls.append(group);
     return body;
   };
-  const navigation=section("Navegar no texto","Índice e posição marcada nesta sessão","control-navigation");
+  const navigation=section("Navegar no texto","control-navigation");
   navigation.append(el("div",{class:"reading-tools",role:"group","aria-label":"Índice e marcador do documento",hidden:"hidden"}));
-  const viewing=section("Visualização e idiomas","Escolha como consultar o documento","control-viewing");
-  const documentActions=section("Trabalhar com o documento","Exportação e edição independentes da visualização","control-document-actions");
+  const viewing=section("Visualização e idiomas","control-viewing");
+  const documentActions=section("Trabalhar com o documento","control-document-actions");
   bar.append(head,controls);
   // Os menus compartilham a mesma estrutura, incluindo a edição carregada localmente.
   bar.addEventListener("toggle",event=>{
     if(event.target.tagName==="DETAILS"&&event.target.open)
       for(const other of controls.querySelectorAll("details[open]"))if(other!==event.target)other.open=false;
+    updateReadingLayout();
   },true);
   const menu = (title, content) => {
     const details=el("details",{class:"editorial-menu reader-options"});
     details.append(el("summary",{text:title}),el("div",{class:"editorial-menu-body"},[content]));
-    details.addEventListener("toggle",()=>{
-      if(details.open)for(const other of bar.querySelectorAll("details[open]"))if(other!==details)other.open=false;
-    });
     return details;
   };
   const pin=el("button",{type:"button",class:"toolbar-pin panel-button","aria-pressed":"false",title:"Fixar barra durante a rolagem",text:"Fixar"});
   let pinned=sessionRead("readerToolbarPinned")==="true";
   const applyPin=()=>{bar.classList.toggle("is-pinned",pinned);pin.setAttribute("aria-pressed",String(pinned));pin.textContent=pinned?"Soltar":"Fixar";pin.title=pinned?"Deixar barra no início do texto":"Fixar barra durante a rolagem";updateReadingLayout();};
   pin.addEventListener("click",()=>{pinned=!pinned;sessionWrite("readerToolbarPinned",String(pinned));applyPin();});
-  bar.classList.toggle("is-pinned",pinned);
-  pin.setAttribute("aria-pressed",String(pinned));pin.textContent=pinned?"Soltar":"Fixar";
   const hasTranslations = langs.length > 1;
   const isStudy = hasTranslations && state.viewMode === "study";
 
@@ -843,7 +839,11 @@ function renderToolbar(langs, meta) {
       if(kind==="study")item.querySelector("summary").textContent="Estudo · "+(state.studyMode==="parallel"?"Paralelo":"Por parágrafo");
     }
   };
-  bar.updateViewing();applyExpanded();
+  bar.updateViewing();applyExpanded();applyPin();
+  if(typeof ResizeObserver!=="undefined"){
+    bar.layoutObserver=new ResizeObserver(updateReadingLayout);
+    bar.layoutObserver.observe(bar);
+  }
   return bar;
 }
 
@@ -882,13 +882,30 @@ function resolveReadingBlock(record, blocks) {
   return blocks.find(block => readingFingerprint(block.textContent) === record.signature) || null;
 }
 
+function readingLayoutMetrics() {
+  return {
+    header:document.querySelector(".site-header")?.getBoundingClientRect().height||0,
+    panel:document.querySelector(".doc-toolbar.is-pinned")?.getBoundingClientRect().height||0
+  };
+}
+
 function updateReadingLayout() {
-  const header = document.querySelector(".site-header");
-  document.documentElement.style.setProperty("--site-header-height", `${header?.getBoundingClientRect().height || 0}px`);
+  const metrics=readingLayoutMetrics();
+  const style=document.documentElement.style;
+  for(const [name,value] of [["--site-header-height",metrics.header],["--reader-panel-height",metrics.panel]]){
+    const size=`${value}px`;
+    if(style.getPropertyValue(name)!==size)style.setProperty(name,size);
+  }
+}
+
+function stopPanelLayoutTracking() {
+  document.querySelector(".doc-toolbar")?.layoutObserver?.disconnect();
+  document.documentElement.style.setProperty("--reader-panel-height","0px");
 }
 
 function readingViewportTop() {
-  return (document.querySelector(".site-header")?.getBoundingClientRect().height || 0) + (document.querySelector(".doc-toolbar.is-pinned")?.getBoundingClientRect().height || 0) + 24;
+  const metrics=readingLayoutMetrics();
+  return metrics.header+metrics.panel+24;
 }
 
 function closeDocumentPanel() {
@@ -1132,21 +1149,15 @@ function setupParagraphNavigation(meta, langs, content, entries, headings, mode)
   }
   content.addEventListener("click", handleParagraphMark);
   content.addEventListener("keydown", handleParagraphMark);
-  if (typeof ResizeObserver !== "undefined") {
-    tracker.observer = new ResizeObserver(updateReadingLayout);
-    tracker.observer.observe(tools);
-  }
   updateMarkerControls(meta, langs);
 }
 
 function stopReadingTracking() {
   const tools = document.querySelector(".reading-tools");
   if (tools) { tools.hidden = true; tools.innerHTML = ""; }
-  document.querySelector(".site-header")?.classList.remove("has-document");
   updateReadingLayout();
   const tracker = state.readingTracker;
   if (!tracker) return;
-  tracker.observer?.disconnect();
   tracker.content.removeEventListener("click", handleParagraphMark);
   tracker.content.removeEventListener("keydown", handleParagraphMark);
   for (const entry of tracker.entries) {
@@ -1196,6 +1207,7 @@ function handleReadingAnchor(event) {
 
 function renderDocument(meta, langs, blocks, collection, subcollection, scroll = true) {
   stopReadingTracking();
+  stopPanelLayoutTracking();
   const root = document.getElementById("view");
   root.innerHTML = "";
   state.activeDocument = { meta, langs, blocks, collection, subcollection };
@@ -1499,6 +1511,7 @@ async function route() {
   state.routeVersion++;
   activeSearchRequest?.abort();
   stopReadingTracking();
+  stopPanelLayoutTracking();
   const r = parseRoute();
   try {
     if (r.view === "home") {
@@ -1528,7 +1541,7 @@ async function route() {
   } catch (err) {
     console.error(err);
     document.getElementById("view").innerHTML =
-      `<p style="color:#8b2c2c;font-family:Inter,sans-serif;padding:2rem">
+      `<p class="reader-error">
          Erro: ${escapeHTML(err.message)}
        </p>`;
   }
@@ -1553,6 +1566,7 @@ async function main() {
     }
     window.addEventListener("resize", updateReadingLayout);
     document.addEventListener("click", event => {
+      if(document.querySelector("dialog[open]"))return;
       for(const menu of document.querySelectorAll(".editorial-menu[open]"))if(!menu.contains(event.target))menu.open=false;
       const tools = document.querySelector(".reading-tools");
       if (tools && !tools.contains(event.target)) closeDocumentPanel();
@@ -1565,7 +1579,7 @@ async function main() {
         document.querySelector(".reading-panel > summary")?.focus();
       }
     });
-    window.addEventListener("pagehide", () => stopReadingTracking());
+    window.addEventListener("pagehide", () => {stopReadingTracking();stopPanelLayoutTracking();});
     window.addEventListener("pageshow", event => {
       if (event.persisted) reloadEditorialCatalog(state.editorialDepartureContext).catch(console.error);
     });
@@ -1577,7 +1591,7 @@ async function main() {
   } catch (err) {
     console.error(err);
     document.getElementById("view").innerHTML =
-      `<p style="color:#8b2c2c;font-family:Inter,sans-serif;padding:2rem">
+      `<p class="reader-error">
          Erro ao carregar manifest: ${escapeHTML(err.message)}
        </p>`;
   }

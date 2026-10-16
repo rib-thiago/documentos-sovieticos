@@ -32,7 +32,7 @@ O roteiro de cadastro e restauração está em [CADASTRO-LOCAL.md](CADASTRO-LOCA
 | Antes do trabalho continuado | Backup do histórico local | Copiar o projeto com backend parado, incluindo `.local/editorial/history/` |
 | Média | Upload de capas diretamente pelo formulário | Acrescentar imagens ao protocolo de histórico sem misturar bytes de imagem com snapshots de texto; hoje a capa usa caminho existente |
 | Implementada; validação manual pendente | Entrada de muitos documentos de uma vez | CSV + originais, prévia individual e restauração conjunta; roteiro em IMPORTACAO-EM-LOTE.md |
-| Média | CSS acumulado em sucessivas rodadas | Consolidar os estilos do painel/editorial após validar o comportamento atual; não fazer uma troca ampla de seletores durante a estabilização funcional |
+| Consolidado; avaliação prática pelo usuário | CSS acumulado em sucessivas rodadas | Estilos organizados por componente; controles visuais e medidas do painel unificados em stable-week-1. Ver SEMANA-ESTAVEL.md |
 | Média | Verificação visual ampla de telas e navegadores | Comparar celular, desktop e teclado com o responsável; não foi simulada nesta rodada |
 | Baixa | Identificação semântica de duplicidades e traduções | Continua fora do cadastro: os alertas atuais conferem metadados e arquivos, não o significado dos textos |
 | Baixa | Mais idiomas e hierarquias mais profundas | A criação oferece RU/PT/EN e coleção → subcoleção, compatíveis com a interface atual |
@@ -56,3 +56,8 @@ A marcação manual de leitura permanece por sessão da aba. Correções do pró
 ## Autorização de versionamento
 
 O usuário autorizou o commit conjunto do cadastro local e da importação em lote. Os registros acima descrevem a revisão por inspeção e os percursos de validação; não houve execução de testes pelo assistente. A avaliação visual ampla e o backup local continuam sendo passos de preparação para o trabalho continuado. Nenhum push foi solicitado.
+
+
+## Consolidação visual para a semana de uso
+
+A rodada stable-week-1 organiza o CSS e ajusta somente o JavaScript ligado ao painel/medidas visuais. Os fluxos e a identidade visual aprovados foram mantidos como referência. Não foram executados testes pelo assistente; o responsável fará a avaliação prática durante uma semana. O roteiro e os campos para relatar problemas estão em SEMANA-ESTAVEL.md. Sem commit ou push nesta rodada.

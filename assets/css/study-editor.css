@@ -1,0 +1,184 @@
+/* Correção de traduções no estudo: ação discreta e editor local em janela. */
+.study-passage-action {
+  display:block;
+  margin:.55rem 0 0 auto;
+  padding:.2rem .35rem;
+  border:0;
+  border-bottom:1px solid transparent;
+  border-radius:3px;
+  background:transparent;
+  color:var(--muted);
+  font:400 .65rem/1.5 var(--font-ui);
+  cursor:pointer;
+}
+.study-passage-action:hover {
+  color:var(--accent);
+  background:var(--bg);
+  border-color:var(--rule);
+}
+.study-passage-action:focus-visible {
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+.study-passage-dialog {
+  width:min(850px,calc(100vw - 2rem));
+  max-height:calc(100dvh - 3rem);
+  padding:1.25rem 1.5rem;
+  border:1px solid var(--rule);
+  border-radius:10px;
+  background:var(--paper);
+  color:var(--ink);
+  box-shadow:0 18px 65px #28201935;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+.study-passage-dialog::backdrop {
+  background:#28201965;
+}
+.passage-heading {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.passage-heading h2 {
+  margin:0;
+  font:600 1.2rem/1.4 var(--font-reading);
+}
+.passage-document,.passage-help,.passage-status {
+  font:400 .77rem/1.65 var(--font-ui);
+  color:var(--muted);
+}
+.passage-document {
+  margin:.4rem 0 1rem;
+}
+.passage-status {
+  padding:.65rem .8rem;
+  background:var(--bg);
+  border-radius:5px;
+}
+.passage-status.is-error {
+  color:var(--accent);
+  border:1px solid #dfb6ac;
+  background:#fff7f4;
+}
+.passage-label {
+  display:block;
+  margin:.9rem 0 .4rem;
+  font:500 .75rem/1.5 var(--font-ui);
+  color:var(--ink-soft);
+}
+.passage-source {
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  min-height:9rem;
+  max-height:40vh;
+  resize:vertical;
+  padding:.8rem .9rem;
+  margin-top:.4rem;
+  border:1px solid var(--rule);
+  border-radius:5px;
+  color:var(--ink);
+  background:var(--paper);
+  font:400 .84rem/1.7 ui-monospace,monospace;
+}
+.study-passage-dialog button,.study-passage-dialog .passage-history {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:.5rem .8rem;
+  min-height:36px;
+  border:1px solid var(--rule);
+  border-radius:5px;
+  color:var(--accent);
+  background:var(--paper);
+  font:500 .75rem/1.4 var(--font-ui);
+  text-decoration:none;
+  cursor:pointer;
+}
+.study-passage-dialog button:hover,.study-passage-dialog .passage-history:hover {
+  background:var(--bg);
+  border-color:var(--accent);
+}
+.study-passage-dialog button.passage-primary {
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+.study-passage-dialog button:disabled {
+  opacity:.55;
+  cursor:wait;
+}
+.study-passage-dialog :focus-visible {
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+.passage-actions {
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  flex-wrap:wrap;
+  margin:1rem 0;
+}
+.passage-original {
+  border:1px solid var(--rule);
+  border-radius:5px;
+  padding:.5rem .7rem;
+}
+.passage-original summary {
+  font:500 .73rem/1.5 var(--font-ui);
+  cursor:pointer;
+  color:var(--muted);
+}
+.passage-original pre,.passage-diff {
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  max-height:20rem;
+  overflow:auto;
+  padding:.75rem;
+  background:var(--bg);
+  color:var(--ink-soft);
+  font:400 .78rem/1.7 ui-monospace,monospace;
+  border-radius:4px;
+}
+.passage-review {
+  border-top:1px solid var(--rule);
+  margin-top:1rem;
+  padding-top:.6rem;
+}
+.passage-review h3 {
+  font:600 .85rem/1.5 var(--font-ui);
+  color:var(--ink);
+}
+.passage-rendered.reading-content {
+  padding:.75rem 1rem;
+  margin:0;
+  border:1px solid var(--rule);
+  border-radius:5px;
+  max-height:24rem;
+  overflow:auto;
+  font-size:1rem;
+}
+@media(max-width:600px) {
+  .study-passage-dialog {
+    width:calc(100vw - 1rem);
+    max-height:calc(100dvh - 1rem);
+    padding:1rem;
+  }
+  .passage-heading h2 {
+    font-size:1.05rem;
+  }
+  .study-passage-action {
+    font-size:.7rem;
+    padding:.35rem;
+  }
+  .passage-source {
+    font-size:.8rem;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .study-passage-action {
+    transition:none;
+  }
+}

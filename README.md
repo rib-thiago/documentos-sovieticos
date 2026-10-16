@@ -136,3 +136,6 @@ A área editorial agora oferece **Novo documento** (original Markdown/TXT) e **C
 
 
 Para cadastrar vários originais novos, use **Importar lote** na área editorial: CSV de metadados mais arquivos Markdown/TXT, com revisão individual e gravação conjunta. O [manual de importação em lote](docs/projeto/IMPORTACAO-EM-LOTE.md) inclui o exercício com dois documentos e a restauração do conjunto. O formulário oferece um modelo CSV para baixar.
+
+
+A base visual **stable-week-1** consolida o CSS por componente em `assets/css/`, mantendo as entradas `style.css` e `editorial.css`, sem npm ou build. O [roteiro da semana de uso prático](docs/projeto/SEMANA-ESTAVEL.md) explica a atualização do navegador e como relatar problemas; a [organização dos estilos](assets/css/README.md) orienta a manutenção. Não foram executados testes pelo assistente nesta rodada.

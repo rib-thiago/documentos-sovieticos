@@ -3,7 +3,7 @@ function captureEditorialReading() {
   const current=state.activeDocument;
   if(!current || parseRoute().view!=="document" || parseRoute().id!==current.meta.id)return null;
   const {meta,langs}=current;
-  const offset=(document.querySelector(".site-header")?.getBoundingClientRect().height||0)+24;
+  const offset=readingViewportTop();
   const entry=state.readingTracker?.entries.find(item=>{
     const rect=item.node.getBoundingClientRect();return rect.height>0&&rect.bottom>offset;
   });

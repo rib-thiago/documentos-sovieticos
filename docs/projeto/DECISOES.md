@@ -185,3 +185,12 @@ Foram corrigidos por inspeção títulos somente em inglês, atualização da li
 A entrada em lote reutiliza a validação do cadastro individual sem gravar propostas intermediárias. O arquivo e o documento são associados explicitamente por CSV; cada arquivo/ID deve aparecer uma vez. Coleções informadas na linha prevalecem sobre a seleção padrão. Se houver um erro, o lote inteiro fica bloqueado. Coincidências de título, URL/hash e divergências reconhecidas exigem confirmação explícita, incluindo coincidências dentro do lote.
 
 O lote é publicado em uma transação local, com uma atualização do índice e um snapshot recuperável. O histórico identifica todos os IDs envolvidos e pode ser filtrado por qualquer um, mas a restauração é conjunta. Limites operacionais: 100 originais, 4 MiB por arquivo, 20 MiB de textos e 1 MiB de CSV. A prévia renderiza cada conteúdo sob demanda. Importação de traduções em lote, ZIPs, coleções automáticas e imagens continuam fora desta etapa. Sem execução de testes, commit ou push; avaliação manual pendente.
+
+
+### D29 — Consolidação visual para uma semana de uso prático
+
+As entradas assets/style.css e assets/editorial.css foram preservadas, passando a importar módulos CSS locais por componente em assets/css/. Não há etapa de build ou dependência de npm. Foram consolidados os valores de apresentação já aprovados e removidas as regras das versões antigas do painel, índice na navbar, menus flutuantes e navegação sequencial no início. Visibilidade, estados ativos e breakpoints pertencem ao componente correspondente; fontes são variáveis de tema. A versão estática de cache desta rodada é stable-week-1.
+
+O painel usa um único controlador de abertura e um observador de tamanho, liberado ao trocar de documento/sair do leitor. Navbar e painel fixado fornecem o mesmo deslocamento ao CSS e à navegação/retomada. A animação de padding dos blocos foi retirada para evitar movimento de texto durante alterações de disposição. Menus atrás de janelas modais não recebem cliques/Escape dessas janelas. Nenhuma API, texto, tradução, ID ou URL de documento foi alterada.
+
+A documentação de manutenção fica em assets/css/README.md; o roteiro da semana e o formato de relato de problemas ficam em SEMANA-ESTAVEL.md. Não houve execução de testes, navegador, compilação, commit ou push pelo assistente. A avaliação visual e prática será feita pelo usuário durante a semana solicitada.

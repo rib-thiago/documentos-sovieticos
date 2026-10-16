@@ -72,3 +72,10 @@ O usuário aprovou a direção do cadastro individual e pediu a próxima entrega
 O usuário autorizou o commit das entregas de estabilização, cadastro individual e importação em lote. São versionadas juntas, pois compartilham formulários e transações editoriais. Não foram executados testes pelo assistente e não houve push. A autorização de versionamento não substitui a conferência visual ampla e o exercício completo de restauração descritos em ESTABILIZACAO.md.
 
 Pendências atuais: upload local de capas com prévia/histórico; consolidação do CSS acumulado e avaliação visual em celular/desktop/teclado; backup do histórico local; ferramentas de pesquisa (consultas salvas, anotações, dossiês, citações e exportações conjuntas). Importação de traduções em lote e pacotes ZIP/JSON permanecem extensões futuras, sem implementação nesta rodada.
+
+
+## Base visual stable-week-1 — pronta para uso prático pelo responsável
+
+Após o commit 0d61f4f, o usuário solicitou consolidar o CSS e ajustar o JavaScript visual necessário, mantendo o layout aprovado, para uma semana de testes práticos próprios. Foram organizados os componentes em assets/css/, removidas regras antigas e unificados os estados/medidas do painel. Sem alteração do acervo, APIs ou URLs. Sem testes executados pelo assistente, commit ou push nesta rodada. O roteiro de início, observação e relato de problemas está em SEMANA-ESTAVEL.md. Durante a semana, priorizar correções pontuais dos problemas encontrados; novas funcionalidades ficam para depois da observação prática.
+
+Posteriormente, o usuário autorizou o commit e o push da consolidação, incluindo o envio dos commits locais pendentes. A validação prática permanece a cargo do usuário; o assistente não executou testes.
