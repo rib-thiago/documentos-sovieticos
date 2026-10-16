@@ -53,3 +53,11 @@ O servidor publica somente `index.html`, `assets/`, `originais/` e o manifesto c
 Durante a verificação HTTP do acervo real, `originais/showtrials/showtrials-1699.ru.md` foi substituído externamente por uma versão com tabela reorganizada; também apareceu seu arquivo auxiliar `Zone.Identifier`. O backend não realizou essa edição. A validação interrompeu corretamente o uso do hash anterior (`52db6ffb298dfb8497a8d4479300cc4651941691b1421d0215f77a46cba3a106`).
 
 A versão presente foi preservada e seus bytes registrados explicitamente por `refresh-files --write` (`df58d2a5dd7f63352196b7c618df958a427c016c2f63931f3417931ec8b3092f`), sem certificação da revisão documental. O arquivo e o auxiliar são alterações externas, não parte da implementação do backend. As receitas da conversão anterior podem continuar apontando a divergência intencional dessa edição até uma revisão própria. O manifesto e todos os caminhos permaneceram iguais.
+
+## D9. Busca na interface e publicação estática
+
+A rota `#/busca` utiliza a API local quando disponível. Consultas vazias exploram o catálogo por filtros; consultas com palavras pesquisam títulos e corpo ou somente títulos. Resultados apresentam o trecho fornecido pela API como texto, sem interpretar HTML da fonte. Coleção e subcoleção usam os IDs existentes; categoria editorial e tipo documental específico são filtros separados. Não foi necessário alterar a API ou o catálogo nesta entrega.
+
+Sem a API, a página pesquisa os títulos do manifesto já carregado, com aviso visível e sem baixar todos os documentos. Tipos documentais específicos ficam indisponíveis nessa modalidade. Falhas do serviço local apresentam erro e opção de tentar novamente. Pedidos antigos são cancelados ao trocar de consulta ou sair da busca.
+
+Palavras, filtros, ordenação e página ficam no hash da URL, compatível com GitHub Pages e histórico do navegador. Links dos resultados acrescentam o endereço de retorno à consulta e o contexto da coleção, sem mudar as rotas existentes. Não há salto automático ao parágrafo encontrado; a marcação de leitura continua independente. O usuário testou e aprovou a busca e autorizou seu commit. Nenhum teste foi executado pelo assistente nesta entrega, conforme solicitado.

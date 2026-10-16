@@ -6,8 +6,8 @@ Em 16/10/2026, foi autorizada a primeira entrega: catálogo padronizado e backen
 
 ## Entregas
 
-1. **Implementada — aguardando avaliação do usuário.** Cadastro unificado, migração verificável, validação, exportação do manifesto compatível, índice SQLite e API local de consulta. O servidor também apresenta o site existente.
-2. **Planejada — busca na interface.** Busca integral com filtros, resultados contextualizados, paginação e retorno à consulta. A API preparada na etapa 1 dará suporte à interface.
+1. **Validada pelo usuário e commitada (`f90937c`).** Cadastro unificado, migração verificável, validação, exportação do manifesto compatível, índice SQLite e API local de consulta. O servidor também apresenta o site existente.
+2. **Validada manualmente pelo usuário; commit autorizado.** Busca integral com filtros, resultados contextualizados, paginação e retorno à consulta. Na publicação estática, busca limitada aos títulos do manifesto. Não foram executados testes pelo assistente nesta entrega por solicitação do usuário; roteiro em `BUSCA-MANUAL.md`.
 3. **Planejada — área editorial.** Fila de revisão, edição com prévia e histórico, importação de traduções e conferência de alinhamento.
 4. **Planejada — ferramentas de pesquisa.** Consultas salvas, anotações, dossiês, citações e exportações conjuntas.
 
@@ -34,4 +34,4 @@ Em 16/10/2026, foi autorizada a primeira entrega: catálogo padronizado e backen
 
 Consultar `docs/projeto/DECISOES.md` e o manual do backend para decisões consolidadas, comandos e validações. Atualizar este plano ao concluir a entrega ou mudar o escopo.
 
-A migração e a compatibilidade do manifesto foram verificadas; os testes de consulta e HTTP com acervo de teste passaram. A varredura adicional do acervo real foi interrompida após detectar uma edição concorrente. O usuário confirmou que corrigiu apenas uma tabela em `showtrials-1699.ru.md`; seu hash foi atualizado no catálogo. Por solicitação do usuário, não foram repetidos testes por essa alteração. Nenhum commit foi feito. A próxima entrega prevista é a busca na interface.
+A migração e a compatibilidade do manifesto foram verificadas; os testes de consulta e HTTP com acervo de teste passaram. A varredura adicional do acervo real foi interrompida após detectar uma edição concorrente. O usuário confirmou que corrigiu apenas uma tabela em `showtrials-1699.ru.md`; seu hash foi atualizado no catálogo. Por solicitação do usuário, não foram repetidos testes por essa alteração. Após inspeção e autorização do usuário, a primeira entrega foi commitada em `f90937c`, incluindo essa correção e seu hash. A segunda entrega foi testada manualmente e aprovada pelo usuário, que autorizou seu commit. A próxima etapa planejada é a área editorial: começar pela fila de revisão e edição de metadados com prévia das alterações; depois acrescentar edição de textos, histórico e importação de traduções com conferência de alinhamento.

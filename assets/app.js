@@ -340,6 +340,7 @@ function renderNav() {
     if (select.value) location.hash = `#/colecao/${select.value}`;
   });
   nav.appendChild(select);
+  nav.appendChild(el("a", { class: "nav-link search-nav-link", href: "#/busca", text: "Buscar" }));
 }
 
 function setActiveNav(collectionId) {
@@ -348,8 +349,13 @@ function setActiveNav(collectionId) {
   if (select) select.value = collectionId || "";
   const home = document.querySelector("#docNav .nav-link");
   if (home) {
-    if (!collectionId) home.setAttribute("aria-current", "page");
+    if (parseRoute().view === "home") home.setAttribute("aria-current", "page");
     else home.removeAttribute("aria-current");
+  }
+  const search = document.querySelector(".search-nav-link");
+  if (search) {
+    if (parseRoute().view === "search") search.setAttribute("aria-current", "page");
+    else search.removeAttribute("aria-current");
   }
 }
 
@@ -976,6 +982,10 @@ function renderDocument(meta, langs, blocks, collection, subcollection, scroll =
   const article = el("article", { class: "doc mode-" + mode });
   article.dataset.docId = meta.id;
   article.dataset.langCount = String(langs.length);
+  const searchReturn = new URLSearchParams(location.hash.split("?")[1] || "").get("busca");
+  if (searchReturn === "#/busca" || searchReturn?.startsWith("#/busca?")) {
+    article.appendChild(el("a", { class: "back-link search-return", href: searchReturn, text: "← Voltar aos resultados da busca" }));
+  }
   article.appendChild(renderDocHeader(meta, collection, subcollection));
   article.appendChild(renderToolbar(langs, meta));
 
@@ -1164,6 +1174,18 @@ function renderHome() {
   }));
   wrap.appendChild(intro);
 
+  const homeSearch = el("form", { class: "home-search", role: "search", "aria-label": "Buscar no acervo" });
+  const query = el("input", { type: "search", name: "q", maxlength: "500", "aria-label": "Palavras para buscar no acervo", placeholder: "Buscar no acervo…" });
+  homeSearch.appendChild(query);
+  homeSearch.appendChild(el("button", { type: "submit", class: "search-submit", text: "Buscar" }));
+  homeSearch.addEventListener("submit", event => {
+    event.preventDefault();
+    const params = new URLSearchParams();
+    if (query.value.trim()) params.set("q", query.value.trim());
+    location.hash = searchURL(params);
+  });
+  wrap.appendChild(homeSearch);
+
   const grid = el("div", { class: "collection-grid" });
   for (const c of state.manifest.collections) {
     const card = el("a", { class: "collection-card", href: `#/colecao/${c.id}` });
@@ -1207,6 +1229,7 @@ function parseRoute() {
   if (!hash) return { view: "home" };
   const [path, query = ""] = hash.split("?");
   const parts = path.split("/");
+  if (parts[0] === "busca") return { view: "search", params: new URLSearchParams(query) };
   if (parts[0] === "colecao" && parts[1]) return {
     view: "collection", id: parts[1],
     subcollectionId: parts[2] === "subcolecao" ? parts[3] : null,
@@ -1221,11 +1244,14 @@ function parseRoute() {
 }
 
 async function route() {
+  activeSearchRequest?.abort();
   stopReadingTracking();
   const r = parseRoute();
   try {
     if (r.view === "home") {
       renderHome();
+    } else if (r.view === "search") {
+      await renderSearch(r.params);
     } else if (r.view === "collection") {
       const c = state.manifest.collections.find(x => x.id === r.id);
       if (!c) { location.hash = "#/"; return; }
@@ -1238,6 +1264,8 @@ async function route() {
         ? context : findCollectionByDocId(r.id);
       if (!c) { location.hash = "#/"; return; }
       const doc = collectionDocuments(c).find(d => d.id === r.id);
+      const language = new URLSearchParams(location.hash.split("?")[1] || "").get("idioma");
+      if (doc.languages.some(l => l.code === language)) state.readingLanguages.set(doc.id, language);
       const sub = c.subcollections?.find(s => s.id === r.subcollectionId && s.document_ids.includes(doc.id));
       await loadDocument(c, doc, sub);
     }

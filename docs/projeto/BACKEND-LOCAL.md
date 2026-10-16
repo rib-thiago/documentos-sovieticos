@@ -21,7 +21,7 @@ Aguarde o terminal mostrar os endereços. Na primeira inicialização, ele confe
 6. Abra [o Centro de Leningrado na ordem original](http://localhost:8000/api/documents?collection=centro-de-leningrado&sort=source&limit=5). O total esperado é **175**, e o primeiro documento é `showtrials-1665`.
 7. Abra [a subcoleção de investigação](http://localhost:8000/api/documents?collection=centro-de-leningrado&subcollection=investigacao&sort=source&limit=5). Ela mantém a ordem cadastrada na fonte.
 
-As respostas da API aparecem em JSON. **A página de busca para o leitor ainda será implementada na entrega 2.** Não é necessário interpretar todos os campos: nesta etapa, confira contagens, idiomas, resultados e preservação do site. O guia de endpoints também está em [api](http://localhost:8000/api).
+As respostas da API aparecem em JSON. Para pesquisar pela interface do site, abra [Buscar no acervo](http://localhost:8000/#/busca). O [roteiro manual da busca](BUSCA-MANUAL.md) explica os filtros, a paginação e o retorno aos resultados. O guia de endpoints também está em [api](http://localhost:8000/api).
 
 ## Endpoints
 
