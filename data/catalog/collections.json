@@ -1,0 +1,1095 @@
+[
+  {
+    "id": "confronto-bukharin-astrov",
+    "slug": "confronto-bukharin-astrov",
+    "parent_id": null,
+    "position": 0,
+    "titles": {
+      "pt": "Confronto entre Bukharin e Astrov",
+      "ru": "Очная ставка Бухарина и Астрова"
+    },
+    "subtitle": "Três documentos de 1937",
+    "description": "Depoimento de Bukharin, protocolo de interrogatório de Astrov e transcrição da acareação entre os dois no CC do VKP(b).",
+    "source": {},
+    "presentation": {
+      "accent": "#8b2c2c",
+      "cover": "assets/covers/bukharin-astrov.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "description_pt",
+      "accent",
+      "cover",
+      "documents"
+    ]
+  },
+  {
+    "id": "plataforma-ryutin",
+    "slug": "plataforma-ryutin",
+    "parent_id": null,
+    "position": 1,
+    "titles": {
+      "pt": "Plataforma Ryutin",
+      "ru": "Платформа Рютина"
+    },
+    "subtitle": "Stalin e a Crise da Ditadura do Proletariado",
+    "description": "Documento de 1932 atribuído a Martemyan Ryutin, também conhecido como «plataforma de Ryutin». Edição trilíngue: russo, português e inglês.",
+    "source": {},
+    "presentation": {
+      "accent": "#2c4a8b",
+      "cover": "assets/covers/ryutin.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "description_pt",
+      "accent",
+      "cover",
+      "documents"
+    ]
+  },
+  {
+    "id": "morte-ordzhonikidze",
+    "slug": "morte-ordzhonikidze",
+    "parent_id": null,
+    "position": 2,
+    "titles": {
+      "pt": "A misteriosa morte de Ordzhonikidze",
+      "ru": "Тайна смерти Орджоникидзе"
+    },
+    "subtitle": "Um ensaio de Vladimir L. Bobrov",
+    "description": "Investigação sobre as circunstâncias da morte de Sergo Ordzhonikidze em 1937, confrontando as versões oficiais soviéticas e os testemunhos disponíveis.",
+    "source": {},
+    "presentation": {
+      "accent": "#4a6b4a",
+      "cover": "assets/covers/sergo.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "description_pt",
+      "accent",
+      "cover",
+      "documents"
+    ]
+  },
+  {
+    "id": "yezhov-vs-stalin",
+    "slug": "yezhov-vs-stalin",
+    "parent_id": null,
+    "position": 3,
+    "titles": {
+      "pt": "Yezhov vs Stalin",
+      "ru": "Ежов против Сталина"
+    },
+    "subtitle": "Ensaio histórico e interrogatórios de Nikolai Yezhov",
+    "description": "Ensaio de Grover Furr sobre Nikolai Yezhov e sua relação com Stalin, em português e inglês, e uma compilação de interrogatórios em russo, português e inglês.",
+    "source": {},
+    "presentation": {
+      "accent": "#6b4a2c",
+      "cover": "assets/covers/yezhov.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "description_pt",
+      "accent",
+      "cover",
+      "documents"
+    ]
+  },
+  {
+    "id": "centro-de-leningrado",
+    "slug": "centro-de-leningrado",
+    "parent_id": null,
+    "position": 4,
+    "titles": {
+      "pt": "Processo do Centro de Leningrado",
+      "ru": "ПРОЦЕСС “ЛЕНИНГРАДСКОГО ЦЕНТРА”"
+    },
+    "subtitle": "Documentos em russo · Acervo ShowTrials",
+    "description": "Documentação organizada nas subcoleções do ShowTrials: materiais da investigação, andamento do processo, caso de Piotr Nikolaev e outros documentos.",
+    "source": {},
+    "presentation": {
+      "accent": "#51465f",
+      "cover": "assets/covers/leningrado.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "accent",
+      "subcollections",
+      "document_ids",
+      "description_pt",
+      "cover"
+    ]
+  },
+  {
+    "id": "centro-de-leningrado/investigacao",
+    "slug": "investigacao",
+    "parent_id": "centro-de-leningrado",
+    "position": 0,
+    "titles": {
+      "pt": "Materiais da investigação",
+      "ru": "МАТЕРИАЛЫ СЛЕДСТВИЯ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "858",
+      "url": "http://showtrials.ru/glavnaya/lencenter/lencenter-materials/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "centro-de-leningrado/andamento",
+    "slug": "andamento",
+    "parent_id": "centro-de-leningrado",
+    "position": 1,
+    "titles": {
+      "pt": "Andamento do processo",
+      "ru": "ХОД ПРОЦЕССА"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "1293",
+      "url": "http://showtrials.ru/glavnaya/lencenter/leningrad-center-trial-full-record/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "centro-de-leningrado/piotr-nikolaev",
+    "slug": "piotr-nikolaev",
+    "parent_id": "centro-de-leningrado",
+    "position": 2,
+    "titles": {
+      "pt": "Caso de Piotr Nikolaev",
+      "ru": "ДЕЛО ПЕТРА НИКОЛАЕВА"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "860",
+      "url": "http://showtrials.ru/glavnaya/lencenter/pyotr-nikolayev-case/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "centro-de-leningrado/outros-documentos",
+    "slug": "outros-documentos",
+    "parent_id": "centro-de-leningrado",
+    "position": 3,
+    "titles": {
+      "pt": "Outros documentos",
+      "ru": "ДРУГИЕ ДОКУМЕНТЫ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "864",
+      "url": "http://showtrials.ru/glavnaya/lencenter/misc_docs_1934/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "centro-moscovita",
+    "slug": "centro-moscovita",
+    "parent_id": null,
+    "position": 5,
+    "titles": {
+      "pt": "Processo do Centro Moscovita",
+      "ru": "ПРОЦЕСС “МОСКОВСКОГО ЦЕНТРА”"
+    },
+    "subtitle": "Documentos em russo · Acervo ShowTrials",
+    "description": null,
+    "source": {},
+    "presentation": {
+      "accent": "#46576a",
+      "cover": "assets/covers/moscou.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "accent",
+      "subcollections",
+      "document_ids",
+      "cover"
+    ]
+  },
+  {
+    "id": "centro-moscovita/investigacao",
+    "slug": "investigacao",
+    "parent_id": "centro-moscovita",
+    "position": 0,
+    "titles": {
+      "pt": "Materiais da investigação",
+      "ru": "МАТЕРИАЛЫ СЛЕДСТВИЯ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "955",
+      "url": "http://showtrials.ru/glavnaya/moscow-center-trial/materialy-sledstviya-1935/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "centro-moscovita/andamento",
+    "slug": "andamento",
+    "parent_id": "centro-moscovita",
+    "position": 1,
+    "titles": {
+      "pt": "Andamento do processo",
+      "ru": "ХОД ПРОЦЕССА"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "950",
+      "url": "http://showtrials.ru/glavnaya/moscow-center-trial/moscow-center-trial-record/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "centro-moscovita/informes",
+    "slug": "informes",
+    "parent_id": "centro-moscovita",
+    "position": 2,
+    "titles": {
+      "pt": "Informes da Comissão de Controle do Partido e do Instituto de Marxismo-Leninismo",
+      "ru": "СПРАВКИ КПК И ИМЛ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "959",
+      "url": "http://showtrials.ru/glavnaya/moscow-center-trial/cpc-iml-notes-1935/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "centro-moscovita/outros-documentos",
+    "slug": "outros-documentos",
+    "parent_id": "centro-moscovita",
+    "position": 3,
+    "titles": {
+      "pt": "Outros documentos",
+      "ru": "ДРУГИЕ ДОКУМЕНТЫ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "957",
+      "url": "http://showtrials.ru/glavnaya/moscow-center-trial/misc-docs-1935/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "caso-do-kremlin",
+    "slug": "caso-do-kremlin",
+    "parent_id": null,
+    "position": 6,
+    "titles": {
+      "pt": "Caso do Kremlin",
+      "ru": "КРЕМЛЕВСКОЕ ДЕЛО"
+    },
+    "subtitle": "Documentos em russo · Acervo ShowTrials",
+    "description": null,
+    "source": {},
+    "presentation": {
+      "accent": "#655443",
+      "cover": "assets/covers/kremlin.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "accent",
+      "subcollections",
+      "document_ids",
+      "cover"
+    ]
+  },
+  {
+    "id": "caso-do-kremlin/investigacao",
+    "slug": "investigacao",
+    "parent_id": "caso-do-kremlin",
+    "position": 0,
+    "titles": {
+      "pt": "Materiais da investigação",
+      "ru": "МАТЕРИАЛЫ СЛЕДСТВИЯ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "965",
+      "url": "http://showtrials.ru/glavnaya/kremlin-affair/investigation-materials-kremlin/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "caso-do-kremlin/apuracao-partidaria",
+    "slug": "apuracao-partidaria",
+    "parent_id": "caso-do-kremlin",
+    "position": 1,
+    "titles": {
+      "pt": "Materiais da apuração partidária",
+      "ru": "МАТЕРИАЛЫ ПАРТИЙНОЙ ПРОВЕРКИ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "963",
+      "url": "http://showtrials.ru/glavnaya/kremlin-affair/party-review/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "caso-do-kremlin/sinani-skalov",
+    "slug": "sinani-skalov",
+    "parent_id": "caso-do-kremlin",
+    "position": 2,
+    "titles": {
+      "pt": "Georgi Borisovich Sinani-Skalov",
+      "ru": "Г.Б. СИНАНИ-СКАЛОВ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "9401",
+      "url": "http://showtrials.ru/glavnaya/kremlin-affair/sinani-skalov/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "caso-do-kremlin/outros-documentos",
+    "slug": "outros-documentos",
+    "parent_id": "caso-do-kremlin",
+    "position": 3,
+    "titles": {
+      "pt": "Outros documentos",
+      "ru": "ДРУГИЕ ДОКУМЕНТЫ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "967",
+      "url": "http://showtrials.ru/glavnaya/kremlin-affair/misc-docs-kremlin/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1936",
+    "slug": "processo-1936",
+    "parent_id": null,
+    "position": 7,
+    "titles": {
+      "pt": "Processo de 19–23 de agosto de 1936",
+      "ru": "ПРОЦЕСС 19-23 АВГУСТА 1936 г."
+    },
+    "subtitle": "Documentos em russo · Acervo ShowTrials",
+    "description": null,
+    "source": {},
+    "presentation": {
+      "accent": "#6a4141",
+      "cover": "assets/covers/zinoviev-kamenev.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "accent",
+      "subcollections",
+      "document_ids",
+      "cover"
+    ]
+  },
+  {
+    "id": "processo-1936/investigacao",
+    "slug": "investigacao",
+    "parent_id": "processo-1936",
+    "position": 0,
+    "titles": {
+      "pt": "Materiais da investigação",
+      "ru": "МАТЕРИАЛЫ СЛЕДСТВИЯ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "981",
+      "url": "http://showtrials.ru/glavnaya/august1936-trial/august-materials/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1936/andamento",
+    "slug": "andamento",
+    "parent_id": "processo-1936",
+    "position": 1,
+    "titles": {
+      "pt": "Andamento do processo",
+      "ru": "ХОД ПРОЦЕССА"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "1799",
+      "url": "http://showtrials.ru/glavnaya/august1936-trial/august1936-trial-record/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1936/olberg",
+    "slug": "olberg",
+    "parent_id": "processo-1936",
+    "position": 2,
+    "titles": {
+      "pt": "Valentin Olberg",
+      "ru": "ОЛЬБЕРГ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "9048",
+      "url": "http://showtrials.ru/glavnaya/august1936-trial/olberg/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1936/informes",
+    "slug": "informes",
+    "parent_id": "processo-1936",
+    "position": 3,
+    "titles": {
+      "pt": "Informes de referência",
+      "ru": "СПРАВКА"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "985",
+      "url": "http://showtrials.ru/glavnaya/august1936-trial/note-1936/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1936/outros-documentos",
+    "slug": "outros-documentos",
+    "parent_id": "processo-1936",
+    "position": 4,
+    "titles": {
+      "pt": "Outros documentos",
+      "ru": "ДРУГИЕ ДОКУМЕНТЫ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "983",
+      "url": "http://showtrials.ru/glavnaya/august1936-trial/misc-docs-1936/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1937",
+    "slug": "processo-1937",
+    "parent_id": null,
+    "position": 8,
+    "titles": {
+      "pt": "Processo de 23–29 de janeiro de 1937",
+      "ru": "ПРОЦЕСС 23-29 ЯНВАРЯ 1937 г."
+    },
+    "subtitle": "Documentos em russo · Acervo ShowTrials",
+    "description": null,
+    "source": {},
+    "presentation": {
+      "accent": "#465d50",
+      "cover": "assets/covers/radek-piatakov.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "accent",
+      "subcollections",
+      "document_ids",
+      "cover"
+    ]
+  },
+  {
+    "id": "processo-1937/investigacao",
+    "slug": "investigacao",
+    "parent_id": "processo-1937",
+    "position": 0,
+    "titles": {
+      "pt": "Materiais da investigação",
+      "ru": "МАТЕРИАЛЫ СЛЕДСТВИЯ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "989",
+      "url": "http://showtrials.ru/glavnaya/january1937-trial/january-materials/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1937/andamento",
+    "slug": "andamento",
+    "parent_id": "processo-1937",
+    "position": 1,
+    "titles": {
+      "pt": "Andamento do processo",
+      "ru": "ХОД ПРОЦЕССА"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "987",
+      "url": "http://showtrials.ru/glavnaya/january1937-trial/january1937-trial-record/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1937/outros-documentos",
+    "slug": "outros-documentos",
+    "parent_id": "processo-1937",
+    "position": 2,
+    "titles": {
+      "pt": "Outros documentos",
+      "ru": "ДРУГИЕ ДОКУМЕНТЫ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "991",
+      "url": "http://showtrials.ru/glavnaya/january1937-trial/misc-docs-1937/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1938",
+    "slug": "processo-1938",
+    "parent_id": null,
+    "position": 9,
+    "titles": {
+      "pt": "Processo de 2–12 de março de 1938",
+      "ru": "ПРОЦЕСС 2-12 МАРТА 1938 г."
+    },
+    "subtitle": "Documentos em russo · Acervo ShowTrials",
+    "description": null,
+    "source": {},
+    "presentation": {
+      "accent": "#5c4864",
+      "cover": "assets/covers/bukharin-rykov.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "accent",
+      "subcollections",
+      "document_ids",
+      "cover"
+    ]
+  },
+  {
+    "id": "processo-1938/antecedentes",
+    "slug": "antecedentes",
+    "parent_id": "processo-1938",
+    "position": 0,
+    "titles": {
+      "pt": "Antecedentes",
+      "ru": "ПРЕДЫСТОРИЯ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "8189",
+      "url": "http://showtrials.ru/glavnaya/proczess-2-12-marta-1938-g/predystoriya/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1938/investigacao",
+    "slug": "investigacao",
+    "parent_id": "processo-1938",
+    "position": 1,
+    "titles": {
+      "pt": "Materiais da investigação",
+      "ru": "МАТЕРИАЛЫ СЛЕДСТВИЯ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "7488",
+      "url": "http://showtrials.ru/glavnaya/proczess-2-12-marta-1938-g/materialy-sledstviya/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1938/bukharin",
+    "slug": "bukharin",
+    "parent_id": "processo-1938",
+    "position": 2,
+    "titles": {
+      "pt": "Bukharin",
+      "ru": "БУХАРИН"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "8261",
+      "url": "http://showtrials.ru/glavnaya/proczess-2-12-marta-1938-g/bukharin/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1938/pleno-1937",
+    "slug": "pleno-1937",
+    "parent_id": "processo-1938",
+    "position": 3,
+    "titles": {
+      "pt": "Pleno de fevereiro–março de 1937",
+      "ru": "ФЕВРАЛЬСКО-МАРТОВСКИЙ ПЛЕНУМ 1937 г."
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "8927",
+      "url": "http://showtrials.ru/glavnaya/proczess-2-12-marta-1938-g/fevralsko-martovskij-plenum-1937-g/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "processo-1938/outros-documentos",
+    "slug": "outros-documentos",
+    "parent_id": "processo-1938",
+    "position": 4,
+    "titles": {
+      "pt": "Outros documentos",
+      "ru": "ДРУГИЕ ДОКУМЕНТЫ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "7496",
+      "url": "http://showtrials.ru/glavnaya/proczess-2-12-marta-1938-g/drugie-dokumenty/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "trotsky",
+    "slug": "trotsky",
+    "parent_id": null,
+    "position": 10,
+    "titles": {
+      "pt": "Trotsky",
+      "ru": "ТРОЦКИЙ"
+    },
+    "subtitle": "Documentos em russo · Acervo ShowTrials",
+    "description": null,
+    "source": {},
+    "presentation": {
+      "accent": "#61573e",
+      "cover": "assets/covers/trotsky-sedov.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "accent",
+      "subcollections",
+      "document_ids",
+      "cover"
+    ]
+  },
+  {
+    "id": "trotsky/documentos",
+    "slug": "documentos",
+    "parent_id": "trotsky",
+    "position": 0,
+    "titles": {
+      "pt": "Documentos",
+      "ru": "ТРОЦКИЙ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "11016",
+      "url": "http://showtrials.ru/glavnaya/troczkij/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "artigos-showtrials",
+    "slug": "artigos-showtrials",
+    "parent_id": null,
+    "position": 11,
+    "titles": {
+      "pt": "Artigos do ShowTrials",
+      "ru": "СТАТЬИ"
+    },
+    "subtitle": "Documentos em russo · Acervo ShowTrials",
+    "description": null,
+    "source": {},
+    "presentation": {
+      "accent": "#3f6063",
+      "cover": "assets/covers/artigos-showtrials.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "accent",
+      "subcollections",
+      "document_ids",
+      "cover"
+    ]
+  },
+  {
+    "id": "artigos-showtrials/artigos",
+    "slug": "artigos",
+    "parent_id": "artigos-showtrials",
+    "position": 0,
+    "titles": {
+      "pt": "Artigos",
+      "ru": "СТАТЬИ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "9346",
+      "url": "http://showtrials.ru/articles/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "documentos-diversos",
+    "slug": "documentos-diversos",
+    "parent_id": null,
+    "position": 12,
+    "titles": {
+      "pt": "Documentos diversos",
+      "ru": "РАЗНЫЕ ДОКУМЕНТЫ"
+    },
+    "subtitle": "Documentos em russo · Acervo ShowTrials",
+    "description": null,
+    "source": {},
+    "presentation": {
+      "accent": "#5c5a56",
+      "cover": "assets/covers/outros-documentos.jpg"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "accent",
+      "subcollections",
+      "document_ids",
+      "cover"
+    ]
+  },
+  {
+    "id": "documentos-diversos/documentos",
+    "slug": "documentos",
+    "parent_id": "documentos-diversos",
+    "position": 0,
+    "titles": {
+      "pt": "Documentos diversos",
+      "ru": "РАЗНЫЕ ДОКУМЕНТЫ"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "id": "975",
+      "url": "http://showtrials.ru/glavnaya/miscellaneous-docs/"
+    },
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "source_id",
+      "source_url",
+      "document_ids"
+    ]
+  }
+]

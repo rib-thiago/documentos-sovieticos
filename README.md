@@ -46,6 +46,18 @@ Os dados ficam na sessão daquela aba; não são enviados ao servidor nem sincro
 
 ## Consulta local
 
+O novo **backend local com catálogo padronizado** abre o mesmo site e oferece API de consulta e busca integral:
+
+```bash
+python3 -m backend
+```
+
+Abra `http://localhost:8000/local` para os links de teste ou `http://localhost:8000/` para o site. Se o servidor antigo estiver ocupando a porta, encerre-o com Ctrl+C ou use `python3 -m backend --port 8001`. A primeira execução prepara o índice SQLite; não é necessário instalar pacotes para o backend nem usar npm. O Python precisa oferecer SQLite FTS5. O [manual local](docs/projeto/BACKEND-LOCAL.md) explica como iniciar, testar e manter o ambiente.
+
+O catálogo tem **2.186 documentos e 2.197 versões por idioma**, incluindo as edições editoriais anteriores ao ShowTrials. Seus metadados ficam em `data/catalog/`; o banco `.local/catalog.sqlite3` é derivado e ignorado pelo Git. O site mantém seus arquivos, traduções e URLs. A interface de busca será a próxima entrega; por enquanto as consultas novas aparecem em JSON nos endpoints da API.
+
+Para usar somente o site estático, o comando anterior continua válido:
+
 Na raiz do projeto, execute:
 
 ```bash
@@ -57,6 +69,8 @@ Abra `http://localhost:8000/#/colecao/centro-de-leningrado`. Não é necessário
 ## Organização
 
 - `data/manifest.json`: coleções, subcoleções, documentos e idiomas.
+- `data/catalog/`: catálogo normalizado e versionado; o manifesto é sua projeção compatível para o site.
+- `backend/`: servidor local Python, validação, exportação e índice de consulta SQLite.
 - `originais/`: textos carregados pelo leitor.
 - `originais/showtrials/`: corpos importados, em texto UTF-8.
 - `assets/app.js` e `assets/style.css`: navegação e leitura.
@@ -77,6 +91,10 @@ Os parâmetros opcionais `colecao` e `subcolecao` mantêm o caminho de retorno, 
 
 ## Importação do ShowTrials
 
+**Após a padronização:** os comandos de importação/conversão que escreviam diretamente no manifesto recusam escrita quando `data/catalog/` existe, para proteger a nova fonte de verdade. Os verificadores e as auditorias sem escrita continuam funcionando. Novas importações precisam de adaptação ao catálogo; não remova o catálogo para executar os importadores antigos. Para mudar metadados atuais, valide e exporte conforme o [modelo](docs/projeto/MODELO-CATALOGO.md).
+
+O procedimento abaixo documenta a importação original:
+
 ```bash
 python3 scripts/import_showtrials.py CAMINHO_DO_PACOTE_PORTATIL
 python3 scripts/check_showtrials.py CAMINHO_DO_PACOTE_PORTATIL
@@ -95,5 +113,7 @@ Para acrescentar uma tradução manualmente, inclua o arquivo e uma entrada em `
 As traduções dos documentos ShowTrials podem ficar em `originais/showtrials/ID.pt.md`. Cadastre também `title_pt` e, na entrada do idioma português, `format: "markdown"`, pois o documento russo pode continuar em texto simples. O formato de cada idioma tem precedência sobre o formato geral do documento. Se o arquivo veio da exportação do site, o título, a fonte, o ID e o idioma do cabeçalho devem ser cadastrados como metadados; o arquivo publicado contém o corpo, conservando seus parágrafos. A exportação recompõe esse cabeçalho. O documento `showtrials-1665` é um exemplo dessa organização.
 
 ## Publicação
+
+O [plano de evolução](docs/projeto/PLANO.md), as [decisões](docs/projeto/DECISOES.md) e o [modelo do catálogo](docs/projeto/MODELO-CATALOGO.md) registram a primeira entrega e as próximas etapas. A API local é de leitura; edição editorial e upload de traduções pertencem a entregas posteriores.
 
 O site pode ser servido pelo GitHub Pages a partir da raiz, sem compilação. A publicação deve incluir `index.html`, `assets/`, `data/` e `originais/`. A pasta `temporario/` e as exportações de trabalho não precisam ser publicadas.

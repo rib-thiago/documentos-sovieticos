@@ -14,6 +14,8 @@ from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 
+from catalog_guard import ensure_legacy_manifest_write_allowed
+
 ROOT = Path(__file__).resolve().parents[1]
 RECIPES = ROOT / "data/markdown-conversions.json"
 REVIEW = ROOT / "data/markdown-review.json"
@@ -155,6 +157,8 @@ def check():
 
 
 def prepare(package, apply_ids=None):
+    if apply_ids is not None:
+        ensure_legacy_manifest_write_allowed(ROOT)
     manifest_path = ROOT / "data/manifest.json"
     manifest = json.loads(manifest_path.read_text())
     docs = {d["source_id"]: d for d in manifest["documents"]}

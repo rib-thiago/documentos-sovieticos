@@ -13,6 +13,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import prepare_markdown as base
+from catalog_guard import ensure_legacy_manifest_write_allowed
 
 ROOT = base.ROOT
 OUT = ROOT / "docs/revisao-markdown"
@@ -245,6 +246,8 @@ def write_reports(records, applied):
 
 
 def convert(package, apply=False):
+    if apply:
+        ensure_legacy_manifest_write_allowed(ROOT)
     manifest_path = ROOT / "data/manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     docs = {d["source_id"]: d for d in manifest["documents"]}

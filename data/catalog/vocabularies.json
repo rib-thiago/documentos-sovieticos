@@ -1,0 +1,48 @@
+{
+  "document_types": {
+    "administrative_report": "Informe administrativo",
+    "article": "Artigo",
+    "autobiography": "Autobiografia",
+    "biographical_article": "Artigo biográfico",
+    "brochure": "Brochura",
+    "confrontation_protocol": "Protocolo de acareação",
+    "conversation_recording": "Registro de conversas",
+    "correspondence": "Correspondência",
+    "data_extract": "Extrato de dados",
+    "decree_resolution": "Resolução",
+    "draft_project": "Minuta",
+    "explanation": "Esclarecimento",
+    "indictment": "Peça de acusação",
+    "interrogation_extract": "Extrato de interrogatório",
+    "interrogation_protocol": "Protocolo de interrogatório",
+    "letter": "Carta",
+    "list": "Lista",
+    "medical_act": "Laudo médico",
+    "memo_note": "Nota",
+    "plan_instruction": "Plano ou instrução",
+    "plea_pardon": "Pedido de clemência",
+    "poem": "Poema",
+    "press_summary": "Relato de imprensa",
+    "program": "Programa",
+    "questionnaire_response": "Resposta a questionário",
+    "reference_note": "Informação de referência",
+    "search_protocol": "Auto de busca",
+    "session_transcript": "Transcrição de sessão",
+    "special_report": "Comunicação especial",
+    "speech": "Discurso",
+    "statement": "Declaração",
+    "summary": "Síntese",
+    "telegram": "Telegrama",
+    "testimony": "Depoimento",
+    "verdict_or_sentence": "Sentença"
+  },
+  "kinds": {
+    "document": "Documento",
+    "article": "Artigo"
+  },
+  "languages": {
+    "ru": "Russo",
+    "pt": "Português",
+    "en": "Inglês"
+  }
+}

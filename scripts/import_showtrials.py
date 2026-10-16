@@ -8,6 +8,8 @@ import argparse
 import json
 from pathlib import Path
 
+from catalog_guard import ensure_legacy_manifest_write_allowed
+
 ROOT = Path(__file__).resolve().parents[1]
 # IDs e ordem das subcoleções da fonte; os títulos de navegação são portugueses.
 COLLECTIONS = [
@@ -59,6 +61,7 @@ def read_json(path):
 
 
 def import_collection(source):
+    ensure_legacy_manifest_write_allowed(ROOT)
     originals = {c["id"]: c for c in read_json(source / "catalogos/colecoes.json")}
     catalog = {d["document_post_id"]: d for d in read_json(source / "catalogos/documentos.json")}
     manifest_path = ROOT / "data/manifest.json"
