@@ -51,7 +51,7 @@ def handler_for(repository, editorial):
         def do_POST(self):
             try:
                 self.require_local_editorial()
-                if self.path not in {"/api/editorial/preview", "/api/editorial/save", "/api/editorial/translations/preview"}:
+                if self.path not in {"/api/editorial/preview", "/api/editorial/save", "/api/editorial/translations/preview", "/api/editorial/markdown/preview"}:
                     self.send_json({"error": "Operação não permitida"}, 405)
                     return
                 if self.headers.get("Origin") != "http://" + self.headers.get("Host", ""):
@@ -61,7 +61,7 @@ def handler_for(repository, editorial):
                 if self.headers.get_content_type() != "application/json":
                     raise EditorialError("Envie JSON", 415)
                 length = int(self.headers.get("Content-Length", "0"))
-                maximum = MAX_TRANSLATION_BYTES * 6 + 200000 if self.path == "/api/editorial/translations/preview" else 200000
+                maximum = MAX_TRANSLATION_BYTES * 6 + 200000 if self.path in {"/api/editorial/translations/preview", "/api/editorial/markdown/preview"} else 200000
                 if not 1 <= length <= maximum:
                     raise EditorialError("Pedido vazio ou maior que o limite permitido", 413)
                 self.connection.settimeout(30)
@@ -69,6 +69,8 @@ def handler_for(repository, editorial):
                 with editorial.lock:
                     if self.path == "/api/editorial/translations/preview":
                         result = editorial.preview_translation(repository, payload)
+                    elif self.path == "/api/editorial/markdown/preview":
+                        result = editorial.preview_markdown(repository, payload)
                     elif self.path == "/api/editorial/preview":
                         result = editorial.preview(repository, payload)
                     else:
@@ -122,13 +124,16 @@ def handler_for(repository, editorial):
                 elif path.startswith("/api/editorial/"):
                     self.require_local_editorial()
                     if path == "/api/editorial/session":
-                        self.send_json({"token": editorial.token, "statuses": STATUSES, "priorities": list(PRIORITIES), "revision": editorial.revision()})
+                        self.send_json({"token": editorial.token, "statuses": STATUSES, "priorities": list(PRIORITIES), "revision": editorial.revision(),
+                                        "features": ["translation_import", "markdown_edit", "reader_integration"]})
                     elif path == "/api/editorial/queue":
                         self.send_json(editorial.queue(repository, params))
                     elif path == "/api/editorial/history":
                         self.send_json(editorial.history(params.get("document")))
                     elif path.startswith("/api/editorial/documents/"):
                         self.send_json(editorial.document(repository, path.removeprefix("/api/editorial/documents/")))
+                    elif path.startswith("/api/editorial/editions/"):
+                        self.send_json(editorial.editable_edition(repository, path.removeprefix("/api/editorial/editions/")))
                     else:
                         self.send_json({"error": "Endpoint editorial não encontrado"}, 404)
                 elif path in {"/api", "/api/"}:

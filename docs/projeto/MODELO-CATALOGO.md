@@ -5,7 +5,7 @@ O catálogo em `data/catalog/` é versionado. Os registros de conteúdo continua
 | Arquivo | Conteúdo |
 | --- | --- |
 | `documents.json` | 2.186 cadastros documentais únicos, incluindo as sete edições editoriais anteriores |
-| `editions.json` | 2.206 versões por idioma com arquivo, formato e SHA256 |
+| `editions.json` | 2.212 versões por idioma com arquivo, formato e SHA256 |
 | `collections.json` | 13 coleções e 28 subcoleções com pai, slug e posição |
 | `memberships.json` | 4.460 associações ordenadas entre documentos e coleções/subcoleções |
 | `vocabularies.json` | 35 tipos documentais, categorias gerais e idiomas com rótulos portugueses |
@@ -22,6 +22,8 @@ O catálogo em `data/catalog/` é versionado. Os registros de conteúdo continua
 - `author_label`: atribuição textual já cadastrada; não é uma entidade pessoal deduzida.
 - `source`: nome, ID externo e URL de origem, quando existentes.
 - `source_metadata`: datas e usuário WordPress, categorias/tags e procedência da classificação. São metadados de publicação/coleta, separados de dados históricos.
+
+O manifesto projeta `source_metadata.wordpress_date` como `collected_date` para a apresentação estática. Esse campo não preenche a data histórica. A interface prioriza a histórica cadastrada e identifica a coletada como alternativa; não usa a data de modificação do WordPress.
 - `presentation`: título curto e rótulo editorial existentes.
 - `default_format`: padrão legado usado na projeção do manifesto. O formato efetivo está em cada edição.
 - `extra`: campos legados não reconhecidos, preservados sem perda.

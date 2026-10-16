@@ -30,7 +30,7 @@ TYPE_LABELS = {
     "speech": "Discurso", "statement": "Declaração", "summary": "Síntese", "telegram": "Telegrama",
     "testimony": "Depoimento", "verdict_or_sentence": "Sentença",
 }
-DOC_FIELDS = {"id", "type", "title_pt", "title_ru", "title_en", "date", "archive", "author", "source_name", "source_id",
+DOC_FIELDS = {"id", "type", "title_pt", "title_ru", "title_en", "date", "collected_date", "archive", "author", "source_name", "source_id",
               "source_url", "document_type", "format", "shortTitle", "eyebrow", "languages"}
 COLLECTION_FIELDS = {"id", "title_pt", "title_ru", "subtitle_pt", "description_pt", "accent", "cover", "source_id",
                      "source_url", "subcollections", "document_ids", "documents"}
@@ -126,6 +126,7 @@ def export_manifest(catalog):
             languages.append(ordered_fields(values, fields))
         values = {"id": doc["id"], "type": doc["kind"], "title_pt": doc["titles"].get("pt"),
                   "title_ru": doc["titles"].get("ru"), "title_en": doc["titles"].get("en"), "date": doc["historical_date"].get("display") or doc["historical_date"].get("value"),
+                  "collected_date": doc["source_metadata"].get("wordpress_date"),
                   "archive": doc["archive_reference"], "author": doc["author_label"],
                   "source_name": doc["source"].get("name"), "source_id": doc["source"].get("id"),
                   "source_url": doc["source"].get("url"), "document_type": doc["document_type"],

@@ -103,7 +103,9 @@ class Editorial:
             return not query or query in haystack
         filtered = [row for row in rows if include(row)]
         filtered.sort(key=lambda row: (PRIORITIES.get(row["prioridade"], 9), row["id"], row["chave"]))
-        items = [{**row, "titles": docs.get(row["id"], {}).get("titles", {})} for row in filtered[offset:offset + limit]]
+        items = [{**row, "titles": docs.get(row["id"], {}).get("titles", {}),
+                  "historical_date": docs.get(row["id"], {}).get("historical_date", {}),
+                  "collected_date": docs.get(row["id"], {}).get("source_metadata", {}).get("wordpress_date")} for row in filtered[offset:offset + limit]]
         return {"items": items, "total": len(filtered), "offset": offset, "limit": limit,
                 "has_more": offset + limit < len(filtered), "status_counts": status_counts, "open_priority_counts": priority_counts}
 
@@ -143,7 +145,7 @@ class Editorial:
     def allow_file(self, file, translation_files):
         if file in WRITABLE:
             return
-        if file not in translation_files or not file.endswith(".md") or file.endswith(".ru.md"):
+        if file not in translation_files or not file.endswith(".md"):
             raise model.CatalogError("Caminho inválido no histórico editorial")
         model.content_path(self.root, file, allow_missing=True)
 
@@ -197,16 +199,20 @@ class Editorial:
                 raise EditorialError("Esta transação não foi concluída e não pode ser restaurada")
             for file, after in record["after"].items():
                 self.allow_file(file, record.get("translation_files", []))
+                if file=="data/manifest.json" and any(key.startswith("data/catalog/") for key in record["after"]):
+                    continue  # Projeção derivada: os arquivos canônicos têm a conferência de conflito.
                 # read_bytes preserva CRLF da fila ao comparar o snapshot.
                 if self.file_state(file) != after:
                     raise EditorialError("Há alterações posteriores nesses arquivos. Desfaça primeiro a alteração mais recente que os modificou.", 409)
-            files = record["before"]
+            files = dict(record["before"])
             for file in files:
                 self.allow_file(file, record.get("translation_files", []))
             for name in ("documents", "memberships", "editions"):
                 file = "data/catalog/" + name + ".json"
                 if file in files:
                     candidate[name] = json.loads(files[file])
+            if "data/manifest.json" in files:
+                files["data/manifest.json"] = model.json_bytes(model.export_manifest(candidate)).decode("utf-8")
             changes = [{"field": change["field"], "before": change["after"], "after": change["before"]} for change in record["changes"]]
             document_id = record["document_id"]
         else:
@@ -303,7 +309,7 @@ class Editorial:
                 files["data/manifest.json"] = model.json_bytes(model.export_manifest(candidate)).decode("utf-8")
         return self.store_preview(revision, candidate, files, document_id, changes, restores)
 
-    def store_preview(self, revision, candidate, files, document_id, changes, restores=None, translation=None):
+    def store_preview(self, revision, candidate, files, document_id, changes, restores=None, translation=None, markdown_edit=None):
         if not files:
             raise EditorialError("Nenhuma alteração para salvar")
         translation_files = [file for file in files if file.startswith("originais/")]
@@ -327,7 +333,52 @@ class Editorial:
         return {"preview_id": preview_id, "changes": changes, "document_id": document_id, "expires_in": 900,
                 "updates_index": any(file.startswith("data/catalog/") for file in files), "translation": translation,
                 "file_diffs": file_diffs, "requires_acknowledgement": bool(self.previews[preview_id]["warnings"]),
-                "changes_content": bool(translation_files)}
+                "changes_content": bool(translation_files), "markdown_edit": markdown_edit}
+
+    def editable_edition(self, repository, edition_id):
+        edition = next((e for e in repository.catalog["editions"] if e["id"] == edition_id), None)
+        if edition is None:
+            raise EditorialError("Versão não encontrada", 404)
+        data = self.document(repository, edition["document_id"])
+        if edition["format"] != "markdown" or not edition["file"].endswith(".md"):
+            raise EditorialError("Esta versão não é Markdown editável. O arquivo TXT permanece preservado.")
+        if (self.root / edition["file"]).is_symlink():
+            raise EditorialError("A edição não substitui links simbólicos")
+        raw = model.content_bytes(self.root, edition["file"])
+        if model.sha256(raw) != edition["sha256"]:
+            raise EditorialError("O arquivo mudou fora do painel. Confira o cadastro e reinicie o backend antes de editar.", 409)
+        return {"document": data["document"], "edition": edition, "revision": data["revision"], "content": raw.decode("utf-8")}
+
+    def preview_markdown(self, repository, payload):
+        if not isinstance(payload, dict) or set(payload) != {"revision", "edition_id", "content_sha256", "content"}:
+            raise EditorialError("Proposta de edição Markdown inválida")
+        data = self.editable_edition(repository, payload["edition_id"])
+        edition = data["edition"]
+        if payload["revision"] != data["revision"] or payload["content_sha256"] != edition["sha256"]:
+            raise EditorialError("A versão mudou. Reabra o editor antes de continuar.", 409)
+        content = payload["content"]
+        if not isinstance(content, str) or not content.strip("\ufeff \t\r\n") or "\0" in content:
+            raise EditorialError("O Markdown está vazio ou contém caracteres inválidos")
+        raw = content.encode("utf-8")
+        if len(raw) > translations.MAX_TRANSLATION_BYTES:
+            raise EditorialError("A versão editada deve ter no máximo 4 MiB", 413)
+        if content == data["content"]:
+            raise EditorialError("Nenhuma alteração no Markdown para salvar")
+        target = model.content_path(self.root, edition["file"])
+        if any(e["id"] != edition["id"] and model.content_path(self.root, e["file"]) == target for e in repository.catalog["editions"]):
+            raise EditorialError("O arquivo é compartilhado por outra versão; a edição foi recusada para preservá-la")
+        model.validate(repository.catalog, self.root)
+        candidate = copy.deepcopy(repository.catalog)
+        changed = next(e for e in candidate["editions"] if e["id"] == edition["id"])
+        changed.update(sha256=model.sha256(raw), bytes=len(raw))
+        files = {edition["file"]: content, "data/catalog/editions.json": model.json_bytes(candidate["editions"]).decode("utf-8"),
+                 "data/manifest.json": model.json_bytes(model.export_manifest(candidate)).decode("utf-8")}
+        changes = [{"field": "Conteúdo Markdown " + edition["language"].upper(),
+                    "before": {"file": edition["file"], "sha256": edition["sha256"], "bytes": edition["bytes"]},
+                    "after": {"file": edition["file"], "sha256": changed["sha256"], "bytes": changed["bytes"]}}]
+        detail = {"edition_id": edition["id"], "language": edition["language"], "file": edition["file"],
+                  "content": content, "diff": translations.line_diff(data["content"], content)}
+        return self.store_preview(data["revision"], candidate, files, edition["document_id"], changes, markdown_edit=detail)
 
     def preview_translation(self, repository, payload):
         allowed = {"revision", "document_id", "language", "filename", "content", "title"}

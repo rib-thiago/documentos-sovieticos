@@ -13,7 +13,7 @@ MAX_TRANSLATION_BYTES = 4 * 1024 * 1024
 EXPORT_HEADER = re.compile(
     r"^(?:\ufeff)?(?:[ \t]*\r?\n)*#[ \t]+[^\r\n]+\r?\n"
     r"(?:(?:[ \t]*\r?\n)|(?:(?:Fonte|Source|ID\s+ShowTrials|ShowTrials\s+ID|"
-    r"ID\s+(?:do\s+)?documento|Document\s+ID|Idioma|Language)[ \t]*:[^\r\n]*\r?\n))+"
+    r"ID\s+(?:do\s+)?documento|Document\s+ID|Idioma|Language|Data do documento|Data na fonte\s*\(não verificada\))[ \t]*:[^\r\n]*\r?\n))+"
     r"[ \t]*---[ \t]*(?:\r?\n|$)(?:[ \t]*\r?\n)*", re.I)
 
 
