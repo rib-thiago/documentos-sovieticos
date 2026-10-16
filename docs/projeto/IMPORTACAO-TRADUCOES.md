@@ -24,14 +24,14 @@ Este exercício usa um documento que já tem tradução, para que você possa co
 2. Na cópia, acrescente ao final um parágrafo identificável, por exemplo: `Teste temporário da importação local.` Salve em UTF-8. Não altere o ID do documento. Mantenha um nome como `showtrials-1666.pt.md`.
 3. Na área editorial, abra **Importar tradução**, informe `showtrials-1666` e clique em **Selecionar documento**. Confira o título e o ID mostrados.
 4. Escolha **Português — substituir versão existente**, selecione a cópia e clique em **Revisar importação**. O título opcional do catálogo pode ficar como já está; esse campo não reescreve o título dentro do arquivo.
-5. **Até aqui nada foi gravado.** A prévia deve informar que substituirá PT do documento 1666. Confira a identificação, o novo parágrafo nas diferenças e na prévia renderizada. O sinal `+` indica inclusão e `-` indica remoção. As contagens podem mudar com o parágrafo e com cabeçalhos de exportação.
+5. **Até aqui nada foi gravado.** A prévia deve informar que substituirá PT do documento 1666. Confira a identificação, o novo parágrafo nas diferenças e na prévia renderizada. O sinal `+` indica inclusão e `-` indica remoção. Contagens e diferenças do corpo ignoram os cabeçalhos reconhecidos de exportação; a linha “Cabeçalhos de exportação ignorados” informa quantos foram separados em cada versão.
 6. Se aparecer uma divergência de nome, ID, idioma ou fonte, leia-a. Corrija a escolha ou o arquivo quando houver erro real. Se for apenas um nome antigo ou um cabeçalho desatualizado e você souber que escolheu a associação correta, marque a confirmação explícita. Sem essa confirmação, divergências não permitem salvar.
 7. Clique em **Confirmar e salvar** e aguarde a conclusão. A tradução anterior entra no histórico antes da gravação da nova. O catálogo, o manifesto e o índice de busca são atualizados junto com o arquivo traduzido.
 8. Clique em **Abrir documento atualizado**. Se o leitor já estiver aberto, recarregue-o. A versão PT deve mostrar o parágrafo de teste. Procure a expressão pela busca, filtrando **Português**; o documento deve aparecer. RU e EN continuam com seus conteúdos anteriores.
 9. Entre em **Histórico**, filtre por `showtrials-1666` e escolha a operação mais recente. Clique em **Revisar restauração**. Confira a inversão das alterações e as diferenças do arquivo que será restaurado; confirme.
 10. Recarregue o leitor. O parágrafo de teste deve desaparecer e a versão anterior deve voltar. A restauração também fica registrada no histórico.
 
-O arquivo recebido é preservado, inclusive cabeçalhos e quebras de linha. Confira sua estrutura antes de salvar.
+O arquivo exportado pelo leitor recebe um único cabeçalho de identificação. Cabeçalhos reconhecidos já existentes, inclusive duplicados de exportações antigas, são separados do corpo antes de gerar esse cabeçalho. Leitura, estudo, prévia, contagens e diferenças da importação consideram o corpo sem esses envelopes. Os arquivos recebidos continuam preservados no disco e no histórico; não há reescrita em massa dos arquivos anteriores. Títulos próprios do corpo não são removidos.
 
 ## Conferir uma divergência sem gravar
 
@@ -49,7 +49,7 @@ Ao desfazer essa inclusão pelo histórico, a nova edição sai do catálogo e o
 
 | Informação | Como interpretar |
 | --- | --- |
-| Blocos do modo estudo | Quantidade de blocos do corpo que o segmentador atual encontra, considerando o formato de cada versão. Cabeçalhos de exportação podem ocupar blocos. |
+| Blocos do modo estudo | Quantidade de blocos do corpo que o segmentador atual encontra, considerando o formato de cada versão. Cabeçalhos reconhecidos da exportação ficam fora dessa contagem. |
 | Parágrafos aproximados | Blocos que não foram reconhecidos como títulos, listas, tabelas ou código. Não é uma análise linguística. |
 | Títulos, listas, tabelas e código | Sinais estruturais aproximados para orientar a conferência visual. |
 | Quantidades diferentes | Pode haver deslocamento entre os trechos no modo estudo; não implica necessariamente erro de tradução. |
@@ -58,6 +58,12 @@ Ao desfazer essa inclusão pelo histórico, a nova edição sai do catálogo e o
 Não são unidos, divididos, traduzidos ou pareados parágrafos automaticamente. A comparação estrutural não é gravada como um alinhamento confirmado. Depois de salvar uma tradução, confira o modo estudo manualmente.
 
 ## Identificação, limites e preservação
+
+### Conferir a correção dos cabeçalhos
+
+Reinicie o backend e recarregue o leitor e a área editorial com Ctrl+Shift+R. Exporte RU de um documento ShowTrials e, sem mudar os parágrafos, envie a cópia na prévia de importação de outro idioma, sem confirmar a gravação. O diagnóstico deve mostrar a mesma quantidade de blocos do corpo da referência russa. Nome/idioma RU podem gerar os alertas esperados de identificação, pois você selecionou outro idioma; esses alertas são separados do diagnóstico estrutural.
+
+Depois exporte uma tradução já existente e confira que há apenas um bloco inicial com título, fonte, ID e idioma. Reimporte uma cópia dessa tradução e confira que não surgem diferenças de parágrafos apenas por causa do cabeçalho. Se o arquivo for inteiramente idêntico, a tela poderá informar que não há alteração para salvar. Cabeçalhos só são separados quando o bloco inicial tem título `#`, metadados reconhecidos, declaração de idioma, fonte ou ID e o separador `---`; títulos literais e seções do corpo são mantidos.
 
 - São aceitos `.md` e `.markdown` em UTF-8, até **4 MiB**. O conteúdo, o BOM UTF-8 quando presente e as quebras de linha são preservados. Markdown vazio ou com byte nulo é recusado.
 - São reconhecidos nomes como `showtrials-1666.pt.md` e cabeçalhos iniciais com `ID ShowTrials`/`ShowTrials ID`, `Idioma`/`Language`, `Fonte`/`Source` e título `#`. Não há leitura arbitrária de frontmatter YAML ou inferência de IDs citados no corpo. Nome e cabeçalho ausentes geram informação de identificação incompleta; divergências reconhecidas exigem confirmação.

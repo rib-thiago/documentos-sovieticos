@@ -523,11 +523,12 @@ function documentMarkdown(meta, language) {
   const format = language.format || meta.format;
   if (format !== "text" && meta.source_name !== "ShowTrials") return language.source;
   const title = meta[`title_${language.code}`] || meta.title_ru || meta.title_pt;
+  const body = format === "text" ? language.source : splitExportHeaders(language.source).body;
   const lines = [`# ${escapeMarkdownText(title)}`, ""];
   if (meta.source_url) lines.push(`Fonte: ${meta.source_url}`);
   if (meta.source_id) lines.push(`ID ShowTrials: ${meta.source_id}`);
   lines.push(`Idioma: ${language.code.toUpperCase()}`, "", "---", "");
-  lines.push(format === "text" ? escapeMarkdownText(language.source) : language.source);
+  lines.push(format === "text" ? escapeMarkdownText(body) : body);
   return lines.join("\n");
 }
 
@@ -1023,8 +1024,9 @@ async function loadDocument(collection, docMeta, subcollection) {
 
   const langs = await Promise.all(
     docMeta.languages.map(async l => {
-      const source = await fetchText(l.file);
+      const rawSource = await fetchText(l.file);
       const format = l.format || docMeta.format;
+      const source = format === "text" ? rawSource : splitExportHeaders(rawSource).body;
       return {
         code: l.code,
         label: l.label,

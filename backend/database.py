@@ -12,8 +12,9 @@ from pathlib import Path
 from urllib.parse import quote
 
 from . import catalog as model
+from .translations import split_export_headers
 
-INDEX_VERSION = "1"
+INDEX_VERSION = "2"
 
 
 def fingerprint(root):
@@ -25,6 +26,7 @@ def fingerprint(root):
 
 def plain_text(source, format):
     if format == "markdown":
+        source = split_export_headers(source)["body"]
         source = re.sub(r"(?m)^#{1,6}\s+", "", source)
         source = re.sub(r"\\([!\"#$%&'()*+,\-./:;<=>?@\[\\\]^_`{|}~])", r"\1", source)
     return re.sub(r"\s+", " ", source).strip()

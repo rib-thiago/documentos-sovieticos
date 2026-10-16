@@ -277,15 +277,15 @@
     const table=node("table");
     table.append(node("thead",{},[node("tr",{},["Estrutura","Original","Tradução atual","Arquivo enviado"].map(text=>node("th",{scope:"col",text})))]));
     const body=node("tbody");
-    for(const [key,caption]of [["study_blocks","Blocos do corpo no modo estudo"],["paragraphs","Parágrafos aproximados"],["headings","Títulos do corpo"],["lists","Blocos de listas"],["tables","Blocos de tabelas"],["code_blocks","Blocos de código"]])
+    for(const [key,caption]of [["study_blocks","Blocos do corpo no modo estudo"],["paragraphs","Parágrafos aproximados"],["headings","Títulos do corpo"],["lists","Blocos de listas"],["tables","Blocos de tabelas"],["code_blocks","Blocos de código"],["export_headers","Cabeçalhos de exportação ignorados"]])
       body.append(node("tr",{},[node("th",{scope:"row",text:caption}),...["original","current","uploaded"].map(column=>node("td",{text:translation.structure[column]?.[key]??"—"}))]));
     table.append(body);wrap.append(node("div",{class:"table-scroll"},[table]));
     const same=translation.structure.original.study_blocks===translation.structure.uploaded.study_blocks;
     wrap.append(node("p",{class:same?"help":"import-warning",text:same
       ? "As quantidades de blocos do corpo coincidem, mas isso não comprova que cada trecho corresponda ao mesmo trecho do original. Confira o modo estudo depois de salvar."
       : "As quantidades de blocos do corpo diferem. Listas, tabelas e quebras de parágrafo podem deslocar as falas no modo estudo. A importação é permitida, sem juntar, dividir ou alinhar trechos automaticamente."}),
-      node("p",{class:"help",text:"Títulos, listas, tabelas e parágrafos são estimativas estruturais. Os cabeçalhos e as quebras recebidas serão mantidos; não há comparação semântica."}));
-    if(translation.replaces)wrap.append(diffView(translation.diff));
+      node("p",{class:"help",text:"Cabeçalhos reconhecidos de exportação não entram na contagem nem no corpo renderizado. Títulos próprios do documento e quebras do corpo são preservados. Não há comparação semântica."}));
+    if(translation.replaces)wrap.append(node("p",{class:"help",text:"As diferenças abaixo comparam o corpo do texto, sem os cabeçalhos reconhecidos de exportação. Os arquivos completos continuam disponíveis abaixo."}),diffView(translation.diff));
     const rendered=node("details",{class:"import-rendered",open:translation.content.length<=200000},[node("summary",{text:"Prévia renderizada do arquivo enviado"})]);
     const reading=node("div",{class:"import-reading",lang:translation.language});let renderedOnce=false;
     function render() {
@@ -293,7 +293,7 @@
       renderedOnce=true;
       try {
         const parser=markdownit({html:false,linkify:true,typographer:false}).use(markdownitFootnote);
-        reading.innerHTML=DOMPurify.sanitize(parser.render(translation.content),{USE_PROFILES:{html:true},FORBID_TAGS:["style","form","input","button"],FORBID_ATTR:["style"]});
+        reading.innerHTML=DOMPurify.sanitize(parser.render(splitExportHeaders(translation.content).body),{USE_PROFILES:{html:true},FORBID_TAGS:["style","form","input","button"],FORBID_ATTR:["style"]});
         for(const link of reading.querySelectorAll("a[href]")) {
           if(!link.getAttribute("href").startsWith("#")){link.target="_blank";link.rel="noopener noreferrer";}
         }

@@ -404,7 +404,8 @@ class Editorial:
                   "language": language, "original_language": original["language"], "target_file": target, "replaces": bool(existing),
                   "identification": identity, "findings": translations.findings(identity, doc, language),
                   "structure": diagnostic, "current_content": previous if existing else None, "content": content,
-                  "diff": translations.line_diff(previous, content)}
+                  "diff": translations.line_diff(translations.split_export_headers(previous)["body"] if not existing or existing["format"] != "text" else previous,
+                                                 translations.split_export_headers(content)["body"])}
         if not files:
             raise EditorialError("O arquivo e o título são iguais aos já cadastrados. Nenhuma alteração para salvar.")
         return self.store_preview(revision, candidate, files, document_id, changes, translation=detail)

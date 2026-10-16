@@ -10,6 +10,26 @@ from urllib.parse import urlsplit
 MAX_TRANSLATION_BYTES = 4 * 1024 * 1024
 
 
+EXPORT_HEADER = re.compile(
+    r"^(?:\ufeff)?(?:[ \t]*\r?\n)*#[ \t]+[^\r\n]+\r?\n"
+    r"(?:(?:[ \t]*\r?\n)|(?:(?:Fonte|Source|ID\s+ShowTrials|ShowTrials\s+ID|"
+    r"ID\s+(?:do\s+)?documento|Document\s+ID|Idioma|Language)[ \t]*:[^\r\n]*\r?\n))+"
+    r"[ \t]*---[ \t]*(?:\r?\n|$)(?:[ \t]*\r?\n)*", re.I)
+
+
+def split_export_headers(content):
+    body = content
+    headers = []
+    while True:
+        match = EXPORT_HEADER.match(body)
+        if not match or not re.search(r"^(?:Idioma|Language)[ \t]*:", match[0], re.I | re.M) or not re.search(
+                r"^(?:Fonte|Source|ID\s+ShowTrials|ShowTrials\s+ID|ID\s+(?:do\s+)?documento|Document\s+ID)[ \t]*:", match[0], re.I | re.M):
+            break
+        headers.append(match[0])
+        body = body[match.end():]
+    return {"body": body, "headers": headers, "header_count": len(headers)}
+
+
 def identification(filename, content):
     result = {"filename": filename, "document_ids": [], "languages": [], "source_urls": [], "title": None,
               "has_export_header": False}
@@ -48,6 +68,7 @@ def identification(filename, content):
             saw_metadata = True
             continue
         break
+    result["has_export_header"] = split_export_headers(content)["header_count"] > 0
     return result
 
 
@@ -82,13 +103,18 @@ def findings(identity, document, language):
     if not identity["languages"] and not identity.get("filename_language"):
         add("info", "O arquivo não declara um idioma reconhecível. O idioma selecionado será usado, sem classificação automática do texto.")
     if identity["has_export_header"]:
-        add("info", "O cabeçalho de exportação será mantido no arquivo. Ele também ocupa blocos no modo estudo e pode afetar a correspondência entre parágrafos.")
+        add("info", "O cabeçalho de exportação será preservado no arquivo, mas ficará fora do corpo exibido e da contagem de parágrafos. Ao exportar novamente, será gerado somente um cabeçalho.")
     return result
 
 
 def structure(content, format="markdown"):
+    header_count = 0
+    if format != "text":
+        envelope = split_export_headers(content)
+        content = envelope["body"]
+        header_count = envelope["header_count"]
     chunks = [chunk.strip() for chunk in re.split(r"\n\s*\n" if format == "text" else r"\n{2,}", content.replace("\r\n", "\n")) if chunk.strip()]
-    counts = {"study_blocks": 0, "paragraphs": 0, "headings": 0, "lists": 0, "tables": 0, "code_blocks": 0}
+    counts = {"study_blocks": 0, "paragraphs": 0, "headings": 0, "lists": 0, "tables": 0, "code_blocks": 0, "export_headers": header_count}
     for chunk in chunks:
         if format != "text" and re.fullmatch(r"-{3,}", chunk):
             continue

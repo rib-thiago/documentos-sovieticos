@@ -22,6 +22,7 @@ Os títulos individuais do novo acervo permanecem em russo. Traduções podem se
 
 A barra superior oferece um seletor com todas as coleções e indica a coleção atual. Na página de cada documento, o botão **Exportar Markdown** baixa a versão escolhida com o mesmo nome do arquivo no projeto, trocando apenas a extensão `.txt` por `.md` quando necessário. Edições já em Markdown mantêm o arquivo original; textos importados recebem título, fonte, ID e idioma. A exportação usa o texto completo carregado, independentemente do modo de leitura ou dos parágrafos expandidos.
 
+No ShowTrials, o cabeçalho de identificação da exportação é gerado uma única vez. Envelopes reconhecidos de exportações anteriores ficam fora do corpo na leitura, no estudo, na busca e na comparação estrutural da importação; os metadados continuam no cabeçalho comum do documento. Essa separação não reescreve os arquivos armazenados nem remove títulos próprios do texto.
 
 ## Modos de visualização
 
