@@ -11,11 +11,13 @@ A fila completa está em [pendencias.csv](pendencias.csv). Abra-a no LibreOffice
 
 Total: **2179 documentos**, **167421 blocos** e **737 títulos**. Prioridades por documento: urgente: 50, alta: 226, media: 12, baixa: 1775, sem_pendencia: 116.
 
+Os totais acima registram a triagem original. A tabela de `showtrials-1699` foi reconstruída em Markdown pelo responsável pelo acervo e a pendência `tabelas_linearizadas` está marcada como `corrigido` na fila. O diagnóstico automático original foi preservado; não foi executada nova auditoria.
+
 ## Documentos urgentes
 
 | Documento | Coleção/subcoleção | Dificuldade | Abrir |
 | --- | --- | --- | --- |
-| showtrials-1699 | Caso do Kremlin / Outros documentos | O HTML contém 1 tabela(s), 138 linha(s) e 783 célula(s). A extração TXT perdeu as relações entre células; esta conversão mantém o texto linear. | [Site](http://localhost:8000/#/doc/showtrials-1699) · [Markdown](../../originais/showtrials/showtrials-1699.ru.md) · [Fonte](http://showtrials.ru/spisok-lichnogo-sostava-czik/) |
+| showtrials-1699 | Caso do Kremlin / Outros documentos | **Tabela corrigida pelo responsável pelo acervo.** A perda das relações entre células era o diagnóstico da extração inicial; a versão publicada já usa a tabela Markdown reconstruída. | [Site](http://localhost:8000/#/doc/showtrials-1699) · [Markdown](../../originais/showtrials/showtrials-1699.ru.md) · [Fonte](http://showtrials.ru/spisok-lichnogo-sostava-czik/) |
 | showtrials-1790 | Processo de 19–23 de agosto de 1936 / Andamento do processo | Texto com 156586 caracteres, 1266 blocos e 0 título(s). Não há divisões internas suficientes identificadas com segurança. | [Site](http://localhost:8000/#/doc/showtrials-1790) · [Markdown](../../originais/showtrials/showtrials-1790.ru.md) · [Fonte](http://showtrials.ru/utro-19-avgusta-1936/) |
 | showtrials-1847 | Processo de 19–23 de agosto de 1936 / Andamento do processo | Texto com 149001 caracteres, 955 blocos e 0 título(s). Não há divisões internas suficientes identificadas com segurança. | [Site](http://localhost:8000/#/doc/showtrials-1847) · [Markdown](../../originais/showtrials/showtrials-1847.ru.md) · [Fonte](http://showtrials.ru/19-avgusta-chast-2-vecher/) |
 | showtrials-2443 | Processo de 19–23 de agosto de 1936 / Andamento do processo | Texto com 162028 caracteres, 870 blocos e 0 título(s). Não há divisões internas suficientes identificadas com segurança. | [Site](http://localhost:8000/#/doc/showtrials-2443) · [Markdown](../../originais/showtrials/showtrials-2443.ru.md) · [Fonte](http://showtrials.ru/20-avgusta-utrennee-zasedanie/) |

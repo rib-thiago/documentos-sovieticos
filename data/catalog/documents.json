@@ -54,7 +54,8 @@
     "id": "showtrials-1666",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.В. Николаева"
+      "ru": "Протокол допроса Л.В. Николаева",
+      "pt": "Protocolo do interrogatório de L. V. Nikolaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -103,7 +104,8 @@
     "id": "showtrials-7032",
     "kind": "document",
     "titles": {
-      "ru": "Акт судебно-медицинского вскрытия трупа М.В. Борисова"
+      "ru": "Акт судебно-медицинского вскрытия трупа М.В. Борисова",
+      "pt": "Auto de necropsia médico-legal do cadáver de M. V. Borisov"
     },
     "document_type": "medical_act",
     "historical_date": {
@@ -152,7 +154,8 @@
     "id": "showtrials-2674",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.В. Николаева"
+      "ru": "Протокол допроса Л.В. Николаева",
+      "pt": "Protocolo de interrogatório de L. V. Nikolaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -201,7 +204,8 @@
     "id": "showtrials-2675",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.В. Николаева"
+      "ru": "Протокол допроса Л.В. Николаева",
+      "pt": "Protocolo de interrogatório de L. V. Nikolaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {

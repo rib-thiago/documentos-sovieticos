@@ -54,7 +54,7 @@ python3 -m backend
 
 Abra `http://localhost:8000/local` para os links de teste ou `http://localhost:8000/` para o site. Se o servidor antigo estiver ocupando a porta, encerre-o com Ctrl+C ou use `python3 -m backend --port 8001`. A primeira execução prepara o índice SQLite; não é necessário instalar pacotes para o backend nem usar npm. O Python precisa oferecer SQLite FTS5. O [manual local](docs/projeto/BACKEND-LOCAL.md) explica como iniciar, testar e manter o ambiente.
 
-O catálogo tem **2.186 documentos e 2.197 versões por idioma**, incluindo as edições editoriais anteriores ao ShowTrials. Seus metadados ficam em `data/catalog/`; o banco `.local/catalog.sqlite3` é derivado e ignorado pelo Git. O site mantém seus arquivos, traduções e URLs.
+O catálogo tem **2.186 documentos e 2.206 versões por idioma**, incluindo as edições editoriais anteriores ao ShowTrials. Seus metadados ficam em `data/catalog/`; o banco `.local/catalog.sqlite3` é derivado e ignorado pelo Git. O site mantém seus arquivos, traduções e URLs.
 
 Use **Buscar** na navegação ou o campo da página inicial para abrir `#/busca`. Com o backend, a página pesquisa títulos e texto completo, filtra por coleção, subcoleção, idioma, categoria e tipo documental e apresenta resultados com trechos e paginação. A consulta fica na URL; ao abrir um resultado, o link **Voltar aos resultados da busca** recupera filtros e página. Na publicação estática, a mesma interface pesquisa somente os títulos do manifesto e informa essa limitação. Consulte o [roteiro manual da busca](docs/projeto/BUSCA-MANUAL.md).
 

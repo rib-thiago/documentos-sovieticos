@@ -1,3 +1,11 @@
+# Protocolo do interrogatório de L. V. Nikolaev
+
+Fonte: http://showtrials.ru/dopros-nikolaeva-3-dekabrya-1934/
+ID ShowTrials: 1665
+Idioma: PT
+
+---
+
 PROTOCOLO DE INTERROGATÓRIO 
 
  NIKOLAEV Leonid Vassilievitch 

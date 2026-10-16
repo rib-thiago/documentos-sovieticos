@@ -5050,6 +5050,12 @@
           "label": "Tradução portuguesa",
           "file": "originais/showtrials/showtrials-1665.pt.md",
           "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-1665.en.md",
+          "format": "markdown"
         }
       ],
       "title_pt": "Protocolo do interrogatório de L. V. Nikolaev"
@@ -5069,8 +5075,21 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-1666.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-1666.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-1666.en.md",
+          "format": "markdown"
         }
-      ]
+      ],
+      "title_pt": "Protocolo do interrogatório de L. V. Nikolaev"
     },
     {
       "id": "showtrials-7032",
@@ -5087,8 +5106,21 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-7032.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-7032.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-7032.en.md",
+          "format": "markdown"
         }
-      ]
+      ],
+      "title_pt": "Auto de necropsia médico-legal do cadáver de M. V. Borisov"
     },
     {
       "id": "showtrials-2674",
@@ -5105,8 +5137,21 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2674.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2674.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2674.en.md",
+          "format": "markdown"
         }
-      ]
+      ],
+      "title_pt": "Protocolo de interrogatório de L. V. Nikolaev"
     },
     {
       "id": "showtrials-2675",
@@ -5123,8 +5168,21 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2675.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2675.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2675.en.md",
+          "format": "markdown"
         }
-      ]
+      ],
+      "title_pt": "Protocolo de interrogatório de L. V. Nikolaev"
     },
     {
       "id": "showtrials-2676",

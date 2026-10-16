@@ -13,10 +13,10 @@ Aguarde o terminal mostrar os endereços. Na primeira inicialização, ele confe
 
 ## Teste pelo navegador
 
-1. Abra [a página de testes locais](http://localhost:8000/local). Ela deve mostrar **2.186 documentos, 2.197 versões por idioma, 13 coleções e 28 subcoleções**. O campo `memberships` da API deve ser **4.460**: associações, não documentos únicos.
+1. Abra [a página de testes locais](http://localhost:8000/local). Ela deve mostrar **2.186 documentos, 2.206 versões por idioma, 13 coleções e 28 subcoleções**. O campo `memberships` da API deve ser **4.460**: associações, não documentos únicos.
 2. Clique em **Abrir o site e o leitor existentes**. Navegue até uma coleção e abra um documento. Índice, marcador, leitura, estudo e exportação usam os mesmos arquivos anteriores.
 3. Abra [Nikolaev pela API](http://localhost:8000/api/documents/showtrials-1665). A resposta JSON deve conter `editions` com russo e português, além das coleções a que pertence. Os links `content_url` retornam o texto da versão.
-4. Abra [os documentos em português](http://localhost:8000/api/documents?language=pt&limit=20). O total esperado na entrega inicial é **8 documentos**.
+4. Abra [os documentos em português](http://localhost:8000/api/documents?language=pt&limit=20). O total esperado no catálogo atualizado é **12 documentos**.
 5. Abra [a busca por Николаева](http://localhost:8000/api/search?q=Николаева&language=ru&limit=5). A resposta deve ter resultados e `match.snippet` com contexto em russo. `limit=5` limita a página; `total` indica a quantidade total de documentos encontrados.
 6. Abra [o Centro de Leningrado na ordem original](http://localhost:8000/api/documents?collection=centro-de-leningrado&sort=source&limit=5). O total esperado é **175**, e o primeiro documento é `showtrials-1665`.
 7. Abra [a subcoleção de investigação](http://localhost:8000/api/documents?collection=centro-de-leningrado&subcollection=investigacao&sort=source&limit=5). Ela mantém a ordem cadastrada na fonte.

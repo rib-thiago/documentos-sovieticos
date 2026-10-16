@@ -1080,13 +1080,16 @@ function renderCollection(collection, subcollection = null, showAll = false) {
 
   if (collection.subcollections && !subcollection && !showAll) {
     const grid = el("div", { class: "subcollection-grid" });
+    const documentMap = new Map(collectionDocuments(collection).map(doc => [doc.id, doc]));
     for (const sub of collection.subcollections) {
+      const availableLanguages = new Set(sub.document_ids.flatMap(id =>
+        (documentMap.get(id)?.languages || []).map(language => language.code.toUpperCase())));
       const card = el("a", {
         class: "doc-list-item", href: `#/colecao/${collection.id}/subcolecao/${sub.id}`,
       }, [
         el("h2", { class: "doc-list-title", text: sub.title_pt }),
         el("p", { class: "doc-list-ru", lang: "ru", text: sub.title_ru }),
-        el("p", { class: "doc-list-meta", text: `${sub.document_ids.length} documentos · Em russo` }),
+        el("p", { class: "doc-list-meta", text: `${sub.document_ids.length} documentos · ${[...availableLanguages].join(" · ")}` }),
       ]);
       grid.appendChild(card);
     }
