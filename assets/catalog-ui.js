@@ -9,3 +9,7 @@ function documentDateInfo(document) {
     label:"Data do documento",source:!historical,
     iso:match?`${match[1]}-${match[2]}-${match[3]}`:null};
 }
+
+function documentTitle(document) {
+  return document.title_pt||document.title_ru||document.title_en||document.id;
+}

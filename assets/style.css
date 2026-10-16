@@ -742,3 +742,8 @@ a{color:inherit}
 .passage-rendered.reading-content{padding:.75rem 1rem;margin:0;border:1px solid var(--rule);border-radius:5px;max-height:24rem;overflow:auto;font-size:1rem}
 .study-passage-dialog [hidden]{display:none!important}
 @media(max-width:600px){.study-passage-dialog{width:calc(100vw - 1rem);max-height:calc(100dvh - 1rem);padding:1rem}.passage-heading h2{font-size:1.05rem}.study-passage-action{font-size:.7rem;padding:.35rem}.passage-source{font-size:.8rem}}
+
+/* Estados vazios e ações de teclado no leitor. */
+.catalog-pagination a:focus-visible,.doc-list-item:focus-visible,.collection-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.document-sequence .sequence-title{overflow-wrap:anywhere}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.doc-toolbar *,.study-passage-action{transition:none}}

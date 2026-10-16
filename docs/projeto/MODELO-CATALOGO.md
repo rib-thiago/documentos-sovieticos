@@ -60,3 +60,8 @@ A edição de metadados pode ser feita pela [área editorial local](EDITORIAL-LO
 ## Fora do escopo atual
 
 Ainda não há modelo operacional de pessoas e aliases, autoria por entidades, componentes/anexos com IDs próprios, alinhamento persistente de parágrafos ou anotações pessoais. Os materiais históricos preservados orientarão essas ampliações. As pendências e decisões da revisão do Markdown continuam em `docs/revisao-markdown/`; não foram reinterpretadas como qualidade histórica das fontes.
+
+
+## Cadastros locais posteriores à migração
+
+Originais novos usam `originais/locais/ID.IDIOMA.md` ou `.txt`, sem reaproveitar caminhos existentes. O idioma original declarado fica em `source_metadata.original_language` e é projetado no manifesto como `original_language` quando presente; o acervo legado conserva seus registros. A criação acrescenta o ID à projeção global de documentos, inclui associações ao pai quando uma subcoleção é selecionada e mantém a ordem dos itens anteriores. A proveniência da migração é preservada; a nova operação fica no histórico editorial. A restauração contempla também coleções e proveniência, além de documentos, edições e associações.

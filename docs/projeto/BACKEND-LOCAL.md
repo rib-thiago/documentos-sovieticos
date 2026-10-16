@@ -87,3 +87,8 @@ python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
 
 Os testes do backend criam um acervo temporário independente e abrem uma porta livre em localhost. Cobrem migração sem perda, extensões de metadados, formatos por idioma, integridade, busca russa/portuguesa, frases, filtros por múltiplas coleções, paginação, cache e HTTP. Não modificam o acervo do projeto.
+
+
+## Cadastro e estabilização
+
+Use `/editorial#/novo-documento` para originais e `/editorial#/colecoes` para coleções/subcoleções. A entrada é individual, com prévia e confirmação; inclui histórico, catálogo, manifesto e índice de busca. As novas coleções aparecem nos formulários seguintes sem reiniciar o backend. O [roteiro de cadastro](CADASTRO-LOCAL.md) explica as etapas e a restauração; a [revisão de estabilização](ESTABILIZACAO.md) registra correções, pendências e a validação manual ainda necessária. Nenhum teste, commit ou push nesta rodada.

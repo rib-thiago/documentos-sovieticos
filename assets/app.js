@@ -518,7 +518,7 @@ function collectionDocumentURL(doc, subcollection, collection, page = null) {
 }
 
 function collectionListURL(collection,subcollection,page=1) {
-  const path=`#/colecao/${collection.id}`+(subcollection?`/subcolecao/${subcollection.id}`:collection.subcollections?"/todos":"");
+  const path=`#/colecao/${collection.id}`+(subcollection?`/subcolecao/${subcollection.id}`:collection.subcollections?.length?"/todos":"");
   return path+(page>1?`?pagina=${page}`:"");
 }
 
@@ -562,8 +562,8 @@ function renderDocumentSequence(meta,collection,subcollection,compact=false) {
     if(language&&doc.languages.some(l=>l.code===language))params.set("idioma",language);
     if(query.get("busca")?.startsWith("#/busca"))params.set("busca",query.get("busca"));
     const date=documentDateInfo(doc);
-    const anchor=el("a",{class:"sequence-link",href:path+"?"+params,title:(doc.title_pt||doc.title_ru)+(date?" · "+date.text:"")},[
-      el("span",{class:"sequence-direction",text:caption}),el("strong",{class:"sequence-title",text:doc.title_pt||doc.title_ru}),documentDateBadge(doc)]);
+    const anchor=el("a",{class:"sequence-link",href:path+"?"+params,title:(documentTitle(doc))+(date?" · "+date.text:"")},[
+      el("span",{class:"sequence-direction",text:caption}),el("strong",{class:"sequence-title",text:documentTitle(doc)}),documentDateBadge(doc)]);
     anchor.addEventListener("click",()=>{
       const current=state.activeDocument;
       const selected=current?.meta.id===meta.id?readingLanguage(meta,current.langs):language;
@@ -603,12 +603,12 @@ function renderBreadcrumbs(collection, subcollection, current) {
 function renderDocHeader(meta, collection, subcollection) {
   const header = el("header", { class: "doc-header" });
   header.appendChild(renderBreadcrumbs(collection, subcollection, "Documento"));
-  header.appendChild(el("p", { class: "doc-eyebrow", text: meta.eyebrow || "Documento" }));
+  header.appendChild(el("p", { class: "doc-eyebrow", text: meta.eyebrow || (meta.type==="article"?"Artigo":"Documento") }));
   header.appendChild(el("h1", {}, [
-    meta.title_pt || meta.title_ru,
+    documentTitle(meta),
     meta.title_pt && meta.title_ru ? el("span", { class: "ru-title", lang: "ru", text: meta.title_ru }) : null,
   ]));
-  if (!meta.title_pt && meta.title_ru) header.querySelector("h1").lang = "ru";
+  if (!meta.title_pt) header.querySelector("h1").lang = meta.title_ru?"ru":"en";
   if (meta.source_url) {
     const source = el("p", { class: "source-info" }, [
       el("a", { href: meta.source_url, text: `Fonte: ${meta.source_name || "publicação de origem"}` }),
@@ -636,11 +636,12 @@ function documentMarkdown(meta, language) {
   // As edições Markdown são exportadas diretamente, sem reconstruir os parágrafos.
   const format = language.format || meta.format;
   if (format !== "text" && meta.source_name !== "ShowTrials") return language.source;
-  const title = meta[`title_${language.code}`] || meta.title_ru || meta.title_pt;
+  const title = meta[`title_${language.code}`] || documentTitle(meta);
   const body = format === "text" ? language.source : splitExportHeaders(language.source).body;
   const lines = [`# ${escapeMarkdownText(title)}`, ""];
   if (meta.source_url) lines.push(`Fonte: ${meta.source_url}`);
-  if (meta.source_id) lines.push(`ID ShowTrials: ${meta.source_id}`);
+  if (meta.source_name==="ShowTrials"&&meta.source_id) lines.push(`ID ShowTrials: ${meta.source_id}`);
+  else lines.push(`ID do documento: ${meta.id}`);
   const date=meta.date||meta.collected_date;
   if(date) lines.push(`Data do documento: ${String(date).split("T")[0]}`);
   lines.push(`Idioma: ${language.code.toUpperCase()}`, "", "---", "");
@@ -1319,7 +1320,7 @@ function renderCollection(collection, subcollection = null, showAll = false, req
     hero.appendChild(el("p", { class: "collection-description", text: collection.description_pt }));
   wrap.appendChild(hero);
 
-  if (collection.subcollections && !subcollection && !showAll) {
+  if (collection.subcollections?.length && !subcollection && !showAll) {
     const grid = el("div", { class: "subcollection-grid" });
     const documentMap = new Map(collectionDocuments(collection).map(doc => [doc.id, doc]));
     for (const sub of collection.subcollections) {
@@ -1377,8 +1378,8 @@ function renderCollection(collection, subcollection = null, showAll = false, req
     item.appendChild(topLine);
 
     item.appendChild(el("div",{class:"document-title-line"},[el("h2", {
-      class: "doc-list-title", lang: doc.title_pt ? "pt-BR" : "ru",
-      text: doc.title_pt || doc.title_ru,
+      class: "doc-list-title", lang: doc.title_pt ? "pt-BR" : doc.title_ru?"ru":"en",
+      text: documentTitle(doc),
     }),documentDateBadge(doc)]));
     if (doc.title_pt && doc.title_ru)
       item.appendChild(el("p", { class: "doc-list-ru", lang: "ru", text: doc.title_ru }));
@@ -1447,7 +1448,7 @@ function renderHome() {
     const body = el("div", { class: "collection-card-body" });
     body.appendChild(el("p", {
       class: "collection-card-eyebrow",
-      text: c.subcollections
+      text: c.subcollections?.length
         ? `${collectionDocuments(c).length} documentos · ${c.subcollections.length} subcoleções`
         : collectionDocuments(c).length === 1 ? "1 item" : `${collectionDocuments(c).length} itens`
     }));
@@ -1557,6 +1558,7 @@ async function main() {
       if (tools && !tools.contains(event.target)) closeDocumentPanel();
     });
     document.addEventListener("keydown", event => {
+      if(document.querySelector("dialog[open]"))return;
       if(event.key==="Escape")for(const menu of document.querySelectorAll(".editorial-menu[open]")){menu.open=false;menu.querySelector("summary")?.focus();}
       if (event.key === "Escape" && document.querySelector(".reading-panel")?.open) {
         closeDocumentPanel();

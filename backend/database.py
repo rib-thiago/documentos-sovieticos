@@ -86,7 +86,7 @@ def ensure_index(root, path, catalog=None, rebuild=False, progress=None, *, chec
         with connection:
             docs = {doc["id"]: doc for doc in catalog["documents"]}
             for doc in docs.values():
-                title = doc["titles"].get("pt") or doc["titles"].get("ru") or doc["id"]
+                title = doc["titles"].get("pt") or doc["titles"].get("ru") or doc["titles"].get("en") or doc["id"]
                 connection.execute("INSERT INTO documents VALUES(?,?,?,?,?,?)", (doc["id"], title, title.casefold(), doc["kind"], doc["document_type"], json.dumps(doc, ensure_ascii=False)))
             for edition_number, edition in enumerate(catalog["editions"], 1):
                 connection.execute("INSERT INTO editions VALUES(?,?,?,?,?)", (edition["id"], edition["document_id"], edition["language"], edition["position"], json.dumps(edition, ensure_ascii=False)))

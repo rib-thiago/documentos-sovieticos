@@ -13,6 +13,7 @@ import re
 import secrets
 import threading
 import time
+from urllib.parse import urlsplit
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -22,7 +23,7 @@ from .database import INDEX_VERSION, ensure_index
 from . import translations
 
 QUEUE = "docs/revisao-markdown/pendencias.csv"
-WRITABLE = {"data/catalog/documents.json", "data/catalog/editions.json", "data/catalog/memberships.json", "data/manifest.json", QUEUE}
+WRITABLE = {"data/catalog/documents.json", "data/catalog/editions.json", "data/catalog/memberships.json", "data/catalog/collections.json", "data/catalog/provenance.json", "data/manifest.json", QUEUE}
 PRIORITIES = {"urgente": 0, "alta": 1, "media": 2, "baixa": 3}
 STATUSES = ("pendente", "em_revisao", "corrigido", "adiado")
 ISSUE_FIELDS = ("prioridade", "status", "dificuldade_encontrada", "notas_do_revisor")
@@ -125,7 +126,7 @@ class Editorial:
         records = []
         for path in self.history_dir.glob("*.meta.json"):
             entry = model.read_json(path)
-            if not document_id or entry["document_id"] == document_id:
+            if not document_id or entry["document_id"] == document_id or (entry.get("entity") or {}).get("id") == document_id or document_id in (entry.get("entity") or {}).get("document_ids", []):
                 records.append(entry)
         return {"items": sorted(records, key=lambda r: r["id"], reverse=True)[:100]}
 
@@ -145,7 +146,7 @@ class Editorial:
     def allow_file(self, file, translation_files):
         if file in WRITABLE:
             return
-        if file not in translation_files or not file.endswith(".md"):
+        if file not in translation_files or not file.endswith((".md", ".txt")):
             raise model.CatalogError("Caminho inválido no histórico editorial")
         model.content_path(self.root, file, allow_missing=True)
 
@@ -175,6 +176,7 @@ class Editorial:
         self.write_states(record["before"], translation_files)
         metadata = {k: record[k] for k in ("id", "created_at", "document_id", "summary", "changes", "restores")}
         metadata["translation_files"] = translation_files
+        metadata["entity"] = record.get("entity", {"kind": "document", "id": record["document_id"]})
         metadata["state"] = "rolled_back"
         model.atomic_write(self.history_dir / (record["id"] + ".meta.json"), model.json_bytes(metadata))
         marker.unlink()
@@ -207,7 +209,7 @@ class Editorial:
             files = dict(record["before"])
             for file in files:
                 self.allow_file(file, record.get("translation_files", []))
-            for name in ("documents", "memberships", "editions"):
+            for name in model.FILES:
                 file = "data/catalog/" + name + ".json"
                 if file in files:
                     candidate[name] = json.loads(files[file])
@@ -225,8 +227,8 @@ class Editorial:
                 raise EditorialError("Campo de documento não editável")
             for key, value in edits.items():
                 if key == "titles":
-                    if not isinstance(value, dict) or set(value) - {"pt", "ru"}:
-                        raise EditorialError("Edite apenas os títulos português e russo")
+                    if not isinstance(value, dict) or set(value) - {"pt", "ru", "en"}:
+                        raise EditorialError("Edite apenas os títulos português, russo e inglês")
                     merged = dict(doc["titles"])
                     for language, title in value.items():
                         title = text(title, 2000)
@@ -307,9 +309,9 @@ class Editorial:
                 files[QUEUE] = stream.getvalue()
             if any(file.startswith("data/catalog/") for file in files):
                 files["data/manifest.json"] = model.json_bytes(model.export_manifest(candidate)).decode("utf-8")
-        return self.store_preview(revision, candidate, files, document_id, changes, restores)
+        return self.store_preview(revision, candidate, files, document_id, changes, restores, entity=record.get("entity") if restores else None)
 
-    def store_preview(self, revision, candidate, files, document_id, changes, restores=None, translation=None, markdown_edit=None):
+    def store_preview(self, revision, candidate, files, document_id, changes, restores=None, translation=None, markdown_edit=None, entity=None, creation=None):
         if not files:
             raise EditorialError("Nenhuma alteração para salvar")
         translation_files = [file for file in files if file.startswith("originais/")]
@@ -327,13 +329,17 @@ class Editorial:
         self.previews[preview_id] = {"revision": revision, "candidate": candidate, "files": files, "document_id": document_id,
             "changes": changes, "restores": restores, "expires": time.time() + 900,
             "translation_files": translation_files, "before": {file: self.file_state(file) for file in files},
-            "warnings": [f["message"] for f in translation["findings"] if f["level"] == "warning"] if translation else []}
+            "warnings": [f["message"] for f in translation["findings"] if f["level"] == "warning"] if translation else [],
+            "entity": entity or {"kind": "document", "id": document_id}, "creation": creation}
         file_diffs = [{"file": file, "removed": files[file] is None,
                        "diff": translations.line_diff(self.file_state(file) or "", files[file] or "")} for file in translation_files] if restores else []
+        if creation:
+            self.previews[preview_id]["warnings"] = creation.get("warnings", [])
         return {"preview_id": preview_id, "changes": changes, "document_id": document_id, "expires_in": 900,
                 "updates_index": any(file.startswith("data/catalog/") for file in files), "translation": translation,
                 "file_diffs": file_diffs, "requires_acknowledgement": bool(self.previews[preview_id]["warnings"]),
-                "changes_content": bool(translation_files), "markdown_edit": markdown_edit}
+                "changes_content": bool(translation_files), "markdown_edit": markdown_edit,
+                "entity": self.previews[preview_id]["entity"], "creation": creation}
 
     def editable_edition(self, repository, edition_id):
         edition = next((e for e in repository.catalog["editions"] if e["id"] == edition_id), None)
@@ -387,7 +393,7 @@ class Editorial:
         data = self.editable_edition(repository, payload["edition_id"])
         edition = data["edition"]
         editions = [item for item in repository.catalog["editions"] if item["document_id"] == edition["document_id"]]
-        original = next((item for item in editions if item["language"] == "ru"), editions[0])
+        original = next((item for item in editions if item["language"] == data["document"]["source_metadata"].get("original_language", "ru")), editions[0])
         if edition["language"] not in {"pt", "en"} or edition["id"] == original["id"]:
             raise EditorialError("A correção de trechos aceita apenas traduções; o original está protegido")
         if payload["revision"] != data["revision"] or payload["content_sha256"] != edition["sha256"]:
@@ -414,6 +420,329 @@ class Editorial:
                                  "diff": translations.line_diff(expected, replacement)}
         return result
 
+    def require_current(self, repository, revision):
+        if revision != self.revision() or model.load(self.root) != repository.catalog:
+            raise EditorialError("O catálogo mudou. Reabra o formulário e refaça a prévia.", 409)
+
+    def collection(self, repository, collection_id):
+        self.require_current(repository, self.revision())
+        collection = repository.collections.get(collection_id)
+        if collection is None:
+            raise EditorialError("Coleção não encontrada", 404)
+        return {"collection": collection, "revision": self.revision()}
+
+    @staticmethod
+    def identifier(value):
+        value = text(value, 100)
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", value):
+            raise EditorialError("Use um identificador com letras minúsculas sem acentos, números e hífens")
+        return value
+
+    @staticmethod
+    def source_url(value):
+        value = text(value, 2000, True)
+        if value:
+            parsed = urlsplit(value)
+            if parsed.scheme not in {"http", "https"} or not parsed.hostname or parsed.username or parsed.password:
+                raise EditorialError("Informe uma URL de fonte HTTP ou HTTPS válida")
+        return value
+
+    def creation_files(self, repository, candidate, content=None):
+        files = {"data/catalog/" + name + ".json": model.json_bytes(candidate[name]).decode("utf-8")
+                 for name in model.FILES if candidate[name] != repository.catalog[name]}
+        files["data/manifest.json"] = model.json_bytes(model.export_manifest(candidate)).decode("utf-8")
+        if content:
+            files.update(content)
+        return files
+
+    def preview_document_creation(self, repository, payload, *, _defer=False, _queue_fields=None):
+        allowed = {"revision", "id", "title", "title_pt", "language", "kind", "document_type", "date", "author", "archive", "source_name", "source_url", "source_id", "collection_ids", "filename", "content"}
+        if not isinstance(payload, dict) or set(payload) != allowed:
+            raise EditorialError("Cadastro de documento inválido")
+        if not _defer:
+            self.require_current(repository, payload["revision"])
+        document_id = self.identifier(payload["id"])
+        if any(doc["id"] == document_id for doc in repository.catalog["documents"]):
+            raise EditorialError("Este ID já pertence a um documento. Abra-o no catálogo para editar ou importar uma tradução.", 409)
+        language = payload["language"]
+        if language not in {"ru", "pt", "en"}:
+            raise EditorialError("Selecione o idioma original: russo, português ou inglês")
+        title = text(payload["title"], 2000)
+        if not title:
+            raise EditorialError("Informe o título no idioma original")
+        filename = text(payload["filename"], 255)
+        extension = Path(filename).suffix.lower()
+        if extension not in {".md", ".markdown", ".txt"}:
+            raise EditorialError("Selecione um arquivo Markdown ou TXT em UTF-8")
+        content = payload["content"]
+        if not isinstance(content, str) or not content.strip("\ufeff \t\r\n") or "\0" in content:
+            raise EditorialError("O arquivo está vazio ou contém caracteres inválidos")
+        raw = content.encode("utf-8")
+        if len(raw) > translations.MAX_TRANSLATION_BYTES:
+            raise EditorialError("O arquivo deve ter no máximo 4 MiB", 413)
+        selected = payload["collection_ids"]
+        collections = repository.collections
+        if not isinstance(selected, list) or not selected or any(not isinstance(item, str) or item not in collections for item in selected):
+            raise EditorialError("Selecione ao menos uma coleção ou subcoleção válida")
+        selected = set(selected)
+        selected.update(collections[item]["parent_id"] for item in list(selected) if collections[item]["parent_id"])
+        kind = text(payload["kind"], 30)
+        document_type = text(payload["document_type"], 100, True)
+        if kind not in {"document", "article"} or document_type and document_type not in repository.catalog["vocabularies"]["document_types"]:
+            raise EditorialError("Categoria ou tipo documental inválido")
+        target = f"originais/locais/{document_id}.{language}." + ("txt" if extension == ".txt" else "md")
+        path = model.content_path(self.root, target, allow_missing=True)
+        if path.exists() or (self.root / target).is_symlink():
+            raise EditorialError("Já existe um arquivo no destino. Ele não será substituído.", 409)
+        source_id = text(payload["source_id"], 500, True)
+        source_url = self.source_url(payload["source_url"])
+        titles = {language: title}
+        title_pt = text(payload["title_pt"], 2000)
+        if title_pt and language != "pt":
+            titles["pt"] = title_pt
+        doc = {"id": document_id, "kind": kind, "titles": titles, "document_type": document_type,
+               "historical_date": {"display": text(payload["date"], 500, True), "value": None, "precision": "not_recorded"},
+               "archive_reference": text(payload["archive"], 4000, True), "author_label": text(payload["author"], 4000, True),
+               "source": {"name": text(payload["source_name"], 500, True), "id": source_id, "url": source_url},
+               "source_metadata": {"original_language": language, "imported_filename": filename},
+               "default_format": "text" if extension == ".txt" else "markdown", "presentation": {}, "extra": {},
+               "compatibility_fields": ["id", "type", "languages"]}
+        label = {"ru": "Texto em russo", "pt": "Texto em português", "en": "Texto em inglês"}[language]
+        edition = {"id": document_id + ":" + language, "document_id": document_id, "language": language, "label": label,
+                   "file": target, "format": doc["default_format"], "position": 0, "sha256": model.sha256(raw), "bytes": len(raw),
+                   "editorial_status": "not_recorded", "extra": {}, "compatibility_fields": ["code", "label", "file", "format"]}
+        candidate = repository.catalog if _defer else copy.deepcopy(repository.catalog)
+        if not _defer:
+            candidate["documents"].append(doc)
+            candidate["editions"].append(edition)
+            candidate["provenance"]["manifest_projection"]["global_document_ids"].append(document_id)
+            for collection in candidate["collections"]:
+                if collection["id"] in selected:
+                    position = sum(member["collection_id"] == collection["id"] for member in candidate["memberships"])
+                    candidate["memberships"].append({"collection_id": collection["id"], "document_id": document_id, "position": position})
+        duplicates = []
+        normalized_titles = {value.casefold() for value in titles.values()}
+        duplicate_content_ids = {item["document_id"] for item in repository.catalog["editions"] if item["sha256"] == edition["sha256"]}
+        for existing in repository.catalog["documents"]:
+            same_source = bool(source_url and existing["source"].get("url") and translations.normalized_url(source_url) == translations.normalized_url(existing["source"]["url"]))
+            same_title = any(value.casefold() in normalized_titles for value in existing["titles"].values())
+            same_bytes = existing["id"] in duplicate_content_ids
+            if same_source or same_title or same_bytes:
+                duplicates.append(existing["id"])
+        findings = translations.findings(translations.identification(filename, content), doc, language)
+        warnings = [item["message"] for item in findings if item["level"] == "warning"]
+        if duplicates:
+            warnings.append("Confira possíveis duplicidades (título, fonte ou arquivo): " + ", ".join(duplicates[:15]))
+        detail = {"kind": "document", "id": document_id, "file": target, "language": language, "format": edition["format"],
+                  "content": content, "warnings": warnings, "collections": sorted(selected)}
+        changes = [{"field": "Novo documento", "before": None, "after": doc},
+                   {"field": "Arquivo original", "before": None, "after": {"file": target, "language": language, "bytes": len(raw)}},
+                   {"field": "Coleções", "before": None, "after": sorted(selected)}]
+        files = None if _defer else self.creation_files(repository, candidate, {target: content})
+        queue_fields, queue_rows = (_queue_fields, []) if _defer else self.read_queue()
+        new_row = {field: "" for field in queue_fields}
+        new_row.update(chave=document_id + ":cadastro_local", prioridade="media", dificuldade="baixa", status="pendente", id=document_id,
+                       colecoes=" / ".join(collection["titles"].get("pt", collection["id"]) for collection in candidate["collections"] if collection["id"] in selected),
+                       titulo_ru=titles.get("ru", ""), problema="cadastro_local", dificuldade_encontrada="Documento novo: conferir metadados, conteúdo e apresentação no leitor.",
+                       acao_sugerida="Conferir o documento e marcar como corrigido após a revisão.", arquivo_markdown=target,
+                       url_teste="/#/doc/" + document_id, fonte=source_url or "", trechos="[]")
+        if _defer:
+            return {"document": doc, "edition": edition, "collections": sorted(selected), "detail": detail, "changes": changes, "queue_row": new_row}
+        queue_rows.append(new_row)
+        stream = io.StringIO(newline="")
+        writer = csv.DictWriter(stream, fieldnames=queue_fields)
+        writer.writeheader()
+        writer.writerows(queue_rows)
+        files[QUEUE] = stream.getvalue()
+        changes.append({"field": "Fila de revisão", "before": None, "after": "Pendente · prioridade média · conferir cadastro e apresentação"})
+        return self.store_preview(payload["revision"], candidate, files, document_id, changes, creation=detail)
+
+    def preview_batch(self, repository, payload):
+        allowed = {"revision", "csv_content", "files", "collection_ids"}
+        if not isinstance(payload, dict) or set(payload) != allowed:
+            raise EditorialError("Lote inválido: envie a planilha CSV e os arquivos")
+        self.require_current(repository, payload["revision"])
+        uploaded, csv_content = payload["files"], payload["csv_content"]
+        if not isinstance(uploaded, list) or not 1 <= len(uploaded) <= 100:
+            raise EditorialError("Selecione entre 1 e 100 documentos por lote")
+        if not isinstance(csv_content, str) or len(csv_content.encode("utf-8")) > 1024 * 1024:
+            raise EditorialError("A planilha CSV deve ter no máximo 1 MiB")
+        defaults = payload["collection_ids"]
+        if not isinstance(defaults, list) or any(not isinstance(item, str) or item not in repository.collections for item in defaults):
+            raise EditorialError("Coleções padrão inválidas")
+        files_by_name, size = {}, 0
+        for item in uploaded:
+            if not isinstance(item, dict) or set(item) != {"filename", "content"} or not isinstance(item["content"], str):
+                raise EditorialError("Arquivo de lote inválido")
+            name = text(item["filename"], 255)
+            if name in files_by_name:
+                raise EditorialError("Existem arquivos com o mesmo nome no lote: " + name)
+            size += len(item["content"].encode("utf-8"))
+            files_by_name[name] = item["content"]
+        if size > 20 * 1024 * 1024:
+            raise EditorialError("O lote deve ter no máximo 20 MiB de documentos", 413)
+        csv_content = csv_content.lstrip("\ufeff")
+        first_line = csv_content.splitlines()[0] if csv_content.splitlines() else ""
+        delimiter = max((",", ";", "\t"), key=first_line.count)
+        reader = csv.DictReader(io.StringIO(csv_content, newline=""), delimiter=delimiter, strict=True)
+        try:
+            headers = reader.fieldnames or []
+        except csv.Error as error:
+            raise EditorialError("Cabeçalho CSV inválido: " + str(error)) from error
+        normalized = [item.strip().lower() for item in headers]
+        required = {"arquivo", "id", "titulo", "idioma"}
+        optional = {"colecoes", "titulo_pt", "categoria", "tipo_documental", "data", "autoria", "referencia_arquivistica", "nome_fonte", "url_fonte", "id_fonte"}
+        if len(set(normalized)) != len(normalized) or not required.issubset(normalized) or set(normalized) - required - optional:
+            raise EditorialError("Cabeçalho CSV inválido. Use o modelo: arquivo, id, titulo e idioma são obrigatórios; não repita colunas.")
+        reader.fieldnames = normalized
+        errors, prepared, used_names, used_ids = [], [], set(), set()
+        queue_fields, queue_rows = self.read_queue()
+        try:
+            for row in reader:
+                if len(prepared) + len(errors) >= 100:
+                    raise EditorialError("A planilha deve conter no máximo 100 documentos")
+                line = reader.line_num
+                if None in row or any(value is None for value in row.values()):
+                    errors.append({"line": line, "message": "Quantidade de colunas diferente do cabeçalho."})
+                    continue
+                row = {key: value.strip() for key, value in row.items()}
+                if not any(row.values()):
+                    continue
+                name, document_id = row.get("arquivo", ""), row.get("id", "")
+                try:
+                    if name not in files_by_name:
+                        raise EditorialError("Arquivo não selecionado: " + name)
+                    if name in used_names:
+                        raise EditorialError("O mesmo arquivo aparece mais de uma vez na planilha: " + name)
+                    if document_id in used_ids:
+                        raise EditorialError("ID repetido dentro do lote: " + document_id)
+                    used_names.add(name)
+                    used_ids.add(document_id)
+                    category = row.get("categoria") or "document"
+                    category = {"documento": "document", "artigo": "article"}.get(category, category)
+                    selected = [item.strip() for item in row.get("colecoes", "").split("|") if item.strip()] or defaults
+                    item_payload = {"revision": payload["revision"], "id": document_id, "title": row["titulo"], "language": row["idioma"].lower(),
+                        "title_pt": row.get("titulo_pt", ""), "kind": category, "document_type": row.get("tipo_documental", ""),
+                        "date": row.get("data", ""), "author": row.get("autoria", ""), "archive": row.get("referencia_arquivistica", ""),
+                        "source_name": row.get("nome_fonte", ""), "source_url": row.get("url_fonte", ""), "source_id": row.get("id_fonte", ""),
+                        "collection_ids": selected, "filename": name, "content": files_by_name[name]}
+                    entry = self.preview_document_creation(repository, item_payload, _defer=True, _queue_fields=queue_fields)
+                    entry["line"] = line
+                    prepared.append(entry)
+                except (EditorialError, model.CatalogError, ValueError, TypeError) as error:
+                    errors.append({"line": line, "id": document_id, "filename": name, "message": str(error)})
+        except csv.Error as error:
+            raise EditorialError("Não foi possível ler o CSV. Confira aspas e separadores: " + str(error)) from error
+        for name in files_by_name.keys() - used_names:
+            errors.append({"line": None, "filename": name, "message": "Arquivo selecionado sem uma linha correspondente na planilha."})
+        if not prepared and not errors:
+            raise EditorialError("A planilha não contém documentos")
+        if errors:
+            return {"can_save": False, "batch": {"errors": errors, "valid_count": len(prepared), "total_files": len(uploaded)}}
+        candidate = copy.deepcopy(repository.catalog)
+        contents, warnings, changes, items = {}, [], [], []
+        for entry in prepared:
+            doc, edition, detail = entry["document"], entry["edition"], entry["detail"]
+            duplicates = []
+            for earlier in items:
+                same_file = earlier["sha256"] == edition["sha256"]
+                same_title = any(value.casefold() in earlier["titles"] for value in doc["titles"].values())
+                same_source = bool(doc["source"].get("url") and earlier["source_url"] and translations.normalized_url(doc["source"]["url"]) == translations.normalized_url(earlier["source_url"]))
+                if same_file or same_title or same_source:
+                    duplicates.append(earlier["id"])
+            if duplicates:
+                detail["warnings"].append("Possível duplicidade dentro do lote: " + ", ".join(duplicates))
+            warnings.extend(doc["id"] + ": " + message for message in detail["warnings"])
+            candidate["documents"].append(doc)
+            candidate["editions"].append(edition)
+            candidate["provenance"]["manifest_projection"]["global_document_ids"].append(doc["id"])
+            for collection_id in entry["collections"]:
+                position = sum(member["collection_id"] == collection_id for member in candidate["memberships"])
+                candidate["memberships"].append({"collection_id": collection_id, "document_id": doc["id"], "position": position})
+            queue_rows.append(entry["queue_row"])
+            contents[edition["file"]] = detail["content"]
+            items.append({**detail, "line": entry["line"], "title": doc["titles"].get("pt") or doc["titles"].get("ru") or doc["titles"].get("en"),
+                          "sha256": edition["sha256"], "titles": [value.casefold() for value in doc["titles"].values()], "source_url": doc["source"].get("url")})
+            changes.append({"field": "Novo documento: " + doc["id"], "before": None,
+                            "after": {"title": items[-1]["title"], "language": edition["language"], "file": edition["file"], "collections": entry["collections"]}})
+        files = self.creation_files(repository, candidate, contents)
+        stream = io.StringIO(newline="")
+        writer = csv.DictWriter(stream, fieldnames=queue_fields)
+        writer.writeheader()
+        writer.writerows(queue_rows)
+        files[QUEUE] = stream.getvalue()
+        batch_id = "lote-" + secrets.token_hex(6)
+        entity = {"kind": "batch", "id": batch_id, "document_ids": [entry["document"]["id"] for entry in prepared]}
+        detail = {"kind": "batch", "id": batch_id, "items": items, "warnings": warnings, "count": len(items)}
+        return self.store_preview(payload["revision"], candidate, files, None, changes, entity=entity, creation=detail)
+
+    def preview_collection(self, repository, payload):
+        allowed = {"revision", "collection_id", "slug", "parent_id", "title_pt", "title_ru", "subtitle", "description", "cover", "accent", "source_url"}
+        if not isinstance(payload, dict) or set(payload) != allowed:
+            raise EditorialError("Cadastro de coleção inválido")
+        self.require_current(repository, payload["revision"])
+        existing = repository.collections.get(payload["collection_id"]) if payload["collection_id"] else None
+        if payload["collection_id"] and existing is None:
+            raise EditorialError("Coleção não encontrada", 404)
+        slug = self.identifier(payload["slug"])
+        parent = payload["parent_id"] or None
+        if parent is not None and (parent not in repository.collections or repository.collections[parent]["parent_id"] is not None):
+            raise EditorialError("Escolha uma coleção principal como destino da subcoleção")
+        collection_id = parent + "/" + slug if parent else slug
+        if existing and (existing["slug"] != slug or existing["parent_id"] != parent):
+            raise EditorialError("O identificador e a coleção principal são fixos para preservar as URLs")
+        if not existing and collection_id in repository.collections:
+            raise EditorialError("Já existe uma coleção com este identificador nesse destino", 409)
+        title = text(payload["title_pt"], 2000)
+        if not title:
+            raise EditorialError("Informe o título da coleção em português")
+        cover = text(payload["cover"], 1000, True)
+        if cover:
+            cover_path = (self.root / cover).resolve()
+            if not cover.startswith("assets/covers/") or ".." in Path(cover).parts or "\\" in cover or not cover_path.is_relative_to((self.root / "assets/covers").resolve()) or not cover_path.is_file() or cover_path.suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp", ".avif"}:
+                raise EditorialError("Escolha uma imagem existente dentro de assets/covers/ ou deixe a capa em branco")
+        accent = text(payload["accent"], 30) or "#8b2c2c"
+        if not re.fullmatch(r"#[0-9a-fA-F]{6}", accent):
+            raise EditorialError("Informe uma cor no formato #8b2c2c")
+        candidate = copy.deepcopy(repository.catalog)
+        collection = next((item for item in candidate["collections"] if item["id"] == collection_id), None)
+        if collection is None:
+            collection = {"id": collection_id, "slug": slug, "parent_id": parent,
+                          "position": sum(item["parent_id"] == parent for item in candidate["collections"]),
+                          "titles": {}, "subtitle": None, "description": None, "source": {}, "presentation": {}, "extra": {},
+                          "compatibility_fields": ["id", "title_pt", "title_ru", "subtitle_pt", "description_pt", "cover", "accent", "document_ids" if parent else "documents"]}
+            if parent is None:
+                collection["compatibility_fields"].append("subcollections")
+            candidate["collections"].append(collection)
+        if parent:
+            parent_collection = next(item for item in candidate["collections"] if item["id"] == parent)
+            if "subcollections" not in parent_collection["compatibility_fields"]:
+                parent_collection["compatibility_fields"].append("subcollections")
+        collection["titles"]["pt"] = title
+        russian = text(payload["title_ru"], 2000)
+        if russian:
+            collection["titles"]["ru"] = russian
+        else:
+            collection["titles"].pop("ru", None)
+        collection.update(subtitle=text(payload["subtitle"], 2000, True), description=text(payload["description"], 12000, True))
+        source_url = self.source_url(payload["source_url"])
+        if source_url:
+            collection["source"]["url"] = source_url
+        else:
+            collection["source"].pop("url", None)
+        if cover:
+            collection["presentation"]["cover"] = cover
+        else:
+            collection["presentation"].pop("cover", None)
+        collection["presentation"]["accent"] = accent
+        if existing == collection:
+            raise EditorialError("Nenhuma alteração na coleção para salvar")
+        changes = [{"field": "Coleção" if existing else "Nova subcoleção" if parent else "Nova coleção", "before": existing, "after": collection}]
+        detail = {"kind": "collection", "id": collection_id, "warnings": [], "new": existing is None,
+                  "title": title, "subtitle": collection["subtitle"], "description": collection["description"], "cover": cover, "accent": accent}
+        return self.store_preview(payload["revision"], candidate, self.creation_files(repository, candidate), None, changes,
+                                  entity={"kind": "collection", "id": collection_id}, creation=detail)
+
     def preview_translation(self, repository, payload):
         allowed = {"revision", "document_id", "language", "filename", "content", "title"}
         if not isinstance(payload, dict) or set(payload) != allowed:
@@ -428,7 +757,7 @@ class Editorial:
         if doc is None:
             raise EditorialError("Documento não encontrado", 404)
         editions = sorted((e for e in repository.catalog["editions"] if e["document_id"] == document_id), key=lambda e: e["position"])
-        original = next((e for e in editions if e["language"] == "ru"), editions[0])
+        original = next((e for e in editions if e["language"] == doc["source_metadata"].get("original_language", "ru")), editions[0])
         language = payload["language"]
         if language not in {"pt", "en"} or language == original["language"]:
             raise EditorialError("Selecione português ou inglês como tradução; o idioma original está protegido")
@@ -514,7 +843,7 @@ class Editorial:
         summary = "; ".join(c["field"] for c in plan["changes"])
         metadata = {"id": record_id, "created_at": datetime.now(timezone.utc).isoformat(), "document_id": plan["document_id"],
                     "summary": summary, "changes": plan["changes"], "restores": plan["restores"], "state": "prepared",
-                    "translation_files": plan["translation_files"]}
+                    "translation_files": plan["translation_files"], "entity": plan.get("entity")}
         record = {**metadata, "before": before, "after": files}
         stage = self.directory / (record_id + ".sqlite3")
         info = repository.info
@@ -553,5 +882,6 @@ class Editorial:
         repository.catalog = plan["candidate"]
         repository.collections = {c["id"]: c for c in plan["candidate"]["collections"]}
         repository.info = info
-        return {"saved": True, "history_id": record_id, "document_id": plan["document_id"], "revision": self.revision(),
+        return {"saved": True, "history_id": record_id, "document_id": plan["document_id"], "revision": self.revision(), "entity": plan.get("entity"),
+                "document_exists": any(doc["id"] == plan["document_id"] for doc in repository.catalog["documents"]),
                 "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados." if catalog_changed else "Fila de revisão atualizada; os metadados não foram alterados."}

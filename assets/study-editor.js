@@ -2,7 +2,7 @@
 function installStudyPassageTools() {
   if(!state.passageAvailable||state.viewMode!=="study"||!state.activeDocument)return;
   const {meta,langs}=state.activeDocument;
-  const original=meta.languages.find(language=>language.code==="ru")?.code||meta.languages[0]?.code;
+  const original=meta.original_language||meta.languages.find(language=>language.code==="ru")?.code||meta.languages[0]?.code;
   for(const row of document.querySelectorAll(".blocks > .block[data-study-block]")) {
     const index=Number(row.dataset.studyBlock);
     for(const language of langs) {
@@ -37,7 +37,7 @@ async function openStudyPassageEditor(meta,language,block,selection,trigger) {
   const close=el("button",{type:"button",class:"passage-close",text:"Fechar"});
   const main=el("div",{class:"passage-content"});
   const heading=el("div",{class:"passage-heading"},[title,close]);
-  dialog.append(heading,el("p",{class:"passage-document",text:(meta.title_pt||meta.title_ru)+" · "+meta.id}),notice,main);
+  dialog.append(heading,el("p",{class:"passage-document",text:documentTitle(meta)+" · "+meta.id}),notice,main);
   document.body.append(dialog);
   let dirty=false,busy=false;
   const unload=event=>{if(dirty||busy){event.preventDefault();event.returnValue="";}};
@@ -128,7 +128,7 @@ async function openStudyPassageEditor(meta,language,block,selection,trigger) {
           message("Salvando a correção e atualizando o acervo local…");
           try {
             const result=await api("/api/editorial/save",{preview_id:proposed.preview_id,acknowledge_warnings:false});
-            dirty=false;proposed=null;
+            dirty=false;proposed=null;clearTimeout(timer);
             try{localStorage.setItem("editorialCatalogChanged",Date.now()+":"+result.history_id);}catch{}
             const history=el("a",{class:"passage-history",href:"/editorial#/historico?"+new URLSearchParams({document:meta.id,leitor:editorialReturnAddress()}),text:"Abrir histórico / desfazer"});
             main.replaceChildren(el("p",{text:"Correção salva localmente. A versão anterior está preservada no histórico."}),history);

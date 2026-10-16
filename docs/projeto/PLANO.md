@@ -8,7 +8,7 @@ Em 16/10/2026, foi autorizada a primeira entrega: catálogo padronizado e backen
 
 1. **Validada pelo usuário e commitada (`f90937c`).** Cadastro unificado, migração verificável, validação, exportação do manifesto compatível, índice SQLite e API local de consulta. O servidor também apresenta o site existente.
 2. **Validada manualmente pelo usuário e commitada (`1a7b134`).** Busca integral com filtros, resultados contextualizados, paginação e retorno à consulta. Na publicação estática, busca limitada aos títulos do manifesto. Não foram executados testes pelo assistente nesta entrega por solicitação do usuário; roteiro em `BUSCA-MANUAL.md`.
-3. **Área editorial em evolução.** Primeira parte validada em `c971fcf`; importação validada em `7b569a2`; correção dos cabeçalhos validada em `eb9da8a`. A integração do leitor com metadados/importação e a edição de versões Markdown com prévia e histórico foram testadas manualmente e aprovadas pelo usuário, com commits autorizados nesta rodada e sem push. O retorno conserva contexto e tenta recuperar a posição sem alterar o marcador. Roteiro em `LEITOR-EDITORIAL.md`. Não foram executados testes pelo assistente. O refinamento do painel e da área editorial foi incorporado à entrega. Correções por trecho no estudo continuam planejadas.
+3. **Área editorial em evolução.** Primeira parte validada em `c971fcf`; importação validada em `7b569a2`; correção dos cabeçalhos validada em `eb9da8a`. A integração do leitor com metadados/importação e a edição de versões Markdown com prévia e histórico foram testadas manualmente e aprovadas pelo usuário, com commits autorizados nesta rodada e sem push. O retorno conserva contexto e tenta recuperar a posição sem alterar o marcador. Roteiro em `LEITOR-EDITORIAL.md`. Não foram executados testes pelo assistente. O refinamento do painel e da área editorial foi incorporado à entrega. Correções por trecho no estudo foram entregues em `b96701f`.
 4. **Planejada — ferramentas de pesquisa.** Consultas salvas, anotações, dossiês, citações e exportações conjuntas.
 
 ## Critérios da primeira entrega
@@ -55,3 +55,20 @@ Após validar o editor, revisar a interface e confirmar a correção do carregam
 ## Correções de tradução no modo estudo — aprovadas pelo usuário
 
 Após os commits f87ff2f e 2acd034, o usuário autorizou a terceira entrega sem commit/push e sem execução de testes. Implementada correção de bloco ou seleção exata de tradução PT/EN Markdown no próprio modo estudo, com prévia, diferenças, proteção do original, conferência de versão/intervalo e gravação pelo histórico existente. O leitor e o índice são atualizados após salvar; não há alinhamento automático ou publicação. Roteiro manual em CORRECOES-NO-ESTUDO.md. O usuário testou, confirmou o funcionamento e autorizou o commit. Nenhum teste foi executado pelo assistente; sem push.
+
+
+## Estabilização e cadastro local — implementados para avaliação
+
+A correção por trecho foi aprovada e commitada em b96701f, sem push. O usuário autorizou revisão de estabilização e cadastro individual de documentos, coleções e subcoleções, com prévia e histórico, sem testes/commit/push. Implementados os formulários, endpoints locais e recuperação de novas entidades; preservados o acervo e as URLs existentes. Revisão por inspeção documentada em ESTABILIZACAO.md, com roteiro em CADASTRO-LOCAL.md. Avaliação manual pendente antes de considerar a rodada estável para trabalho continuado. Upload de capas, importação em lote e consolidação ampla do CSS seguem registrados como melhorias posteriores.
+
+
+## Importação em lote — implementada para avaliação
+
+O usuário aprovou a direção do cadastro individual e pediu a próxima entrega. Implementada importação de até 100 originais novos Markdown/TXT com CSV de metadados, coleções por linha ou padrão, diagnóstico bloqueante, avisos de duplicidade, prévia individual e confirmação conjunta. Uma transação/histórico engloba arquivos, catálogo, manifesto, busca e fila; a restauração é do lote inteiro. O cadastro anterior continua preservado e ambas as entregas permanecem sem commit/push. Nenhum teste executado pelo assistente. Roteiro em IMPORTACAO-EM-LOTE.md. Upload de capas permanece como melhoria posterior.
+
+
+## Versionamento do cadastro e da importação em lote
+
+O usuário autorizou o commit das entregas de estabilização, cadastro individual e importação em lote. São versionadas juntas, pois compartilham formulários e transações editoriais. Não foram executados testes pelo assistente e não houve push. A autorização de versionamento não substitui a conferência visual ampla e o exercício completo de restauração descritos em ESTABILIZACAO.md.
+
+Pendências atuais: upload local de capas com prévia/histórico; consolidação do CSS acumulado e avaliação visual em celular/desktop/teclado; backup do histórico local; ferramentas de pesquisa (consultas salvas, anotações, dossiês, citações e exportações conjuntas). Importação de traduções em lote e pacotes ZIP/JSON permanecem extensões futuras, sem implementação nesta rodada.

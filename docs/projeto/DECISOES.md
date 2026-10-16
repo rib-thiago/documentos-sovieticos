@@ -165,3 +165,23 @@ A renderização mantém intervalos exatos do arquivo em cada bloco de estudo. A
 O backend recebe intervalo Unicode, conteúdo esperado, revisão e hash, protege o original e aceita apenas traduções PT/EN Markdown. Reaproveita a gravação transacional e o histórico da edição completa. A confirmação atualiza catálogo, manifesto, busca e leitor; apenas o intervalo é substituído no texto. Cabeçalhos e demais versões permanecem preservados. Nenhum teste executado, commit ou push nesta entrega; avaliação manual pendente.
 
 A correção por trecho foi testada manualmente e aprovada pelo usuário, que autorizou o commit desta entrega. Sem testes executados pelo assistente e sem push.
+
+
+### D26 — Entrada individual de documentos e organização local
+
+Novos originais são cadastrados por arquivo UTF-8 Markdown/TXT, com idioma explícito RU/PT/EN, ID estável, metadados e associações. Arquivos novos ficam em originais/locais/; não há renomeação ou substituição de documentos existentes. A criação inclui a projeção global, o manifesto, a busca e uma pendência média na fila. A prévia mostra destino e conteúdo, confere identificação e aponta coincidências por título, URL ou hash; avisos exigem confirmação explícita.
+
+Coleções e subcoleções são criadas/editadas por formulário, na hierarquia existente de dois níveis. IDs/pai de coleções existentes são fixos para preservar URLs. As capas são opcionais e referenciam imagens existentes em assets/covers/; upload de imagens e importação em lote ficam registrados como pendências. Novas associações à subcoleção incluem o pai automaticamente, sem reordenar os itens anteriores.
+
+### D27 — Histórico de cadastros e estabilização por inspeção
+
+O histórico transacional passa a abranger coleções, proveniência e arquivos TXT criados no cadastro, mantendo compatibilidade com os snapshots anteriores. Operações identificam se afetam um documento ou uma coleção, e podem ser filtradas pelo ID de ambos. Desfazer a criação remove o arquivo criado do acervo ativo, preservando seu conteúdo no histórico. Restaurar continua recusando conflitos com alterações posteriores.
+
+Foram corrigidos por inspeção títulos somente em inglês, atualização da lista editorial de coleções, apresentação de coleções sem subcoleções, projeção da primeira subcoleção em pais legados e Escape de janelas modais. Não houve regravação do acervo para demonstrar os recursos. O roteiro de avaliação está em CADASTRO-LOCAL.md; a revisão e as pendências estão em ESTABILIZACAO.md. Nenhum teste executado, commit ou push. A entrega aguarda avaliação manual do usuário.
+
+
+### D28 — Lotes de originais com CSV e confirmação conjunta
+
+A entrada em lote reutiliza a validação do cadastro individual sem gravar propostas intermediárias. O arquivo e o documento são associados explicitamente por CSV; cada arquivo/ID deve aparecer uma vez. Coleções informadas na linha prevalecem sobre a seleção padrão. Se houver um erro, o lote inteiro fica bloqueado. Coincidências de título, URL/hash e divergências reconhecidas exigem confirmação explícita, incluindo coincidências dentro do lote.
+
+O lote é publicado em uma transação local, com uma atualização do índice e um snapshot recuperável. O histórico identifica todos os IDs envolvidos e pode ser filtrado por qualquer um, mas a restauração é conjunta. Limites operacionais: 100 originais, 4 MiB por arquivo, 20 MiB de textos e 1 MiB de CSV. A prévia renderiza cada conteúdo sob demanda. Importação de traduções em lote, ZIPs, coleções automáticas e imagens continuam fora desta etapa. Sem execução de testes, commit ou push; avaliação manual pendente.

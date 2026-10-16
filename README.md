@@ -130,3 +130,9 @@ O site pode ser servido pelo GitHub Pages a partir da raiz, sem compilação. A 
 
 
 No backend local, o modo estudo também permite **Corrigir tradução** em blocos de traduções Markdown, com prévia, diferenças e histórico. O [roteiro de correções no estudo](docs/projeto/CORRECOES-NO-ESTUDO.md) explica a edição por bloco ou seleção e como avaliar e desfazer uma correção local.
+
+
+A área editorial agora oferece **Novo documento** (original Markdown/TXT) e **Coleções e subcoleções**, com prévia, confirmação local e histórico recuperável. A entrada é individual e preserva IDs/URLs anteriores. Veja [como cadastrar e desfazer](docs/projeto/CADASTRO-LOCAL.md) e a [revisão de estabilização e pendências](docs/projeto/ESTABILIZACAO.md). Esta rodada aguarda avaliação manual; não foram executados testes pelo assistente.
+
+
+Para cadastrar vários originais novos, use **Importar lote** na área editorial: CSV de metadados mais arquivos Markdown/TXT, com revisão individual e gravação conjunta. O [manual de importação em lote](docs/projeto/IMPORTACAO-EM-LOTE.md) inclui o exercício com dois documentos e a restauração do conjunto. O formulário oferece um modelo CSV para baixar.
