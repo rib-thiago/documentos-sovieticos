@@ -61,3 +61,23 @@ A rota `#/busca` utiliza a API local quando disponível. Consultas vazias explor
 Sem a API, a página pesquisa os títulos do manifesto já carregado, com aviso visível e sem baixar todos os documentos. Tipos documentais específicos ficam indisponíveis nessa modalidade. Falhas do serviço local apresentam erro e opção de tentar novamente. Pedidos antigos são cancelados ao trocar de consulta ou sair da busca.
 
 Palavras, filtros, ordenação e página ficam no hash da URL, compatível com GitHub Pages e histórico do navegador. Links dos resultados acrescentam o endereço de retorno à consulta e o contexto da coleção, sem mudar as rotas existentes. Não há salto automático ao parágrafo encontrado; a marcação de leitura continua independente. O usuário testou e aprovou a busca e autorizou seu commit. Nenhum teste foi executado pelo assistente nesta entrega, conforme solicitado.
+
+## D10. Área editorial local e fila existente
+
+Após o commit e push `edbab93`, foi implementada a primeira parte editorial em `/editorial`. A fila vem de `docs/revisao-markdown/pendencias.csv`, sem reclassificar automaticamente o acervo nem executar novamente a conversão. Prioridade, motivo, status e notas são editáveis e preservados em futuras gerações do CSV. Os relatórios antigos continuam sendo o registro da triagem original. Documentos sem pendências são acessíveis pela consulta do catálogo.
+
+O formulário edita títulos PT/RU, categoria, tipo documental, autoria textual, referência arquivística, data histórica, rótulos e associações às coleções existentes. Não altera IDs, URLs, corpos, arquivos de idiomas nem os dados de coleta. Datas WordPress continuam separadas das históricas. Associações novas entram no fim da coleção; relações mantidas conservam sua ordem relativa. Não há reordenação manual nesta etapa.
+
+## D11. Prévia, gravação e recuperação
+
+Cada proposta é validada sem escrita e recebe um identificador temporário com validade de 15 minutos. A gravação aceita somente uma prévia existente, vinculada à revisão dos arquivos. Mudanças entre abas ou externas exigem reabrir a edição. Requisições são serializadas; `fcntl.flock` impede dois processos de backend no mesmo acervo no ambiente Linux. O servidor aguarda gravações em curso ao encerrar normalmente.
+
+Metadados são escritos no catálogo versionado e projetados para o manifesto. O novo índice é preparado separadamente, antes da publicação, com a revisão dos arquivos propostos. O histórico comprimido registra antes/depois dos arquivos alterados; não copia os corpos dos documentos. Um marcador de transação permite reverter uma publicação interrompida no início seguinte e reconstruir o SQLite. Edições externas incompatíveis durante uma interrupção suspendem a recuperação automática para preservar o trabalho existente.
+
+O histórico fica em `.local/editorial/history/`, fora do Git, com até 100 operações recentes exibidas por consulta. Restaurar exige nova prévia e gera outro registro. Como os snapshots são de arquivos completos, mudanças posteriores nos mesmos arquivos precisam ser desfeitas antes de restaurar uma alteração antiga. É uma escolha reversível para esta etapa de uso individual, documentada na interface e no manual; não oferece mesclagem de históricos independentes. O histórico precisa de cópia separada para sobreviver à exclusão de `.local/editorial/`.
+
+## D12. Limite local de escrita e avaliação
+
+As APIs de consulta continuam disponíveis. Os únicos endpoints de escrita são `/api/editorial/preview` e `/api/editorial/save`, por POST JSON, com token da sessão, origem correspondente ao backend, Host local, cliente em loopback e servidor vinculado a loopback. A rota `/editorial` funciona com o backend local, sem perfis ou login; a publicação no GitHub Pages continua estática. O backend continua usando a biblioteca padrão do Python.
+
+Não foram executados testes, compilação ou servidor de teste pelo assistente para esta implementação, conforme solicitado. As validações de prévia e gravação são comportamento operacional do backend, não verificações executadas pelo assistente. O usuário realizou as verificações manuais de edição, gravação e restauração, confirmou o funcionamento da área editorial e autorizou o commit. Ajustes de layout e UI/UX foram adiados.

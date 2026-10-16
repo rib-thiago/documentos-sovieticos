@@ -194,9 +194,9 @@ def write_reports(records, applied):
         for problem in record["issues"]:
             stable = record["id"] + ":" + problem["code"]
             old = previous.get(stable, {})
-            entries.append({"chave": stable, "prioridade": problem["priority"], "dificuldade": problem["difficulty"],
+            entries.append({"chave": stable, "prioridade": old.get("prioridade", problem["priority"]), "dificuldade": problem["difficulty"],
                 "status": old.get("status", "pendente"), "id": record["id"], "colecoes": " | ".join(record["collections"]),
-                "titulo_ru": record["title_ru"], "problema": problem["code"], "dificuldade_encontrada": problem["detail"],
+                "titulo_ru": record["title_ru"], "problema": problem["code"], "dificuldade_encontrada": old.get("dificuldade_encontrada", problem["detail"]),
                 "acao_sugerida": problem["action"], "arquivo_markdown": record["markdown"],
                 "url_teste": "http://localhost:8000/#/doc/" + record["id"], "fonte": record["source_url"],
                 "trechos": json.dumps(problem["locations"], ensure_ascii=False), "notas_do_revisor": old.get("notas_do_revisor", "")})

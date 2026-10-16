@@ -58,6 +58,8 @@ O catálogo tem **2.186 documentos e 2.206 versões por idioma**, incluindo as e
 
 Use **Buscar** na navegação ou o campo da página inicial para abrir `#/busca`. Com o backend, a página pesquisa títulos e texto completo, filtra por coleção, subcoleção, idioma, categoria e tipo documental e apresenta resultados com trechos e paginação. A consulta fica na URL; ao abrir um resultado, o link **Voltar aos resultados da busca** recupera filtros e página. Na publicação estática, a mesma interface pesquisa somente os títulos do manifesto e informa essa limitação. Consulte o [roteiro manual da busca](docs/projeto/BUSCA-MANUAL.md).
 
+A **área editorial local** fica em `http://localhost:8000/editorial`, com fila de revisão, edição de metadados e associações às coleções, prévia antes de salvar e histórico recuperável. As gravações atualizam catálogo, manifesto e busca sem alterar os corpos dos textos. Reinicie o backend para carregar esta implementação. O [manual editorial](docs/projeto/EDITORIAL-LOCAL.md) traz o roteiro de verificação manual e explica onde fica o histórico local.
+
 Para usar somente o site estático, o comando anterior continua válido:
 
 Na raiz do projeto, execute:
@@ -116,6 +118,6 @@ As traduções dos documentos ShowTrials podem ficar em `originais/showtrials/ID
 
 ## Publicação
 
-O [plano de evolução](docs/projeto/PLANO.md), as [decisões](docs/projeto/DECISOES.md) e o [modelo do catálogo](docs/projeto/MODELO-CATALOGO.md) registram a primeira entrega e as próximas etapas. A API local é de leitura; edição editorial e upload de traduções pertencem a entregas posteriores.
+O [plano de evolução](docs/projeto/PLANO.md), as [decisões](docs/projeto/DECISOES.md) e o [modelo do catálogo](docs/projeto/MODELO-CATALOGO.md) registram as entregas. A API pública continua oferecendo consultas; gravações de metadados e revisão ficam restritas à área editorial local. Edição de textos e upload de traduções pertencem a entregas posteriores.
 
 O site pode ser servido pelo GitHub Pages a partir da raiz, sem compilação. A publicação deve incluir `index.html`, `assets/`, `data/` e `originais/`. A pasta `temporario/` e as exportações de trabalho não precisam ser publicadas.

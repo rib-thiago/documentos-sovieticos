@@ -23,6 +23,8 @@ Aguarde o terminal mostrar os endereços. Na primeira inicialização, ele confe
 
 As respostas da API aparecem em JSON. Para pesquisar pela interface do site, abra [Buscar no acervo](http://localhost:8000/#/busca). O [roteiro manual da busca](BUSCA-MANUAL.md) explica os filtros, a paginação e o retorno aos resultados. O guia de endpoints também está em [api](http://localhost:8000/api).
 
+Para revisar pendências e editar metadados, abra [a área editorial local](http://localhost:8000/editorial). Reinicie o backend após atualizar o código. Mantenha somente um processo de backend neste acervo. O [manual editorial](EDITORIAL-LOCAL.md) explica a prévia, a confirmação, o histórico e a recuperação das alterações. As gravações pela interface atualizam automaticamente o manifesto e o índice; não é necessário exportá-los manualmente.
+
 ## Endpoints
 
 | URL | Resultado |
@@ -38,7 +40,7 @@ As respostas da API aparecem em JSON. Para pesquisar pela interface do site, abr
 
 Filtros em `/api/documents` e `/api/search`: `collection`, `subcollection`, `language`, `type`, `kind`. Paginação: `limit` de 1 a 100 e `offset` a partir de zero. Ordenação: `title`, `id`, `relevance` ou `source` — a última exige uma coleção. `scope=title` pesquisa só os títulos; o padrão é `all`. Use `type=unspecified` para registros sem tipo específico cadastrado.
 
-Palavras de `q` são combinadas por AND; uma expressão entre aspas duplas é uma frase. A busca distingue palavras russas flexionadas e não traduz automaticamente português para russo. Consultas inválidas retornam HTTP 400 com mensagem; IDs ausentes retornam 404. Operações de escrita retornam 405.
+Palavras de `q` são combinadas por AND; uma expressão entre aspas duplas é uma frase. A busca distingue palavras russas flexionadas e não traduz automaticamente português para russo. Consultas inválidas retornam HTTP 400 com mensagem; IDs ausentes retornam 404. As APIs públicas não aceitam escrita. Os POSTs de prévia e gravação são exclusivos da área editorial local, conforme seu manual.
 
 ## Conferir e manter o catálogo
 

@@ -40,10 +40,10 @@ def read_connection(path):
         connection.close()
 
 
-def ensure_index(root, path, catalog=None, rebuild=False, progress=None):
+def ensure_index(root, path, catalog=None, rebuild=False, progress=None, *, check_manifest=True, revision=None):
     catalog = catalog or model.load(root)
-    counts = model.validate(catalog, root)
-    revision = fingerprint(root)
+    counts = model.validate(catalog, root, check_manifest=check_manifest)
+    revision = revision or fingerprint(root)
     if path.exists() and not rebuild:
         try:
             with read_connection(path) as connection:

@@ -53,7 +53,7 @@ Cada associação tem `collection_id`, `document_id` e `position`, a partir de z
 - Atualização do manifesto após editar o catálogo: `python3 -m backend.catalog export`.
 - Conferência/registro de mudanças em arquivos: `refresh-files` e `refresh-files --write`.
 
-A edição de metadados nesta etapa é feita nos JSONs versionados, seguida de validação e exportação. Formulários de administração e novas importações serão implementados em outra entrega. O banco não deve ser usado para editar esses valores.
+A edição de metadados pode ser feita pela [área editorial local](EDITORIAL-LOCAL.md), que prepara uma prévia, guarda histórico e atualiza JSONs versionados, manifesto e índice. Edições externas nos JSONs continuam possíveis com validação, exportação e reinicialização do backend. O banco não deve ser usado para editar esses valores. A importação de traduções pela interface continua prevista para uma etapa posterior.
 
 ## Fora do escopo atual
 

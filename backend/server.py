@@ -4,17 +4,30 @@ from __future__ import annotations
 
 import argparse
 import html
+import ipaddress
 import json
 import mimetypes
+import secrets
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 
 from . import catalog as model
 from .database import QueryError, Repository, ensure_index
+from .editorial import Editorial, EditorialError, STATUSES, PRIORITIES
 
 
-def handler_for(repository):
+class LocalServer(ThreadingHTTPServer):
+    # Ao encerrar, aguarda gravações em curso antes de liberar o bloqueio do acervo.
+    daemon_threads = False
+
+    def server_close(self):
+        super().server_close()
+        if hasattr(self, "editorial"):
+            self.editorial.close()
+
+
+def handler_for(repository, editorial):
     class Handler(BaseHTTPRequestHandler):
         server_version = "DocumentosSovieticos/1"
 
@@ -35,13 +48,57 @@ def handler_for(repository):
             self.do_GET()
 
         def do_POST(self):
-            self.send_json({"error": "Esta entrega oferece somente consulta; edição será uma etapa própria"}, 405)
+            try:
+                self.require_local_editorial()
+                if self.path not in {"/api/editorial/preview", "/api/editorial/save"}:
+                    self.send_json({"error": "Operação não permitida"}, 405)
+                    return
+                if self.headers.get("Origin") != "http://" + self.headers.get("Host", ""):
+                    raise EditorialError("A edição exige uma página aberta no próprio backend local", 403)
+                if not secrets.compare_digest(self.headers.get("X-Editorial-Token", ""), editorial.token):
+                    raise EditorialError("Sessão editorial expirada. Recarregue a página.", 403)
+                if self.headers.get_content_type() != "application/json":
+                    raise EditorialError("Envie JSON", 415)
+                length = int(self.headers.get("Content-Length", "0"))
+                if not 1 <= length <= 200000:
+                    raise EditorialError("Pedido vazio ou maior que 200 KB", 413)
+                self.connection.settimeout(30)
+                payload = json.loads(self.rfile.read(length))
+                with editorial.lock:
+                    result = editorial.preview(repository, payload) if self.path.endswith("/preview") else editorial.save(repository, payload)
+                self.send_json(result)
+            except EditorialError as error:
+                self.send_json({"error": str(error)}, error.status)
+            except (ValueError, TypeError, model.CatalogError) as error:
+                self.send_json({"error": str(error)}, 400)
+            except Exception:
+                self.log_error("Falha na edição: %s", self.path)
+                self.send_json({"error": "Não foi possível concluir a gravação. Reabra o documento; o histórico local permite recuperar uma interrupção."}, 500)
 
-        do_PUT = do_POST
-        do_PATCH = do_POST
-        do_DELETE = do_POST
+        def unsupported_write(self):
+            self.send_json({"error": "Método não permitido"}, 405)
+
+        do_PUT = unsupported_write
+        do_PATCH = unsupported_write
+        do_DELETE = unsupported_write
+
+        def require_local_editorial(self):
+            host = urlsplit("http://" + self.headers.get("Host", ""))
+            try:
+                local_host = host.hostname == "localhost" or ipaddress.ip_address(host.hostname).is_loopback
+                local_peer = ipaddress.ip_address(self.client_address[0]).is_loopback
+                local_bind = ipaddress.ip_address(self.server.server_address[0]).is_loopback
+                port = host.port or 80
+            except (ValueError, TypeError):
+                raise EditorialError("Endereço local inválido", 403)
+            if not local_host or not local_peer or not local_bind or port != self.server.server_port:
+                raise EditorialError("A área editorial exige backend em 127.0.0.1 e acesso por localhost ou 127.0.0.1", 403)
 
         def do_GET(self):
+            with editorial.lock:
+                self.get_locked()
+
+        def get_locked(self):
             try:
                 request = urlsplit(self.path)
                 path = unquote(request.path)
@@ -51,13 +108,29 @@ def handler_for(repository):
                 if any(len(values) != 1 for values in raw_params.values()):
                     raise QueryError("Use cada parâmetro somente uma vez")
                 params = {key: values[0] for key, values in raw_params.items()}
-                if path in {"/api", "/api/"}:
+                if path == "/editorial":
+                    self.require_local_editorial()
+                    page = (Path(__file__).parent / "editorial.html").read_bytes()
+                    self.send_data(page, "text/html; charset=utf-8")
+                elif path.startswith("/api/editorial/"):
+                    self.require_local_editorial()
+                    if path == "/api/editorial/session":
+                        self.send_json({"token": editorial.token, "statuses": STATUSES, "priorities": list(PRIORITIES), "revision": editorial.revision()})
+                    elif path == "/api/editorial/queue":
+                        self.send_json(editorial.queue(repository, params))
+                    elif path == "/api/editorial/history":
+                        self.send_json(editorial.history(params.get("document")))
+                    elif path.startswith("/api/editorial/documents/"):
+                        self.send_json(editorial.document(repository, path.removeprefix("/api/editorial/documents/")))
+                    else:
+                        self.send_json({"error": "Endpoint editorial não encontrado"}, 404)
+                elif path in {"/api", "/api/"}:
                     self.send_json({"service": "Documentos Soviéticos", "schema_version": 1,
                         "endpoints": ["/api/health", "/api/collections", "/api/collections/centro-de-leningrado",
                             "/api/documents?limit=5", "/api/documents/showtrials-1665", "/api/vocabularies",
                             "/api/search?q=Николаева&language=ru&limit=5"], "site": "/", "guide": "/local"})
                 elif path == "/api/health":
-                    self.send_json({"status": "ok", "mode": "read_only", "schema_version": 1, **repository.info})
+                    self.send_json({"status": "ok", "mode": "local_editorial", "schema_version": 1, **repository.info})
                 elif path == "/api/vocabularies":
                     self.send_json(repository.catalog["vocabularies"])
                 elif path in {"/api/documents", "/api/search"}:
@@ -89,6 +162,8 @@ def handler_for(repository):
                     self.local_page()
                 else:
                     self.static_file(path)
+            except EditorialError as error:
+                self.send_json({"error": str(error)}, error.status)
             except (QueryError, ValueError) as error:
                 self.send_json({"error": str(error)}, 400)
             except OSError:
@@ -101,6 +176,8 @@ def handler_for(repository):
             info = repository.info
             examples = [
                 ("Abrir o site e o leitor existentes", "/"),
+                ("Buscar no acervo", "/#/busca"),
+                ("Área editorial local: revisão e metadados", "/editorial"),
                 ("Saúde e contagens do catálogo", "/api/health"),
                 ("Coleções e subcoleções", "/api/collections"),
                 ("Documento de Nikolaev com russo e português", "/api/documents/showtrials-1665"),
@@ -113,8 +190,8 @@ def handler_for(repository):
             page = f'''<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
             <title>Ambiente local — Documentos Soviéticos</title><style>body{{max-width:760px;margin:3rem auto;padding:0 1rem;font:17px/1.6 system-ui;color:#252525;background:#faf8f4}}h1{{font:600 1.8rem Georgia,serif}}a{{color:#8b2c2c}}li{{margin:.6rem 0}}code{{font-size:.9em}}</style>
             <h1>Ambiente local do acervo</h1><p>{info['documents']} documentos · {info['editions']} versões por idioma · {info['collections']} coleções · {info['subcollections']} subcoleções.</p>
-            <p>O site mantém a navegação atual. Esta página reúne os testes de consulta do novo catálogo; as respostas da API aparecem em JSON. A interface de busca será a próxima entrega.</p><ul>{links}</ul>
-            <p>Para encerrar, pressione <kbd>Ctrl+C</kbd> no terminal. Depois de editar metadados, exporte o manifesto e reinicie o backend para atualizar o índice.</p></html>'''
+            <p>Consulte o site, use a busca e abra a área editorial para revisar pendências e editar metadados com prévia e histórico. Os endpoints da API apresentam JSON.</p><ul>{links}</ul>
+            <p>Para encerrar, pressione <kbd>Ctrl+C</kbd> no terminal. As gravações da área editorial atualizam manifesto e busca automaticamente. Edições externas dos arquivos exigem reinicialização.</p></html>'''
             self.send_data(page.encode("utf-8"), "text/html; charset=utf-8")
 
         def static_file(self, path):
@@ -139,13 +216,18 @@ def handler_for(repository):
 
 
 def create_server(root, host="127.0.0.1", port=8000, db_path=None, rebuild=False, progress=None):
-    catalog = model.load(root)
-    path = db_path or root / ".local/catalog.sqlite3"
-    info = ensure_index(root, path, catalog, rebuild, progress)
-    repository = Repository(root, path, catalog, info)
-    server = ThreadingHTTPServer((host, port), handler_for(repository))
-    server.daemon_threads = True
+    editorial = Editorial(root)
+    try:
+        catalog = model.load(root)
+        path = db_path or root / ".local/catalog.sqlite3"
+        info = ensure_index(root, path, catalog, rebuild, progress)
+        repository = Repository(root, path, catalog, info)
+        server = LocalServer((host, port), handler_for(repository, editorial))
+    except Exception:
+        editorial.close()
+        raise
     server.repository = repository
+    server.editorial = editorial
     return server
 
 
@@ -161,7 +243,7 @@ def main():
     except (model.CatalogError, OSError) as error:
         parser.exit(1, f"Não foi possível iniciar: {error}\nSe a porta estiver ocupada, encerre o servidor anterior ou use --port 8001.\n")
     host, port = server.server_address
-    print(f"Site: http://{host}:{port}/\nTestes locais: http://{host}:{port}/local\nCtrl+C para encerrar.", flush=True)
+    print(f"Site: http://{host}:{port}/\nAmbiente local: http://{host}:{port}/local\nÁrea editorial: http://{host}:{port}/editorial\nCtrl+C para encerrar.", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
