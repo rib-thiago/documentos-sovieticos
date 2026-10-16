@@ -5303,8 +5303,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2679.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2679.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2679.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Protocolo de interrogatório de L. V. Nikolaev",
+      "title_en": "Interrogation Record of L. V. Nikolaev",
       "collected_date": "1934-12-06T00:01:00"
     },
     {
@@ -5322,8 +5336,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2680.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2680.en.md",
+          "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2680.pt.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Protocolo de interrogatório de L. V. Nikolaev",
+      "title_en": "Interrogation Record of L. V. Nikolaev",
       "collected_date": "1934-12-06T01:01:00"
     },
     {
@@ -5341,8 +5369,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2681.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2681.en.md",
+          "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2681.pt.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Protocolo de interrogatório de L. V. Nikolaev",
+      "title_en": "Interrogation Record of L. V. Nikolaev",
       "collected_date": "1934-12-06T02:01:00"
     },
     {
