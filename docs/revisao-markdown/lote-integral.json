@@ -1,0 +1,27 @@
+{
+  "policy": "mass-v1",
+  "aplicado": true,
+  "documentos": 2179,
+  "blocos_preservados": 167421,
+  "titulos": 737,
+  "documentos_com_indice": 487,
+  "documentos_sem_titulos_confirmados": 1692,
+  "documentos_por_prioridade": {
+    "urgente": 50,
+    "alta": 226,
+    "media": 12,
+    "baixa": 1775,
+    "sem_pendencia": 116
+  },
+  "ocorrencias_por_problema": {
+    "tabelas_linearizadas": 38,
+    "texto_longo_sem_secoes_suficientes": 236,
+    "imagens_sem_transcricao_confirmada": 8,
+    "links_nao_reconstruidos": 2042,
+    "titulos_ambiguos": 5,
+    "decisao_editorial_pendente": 6,
+    "listas_sem_marcacao": 10
+  },
+  "pendencias": 2345,
+  "revisoes_preservadas": 31
+}

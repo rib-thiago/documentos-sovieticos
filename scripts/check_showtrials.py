@@ -4,6 +4,8 @@ import argparse
 import json
 from pathlib import Path
 
+from prepare_markdown import check_conversion
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -12,6 +14,10 @@ def check(source):
     originals = {c["id"]: c for c in json.loads((source / "catalogos/colecoes.json").read_text())}
     source_docs = {d["document_post_id"]: d for d in json.loads((source / "catalogos/documentos.json").read_text())}
     docs = {d["id"]: d for d in manifest["documents"]}
+    conversions_path = ROOT / "data/markdown-conversions.json"
+    conversions = {d["id"]: d for d in json.loads(conversions_path.read_text())["documents"]} if conversions_path.exists() else {}
+    for conversion in conversions.values():
+        check_conversion(conversion)
     assert len(docs) == len(manifest["documents"]) == len(source_docs) == 2179
 
     memberships, subcollections = set(), set()
@@ -38,7 +44,12 @@ def check(source):
                 expected_body = raw.partition(b"\n---\n\n")[2]
                 assert expected_body
                 ru = next(l for l in doc["languages"] if l["code"] == "ru")
-                assert (ROOT / ru["file"]).read_bytes() == expected_body, doc_id
+                if doc_id in conversions:
+                    conversion = conversions[doc_id]
+                    assert ru["file"] == conversion["markdown"] and ru["format"] == "markdown"
+                    assert (ROOT / conversion["original"]).read_bytes() == expected_body, doc_id
+                else:
+                    assert (ROOT / ru["file"]).read_bytes() == expected_body, doc_id
         assert collection["document_ids"] == collection_members
     assert subcollections == set(originals) - {"853"}
     assert memberships == set(docs), "Documento sem subcoleção"
@@ -49,7 +60,7 @@ def check(source):
     for doc in all_docs:
         for lang in doc["languages"]:
             assert (ROOT / lang["file"]).is_file(), lang["file"]
-    print("OK: 2.179 corpos idênticos à fonte; nove coleções e 28 subcoleções; ordem e vínculos preservados; IDs únicos e idiomas locais disponíveis.")
+    print(f"OK: 2.179 originais idênticos à fonte; {len(conversions)} versões Markdown conferidas; nove coleções e 28 subcoleções; ordem e vínculos preservados; IDs únicos e idiomas locais disponíveis.")
 
 
 if __name__ == "__main__":

@@ -30,8 +30,8 @@ function absURL(path) { return new URL(path, document.baseURI).href; }
 /* ---------- Segmentação legada, usada apenas nas ferramentas de estudo ---------- */
 
 function normalizeHeadingLevel(text, mdLevel) {
-  if (/^[IVX]+\.\s/.test(text)) return 2;
-  if (/^\d+[.)]\s/.test(text)) return 3;
+  if (/^[IVX]+\.\s/.test(text)) return Math.max(mdLevel, 2);
+  if (/^\d+[.)]\s/.test(text)) return Math.max(mdLevel, 3);
   return mdLevel;
 }
 
@@ -54,7 +54,7 @@ function parseStudyMarkdown(md) {
     if (!chunk.includes("\n")) {
       const h = chunk.match(/^(#{1,6})\s+(.+)$/);
       if (h) {
-        const level = Math.min(h[1].length, 3);
+        const level = h[1].length;
         blocks.push({
           type: "h" + normalizeHeadingLevel(h[2].trim(), level),
           text: h[2].trim(),
@@ -86,7 +86,7 @@ function parseStudyMarkdown(md) {
 /* ---------- Alinhamento N-ário ---------- */
 
 function zipBlocks(langs) {
-  const rank = { h1: 0, h2: 1, h3: 2, image: 3, list: 4, quote: 4, p: 5, text: 5 };
+  const rank = { h1: 0, h2: 1, h3: 2, h4: 3, h5: 4, h6: 5, image: 6, list: 7, quote: 7, p: 8, text: 8 };
   const n = Math.max(...langs.map(l => l.blocks.length));
   const out = [];
   for (let i = 0; i < n; i++) {
@@ -130,10 +130,27 @@ function escapeHTML(s) {
 
 let markdownRenderer = null;
 
+function joinLiteralTextTokens(state) {
+  for (const block of state.tokens) {
+    if (!block.children) continue;
+    const joined = [];
+    for (const token of block.children) {
+      if (token.type === "text_special") token.type = "text";
+      const previous = joined[joined.length - 1];
+      if (token.type === "text" && previous?.type === "text") previous.content += token.content;
+      else joined.push(token);
+    }
+    block.children = joined;
+  }
+}
+
 function markdown() {
   if (markdownRenderer) return markdownRenderer;
   markdownRenderer = markdownit({ html: false, linkify: true, typographer: false })
     .use(markdownitFootnote);
+  // Resolve os escapes antes de reconhecer URLs: qr\_2.pdf deve apontar para qr_2.pdf.
+  markdownRenderer.inline.ruler.disable("linkify");
+  markdownRenderer.core.ruler.before("linkify", "join_literal_text", joinLiteralTextTokens);
   const imageRule = markdownRenderer.renderer.rules.image;
   markdownRenderer.renderer.rules.image = (tokens, index, options, env, renderer) => {
     const token = tokens[index];
@@ -383,9 +400,7 @@ function renderCellContent(block, code) {
   }
 
   let tag = "p";
-  if (block.type === "h1") tag = "h2";
-  else if (block.type === "h2") tag = "h3";
-  else if (block.type === "h3") tag = "h4";
+  if (/^h[1-6]$/.test(block.type)) tag = "h" + Math.min(Number(block.type.slice(1)) + 1, 6);
 
   const p = el(tag);
   p.innerHTML = inline(raw);
@@ -394,7 +409,7 @@ function renderCellContent(block, code) {
 }
 
 function renderBlock(b, allLangs) {
-  const isHeading = b.type === "h1" || b.type === "h2" || b.type === "h3";
+  const isHeading = /^h[1-6]$/.test(b.type);
   const isImage = b.type === "image";
   const wrap = el("div", { class: "block" + (isHeading ? " is-heading" : "") });
   const baseCode = baseLanguageCode(allLangs);
@@ -826,7 +841,7 @@ function setupStudyNavigation(meta, langs) {
       }
       const type = source?.blocks[rowIndex]?.type;
       if (language === indexLanguage && /^h[1-6]$/.test(type || "")) {
-        const node = cell.querySelector("h2, h3, h4");
+        const node = cell.querySelector("h2, h3, h4, h5, h6");
         if (node) {
           node.id = `study-${meta.id}-${language}-section-${rowIndex}`;
           headings.push({ node, level: Number(type.slice(1)) });

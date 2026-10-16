@@ -1,0 +1,207 @@
+{
+  "documentos": 2179,
+  "com_tags_h1_h6": 0,
+  "com_paragrafos_centralizados": 2119,
+  "com_centralizados_numerados": 35,
+  "piloto": [
+    {
+      "id": "showtrials-2645",
+      "blocos": 843,
+      "titulos": 9
+    },
+    {
+      "id": "showtrials-5855",
+      "blocos": 341,
+      "titulos": 8
+    },
+    {
+      "id": "showtrials-9470",
+      "blocos": 428,
+      "titulos": 9
+    }
+  ],
+  "convertidos": [
+    {
+      "id": "showtrials-10123",
+      "blocos": 158,
+      "titulos": 20
+    },
+    {
+      "id": "showtrials-10615",
+      "blocos": 97,
+      "titulos": 10
+    },
+    {
+      "id": "showtrials-11086",
+      "blocos": 39,
+      "titulos": 2
+    },
+    {
+      "id": "showtrials-2644",
+      "blocos": 1385,
+      "titulos": 14
+    },
+    {
+      "id": "showtrials-2645",
+      "blocos": 843,
+      "titulos": 9
+    },
+    {
+      "id": "showtrials-4583",
+      "blocos": 462,
+      "titulos": 2
+    },
+    {
+      "id": "showtrials-4771",
+      "blocos": 264,
+      "titulos": 6
+    },
+    {
+      "id": "showtrials-4773",
+      "blocos": 109,
+      "titulos": 7
+    },
+    {
+      "id": "showtrials-4793",
+      "blocos": 111,
+      "titulos": 12
+    },
+    {
+      "id": "showtrials-4834",
+      "blocos": 56,
+      "titulos": 5
+    },
+    {
+      "id": "showtrials-5240",
+      "blocos": 191,
+      "titulos": 6
+    },
+    {
+      "id": "showtrials-5723",
+      "blocos": 235,
+      "titulos": 2
+    },
+    {
+      "id": "showtrials-5855",
+      "blocos": 341,
+      "titulos": 8
+    },
+    {
+      "id": "showtrials-5864",
+      "blocos": 391,
+      "titulos": 5
+    },
+    {
+      "id": "showtrials-5904",
+      "blocos": 108,
+      "titulos": 3
+    },
+    {
+      "id": "showtrials-5917",
+      "blocos": 222,
+      "titulos": 4
+    },
+    {
+      "id": "showtrials-6175",
+      "blocos": 236,
+      "titulos": 10
+    },
+    {
+      "id": "showtrials-6693",
+      "blocos": 131,
+      "titulos": 3
+    },
+    {
+      "id": "showtrials-7214",
+      "blocos": 369,
+      "titulos": 7
+    },
+    {
+      "id": "showtrials-7988",
+      "blocos": 120,
+      "titulos": 20
+    },
+    {
+      "id": "showtrials-8287",
+      "blocos": 176,
+      "titulos": 12
+    },
+    {
+      "id": "showtrials-8628",
+      "blocos": 48,
+      "titulos": 5
+    },
+    {
+      "id": "showtrials-8646",
+      "blocos": 124,
+      "titulos": 6
+    },
+    {
+      "id": "showtrials-8652",
+      "blocos": 172,
+      "titulos": 15
+    },
+    {
+      "id": "showtrials-8690",
+      "blocos": 618,
+      "titulos": 27
+    },
+    {
+      "id": "showtrials-8725",
+      "blocos": 107,
+      "titulos": 7
+    },
+    {
+      "id": "showtrials-8827",
+      "blocos": 85,
+      "titulos": 4
+    },
+    {
+      "id": "showtrials-8849",
+      "blocos": 472,
+      "titulos": 12
+    },
+    {
+      "id": "showtrials-9061",
+      "blocos": 116,
+      "titulos": 7
+    },
+    {
+      "id": "showtrials-9470",
+      "blocos": 428,
+      "titulos": 9
+    },
+    {
+      "id": "showtrials-9930",
+      "blocos": 106,
+      "titulos": 9
+    }
+  ],
+  "titulos_publicados": 268,
+  "adiados": [
+    {
+      "id": "showtrials-4828",
+      "reason": "A numeração é de linhas/células de uma tabela financeira. Precisa de reconstrução tabular própria, não de títulos."
+    },
+    {
+      "id": "showtrials-7248",
+      "reason": "Data e saudação não fornecem seções internas suficientes para índice."
+    },
+    {
+      "id": "showtrials-7250",
+      "reason": "Data e saudação não fornecem seções internas suficientes para índice."
+    },
+    {
+      "id": "showtrials-7995",
+      "reason": "Fragmentos e separadores com numeração parcial; exige revisão editorial dos limites das notas e dos excertos."
+    },
+    {
+      "id": "showtrials-8623",
+      "reason": "Marcadores numéricos isolados e sequência incompleta; deixar a hierarquia para revisão editorial."
+    },
+    {
+      "id": "showtrials-6762",
+      "reason": "Numeração alternativa em chaves e colchetes de uma minuta; a hierarquia requer revisão editorial específica."
+    }
+  ]
+}
