@@ -56,7 +56,7 @@ function staticSearch(params) {
     return terms.every(term => title.includes(foldedSearchText(term.replace(/^"|"$/g, ""))));
   }).map(doc => ({ id: doc.id, titles: { pt: doc.title_pt, ru: doc.title_ru, en: doc.title_en },
     kind: doc.type || "document", languages: doc.languages.map(l => l.code), author_label: doc.author,
-    historical_date: { display: doc.date }, document_type: null }));
+    historical_date: { display: doc.date }, collected_date:doc.collected_date, document_type: null }));
   const sort = params.get("sort") || "title";
   if (sort !== "source") items.sort((a, b) => {
     const title = d => d.titles.pt || d.titles.ru || d.titles.en || d.id;
@@ -76,14 +76,13 @@ function searchResult(doc, params, environment) {
   if (language) target.set("idioma", language);
   const item = el("a", { class: "doc-list-item search-result", href: `#/doc/${doc.id}?${target}` });
   const title = doc.titles.pt || doc.titles.ru || doc.titles.en || doc.id;
-  item.appendChild(el("h2", { class: "doc-list-title", text: title,
-    lang: doc.titles.pt ? "pt-BR" : doc.titles.ru ? "ru" : "en" }));
+  item.appendChild(el("div",{class:"document-title-line"},[el("h2", { class: "doc-list-title", text: title,
+    lang: doc.titles.pt ? "pt-BR" : doc.titles.ru ? "ru" : "en" }),documentDateBadge(doc)]));
   if (doc.titles.pt && doc.titles.ru) item.appendChild(el("p", { class: "doc-list-ru", lang: "ru", text: doc.titles.ru }));
   const metadata = el("div", { class: "doc-list-meta" });
   const type = environment.vocabularies.document_types?.[doc.document_type];
   metadata.appendChild(el("span", { text: type || (doc.kind === "article" ? "Artigo" : "Documento") }));
   if (doc.author_label) metadata.appendChild(el("span", { text: doc.author_label }));
-  if (doc.historical_date?.display) metadata.appendChild(el("span", { text: doc.historical_date.display }));
   metadata.appendChild(el("span", { text: doc.languages.map(code => code.toUpperCase()).join(" · ") }));
   item.appendChild(metadata);
   if (doc.match?.snippet) {

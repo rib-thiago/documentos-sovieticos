@@ -4,6 +4,8 @@
 
 const state = {
   manifest: null,
+  editorialAvailable: false,
+  routeVersion: 0,
   cache: new Map(),
   documentIndex: new Map(),
   activeCollection: null,
@@ -200,21 +202,56 @@ function baseLanguageCode(langs) {
 
 /* ---------- Modo de visualização ---------- */
 
-function refreshDocument() {
+function refreshDocument(preservePosition=true) {
   if (!state.activeDocument) return;
   const { meta, langs, blocks, collection, subcollection } = state.activeDocument;
-  renderDocument(meta, langs, blocks, collection, subcollection, false);
+  const scrollY=window.scrollY;
+  const viewportTop=readingViewportTop();
+  const previous=state.readingTracker?.entries||[];
+  const visible=previous.find(entry=>{
+    const rect=entry.node.getBoundingClientRect();
+    return rect.height>0&&rect.bottom>viewportTop&&rect.top<window.innerHeight;
+  });
+  const rect=visible?.node.getBoundingClientRect();
+  const peers=visible?previous.filter(entry=>entry.language===visible.language):[];
+  const position=visible?{
+    language:visible.language,blockIndex:visible.blockIndex,
+    signature:readingFingerprint(visible.node.textContent),
+    fraction:Math.max(0,(viewportTop-rect.top)/rect.height),
+    top:Math.max(rect.top,viewportTop),ratio:peers.indexOf(visible)/Math.max(1,peers.length-1)
+  }:null;
+  renderDocumentBody(meta,langs,blocks);
+  document.querySelector(".doc-toolbar")?.updateViewing?.();
+  if(!preservePosition){state.readingRenderVersion=(state.readingRenderVersion||0)+1;return;}
+  const rendered=state.activeDocument;
+  const renderVersion=(state.readingRenderVersion||0)+1;
+  state.readingRenderVersion=renderVersion;
+  const restore=()=>{
+    if(state.activeDocument!==rendered||state.readingRenderVersion!==renderVersion)return;
+    const entries=(state.readingTracker?.entries||[]).filter(entry=>{
+      const bounds=entry.node.getBoundingClientRect();return bounds.height>0&&bounds.width>0;
+    });
+    const matching=position&&entries.find(entry=>entry.language===position.language&&readingFingerprint(entry.node.textContent)===position.signature);
+    const sameLanguage=position&&entries.filter(entry=>entry.language===position.language);
+    const candidates=sameLanguage?.length?sameLanguage:entries;
+    const target=matching||(position&&candidates[Math.round(position.ratio*Math.max(0,candidates.length-1))]);
+    const bounds=target?.node.getBoundingClientRect();
+    const top=bounds?window.scrollY+bounds.top+bounds.height*position.fraction-position.top:scrollY;
+    window.scrollTo({top:Math.max(0,top),behavior:"instant"});
+  };
+  restore();
+  requestAnimationFrame(restore);
 }
 
 function setViewMode(mode) {
-  if (!["reading", "study"].includes(mode)) return;
+  if (!["reading", "study"].includes(mode) || state.viewMode === mode) return;
   state.viewMode = mode;
   try { localStorage.setItem("documentViewMode", mode); } catch (e) {}
   refreshDocument();
 }
 
 function setStudyMode(mode) {
-  if (!["paragraph", "parallel"].includes(mode)) return;
+  if (!["paragraph", "parallel"].includes(mode) || state.studyMode === mode) return;
   state.studyMode = mode;
   try { localStorage.setItem("studyMode", mode); } catch (e) {}
   refreshDocument();
@@ -232,9 +269,9 @@ function setReadingLanguage(meta, langs, code) {
   if (!langs.some(l => l.code === code)) return;
   state.readingLanguages.set(meta.id, code);
   try { localStorage.setItem("readingLanguage:" + meta.id, code); } catch (e) {}
-  renderReadingContent(meta, langs);
+  refreshDocument();
   const exportSelect = document.querySelector(".export-language");
-  if (exportSelect) exportSelect.value = code;
+  if (exportSelect) {exportSelect.value = code;exportSelect.updateOptions?.();}
 }
 
 /* ---------- Colunas paralelas ---------- */
@@ -313,6 +350,7 @@ function setParallelCols(side, value) {
   } catch (e) {}
   applyParallelLayout();
   updateParallelSelects();
+  document.querySelector(".doc-toolbar")?.updateViewing?.();
   const active = state.activeDocument;
   if (active) setupStudyNavigation(active.meta, active.langs);
 }
@@ -320,6 +358,7 @@ function setParallelCols(side, value) {
 function updateParallelSelects() {
   document.querySelectorAll(".lang-select").forEach(sel => {
     sel.value = state.parallelCols[sel.dataset.side];
+    sel.updateOptions?.();
   });
 }
 
@@ -462,11 +501,77 @@ function collectionDocuments(collection) {
   return collection.documents || collection.document_ids.map(id => state.documentIndex.get(id));
 }
 
-function collectionDocumentURL(doc, subcollection, collection) {
+const COLLECTION_PAGE_SIZE = 25;
+
+function collectionDocumentURL(doc, subcollection, collection, page = null) {
   const params = new URLSearchParams();
   params.set("colecao", collection.id);
   if (subcollection) params.set("subcolecao", subcollection.id);
+  if(page)params.set("pagina",String(page));
   return `#/doc/${doc.id}?${params}`;
+}
+
+function collectionListURL(collection,subcollection,page=1) {
+  const path=`#/colecao/${collection.id}`+(subcollection?`/subcolecao/${subcollection.id}`:collection.subcollections?"/todos":"");
+  return path+(page>1?`?pagina=${page}`:"");
+}
+
+function documentDateBadge(doc) {
+  const date=documentDateInfo(doc);
+  if(!date)return null;
+  return el(date.iso?"time":"span",{class:"doc-date"+(date.source?" is-source-date":""),datetime:date.iso,
+    title:date.label,"aria-label":`${date.label}: ${date.text}`,text:date.text});
+}
+
+function renderCollectionPagination(total,page,collection,subcollection) {
+  const pages=Math.max(1,Math.ceil(total/COLLECTION_PAGE_SIZE));
+  const nav=el("nav",{class:"catalog-pagination","aria-label":"Páginas dos documentos"});
+  if(pages===1)return nav;
+  const add=(label,target)=>el("a",{href:collectionListURL(collection,subcollection,target),text:label});
+  nav.append(page>1?add("← Anterior",page-1):el("span",{class:"pagination-disabled","aria-disabled":"true",text:"← Anterior"}));
+  let previous=0;
+  for(const value of [...new Set([1,page-1,page,page+1,pages])].filter(n=>n>=1&&n<=pages).sort((a,b)=>a-b)) {
+    if(previous&&value-previous>1)nav.append(el("span",{class:"pagination-gap",text:"…"}));
+    nav.append(value===page?el("span",{class:"pagination-current","aria-current":"page",text:String(value)}):add(String(value),value));
+    previous=value;
+  }
+  nav.append(page<pages?add("Próxima →",page+1):el("span",{class:"pagination-disabled","aria-disabled":"true",text:"Próxima →"}));
+  return nav;
+}
+
+function renderDocumentSequence(meta,collection,subcollection,compact=false) {
+  const nav=el("nav",{class:"document-sequence"+(compact?" is-compact":""),"aria-label":compact?"Navegação no início do documento":"Navegação no fim do documento"});
+  if(!collection)return nav;
+  const all=collectionDocuments(collection);const map=new Map(all.map(doc=>[doc.id,doc]));
+  const documents=subcollection?subcollection.document_ids.map(id=>map.get(id)).filter(Boolean):all;
+  const index=documents.findIndex(doc=>doc.id===meta.id);
+  if(index<0)return nav;
+  const language=state.activeDocument?readingLanguage(meta,state.activeDocument.langs):null;
+  const query=new URLSearchParams(location.hash.split("?")[1]||"");
+  function adjacent(delta) {
+    const doc=documents[index+delta];const caption=delta<0?"← Anterior":"Próximo →";
+    if(!doc)return el("span",{class:"sequence-link is-disabled","aria-disabled":"true",text:caption});
+    const [path,raw=""]=collectionDocumentURL(doc,subcollection,collection,Math.floor((index+delta)/COLLECTION_PAGE_SIZE)+1).split("?");
+    const params=new URLSearchParams(raw);
+    if(language&&doc.languages.some(l=>l.code===language))params.set("idioma",language);
+    if(query.get("busca")?.startsWith("#/busca"))params.set("busca",query.get("busca"));
+    const date=documentDateInfo(doc);
+    const anchor=el("a",{class:"sequence-link",href:path+"?"+params,title:(doc.title_pt||doc.title_ru)+(date?" · "+date.text:"")},[
+      el("span",{class:"sequence-direction",text:caption}),el("strong",{class:"sequence-title",text:doc.title_pt||doc.title_ru}),documentDateBadge(doc)]);
+    anchor.addEventListener("click",()=>{
+      const current=state.activeDocument;
+      const selected=current?.meta.id===meta.id?readingLanguage(meta,current.langs):language;
+      if(selected&&doc.languages.some(l=>l.code===selected))params.set("idioma",selected);else params.delete("idioma");
+      anchor.href=path+"?"+params;
+    });
+    return anchor;
+  }
+  const list=collectionListURL(collection,subcollection,Math.floor(index/COLLECTION_PAGE_SIZE)+1);
+  nav.append(adjacent(-1),el("div",{class:"sequence-context"},[
+    el("span",{text:`${index+1} de ${documents.length} · ${subcollection?"Subcoleção":"Coleção"}`}),
+    el("a",{href:list,text:compact?"Voltar à lista":subcollection?.title_pt||collection.title_pt}),
+  ]),adjacent(1));
+  return nav;
 }
 
 function renderBreadcrumbs(collection, subcollection, current) {
@@ -477,9 +582,10 @@ function renderBreadcrumbs(collection, subcollection, current) {
     nav.appendChild(el("a", { href: `#/colecao/${collection.id}`, text: collection.title_pt }));
   }
   if (subcollection) {
+    const page=Number(new URLSearchParams(location.hash.split("?")[1]||"").get("pagina"));
     nav.appendChild(el("span", { text: " / ", "aria-hidden": "true" }));
     nav.appendChild(el("a", {
-      href: `#/colecao/${collection.id}/subcolecao/${subcollection.id}`,
+      href: `#/colecao/${collection.id}/subcolecao/${subcollection.id}`+(Number.isSafeInteger(page)&&page>1?`?pagina=${page}`:""),
       text: subcollection.title_pt,
     }));
   }
@@ -508,7 +614,9 @@ function renderDocHeader(meta, collection, subcollection) {
     header.appendChild(el("p", { class: "doc-author", text: meta.author }));
   }
   const m = el("div", { class: "doc-meta" });
-  [meta.date, meta.archive].filter(Boolean)
+  const date=documentDateInfo(meta);
+  if(date)m.appendChild(el("span",{text:`Data: ${date.text}`}));
+  [meta.archive].filter(Boolean)
     .forEach(t => m.appendChild(el("span", { text: t })));
   if (m.children.length) header.appendChild(m);
   return header;
@@ -527,6 +635,8 @@ function documentMarkdown(meta, language) {
   const lines = [`# ${escapeMarkdownText(title)}`, ""];
   if (meta.source_url) lines.push(`Fonte: ${meta.source_url}`);
   if (meta.source_id) lines.push(`ID ShowTrials: ${meta.source_id}`);
+  const date=meta.date||meta.collected_date;
+  if(date) lines.push(`Data do documento: ${String(date).split("T")[0]}`);
   lines.push(`Idioma: ${language.code.toUpperCase()}`, "", "---", "");
   lines.push(format === "text" ? escapeMarkdownText(body) : body);
   return lines.join("\n");
@@ -558,8 +668,80 @@ function languageSelect(langs, className, label, code) {
   return select;
 }
 
+function documentActionLanguage(meta,langs) {
+  return state.viewMode==="study"&&state.studyMode==="parallel"&&langs.some(lang=>lang.code===state.parallelCols.left)
+    ?state.parallelCols.left:readingLanguage(meta,langs);
+}
+
+function languageField(langs,className,label,code) {
+  const select=languageSelect(langs,className,label,code);
+  select.hidden=true;
+  const list=el("div",{class:"panel-option-list",role:"group","aria-label":label});
+  const buttons=[];
+  for(const option of select.options){
+    const button=el("button",{type:"button",class:"panel-option",text:option.textContent});
+    button.addEventListener("click",()=>{select.value=option.value;select.dispatchEvent(new Event("change",{bubbles:true}));});
+    buttons.push([button,option.value]);list.append(button);
+  }
+  select.updateOptions=()=>buttons.forEach(([button,value])=>{button.classList.toggle("active",select.value===value);button.setAttribute("aria-pressed",String(select.value===value));});
+  select.addEventListener("change",select.updateOptions);select.updateOptions();
+  return {select,element:el("div",{class:"language-options"},[select,list])};
+}
+
 function renderToolbar(langs, meta) {
-  const bar = el("div", { class: "doc-toolbar" });
+  const bar = el("section", { class: "doc-toolbar", "aria-label":"Painel do documento" });
+  const controls=el("div",{class:"reader-panel-controls",id:"reader-panel-controls"});
+  const actions=el("div",{class:"reader-panel-actions"});
+  const heading=el("div",{class:"reader-panel-heading"},[
+    el("span",{class:"reader-panel-title",text:"Painel do documento"}),
+    el("span",{class:"reader-panel-status",text:state.viewMode==="study"&&langs.length>1?"Estudo":"Leitura"})
+  ]);
+  const quickResume=el("button",{type:"button",class:"panel-button panel-quick-resume",text:"● Retomar",hidden:"hidden",title:"Retomar o parágrafo marcado"});
+  quickResume.addEventListener("click",()=>{const record=savedReadingProgress(meta,langs);if(record)resumeReading(meta,langs,record);});
+  const head=el("div",{class:"reader-panel-head"},[heading,actions]);
+  let expanded=false;
+  const expand=el("button",{type:"button",class:"panel-button panel-expand","aria-controls":"reader-panel-controls"});
+  const applyExpanded=()=>{
+    controls.hidden=!expanded;
+    expand.textContent=expanded?"Recolher ▴":"Expandir ▾";
+    expand.setAttribute("aria-expanded",String(expanded));
+    bar.classList.toggle("is-collapsed",!expanded);
+    if(!expanded)for(const item of controls.querySelectorAll("details[open]"))item.open=false;
+    updateReadingLayout();
+  };
+  expand.addEventListener("click",()=>{expanded=!expanded;applyExpanded();});
+  const section=(title,description,className)=>{
+    const body=el("div",{class:"control-section-body"});
+    const group=el("section",{class:"control-section "+className},[
+      el("div",{class:"control-section-heading"},[el("h2",{text:title})]),body
+    ]);
+    controls.append(group);
+    return body;
+  };
+  const navigation=section("Navegar no texto","Índice e posição marcada nesta sessão","control-navigation");
+  navigation.append(el("div",{class:"reading-tools",role:"group","aria-label":"Índice e marcador do documento",hidden:"hidden"}));
+  const viewing=section("Visualização e idiomas","Escolha como consultar o documento","control-viewing");
+  const documentActions=section("Trabalhar com o documento","Exportação e edição independentes da visualização","control-document-actions");
+  bar.append(head,controls);
+  // Os menus compartilham a mesma estrutura, incluindo a edição carregada localmente.
+  bar.addEventListener("toggle",event=>{
+    if(event.target.tagName==="DETAILS"&&event.target.open)
+      for(const other of controls.querySelectorAll("details[open]"))if(other!==event.target)other.open=false;
+  },true);
+  const menu = (title, content) => {
+    const details=el("details",{class:"editorial-menu reader-options"});
+    details.append(el("summary",{text:title}),el("div",{class:"editorial-menu-body"},[content]));
+    details.addEventListener("toggle",()=>{
+      if(details.open)for(const other of bar.querySelectorAll("details[open]"))if(other!==details)other.open=false;
+    });
+    return details;
+  };
+  const pin=el("button",{type:"button",class:"toolbar-pin panel-button","aria-pressed":"false",title:"Fixar barra durante a rolagem",text:"Fixar"});
+  let pinned=sessionRead("readerToolbarPinned")==="true";
+  const applyPin=()=>{bar.classList.toggle("is-pinned",pinned);pin.setAttribute("aria-pressed",String(pinned));pin.textContent=pinned?"Soltar":"Fixar";pin.title=pinned?"Deixar barra no início do texto":"Fixar barra durante a rolagem";updateReadingLayout();};
+  pin.addEventListener("click",()=>{pinned=!pinned;sessionWrite("readerToolbarPinned",String(pinned));applyPin();});
+  bar.classList.toggle("is-pinned",pinned);
+  pin.setAttribute("aria-pressed",String(pinned));pin.textContent=pinned?"Soltar":"Fixar";
   const hasTranslations = langs.length > 1;
   const isStudy = hasTranslations && state.viewMode === "study";
 
@@ -574,9 +756,10 @@ function renderToolbar(langs, meta) {
       button.addEventListener("click", () => setViewMode(code));
       modes.appendChild(button);
     });
-    bar.appendChild(modes);
+    const modeMenu=menu("Modo · "+(isStudy?"Estudo":"Leitura"),modes);
+    modeMenu.dataset.control="mode";viewing.appendChild(modeMenu);
 
-    if (isStudy) {
+    {
       const submodes = el("div", { class: "toolbar-group study-controls", role: "group", "aria-label": "Visualização de estudo" });
       [["paragraph", "Por parágrafo"], ["parallel", "Paralelo"]].forEach(([code, label]) => {
         const active = state.studyMode === code;
@@ -587,32 +770,39 @@ function renderToolbar(langs, meta) {
         button.addEventListener("click", () => setStudyMode(code));
         submodes.appendChild(button);
       });
-      bar.appendChild(submodes);
-    } else {
+      const studyMenu=menu("Estudo · "+(state.studyMode==="parallel"?"Paralelo":"Por parágrafo"),submodes);
+      studyMenu.dataset.control="study";viewing.appendChild(studyMenu);
+    }
+    {
       const languageGroup = el("div", { class: "toolbar-group" });
       languageGroup.appendChild(el("span", { class: "toolbar-label", text: "Idioma:" }));
-      const select = languageSelect(langs, "reading-language", "Idioma de leitura", readingLanguage(meta, langs));
+      const field = languageField(langs, "reading-language", "Idioma de leitura", readingLanguage(meta, langs));
+      const select=field.select;
       select.addEventListener("change", () => setReadingLanguage(meta, langs, select.value));
-      languageGroup.appendChild(select);
-      bar.appendChild(languageGroup);
+      languageGroup.appendChild(field.element);
+      const readingMenu=menu("Idioma de leitura",languageGroup);readingMenu.dataset.control="reading";viewing.appendChild(readingMenu);
     }
+  } else {
+    viewing.appendChild(el("p",{class:"control-help",text:"Uma versão disponível: "+(langs[0].label||langs[0].code.toUpperCase())+"."}));
   }
 
-  if (isStudy && state.studyMode === "parallel" && langs.length > 2) {
+  if (langs.length > 2) {
     const colGroup = el("div", { class: "toolbar-group parallel-only" });
     colGroup.appendChild(el("span", { class: "toolbar-label", text: "Colunas:" }));
     ["left", "right"].forEach(side => {
-      const select = languageSelect(langs, "lang-select", side === "left" ? "Idioma à esquerda" : "Idioma à direita", state.parallelCols[side]);
+      const field=languageField(langs,"lang-select",side === "left" ? "Idioma à esquerda" : "Idioma à direita",state.parallelCols[side]);
+      const select=field.select;
       select.dataset.side = side;
       select.addEventListener("change", () => setParallelCols(side, select.value));
-      colGroup.appendChild(select);
+      colGroup.appendChild(el("span",{class:"toolbar-label",text:side==="left"?"Coluna esquerda":"Coluna direita"}));
+      colGroup.appendChild(field.element);
     });
-    bar.appendChild(colGroup);
+    const columns=menu("Idiomas das colunas",colGroup);columns.dataset.control="columns";viewing.appendChild(columns);
   }
 
   const exportGroup = el("div", { class: "toolbar-group export-group" });
   if (hasTranslations) {
-    exportGroup.appendChild(languageSelect(langs, "export-language", "Idioma para exportação", readingLanguage(meta, langs)));
+    exportGroup.appendChild(languageField(langs, "export-language", "Idioma para exportação", documentActionLanguage(meta, langs)).element);
   }
   const button = el("button", { type: "button", class: "export-btn", text: "Exportar Markdown" });
   button.addEventListener("click", () => {
@@ -620,7 +810,33 @@ function renderToolbar(langs, meta) {
     downloadMarkdown(meta, langs.find(l => l.code === code));
   });
   exportGroup.appendChild(button);
-  bar.appendChild(exportGroup);
+  documentActions.appendChild(menu("Exportar Markdown",exportGroup));
+  documentActions.appendChild(editorialReaderTools(meta,langs));
+  actions.append(quickResume,pin,expand);
+  bar.updateViewing=()=>{
+    const study=langs.length>1&&state.viewMode==="study";
+    bar.querySelector(".reader-panel-status").textContent=study?"Estudo":"Leitura";
+    for(const select of bar.querySelectorAll(".reading-language,.export-language,.editorial-language")){
+      if(select.classList.contains("reading-language"))select.value=readingLanguage(meta,langs);
+      else if(select.classList.contains("export-language")||select.classList.contains("editorial-language")){
+        select.value=documentActionLanguage(meta,langs);
+      }
+      select.updateOptions?.();
+    }
+    updateParallelSelects();
+    for(const button of bar.querySelectorAll("[data-mode], [data-study-mode]")){
+      const active=button.dataset.mode?button.dataset.mode===state.viewMode:button.dataset.studyMode===state.studyMode;
+      button.classList.toggle("active",active);button.setAttribute("aria-pressed",String(active));
+    }
+    for(const item of bar.querySelectorAll("[data-control]")){
+      const kind=item.dataset.control;
+      item.hidden=kind==="study"?!study:kind==="reading"?study:kind==="columns"?!(study&&state.studyMode==="parallel"):false;
+      if(item.hidden)item.open=false;
+      if(kind==="mode")item.querySelector("summary").textContent="Modo · "+(study?"Estudo":"Leitura");
+      if(kind==="study")item.querySelector("summary").textContent="Estudo · "+(state.studyMode==="parallel"?"Paralelo":"Por parágrafo");
+    }
+  };
+  bar.updateViewing();applyExpanded();
   return bar;
 }
 
@@ -665,7 +881,7 @@ function updateReadingLayout() {
 }
 
 function readingViewportTop() {
-  return (document.querySelector(".site-header")?.getBoundingClientRect().height || 0) + 24;
+  return (document.querySelector(".site-header")?.getBoundingClientRect().height || 0) + (document.querySelector(".doc-toolbar.is-pinned")?.getBoundingClientRect().height || 0) + 24;
 }
 
 function closeDocumentPanel() {
@@ -738,6 +954,8 @@ function updateMarkerControls(meta, langs, message) {
     : "Clique ou toque em um parágrafo para marcá-lo. Também funciona com Enter ou Espaço.");
   const resume = document.querySelector(".resume-btn");
   if (resume) resume.hidden = !record;
+  const quickResume=document.querySelector(".panel-quick-resume");
+  if(quickResume)quickResume.hidden=!record;
   const indicator = document.querySelector(".panel-marker");
   if (indicator) indicator.hidden = !record;
   paintReadingMarker(record);
@@ -794,9 +1012,10 @@ function resumeReading(meta, langs, record) {
     const pair = record.parallelCols;
     if (pair && pair.left !== pair.right && langs.some(l => l.code === pair.left) && langs.some(l => l.code === pair.right)) {
       localStorage.setItem("parallelCols:" + meta.id, `${pair.left},${pair.right}`);
+      state.parallelCols={...pair};
     }
   } catch (e) {}
-  refreshDocument();
+  refreshDocument(false);
   const tracker = state.readingTracker;
   const entry = tracker && resolveMarkedEntry(record, tracker.entries);
   if (!entry) {
@@ -860,20 +1079,16 @@ function setupStudyNavigation(meta, langs) {
 }
 
 function setupParagraphNavigation(meta, langs, content, entries, headings, mode) {
-  const tools = document.querySelector(".reading-tools");
+  const tools = document.querySelector(".doc-toolbar .reading-tools");
+  if(!tools)return;
   tools.innerHTML = "";
-  const panel = el("details", { class: "reading-panel" });
+  const panel = el("details", { class: "reading-panel editorial-menu" });
   const summary = el("summary", {}, [
-    el("span", { text: headings.length ? "Índice e marcador" : "Marcador" }),
+    el("span", { text: headings.length ? `Índice do texto · ${headings.length} seções` : "Posição de leitura" }),
     el("span", { class: "panel-marker", text: "●", title: "Há uma posição marcada", "aria-label": "Há uma posição marcada" }),
   ]);
   panel.appendChild(summary);
-  const body = el("div", { class: "reading-panel-body" }, [
-    el("div", { class: "reading-panel-heading" }, [
-      el("p", { class: "reading-panel-caption", text: "Neste documento" }),
-      el("p", { class: "reading-panel-title", text: meta.title_pt || meta.title_ru }),
-    ]),
-  ]);
+  const body = el("div", { class: "reading-panel-body editorial-menu-body" });
   const status = el("p", { class: "reading-session-status", id: "reading-marker-instructions", role: "status" });
   const controls = el("div", { class: "reading-session" }, [status]);
   const resume = el("button", { type: "button", class: "resume-btn", text: "Retomar leitura" });
@@ -897,7 +1112,7 @@ function setupParagraphNavigation(meta, langs, content, entries, headings, mode)
   });
   tools.appendChild(panel);
   tools.hidden = false;
-  document.querySelector(".site-header")?.classList.add("has-document");
+
   const tracker = { meta, langs, content, entries, headings, mode };
   state.readingTracker = tracker;
   for (const [index, entry] of entries.entries()) {
@@ -987,34 +1202,50 @@ function renderDocument(meta, langs, blocks, collection, subcollection, scroll =
   if (searchReturn === "#/busca" || searchReturn?.startsWith("#/busca?")) {
     article.appendChild(el("a", { class: "back-link search-return", href: searchReturn, text: "← Voltar aos resultados da busca" }));
   }
-  article.appendChild(renderDocHeader(meta, collection, subcollection));
   article.appendChild(renderToolbar(langs, meta));
+  article.appendChild(renderDocHeader(meta, collection, subcollection));
 
-  if (isStudy) {
-    const labels = el("div", { class: "col-labels cols-" + langs.length });
-    for (const l of langs) {
-      labels.appendChild(el("div", { class: "label-" + l.code, text: l.label }));
-    }
-    article.appendChild(labels);
-    const blocksWrap = el("div", { class: "blocks cols-" + langs.length });
-    for (const b of blocks) blocksWrap.appendChild(renderBlock(b, langs));
-    article.appendChild(blocksWrap);
-  } else {
-    const content = el("div", { class: "reading-content" });
-    content.addEventListener("click", handleReadingAnchor);
-    article.appendChild(content);
-  }
+  article.appendChild(el("div",{class:"document-body"}));
+  article.appendChild(renderDocumentSequence(meta,collection,subcollection));
   root.appendChild(article);
-  if (isStudy) {
-    if (state.studyMode === "parallel") applyParallelLayout();
-    setupStudyNavigation(meta, langs);
-  } else renderReadingContent(meta, langs);
+  renderDocumentBody(meta,langs,blocks);
   setActiveNav(collection ? collection.id : null);
   if (scroll) window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+function renderDocumentBody(meta,langs,blocks) {
+  stopReadingTracking();
+  const article=document.querySelector("article.doc");
+  const host=article?.querySelector(".document-body");
+  if(!host)return;
+  const study=langs.length>1&&state.viewMode==="study";
+  article.className="doc mode-"+(study?"study mode-"+state.studyMode:"reading");
+  if(study&&host.querySelector(".blocks")){
+    if(state.studyMode==="parallel")applyParallelLayout();
+    else for(const cell of host.querySelectorAll(".cell,.col-labels>div")){cell.classList.remove("hidden");cell.style.order="";}
+    setupStudyNavigation(meta,langs);
+    return;
+  }
+  host.replaceChildren();
+  if(study){
+    const labels=el("div",{class:"col-labels cols-"+langs.length});
+    for(const lang of langs)labels.append(el("div",{class:"label-"+lang.code,text:lang.label}));
+    const body=el("div",{class:"blocks cols-"+langs.length});
+    for(const block of blocks)body.append(renderBlock(block,langs));
+    host.append(labels,body);
+    if(state.studyMode==="parallel")applyParallelLayout();
+    setupStudyNavigation(meta,langs);
+  }else{
+    const content=el("div",{class:"reading-content"});
+    content.addEventListener("click",handleReadingAnchor);
+    host.append(content);
+    renderReadingContent(meta,langs);
+  }
+}
+
 async function loadDocument(collection, docMeta, subcollection) {
   const requestedHash = location.hash;
+  const requestedVersion = state.routeVersion;
   const cacheKey = docMeta.id;
   if (state.cache.has(cacheKey)) {
     const { langs, blocks } = state.cache.get(cacheKey);
@@ -1044,6 +1275,7 @@ async function loadDocument(collection, docMeta, subcollection) {
   }
 
   const blocks = zipBlocks(langs);
+  if(state.routeVersion!==requestedVersion)return;
   state.cache.set(cacheKey, { langs, blocks });
   if (location.hash !== requestedHash) return;
   renderDocument(docMeta, langs, blocks, collection, subcollection);
@@ -1051,7 +1283,7 @@ async function loadDocument(collection, docMeta, subcollection) {
 
 /* ---------- Renderização: coleção ---------- */
 
-function renderCollection(collection, subcollection = null, showAll = false) {
+function renderCollection(collection, subcollection = null, showAll = false, requestedPage = 1) {
   stopReadingTracking();
   const root = document.getElementById("view");
   root.innerHTML = "";
@@ -1114,12 +1346,17 @@ function renderCollection(collection, subcollection = null, showAll = false) {
   const documents = subcollection
     ? subcollection.document_ids.map(id => collectionDocuments(collection).find(doc => doc.id === id))
     : collectionDocuments(collection);
+  const pages=Math.max(1,Math.ceil(documents.length/COLLECTION_PAGE_SIZE));
+  const parsed=Number(requestedPage);
+  const page=Number.isSafeInteger(parsed)&&parsed>0?Math.min(parsed,pages):1;
+  const start=(page-1)*COLLECTION_PAGE_SIZE;
   wrap.appendChild(el("p", {
-    class: "document-count", text: `${documents.length} ${documents.length === 1 ? "documento" : "documentos"}`,
+    class: "document-count", text: documents.length?`${start+1}–${Math.min(start+COLLECTION_PAGE_SIZE,documents.length)} de ${documents.length} documentos · Página ${page} de ${pages}`:"Nenhum documento",
   }));
+  wrap.appendChild(renderCollectionPagination(documents.length,page,collection,subcollection));
   const list = el("div", { class: "doc-list" });
-  for (const doc of documents) {
-    const item = el("a", { class: "doc-list-item", href: collectionDocumentURL(doc, subcollection, collection) });
+  for (const doc of documents.slice(start,start+COLLECTION_PAGE_SIZE)) {
+    const item = el("a", { class: "doc-list-item", href: collectionDocumentURL(doc, subcollection, collection,page) });
 
     const topLine = el("div", { class: "doc-list-topline" });
     topLine.appendChild(el("span", {
@@ -1132,16 +1369,15 @@ function renderCollection(collection, subcollection = null, showAll = false) {
     }
     item.appendChild(topLine);
 
-    item.appendChild(el("h2", {
+    item.appendChild(el("div",{class:"document-title-line"},[el("h2", {
       class: "doc-list-title", lang: doc.title_pt ? "pt-BR" : "ru",
       text: doc.title_pt || doc.title_ru,
-    }));
+    }),documentDateBadge(doc)]));
     if (doc.title_pt && doc.title_ru)
       item.appendChild(el("p", { class: "doc-list-ru", lang: "ru", text: doc.title_ru }));
 
     const meta = el("div", { class: "doc-list-meta" });
     if (doc.author) meta.appendChild(el("span", { text: doc.author }));
-    if (doc.date) meta.appendChild(el("span", { text: doc.date }));
     if (doc.archive) meta.appendChild(el("span", { text: doc.archive }));
     if (doc.languages.length === 1 && doc.languages[0].code === "ru") {
       meta.appendChild(el("span", { text: "Disponível em russo" }));
@@ -1155,10 +1391,12 @@ function renderCollection(collection, subcollection = null, showAll = false) {
     list.appendChild(item);
   }
   wrap.appendChild(list);
+  wrap.appendChild(renderCollectionPagination(documents.length,page,collection,subcollection));
 
   root.appendChild(wrap);
   setActiveNav(collection.id);
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  if(page>1)requestAnimationFrame(()=>wrap.querySelector(".document-count")?.scrollIntoView({block:"start",behavior:"instant"}));
+  else window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 /* ---------- Renderização: homepage ---------- */
@@ -1239,6 +1477,7 @@ function parseRoute() {
     view: "collection", id: parts[1],
     subcollectionId: parts[2] === "subcolecao" ? parts[3] : null,
     showAll: parts[2] === "todos",
+    page: new URLSearchParams(query).get("pagina")||1,
   };
   if (parts[0] === "doc" && parts[1]) return {
     view: "document", id: parts[1],
@@ -1249,6 +1488,7 @@ function parseRoute() {
 }
 
 async function route() {
+  state.routeVersion++;
   activeSearchRequest?.abort();
   stopReadingTracking();
   const r = parseRoute();
@@ -1262,17 +1502,20 @@ async function route() {
       if (!c) { location.hash = "#/"; return; }
       const sub = c.subcollections?.find(s => s.id === r.subcollectionId);
       if (r.subcollectionId && !sub) { location.hash = `#/colecao/${c.id}`; return; }
-      renderCollection(c, sub, r.showAll);
+      renderCollection(c, sub, r.showAll,r.page);
     } else if (r.view === "document") {
       const context = state.manifest.collections.find(c => c.id === r.collectionId);
       const c = context && collectionDocuments(context).some(d => d.id === r.id)
         ? context : findCollectionByDocId(r.id);
       if (!c) { location.hash = "#/"; return; }
       const doc = collectionDocuments(c).find(d => d.id === r.id);
+      const editorialContext = editorialReadingContext(doc.id);
       const language = new URLSearchParams(location.hash.split("?")[1] || "").get("idioma");
       if (doc.languages.some(l => l.code === language)) state.readingLanguages.set(doc.id, language);
+      applyEditorialReading(editorialContext,doc);
       const sub = c.subcollections?.find(s => s.id === r.subcollectionId && s.document_ids.includes(doc.id));
       await loadDocument(c, doc, sub);
+      if(parseRoute().id===doc.id)restoreEditorialReading(editorialContext);
     }
   } catch (err) {
     console.error(err);
@@ -1295,16 +1538,19 @@ async function main() {
     state.manifest = await fetchJSON("data/manifest.json");
     state.documentIndex = new Map((state.manifest.documents || []).map(d => [d.id, d]));
     renderNav();
+    detectReaderEditorial();
     updateReadingLayout();
     if (typeof ResizeObserver !== "undefined") {
       new ResizeObserver(updateReadingLayout).observe(document.querySelector(".site-header"));
     }
     window.addEventListener("resize", updateReadingLayout);
     document.addEventListener("click", event => {
+      for(const menu of document.querySelectorAll(".editorial-menu[open]"))if(!menu.contains(event.target))menu.open=false;
       const tools = document.querySelector(".reading-tools");
       if (tools && !tools.contains(event.target)) closeDocumentPanel();
     });
     document.addEventListener("keydown", event => {
+      if(event.key==="Escape")for(const menu of document.querySelectorAll(".editorial-menu[open]")){menu.open=false;menu.querySelector("summary")?.focus();}
       if (event.key === "Escape" && document.querySelector(".reading-panel")?.open) {
         closeDocumentPanel();
         document.querySelector(".reading-panel > summary")?.focus();
@@ -1312,7 +1558,10 @@ async function main() {
     });
     window.addEventListener("pagehide", () => stopReadingTracking());
     window.addEventListener("pageshow", event => {
-      if (event.persisted && document.querySelector("article.doc")) refreshDocument();
+      if (event.persisted) reloadEditorialCatalog(state.editorialDepartureContext).catch(console.error);
+    });
+    window.addEventListener("storage",event=>{
+      if(event.key==="editorialCatalogChanged")reloadEditorialCatalog().catch(console.error);
     });
     window.addEventListener("hashchange", route);
     await route();

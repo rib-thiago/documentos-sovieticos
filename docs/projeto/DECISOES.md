@@ -105,3 +105,54 @@ A implementação da importação não executou testes, compilação, servidor d
 Após o teste manual, o usuário apontou divergências artificiais de blocos entre o russo sem envelope e traduções que carregavam o cabeçalho exportado, além da duplicação desse cabeçalho ao reexportar. A correção reconhece conservadoramente os envelopes iniciais do exportador e os separa do corpo na leitura, estudo, prévia, contagens, diferenças da importação e indexação do texto. Metadados continuam no cabeçalho comum do leitor; não são inseridos como parágrafos de um idioma.
 
 Na exportação ShowTrials, todos os envelopes iniciais reconhecidos são substituídos por um único cabeçalho gerado com os metadados atuais. A identificação do upload continua lendo o arquivo recebido, e o histórico preserva seus bytes. Títulos próprios do corpo não são descartados. A regra exige título, idioma, fonte ou ID e separador; cabeçalhos incompletos ou arbitrários não são apagados por aproximação. Não houve migração nem alteração em massa dos arquivos locais. O índice derivado passa à versão 2 para ignorar os envelopes nos trechos pesquisáveis após reinicialização. A correção não executou testes, commit ou push.
+
+## D17. Leitor integrado ao painel e contexto de retorno
+
+Após os commits aprovados `7b569a2` (importação) e `eb9da8a` (cabeçalhos), sem push, o leitor ganhou atalhos locais para o cadastro, a importação e a versão Markdown escolhida. A detecção consulta a sessão editorial e suas capacidades; em servidor estático, backend antigo sem a capacidade ou acesso sem permissão local, os controles ficam ocultos. A seleção do idioma de edição é explícita e independente da leitura.
+
+O contexto de retorno conserva a URL do documento (coleção/subcoleção e retorno à busca) e guarda idioma, modo, colunas e posição na sessão da aba. O link aceita somente endereço interno do leitor. A posição é restaurada por assinatura do trecho quando possível, com fallback para rolagem, sem modificar o marcador manual. O parâmetro transitório é consumido ao voltar. Ao salvar, uma notificação por localStorage informa outras abas; catálogo e cache de conteúdo são recarregados, com controle de versões de rota para evitar renderizações antigas. O retorno por cache de navegação também recarrega os dados.
+
+## D18. Edição explícita de versões Markdown
+
+O editor carrega uma edição existente pelo ID estável, mostra o arquivo completo e renderiza o corpo sem o envelope de exportação. Oferece prévia ao digitar para textos menores, atualização sob demanda para textos extensos e comparação antes da confirmação. A edição não altera automaticamente metadados a partir de títulos no corpo. Arquivos TXT não são convertidos nessa operação; caminhos compartilhados entre edições e links simbólicos são recusados.
+
+É possível editar explicitamente RU, necessário para revisões do original, guardando seu conteúdo anterior no mesmo histórico recuperável. A importação continua recusando substituir o idioma original. O campo interno legado `translation_files` passa a abranger também o Markdown original quando editado explicitamente; a revisão da edição é vinculada ao hash aberto e à revisão do catálogo. A gravação altera somente o conteúdo escolhido e seu hash/tamanho, projeta o manifesto e prepara a busca antes da publicação local, sem mudar IDs ou caminhos. Restaurar usa o mesmo mecanismo de snapshots e conflitos já existente.
+
+Os endpoints acrescentados são `GET /api/editorial/editions/ID:IDIOMA` e `POST /api/editorial/markdown/preview`; a confirmação continua em `/api/editorial/save`. Mantêm o limite de 4 MiB para a proposta, loopback, origem e token de sessão. Não foi implementada publicação automática. A nova implementação não executou testes, compilação, servidor de teste ou edição real de conteúdo; permanece sem commit e sem push para avaliação manual conforme `LEITOR-EDITORIAL.md`.
+
+## D19. Interface e sequência do acervo
+
+O usuário pediu antecipar a melhoria visual para facilitar a avaliação da integração. A área editorial ganhou estrutura com navegação lateral/abas móveis, seção ativa, hierarquia de ações, campos, cartões e prévias consistentes. No leitor, os controles locais ficam num menu recolhido. Não foram removidos os passos de revisão, confirmação ou histórico.
+
+Listas de documentos usam 25 itens por página e `pagina` no hash. Links do leitor conservam coleção e subcoleção; anterior/próximo percorrem a ordem cadastrada nesse contexto, sem circular nem atravessar seus limites. O retorno à lista calcula a página do documento atual. Datas e identificação tornam visíveis diferenças entre títulos repetidos; o idioma corrente é preservado no próximo documento quando disponível.
+
+## D20. Data coletada como campo de apresentação
+
+A projeção do manifesto inclui `collected_date` a partir de `source_metadata.wordpress_date`, permitindo uso estático. A apresentação prioriza a data histórica já cadastrada e usa a coletada como fallback explicitamente identificado. A formatação preserva o dia escrito na fonte, sem conversão de fuso. Não se usa `wordpress_modified` nem se preenche automaticamente `historical_date`.
+
+O manifesto é derivado: na restauração, conflitos são conferidos nos snapshots canônicos e nos conteúdos modificados; a projeção é regenerada com o modelo atual. Isso mantém utilizáveis os históricos anteriores à inclusão desse campo e preserva os controles contra sobrescrita de alterações nos dados canônicos. Não houve teste executado, commit ou push nesta etapa; roteiro em `UX-CATALOGO.md`.
+
+
+### D21 — Datas da fonte e controles do leitor
+
+O campo wordpress_date não comprova a data histórica: permanece separado, explicitamente não verificado, ao lado do título e no envelope de exportação. Não houve preenchimento automático de historical_date nem alteração dos textos existentes. Seletores do leitor seguem menus da edição, navegação sequencial fica no fim do documento e fixação da barra durante a rolagem é opcional, por sessão.
+
+
+### D22 — Datas confirmadas e painel inicialmente recolhido
+
+O responsável confirmou as datas ShowTrials; removemos avisos e ressalvas da interface e exportação. A expansão do painel deixa de persistir: cada montagem começa recolhida. A mudança de visualização preserva o parágrafo visível sem alterar a marcação manual. Controles do painel recebem dimensões e estilos comuns, em grupos compactos.
+
+
+### D23 — Trocas de modo locais e menus como listas
+
+Trocas de modo preservam o painel e atualizam o corpo do texto; parágrafo/paralelo reaproveitam os blocos existentes. A expansão escolhida permanece durante essas trocas; abrir outro documento começa recolhido. Um atalho de retomada no cabeçalho indica a marca mesmo com o painel fechado. Opções internas usam listas de ações com seleção discreta, mantendo semântica acessível. Nenhum teste executado nesta rodada; mudanças aguardam avaliação manual.
+
+
+### D24 — Entrada editorial única e idioma contextual
+
+No leitor, Editar oferece idioma e uma ação única que abre o cadastro editorial do documento. Exportação e edição usam inicialmente o idioma de leitura ou a coluna esquerda no estudo paralelo. O editor Markdown passa a ser acessado pela barra lateral editorial, mantendo documento, idioma e retorno ao leitor. Sem documento selecionado, oferece seleção por ID ou catálogo; versões sem Markdown não são convertidas implicitamente. Links de ação no cadastro recebem o mesmo estilo de botão; títulos do catálogo e links no corpo das prévias permanecem links de texto. Sem testes executados, commit ou push.
+
+
+### Correção de carregamento do contexto editorial
+
+O parâmetro document de setDocumentContext ocultava o objeto DOM global, causando document.querySelector is not a function ao abrir os metadados ou o editor Markdown. Renomeado para catalogDocument, preservando o formato do contexto. Atualizada a versão do script para invalidar cache. Correção por inspeção de código, sem executar testes, commit ou push.

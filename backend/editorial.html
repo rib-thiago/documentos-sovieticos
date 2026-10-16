@@ -4,27 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Área editorial — Documentos Soviéticos</title>
-  <link rel="stylesheet" href="/assets/editorial.css?v=translations-1">
+  <link rel="stylesheet" href="/assets/editorial.css?v=ux-catalog-8">
   <script src="/assets/vendor/markdown-it/markdown-it.umd.min.js" defer></script>
   <script src="/assets/vendor/markdown-it-footnote/markdown-it-footnote.min.js" defer></script>
   <script src="/assets/vendor/dompurify/purify.min.js" defer></script>
-  <script src="/assets/export-header.js?v=1" defer></script>
-  <script src="/assets/editorial.js?v=export-header-1" defer></script>
+  <script src="/assets/export-header.js?v=3" defer></script>
+  <script src="/assets/catalog-ui.js?v=3" defer></script>
+  <script src="/assets/editorial.js?v=ux-catalog-9" defer></script>
 </head>
 <body>
   <header class="editorial-header">
     <a class="brand" href="/">§ Documentos Soviéticos</a>
     <span>Área editorial local</span>
+    <a class="editorial-site-link" href="/#/busca" target="_blank" rel="noopener">Abrir o site ↗</a>
+  </header>
+  <div class="editorial-shell">
+  <aside class="editorial-sidebar">
+    <p class="sidebar-caption">Organizar o acervo</p>
     <nav aria-label="Área editorial">
       <a href="#/fila">Fila de revisão</a>
       <a href="#/catalogo">Editar catálogo</a>
+      <a href="#/markdown" data-markdown-nav>Editar Markdown</a>
       <a href="#/importar">Importar tradução</a>
       <a href="#/historico">Histórico</a>
-      <a href="/#/busca" target="_blank" rel="noopener">Abrir o site ↗</a>
     </nav>
-  </header>
+    <div class="sidebar-document" hidden></div>
+    <p class="sidebar-note">Revise antes de salvar.<br>As versões anteriores ficam no histórico.</p>
+  </aside>
   <main id="editorial-view" tabindex="-1"><p role="status">Carregando a área editorial…</p></main>
+  </div>
   <noscript>Ative JavaScript para editar o catálogo.</noscript>
-  <footer>Gravação somente local, sem publicação automática. Originais preservados; traduções substituídas podem ser recuperadas em Histórico. Cópias em .local/editorial/.</footer>
+  <footer>Gravação somente local, sem publicação automática. A edição altera apenas a versão escolhida; versões anteriores são recuperáveis em Histórico. Cópias em .local/editorial/.</footer>
 </body>
 </html>

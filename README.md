@@ -56,11 +56,15 @@ python3 -m backend
 
 Abra `http://localhost:8000/local` para os links de teste ou `http://localhost:8000/` para o site. Se o servidor antigo estiver ocupando a porta, encerre-o com Ctrl+C ou use `python3 -m backend --port 8001`. A primeira execução prepara o índice SQLite; não é necessário instalar pacotes para o backend nem usar npm. O Python precisa oferecer SQLite FTS5. O [manual local](docs/projeto/BACKEND-LOCAL.md) explica como iniciar, testar e manter o ambiente.
 
-O catálogo tem **2.186 documentos e 2.206 versões por idioma**, incluindo as edições editoriais anteriores ao ShowTrials. Seus metadados ficam em `data/catalog/`; o banco `.local/catalog.sqlite3` é derivado e ignorado pelo Git. O site mantém seus arquivos, traduções e URLs.
+O catálogo tem **2.186 documentos e 2.212 versões por idioma**, incluindo as edições editoriais anteriores ao ShowTrials. Seus metadados ficam em `data/catalog/`; o banco `.local/catalog.sqlite3` é derivado e ignorado pelo Git. O site mantém seus arquivos, traduções e URLs.
 
 Use **Buscar** na navegação ou o campo da página inicial para abrir `#/busca`. Com o backend, a página pesquisa títulos e texto completo, filtra por coleção, subcoleção, idioma, categoria e tipo documental e apresenta resultados com trechos e paginação. A consulta fica na URL; ao abrir um resultado, o link **Voltar aos resultados da busca** recupera filtros e página. Na publicação estática, a mesma interface pesquisa somente os títulos do manifesto e informa essa limitação. Consulte o [roteiro manual da busca](docs/projeto/BUSCA-MANUAL.md).
 
 A **área editorial local** fica em `http://localhost:8000/editorial`, com fila de revisão, edição de metadados e associações às coleções, prévia antes de salvar e histórico recuperável. As gravações de metadados atualizam catálogo, manifesto e busca sem alterar os corpos dos textos. Em **Importar tradução**, escolha documento e idioma e envie Markdown para incluir ou substituir uma versão traduzida, com conferência de identificação, diferenças, prévia renderizada e diagnóstico estrutural sem alinhamento automático. O original é preservado e a tradução anterior pode ser recuperada pelo histórico. Reinicie o backend após atualizar o código. Consulte o [manual editorial](docs/projeto/EDITORIAL-LOCAL.md) e o [roteiro de importação](docs/projeto/IMPORTACAO-TRADUCOES.md). A gravação é somente local.
+
+Com o backend atualizado, o leitor apresenta o menu **Editar documento**: atalhos para os metadados, para adicionar uma tradução e para editar a versão Markdown escolhida. O editor mostra Markdown e prévia renderizada, exige revisão antes de salvar e mantém o conteúdo anterior no histórico. **Voltar à leitura** recupera o contexto do documento; as outras abas do leitor recebem aviso local de atualização. A edição explícita de RU pode corrigir o próprio original, diferentemente da importação de traduções, que continua protegendo-o. Consulte o [roteiro do leitor integrado](docs/projeto/LEITOR-EDITORIAL.md). Esses controles ficam ocultos na publicação estática.
+
+As listas das subcoleções e das coleções têm **25 documentos por página**, com página na URL e datas junto dos títulos. A data histórica cadastrada tem prioridade; a coletada do ShowTrials aparece como referência quando não há uma histórica. **Anterior/Próximo** no início e no fim do leitor seguem a ordem da subcoleção ou coleção e permitem voltar à página da lista correspondente. O [roteiro de UX e catálogo](docs/projeto/UX-CATALOGO.md) reúne a avaliação dessa navegação e do novo visual editorial.
 
 Para usar somente o site estático, o comando anterior continua válido:
 
@@ -120,6 +124,6 @@ As traduções dos documentos ShowTrials podem ficar em `originais/showtrials/ID
 
 ## Publicação
 
-O [plano de evolução](docs/projeto/PLANO.md), as [decisões](docs/projeto/DECISOES.md) e o [modelo do catálogo](docs/projeto/MODELO-CATALOGO.md) registram as entregas. A API pública continua oferecendo consultas; gravações de metadados, revisão e importação de traduções ficam restritas à área editorial local. Edição de Markdown no navegador, integração direta com o leitor e correções por trecho pertencem a entregas posteriores.
+O [plano de evolução](docs/projeto/PLANO.md), as [decisões](docs/projeto/DECISOES.md) e o [modelo do catálogo](docs/projeto/MODELO-CATALOGO.md) registram as entregas. A API pública continua oferecendo consultas; gravações de metadados, revisão, importação e edição de Markdown ficam restritas à área editorial local. Correções por trecho diretamente no modo estudo e refinamento geral de layout/UX/UI pertencem a entregas posteriores. A gravação local não faz publicação automática no GitHub Pages.
 
 O site pode ser servido pelo GitHub Pages a partir da raiz, sem compilação. A publicação deve incluir `index.html`, `assets/`, `data/` e `originais/`. A pasta `temporario/` e as exportações de trabalho não precisam ser publicadas.

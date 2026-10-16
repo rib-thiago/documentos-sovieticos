@@ -3,6 +3,8 @@
   const view = document.getElementById("editorial-view");
   let session, collections, vocabularies, controller;
   let dirty = false, saving = false, lastHash = location.hash || "#/fila";
+  let readerReturn=null;
+  let documentContext=null;
   const labels = {pendente:"Pendente",em_revisao:"Em revisão",corrigido:"Corrigido",adiado:"Adiado",
     urgente:"Urgente",alta:"Alta",media:"Média",baixa:"Baixa",titles:"Títulos",kind:"Categoria",
     document_type:"Tipo documental",historical_date:"Data histórica",archive_reference:"Referência arquivística",
@@ -10,6 +12,7 @@
   const label = key => labels[key] || key;
   function node(tag, attrs = {}, children = []) {
     const element = document.createElement(tag);
+    if(tag==="a"&&!attrs.class)element.className="button";
     for (const [key,value] of Object.entries(attrs)) {
       if (key === "text") element.textContent = value ?? "";
       else if (value !== false && value != null) element.setAttribute(key, value === true ? "" : value);
@@ -27,7 +30,24 @@
       body:body ? JSON.stringify(body) : undefined});
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || "Não foi possível concluir a operação");
+    if(path==="/api/editorial/save"&&data.saved) {
+      try{localStorage.setItem("editorialCatalogChanged",Date.now()+":"+data.history_id);}catch{}
+    }
     return data;
+  }
+  function safeReaderReturn(value) {
+    try {
+      const url=new URL(value,location.origin);
+      return url.origin===location.origin&&url.pathname==="/"&&url.hash.startsWith("#/doc/")?url.pathname+url.hash:null;
+    }catch{return null;}
+  }
+  function withReaderContext(hash) {
+    if(!readerReturn||!hash.startsWith("#/"))return hash;
+    const [path,query=""]=hash.split("?");const params=new URLSearchParams(query);params.set("leitor",readerReturn);
+    return path+"?"+params;
+  }
+  function returnToReading(container,documentId) {
+    container.append(node("a",{class:"button reader-return",href:readerReturn||"/#/doc/"+encodeURIComponent(documentId),text:"← Voltar à leitura"}));
   }
   function field(caption, name, value = "", options = {}) {
     let input;
@@ -41,6 +61,10 @@
     return {input,wrap:node("label", {class:"field" + (options.wide ? " wide" : "")}, [caption,input])};
   }
   function title(doc) {return doc.titles?.pt || doc.titles?.ru || doc.id;}
+  function dateBadge(doc) {
+    const date=documentDateInfo(doc);
+    return date?node(date.iso?"time":"span",{class:"doc-date",datetime:date.iso,title:date.label,"aria-label":date.label+": "+date.text,text:date.text}):null;
+  }
   function routeURL(path, params) {const query=params.toString();return "#/"+path+(query?"?"+query:"");}
   function documentURL(id, issue = "") {
     return routeURL("documento/"+encodeURIComponent(id),new URLSearchParams({voltar:location.hash || "#/fila",...(issue?{pendencia:issue}:{})}));
@@ -106,7 +130,7 @@
     for(const row of data.items) {
       const item=node("article",{class:"item"});
       if(queue) item.append(badges(row));
-      item.append(node("h2",{},[node("a",{href:documentURL(row.id,queue?row.chave:""),text:title(row)})]));
+      item.append(node("div",{class:"document-title-line"},[node("h2",{},[node("a",{class:"document-title-link",href:documentURL(row.id,queue?row.chave:""),text:title(row)})]),dateBadge(row)]));
       if(queue) item.append(node("p",{text:row.dificuldade_encontrada}),node("p",{class:"muted",text:"Ação sugerida: "+row.acao_sugerida}));
       else item.append(node("p",{class:"muted",text:row.id+" · "+row.languages.map(l=>l.toUpperCase()).join(" · ")}));
       item.append(node("a",{href:routeURL("importar",new URLSearchParams({documento:row.id})),text:"Importar tradução para este documento"}));
@@ -116,7 +140,7 @@
     if(queue&&!visible.has("status")) visible.set("status","pendente");
     paging(data,path,visible,view);
   }
-  function navigate(hash) {if(location.hash===hash) route();else location.hash=hash;}
+  function navigate(hash) {hash=withReaderContext(hash);if(location.hash===hash) route();else location.hash=hash;}
   function comparison(changes) {
     const table=node("table");table.append(node("thead",{},[node("tr",{},["Campo","Antes","Depois"].map(text=>node("th",{scope:"col",text})))]));
     const body=node("tbody");
@@ -130,11 +154,15 @@
     const panel=node("section",{class:"panel preview",tabindex:"-1","aria-label":"Prévia das alterações"});
     panel.append(node("h2",{text:"Revise antes de salvar"}),comparison(preview.changes));
     if(preview.translation) panel.append(translationDetails(preview.translation));
+    if(preview.markdown_edit) {
+      panel.append(node("h3",{text:"Versão Markdown: "+preview.markdown_edit.edition_id}),diffView(preview.markdown_edit.diff),
+        markdownReading(preview.markdown_edit.content,preview.markdown_edit.language));
+    }
     for(const file of preview.file_diffs || []) {
       panel.append(node("h3",{text:file.removed?"Arquivo incluído que será removido: "+file.file:"Arquivo que será restaurado: "+file.file}),diffView(file.diff));
     }
     panel.append(node("p",{class:"help",text:preview.updates_index
-      ? (preview.changes_content?"Ao confirmar, as alterações da tradução mostradas acima serão aplicadas, com histórico, e catálogo, manifesto e busca serão atualizados. O original será preservado. A gravação pode levar alguns segundos.":"Ao confirmar, o catálogo e o manifesto serão gravados e o índice de busca será atualizado. Os textos não serão alterados. A gravação pode levar alguns segundos.")
+      ? (preview.changes_content?"Ao confirmar, somente a versão mostrada na prévia será atualizada, com histórico do conteúdo anterior. Catálogo, manifesto e busca também serão atualizados. A gravação é local e pode levar alguns segundos.":"Ao confirmar, o catálogo e o manifesto serão gravados e o índice de busca será atualizado. Os textos não serão alterados. A gravação pode levar alguns segundos.")
       : "Ao confirmar, a fila será atualizada. Os textos e os metadados do documento não serão alterados."}));
     let acknowledgement=null;
     if(preview.requires_acknowledgement) {
@@ -158,6 +186,7 @@
         panel.replaceChildren(node("h2",{text:"Alterações salvas"}),node("p",{text:result.message}),node("p",{class:"muted",text:"Registro: "+result.history_id}));
         status(notice,"Salvo localmente. Atualize as abas do site que já estavam abertas para carregar a versão atualizada.");
         afterSave(result,panel);
+        returnToReading(panel,result.document_id);
       }catch(error){status(notice,error.message,true);save.disabled=!!acknowledgement&&!acknowledgement.checked;cancel.disabled=false;}
       finally{saving=false;if(!completed)setBusy(false);}
     });
@@ -165,13 +194,45 @@
     panel.focus();panel.scrollIntoView({block:"start",behavior:"smooth"});
     return panel;
   }
+  function setDocumentContext(catalogDocument,editions,preferred) {
+    const language=editions.some(edition=>edition.language===preferred)?preferred:
+      editions.find(edition=>edition.language==="pt")?.language||editions[0]?.language||"";
+    documentContext={document:catalogDocument,editions,language};
+    const slot=document.querySelector(".sidebar-document");slot.hidden=false;
+    slot.replaceChildren(node("p",{class:"sidebar-caption",text:"Documento atual"}),
+      node("p",{class:"sidebar-document-title",text:title(catalogDocument)}),
+      node("a",{class:"sidebar-document-link",href:routeURL("documento/"+encodeURIComponent(catalogDocument.id),new URLSearchParams({idioma:language})),text:"Metadados e coleções"}),
+      node("a",{class:"sidebar-document-link",href:routeURL("importar",new URLSearchParams({documento:catalogDocument.id})),text:"Adicionar tradução"}));
+    document.querySelector("[data-markdown-nav]").href=routeURL("markdown",new URLSearchParams({documento:catalogDocument.id,idioma:language}));
+  }
+  async function markdownChooser(params,signal) {
+    const id=params.get("documento")||documentContext?.document.id;
+    if(!id){
+      view.append(node("h1",{text:"Editar Markdown"}),node("p",{class:"help",text:"Selecione um documento pelo catálogo ou informe seu ID."}));
+      const form=node("form",{class:"panel"});const input=field("ID do documento","documento");input.input.required=true;
+      form.append(input.wrap,node("div",{class:"actions"},[node("button",{type:"submit",text:"Selecionar documento"}),node("a",{href:"#/catalogo",text:"Procurar no catálogo"})]));
+      form.addEventListener("submit",event=>{event.preventDefault();navigate(routeURL("markdown",new URLSearchParams({documento:input.input.value.trim()})));});view.append(form);return;
+    }
+    const data=await api("/api/editorial/documents/"+encodeURIComponent(id),null,signal);
+    setDocumentContext(data.document,data.editions,params.get("idioma")||documentContext?.language);
+    const editable=data.editions.filter(edition=>edition.format==="markdown"&&edition.file.endsWith(".md"));
+    const selected=editable.find(edition=>edition.language===documentContext.language);
+    if(selected){await markdownPage(selected.id,params,signal);return;}
+    view.append(node("h1",{text:"Editar Markdown"}),node("p",{text:title(data.document)}),node("p",{class:"help",text:"A versão selecionada não está disponível em Markdown. Escolha outra versão ou importe uma tradução."}));
+    const actions=node("div",{class:"actions"});
+    for(const edition of editable)actions.append(node("a",{href:routeURL("markdown/"+encodeURIComponent(edition.id),new URLSearchParams()),text:"Editar "+edition.language.toUpperCase()}));
+    actions.append(node("a",{href:routeURL("importar",new URLSearchParams({documento:id})),text:"Importar tradução"}));view.append(actions);
+  }
   async function documentPage(id,params,signal) {
     const data=await api("/api/editorial/documents/"+encodeURIComponent(id),null,signal);
     const doc=data.document;
+    setDocumentContext(doc,data.editions,params.get("idioma")||(documentContext?.document.id===id?documentContext.language:null));
+    returnToReading(view,id);
     const back=params.get("voltar");
     view.append(node("a",{href:back?.startsWith("#/")?back:"#/fila",text:"← Voltar à lista"}),node("h1",{text:title(doc)}));
     const publicLink=node("a",{href:"/#/doc/"+encodeURIComponent(id),target:"_blank",rel:"noopener",text:"Abrir documento no site ↗"});
     view.append(node("p",{class:"muted",text:id+" · "+data.editions.map(e=>e.language.toUpperCase()).join(" · ")}),publicLink);
+    const date=dateBadge(doc);if(date)view.append(date);
     view.append(node("p",{},[node("a",{href:routeURL("importar",new URLSearchParams({documento:id})),text:"Importar tradução Markdown para este documento"})]));
     if(doc.source?.url && /^https?:\/\//.test(doc.source.url)) view.append(node("p",{},[node("a",{href:doc.source.url,target:"_blank",rel:"noopener",text:"Consultar a fonte ↗"})]));
     const form=node("form");const editable=node("fieldset");
@@ -186,7 +247,9 @@
     add("Data para exibição","date_display",doc.historical_date.display,{maxlength:500});add("Data histórica ISO","date_value",doc.historical_date.value,{maxlength:20});
     add("Precisão da data histórica","date_precision",doc.historical_date.precision,{choices:[["not_recorded","Não registrada"],["year","Ano: AAAA"],["month","Mês: AAAA-MM"],["day","Dia: AAAA-MM-DD"]]});
     add("Título curto","shortTitle",doc.presentation.shortTitle,{maxlength:1000});add("Rótulo editorial","eyebrow",doc.presentation.eyebrow,{maxlength:1000});
-    fields.append(grid,node("p",{class:"help",text:"A data histórica deve vir do documento ou de uma conferência da fonte. A data de publicação/coleta não é usada automaticamente. IDs, URLs de fonte, arquivos e idiomas são preservados."}));
+    fields.append(grid,node("p",{class:"help",text:"IDs, URLs de fonte, arquivos e idiomas são preservados."}));
+    const sourceDate=documentDateInfo({collected_date:doc.source_metadata?.wordpress_date});
+    if(sourceDate)fields.append(node("p",{class:"source-date-note",text:"Data: "+sourceDate.text}));
     editable.append(fields);
     const membershipPanel=node("section",{class:"panel"},[node("h2",{text:"Coleções e subcoleções"}),node("p",{class:"help",text:"Selecione ao menos uma coleção. Novas associações entram no fim da lista; as associações mantidas conservam a ordem existente."})]);
     const checks=node("div",{class:"collection-checks"});const memberInputs=new Map();
@@ -257,6 +320,69 @@
     return details;
   }
 
+  function markdownReading(content,language) {
+    const section=node("section",{class:"markdown-reading"},[node("h3",{text:"Prévia renderizada"})]);
+    const reading=node("div",{class:"import-reading",lang:language});
+    const parser=markdownit({html:false,linkify:true,typographer:false}).use(markdownitFootnote);
+    reading.innerHTML=DOMPurify.sanitize(parser.render(splitExportHeaders(content).body),{USE_PROFILES:{html:true},FORBID_TAGS:["style","form","input","button"],FORBID_ATTR:["style"]});
+    for(const link of reading.querySelectorAll("a[href]"))if(!link.getAttribute("href").startsWith("#")){link.target="_blank";link.rel="noopener noreferrer";}
+    reading.addEventListener("click",event=>{
+      const link=event.target.closest("a[href^='#']");if(!link)return;event.preventDefault();
+      let id;try{id=decodeURIComponent(link.getAttribute("href").slice(1));}catch{return;}
+      [...reading.querySelectorAll("[id]")].find(element=>element.id===id)?.scrollIntoView({block:"nearest"});
+    });
+    for(const image of reading.querySelectorAll("img"))image.loading="lazy";
+    section.append(reading);return section;
+  }
+
+  async function markdownPage(editionId,params,signal) {
+    const data=await api("/api/editorial/editions/"+encodeURIComponent(editionId),null,signal);
+    const contextData=await api("/api/editorial/documents/"+encodeURIComponent(data.document.id),null,signal);
+    setDocumentContext(data.document,contextData.editions,data.edition.language);
+    returnToReading(view,data.document.id);
+    view.append(node("h1",{text:"Editar Markdown · "+data.edition.language.toUpperCase()}),node("p",{text:title(data.document)+" · "+data.edition.id}),
+      node("p",{class:"help",text:"Você está editando esta versão do documento, inclusive se for o original russo. Somente Confirmar e salvar grava no acervo local. O conteúdo anterior fica no histórico; as outras versões não são alteradas."}),
+      node("a",{href:routeURL("documento/"+encodeURIComponent(data.document.id),new URLSearchParams({idioma:data.edition.language})),text:"Editar metadados deste documento"}));
+    const form=node("form");const editable=node("fieldset");
+    const workspace=node("div",{class:"markdown-workspace"});
+    const textarea=node("textarea",{class:"markdown-source",name:"markdown",rows:"24",spellcheck:"false","aria-label":"Conteúdo Markdown da versão selecionada"});
+    textarea.value=data.content;
+    const previewArea=node("div");
+    workspace.append(node("label",{class:"field"},["Markdown completo que será salvo",textarea]),previewArea);
+    const updatePreview=()=>{
+      try{previewArea.replaceChildren(markdownReading(textarea.value,data.edition.language));}
+      catch(error){previewArea.replaceChildren(node("p",{class:"status error",text:error.message}));}
+    };
+    const render=node("button",{type:"button",text:"Atualizar prévia"});render.addEventListener("click",updatePreview);
+    const submit=node("button",{type:"submit",class:"primary",text:"Revisar alterações no Markdown"});
+    editable.append(workspace,node("p",{class:"help",text:"A prévia separa o cabeçalho de exportação do corpo, como o leitor. Alterar um título dentro do Markdown não altera automaticamente os metadados do catálogo. Textos extensos atualizam a prévia pelo botão."}),
+      node("div",{class:"actions"},[render,submit]));form.append(editable);view.append(form);
+    const notice=node("p",{class:"status",role:"status","aria-live":"polite"});view.append(notice);
+    let version=0,preview=null,timer;
+    if(textarea.value.length<=200000)updatePreview();
+    else previewArea.append(node("p",{class:"help",text:"Texto extenso. Clique em Atualizar prévia para renderizar quando desejar."}));
+    textarea.addEventListener("input",()=>{
+      dirty=true;version++;preview?.remove();preview=null;clearTimeout(timer);
+      if(textarea.value.length<=200000)timer=setTimeout(()=>{if(!signal.aborted)updatePreview();},300);
+      status(notice,"Há alterações ainda não salvas. Confira a prévia e revise antes de salvar.");
+    });
+    form.addEventListener("submit",async event=>{
+      event.preventDefault();const submitted=version;submit.disabled=true;preview?.remove();
+      try {
+        status(notice,"Preparando diferenças e prévia. Nada foi salvo ainda…");
+        const result=await api("/api/editorial/markdown/preview",{revision:data.revision,edition_id:data.edition.id,content_sha256:data.edition.sha256,content:textarea.value},signal);
+        if(version!==submitted){status(notice,"O texto mudou durante a preparação. Revise novamente.");return;}
+        preview=previewPanel(result,view,notice,(saved,panel)=>{
+          editable.disabled=true;
+          const reopen=node("button",{type:"button",text:"Reabrir esta versão"});reopen.addEventListener("click",()=>route());
+          panel.append(node("div",{class:"actions"},[reopen,node("a",{href:"#/historico?document="+encodeURIComponent(saved.document_id),text:"Histórico / desfazer"})]));
+        },busy=>{editable.disabled=busy;});
+        status(notice,"Confira o conteúdo e as diferenças abaixo. Confirme somente se quiser gravar esta versão.");
+      }catch(error){if(error.name!=="AbortError")status(notice,error.message,true);}
+      finally{submit.disabled=false;}
+    });
+  }
+
   function translationDetails(translation) {
     const wrap=node("div",{class:"translation-preview"});
     wrap.append(node("h3",{text:translation.replaces?"Substituição da tradução existente":"Inclusão de uma nova tradução"}),
@@ -313,6 +439,7 @@
   }
 
   async function importPage(params,signal) {
+    if(readerReturn)returnToReading(view,params.get("documento")||"");
     view.append(node("h1",{text:"Importar tradução Markdown"}),node("p",{class:"help",text:"Escolha o documento, confirme o idioma e envie o arquivo. A prévia não grava nada; a tradução só entra no acervo local depois de Confirmar e salvar. Não há publicação automática."}));
     const chooser=node("form",{class:"panel"});const chooserFields=node("fieldset");
     const documentInput=field("ID do documento","document_id",params.get("documento"),{maxlength:200});
@@ -351,6 +478,7 @@
         chosen=data;selected.hidden=false;
         selected.replaceChildren(node("h2",{text:"Documento selecionado: "+title(data.document)}),node("p",{text:data.document.id+" · Versões atuais: "+data.editions.map(e=>e.language.toUpperCase()).join(" · ")}),
           node("a",{href:"/#/doc/"+encodeURIComponent(data.document.id),target:"_blank",rel:"noopener",text:"Conferir o original no leitor ↗"}));
+        const date=dateBadge(data.document);if(date)selected.append(date);
         const original=data.editions.find(e=>e.language==="ru")||data.editions[0];
         language.input.replaceChildren(node("option",{value:"",text:"Selecione explicitamente o idioma"}));
         for(const [code,caption]of [["pt","Português"],["en","Inglês"]])if(code!==original.language)
@@ -424,9 +552,18 @@
     dirty=false;lastHash=location.hash||"#/fila";
     controller?.abort();controller=new AbortController();const signal=controller.signal;
     const [path,query=""]=lastHash.replace(/^#\//,"").split("?");const params=new URLSearchParams(query);
+    if(params.has("leitor"))readerReturn=safeReaderReturn(params.get("leitor"));
+    document.body.dataset.editorialView=path.split("/")[0];
+    const active=path.startsWith("markdown")?"markdown":path.startsWith("documento/")?"catalogo":path.split("/")[0]||"fila";
+    for(const link of document.querySelectorAll(".editorial-sidebar nav a")) {
+      if(link.getAttribute("href").split("?")[0]==="#/"+active)link.setAttribute("aria-current","page");
+      else link.removeAttribute("aria-current");
+    }
     view.replaceChildren();view.focus();window.scrollTo({top:0});
     try {
       if(path==="importar")await importPage(params,signal);
+      else if(path==="markdown")await markdownChooser(params,signal);
+      else if(path.startsWith("markdown/"))await markdownPage(decodeURIComponent(path.slice(9)),params,signal);
       else if(path.startsWith("documento/"))await documentPage(decodeURIComponent(path.slice(10)),params,signal);
       else if(path==="historico")await historyPage(params,signal);
       else await listPage(path==="catalogo"?"catalogo":"fila",params,signal);
@@ -439,6 +576,10 @@
     }
   }
   window.addEventListener("beforeunload",event=>{if(dirty||saving){event.preventDefault();event.returnValue="";}});
+  document.addEventListener("click",event=>{
+    const anchor=event.target.closest("a[href]");if(!anchor)return;
+    const href=anchor.getAttribute("href");if(href.startsWith("#/"))anchor.setAttribute("href",withReaderContext(href));
+  });
   async function start() {
     try {
       [session,collections,vocabularies]=await Promise.all([api("/api/editorial/session"),api("/api/collections"),api("/api/vocabularies")]);

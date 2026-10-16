@@ -1,12 +1,12 @@
 # Importar traduções Markdown no acervo local
 
-Implementação sem execução de testes pelo assistente, sem commit e sem push, conforme solicitado. Este roteiro descreve o comportamento esperado para sua verificação manual.
+A importação foi validada pelo usuário e commitada em `7b569a2`; a correção de cabeçalhos, também validada, ficou separada em `eb9da8a`. Não foram executados testes pelo assistente nem feito push. Este roteiro permanece como referência para sua verificação manual. A integração posterior com o leitor e a edição de Markdown estão descritas em `LEITOR-EDITORIAL.md` e ainda não foram commitadas.
 
 ## O que esta tela faz
 
 Você escolhe um documento já cadastrado, escolhe português ou inglês e envia um arquivo Markdown. A tela apresenta o que reconheceu da identificação do arquivo, as diferenças em relação à tradução atual, uma prévia de leitura e contagens estruturais. Só **Confirmar e salvar** grava no projeto.
 
-Salvar é uma alteração real nos arquivos do seu computador. A tradução fica disponível no leitor e na busca locais; **não há envio ao GitHub nem publicação automática**. O original de referência não é substituído. Esta entrega não inclui editor de Markdown no navegador nem correções por trecho no modo estudo.
+Salvar é uma alteração real nos arquivos do seu computador. A tradução fica disponível no leitor e na busca locais; **não há envio ao GitHub nem publicação automática**. O original de referência não é substituído pela importação. A edição explícita de Markdown foi acrescentada posteriormente no fluxo integrado ao leitor; correções por trecho no modo estudo continuam planejadas.
 
 ## Abrir
 
