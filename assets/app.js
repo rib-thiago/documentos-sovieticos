@@ -45,11 +45,17 @@ function parsePlainText(text) {
 }
 
 function parseStudyMarkdown(md) {
-  const text = md.replace(/\r\n/g, "\n").trim();
-  const chunks = text.split(/\n{2,}/);
+  const chunks=[];
+  const separator=/\r?\n(?:\r?\n)+/g;
+  let cursor=0,match;
+  while((match=separator.exec(md))){chunks.push({raw:md.slice(cursor,match.index),offset:cursor});cursor=separator.lastIndex;}
+  chunks.push({raw:md.slice(cursor),offset:cursor});
   const blocks = [];
-  for (const raw of chunks) {
-    const chunk = raw.trim();
+  for (const part of chunks) {
+    const trimmed=part.raw.trim();
+    const start=part.offset+part.raw.length-part.raw.trimStart().length;
+    const push=block=>blocks.push({...block,sourceStart:start,sourceEnd:start+trimmed.length,sourceMarkdown:trimmed});
+    const chunk = trimmed.replace(/\r\n/g,"\n");
     if (!chunk) continue;
     if (/^-{3,}$/.test(chunk)) continue;
 
@@ -57,14 +63,14 @@ function parseStudyMarkdown(md) {
       const h = chunk.match(/^(#{1,6})\s+(.+)$/);
       if (h) {
         const level = h[1].length;
-        blocks.push({
+        push({
           type: "h" + normalizeHeadingLevel(h[2].trim(), level),
           text: h[2].trim(),
         });
         continue;
       }
       if (/^!\[.*?\]\(.+?\)$/.test(chunk)) {
-        blocks.push({ type: "image", text: chunk });
+        push({ type: "image", text: chunk });
         continue;
       }
     }
@@ -72,15 +78,15 @@ function parseStudyMarkdown(md) {
     const lines = chunk.split("\n").map(l => l.trim()).filter(Boolean);
 
     if (lines.length && lines.every(l => l.startsWith("- "))) {
-      blocks.push({ type: "list", text: lines.join("\n") });
+      push({ type: "list", text: lines.join("\n") });
       continue;
     }
     if (lines.length && lines.every(l => l.startsWith(">"))) {
       const quoted = lines.map(l => l.replace(/^>\s?/, "")).join(" ");
-      blocks.push({ type: "quote", text: quoted });
+      push({ type: "quote", text: quoted });
       continue;
     }
-    blocks.push({ type: "p", text: lines.join(" ") });
+    push({ type: "p", text: lines.join(" ") });
   }
   return blocks;
 }
@@ -1076,6 +1082,7 @@ function setupStudyNavigation(meta, langs) {
     }
   });
   setupParagraphNavigation(meta, langs, content, entries, headings, "study");
+  installStudyPassageTools();
 }
 
 function setupParagraphNavigation(meta, langs, content, entries, headings, mode) {
@@ -1231,7 +1238,7 @@ function renderDocumentBody(meta,langs,blocks) {
     const labels=el("div",{class:"col-labels cols-"+langs.length});
     for(const lang of langs)labels.append(el("div",{class:"label-"+lang.code,text:lang.label}));
     const body=el("div",{class:"blocks cols-"+langs.length});
-    for(const block of blocks)body.append(renderBlock(block,langs));
+    for(const [index,block] of blocks.entries()){const row=renderBlock(block,langs);row.dataset.studyBlock=String(index);body.append(row);}
     host.append(labels,body);
     if(state.studyMode==="parallel")applyParallelLayout();
     setupStudyNavigation(meta,langs);

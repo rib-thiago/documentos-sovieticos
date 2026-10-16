@@ -156,3 +156,12 @@ No leitor, Editar oferece idioma e uma ação única que abre o cadastro editori
 ### Correção de carregamento do contexto editorial
 
 O parâmetro document de setDocumentContext ocultava o objeto DOM global, causando document.querySelector is not a function ao abrir os metadados ou o editor Markdown. Renomeado para catalogDocument, preservando o formato do contexto. Atualizada a versão do script para invalidar cache. Correção por inspeção de código, sem executar testes, commit ou push.
+
+
+### D25 — Correções locais por intervalo do Markdown no estudo
+
+A renderização mantém intervalos exatos do arquivo em cada bloco de estudo. A correção usa o intervalo da própria tradução, sem deduzir correspondências com o russo e sem substituição global de texto. Seleção parcial é usada apenas quando aparece uma única vez no bloco bruto; nos outros casos, a interface informa e carrega o bloco inteiro. Divergência entre arquivo e tela recusa a correção e exige recarregar.
+
+O backend recebe intervalo Unicode, conteúdo esperado, revisão e hash, protege o original e aceita apenas traduções PT/EN Markdown. Reaproveita a gravação transacional e o histórico da edição completa. A confirmação atualiza catálogo, manifesto, busca e leitor; apenas o intervalo é substituído no texto. Cabeçalhos e demais versões permanecem preservados. Nenhum teste executado, commit ou push nesta entrega; avaliação manual pendente.
+
+A correção por trecho foi testada manualmente e aprovada pelo usuário, que autorizou o commit desta entrega. Sem testes executados pelo assistente e sem push.

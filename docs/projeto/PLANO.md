@@ -50,3 +50,8 @@ A migração e a compatibilidade do manifesto foram verificadas; os testes de co
 ## Aprovação da integração e dos ajustes de interface
 
 Após validar o editor, revisar a interface e confirmar a correção do carregamento editorial, o usuário aprovou a entrega e autorizou os commits. A entrega compreende edição Markdown com prévia/histórico, integração do leitor, painel compacto com retomada, menus consistentes, datas ShowTrials, paginação e navegação sequencial. O assistente não executou testes, conforme solicitado; a validação foi manual pelo usuário. Os commits são locais; nenhum push foi solicitado. Correções de tradução por trecho no estudo permanecem como próxima entrega planejada.
+
+
+## Correções de tradução no modo estudo — aprovadas pelo usuário
+
+Após os commits f87ff2f e 2acd034, o usuário autorizou a terceira entrega sem commit/push e sem execução de testes. Implementada correção de bloco ou seleção exata de tradução PT/EN Markdown no próprio modo estudo, com prévia, diferenças, proteção do original, conferência de versão/intervalo e gravação pelo histórico existente. O leitor e o índice são atualizados após salvar; não há alinhamento automático ou publicação. Roteiro manual em CORRECOES-NO-ESTUDO.md. O usuário testou, confirmou o funcionamento e autorizou o commit. Nenhum teste foi executado pelo assistente; sem push.

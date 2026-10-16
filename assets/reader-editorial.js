@@ -89,10 +89,12 @@ async function detectReaderEditorial() {
   try {
     const response=await fetch("/api/editorial/session",{cache:"no-store",signal:controller.signal});
     const data=response.ok&&(response.headers.get("content-type")||"").includes("application/json")?await response.json():null;
+    state.passageAvailable=typeof data?.token==="string"&&data.features?.includes("study_passage_edit")===true;
     state.editorialAvailable=typeof data?.token==="string"&&data.features?.includes("markdown_edit")===true;
-  }catch{state.editorialAvailable=false;}
+  }catch{state.editorialAvailable=false;state.passageAvailable=false;}
   finally{clearTimeout(timeout);}
   for(const group of document.querySelectorAll(".editorial-controls"))group.populateEditorial?.();
+  installStudyPassageTools();
 }
 
 async function reloadEditorialCatalog(preferredContext=null) {

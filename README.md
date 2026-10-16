@@ -127,3 +127,6 @@ As traduções dos documentos ShowTrials podem ficar em `originais/showtrials/ID
 O [plano de evolução](docs/projeto/PLANO.md), as [decisões](docs/projeto/DECISOES.md) e o [modelo do catálogo](docs/projeto/MODELO-CATALOGO.md) registram as entregas. A API pública continua oferecendo consultas; gravações de metadados, revisão, importação e edição de Markdown ficam restritas à área editorial local. Correções por trecho diretamente no modo estudo e refinamento geral de layout/UX/UI pertencem a entregas posteriores. A gravação local não faz publicação automática no GitHub Pages.
 
 O site pode ser servido pelo GitHub Pages a partir da raiz, sem compilação. A publicação deve incluir `index.html`, `assets/`, `data/` e `originais/`. A pasta `temporario/` e as exportações de trabalho não precisam ser publicadas.
+
+
+No backend local, o modo estudo também permite **Corrigir tradução** em blocos de traduções Markdown, com prévia, diferenças e histórico. O [roteiro de correções no estudo](docs/projeto/CORRECOES-NO-ESTUDO.md) explica a edição por bloco ou seleção e como avaliar e desfazer uma correção local.

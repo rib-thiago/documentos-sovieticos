@@ -349,7 +349,7 @@ class Editorial:
             raise EditorialError("O arquivo mudou fora do painel. Confira o cadastro e reinicie o backend antes de editar.", 409)
         return {"document": data["document"], "edition": edition, "revision": data["revision"], "content": raw.decode("utf-8")}
 
-    def preview_markdown(self, repository, payload):
+    def preview_markdown(self, repository, payload, change_label=None):
         if not isinstance(payload, dict) or set(payload) != {"revision", "edition_id", "content_sha256", "content"}:
             raise EditorialError("Proposta de edição Markdown inválida")
         data = self.editable_edition(repository, payload["edition_id"])
@@ -373,12 +373,46 @@ class Editorial:
         changed.update(sha256=model.sha256(raw), bytes=len(raw))
         files = {edition["file"]: content, "data/catalog/editions.json": model.json_bytes(candidate["editions"]).decode("utf-8"),
                  "data/manifest.json": model.json_bytes(model.export_manifest(candidate)).decode("utf-8")}
-        changes = [{"field": "Conteúdo Markdown " + edition["language"].upper(),
+        changes = [{"field": change_label or "Conteúdo Markdown " + edition["language"].upper(),
                     "before": {"file": edition["file"], "sha256": edition["sha256"], "bytes": edition["bytes"]},
                     "after": {"file": edition["file"], "sha256": changed["sha256"], "bytes": changed["bytes"]}}]
         detail = {"edition_id": edition["id"], "language": edition["language"], "file": edition["file"],
                   "content": content, "diff": translations.line_diff(data["content"], content)}
         return self.store_preview(data["revision"], candidate, files, edition["document_id"], changes, markdown_edit=detail)
+
+    def preview_passage(self, repository, payload):
+        required = {"revision", "edition_id", "content_sha256", "start", "end", "expected", "replacement"}
+        if not isinstance(payload, dict) or set(payload) != required:
+            raise EditorialError("Proposta de correção de trecho inválida")
+        data = self.editable_edition(repository, payload["edition_id"])
+        edition = data["edition"]
+        editions = [item for item in repository.catalog["editions"] if item["document_id"] == edition["document_id"]]
+        original = next((item for item in editions if item["language"] == "ru"), editions[0])
+        if edition["language"] not in {"pt", "en"} or edition["id"] == original["id"]:
+            raise EditorialError("A correção de trechos aceita apenas traduções; o original está protegido")
+        if payload["revision"] != data["revision"] or payload["content_sha256"] != edition["sha256"]:
+            raise EditorialError("A tradução mudou. Recarregue o documento antes de corrigir o trecho.", 409)
+        body = translations.split_export_headers(data["content"])["body"]
+        start, end = payload["start"], payload["end"]
+        if type(start) is not int or type(end) is not int or not 0 <= start < end <= len(body):
+            raise EditorialError("Não foi possível identificar o trecho na tradução")
+        expected, replacement = payload["expected"], payload["replacement"]
+        if not isinstance(expected, str) or body[start:end] != expected:
+            raise EditorialError("O trecho mudou ou não corresponde ao arquivo. Recarregue o documento.", 409)
+        if not isinstance(replacement, str) or not replacement.strip() or "\0" in replacement:
+            raise EditorialError("A correção deve conter texto válido")
+        if len(replacement.encode("utf-8")) > 200000:
+            raise EditorialError("Correção extensa demais. Use o editor Markdown completo.", 413)
+        prefix = data["content"][:len(data["content"]) - len(body)]
+        content = prefix + body[:start] + replacement + body[end:]
+        result = self.preview_markdown(repository, {
+            "revision": data["revision"], "edition_id": edition["id"],
+            "content_sha256": edition["sha256"], "content": content,
+        }, change_label="Correção de trecho " + edition["language"].upper())
+        result.pop("markdown_edit", None)
+        result["passage_edit"] = {"language": edition["language"], "before": expected, "after": replacement,
+                                 "diff": translations.line_diff(expected, replacement)}
+        return result
 
     def preview_translation(self, repository, payload):
         allowed = {"revision", "document_id", "language", "filename", "content", "title"}
