@@ -81,3 +81,21 @@ O histórico fica em `.local/editorial/history/`, fora do Git, com até 100 oper
 As APIs de consulta continuam disponíveis. Os únicos endpoints de escrita são `/api/editorial/preview` e `/api/editorial/save`, por POST JSON, com token da sessão, origem correspondente ao backend, Host local, cliente em loopback e servidor vinculado a loopback. A rota `/editorial` funciona com o backend local, sem perfis ou login; a publicação no GitHub Pages continua estática. O backend continua usando a biblioteca padrão do Python.
 
 Não foram executados testes, compilação ou servidor de teste pelo assistente para esta implementação, conforme solicitado. As validações de prévia e gravação são comportamento operacional do backend, não verificações executadas pelo assistente. O usuário realizou as verificações manuais de edição, gravação e restauração, confirmou o funcionamento da área editorial e autorizou o commit. Ajustes de layout e UI/UX foram adiados.
+
+## D13. Importação explícita de traduções
+
+A rota editorial `#/importar` e os atalhos do catálogo/formulário permitem escolher um documento cadastrado, selecionar PT ou EN e carregar Markdown UTF-8 até 4 MiB. A referência é RU quando disponível ou a primeira edição quando não há RU; seu idioma fica protegido. Nenhum nome recebido vira caminho de gravação: traduções existentes mantêm seu caminho Markdown, e novas versões recebem nome definido pelo documento e idioma. Destinos de outra edição e arquivos não cadastrados são recusados.
+
+O novo endpoint `/api/editorial/translations/preview` usa a mesma sessão local, origem, bloqueio e confirmação de gravação existentes. A prévia reconhece nome, ID, idioma e fonte do cabeçalho de exportação; inconsistências exigem confirmação explícita. Ausência de identificação é informada, sem dedução semântica do idioma ou da equivalência do texto. O conteúdo recebido é preservado, inclusive cabeçalhos; o título do catálogo só muda se preenchido explicitamente no formulário. O manifesto passa a representar `title_en` quando houver título inglês cadastrado.
+
+## D14. Diagnóstico estrutural e visualização
+
+São apresentados blocos do segmentador do estudo e estimativas de parágrafos, títulos, listas, tabelas e código para original, versão atual e arquivo enviado. Igualdade de contagens não certifica correspondência. Divergência não força cortes nem bloqueia uma tradução válida. A proposta não cria alinhamento e não reescreve o Markdown. A prévia renderizada usa as bibliotecas locais markdown-it, footnotes e DOMPurify; HTML cru não é interpretado. A comparação linha a linha é limitada para arquivos extensos, com indicação visível e acesso ao texto completo.
+
+## D15. Histórico do conteúdo traduzido e publicação local
+
+O histórico comprimido passa a conter também o arquivo traduzido, além do cadastro e manifesto, e representa a ausência anterior por `null`. Restaurar uma substituição recupera os bytes UTF-8 anteriores; restaurar uma inclusão remove somente o arquivo criado por essa operação e a edição cadastrada. A restauração cria outro registro e pode ser desfeita. Os históricos anteriores de metadados continuam legíveis. O marcador de recuperação abrange todos esses arquivos, com conferência contra alterações externas antes de reverter.
+
+A validação e a preparação do SQLite aceitam conteúdo proposto em memória, com caminhos verificados e hashes correspondentes, sem exigir gravar o upload no acervo antes da confirmação. O índice é preparado antes da publicação. A revisão dos arquivos e o destino são conferidos novamente antes de escrever. A gravação atualiza arquivo traduzido, catálogo, manifesto e índice; não faz commit, push ou publicação remota. O histórico continua local em `.local/editorial/`, fora do Git.
+
+A implementação da importação não executou testes, compilação, servidor de teste, importação real nem alteração dos corpos existentes. O roteiro manual está em `IMPORTACAO-TRADUCOES.md`; esta etapa permanece sem commit e sem push, conforme solicitado.

@@ -41895,5 +41895,119 @@
     ],
     "sha256": "5e934816564fcf83c491e9abeb0f7d32831f36e8e0261a203d8a0e3a4f431f4e",
     "bytes": 4284
+  },
+  {
+    "id": "showtrials-2676:pt",
+    "document_id": "showtrials-2676",
+    "language": "pt",
+    "label": "Tradução portuguesa",
+    "file": "originais/showtrials/showtrials-2676.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "603b29bc74acfc53f15cbe2b8e446be097f68b3fde5ec7b7c7e23229102deaff",
+    "bytes": 1095,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2676:en",
+    "document_id": "showtrials-2676",
+    "language": "en",
+    "label": "Tradução inglesa",
+    "file": "originais/showtrials/showtrials-2676.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "90ad2d45438f1068e3825f09d1c419e931e1b4792275f1102bcb017b69bde20f",
+    "bytes": 1022,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2677:pt",
+    "document_id": "showtrials-2677",
+    "language": "pt",
+    "label": "Tradução portuguesa",
+    "file": "originais/showtrials/showtrials-2677.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "21ed693e44cbc28a8b3e25cffc95c45f63ab45cd0d15c6c4c96097dd3b9ea30f",
+    "bytes": 1467,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2677:en",
+    "document_id": "showtrials-2677",
+    "language": "en",
+    "label": "Tradução inglesa",
+    "file": "originais/showtrials/showtrials-2677.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "4e89fcdb3019d7887add67eb67c67a5c59c8599b9f1f35ab71c0db486e6641c9",
+    "bytes": 1411,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2678:pt",
+    "document_id": "showtrials-2678",
+    "language": "pt",
+    "label": "Tradução portuguesa",
+    "file": "originais/showtrials/showtrials-2678.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "447d867b468ad5cf15e951917b24532171c9e60bd96f719487b9b41850c5c21e",
+    "bytes": 4009,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2678:en",
+    "document_id": "showtrials-2678",
+    "language": "en",
+    "label": "Tradução inglesa",
+    "file": "originais/showtrials/showtrials-2678.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "ab8c9c44c3873d2d25c869c3b5f899ddae4273097863640efbbff3bd1354811c",
+    "bytes": 3965,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
   }
 ]

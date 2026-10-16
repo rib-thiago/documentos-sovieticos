@@ -40,9 +40,9 @@ def read_connection(path):
         connection.close()
 
 
-def ensure_index(root, path, catalog=None, rebuild=False, progress=None, *, check_manifest=True, revision=None):
+def ensure_index(root, path, catalog=None, rebuild=False, progress=None, *, check_manifest=True, revision=None, content_overrides=None):
     catalog = catalog or model.load(root)
-    counts = model.validate(catalog, root, check_manifest=check_manifest)
+    counts = model.validate(catalog, root, check_manifest=check_manifest, content_overrides=content_overrides)
     revision = revision or fingerprint(root)
     if path.exists() and not rebuild:
         try:
@@ -90,7 +90,10 @@ def ensure_index(root, path, catalog=None, rebuild=False, progress=None, *, chec
                 connection.execute("INSERT INTO editions VALUES(?,?,?,?,?)", (edition["id"], edition["document_id"], edition["language"], edition["position"], json.dumps(edition, ensure_ascii=False)))
                 doc = docs[edition["document_id"]]
                 titles = " ".join(dict.fromkeys(doc["titles"].values()))
-                body = plain_text(model.content_path(root, edition["file"]).read_text(encoding="utf-8"), edition["format"])
+                raw_content = model.content_bytes(root, edition["file"], content_overrides)
+                if model.sha256(raw_content) != edition["sha256"]:
+                    raise model.CatalogError(f"Arquivo mudou durante a indexação: {edition['file']}")
+                body = plain_text(raw_content.decode("utf-8"), edition["format"])
                 connection.execute("INSERT INTO search VALUES(?,?,?,?,?)", (doc["id"], edition["id"], edition["language"], titles, body))
                 if progress and (edition_number % 250 == 0 or edition_number == len(catalog["editions"])):
                     progress(f"Indexadas {edition_number}/{len(catalog['editions'])} versões.")

@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Área editorial — Documentos Soviéticos</title>
-  <link rel="stylesheet" href="/assets/editorial.css?v=1">
-  <script src="/assets/editorial.js?v=1" defer></script>
+  <link rel="stylesheet" href="/assets/editorial.css?v=translations-1">
+  <script src="/assets/vendor/markdown-it/markdown-it.umd.min.js" defer></script>
+  <script src="/assets/vendor/markdown-it-footnote/markdown-it-footnote.min.js" defer></script>
+  <script src="/assets/vendor/dompurify/purify.min.js" defer></script>
+  <script src="/assets/editorial.js?v=translations-1" defer></script>
 </head>
 <body>
   <header class="editorial-header">
@@ -14,12 +17,13 @@
     <nav aria-label="Área editorial">
       <a href="#/fila">Fila de revisão</a>
       <a href="#/catalogo">Editar catálogo</a>
+      <a href="#/importar">Importar tradução</a>
       <a href="#/historico">Histórico</a>
       <a href="/#/busca" target="_blank" rel="noopener">Abrir o site ↗</a>
     </nav>
   </header>
   <main id="editorial-view" tabindex="-1"><p role="status">Carregando a área editorial…</p></main>
   <noscript>Ative JavaScript para editar o catálogo.</noscript>
-  <footer>As alterações são locais. Textos, traduções e URLs são preservados. O histórico fica em .local/editorial/.</footer>
+  <footer>Gravação somente local, sem publicação automática. Originais preservados; traduções substituídas podem ser recuperadas em Histórico. Cópias em .local/editorial/.</footer>
 </body>
 </html>

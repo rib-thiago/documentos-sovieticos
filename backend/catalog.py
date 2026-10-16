@@ -30,7 +30,7 @@ TYPE_LABELS = {
     "speech": "Discurso", "statement": "Declaração", "summary": "Síntese", "telegram": "Telegrama",
     "testimony": "Depoimento", "verdict_or_sentence": "Sentença",
 }
-DOC_FIELDS = {"id", "type", "title_pt", "title_ru", "date", "archive", "author", "source_name", "source_id",
+DOC_FIELDS = {"id", "type", "title_pt", "title_ru", "title_en", "date", "archive", "author", "source_name", "source_id",
               "source_url", "document_type", "format", "shortTitle", "eyebrow", "languages"}
 COLLECTION_FIELDS = {"id", "title_pt", "title_ru", "subtitle_pt", "description_pt", "accent", "cover", "source_id",
                      "source_url", "subcollections", "document_ids", "documents"}
@@ -66,7 +66,7 @@ def atomic_write(path, data):
             os.unlink(temporary)
 
 
-def content_path(root, relative):
+def content_path(root, relative, *, allow_missing=False):
     if not isinstance(relative, str) or not relative or "\\" in relative:
         raise CatalogError(f"Caminho inválido: {relative!r}")
     parts = Path(relative).parts
@@ -75,9 +75,20 @@ def content_path(root, relative):
     resolved = (root / relative).resolve()
     if not resolved.is_relative_to((root / "originais").resolve()):
         raise CatalogError(f"Conteúdo fora do acervo: {relative}")
-    if not resolved.is_file():
+    if not resolved.is_file() and not (allow_missing and not resolved.exists()):
         raise CatalogError(f"Conteúdo ausente: {relative}")
     return resolved
+
+
+def content_bytes(root, relative, overrides=None):
+    """Lê o arquivo publicado ou um conteúdo proposto ainda não gravado."""
+    if overrides is not None and relative in overrides:
+        content_path(root, relative, allow_missing=True)
+        data = overrides[relative]
+        if not isinstance(data, bytes):
+            raise CatalogError(f"Conteúdo ausente na proposta: {relative}")
+        return data
+    return content_path(root, relative).read_bytes()
 
 
 def load(root=ROOT):
@@ -114,7 +125,7 @@ def export_manifest(catalog):
             fields.extend(key for key in edition["extra"] if key not in fields)
             languages.append(ordered_fields(values, fields))
         values = {"id": doc["id"], "type": doc["kind"], "title_pt": doc["titles"].get("pt"),
-                  "title_ru": doc["titles"].get("ru"), "date": doc["historical_date"].get("display") or doc["historical_date"].get("value"),
+                  "title_ru": doc["titles"].get("ru"), "title_en": doc["titles"].get("en"), "date": doc["historical_date"].get("display") or doc["historical_date"].get("value"),
                   "archive": doc["archive_reference"], "author": doc["author_label"],
                   "source_name": doc["source"].get("name"), "source_id": doc["source"].get("id"),
                   "source_url": doc["source"].get("url"), "document_type": doc["document_type"],
@@ -146,14 +157,14 @@ def export_manifest(catalog):
     return ordered_fields(values, catalog["provenance"]["manifest_projection"]["fields"])
 
 
-def validate(catalog, root=ROOT, check_files=True, check_manifest=True):
+def validate(catalog, root=ROOT, check_files=True, check_manifest=True, *, content_overrides=None):
     try:
-        return _validate(catalog, root, check_files, check_manifest)
+        return _validate(catalog, root, check_files, check_manifest, content_overrides)
     except (KeyError, TypeError, AttributeError) as error:
         raise CatalogError(f"Estrutura inválida no catálogo; confira o campo/valor {error}") from error
 
 
-def _validate(catalog, root, check_files, check_manifest):
+def _validate(catalog, root, check_files, check_manifest, content_overrides=None):
     if catalog["provenance"].get("schema_version") != SCHEMA_VERSION:
         raise CatalogError("Versão de catálogo não suportada")
     maps = {}
@@ -180,8 +191,11 @@ def _validate(catalog, root, check_files, check_manifest):
         if set(edition["extra"]) & {"code", "label", "file", "format"}:
             raise CatalogError(f"Campo de edição duplicado em extra: {edition['id']}")
         positions[edition["document_id"]].append(edition["position"])
-        path = content_path(root, edition["file"])
-        if check_files and sha256(path.read_bytes()) != edition["sha256"]:
+        if check_files or (content_overrides is not None and edition["file"] in content_overrides):
+            data = content_bytes(root, edition["file"], content_overrides)
+        else:
+            content_path(root, edition["file"])
+        if check_files and sha256(data) != edition["sha256"]:
             raise CatalogError(f"Arquivo mudou: {edition['file']}. Confira a edição e execute refresh-files --write para registrar o novo hash.")
     for doc in docs.values():
         if doc["kind"] not in {"document", "article"} or not any(doc["titles"].values()):

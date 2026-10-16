@@ -5199,8 +5199,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2676.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2676.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2676.en.md",
+          "format": "markdown"
         }
-      ]
+      ],
+      "title_pt": "Protocolo de interrogatório de L. V. Nikolaev",
+      "title_en": "Interrogation Record of L. V. Nikolaev"
     },
     {
       "id": "showtrials-2677",
@@ -5217,8 +5231,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2677.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2677.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2677.en.md",
+          "format": "markdown"
         }
-      ]
+      ],
+      "title_pt": "Protocolo de interrogatório de L. V. Nikolaev",
+      "title_en": "Interrogation Record of L. V. Nikolaev"
     },
     {
       "id": "showtrials-2678",
@@ -5235,8 +5263,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2678.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2678.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2678.en.md",
+          "format": "markdown"
         }
-      ]
+      ],
+      "title_pt": "Protocolo de interrogatório de L. V. Nikolaev",
+      "title_en": "Interrogation Record of L. V. Nikolaev"
     },
     {
       "id": "showtrials-2679",

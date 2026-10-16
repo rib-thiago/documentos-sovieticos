@@ -15,7 +15,7 @@ O catálogo em `data/catalog/` é versionado. Os registros de conteúdo continua
 
 - `id`: identidade estável do registro. O ID ShowTrials continua `showtrials-N`; não é uma referência arquivística.
 - `kind`: `document` ou `article`, mantendo a classificação geral anterior.
-- `titles`: títulos por idioma, atualmente `pt` e/ou `ru`. A ausência de tradução é mantida.
+- `titles`: títulos por idioma, `pt`, `ru` e opcionalmente `en`. A ausência de um título traduzido é mantida; a importação só cadastra o título se o formulário o informar. O manifesto representa o título inglês como `title_en` quando presente.
 - `document_type`: chave do vocabulário específico, ou `null` se ainda não registrado.
 - `historical_date`: `display` conserva a data textual anterior. `value` pode receber uma data ISO confirmada; `precision` registra sua precisão editorial, como `day`, `month` ou `year`. Inicialmente `value` é nulo e a precisão não foi inferida. Uma data em `value` não deve vir de um campo WordPress sem conferência.
 - `archive_reference`: referência arquivística textual, quando existente.
@@ -53,7 +53,7 @@ Cada associação tem `collection_id`, `document_id` e `position`, a partir de z
 - Atualização do manifesto após editar o catálogo: `python3 -m backend.catalog export`.
 - Conferência/registro de mudanças em arquivos: `refresh-files` e `refresh-files --write`.
 
-A edição de metadados pode ser feita pela [área editorial local](EDITORIAL-LOCAL.md), que prepara uma prévia, guarda histórico e atualiza JSONs versionados, manifesto e índice. Edições externas nos JSONs continuam possíveis com validação, exportação e reinicialização do backend. O banco não deve ser usado para editar esses valores. A importação de traduções pela interface continua prevista para uma etapa posterior.
+A edição de metadados pode ser feita pela [área editorial local](EDITORIAL-LOCAL.md), que prepara uma prévia, guarda histórico e atualiza JSONs versionados, manifesto e índice. A [importação de traduções](IMPORTACAO-TRADUCOES.md) cadastra ou atualiza a edição, seu formato, arquivo, tamanho e SHA256; guarda o conteúdo anterior e a ausência de arquivo quando a edição é nova. Não registra alinhamento de parágrafos como confirmado. Edições externas nos JSONs continuam possíveis com validação, exportação e reinicialização do backend. O banco não deve ser usado para editar esses valores.
 
 ## Fora do escopo atual
 

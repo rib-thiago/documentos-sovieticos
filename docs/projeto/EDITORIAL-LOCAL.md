@@ -20,7 +20,7 @@ Mantenha apenas um backend ativo para este acervo. Se outro programa ocupar a po
 - Associações às coleções e subcoleções já existentes. Uma subcoleção exige sua coleção principal. Associações novas entram no fim; as mantidas conservam sua ordem relativa. Não são criados nem renomeados IDs de coleções.
 - Prioridade, motivo, status e notas das pendências existentes. Os status são pendente, em revisão, corrigido e adiado. A ação sugerida e a dificuldade da triagem continuam disponíveis para consulta.
 
-IDs, arquivos, traduções, conteúdo dos textos, idiomas, URLs de leitura e URLs da fonte são preservados. Esta etapa não edita o Markdown nem importa traduções. Mudar autoria ou data não significa certificação automática da informação histórica. A data histórica ISO exige precisão correspondente: `1934`, `1934-12` ou `1934-12-03`.
+O formulário de metadados preserva IDs, arquivos, traduções, conteúdo dos textos, idiomas e URLs. A nova tela **Importar tradução** permite incluir ou substituir uma versão traduzida com prévia e histórico; seu [roteiro próprio](IMPORTACAO-TRADUCOES.md) explica esse fluxo. Ainda não há editor de Markdown no navegador. Mudar autoria ou data não significa certificação automática da informação histórica. A data histórica ISO exige precisão correspondente: `1934`, `1934-12` ou `1934-12-03`.
 
 ## Verificação manual sugerida
 
@@ -42,7 +42,7 @@ Ao terminar, use o histórico para desfazer as alterações feitas somente para 
 
 O catálogo e o manifesto continuam versionados no Git. A fila é `docs/revisao-markdown/pendencias.csv`; prioridade e motivo editados são preservados por novas gerações desse relatório, assim como status e notas. Os diagnósticos e as contagens antigas nos relatórios de conversão continuam sendo o registro da triagem original; a fila na interface lê o CSV atual.
 
-Cada gravação guarda cópias completas dos arquivos modificados, antes e depois, comprimidas em `.local/editorial/history/`. Não inclui cópias dos corpos dos documentos. O histórico **não entra no Git e não é enviado ao GitHub**; para guardá-lo em outro local, copie esse diretório. Não apague `.local/editorial/` se quiser manter as opções de desfazer. O SQLite continua sendo um índice derivado, reconstruível.
+Cada gravação guarda cópias completas dos arquivos modificados, antes e depois, comprimidas em `.local/editorial/history/`. Para importações, isso inclui o conteúdo traduzido e a indicação de que um arquivo ainda não existia; os originais não são alterados. O histórico **não entra no Git e não é enviado ao GitHub**; para guardá-lo em outro local, copie esse diretório. Não apague `.local/editorial/` se quiser manter as opções de desfazer. O SQLite continua sendo um índice derivado, reconstruível.
 
 Uma prévia vale por 15 minutos e só pode ser confirmada se catálogo, manifesto e fila continuarem na mesma versão. Uma nova edição no formulário descarta a prévia visível. As gravações são serializadas; o servidor também impede dois processos de backend no mesmo acervo. Requisições editoriais exigem origem local e um token da sessão do backend, sem introduzir contas ou login.
 
@@ -59,6 +59,7 @@ O backend verifica os dados como parte normal da prévia e da gravação. Essas 
 | `GET /api/editorial/documents/ID` | Metadados, associações e pendências de um documento |
 | `GET /api/editorial/history?document=ID` | Até 100 operações recentes, com filtro opcional por documento |
 | `POST /api/editorial/preview` | Validar e preparar proposta de edição ou restauração |
+| `POST /api/editorial/translations/preview` | Preparar importação de tradução com identificação, diferenças e diagnóstico |
 | `POST /api/editorial/save` | Confirmar a prévia existente e registrar o histórico |
 
-As APIs públicas de consulta continuam disponíveis. Escritas são aceitas somente nos dois endpoints editoriais acima, por POST; não há escrita genérica de arquivos pela API.
+As APIs públicas de consulta continuam disponíveis. Propostas e gravações são aceitas somente nos endpoints editoriais POST acima; não há escrita genérica de arquivos pela API.

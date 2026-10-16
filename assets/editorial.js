@@ -109,6 +109,7 @@
       item.append(node("h2",{},[node("a",{href:documentURL(row.id,queue?row.chave:""),text:title(row)})]));
       if(queue) item.append(node("p",{text:row.dificuldade_encontrada}),node("p",{class:"muted",text:"Ação sugerida: "+row.acao_sugerida}));
       else item.append(node("p",{class:"muted",text:row.id+" · "+row.languages.map(l=>l.toUpperCase()).join(" · ")}));
+      item.append(node("a",{href:routeURL("importar",new URLSearchParams({documento:row.id})),text:"Importar tradução para este documento"}));
       view.append(item);
     }
     const visible=new URLSearchParams(params);
@@ -128,10 +129,21 @@
   function previewPanel(preview, container, notice, afterSave, setBusy = () => {}) {
     const panel=node("section",{class:"panel preview",tabindex:"-1","aria-label":"Prévia das alterações"});
     panel.append(node("h2",{text:"Revise antes de salvar"}),comparison(preview.changes));
+    if(preview.translation) panel.append(translationDetails(preview.translation));
+    for(const file of preview.file_diffs || []) {
+      panel.append(node("h3",{text:file.removed?"Arquivo incluído que será removido: "+file.file:"Arquivo que será restaurado: "+file.file}),diffView(file.diff));
+    }
     panel.append(node("p",{class:"help",text:preview.updates_index
-      ? "Ao confirmar, o catálogo e o manifesto serão gravados e o índice de busca será atualizado. Os textos não serão alterados. A gravação pode levar alguns segundos."
+      ? (preview.changes_content?"Ao confirmar, as alterações da tradução mostradas acima serão aplicadas, com histórico, e catálogo, manifesto e busca serão atualizados. O original será preservado. A gravação pode levar alguns segundos.":"Ao confirmar, o catálogo e o manifesto serão gravados e o índice de busca será atualizado. Os textos não serão alterados. A gravação pode levar alguns segundos.")
       : "Ao confirmar, a fila será atualizada. Os textos e os metadados do documento não serão alterados."}));
-    const save=node("button",{type:"button",class:"primary",text:"Confirmar e salvar"});
+    let acknowledgement=null;
+    if(preview.requires_acknowledgement) {
+      acknowledgement=node("input",{type:"checkbox"});
+      const language=preview.translation?.language.toUpperCase()||"selecionado";
+      panel.append(node("label",{class:"import-ack"},[acknowledgement,`Li as divergências e confirmo associar este arquivo ao documento ${preview.document_id}, no idioma ${language}.`]));
+    }
+    const save=node("button",{type:"button",class:"primary",text:"Confirmar e salvar",disabled:!!acknowledgement});
+    acknowledgement?.addEventListener("change",()=>{save.disabled=!acknowledgement.checked;});
     const cancel=node("button",{type:"button",text:"Voltar à edição"});
     cancel.addEventListener("click",()=>{panel.remove();status(notice,"Prévia descartada. Você pode continuar editando.");});
     save.addEventListener("click",async()=>{
@@ -140,13 +152,13 @@
       let completed=false;
       status(notice,"Salvando e atualizando o acervo local. Aguarde…");
       try {
-        const result=await api("/api/editorial/save",{preview_id:preview.preview_id});
+        const result=await api("/api/editorial/save",{preview_id:preview.preview_id,acknowledge_warnings:acknowledgement?.checked===true});
         completed=true;
         dirty=false;
         panel.replaceChildren(node("h2",{text:"Alterações salvas"}),node("p",{text:result.message}),node("p",{class:"muted",text:"Registro: "+result.history_id}));
-        status(notice,"Salvo. Atualize as abas do site que já estavam abertas para carregar os novos metadados.");
+        status(notice,"Salvo localmente. Atualize as abas do site que já estavam abertas para carregar a versão atualizada.");
         afterSave(result,panel);
-      }catch(error){status(notice,error.message,true);save.disabled=false;cancel.disabled=false;}
+      }catch(error){status(notice,error.message,true);save.disabled=!!acknowledgement&&!acknowledgement.checked;cancel.disabled=false;}
       finally{saving=false;if(!completed)setBusy(false);}
     });
     panel.append(node("div",{class:"actions"},[save,cancel]));container.append(panel);
@@ -160,6 +172,7 @@
     view.append(node("a",{href:back?.startsWith("#/")?back:"#/fila",text:"← Voltar à lista"}),node("h1",{text:title(doc)}));
     const publicLink=node("a",{href:"/#/doc/"+encodeURIComponent(id),target:"_blank",rel:"noopener",text:"Abrir documento no site ↗"});
     view.append(node("p",{class:"muted",text:id+" · "+data.editions.map(e=>e.language.toUpperCase()).join(" · ")}),publicLink);
+    view.append(node("p",{},[node("a",{href:routeURL("importar",new URLSearchParams({documento:id})),text:"Importar tradução Markdown para este documento"})]));
     if(doc.source?.url && /^https?:\/\//.test(doc.source.url)) view.append(node("p",{},[node("a",{href:doc.source.url,target:"_blank",rel:"noopener",text:"Consultar a fonte ↗"})]));
     const form=node("form");const editable=node("fieldset");
     const fields=node("section",{class:"panel"},[node("h2",{text:"Metadados"})]);
@@ -236,6 +249,145 @@
     });
     const issue=params.get("pendencia");if(issue) document.getElementById("issue-"+issue)?.scrollIntoView({block:"start"});
   }
+
+  function diffView(diff) {
+    const details=node("details",{class:"import-diff",open:true},[node("summary",{text:"Diferenças linha a linha (+ inclusão, − remoção)"})]);
+    details.append(node("pre",{text:diff.text||"Sem diferenças de texto."}));
+    if(diff.truncated)details.append(node("p",{class:"help",text:"Comparação abreviada por tamanho. Confira também os textos completos abaixo; o arquivo será salvo inteiro."}));
+    return details;
+  }
+
+  function translationDetails(translation) {
+    const wrap=node("div",{class:"translation-preview"});
+    wrap.append(node("h3",{text:translation.replaces?"Substituição da tradução existente":"Inclusão de uma nova tradução"}),
+      node("p",{text:`Documento: ${translation.document_id} · ${translation.document_title}`}),
+      node("p",{text:`Idioma selecionado: ${translation.language.toUpperCase()} · Original de referência: ${translation.original_language.toUpperCase()}`}),
+      node("p",{class:"muted",text:"Arquivo no acervo: "+translation.target_file}));
+    const identity=translation.identification;
+    const identified=node("dl",{class:"import-identification"});
+    for(const [caption,value]of [["Nome recebido",identity.filename],["IDs no cabeçalho",identity.document_ids.join(" · ")],["Idiomas no cabeçalho",identity.languages.join(" · ")],["Fontes no cabeçalho",identity.source_urls.join(" · ")],["Título no arquivo",identity.title]])
+      identified.append(node("dt",{text:caption}),node("dd",{text:value||"Não declarado / não reconhecido"}));
+    wrap.append(identified);
+    if(translation.findings.length) {
+      const findings=node("ul",{class:"import-findings"});
+      for(const finding of translation.findings)findings.append(node("li",{class:finding.level==="warning"?"import-warning":"muted",text:finding.message}));
+      wrap.append(findings);
+    }else wrap.append(node("p",{class:"help",text:"Não foram encontradas divergências nos campos reconhecidos. Isso não confirma automaticamente a tradução nem o idioma do conteúdo."}));
+    wrap.append(node("h3",{text:"Diagnóstico da estrutura — sem pareamento automático"}));
+    const table=node("table");
+    table.append(node("thead",{},[node("tr",{},["Estrutura","Original","Tradução atual","Arquivo enviado"].map(text=>node("th",{scope:"col",text})))]));
+    const body=node("tbody");
+    for(const [key,caption]of [["study_blocks","Blocos do corpo no modo estudo"],["paragraphs","Parágrafos aproximados"],["headings","Títulos do corpo"],["lists","Blocos de listas"],["tables","Blocos de tabelas"],["code_blocks","Blocos de código"]])
+      body.append(node("tr",{},[node("th",{scope:"row",text:caption}),...["original","current","uploaded"].map(column=>node("td",{text:translation.structure[column]?.[key]??"—"}))]));
+    table.append(body);wrap.append(node("div",{class:"table-scroll"},[table]));
+    const same=translation.structure.original.study_blocks===translation.structure.uploaded.study_blocks;
+    wrap.append(node("p",{class:same?"help":"import-warning",text:same
+      ? "As quantidades de blocos do corpo coincidem, mas isso não comprova que cada trecho corresponda ao mesmo trecho do original. Confira o modo estudo depois de salvar."
+      : "As quantidades de blocos do corpo diferem. Listas, tabelas e quebras de parágrafo podem deslocar as falas no modo estudo. A importação é permitida, sem juntar, dividir ou alinhar trechos automaticamente."}),
+      node("p",{class:"help",text:"Títulos, listas, tabelas e parágrafos são estimativas estruturais. Os cabeçalhos e as quebras recebidas serão mantidos; não há comparação semântica."}));
+    if(translation.replaces)wrap.append(diffView(translation.diff));
+    const rendered=node("details",{class:"import-rendered",open:translation.content.length<=200000},[node("summary",{text:"Prévia renderizada do arquivo enviado"})]);
+    const reading=node("div",{class:"import-reading",lang:translation.language});let renderedOnce=false;
+    function render() {
+      if(renderedOnce||!rendered.open)return;
+      renderedOnce=true;
+      try {
+        const parser=markdownit({html:false,linkify:true,typographer:false}).use(markdownitFootnote);
+        reading.innerHTML=DOMPurify.sanitize(parser.render(translation.content),{USE_PROFILES:{html:true},FORBID_TAGS:["style","form","input","button"],FORBID_ATTR:["style"]});
+        for(const link of reading.querySelectorAll("a[href]")) {
+          if(!link.getAttribute("href").startsWith("#")){link.target="_blank";link.rel="noopener noreferrer";}
+        }
+        for(const image of reading.querySelectorAll("img"))image.loading="lazy";
+      }catch(error){reading.textContent="Não foi possível renderizar a prévia. Confira o Markdown abaixo: "+error.message;}
+    }
+    reading.addEventListener("click",event=>{
+      const link=event.target.closest("a[href^='#']");if(!link)return;
+      event.preventDefault();
+      let id;try{id=decodeURIComponent(link.getAttribute("href").slice(1));}catch{return;}
+      const target=[...reading.querySelectorAll("[id]")].find(element=>element.id===id);target?.scrollIntoView({block:"nearest"});
+    });
+    rendered.append(reading);rendered.addEventListener("toggle",render);wrap.append(rendered);render();
+    wrap.append(node("details",{},[node("summary",{text:"Markdown completo que será salvo"}),node("pre",{class:"import-source",text:translation.content})]));
+    if(translation.replaces)wrap.append(node("details",{},[node("summary",{text:"Versão atual completa (será preservada no histórico)"}),node("pre",{class:"import-source",text:translation.current_content})]));
+    return wrap;
+  }
+
+  async function importPage(params,signal) {
+    view.append(node("h1",{text:"Importar tradução Markdown"}),node("p",{class:"help",text:"Escolha o documento, confirme o idioma e envie o arquivo. A prévia não grava nada; a tradução só entra no acervo local depois de Confirmar e salvar. Não há publicação automática."}));
+    const chooser=node("form",{class:"panel"});const chooserFields=node("fieldset");
+    const documentInput=field("ID do documento","document_id",params.get("documento"),{maxlength:200});
+    documentInput.input.required=true;
+    const choose=node("button",{type:"submit",text:"Selecionar documento"});
+    chooserFields.append(documentInput.wrap,node("div",{class:"actions"},[choose,node("a",{href:"#/catalogo",text:"Procurar um documento pelo título"})]));
+    chooser.append(chooserFields);view.append(chooser);
+    const selected=node("section",{class:"panel import-selected",hidden:true});view.append(selected);
+    const form=node("form",{class:"panel import-form"});const fields=node("fieldset",{disabled:true});
+    const language=field("Idioma da tradução","language","",{choices:[["","Selecione explicitamente o idioma"]]});language.input.required=true;
+    const filename=node("input",{type:"file",name:"markdown",accept:".md,.markdown,text/markdown,text/plain",required:true});
+    const translationTitle=field("Título da tradução no catálogo (opcional)","title","",{maxlength:2000});
+    const submit=node("button",{type:"submit",class:"primary",text:"Revisar importação",disabled:true});
+    fields.append(language.wrap,node("label",{class:"field"},["Arquivo Markdown em UTF-8",filename]),translationTitle.wrap,
+      node("p",{class:"help",text:"Arquivos .md ou .markdown de até 4 MiB. O conteúdo será mantido, incluindo cabeçalhos e quebras de parágrafo. O título opcional altera apenas o cadastro, sem reescrever o arquivo."}),
+      node("div",{class:"actions"},[submit]));form.append(fields);view.append(form);
+    const notice=node("p",{class:"status",role:"status","aria-live":"polite"});view.append(notice);
+    let chosen=null,preview=null,version=0,selectionVersion=0,preparing=false;
+    const ready=()=>{submit.disabled=preparing||saving||!chosen||!language.input.value||!filename.files?.length;};
+    function invalidate(){version++;preview?.remove();preview=null;dirty=!!filename.files?.length;ready();}
+    documentInput.input.addEventListener("input",()=>{
+      selectionVersion++;chosen=null;fields.disabled=true;selected.hidden=true;invalidate();status(notice,"Selecione novamente o documento antes de continuar.");
+    });
+    form.addEventListener("input",invalidate);form.addEventListener("change",invalidate);
+    language.input.addEventListener("change",()=>{
+      translationTitle.input.value=chosen?.document.titles[language.input.value]||"";
+      const exists=chosen?.editions.some(e=>e.language===language.input.value);
+      status(notice,language.input.value?(exists?"Já existe uma tradução nesse idioma. A prévia mostrará as diferenças antes da substituição.":"Será incluída uma tradução nesse idioma."):"Selecione o idioma da tradução.");
+    });
+    async function selectDocument() {
+      const attempt=++selectionVersion;choose.disabled=true;chosen=null;fields.disabled=true;invalidate();
+      try {
+        status(notice,"Localizando o documento…");
+        const data=await api("/api/editorial/documents/"+encodeURIComponent(documentInput.input.value.trim()),null,signal);
+        if(attempt!==selectionVersion)return;
+        chosen=data;selected.hidden=false;
+        selected.replaceChildren(node("h2",{text:"Documento selecionado: "+title(data.document)}),node("p",{text:data.document.id+" · Versões atuais: "+data.editions.map(e=>e.language.toUpperCase()).join(" · ")}),
+          node("a",{href:"/#/doc/"+encodeURIComponent(data.document.id),target:"_blank",rel:"noopener",text:"Conferir o original no leitor ↗"}));
+        const original=data.editions.find(e=>e.language==="ru")||data.editions[0];
+        language.input.replaceChildren(node("option",{value:"",text:"Selecione explicitamente o idioma"}));
+        for(const [code,caption]of [["pt","Português"],["en","Inglês"]])if(code!==original.language)
+          language.input.append(node("option",{value:code,text:caption+(data.editions.some(e=>e.language===code)?" — substituir versão existente":" — nova versão")}));
+        translationTitle.input.value="";fields.disabled=false;ready();
+        status(notice,"Confira o documento acima, selecione o idioma e escolha o arquivo traduzido.");
+      }catch(error){if(error.name!=="AbortError"&&attempt===selectionVersion)status(notice,error.message+". Use Editar catálogo para localizar o ID correto.",true);}
+      finally{choose.disabled=false;}
+    }
+    chooser.addEventListener("submit",event=>{event.preventDefault();selectDocument();});
+    form.addEventListener("submit",async event=>{
+      event.preventDefault();if(!chosen)return;
+      const file=filename.files?.[0];if(!file)return;
+      preview?.remove();preview=null;preparing=true;ready();const submittedVersion=version;
+      try {
+        if(!/\.(md|markdown)$/i.test(file.name))throw new Error("Selecione um arquivo .md ou .markdown.");
+        if(file.size>4*1024*1024)throw new Error("O arquivo deve ter no máximo 4 MiB.");
+        let content;
+        try{content=new TextDecoder("utf-8",{fatal:true,ignoreBOM:true}).decode(await file.arrayBuffer());}
+        catch{throw new Error("Não foi possível ler o arquivo em UTF-8. Salve-o nessa codificação antes de importar.");}
+        if(version!==submittedVersion)return;
+        status(notice,"Preparando identificação, diferenças e diagnóstico. Nada será gravado nesta etapa…");
+        const result=await api("/api/editorial/translations/preview",{revision:chosen.revision,document_id:chosen.document.id,
+          language:language.input.value,filename:file.name,content,title:translationTitle.input.value},signal);
+        if(version!==submittedVersion){status(notice,"A seleção mudou durante a preparação. Clique novamente em Revisar importação.");return;}
+        preview=previewPanel(result,view,notice,(saved,panel)=>{
+          fields.disabled=true;chooserFields.disabled=true;
+          const again=node("button",{type:"button",text:"Importar outra tradução"});again.addEventListener("click",()=>route());
+          panel.append(node("div",{class:"actions"},[node("a",{href:"/#/doc/"+encodeURIComponent(saved.document_id),target:"_blank",rel:"noopener",text:"Abrir documento atualizado ↗"}),
+            node("a",{href:"#/historico?document="+encodeURIComponent(saved.document_id),text:"Ver histórico / desfazer"}),again]));
+        },busy=>{fields.disabled=busy;chooserFields.disabled=busy;});
+        status(notice,"Confira a identificação, o diagnóstico e a prévia abaixo. Nenhum arquivo foi salvo ainda.");
+      }catch(error){if(error.name!=="AbortError")status(notice,error.message,true);}
+      finally{preparing=false;ready();}
+    });
+    if(params.get("documento"))await selectDocument();
+  }
   async function historyPage(params,signal) {
     view.append(node("h1",{text:"Histórico recuperável"}),node("p",{class:"help",text:"Cada gravação guarda o estado anterior e posterior dos arquivos alterados. Restaurar cria uma nova alteração com prévia. Se houver edições posteriores nos mesmos arquivos, desfaça primeiro as mais recentes. O histórico é local, em .local/editorial/history/, e não é enviado ao GitHub."}));
     const form=node("form",{class:"panel"});const input=field("ID do documento (opcional)","document",params.get("document"));
@@ -274,7 +426,8 @@
     const [path,query=""]=lastHash.replace(/^#\//,"").split("?");const params=new URLSearchParams(query);
     view.replaceChildren();view.focus();window.scrollTo({top:0});
     try {
-      if(path.startsWith("documento/"))await documentPage(decodeURIComponent(path.slice(10)),params,signal);
+      if(path==="importar")await importPage(params,signal);
+      else if(path.startsWith("documento/"))await documentPage(decodeURIComponent(path.slice(10)),params,signal);
       else if(path==="historico")await historyPage(params,signal);
       else await listPage(path==="catalogo"?"catalogo":"fila",params,signal);
     }catch(error){

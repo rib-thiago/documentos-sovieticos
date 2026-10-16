@@ -15,6 +15,7 @@ from urllib.parse import parse_qs, unquote, urlsplit
 from . import catalog as model
 from .database import QueryError, Repository, ensure_index
 from .editorial import Editorial, EditorialError, STATUSES, PRIORITIES
+from .translations import MAX_TRANSLATION_BYTES
 
 
 class LocalServer(ThreadingHTTPServer):
@@ -50,7 +51,7 @@ def handler_for(repository, editorial):
         def do_POST(self):
             try:
                 self.require_local_editorial()
-                if self.path not in {"/api/editorial/preview", "/api/editorial/save"}:
+                if self.path not in {"/api/editorial/preview", "/api/editorial/save", "/api/editorial/translations/preview"}:
                     self.send_json({"error": "Operação não permitida"}, 405)
                     return
                 if self.headers.get("Origin") != "http://" + self.headers.get("Host", ""):
@@ -60,12 +61,18 @@ def handler_for(repository, editorial):
                 if self.headers.get_content_type() != "application/json":
                     raise EditorialError("Envie JSON", 415)
                 length = int(self.headers.get("Content-Length", "0"))
-                if not 1 <= length <= 200000:
-                    raise EditorialError("Pedido vazio ou maior que 200 KB", 413)
+                maximum = MAX_TRANSLATION_BYTES * 6 + 200000 if self.path == "/api/editorial/translations/preview" else 200000
+                if not 1 <= length <= maximum:
+                    raise EditorialError("Pedido vazio ou maior que o limite permitido", 413)
                 self.connection.settimeout(30)
                 payload = json.loads(self.rfile.read(length))
                 with editorial.lock:
-                    result = editorial.preview(repository, payload) if self.path.endswith("/preview") else editorial.save(repository, payload)
+                    if self.path == "/api/editorial/translations/preview":
+                        result = editorial.preview_translation(repository, payload)
+                    elif self.path == "/api/editorial/preview":
+                        result = editorial.preview(repository, payload)
+                    else:
+                        result = editorial.save(repository, payload)
                 self.send_json(result)
             except EditorialError as error:
                 self.send_json({"error": str(error)}, error.status)

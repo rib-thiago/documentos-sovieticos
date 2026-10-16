@@ -25,6 +25,8 @@ As respostas da API aparecem em JSON. Para pesquisar pela interface do site, abr
 
 Para revisar pendências e editar metadados, abra [a área editorial local](http://localhost:8000/editorial). Reinicie o backend após atualizar o código. Mantenha somente um processo de backend neste acervo. O [manual editorial](EDITORIAL-LOCAL.md) explica a prévia, a confirmação, o histórico e a recuperação das alterações. As gravações pela interface atualizam automaticamente o manifesto e o índice; não é necessário exportá-los manualmente.
 
+A tela **Importar tradução** inclui ou substitui Markdown em português/inglês, com seleção explícita do documento, prévia e histórico do conteúdo. Consulte o [exercício manual de importação e restauração](IMPORTACAO-TRADUCOES.md). Nenhuma dessas operações publica no GitHub automaticamente.
+
 ## Endpoints
 
 | URL | Resultado |
