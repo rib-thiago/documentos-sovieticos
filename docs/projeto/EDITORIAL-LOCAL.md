@@ -65,3 +65,11 @@ O backend verifica os dados como parte normal da prévia e da gravação. Essas 
 | `POST /api/editorial/save` | Confirmar a prévia existente e registrar o histórico |
 
 As APIs públicas de consulta continuam disponíveis. Propostas e gravações são aceitas somente nos endpoints editoriais POST acima; não há escrita genérica de arquivos pela API.
+# Recolher e expandir a navegação lateral
+
+A seta discreta no alto da barra lateral recolhe os links e o contexto do documento, deixando uma faixa estreita com o botão de expansão. No desktop, o editor e a prévia ocupam o espaço liberado; no celular, a navegação é recolhida acima da área de trabalho. O controle não navega, não salva e não recarrega o formulário: o texto em edição permanece na tela.
+
+A escolha é preservada em `sessionStorage` durante a sessão da aba, inclusive ao trocar de seção ou recarregar. Se o armazenamento estiver indisponível, o botão continua funcionando. A navegação começa expandida quando não há preferência salva. O botão funciona por teclado e informa o estado por `aria-expanded`; os links recolhidos saem da navegação por Tab.
+
+Conferência manual: atualize `/editorial` com Ctrl+Shift+R, abra uma edição Markdown e escreva um trecho sem salvar. Recolha/expanda pela seta e confirme que o conteúdo continua no campo e que a área ficou mais larga. Troque de seção respeitando o aviso de edição não salva, confira a persistência da escolha e repita em uma janela estreita. Nenhum teste automatizado ou de navegador foi executado nesta alteração.
+

@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Área editorial — Documentos Soviéticos</title>
-  <link rel="stylesheet" href="/assets/editorial.css?v=stable-week-1">
+  <link rel="stylesheet" href="/assets/editorial.css?v=editorial-sidebar-1">
   <script src="/assets/vendor/markdown-it/markdown-it.umd.min.js" defer></script>
   <script src="/assets/vendor/markdown-it-footnote/markdown-it-footnote.min.js" defer></script>
   <script src="/assets/vendor/dompurify/purify.min.js" defer></script>
   <script src="/assets/export-header.js?v=3" defer></script>
   <script src="/assets/catalog-ui.js?v=stable-week-1" defer></script>
-  <script src="/assets/editorial.js?v=stable-week-1" defer></script>
+  <script src="/assets/editorial.js?v=editorial-sidebar-1" defer></script>
 </head>
 <body>
   <header class="editorial-header">
@@ -20,6 +20,8 @@
   </header>
   <div class="editorial-shell">
   <aside class="editorial-sidebar">
+    <button type="button" class="sidebar-toggle" aria-controls="editorial-sidebar-content" aria-expanded="true" aria-label="Recolher navegação lateral" title="Recolher navegação lateral" hidden>‹</button>
+    <div id="editorial-sidebar-content">
     <p class="sidebar-caption">Organizar o acervo</p>
     <nav aria-label="Área editorial">
       <a href="#/fila">Fila de revisão</a>
@@ -33,6 +35,7 @@
     </nav>
     <div class="sidebar-document" hidden></div>
     <p class="sidebar-note">Revise antes de salvar.<br>As versões anteriores ficam no histórico.</p>
+    </div>
   </aside>
   <main id="editorial-view" tabindex="-1"><p role="status">Carregando a área editorial…</p></main>
   </div>

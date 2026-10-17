@@ -1,6 +1,31 @@
 /* Interface exclusiva do backend local. Não depende do leitor público. */
 (() => {
   const view = document.getElementById("editorial-view");
+  function setupSidebar() {
+    const shell=document.querySelector(".editorial-shell");
+    const content=document.getElementById("editorial-sidebar-content");
+    const toggle=document.querySelector(".sidebar-toggle");
+    if(!shell||!content||!toggle)return;
+    let collapsed=false;
+    try{collapsed=sessionStorage.getItem("editorialSidebarCollapsed")==="true";}catch{}
+    function apply() {
+      shell.classList.toggle("is-sidebar-collapsed",collapsed);
+      content.hidden=collapsed;
+      toggle.setAttribute("aria-expanded",String(!collapsed));
+      const label=collapsed?"Expandir navegação lateral":"Recolher navegação lateral";
+      toggle.setAttribute("aria-label",label);
+      toggle.title=label;
+      toggle.textContent=collapsed?"›":"‹";
+      toggle.hidden=false;
+    }
+    toggle.addEventListener("click",()=>{
+      collapsed=!collapsed;
+      apply();
+      try{sessionStorage.setItem("editorialSidebarCollapsed",String(collapsed));}catch{}
+    });
+    apply();
+  }
+  setupSidebar();
   let session, collections, vocabularies, controller;
   let dirty = false, saving = false, lastHash = location.hash || "#/fila";
   let readerReturn=null;
