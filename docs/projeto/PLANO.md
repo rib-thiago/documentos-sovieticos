@@ -79,3 +79,9 @@ Pendências atuais: upload local de capas com prévia/histórico; consolidação
 Após o commit 0d61f4f, o usuário solicitou consolidar o CSS e ajustar o JavaScript visual necessário, mantendo o layout aprovado, para uma semana de testes práticos próprios. Foram organizados os componentes em assets/css/, removidas regras antigas e unificados os estados/medidas do painel. Sem alteração do acervo, APIs ou URLs. Sem testes executados pelo assistente, commit ou push nesta rodada. O roteiro de início, observação e relato de problemas está em SEMANA-ESTAVEL.md. Durante a semana, priorizar correções pontuais dos problemas encontrados; novas funcionalidades ficam para depois da observação prática.
 
 Posteriormente, o usuário autorizou o commit e o push da consolidação, incluindo o envio dos commits locais pendentes. A validação prática permanece a cargo do usuário; o assistente não executou testes.
+
+## Individualização de confessionezhov
+
+Entrega autorizada: preservar a compilação e seus três arquivos, derivar 24 peças com 72 edições, associá-las à coleção existente em uma subcoleção própria, registrar proveniência e divergências, atualizar catálogo, manifesto e índice local. A operação usa o histórico editorial recuperável e acrescenta a conferência dos recortes à fila. O roteiro de conferência, os limites da derivação e os endereços estão em ../pesquisa/individualizacao-ezhov/README.md. Não executar testes, commit ou push. A revisão manual do responsável permanece pendente; a divisão não resolve divergências históricas nem confirma novo alinhamento de parágrafos.
+
+Após conferir o funcionamento, o usuário aprovou a entrega e autorizou commit e push. A autorização inclui a publicação das peças e dos registros associados; não houve execução de testes pelo assistente.

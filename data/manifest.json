@@ -159,7 +159,7 @@
       "title_pt": "Yezhov vs Stalin",
       "title_ru": "Ежов против Сталина",
       "subtitle_pt": "Ensaio histórico e interrogatórios de Nikolai Yezhov",
-      "description_pt": "Ensaio de Grover Furr sobre Nikolai Yezhov e sua relação com Stalin, em português e inglês, e uma compilação de interrogatórios em russo, português e inglês.",
+      "description_pt": "Ensaio de Grover Furr sobre Nikolai Yezhov e sua relação com Stalin, em português e inglês, e uma compilação de interrogatórios em russo, português e inglês. Os documentos da compilação também estão disponíveis individualmente, com as traduções russa, portuguesa e inglesa preservadas.",
       "accent": "#6b4a2c",
       "cover": "assets/covers/yezhov.jpg",
       "documents": [
@@ -210,6 +210,846 @@
               "file": "originais/confessionezhov.en.md"
             }
           ]
+        },
+        {
+          "id": "confessionezhov-ezh-001",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 18–20.04.1939",
+          "title_ru": "Допрос Ежова (18–20.04.1939)",
+          "title_en": "Ezhov interrogation 04.18 – 04.20.39",
+          "date": "18–20.04.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Extratos e resumo de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-001.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-001.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-001.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-002",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 23.04.1939 (24.04.1939)",
+          "title_ru": "Допрос Ежова 23.04.39 (24.04.39)",
+          "title_en": "Ezhov interrogation 04.23.39 (04.24.39)",
+          "date": "23/24.04.1939",
+          "document_type": "statement",
+          "format": "markdown",
+          "eyebrow": "Declaração escrita",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-002.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-002.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-002.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-003",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov em 26/04/1939",
+          "title_ru": "Допрос Ежова 26 апреля 1939 года.",
+          "title_en": "Ezhov interrogation of 04.26.1939",
+          "date": "26.04.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Interrogatório e ofício de encaminhamento",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-003.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-003.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-003.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-004",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 30.04.1939",
+          "title_ru": "Допрос Ежова 30.04.39",
+          "title_en": "Ezhov interrogation 04.30.39",
+          "date": "30.04.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Extrato e resumo de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-004.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-004.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-004.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-005",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 05.05.1939",
+          "title_ru": "Допрос Ежова 05.05.1939 г.",
+          "title_en": "Ezhov interrogation 05.05.1939",
+          "date": "05.05.1939",
+          "document_type": "summary",
+          "format": "markdown",
+          "eyebrow": "Resumo de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-005.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-005.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-005.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-006",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov de 11 de maio de 1939, por Kobulov",
+          "title_ru": "Допрос Ежова 11 мая 1939 г., проводившийся Кобуловым",
+          "title_en": "Ezhov interrogation May 11 1939 by Kobulov",
+          "date": "11.05.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-006.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-006.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-006.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-007",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 17.05.1939",
+          "title_ru": "Допрос Ежова, 17.05.39",
+          "title_en": "Ezhov interrogation 05.17.39",
+          "date": "17.05.1939",
+          "document_type": "summary",
+          "format": "markdown",
+          "eyebrow": "Resumo de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-007.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-007.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-007.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-008",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 16.06.1939, por Rodos, seleções – Polianskii 230-233",
+          "title_ru": "Допрос Ежова 16.06.39 Родосом, подборки – Полянский 230-233",
+          "title_en": "Ezhov interrogation 06.16.39 by Rodos, selections – Polianskii 230-233",
+          "date": "16.06.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-008.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-008.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-008.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-009",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov de 19 de junho de 1939",
+          "title_ru": "Допрос Ежова 19 июня 1939 г.",
+          "title_en": "Ezhov interrogation June 19 1939",
+          "date": "19.06.1939",
+          "document_type": "summary",
+          "format": "markdown",
+          "eyebrow": "Resumo de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-009.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-009.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-009.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-010",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 21.06.1939, por Rodos, de Polianskii 235-238",
+          "title_ru": "Допрос Ежова 21.06.39 Родос, фм Полянский 235-238",
+          "title_en": "Ezhov interrogation 06.21.39 by Rodos, fm Polianskii 235-238",
+          "date": "21.06.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-010.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-010.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-010.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-011",
+          "type": "document",
+          "title_pt": "Confissão de Ezhov 25.06.1939, Rodos, sobre venenos",
+          "title_ru": "Ежов исповедь 25.06.39 Родос повторно отравляет",
+          "title_en": "Ezhov confession 06.25.39 Rodos re poisons",
+          "date": "25.06.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-011.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-011.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-011.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-012",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 29.06.1939, por Rodos, sobre o relatório de Kedrov",
+          "title_ru": "Допрос Ежова 29.06.39 Родосом по делу Кедрова",
+          "title_en": "Ezhov interrogation 06.29.39 by Rodos re Kedrov’s report",
+          "date": "29.06.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-012.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-012.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-012.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-013",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 02.07.1939, por Rodos, sobre Mnatsakanov",
+          "title_ru": "Допрос Ежова 07.02.39 Родос о Мнацаканове",
+          "title_en": "Ezhov interrogation 07.02.39 by Rodos re Mnatsakanov",
+          "date": "02.07.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-013.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-013.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-013.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-015",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 08.07.1939, por Rodos",
+          "title_ru": "Допрос Ежова 07.08.39 по Родосу",
+          "title_en": "Ezhov interrogation 07.08.39 by Rodos",
+          "date": "08.07.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-015.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-015.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-015.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-017",
+          "type": "document",
+          "title_pt": "Acareação de Ezhov com Zhukovsky 21.07.1939 – Rodos e Esaulov presentes",
+          "title_ru": "Ежов очная ставка w. Жуковский 21.07.39 – Родос и Есаулов присутствуют",
+          "title_en": "Ezhov ochnaia stavka w. Zhukovskii 07.21.39 – Rodos & Esaulov present",
+          "date": "21.07.1939",
+          "document_type": "confrontation_protocol",
+          "format": "markdown",
+          "eyebrow": "Acareação com Zhukovskii — trechos",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-017.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-017.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-017.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-018",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 24.07.1939, por Rodos, incluindo pergunta de um interrogatório de Frinovsky",
+          "title_ru": "Допрос Ежова от 24.07.39, проводившийся Родосом (включая вопрос из допроса Фриновского)",
+          "title_en": "Ezhov interrogation 07.24.39 by Rodos, including a quotation from a Frinovskii interrogation",
+          "date": "24.07.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-018.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-018.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-018.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-019",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 02.08.1939, por Rodos",
+          "title_ru": "Допрос Ежова 08.02.39, проводил Родос",
+          "title_en": "Ezhov interrogation 08.02.39 by Rodos",
+          "date": "02.08.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-019.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-019.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-019.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-020",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 03.08.1939, por Rodos",
+          "title_ru": "Допрос Ежова 08.03.39 автор Родос",
+          "title_en": "Ezhov interrogation 08.03.39 by Rodos",
+          "date": "03.08.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-020.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-020.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-020.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-021",
+          "type": "document",
+          "title_pt": "Confissão de Ezhov de 4 de agosto de 1939",
+          "title_ru": "Ежов 4 августа 1939 г. Исповедь.",
+          "title_en": "Ezhov August 4 1939 Confession",
+          "date": "04.08.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Extrato de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-021.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-021.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-021.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-022",
+          "type": "document",
+          "title_pt": "Acareação de Ezhov com Bulatov 20.09.1939",
+          "title_ru": "Очная ставка Ежова с Булатовым (20.09.39)",
+          "title_en": "Ezhov ochnaia stavka with Bulatov 09.20.39",
+          "date": "20.09.1939",
+          "document_type": "confrontation_protocol",
+          "format": "markdown",
+          "eyebrow": "Acareação com Bulatov — referência e resumo",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-022.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-022.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-022.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-023",
+          "type": "document",
+          "title_pt": "Interrogatório de Ezhov 25.10.1939, por Esaulov",
+          "title_ru": "Допрос Ежова 25.10.39 Есаулова",
+          "title_en": "Ezhov interrogation 10.25.39 by Esaulov",
+          "date": "25.10.1939",
+          "document_type": "interrogation_extract",
+          "format": "markdown",
+          "eyebrow": "Trechos de interrogatório",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-023.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-023.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-023.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-025",
+          "type": "document",
+          "title_pt": "Protocolo de encerramento da investigação de Ezhov 02.01.1940",
+          "title_ru": "Протокол Ежова об окончании следствия от 02.01.40",
+          "title_en": "Ezhov protocol of end of investigation 02.01.40",
+          "date": "02.01.1940",
+          "document_type": "reference_note",
+          "format": "markdown",
+          "eyebrow": "Encerramento da investigação — trechos",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-025.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-025.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-025.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-ezh-026",
+          "type": "document",
+          "title_pt": "Declaração final de Nikolai Ezhov no julgamento, 3 de fevereiro de 1940",
+          "title_ru": "Последнее слово Николая Ежова на суде 3 февраля 1940 года",
+          "title_en": "Nikolai Ezhov's Concluding Statement at Trial February 3 1940",
+          "date": "03.02.1940",
+          "document_type": "speech",
+          "format": "markdown",
+          "eyebrow": "Declaração final em julgamento e comentários",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-ezh-026.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-ezh-026.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-ezh-026.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "confessionezhov-revisao-1998",
+          "type": "document",
+          "title_pt": "Decisão de reabilitação de Ezhov de 1998",
+          "title_ru": "Решение о реабилитации Ежова 1998 года",
+          "title_en": "Ezhov rehabilitation decision 1998",
+          "date": "1998",
+          "document_type": "verdict_or_sentence",
+          "format": "markdown",
+          "eyebrow": "Decisão de 1998 — excerto e comentários",
+          "source_name": "Compilação de interrogatórios de Ezhov",
+          "source_id": "confessionezhov",
+          "source_url": "#/doc/confessionezhov?colecao=yezhov-vs-stalin",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русская версия",
+              "file": "originais/ezhov/confessionezhov-revisao-1998.ru.md",
+              "format": "markdown"
+            },
+            {
+              "code": "pt",
+              "label": "Versão portuguesa",
+              "file": "originais/ezhov/confessionezhov-revisao-1998.pt.md",
+              "format": "markdown"
+            },
+            {
+              "code": "en",
+              "label": "English version",
+              "file": "originais/ezhov/confessionezhov-revisao-1998.en.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
         }
       ]
     },

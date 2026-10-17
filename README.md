@@ -139,3 +139,5 @@ Para cadastrar vários originais novos, use **Importar lote** na área editorial
 
 
 A base visual **stable-week-1** consolida o CSS por componente em `assets/css/`, mantendo as entradas `style.css` e `editorial.css`, sem npm ou build. O [roteiro da semana de uso prático](docs/projeto/SEMANA-ESTAVEL.md) explica a atualização do navegador e como relatar problemas; a [organização dos estilos](assets/css/README.md) orienta a manutenção. Não foram executados testes pelo assistente nesta rodada.
+
+A coleção **Yezhov vs Stalin** também oferece os **documentos individualizados de Ezhov**: 24 peças com versões RU/PT/EN, extraídas literalmente da compilação preservada. Os recortes mantêm notas e traduções e podem ser lidos, exportados e editados separadamente. O [roteiro de conferência e proveniência](docs/pesquisa/individualizacao-ezhov/README.md) explica a organização, as divergências registradas, a busca e a recuperação pelo histórico local.

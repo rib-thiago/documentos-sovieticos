@@ -2206,5 +2206,57 @@
     "Ausência de dado não é inferida do título",
     "Coleções não definem a identidade histórica de uma pessoa",
     "Relações documentais não são deduplicadas por semelhança de texto"
-  ]
+  ],
+  "confessionezhov_individualization": {
+    "parent_document_id": "confessionezhov",
+    "method": "verbatim_byte_ranges_v1",
+    "documents": [
+      "confessionezhov-ezh-001",
+      "confessionezhov-ezh-002",
+      "confessionezhov-ezh-003",
+      "confessionezhov-ezh-004",
+      "confessionezhov-ezh-005",
+      "confessionezhov-ezh-006",
+      "confessionezhov-ezh-007",
+      "confessionezhov-ezh-008",
+      "confessionezhov-ezh-009",
+      "confessionezhov-ezh-010",
+      "confessionezhov-ezh-011",
+      "confessionezhov-ezh-012",
+      "confessionezhov-ezh-013",
+      "confessionezhov-ezh-015",
+      "confessionezhov-ezh-017",
+      "confessionezhov-ezh-018",
+      "confessionezhov-ezh-019",
+      "confessionezhov-ezh-020",
+      "confessionezhov-ezh-021",
+      "confessionezhov-ezh-022",
+      "confessionezhov-ezh-023",
+      "confessionezhov-ezh-025",
+      "confessionezhov-ezh-026",
+      "confessionezhov-revisao-1998"
+    ],
+    "introduction": {
+      "ru": {
+        "file": "originais/confessionezhov.ru.md",
+        "start_line": 1,
+        "end_line": 34,
+        "sha256": "9b94dccbd8867df99d36c3b0c138b2bcd232b23f38ec00ec96c1e2a952d878ba"
+      },
+      "pt": {
+        "file": "originais/confessionezhov.pt.md",
+        "start_line": 1,
+        "end_line": 34,
+        "sha256": "a77c0f8bca94e6715ff27a0477879ebd8d6cecc8e8dd7c5ec6c307ea5e1f9869"
+      },
+      "en": {
+        "file": "originais/confessionezhov.en.md",
+        "start_line": 1,
+        "end_line": 34,
+        "sha256": "0950394fd13633f21eb9a4520f5e7f8a4cb11609f0d55eae657c35b30e7c5e3d"
+      }
+    },
+    "parent_files_unchanged": true,
+    "historical_validation": "Não realizada; divergências preservadas no relatório e nos metadados."
+  }
 }

@@ -42123,5 +42123,1373 @@
       "file",
       "format"
     ]
+  },
+  {
+    "id": "confessionezhov-ezh-001:ru",
+    "document_id": "confessionezhov-ezh-001",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-001.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "035afab91a0b8acb1bcda6a488da0b30b81de2da9f796343ab2a2fc45627b725",
+    "bytes": 5839,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-001:pt",
+    "document_id": "confessionezhov-ezh-001",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-001.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "68b9dbebe3c316016a2b73e6536b738ce1af8179fba97b3b456d6c322c801a40",
+    "bytes": 3638,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-001:en",
+    "document_id": "confessionezhov-ezh-001",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-001.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "5cad430cc03cb5d03053e2e1bf24425b44bfd3a986f047c631bca72f4e46489e",
+    "bytes": 3522,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-002:ru",
+    "document_id": "confessionezhov-ezh-002",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-002.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "917046a698cd5ee678856c9e33d2df196a562072fb87851cfbf030aca715a91e",
+    "bytes": 6749,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-002:pt",
+    "document_id": "confessionezhov-ezh-002",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-002.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "14997f8d6868b2711046501211ad92f7050b10596eb6571b0d0fa2e8f3f8a031",
+    "bytes": 4319,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-002:en",
+    "document_id": "confessionezhov-ezh-002",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-002.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "e218ad105796713a5c77cd57311370f1f5aa3b0eab5753e80ef3994c5ce24b84",
+    "bytes": 4060,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-003:ru",
+    "document_id": "confessionezhov-ezh-003",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-003.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "2f3cbd4dbb88cebf51f5160b233dfa0407de0fdb8d97ea60897fbfcb83ddc6e6",
+    "bytes": 107803,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-003:pt",
+    "document_id": "confessionezhov-ezh-003",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-003.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "a1f74e480363733f683c638d472a4412cf72ac6d513d0a82ec010fc4bb6c7e27",
+    "bytes": 62778,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-003:en",
+    "document_id": "confessionezhov-ezh-003",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-003.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "1574d0c048c941676000d8cc18f54f43e1cbbf56256d14c09cf6ef52899d2fcd",
+    "bytes": 66756,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-004:ru",
+    "document_id": "confessionezhov-ezh-004",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-004.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "05a70224823e47582c2732cb4b80ff21364a89702c8b3ae2cad51538763bd6a6",
+    "bytes": 1558,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-004:pt",
+    "document_id": "confessionezhov-ezh-004",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-004.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "514be8bce080d87cbedcb815048ffb4143588fdc0435ee3ebfd4d6d3ab65ac77",
+    "bytes": 1003,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-004:en",
+    "document_id": "confessionezhov-ezh-004",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-004.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "f15e622521bc379f222056d27cb5bd2aa8fcac65ce8fb02216d21b951ea6535e",
+    "bytes": 972,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-005:ru",
+    "document_id": "confessionezhov-ezh-005",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-005.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "402b7ff2b83e73f76b1b7648271fe882dc26d09345b457b3074380e0058c0e3c",
+    "bytes": 1981,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-005:pt",
+    "document_id": "confessionezhov-ezh-005",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-005.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "9caf7fd82e6e974ce5bc26f97a90abd5c638c3acd1346ba696ce178c5534fcfe",
+    "bytes": 1279,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-005:en",
+    "document_id": "confessionezhov-ezh-005",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-005.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "e535aa1e684590e43eddf276313a0330c1007cd448813ea891b6c8199cd19685",
+    "bytes": 1307,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-006:ru",
+    "document_id": "confessionezhov-ezh-006",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-006.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "1d16316f73a2b9c67ac2ec999a1e1739fdffb9fe4c764941c5f61a66ae93ea04",
+    "bytes": 9771,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-006:pt",
+    "document_id": "confessionezhov-ezh-006",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-006.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "4aa166f3b35d77439e8d9740a9f1a5be47eddfafc1074de5007e086fc226d35f",
+    "bytes": 6085,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-006:en",
+    "document_id": "confessionezhov-ezh-006",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-006.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "d59f9e06ddc7ad840ed63b15e9795c7269367c482c6f19498f1843ae8e28c58b",
+    "bytes": 5910,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-007:ru",
+    "document_id": "confessionezhov-ezh-007",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-007.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "f40f3b102e7816c6ba623030de9b4d0393601c96fa4c5790e8fa5143612db8a6",
+    "bytes": 1187,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-007:pt",
+    "document_id": "confessionezhov-ezh-007",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-007.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "141281d23cacd0803dea5ee84eca96e18c915c851e02aab47324467207d13827",
+    "bytes": 754,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-007:en",
+    "document_id": "confessionezhov-ezh-007",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-007.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "aa99431b2ce4ed498dc079cfdd7cf72deab98c1054ac6aa726870dd0c0178517",
+    "bytes": 726,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-008:ru",
+    "document_id": "confessionezhov-ezh-008",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-008.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "bb04cc51d85dcab2483c7d758ce14e00b24660108a6d430823a5d0620bc1a182",
+    "bytes": 2818,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-008:pt",
+    "document_id": "confessionezhov-ezh-008",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-008.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "845863c76c9fd50ef773872764f25a8da377b5389f25797a6b08eff8e4199fc6",
+    "bytes": 1903,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-008:en",
+    "document_id": "confessionezhov-ezh-008",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-008.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "dc53faa55107398bd78fbae95a4cf860a979f64de6a04d015016a1f95ce56f14",
+    "bytes": 1889,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-009:ru",
+    "document_id": "confessionezhov-ezh-009",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-009.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "7d47cefdf6664cba30fe6cb92775315891330811164dfa9c9b74ece21c486f02",
+    "bytes": 2688,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-009:pt",
+    "document_id": "confessionezhov-ezh-009",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-009.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "e9c39c77430c15ac376292d9fdd90c873388e0197d0d30e0c06a84331bb14573",
+    "bytes": 1808,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-009:en",
+    "document_id": "confessionezhov-ezh-009",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-009.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "dc355f54dc2ef8cfc229d6f31525717e22e54ce70a23b02bbfc2218cb6904a2e",
+    "bytes": 1676,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-010:ru",
+    "document_id": "confessionezhov-ezh-010",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-010.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "1c54a9a10cca2ea0ed550f4a4bebdbe1a9bb222d36a1c470a971d61165f1612e",
+    "bytes": 8318,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-010:pt",
+    "document_id": "confessionezhov-ezh-010",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-010.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "ae83baeedabc26098ac6316bd987ed7c70ec14c3dc66153be579f7b121b26aee",
+    "bytes": 5413,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-010:en",
+    "document_id": "confessionezhov-ezh-010",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-010.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "cd963e842afe6377936182e867dd1e7a2d091bf4861b5b1399f45e3c95956b17",
+    "bytes": 5407,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-011:ru",
+    "document_id": "confessionezhov-ezh-011",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-011.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "1933860cf2591d86da3248f34040eeb02b6d419a1413bf25b11819c2f5b99bbf",
+    "bytes": 7976,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-011:pt",
+    "document_id": "confessionezhov-ezh-011",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-011.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "8950491daa633755bc881c0f922ac66b9203efbf3c2025232ea8921d86da9c99",
+    "bytes": 5073,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-011:en",
+    "document_id": "confessionezhov-ezh-011",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-011.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "6a8143130963b925d34a85d9dec9fd4c5a76fc8204e19d56e6d0941cafe14cef",
+    "bytes": 5034,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-012:ru",
+    "document_id": "confessionezhov-ezh-012",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-012.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "907b9d8f209fcbfef0060bae874adb00e3bdaff762cd7c7abef9353c96b17f8f",
+    "bytes": 3930,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-012:pt",
+    "document_id": "confessionezhov-ezh-012",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-012.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "2b1ea0c0783cbd8557717ed93e9d7d1a9f05549d1fbd1124f85162f39bca0ffc",
+    "bytes": 2573,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-012:en",
+    "document_id": "confessionezhov-ezh-012",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-012.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "832317cad26555219dfa642c8ad4f360698dfe5c8dbc4f1017803337d1d8c793",
+    "bytes": 2533,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-013:ru",
+    "document_id": "confessionezhov-ezh-013",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-013.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "57b57365536703dbadd357cdc284192db027bb07279f004b0cf1983e7d172454",
+    "bytes": 21752,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-013:pt",
+    "document_id": "confessionezhov-ezh-013",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-013.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "617f55e9b146439f16eaf62d096f8dc8e39818836f2f29c2b29675bd079701aa",
+    "bytes": 14106,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-013:en",
+    "document_id": "confessionezhov-ezh-013",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-013.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "1d549b19f9be843a27579c2d9c74abf29a0dd21bccd529e555103c2907cee747",
+    "bytes": 13738,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-015:ru",
+    "document_id": "confessionezhov-ezh-015",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-015.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "d15c8d6905cc8901a27213c2bd588c342639fcadc070c62f16e90bfb48583811",
+    "bytes": 15113,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-015:pt",
+    "document_id": "confessionezhov-ezh-015",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-015.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "a1a11da00c5e43d6a74b84a6f3d03c415a6f757a2f2eb9b318fa53f4cd2f21ac",
+    "bytes": 9345,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-015:en",
+    "document_id": "confessionezhov-ezh-015",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-015.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "15c38c46a6c55e6de36e422e61412085760227cb70c3f010b9b3b9ea1f20de9d",
+    "bytes": 9379,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-017:ru",
+    "document_id": "confessionezhov-ezh-017",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-017.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "cc61c2ed7485106013ff1377efd4fb9cda8e4a3708e93d8879cf557791c68938",
+    "bytes": 7620,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-017:pt",
+    "document_id": "confessionezhov-ezh-017",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-017.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "953706c9b42eb706976f67d725bb4934946d4197c02dcb303b4806d25b2e3643",
+    "bytes": 4696,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-017:en",
+    "document_id": "confessionezhov-ezh-017",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-017.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "1be84c01e2938f8f126b4dd591b87eb648a9bbc6995d2bea60a6100cf41b8b55",
+    "bytes": 4760,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-018:ru",
+    "document_id": "confessionezhov-ezh-018",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-018.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "41a64fa0662ce994402002a7d500d8d59111a2cf025c2626f143a957ce211e87",
+    "bytes": 10431,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-018:pt",
+    "document_id": "confessionezhov-ezh-018",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-018.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "3d9eef5ab151d237458e8b000d1839e22720b1266c78f2275be794e29d66d204",
+    "bytes": 6536,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-018:en",
+    "document_id": "confessionezhov-ezh-018",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-018.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "eb798b69b0e69533458a29d026e8d790fb55d3e95e38f06dd332288dc9a740f3",
+    "bytes": 6602,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-019:ru",
+    "document_id": "confessionezhov-ezh-019",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-019.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "d2e17222c93ae54b4f6b6cddf22f2ae5b6e01d99881b6394e4c7fc721b79cfe1",
+    "bytes": 18293,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-019:pt",
+    "document_id": "confessionezhov-ezh-019",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-019.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "9b7bfa5c01506c42f3a7ee461f5e347c8b8b47531e2520cce7d815b9cebe9774",
+    "bytes": 11271,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-019:en",
+    "document_id": "confessionezhov-ezh-019",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-019.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "f6dade15648eada16741f07581e462b32cd01e22c8fbe320d96f4905dff41947",
+    "bytes": 10894,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-020:ru",
+    "document_id": "confessionezhov-ezh-020",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-020.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "1e822011e14d33bc67a9c205aad7b0060811f28880ae957815c8cf08e7ecce50",
+    "bytes": 14191,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-020:pt",
+    "document_id": "confessionezhov-ezh-020",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-020.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "0d388a23c4028e1239fc78ecf29906bfbf1635c561db92ff2300f5daf29a97c1",
+    "bytes": 9060,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-020:en",
+    "document_id": "confessionezhov-ezh-020",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-020.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "b73c8e96cd25039643b44078fb5710ed3b1f08b1e647bd1e7f91ba9d8c2bf660",
+    "bytes": 8691,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-021:ru",
+    "document_id": "confessionezhov-ezh-021",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-021.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "fb07690bddf47878b2b22882e765ee04d6845bfb03369852991282ba696e8ea9",
+    "bytes": 56310,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-021:pt",
+    "document_id": "confessionezhov-ezh-021",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-021.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "60c0559223196eb4b72db946bcc26825b048c05df0ff98140b377c446f038680",
+    "bytes": 35019,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-021:en",
+    "document_id": "confessionezhov-ezh-021",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-021.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "b8cdfcce932bd49b4509aac75def5c3127f5868b05f3446e11818cce2c03ff41",
+    "bytes": 34221,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-022:ru",
+    "document_id": "confessionezhov-ezh-022",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-022.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "bcca6919a50b442b27fc6b771eb8031f62c1b3419645f3130d1c44cb7536f870",
+    "bytes": 741,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-022:pt",
+    "document_id": "confessionezhov-ezh-022",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-022.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "c6d3349d4c833c926ae890ea061bdfa32a64a08b225cbfa7d2291cf733091367",
+    "bytes": 479,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-022:en",
+    "document_id": "confessionezhov-ezh-022",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-022.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "7b702969f66389a95aeef164a5d06c2f308778bf785882403b22c4375d2b1954",
+    "bytes": 490,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-023:ru",
+    "document_id": "confessionezhov-ezh-023",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-023.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "016ad99f816d3ca921a3c7087cd4da5c7dd7310dc03bd0c7e930c9d122b33a56",
+    "bytes": 7462,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-023:pt",
+    "document_id": "confessionezhov-ezh-023",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-023.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "f4a4851e5e321f9833ff3a683fa5a999c4e6abd155ac5146d7059dbfea9c9e84",
+    "bytes": 4501,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-023:en",
+    "document_id": "confessionezhov-ezh-023",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-023.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "18825fc0761515282401301f2bfde365db7a46b7f3207db64ab6064cada30486",
+    "bytes": 4442,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-025:ru",
+    "document_id": "confessionezhov-ezh-025",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-025.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "1d8f5775c1be6e1fb358188e9c7bcd3e2cc36224cb908c2e85049d07012fa34b",
+    "bytes": 3462,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-025:pt",
+    "document_id": "confessionezhov-ezh-025",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-025.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "0b848a9f16d1a05eb61e0483f8e579b352f4fd001a9e3f5be6731679e0900e53",
+    "bytes": 1957,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-025:en",
+    "document_id": "confessionezhov-ezh-025",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-025.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "e9f6b642f41e23fb1cbf7e87ff0f1f4efafaca2b603524f1cc083deb6b902106",
+    "bytes": 1912,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-026:ru",
+    "document_id": "confessionezhov-ezh-026",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-ezh-026.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "54c49a921b8af42c6d3b82c31c1783daa5c3aeaf471d7123fe6199269a9e94bc",
+    "bytes": 36555,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-026:pt",
+    "document_id": "confessionezhov-ezh-026",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-ezh-026.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "263b54242889b87a15b8944e5f7a070dd249ca4cbcbc635b0b4227c89a54da4a",
+    "bytes": 23128,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-ezh-026:en",
+    "document_id": "confessionezhov-ezh-026",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-ezh-026.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "2db525b92353281d0aa2a2c20303b38e3cc556d61382cad35c755411759c0869",
+    "bytes": 22538,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-revisao-1998:ru",
+    "document_id": "confessionezhov-revisao-1998",
+    "language": "ru",
+    "label": "Русская версия",
+    "file": "originais/ezhov/confessionezhov-revisao-1998.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "sha256": "4651eab0fc6da98021ee9aa92328ad05e46491f09091558aa15b366e0931f32d",
+    "bytes": 2740,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-revisao-1998:pt",
+    "document_id": "confessionezhov-revisao-1998",
+    "language": "pt",
+    "label": "Versão portuguesa",
+    "file": "originais/ezhov/confessionezhov-revisao-1998.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "55c93c699fa9420e4be41ebc917a6dea14df3e8a9820385ff3150ea44db31513",
+    "bytes": 1651,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "confessionezhov-revisao-1998:en",
+    "document_id": "confessionezhov-revisao-1998",
+    "language": "en",
+    "label": "English version",
+    "file": "originais/ezhov/confessionezhov-revisao-1998.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "fdf7381eae22cbd6e6c25cb19ee41b92724471746142534c260a08986e497850",
+    "bytes": 1635,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
   }
 ]

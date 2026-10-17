@@ -93,7 +93,7 @@
       "ru": "Ежов против Сталина"
     },
     "subtitle": "Ensaio histórico e interrogatórios de Nikolai Yezhov",
-    "description": "Ensaio de Grover Furr sobre Nikolai Yezhov e sua relação com Stalin, em português e inglês, e uma compilação de interrogatórios em russo, português e inglês.",
+    "description": "Ensaio de Grover Furr sobre Nikolai Yezhov e sua relação com Stalin, em português e inglês, e uma compilação de interrogatórios em russo, português e inglês. Os documentos da compilação também estão disponíveis individualmente, com as traduções russa, portuguesa e inglesa preservadas.",
     "source": {},
     "presentation": {
       "accent": "#6b4a2c",
@@ -1089,6 +1089,29 @@
       "title_ru",
       "source_id",
       "source_url",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "yezhov-vs-stalin/documentos-individualizados",
+    "slug": "documentos-individualizados",
+    "parent_id": "yezhov-vs-stalin",
+    "position": 0,
+    "titles": {
+      "pt": "Documentos individualizados de Ezhov",
+      "ru": "Документы Ежова — отдельные тексты"
+    },
+    "subtitle": "23 peças de 1939–1940 e um texto relativo à decisão de 1998 · RU/PT/EN",
+    "description": "Recortes integrais das seções da compilação existente, com suas traduções e notas. Inclui extratos, resumos, declaração, acareações e manifestações judiciais; não são 24 protocolos integrais.",
+    "source": {},
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "description_pt",
       "document_ids"
     ]
   }

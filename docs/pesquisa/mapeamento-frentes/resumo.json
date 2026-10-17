@@ -1,0 +1,16 @@
+{
+  "ezhov": {
+    "secao_candidata_na_compilacao": 23,
+    "sem_correspondencia_identificada": 3
+  },
+  "militar": {
+    "sem_correspondencia_identificada": 32,
+    "fonte_url_correspondente": 3,
+    "secao_candidata_na_compilacao": 1
+  },
+  "litvinov": {
+    "secao_candidata_na_compilacao": 12,
+    "sem_correspondencia_identificada": 18,
+    "compilacao_relacionada": 1
+  }
+}
