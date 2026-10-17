@@ -28921,8 +28921,15 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-5690.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-5690.pt.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Protocolo de interrogatório de P. A. Lipshits",
       "collected_date": "1936-07-10T01:10:00"
     },
     {
@@ -29301,8 +29308,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-5711.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-5711.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-5711.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Protocolo de interrogatório de M. I. Lurie",
+      "title_en": "Interrogation Record of M. I. Lurie",
       "collected_date": "1936-07-21T03:10:00"
     },
     {
@@ -32417,8 +32438,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-10505.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-10505.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-10505.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Relatório de M. I. Gai sobre as ligações de D. S. Taits",
+      "title_en": "M. I. Gai's Report on D. S. Taits's Connections",
       "collected_date": "1935-02-19T10:39:33"
     },
     {
@@ -33956,8 +33991,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-5810.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-5810.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-5810.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Protocolo do interrogatório de D. A. Taits",
+      "title_en": "Transcript of the Interrogation of D. A. Taits",
       "collected_date": "1936-09-04T00:36:00"
     },
     {

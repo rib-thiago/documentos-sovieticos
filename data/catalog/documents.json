@@ -58476,7 +58476,8 @@
     "id": "showtrials-5690",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.А. Липшица"
+      "ru": "Протокол допроса П.А. Липшица",
+      "pt": "Protocolo de interrogatório de P. A. Lipshits"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -59500,7 +59501,9 @@
     "id": "showtrials-5711",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.И. Лурье"
+      "ru": "Протокол допроса М.И. Лурье",
+      "pt": "Protocolo de interrogatório de M. I. Lurie",
+      "en": "Interrogation Record of M. I. Lurie"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -67699,7 +67702,9 @@
     "id": "showtrials-10505",
     "kind": "document",
     "titles": {
-      "ru": "Справка М.И. Гая о связях Д.С. Тайца"
+      "ru": "Справка М.И. Гая о связях Д.С. Тайца",
+      "pt": "Relatório de M. I. Gai sobre as ligações de D. S. Taits",
+      "en": "M. I. Gai's Report on D. S. Taits's Connections"
     },
     "document_type": "reference_note",
     "historical_date": {
@@ -71765,7 +71770,9 @@
     "id": "showtrials-5810",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.А. Тайца"
+      "ru": "Протокол допроса Д.А. Тайца",
+      "pt": "Protocolo do interrogatório de D. A. Taits",
+      "en": "Transcript of the Interrogation of D. A. Taits"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
