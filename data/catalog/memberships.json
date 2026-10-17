@@ -22538,5 +22538,205 @@
     "collection_id": "yezhov-vs-stalin/documentos-individualizados",
     "document_id": "confessionezhov-revisao-1998",
     "position": 23
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-08-am",
+    "position": 0
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-08-am",
+    "position": 0
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-08-pm",
+    "position": 1
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-08-pm",
+    "position": 1
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-09-am",
+    "position": 2
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-09-am",
+    "position": 2
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-09-pm",
+    "position": 3
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-09-pm",
+    "position": 3
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-10-am",
+    "position": 4
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-10-am",
+    "position": 4
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-10-pm-aviation",
+    "position": 5
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-10-pm-aviation",
+    "position": 5
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-11-am-weapons",
+    "position": 6
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-11-am-weapons",
+    "position": 6
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-11-pm-uniform",
+    "position": 7
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-11-pm-uniform",
+    "position": 7
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-11-pm-food",
+    "position": 8
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-11-pm-food",
+    "position": 8
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-14-pm",
+    "position": 9
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-14-pm",
+    "position": 9
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-protocol",
+    "position": 10
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-protocol",
+    "position": 10
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-order-weapons",
+    "position": 11
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-order-weapons",
+    "position": 11
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-nko35-order-food",
+    "position": 12
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "document_id": "military-nko35-order-food",
+    "position": 12
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-rkka-raw-materials-1934",
+    "position": 13
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/industria-defesa-1934-1936",
+    "document_id": "military-rkka-raw-materials-1934",
+    "position": 0
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-gosplan-aircraft-1935",
+    "position": 14
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/industria-defesa-1934-1936",
+    "document_id": "military-gosplan-aircraft-1935",
+    "position": 1
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-tank-policy-1935",
+    "position": 15
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/industria-defesa-1934-1936",
+    "document_id": "military-tank-policy-1935",
+    "position": 2
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-aviation-korolev-1935",
+    "position": 16
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/industria-defesa-1934-1936",
+    "document_id": "military-aviation-korolev-1935",
+    "position": 3
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-kpk-kuibyshev-1935",
+    "position": 17
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/industria-defesa-1934-1936",
+    "document_id": "military-kpk-kuibyshev-1935",
+    "position": 4
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-voroshilov-artillery-1936",
+    "position": 18
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/industria-defesa-1934-1936",
+    "document_id": "military-voroshilov-artillery-1936",
+    "position": 5
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936",
+    "document_id": "military-kpk-kuibyshev-1936",
+    "position": 19
+  },
+  {
+    "collection_id": "exercito-industria-defesa-1934-1936/industria-defesa-1934-1936",
+    "document_id": "military-kpk-kuibyshev-1936",
+    "position": 6
   }
 ]

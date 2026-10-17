@@ -1114,5 +1114,68 @@
       "description_pt",
       "document_ids"
     ]
+  },
+  {
+    "id": "exercito-industria-defesa-1934-1936",
+    "slug": "exercito-industria-defesa-1934-1936",
+    "parent_id": null,
+    "position": 13,
+    "titles": {
+      "pt": "Exército e indústria de defesa soviéticos, 1934–1936"
+    },
+    "subtitle": "Documentação em russo",
+    "description": "Documentos do Conselho Militar de 1935 e da indústria de defesa de 1934–1936, em russo. Inclui notas e referências das edições publicadas.",
+    "source": {},
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "documents"
+    ]
+  },
+  {
+    "id": "exercito-industria-defesa-1934-1936/conselho-militar-1935",
+    "slug": "conselho-militar-1935",
+    "parent_id": "exercito-industria-defesa-1934-1936",
+    "position": 0,
+    "titles": {
+      "pt": "Conselho Militar de dezembro de 1935"
+    },
+    "subtitle": "Documentação em russo",
+    "description": "Sessões e segmentos temáticos, ata e ordens relacionadas ao Conselho Militar de dezembro de 1935, preservando a divisão das páginas da fonte.",
+    "source": {},
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "exercito-industria-defesa-1934-1936/industria-defesa-1934-1936",
+    "slug": "industria-defesa-1934-1936",
+    "parent_id": "exercito-industria-defesa-1934-1936",
+    "position": 1,
+    "titles": {
+      "pt": "Indústria e abastecimento de defesa"
+    },
+    "subtitle": "Documentação em russo",
+    "description": "Relatórios, memorandos e resoluções de 1934–1936 sobre aviação, armamentos, matérias-primas e indústria de defesa.",
+    "source": {},
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "document_ids"
+    ]
   }
 ]

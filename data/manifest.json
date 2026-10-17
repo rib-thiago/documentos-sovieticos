@@ -5866,6 +5866,474 @@
         "showtrials-1612"
       ],
       "cover": "assets/covers/outros-documentos.jpg"
+    },
+    {
+      "id": "exercito-industria-defesa-1934-1936",
+      "title_pt": "Exército e indústria de defesa soviéticos, 1934–1936",
+      "subtitle_pt": "Documentação em russo",
+      "description_pt": "Documentos do Conselho Militar de 1935 e da indústria de defesa de 1934–1936, em russo. Inclui notas e referências das edições publicadas.",
+      "documents": [
+        {
+          "id": "military-nko35-08-am",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da manhã de 8 de dezembro",
+          "title_ru": "Стенограмма утреннего заседания 8 декабря 1935 г.",
+          "date": "1935.12.08",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33256",
+          "source_url": "https://web.archive.org/web/20250909142421/https://istmat.org/node/33256",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-08-am.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-08-pm",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da tarde/noite de 8 de dezembro",
+          "title_ru": "Стенограмма вечернего заседания 8 декабря 1935 г.",
+          "date": "1935.12.08",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33257",
+          "source_url": "https://web.archive.org/web/20250912152834/https://istmat.org/node/33257",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-08-pm.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-09-am",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da manhã de 9 de dezembro",
+          "title_ru": "Стенограмма утреннего заседания 9 декабря 1935 г.",
+          "date": "1935.12.09",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33258",
+          "source_url": "https://web.archive.org/web/20260111191501/https://istmat.org/node/33258",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-09-am.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-09-pm",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da tarde/noite de 9 de dezembro",
+          "title_ru": "Стенограмма вечернего заседания 9 декабря 1935 г.",
+          "date": "1935.12.09",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33259",
+          "source_url": "https://web.archive.org/web/20251211064647/https://istmat.org/node/33259",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-09-pm.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-10-am",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da manhã de 10 de dezembro",
+          "title_ru": "Стенограмма утреннего заседания 10 декабря 1935 г.",
+          "date": "1935.12.10",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33260",
+          "source_url": "https://web.archive.org/web/20250928065645/https://istmat.org/node/33260",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-10-am.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-10-pm-aviation",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da tarde/noite: aviação",
+          "title_ru": "Доклад и выступления по авиационным вопросам",
+          "date": "1935.12.10",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33262",
+          "source_url": "https://web.archive.org/web/20251211073616/https://istmat.org/node/33262",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-10-pm-aviation.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-11-am-weapons",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da manhã: armamentos",
+          "title_ru": "Доклад и выступления о мероприятиях по улучшению эксплуатации, хранения и сбережения оружия, боеприпасов и технического имущества",
+          "date": "1935.12.11",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33263",
+          "source_url": "https://web.archive.org/web/20250906200707/https://istmat.org/node/33263",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-11-am-weapons.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-11-pm-uniform",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da tarde/noite: material e fardamento",
+          "title_ru": "Доклад и выступления об обозно-вещевом снабжении РККА",
+          "date": "1935.12.11",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33264",
+          "source_url": "https://web.archive.org/web/20250909135149/https://istmat.org/node/33264",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-11-pm-uniform.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-11-pm-food",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da tarde/noite: alimentação",
+          "title_ru": "Стенограмма вечернего заседания 11 декабря 1935 г.",
+          "date": "1935.12.11",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33265",
+          "source_url": "https://web.archive.org/web/20250915133518/https://istmat.org/node/33265",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-11-pm-food.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-14-pm",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da tarde/noite de 14 de dezembro",
+          "title_ru": "Стенограмма вечернего заседания 14 декабря 1935 г.",
+          "date": "1935.12.14",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33269",
+          "source_url": "https://web.archive.org/web/20260520224736/https://istmat.org/node/33269",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-14-pm.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-protocol",
+          "type": "document",
+          "title_pt": "Ata do Conselho Militar de 8–14 de dezembro de 1935",
+          "title_ru": "Протокол заседания Военного совета при НКО СССР 8—14 декабря 1935 г.",
+          "date": "1935.12.08",
+          "archive": null,
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33267",
+          "source_url": "https://web.archive.org/web/20250911052308/https://istmat.org/node/33267",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-protocol.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-order-weapons",
+          "type": "document",
+          "title_pt": "Ordem sobre armazenamento de armas, munições e material técnico",
+          "title_ru": "Приказ НКО СССР о мероприятиях по улучшению эксплуатации, хранения и сбережения оружия, боеприпасов и технического имущества в войсках и на складах. 31 декабря 1935    г.",
+          "date": "1935.12.31",
+          "archive": "РГВА. Ф. 4. Оп. 15а. Д. 406. Л. 196—198а. Типографский экземпляр.",
+          "document_type": "plan_instruction",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33277",
+          "source_url": "https://web.archive.org/web/20250912151219/https://istmat.org/node/33277",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-order-weapons.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-nko35-order-food",
+          "type": "document",
+          "title_pt": "Ordem sobre abastecimento de alimentos e forragem",
+          "title_ru": "Приказ НКО СССР о продовольственном и фуражном снабжении РККА. 28 декабря 1935 г.",
+          "date": "1935.12.28",
+          "archive": "РГВА. Ф. 4. Оп. 15. Д. 5. Л. 487—488. Типографский экземпляр.",
+          "document_type": "plan_instruction",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "33275",
+          "source_url": "https://web.archive.org/web/20250915132816/https://istmat.org/node/33275",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-nko35-order-food.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-rkka-raw-materials-1934",
+          "type": "document",
+          "title_pt": "Estado-Maior e Gosplan: capacidade dos setores de defesa",
+          "title_ru": "29 апреля 1934 г. — Аналитическая записка Штаба РККА и Сектора обороны Госплана СССР в Наркомат обороны СССР о необходимости наращивания мощностей важнейших для обороны страны отраслей народного хозяйства",
+          "date": "1934.04.29",
+          "archive": "РГВА. Ф. 4. Оп. 14. Д. 1238. Л. 10-21. Подлинник.",
+          "document_type": "memo_note",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "48390",
+          "source_url": "https://web.archive.org/web/20230624061910/https://istmat.org/node/48390",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-rkka-raw-materials-1934.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-gosplan-aircraft-1935",
+          "type": "document",
+          "title_pt": "Gosplan: resultados da indústria aeronáutica em 1934",
+          "title_ru": "9 мая 1935 г. — Из справки Сектора обороны Госплана СССР об итогах выполнения производственной программы заводами авиапромышленности за 1934 г.",
+          "date": "1935.05.09",
+          "archive": "РГАЭ. Ф. 4372. Оп. 91. Д. 2101. Л. 62-57. Подлинник.",
+          "document_type": "memo_note",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "48509",
+          "source_url": "https://web.archive.org/web/20230623175834/https://istmat.org/node/48509",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-gosplan-aircraft-1935.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-tank-policy-1935",
+          "type": "document",
+          "title_pt": "Resolução sobre o sistema de armamento de tanques",
+          "title_ru": "19 июня 1935 г. — Постановление СТО СССР № С-71сс «О выполнении НКТПромом системы танкового вооружения на основании постановления СТО от 13 августа 1933 г.»",
+          "date": "1935.06.19",
+          "archive": "ГА РФ. Ф. Р-8418. Оп. 28. Д. 6. Л. 230-232. Подлинник.",
+          "document_type": "decree_resolution",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "48508",
+          "source_url": "https://web.archive.org/web/20230623175903/https://istmat.org/node/48508",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-tank-policy-1935.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-aviation-korolev-1935",
+          "type": "document",
+          "title_pt": "Relatório de Korolev sobre o reequipamento da aviação",
+          "title_ru": "27 октября 1935 г. — Из доклада начальника Главного управления авиационной промышленности Г. Н. Королева в Наркомат тяжелой промышленности СССР «О работе авиационной промышленности по перевооружению военно-воздушных сил РККА»",
+          "date": "1935.10.27",
+          "archive": "АП РФ. Ф. 3. Оп. 46. Д. 7. Л. 49-69. Копия.",
+          "document_type": "memo_note",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "48519",
+          "source_url": "https://web.archive.org/web/20230623175840/https://istmat.org/node/48519",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-aviation-korolev-1935.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-kpk-kuibyshev-1935",
+          "type": "document",
+          "title_pt": "Relatório Kuibyshev–Berezin sobre a indústria militar",
+          "title_ru": "21 ноября 1935 г. — Докладная записка руководства группы по военно-морским делам Комиссии партийного контроля в ЦК ВКП(б) о неудовлетворительной работе Главного военно-мобилизационного управления НКТП СССР по руководству военной промышленностью",
+          "date": "1935.11.21",
+          "archive": "АП РФ. Ф. 3. Оп. 46. Д. 336. Л. 133-138. Подлинник.",
+          "document_type": "memo_note",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "48524",
+          "source_url": "https://web.archive.org/web/20230622185514/https://istmat.org/node/48524",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-kpk-kuibyshev-1935.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-voroshilov-artillery-1936",
+          "type": "document",
+          "title_pt": "Relatório de Voroshilov sobre a produção de artilharia",
+          "title_ru": "23 января 1936 г. — Докладная записка наркома обороны СССР К. Е. Ворошилова в СТО СССР о проблемах производства артиллерийской продукции в 1935 г.",
+          "date": "1936.01.23",
+          "archive": "РГАЭ. Ф. 7537. Оп. 1. Д. 949. Л. 64-57. Заверенная копия.",
+          "document_type": "memo_note",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "48580",
+          "source_url": "https://web.archive.org/web/20251014190547/https://istmat.org/node/48580",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-voroshilov-artillery-1936.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "military-kpk-kuibyshev-1936",
+          "type": "document",
+          "title_pt": "Kuibyshev: blindagem e turbinas para cruzadores",
+          "title_ru": "21 декабря 1936 г. — Докладная записка руководителя военно-морской группы Комиссии партийного контроля Н. В. Куйбышева секретарю ЦК ВКП(б) И. В. Сталину о производстве брони и турбин для крейсеров",
+          "date": "1936.12.21",
+          "archive": "АП РФ. Ф. 3. Оп. 46. Д. 550. Л. 117-120. Подлинник.",
+          "document_type": "memo_note",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "48626",
+          "source_url": "https://web.archive.org/web/20230624145312/https://istmat.org/node/48626",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/militares/military-kpk-kuibyshev-1936.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        }
+      ]
     }
   ],
   "documents": [

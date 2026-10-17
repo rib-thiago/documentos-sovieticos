@@ -1,0 +1,4 @@
+# Apenas ferramentas de aquisição/conversão; não são dependências do backend.
+requests==2.34.2
+beautifulsoup4==4.15.0
+markdownify==1.2.3

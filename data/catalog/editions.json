@@ -43491,5 +43491,385 @@
       "file",
       "format"
     ]
+  },
+  {
+    "id": "military-nko35-08-am:ru",
+    "document_id": "military-nko35-08-am",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-08-am.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 263361,
+    "sha256": "8be95b00b0f80ea52e679f71008861ff62cbd74c15bf498fbbf1b41ed451e74c",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-08-pm:ru",
+    "document_id": "military-nko35-08-pm",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-08-pm.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 219789,
+    "sha256": "2b9926075a0e8de2daeb97de5bb5980ae738a6a999b292292b176af0a0f0de4a",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-09-am:ru",
+    "document_id": "military-nko35-09-am",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-09-am.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 305834,
+    "sha256": "5d5638d4e11a8178c636cbf04529891f9539ebd3f519b644a64b6280f339af85",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-09-pm:ru",
+    "document_id": "military-nko35-09-pm",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-09-pm.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 215949,
+    "sha256": "c259d6330bd32dbf5193b33dc4707c91cf31f68b081f2489c5387a7d5ee89a03",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-10-am:ru",
+    "document_id": "military-nko35-10-am",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-10-am.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 212114,
+    "sha256": "eb2db1b18e80788beca8977deb88ca6455be9515b8362bdaf01b276dd30791fd",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-10-pm-aviation:ru",
+    "document_id": "military-nko35-10-pm-aviation",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-10-pm-aviation.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 260740,
+    "sha256": "e9cbebc67d171fab729ee6a301a0515d8cbd23bd286f277dec882d99ffebcec8",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-11-am-weapons:ru",
+    "document_id": "military-nko35-11-am-weapons",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-11-am-weapons.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 240816,
+    "sha256": "5984ab93d0409163d034794001f2ed6f66ff762180347df322a23fdbdcb0b303",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-11-pm-uniform:ru",
+    "document_id": "military-nko35-11-pm-uniform",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-11-pm-uniform.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 119202,
+    "sha256": "e310196d2c85a079861ae39582c738f84bf779dcb69002997785faf662a73d0b",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-11-pm-food:ru",
+    "document_id": "military-nko35-11-pm-food",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-11-pm-food.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 96138,
+    "sha256": "ebeefa8eba7a79536c2de286d8612ebafafa41548ff6b8fc64b68d47e8fbc0b5",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-14-pm:ru",
+    "document_id": "military-nko35-14-pm",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-14-pm.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 150377,
+    "sha256": "faf0f08dbaddde58df41b4d8eb7cf7b1e2295109df2e8db9d56531b45506b404",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-protocol:ru",
+    "document_id": "military-nko35-protocol",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-protocol.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 10068,
+    "sha256": "6c29efee80ad2b4805a0348433c85f40c67a05ee6ce8446bbaa7cbf122fe90ce",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-order-weapons:ru",
+    "document_id": "military-nko35-order-weapons",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-order-weapons.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 23546,
+    "sha256": "adce1ed4d363c0ceedc5b09fcda169e6d1dc36dbe5763a417c9c9f59ebd64e8f",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-nko35-order-food:ru",
+    "document_id": "military-nko35-order-food",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-nko35-order-food.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 11028,
+    "sha256": "a3c9efa37c758b1d927e04767f66b3719142c8d42a7422c66793bc395afbd42e",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-rkka-raw-materials-1934:ru",
+    "document_id": "military-rkka-raw-materials-1934",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-rkka-raw-materials-1934.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 31044,
+    "sha256": "c1d27a18502e171cabccec3dc15bacc38f9a45224ce2f1e1fdf1e1ef565cb387",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-gosplan-aircraft-1935:ru",
+    "document_id": "military-gosplan-aircraft-1935",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-gosplan-aircraft-1935.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 29216,
+    "sha256": "ebb4c9de11987b2f319547878e3758fca2778da084bbc2cb4ed93d3546b41857",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-tank-policy-1935:ru",
+    "document_id": "military-tank-policy-1935",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-tank-policy-1935.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 10456,
+    "sha256": "69f421bf9af30e7ac6b758bc1d18c6b727454d176780f7a68a7baf0a66acf2b3",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-aviation-korolev-1935:ru",
+    "document_id": "military-aviation-korolev-1935",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-aviation-korolev-1935.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 51211,
+    "sha256": "9ee48b04a1bd9197694dde4eff481d4fbc3d9b8f6429ba7a591d758725ba404d",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-kpk-kuibyshev-1935:ru",
+    "document_id": "military-kpk-kuibyshev-1935",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-kpk-kuibyshev-1935.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 16556,
+    "sha256": "7c1b615ec8485ece1f932c92a7b6889f661a0ce2a040aa5ef516c408d02a33be",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-voroshilov-artillery-1936:ru",
+    "document_id": "military-voroshilov-artillery-1936",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-voroshilov-artillery-1936.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 20058,
+    "sha256": "56a4a8d10a1369469656dbd677161c2894d77a50dc7173aea5fa84d84489bc27",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "military-kpk-kuibyshev-1936:ru",
+    "document_id": "military-kpk-kuibyshev-1936",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/militares/military-kpk-kuibyshev-1936.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 10044,
+    "sha256": "351409ecc549de685ee640ed0e99f4b36ddbe990a74974502f6341a24788482c",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
   }
 ]
