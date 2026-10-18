@@ -1,0 +1,29 @@
+# Tradução de 2618 — parte de trabalho 3
+
+Tradução direta e integral do russo para português e inglês do segmento de trabalho `2618-parte-3.ru.md`, preservando a sequência de 429 blocos em cada idioma. A divisão é operacional e não foi acrescentada ao corpo. O segmento começa em “RUMYANTSEV: Depois disso / After that”, continua o julgamento e termina com a nota editorial `[i]`. A referência documental é RGASPI, fundo 671, inventário 1, dossiê 128, folhas 1–208.
+
+Foram mantidas todas as falas e repetições, interrupções, rubricas, separadores, assinaturas, lacunas assinaladas e as notas finais 1 a 75 e `[i]`. As notas são da edição russa: suas avaliações históricas e bibliográficas, inclusive a qualificação da confiabilidade de memórias e as afirmações sobre informações correspondentes à realidade, são alegações dessa edição, não verificações realizadas pelo tradutor. Não houve consulta a serviços de tradução externos, nem reconstrução automática por substituições.
+
+## Escolhas e pendências para leitura editorial
+
+- ПРЕДСЕДАТЕЛЬ: PRESIDENTE / CHAIRMAN. Подсудимый: acusado / defendant. ВКП(б): PCU(b) / AUCP(b). Siglas NKVD, OGPU, SPO, EKO, UGB e GUGB foram conservadas onde presentes; Пом. нач. significa assistente do chefe / assistant to the head.
+- “Зиновьевщина” tem sentido depreciativo no depoimento. Conservou-se “zinovievshchina” em português e “Zinovievism” em inglês, sem suavizar as acusações. Não é uma classificação adotada pelo tradutor.
+- As longas falas de Mandelshtam, Kotolynov, Khanik, Rumyantsev e outros contêm anacolutos e proposições incompletas. Foram mantidas como falas de um estenograma, sem convertê-las em discurso coerente reconstituído ou resumo. Interrupções não foram completadas por conjectura.
+- Mandelshtam distingue aceitar a assinatura de um depoimento e confirmar seu conteúdo. Essa diferença foi preservada, assim como suas alegações de ter assinado sem ler atentamente e a resposta do presidente.
+- Mantido o contraste entre reconhecimento de responsabilidade política/moral e negativa de participação concreta nos atentados. Em especial, Kotolynov confirma genericamente os depoimentos de Nikolaev em uma passagem e rejeita sua veracidade em outras. A contradição não foi harmonizada.
+- A formulação “4.500 тысячи” foi preservada literalmente como “4.500 mil / 4,500 thousand”, embora os valores antes referidos sejam 4.500 rublos. Trata-se de redundância numérica do original, não conversão monetária.
+- Shatsky usa o termo estranho “перманентом” ao falar do processo; conservou-se “um permanente / a permanent”. O sentido preciso não está claro e merece cotejo com o fac-símile.
+- Na fala de Tolmazov, “смягчающее преступление” foi preservado como “crime atenuante / mitigating crime”, em vez de substituir silenciosamente por “circunstância atenuante”. A última oração de sua fala também permanece sintaticamente incompleta.
+- Na fala de Myasnikov, “высокое знамя гражданина” foi vertido literalmente como “elevada bandeira de cidadão / lofty banner of a citizen”, sem trocar знамя por звание (título).
+- Enquanto Khanik fala, o presidente chama “acusado RUMYANTSEV” (bloco 277 da parte de trabalho). Esse nome foi mantido, sem corrigir a troca aparente de interlocutor.
+- Outras formulações obscuras de Khanik, incluindo “широких классовых зрелостей”, “эпоха страны” e a plataforma da qual restou “фук”, foram mantidas em seus sentidos lexicais, sem invenção de uma frase ausente.
+- Na fala de Sositsky, foram conservados os elementos entre chaves do estenograma (“мне”, “предъявили”, “обвинение”), em sua ordem aproximada na frase traduzida. A referência à “mobilização do Exército Vermelho” corresponde a “мобилизации ... из Красной Армии” no russo, não corrigido para desmobilização.
+- Rumyantsev diz que os trotskistas tomaram “o caminho do partido”; a nota 70 esclarece “segundo partido”. Foram preservados tanto o corpo como a explicação da nota.
+- A pergunta do presidente a Zvezdov diz que Kotolynov “recebia” a incumbência. Foi preservada assim; a nota 74 informa que pelo sentido deveria ser “incumbia / assigned”.
+- Conclui-se a sessão às 6h40 de 29 de dezembro de 1934, conforme a fonte. Assinaturas ULRICH e BATNER mantidas, sem acrescentar dados de identificação.
+- A nota 4 mantém o ano bibliográfico **1917**, ainda que manifestamente suspeito no contexto. A nota 49 afirma a morte de Shurygin no fim de 1933; preservou-se a afirmação da edição, sem harmonizá-la com outros depoimentos do acervo.
+- A nota 7 foi traduzida integralmente, incluindo todas as ressalvas sobre Ermolaeva/Lermolo, o catálogo da Biblioteca do Congresso, parentescos, companheiras de cela, casamento prisional, histórias consideradas fantásticas, associação cossaca, viagem no General Ballou, Arolsen Archives e datas biográficas. Nenhuma dessas identificações foi verificada externamente nesta entrega.
+- A nota 37 conserva a grafia russa “настроенные” junto de sua tradução, porque a indicação de uma forma lexical errônea perderia clareza apenas na tradução. As notas 39, 49 e 60 conservam as grafias equivocadas transliteradas, distinguindo-as das formas corrigidas do corpo.
+- Na nota `[i]`, o nome inicial consta “Еромолаева” (Eromolaeva), diferente de Ermolaeva no restante; a variante foi preservada. A longa citação sobre telefonemas e autorização de sanatório foi mantida integralmente. O original não fecha claramente todos os níveis de aspas; não foi completado com palavras ou conclusão editorial.
+
+Revisão editorial: confrontadas a sequência final, assinaturas, referência e todas as notas com o segmento russo; a contagem serve apenas ao registro de entrega e não certifica equivalência linguística. Sem testes, alterações de catálogo, commit ou push por este agente. Integração das três partes e histórico ficam a cargo do agente principal.

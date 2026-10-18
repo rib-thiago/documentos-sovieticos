@@ -21,6 +21,7 @@ from backend.editorial import Editorial
 
 REPORT = ROOT / 'docs/traducoes/leningrado-investigacao'
 WORK = ROOT / '.local/traducoes/leningrado-investigacao'
+BATCH_ID = 'traducoes-leningrado-investigacao'
 
 
 def collect():
@@ -117,7 +118,7 @@ def apply(scope, result, contents):
         files['data/manifest.json'] = model.json_bytes(model.export_manifest(candidate)).decode()
         ids = [doc['id'] for doc in scope['pending']]
         preview = editorial.store_preview(editorial.revision(), candidate, files, None, changes,
-            entity={'kind': 'batch', 'id': 'traducoes-leningrado-investigacao', 'document_ids': ids})
+            entity={'kind': 'batch', 'id': BATCH_ID, 'document_ids': ids})
         repository = Repository(ROOT, ROOT / '.local/catalog.sqlite3', current, {})
         saved = editorial.save(repository, {'preview_id': preview['preview_id']})
         (REPORT / 'gravacao.json').write_bytes(model.json_bytes(saved))

@@ -11363,8 +11363,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2617.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2617.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2617.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Peça de acusação",
+      "title_en": "Indictment",
       "collected_date": "1934-12-25T10:17:00"
     },
     {
@@ -11382,8 +11396,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2618.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2618.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2618.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Sessão de 28 de dezembro de 1934",
+      "title_en": "Hearing of December 28, 1934",
       "collected_date": "1934-12-28T10:20:00"
     },
     {
@@ -11401,8 +11429,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2619.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2619.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2619.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "Sentença",
+      "title_en": "Judgment",
       "collected_date": "1934-12-29T10:23:00"
     },
     {

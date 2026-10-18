@@ -1,0 +1,38 @@
+[
+  {
+    "part": 1,
+    "language": "pt",
+    "expected_blocks": 880,
+    "translated_blocks": 880
+  },
+  {
+    "part": 2,
+    "language": "pt",
+    "expected_blocks": 894,
+    "translated_blocks": 894
+  },
+  {
+    "part": 3,
+    "language": "pt",
+    "expected_blocks": 429,
+    "translated_blocks": 429
+  },
+  {
+    "part": 1,
+    "language": "en",
+    "expected_blocks": 880,
+    "translated_blocks": 880
+  },
+  {
+    "part": 2,
+    "language": "en",
+    "expected_blocks": 894,
+    "translated_blocks": 894
+  },
+  {
+    "part": 3,
+    "language": "en",
+    "expected_blocks": 429,
+    "translated_blocks": 429
+  }
+]

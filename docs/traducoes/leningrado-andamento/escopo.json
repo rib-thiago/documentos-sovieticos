@@ -1,0 +1,84 @@
+{
+  "documents": [
+    "showtrials-2617",
+    "showtrials-2618",
+    "showtrials-2619"
+  ],
+  "languages": [
+    "pt",
+    "en"
+  ],
+  "source_hashes": {
+    "showtrials-2617": "d5766512a5f7d3b1d0ab9fafa4fb953699d060766ff51b640497dc18d2469dca",
+    "showtrials-2618": "f22deea4245c8b437521f16cc9f5dc4d4b58b6fae35351228cca4c2eb23bb62f",
+    "showtrials-2619": "174f52c3a2b5169d8b78d7a7fdccbd37a84c7f59c59ad22a8920d3f762eaf0b7"
+  },
+  "parts": [
+    {
+      "part": 1,
+      "blocks": 880
+    },
+    {
+      "part": 2,
+      "blocks": 894
+    },
+    {
+      "part": 3,
+      "blocks": 429
+    }
+  ],
+  "collection": "centro-de-leningrado",
+  "subcollection": "andamento",
+  "pending": [
+    {
+      "id": "showtrials-2617",
+      "source": "originais/showtrials/showtrials-2617.ru.md",
+      "source_sha256": "d5766512a5f7d3b1d0ab9fafa4fb953699d060766ff51b640497dc18d2469dca",
+      "languages": [
+        "pt",
+        "en"
+      ]
+    },
+    {
+      "id": "showtrials-2618",
+      "source": "originais/showtrials/showtrials-2618.ru.md",
+      "source_sha256": "f22deea4245c8b437521f16cc9f5dc4d4b58b6fae35351228cca4c2eb23bb62f",
+      "languages": [
+        "pt",
+        "en"
+      ]
+    },
+    {
+      "id": "showtrials-2619",
+      "source": "originais/showtrials/showtrials-2619.ru.md",
+      "source_sha256": "174f52c3a2b5169d8b78d7a7fdccbd37a84c7f59c59ad22a8920d3f762eaf0b7",
+      "languages": [
+        "pt",
+        "en"
+      ]
+    }
+  ],
+  "existing_editions": [
+    {
+      "id": "showtrials-2617:ru",
+      "file": "originais/showtrials/showtrials-2617.ru.md",
+      "sha256": "d5766512a5f7d3b1d0ab9fafa4fb953699d060766ff51b640497dc18d2469dca"
+    },
+    {
+      "id": "showtrials-2618:ru",
+      "file": "originais/showtrials/showtrials-2618.ru.md",
+      "sha256": "f22deea4245c8b437521f16cc9f5dc4d4b58b6fae35351228cca4c2eb23bb62f"
+    },
+    {
+      "id": "showtrials-2619:ru",
+      "file": "originais/showtrials/showtrials-2619.ru.md",
+      "sha256": "174f52c3a2b5169d8b78d7a7fdccbd37a84c7f59c59ad22a8920d3f762eaf0b7"
+    }
+  ],
+  "part2_handoff": {
+    "head_blocks": 714,
+    "tail_blocks": 180,
+    "first_tail_index": 714,
+    "reason": "Redistribuição para tradutor que concluiu parte3, sem alteração de ordem ou fronteiras."
+  }
+}

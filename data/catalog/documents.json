@@ -7751,7 +7751,9 @@
     "id": "showtrials-2617",
     "kind": "document",
     "titles": {
-      "ru": "ОБВИНИТЕЛЬНОЕ ЗАКЛЮЧЕНИЕ"
+      "ru": "ОБВИНИТЕЛЬНОЕ ЗАКЛЮЧЕНИЕ",
+      "pt": "Peça de acusação",
+      "en": "Indictment"
     },
     "document_type": "indictment",
     "historical_date": {
@@ -7800,7 +7802,9 @@
     "id": "showtrials-2618",
     "kind": "document",
     "titles": {
-      "ru": "ЗАСЕДАНИЕ 28 ДЕКАБРЯ 1934 Г."
+      "ru": "ЗАСЕДАНИЕ 28 ДЕКАБРЯ 1934 Г.",
+      "pt": "Sessão de 28 de dezembro de 1934",
+      "en": "Hearing of December 28, 1934"
     },
     "document_type": "session_transcript",
     "historical_date": {
@@ -7849,7 +7853,9 @@
     "id": "showtrials-2619",
     "kind": "document",
     "titles": {
-      "ru": "ПРИГОВОР"
+      "ru": "ПРИГОВОР",
+      "pt": "Sentença",
+      "en": "Judgment"
     },
     "document_type": "verdict_or_sentence",
     "historical_date": {
