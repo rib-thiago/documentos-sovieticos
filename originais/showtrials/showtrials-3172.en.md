@@ -1,0 +1,13 @@
+Yesterday I was informed of the Party Control Commission's decision to expel me from the party's ranks as a counterrevolutionary. I acknowledge this decision as entirely correct, since I failed to justify the confidence the party placed in me upon my return after fighting against it. I did not completely sever my criminal ties with the Zinovievist counterrevolutionary organization. I knew their sentiments and did not expose them before the party. I thereby remained directly connected with these remnants of the incompletely crushed class enemy, which had taken the path of fascism and fascist terror. But I did not preach or share the views of terror. I did not descend to such dirty and monstrous villainy against the working class and my party, which raised me and in which, from the age of sixteen, I spent my entire conscious political life. One must be a ferocious enemy, hating Soviet power with bestial hatred. I did not become such an enemy. Since 1929 I severed all my old ties with the directed center (ZINOVIEV, KAMENEV, BAKAEV, EVDOKIMOV, GERTIK, ZALUTSKY, NAUMOV, FEDOROV); they called me and sought me out, but I consciously refused all their appeals. In Leningrad I broke off contacts and meetings with most members of the c.-r. revolutionary \[1\] organization, but not with all. My crimes are grave, and I do not minimize them. I bear full political and moral responsibility for the villainous crime committed by NIKOLAEV, whom I did not know personally but who, according to the investigation, belonged to the Zinovievist counterrevolutionary organization. I ask you, Comrade STALIN, to help me escape the counterrevolutionary swamp into which ZINOVIEV dragged me, and out of which I took the first step by returning to the party. I worked with particular enthusiasm at the Vyborg House of Culture, at Magnitostroy, and for three and a half years in the Vyborg Soviet. Comrade SMORODIN and Comrade BARANOV can tell you about it. I have cursed for the rest of my life that day, the darkest of my life, when I took the path of struggle against the party. I ask to be given the opportunity, in any sector, however difficult, to atone as a Soviet citizen for my shameful, vile counterrevolutionary crime.
+
+19/XII-34. Former member of the AUCP(b) since 1920.
+
+V. RUMYANTSEV —
+
+House of Preliminary Detention, cell 105.
+
+Certified true: illegible
+
+Reproduced from: The Echo of the Shot in the Smolny. The History of the Investigation into the Murder of S. M. Kirov According to Documents of the CC of the CPSU // Moscow: International Democracy Foundation, 1917, p. 216.
+
+\[1\] Thus in the text.

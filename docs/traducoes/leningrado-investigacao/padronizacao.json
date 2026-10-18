@@ -1,0 +1,25 @@
+{
+  "substituicoes_de_transliteracao": {
+    "Petr": "Pyotr",
+    "Artem": "Artyom"
+  },
+  "arquivos": [
+    "showtrials-9725.pt.md",
+    "showtrials-2740.pt.md",
+    "showtrials-2729.en.md",
+    "showtrials-2699.pt.md",
+    "showtrials-2740.en.md",
+    "showtrials-2727.pt.md",
+    "showtrials-2726.en.md",
+    "showtrials-2726.pt.md",
+    "showtrials-2697.en.md",
+    "showtrials-9718.en.md",
+    "showtrials-2697.pt.md",
+    "showtrials-2729.pt.md",
+    "showtrials-9718.pt.md",
+    "showtrials-2727.en.md",
+    "showtrials-2699.en.md",
+    "showtrials-9725.en.md"
+  ],
+  "escopo": "Somente novas traduções; nenhuma substituição nos originais ou traduções anteriores."
+}

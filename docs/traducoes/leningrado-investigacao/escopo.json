@@ -1,0 +1,2556 @@
+{
+  "collection": "centro-de-leningrado",
+  "subcollection": "investigacao",
+  "pending": [
+    {
+      "id": "showtrials-2683",
+      "position": 11,
+      "languages": [
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2683.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева",
+        "pt": "Protocolo de interrogatório de L. V. Nikolaev"
+      },
+      "source_sha256": "96b3fa07978c1168b135abc14bc6a40a9017b6ef21f84e5850df5a56f4f4f240"
+    },
+    {
+      "id": "showtrials-2684",
+      "position": 12,
+      "languages": [
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2684.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева",
+        "pt": "Protocolo de interrogatório de L. V. Nikolaev"
+      },
+      "source_sha256": "88f0188a861617e78dff476741cba26a588b598acd4834d400eb5ced52a70b6e"
+    },
+    {
+      "id": "showtrials-2685",
+      "position": 13,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2685.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "8246ead504fb8455f0e6c7b320c9deff05251c0a1823aba0a6e1ef477580f8de"
+    },
+    {
+      "id": "showtrials-2686",
+      "position": 14,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2686.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "3404284ff8409626cabfd6d8f5dab2bdef7cec10eb6b736fb963d7158cb1faef"
+    },
+    {
+      "id": "showtrials-2687",
+      "position": 15,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2687.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.Н. Шатского"
+      },
+      "source_sha256": "b6d8479bb594afd9d0f72e9066b78c43f851b5ff4f5a586ff9a0d9861c15dea8"
+    },
+    {
+      "id": "showtrials-2688",
+      "position": 16,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2688.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.Н. Шатского"
+      },
+      "source_sha256": "88e20dfa79f02e2c8a70cc3c5b3c1581a9c14b188008156d8dea792040b64d70"
+    },
+    {
+      "id": "showtrials-2689",
+      "position": 17,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2689.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "d9e2c2d5106720862f702e20a5c3facf46766fa93d7c9694cd68c14350f3c95e"
+    },
+    {
+      "id": "showtrials-2690",
+      "position": 18,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2690.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.Г. Юскина"
+      },
+      "source_sha256": "d540fb1b48cbab04d7d849eb7fc600e75bc87d8686899146639ab7f15db120f7"
+    },
+    {
+      "id": "showtrials-2692",
+      "position": 19,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2692.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.Г. Юскина"
+      },
+      "source_sha256": "074ae7f438ec2fe2a79aa201ce2bbf45fd3d17f46f03779fc9f22000710fdbcb"
+    },
+    {
+      "id": "showtrials-2693",
+      "position": 20,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2693.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.Г. Юскина"
+      },
+      "source_sha256": "b4aa2a91e570a9a2052de40aa66a627503e2ac6548de6abe4f138398442357ec"
+    },
+    {
+      "id": "showtrials-2694",
+      "position": 21,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2694.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "b5e5c2e15cdc352740c8a0a60dcd6c405bf2d09403fea673fd350cf963506328"
+    },
+    {
+      "id": "showtrials-2695",
+      "position": 22,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2695.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "3e49f0c6868c0d5048c20a4b5d462543fecaaca9433a880ac2036668d2d5decb"
+    },
+    {
+      "id": "showtrials-2696",
+      "position": 23,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2696.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцева"
+      },
+      "source_sha256": "0d1474e97ca796d3a94a75f6aa6ed5a8262615b957a069f59c65a025ff2c53fe"
+    },
+    {
+      "id": "showtrials-2697",
+      "position": 24,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2697.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "ca9f957708ff0eddb9b7cae400590e2e2e0ece024f4a47213537ba1e215441e4"
+    },
+    {
+      "id": "showtrials-2698",
+      "position": 25,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2698.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "0f1f16c856f7eba8800b7cce6381808419942db14474d7fc452d90f25d218f4d"
+    },
+    {
+      "id": "showtrials-2699",
+      "position": 26,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2699.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "f6dc6c803df5f564cc8ff9f0833dc419c9c56dbab16179d5c1c390ce50830460"
+    },
+    {
+      "id": "showtrials-2717",
+      "position": 27,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2717.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.И. Звездова"
+      },
+      "source_sha256": "56039b03269490180b08c591fc55f0a1ca8131cb4456e3c1ba7e83a1259febb1"
+    },
+    {
+      "id": "showtrials-2721",
+      "position": 28,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2721.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "76d627cc9d282b06dda100a4216eb9f09ed9e52c20ea7bea15b8f4c46c028642"
+    },
+    {
+      "id": "showtrials-2722",
+      "position": 29,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2722.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "6927cb8d9202046795f29ba73b861013bb616831c7c81418813ac1a0ee05b9da"
+    },
+    {
+      "id": "showtrials-2723",
+      "position": 30,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2723.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "7a1a0888903665356386f167c129a37e3a1dccbd8139bb172dc4828a5b595e27"
+    },
+    {
+      "id": "showtrials-2724",
+      "position": 31,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2724.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.Г. Юскина"
+      },
+      "source_sha256": "80d8019397a684432c33a1cf50138743a20872004d1071951964bb2dd84c1d4f"
+    },
+    {
+      "id": "showtrials-2725",
+      "position": 32,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2725.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Г.В. Соколова"
+      },
+      "source_sha256": "b0c6039f11216e67efef3003a3b39deee0e21304c0caf91857918ab64d92e59f"
+    },
+    {
+      "id": "showtrials-2726",
+      "position": 33,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2726.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.И. Звездова"
+      },
+      "source_sha256": "bfc2d3e9f5ae7bc03e32173d5f9840b8e9f3ca8b19c499c56cb2fc792ee254fd"
+    },
+    {
+      "id": "showtrials-2727",
+      "position": 34,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2727.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцева"
+      },
+      "source_sha256": "d4018bcf5c0ddbadfb648735b8476b9660f009cf8c6a739c439aa069030f7a71"
+    },
+    {
+      "id": "showtrials-2728",
+      "position": 35,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2728.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Е.В. Рогачевой"
+      },
+      "source_sha256": "34ff7949310d4e62e6221527007e8584fe6ee9e5144b14b97b49a6fdb5dde9d4"
+    },
+    {
+      "id": "showtrials-2729",
+      "position": 36,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2729.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.И. Звездова"
+      },
+      "source_sha256": "a7cbef89f769a7965ad1e1f926fa452fff79cc8f692ada395a9a0120f18b72a9"
+    },
+    {
+      "id": "showtrials-2730",
+      "position": 37,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2730.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.И. Звездова"
+      },
+      "source_sha256": "b151eb27a40e0a0c47034f495de8cbfe04b2b6d3f9114dd50c1bc25c81cf6589"
+    },
+    {
+      "id": "showtrials-2731",
+      "position": 38,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2731.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "1c23db5c9889a656b7f322ea2420e9a198044de788181430b20ee3a2911f9a8e"
+    },
+    {
+      "id": "showtrials-2732",
+      "position": 39,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2732.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "61f4d990d8aa80b5758a8994cbe0ee18439a4f8baf31c38434f588a54bbc14d1"
+    },
+    {
+      "id": "showtrials-2733",
+      "position": 40,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2733.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "4390530d53bf14a0d3dec13f8fc4108666707ea260cc1511f62fb1ac4ef7ae8b"
+    },
+    {
+      "id": "showtrials-2735",
+      "position": 41,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2735.ru.md",
+      "titles": {
+        "ru": "Протокол допроса А.И. Толмазова"
+      },
+      "source_sha256": "136cce17d53a24a1b845a77452f4ae3384d496d9450f9bf9a420737b90b564cc"
+    },
+    {
+      "id": "showtrials-2736",
+      "position": 42,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2736.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "776fb903b0b95f1fc33129ac4e5d770d1027a668c8a6595d1cee1b9b0cd3c1ad"
+    },
+    {
+      "id": "showtrials-2738",
+      "position": 43,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2738.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "a0aaaca47d8fa6bea4597a2393d88f36f6b2af30a9927d326c70b794e846e6a8"
+    },
+    {
+      "id": "showtrials-2739",
+      "position": 44,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2739.ru.md",
+      "titles": {
+        "ru": "Протокол допроса А.Я. Юскиной"
+      },
+      "source_sha256": "a418487b8269d04476c5fd2836dc639157189493092cebd3fe3d4167fe08b0cf"
+    },
+    {
+      "id": "showtrials-2740",
+      "position": 45,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2740.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.И. Звездова"
+      },
+      "source_sha256": "c6ea19e0384dc845c33d9d112b995be2ba0be4baed9964c5b5aef077c4b5b6cc"
+    },
+    {
+      "id": "showtrials-2782",
+      "position": 46,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2782.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "8310bb8cb1b1b2bb0e352485da11f5bbe4c72da108f22f44b9efc830317778d0"
+    },
+    {
+      "id": "showtrials-2783",
+      "position": 47,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2783.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "ba8e26d16e48a0c67563b1f20ae89a276c0700d6d599c14ef0c39ead73206cb9"
+    },
+    {
+      "id": "showtrials-2785",
+      "position": 48,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2785.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "19cfbef3f1c4b2b43a7c9205a57ada6da1086293eed92bcfd7961dc46459d47b"
+    },
+    {
+      "id": "showtrials-2787",
+      "position": 49,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2787.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Г.В. Соколова"
+      },
+      "source_sha256": "b6a9b11f50a2813c2a35d6a956379b915b926c2b33a10cdd1bf945939afd5f34"
+    },
+    {
+      "id": "showtrials-2789",
+      "position": 50,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2789.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Е.В. Рогачевой"
+      },
+      "source_sha256": "84f02974b80de41ec6d78ff2882b641ad300c8353e14a19bb2b77570f5b68a1b"
+    },
+    {
+      "id": "showtrials-2794",
+      "position": 51,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2794.ru.md",
+      "titles": {
+        "ru": "Протокол допроса А.И. Толмазова"
+      },
+      "source_sha256": "c5701042a09486e14fce36daab1ae642d52e0094d7cf06474b3e910513fe60f8"
+    },
+    {
+      "id": "showtrials-2996",
+      "position": 52,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-2996.ru.md",
+      "titles": {
+        "ru": "Протокол допроса А.И. Толмазова"
+      },
+      "source_sha256": "bcc607657ffdf892d8db6250f26000b2adbeea7fa78cb840af6b6ccbd2db132e"
+    },
+    {
+      "id": "showtrials-3000",
+      "position": 53,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3000.ru.md",
+      "titles": {
+        "ru": "Протокол допроса А.И. Толмазова"
+      },
+      "source_sha256": "1af48e2810e0c2c4ebb26224db1168921ce6e50cc46eecce742e1745c6f101d6"
+    },
+    {
+      "id": "showtrials-3004",
+      "position": 54,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3004.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "25bb2ff646f102ad33e13915088045b245ccd9c6412d7155fdf72cb8abe27ec7"
+    },
+    {
+      "id": "showtrials-3005",
+      "position": 55,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3005.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "f034e5ee45ced8ebf79e755b75c93b4cad510968d7d48f693e758719c6ffa5b9"
+    },
+    {
+      "id": "showtrials-3006",
+      "position": 56,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3006.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "62fb52afa769a7b348eade30c4bf4c96c499f47ff272db3943e73ec968f40c21"
+    },
+    {
+      "id": "showtrials-3007",
+      "position": 57,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3007.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "6876116528f36925ebfe71f15ec644a8991b1ce4937b3c8506f8d3d86e6b96f9"
+    },
+    {
+      "id": "showtrials-3008",
+      "position": 58,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3008.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "db459e4e02ab910e53819e877f820c600edf545d6326f6a3b3adee77775e270e"
+    },
+    {
+      "id": "showtrials-3009",
+      "position": 59,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3009.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцева"
+      },
+      "source_sha256": "7e7f537cacfc156a950af175a01b5de739a9cb0f3a14e8cd91740e4cb60fecf1"
+    },
+    {
+      "id": "showtrials-3010",
+      "position": 60,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3010.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцева"
+      },
+      "source_sha256": "9d96f9845e258b06f966a3c09a82748172a4a03e59dbda186e95db7c134ac559"
+    },
+    {
+      "id": "showtrials-3011",
+      "position": 61,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3011.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцева"
+      },
+      "source_sha256": "d1a537ca90b29ff079547b21fdd8cf045b2b42fa9d7e96903884ae7c60179801"
+    },
+    {
+      "id": "showtrials-3012",
+      "position": 62,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3012.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.С. Левина"
+      },
+      "source_sha256": "affeb43542b79c4292c0276fa8bd9e8e510ed8185726b0238eafe06fbbb01e96"
+    },
+    {
+      "id": "showtrials-3013",
+      "position": 63,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3013.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.О. Ханика"
+      },
+      "source_sha256": "4be29c769ed35eb1415325be5de89d8acc1230cb021a435bc8a5592022f99cf5"
+    },
+    {
+      "id": "showtrials-3014",
+      "position": 64,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3014.ru.md",
+      "titles": {
+        "ru": "Протокол допроса А.И. Толмазова"
+      },
+      "source_sha256": "9cf6bd4f26badaa5b73e1c0a5a802c48312088250b55ba7cde5940fcf487116f"
+    },
+    {
+      "id": "showtrials-3015",
+      "position": 65,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3015.ru.md",
+      "titles": {
+        "ru": "Заявление В.И. Звездова в СПО Ленинградского управления НКВД"
+      },
+      "source_sha256": "f1baafa92b95173735cd0d3677bb1b4d373c10c3d34f3634e00757d3bea20847"
+    },
+    {
+      "id": "showtrials-3016",
+      "position": 66,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3016.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "51a2f3ae4cc2ad0db2bc25cf0236cd27b457b8a57a129979a6e13a36529df70a"
+    },
+    {
+      "id": "showtrials-3017",
+      "position": 67,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3017.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "5880cc958da4b32ebc407617131da18ae0f7821025629db83e064d54e4c3d867"
+    },
+    {
+      "id": "showtrials-3018",
+      "position": 68,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3018.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "ab8554a68e6895bc619f93948ed206cd85abba1fa8ff162e77f56f7a181830e3"
+    },
+    {
+      "id": "showtrials-3019",
+      "position": 69,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3019.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "64668e878d9a4994b437bd7d4b8fe4aeacf5fa1c0680189707d363056d93209c"
+    },
+    {
+      "id": "showtrials-3021",
+      "position": 70,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3021.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "cfc6567c83880bd24ae21c0d71976c1bebd56d4894db8d99f8b0e8a596b6eea3"
+    },
+    {
+      "id": "showtrials-3020",
+      "position": 71,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3020.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "ebc660a1e924942622f5601f4677b278872ef1b5e85f19d1f926d32a5e296c3d"
+    },
+    {
+      "id": "showtrials-3023",
+      "position": 72,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3023.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "13f4077b37948444746e19cb0916dbf4aecdc755b7eccdf30d43d4d0e162457c"
+    },
+    {
+      "id": "showtrials-3022",
+      "position": 73,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3022.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "a1c48e48dd6259c77fac6be2bc2cbda684a65e6a0487837c9ca9cfe5e6f8fed6"
+    },
+    {
+      "id": "showtrials-3027",
+      "position": 74,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3027.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.И. Звездова"
+      },
+      "source_sha256": "04ae0971921b2377a351dd7ab1c28acb6a4ae67905a4edc7ee73ee05f5e94295"
+    },
+    {
+      "id": "showtrials-3028",
+      "position": 75,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3028.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцева"
+      },
+      "source_sha256": "15b2890045a04efb73b45380fc5301137acd7e0c950f5ea79bdf4540c87c778c"
+    },
+    {
+      "id": "showtrials-3029",
+      "position": 76,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3029.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцева"
+      },
+      "source_sha256": "3acf69ff98af868c1ccb32dd86e034a18cde861df2bd37c5e8d887b04bd254db"
+    },
+    {
+      "id": "showtrials-3030",
+      "position": 77,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3030.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "2b218f4b76026f12620a23fe85732a821c14d92be73ba049b04732bc3b2753b9"
+    },
+    {
+      "id": "showtrials-3031",
+      "position": 78,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3031.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "6b0bd3853aa837059300bd556fe0531dcd023c2b7f3b2266218735e0b1c120d4"
+    },
+    {
+      "id": "showtrials-3041",
+      "position": 79,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3041.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "704a2b30bbd159cc1c203caa3c33e016767fc14dea2a9fe2d4e518eae829d151"
+    },
+    {
+      "id": "showtrials-3042",
+      "position": 80,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3042.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "fc08b236b01221b000270940ddafdc632d51b50edf5e8f3d71a3487ec2777bd9"
+    },
+    {
+      "id": "showtrials-3043",
+      "position": 81,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3043.ru.md",
+      "titles": {
+        "ru": "Протокол допроса А.И. Толмазова"
+      },
+      "source_sha256": "e9432e04fb01212e9e00590123c20359542c77ac6673ea96758321a8ece43344"
+    },
+    {
+      "id": "showtrials-3047",
+      "position": 82,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3047.ru.md",
+      "titles": {
+        "ru": "Протокол допроса А.И. Толмазова"
+      },
+      "source_sha256": "efcc75c8a32ff207d88c3831bb613bff4029ad2e3f54a9abe3b354a80b304cdc"
+    },
+    {
+      "id": "showtrials-3058",
+      "position": 83,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3058.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.Г. Юскина"
+      },
+      "source_sha256": "ad1c6c9f6fed3abbc58f544ee079a4c248618c810bd18b6eee0f821740008dd1"
+    },
+    {
+      "id": "showtrials-3059",
+      "position": 84,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3059.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.С. Левина"
+      },
+      "source_sha256": "3234f689071edbc0ed8adc7ae7dd6b1fc111c20b43eb69f9ce92e40a85879475"
+    },
+    {
+      "id": "showtrials-3060",
+      "position": 85,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3060.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.С. Левина"
+      },
+      "source_sha256": "ae6441139588f800b6e0a86450c8ad08f6f8645f54269da655bcd78ce870e5ad"
+    },
+    {
+      "id": "showtrials-3061",
+      "position": 86,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3061.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.С. Левина"
+      },
+      "source_sha256": "a92e97f2b564935dd7c8372f49b17cf30775c897fe4d4de8c5ce9a3bfdca35f1"
+    },
+    {
+      "id": "showtrials-3062",
+      "position": 87,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3062.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Р.М. Кулишера"
+      },
+      "source_sha256": "ac6006ba414971ca75a50f178041ac5735d1e7200cbfd29f0d9daf65a61d330b"
+    },
+    {
+      "id": "showtrials-3063",
+      "position": 88,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3063.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.П. Мясникова"
+      },
+      "source_sha256": "48fe738922f0e15a4f346694e2c778e9ef9cfc37526144a04ebc3602a13dcfb3"
+    },
+    {
+      "id": "showtrials-3064",
+      "position": 89,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3064.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.П. Мясникова"
+      },
+      "source_sha256": "7f463ad6c95808b685925c07db1b0deb20ac4dba87ec49ec85aaa7d58ab52be8"
+    },
+    {
+      "id": "showtrials-3109",
+      "position": 90,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3109.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "bd7a40a23fcb0acde1b675813fd6c5f2244a8b6a3d768f67ebe26f82794c9248"
+    },
+    {
+      "id": "showtrials-3115",
+      "position": 91,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3115.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.О. Ханика"
+      },
+      "source_sha256": "b46e45b8259c15402bb61888d0ec28093856944fadde0e93b5327d17c18c0a98"
+    },
+    {
+      "id": "showtrials-3110",
+      "position": 92,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3110.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "b651bdff6be487587ea7f9080c832a3cbd7bf43d5754498735baa6d857cca4d4"
+    },
+    {
+      "id": "showtrials-3111",
+      "position": 93,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3111.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "7ff9b78e832b353a6a0ac840bb12280ebb880f633d0a2a4298201172eaa5820d"
+    },
+    {
+      "id": "showtrials-3112",
+      "position": 94,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3112.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Р.М. Кулишера"
+      },
+      "source_sha256": "7b90186f3206b11f41c78c381af0ff9dce658586f44045dda229534937fc8ef3"
+    },
+    {
+      "id": "showtrials-3113",
+      "position": 95,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3113.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.С. Левина"
+      },
+      "source_sha256": "eefe8ff87ec9df81ae674068f6e5cc4e815c351ca2449c3fe3d77220777706c2"
+    },
+    {
+      "id": "showtrials-3114",
+      "position": 96,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3114.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.С. Левина"
+      },
+      "source_sha256": "9c896f9f4fb9030acc339ecfa3e3dc49d77d0d5e10cbbccfbfb4d3b6ccfdb45e"
+    },
+    {
+      "id": "showtrials-3116",
+      "position": 97,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3116.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Г.В. Соколова"
+      },
+      "source_sha256": "6d04f32a3e08b83a9fe9ccede19cae3028a4776b31a5d2b0eda084229a1c3bed"
+    },
+    {
+      "id": "showtrials-3117",
+      "position": 98,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3117.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.П. Мясникова"
+      },
+      "source_sha256": "0303087b1991cc8b1e8be5ff177f0676da33a84ed128eceb28037a68b5e5f75b"
+    },
+    {
+      "id": "showtrials-3118",
+      "position": 99,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3118.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.П. Мясникова"
+      },
+      "source_sha256": "98d6580d505243abe5385375c33a593bbaead720a223af60b36923a9d3373540"
+    },
+    {
+      "id": "showtrials-3129",
+      "position": 100,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3129.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Р.М. Кулишера"
+      },
+      "source_sha256": "f85a0959e945a321cb5e6aa1a1927cc4347f5a418bc503ef1f4e65b444b1a283"
+    },
+    {
+      "id": "showtrials-3130",
+      "position": 101,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3130.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Р.М. Кулишера"
+      },
+      "source_sha256": "a4e9ce71442af8bebc91112ca23ba361ce182aaaa78f729ebee5c3df845791db"
+    },
+    {
+      "id": "showtrials-3131",
+      "position": 102,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3131.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "412cbed213667f1737f3ac4b93d90bb6bfab4ffdfa9584a211205736e2eca6e8"
+    },
+    {
+      "id": "showtrials-3132",
+      "position": 103,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3132.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "4fecc6c7e9a85fc170eeeb0a989e62e84100aab549c7bad760da46ac4e956ff8"
+    },
+    {
+      "id": "showtrials-3133",
+      "position": 104,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3133.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "eb4971ea5bc7a3c9b54a48656839f8658235fb1a20f1e65918d6caab2becaf21"
+    },
+    {
+      "id": "showtrials-3134",
+      "position": 105,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3134.ru.md",
+      "titles": {
+        "ru": "Протокол допроса А.И. Толмазова"
+      },
+      "source_sha256": "6c46477cbf3ae46a5736a856655bebca84153b200874c11a2af11986edeaf3c1"
+    },
+    {
+      "id": "showtrials-9718",
+      "position": 106,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-9718.ru.md",
+      "titles": {
+        "ru": "Протокол допроса С.О. Мандельштама"
+      },
+      "source_sha256": "40f8a4ba1429a0e6167f85898debdae7478a7b11e17457754239c94401469b9d"
+    },
+    {
+      "id": "showtrials-3136",
+      "position": 107,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3136.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "20a71f5043d33ce764a932764c1c1db48e885f7076f91f72e6ec477c04a0ecde"
+    },
+    {
+      "id": "showtrials-3137",
+      "position": 108,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3137.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между Н.С. Антоновым и И.И. Котолыновым"
+      },
+      "source_sha256": "ed208ec28a902505fffed50a15c0153cdfc98fb854f7475cbb3da3fb2537d917"
+    },
+    {
+      "id": "showtrials-3138",
+      "position": 109,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3138.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между Н.С. Антоновым и В.И. Звездовым"
+      },
+      "source_sha256": "f8b75778390601d6c492db4411794a6d9794d9c3fea506163d545d4e21035a33"
+    },
+    {
+      "id": "showtrials-3149",
+      "position": 110,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3149.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "dd75d2999f7c82a59256d6fe556f26221e3193229e4d06b4e557539f544fc531"
+    },
+    {
+      "id": "showtrials-3150",
+      "position": 111,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3150.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между И.И. Котолыновым и Л.В. Николаевым"
+      },
+      "source_sha256": "9df99767c247ce12f1e2878b249f0378f1e592b56fcece0ed2582f2a7c6f92ba"
+    },
+    {
+      "id": "showtrials-3152",
+      "position": 112,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3152.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.Г. Юскина"
+      },
+      "source_sha256": "ade1dd0c8fb6f0593fa805cddff4c7492e0e9fe8a007c8b120cbefa129252e10"
+    },
+    {
+      "id": "showtrials-3151",
+      "position": 113,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3151.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.Г. Юскина"
+      },
+      "source_sha256": "ad6c0d729658e4e88eebe9d02c2ed6939beacf7f875a247185e347d15a028a2d"
+    },
+    {
+      "id": "showtrials-9725",
+      "position": 114,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-9725.ru.md",
+      "titles": {
+        "ru": "Протокол допроса С.О. Мандельштама"
+      },
+      "source_sha256": "9eb236c9776c1334c080028cdd7aceb49e80261a497625d8fb57dd9a6501e9cb"
+    },
+    {
+      "id": "showtrials-3154",
+      "position": 115,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3154.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.И. Звездова"
+      },
+      "source_sha256": "3192f9b8a9712cdae45f502dc560df458b7af2d77bc6b4c0a945b04035d7a4e0"
+    },
+    {
+      "id": "showtrials-3156",
+      "position": 116,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3156.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между Г.Ф. Поповым и Н.Н. Шатским"
+      },
+      "source_sha256": "b5bebbc424388c8307953f1a543f78222e2ede032660dee33d1a08292f9796b0"
+    },
+    {
+      "id": "showtrials-3155",
+      "position": 117,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3155.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между В.И. Звездовым и Г.В. Соколовым"
+      },
+      "source_sha256": "2b05cda792824bc691ec46ebc1ad1945b428d40df57c6c2441eea49ab160bdec"
+    },
+    {
+      "id": "showtrials-3157",
+      "position": 118,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3157.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцева"
+      },
+      "source_sha256": "6009c0e9b4d228986992d1b53ae1a090a71e7bc98b8bbedfab9fbdafda2802b1"
+    },
+    {
+      "id": "showtrials-3158",
+      "position": 119,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3158.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.П. Мясникова"
+      },
+      "source_sha256": "f0f01c7f9c65e6fd3088aa03341000dd1fb664649a6e0d3313f0a74106d9a5bf"
+    },
+    {
+      "id": "showtrials-3159",
+      "position": 120,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3159.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между Н.П. Мясниковым и В.В. Румянцевым"
+      },
+      "source_sha256": "45ff8233f806082987dc055f9e6316058e13e3fd670d710321cdb625a2587dc4"
+    },
+    {
+      "id": "showtrials-3172",
+      "position": 121,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3172.ru.md",
+      "titles": {
+        "ru": "Письмо В.В. Румянцева секретарю ЦК ВКП(б) И.В. Сталину"
+      },
+      "source_sha256": "e9277134fef7e95640dafd023c693d5c5f2b8e053a35cd3e74d722754c43ab6d"
+    },
+    {
+      "id": "showtrials-3173",
+      "position": 122,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3173.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "dfd6a4d4448780be7b3838c11888c76167d265c9ab3c388e1992c8450d5f1fbd"
+    },
+    {
+      "id": "showtrials-3174",
+      "position": 123,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3174.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Г.В. Соколова"
+      },
+      "source_sha256": "7ee592faeadd3bce14527cb00379b8d3d5134fe54a0772024070653251c8a8d2"
+    },
+    {
+      "id": "showtrials-3175",
+      "position": 124,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3175.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между Г.В. Соколовым и Л.В. Николаевым"
+      },
+      "source_sha256": "44d63fec9fa63f9e06f4d83ce672f24cb32ad9baae6c1e6d596d04066a30249c"
+    },
+    {
+      "id": "showtrials-3176",
+      "position": 125,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3176.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между И.Г. Юскиным и Л.В. Николаевым"
+      },
+      "source_sha256": "41f243a21c8a9e239a7b7f444674773390f09b34f221ea4787c13e67941af795"
+    },
+    {
+      "id": "showtrials-3182",
+      "position": 126,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3182.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "3ddda22d245b45b8591b43fb628d4fb0597dd669fd30d0efa4b3228b25a512c6"
+    },
+    {
+      "id": "showtrials-3183",
+      "position": 127,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3183.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между Н.Н. Шатским и Л.В. Николаевым"
+      },
+      "source_sha256": "882c5da9c7831a01891f1e3aad37e5756212c7e49bb1e1bd23f10a8190cccdf6"
+    },
+    {
+      "id": "showtrials-3184",
+      "position": 128,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3184.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцева"
+      },
+      "source_sha256": "7fdca202df47b84df0f483bb1c3c97ce98c8ae79542667926ea0637e6a5a83b8"
+    },
+    {
+      "id": "showtrials-3190",
+      "position": 129,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3190.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.С. Левина"
+      },
+      "source_sha256": "4c240e739f7e68090ef987670b582192578e864d4aecd717c9d5db1f03cd507a"
+    },
+    {
+      "id": "showtrials-3188",
+      "position": 130,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3188.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.С. Левина"
+      },
+      "source_sha256": "23db99991ace6c637232c4012c8e164e340fc5571c5d950dd7013470a1e6d8b0"
+    },
+    {
+      "id": "showtrials-3191",
+      "position": 131,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3191.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "a43f6c1ed74580d464f74847d81ac19d1506e5935264b0b0c546f59758a56ea7"
+    },
+    {
+      "id": "showtrials-3192",
+      "position": 132,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3192.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "e65355b206bea46971cf4cfe09ada4847d3eb27ff8062fc224602ee8652d5fd0"
+    },
+    {
+      "id": "showtrials-3193",
+      "position": 133,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3193.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.И. Сосицкого"
+      },
+      "source_sha256": "0dc79b9eab93c92aa877e7a6dab25b35fe81f13555919a7cf0a22e03f6a220fa"
+    },
+    {
+      "id": "showtrials-3194",
+      "position": 134,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3194.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.И. Сосицкого"
+      },
+      "source_sha256": "409251f814848b728f628edc36ff03e47a7ac9d6ca310b08ace02e5aec4eb33a"
+    },
+    {
+      "id": "showtrials-3195",
+      "position": 135,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3195.ru.md",
+      "titles": {
+        "ru": "Заявление Л.О. Ханика в СПО НКВД Ленинградской области"
+      },
+      "source_sha256": "bd62adafc52482899a4bafc743badae85cf6f83dcf2c33f70adc44db60f02767"
+    },
+    {
+      "id": "showtrials-3208",
+      "position": 136,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3208.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.В. Румянцнева"
+      },
+      "source_sha256": "7fb4280d91713526349df2e299abd0f40f92a18bdb70cd6fd9e4ed5bc8beffd1"
+    },
+    {
+      "id": "showtrials-3210",
+      "position": 137,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3210.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.С. Антонова"
+      },
+      "source_sha256": "cb4d8d85ae15bbff4f44674bd9e4a0c90a967c17d572b8616d179b28d2a1cdfb"
+    },
+    {
+      "id": "showtrials-3212",
+      "position": 138,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3212.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "8d9fab5bd2e7444a747357f1464a0113c2101b7ee08dd22e796c200ac0e89c1d"
+    },
+    {
+      "id": "showtrials-3213",
+      "position": 139,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3213.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "aa6fe217fa3e663902b488ea6ee8e02e5fe178c30873e6bc2ef6b326b4c8b159"
+    },
+    {
+      "id": "showtrials-3214",
+      "position": 140,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3214.ru.md",
+      "titles": {
+        "ru": "Протокол допроса В.И. Звездова"
+      },
+      "source_sha256": "86c776986af511379592135d92ee3e2ac8b76b98030ef6433058c45abf98f30e"
+    },
+    {
+      "id": "showtrials-3216",
+      "position": 141,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3216.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.П. Мясникова"
+      },
+      "source_sha256": "854a734a15a5f486c16b79382cb68f4d869c1ddbc711be6e6c690292bf565920"
+    },
+    {
+      "id": "showtrials-3215",
+      "position": 142,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3215.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Н.П. Мясникова"
+      },
+      "source_sha256": "d6514c84cab55b2fabd7222c21fe28b7c5d0aa7fc977eff918f12711b6216950"
+    },
+    {
+      "id": "showtrials-3217",
+      "position": 143,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3217.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.И. Сосицкого"
+      },
+      "source_sha256": "96490f2260a19378c77365f8e075d9ebbcf479fcb30f0267ad686616ea259cff"
+    },
+    {
+      "id": "showtrials-3218",
+      "position": 144,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3218.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между Н.П. Мясниковым и Л.И. Сосицким"
+      },
+      "source_sha256": "b5574549058b17890b21fea108f82cbfc8129ce38ed67e536e4858d0568895c0"
+    },
+    {
+      "id": "showtrials-3226",
+      "position": 145,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3226.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Л.В. Николаева"
+      },
+      "source_sha256": "90d1037230c9313197c4e05a9152527dc8cac751a33c92ac4d72d928bf603f98"
+    },
+    {
+      "id": "showtrials-3228",
+      "position": 146,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3228.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между Н.П. Мясниковым и В.С. Левиным"
+      },
+      "source_sha256": "68d4faf5cd1c7c8b1dadc5bcf863ce5fe1057e9ac02480f4593448ec41b1cfb5"
+    },
+    {
+      "id": "showtrials-3227",
+      "position": 147,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3227.ru.md",
+      "titles": {
+        "ru": "Протокол допроса Г.В. Соколова"
+      },
+      "source_sha256": "7bb0fc5635dcf54006cc8a84027602338825e402001584f5641b4ba849e28eda"
+    },
+    {
+      "id": "showtrials-3229",
+      "position": 148,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3229.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между Н.С. Антоновым и В.В. Румянцевым"
+      },
+      "source_sha256": "eb82ae94b267f3aaf68e52e7c90f97e6e3203ed99060d5403dadece403506cdb"
+    },
+    {
+      "id": "showtrials-3230",
+      "position": 149,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3230.ru.md",
+      "titles": {
+        "ru": "Протокол очной ставки между А.И. Толмазовым и И.И. Котолыновым"
+      },
+      "source_sha256": "0413219e1efef8b3dcc4bb656105bc2e142e43c17ac01b8ad0b27b8bef591a9f"
+    },
+    {
+      "id": "showtrials-3236",
+      "position": 150,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3236.ru.md",
+      "titles": {
+        "ru": "Протокол допроса И.И. Котолынова"
+      },
+      "source_sha256": "b6358340579bc83e1741d5f87377435f81d941c65c46ed405ab125e8420344ef"
+    },
+    {
+      "id": "showtrials-3237",
+      "position": 151,
+      "languages": [
+        "pt",
+        "en"
+      ],
+      "source": "originais/showtrials/showtrials-3237.ru.md",
+      "titles": {
+        "ru": "Заявление Л.И. Сосицкого в ЦК ВКП(б)"
+      },
+      "source_sha256": "9a461c179c3f1c128545a65f2ef2054d388e8263142f8a4fb0cf1db4247c863d"
+    }
+  ],
+  "existing_editions": [
+    {
+      "id": "showtrials-2683:ru",
+      "file": "originais/showtrials/showtrials-2683.ru.md",
+      "sha256": "96b3fa07978c1168b135abc14bc6a40a9017b6ef21f84e5850df5a56f4f4f240"
+    },
+    {
+      "id": "showtrials-2684:ru",
+      "file": "originais/showtrials/showtrials-2684.ru.md",
+      "sha256": "88f0188a861617e78dff476741cba26a588b598acd4834d400eb5ced52a70b6e"
+    },
+    {
+      "id": "showtrials-2685:ru",
+      "file": "originais/showtrials/showtrials-2685.ru.md",
+      "sha256": "8246ead504fb8455f0e6c7b320c9deff05251c0a1823aba0a6e1ef477580f8de"
+    },
+    {
+      "id": "showtrials-2686:ru",
+      "file": "originais/showtrials/showtrials-2686.ru.md",
+      "sha256": "3404284ff8409626cabfd6d8f5dab2bdef7cec10eb6b736fb963d7158cb1faef"
+    },
+    {
+      "id": "showtrials-2687:ru",
+      "file": "originais/showtrials/showtrials-2687.ru.md",
+      "sha256": "b6d8479bb594afd9d0f72e9066b78c43f851b5ff4f5a586ff9a0d9861c15dea8"
+    },
+    {
+      "id": "showtrials-2688:ru",
+      "file": "originais/showtrials/showtrials-2688.ru.md",
+      "sha256": "88e20dfa79f02e2c8a70cc3c5b3c1581a9c14b188008156d8dea792040b64d70"
+    },
+    {
+      "id": "showtrials-2689:ru",
+      "file": "originais/showtrials/showtrials-2689.ru.md",
+      "sha256": "d9e2c2d5106720862f702e20a5c3facf46766fa93d7c9694cd68c14350f3c95e"
+    },
+    {
+      "id": "showtrials-2690:ru",
+      "file": "originais/showtrials/showtrials-2690.ru.md",
+      "sha256": "d540fb1b48cbab04d7d849eb7fc600e75bc87d8686899146639ab7f15db120f7"
+    },
+    {
+      "id": "showtrials-2692:ru",
+      "file": "originais/showtrials/showtrials-2692.ru.md",
+      "sha256": "074ae7f438ec2fe2a79aa201ce2bbf45fd3d17f46f03779fc9f22000710fdbcb"
+    },
+    {
+      "id": "showtrials-2693:ru",
+      "file": "originais/showtrials/showtrials-2693.ru.md",
+      "sha256": "b4aa2a91e570a9a2052de40aa66a627503e2ac6548de6abe4f138398442357ec"
+    },
+    {
+      "id": "showtrials-2694:ru",
+      "file": "originais/showtrials/showtrials-2694.ru.md",
+      "sha256": "b5e5c2e15cdc352740c8a0a60dcd6c405bf2d09403fea673fd350cf963506328"
+    },
+    {
+      "id": "showtrials-2695:ru",
+      "file": "originais/showtrials/showtrials-2695.ru.md",
+      "sha256": "3e49f0c6868c0d5048c20a4b5d462543fecaaca9433a880ac2036668d2d5decb"
+    },
+    {
+      "id": "showtrials-2696:ru",
+      "file": "originais/showtrials/showtrials-2696.ru.md",
+      "sha256": "0d1474e97ca796d3a94a75f6aa6ed5a8262615b957a069f59c65a025ff2c53fe"
+    },
+    {
+      "id": "showtrials-2697:ru",
+      "file": "originais/showtrials/showtrials-2697.ru.md",
+      "sha256": "ca9f957708ff0eddb9b7cae400590e2e2e0ece024f4a47213537ba1e215441e4"
+    },
+    {
+      "id": "showtrials-2698:ru",
+      "file": "originais/showtrials/showtrials-2698.ru.md",
+      "sha256": "0f1f16c856f7eba8800b7cce6381808419942db14474d7fc452d90f25d218f4d"
+    },
+    {
+      "id": "showtrials-2699:ru",
+      "file": "originais/showtrials/showtrials-2699.ru.md",
+      "sha256": "f6dc6c803df5f564cc8ff9f0833dc419c9c56dbab16179d5c1c390ce50830460"
+    },
+    {
+      "id": "showtrials-2717:ru",
+      "file": "originais/showtrials/showtrials-2717.ru.md",
+      "sha256": "56039b03269490180b08c591fc55f0a1ca8131cb4456e3c1ba7e83a1259febb1"
+    },
+    {
+      "id": "showtrials-2721:ru",
+      "file": "originais/showtrials/showtrials-2721.ru.md",
+      "sha256": "76d627cc9d282b06dda100a4216eb9f09ed9e52c20ea7bea15b8f4c46c028642"
+    },
+    {
+      "id": "showtrials-2722:ru",
+      "file": "originais/showtrials/showtrials-2722.ru.md",
+      "sha256": "6927cb8d9202046795f29ba73b861013bb616831c7c81418813ac1a0ee05b9da"
+    },
+    {
+      "id": "showtrials-2723:ru",
+      "file": "originais/showtrials/showtrials-2723.ru.md",
+      "sha256": "7a1a0888903665356386f167c129a37e3a1dccbd8139bb172dc4828a5b595e27"
+    },
+    {
+      "id": "showtrials-2724:ru",
+      "file": "originais/showtrials/showtrials-2724.ru.md",
+      "sha256": "80d8019397a684432c33a1cf50138743a20872004d1071951964bb2dd84c1d4f"
+    },
+    {
+      "id": "showtrials-2725:ru",
+      "file": "originais/showtrials/showtrials-2725.ru.md",
+      "sha256": "b0c6039f11216e67efef3003a3b39deee0e21304c0caf91857918ab64d92e59f"
+    },
+    {
+      "id": "showtrials-2726:ru",
+      "file": "originais/showtrials/showtrials-2726.ru.md",
+      "sha256": "bfc2d3e9f5ae7bc03e32173d5f9840b8e9f3ca8b19c499c56cb2fc792ee254fd"
+    },
+    {
+      "id": "showtrials-2727:ru",
+      "file": "originais/showtrials/showtrials-2727.ru.md",
+      "sha256": "d4018bcf5c0ddbadfb648735b8476b9660f009cf8c6a739c439aa069030f7a71"
+    },
+    {
+      "id": "showtrials-2728:ru",
+      "file": "originais/showtrials/showtrials-2728.ru.md",
+      "sha256": "34ff7949310d4e62e6221527007e8584fe6ee9e5144b14b97b49a6fdb5dde9d4"
+    },
+    {
+      "id": "showtrials-2729:ru",
+      "file": "originais/showtrials/showtrials-2729.ru.md",
+      "sha256": "a7cbef89f769a7965ad1e1f926fa452fff79cc8f692ada395a9a0120f18b72a9"
+    },
+    {
+      "id": "showtrials-2730:ru",
+      "file": "originais/showtrials/showtrials-2730.ru.md",
+      "sha256": "b151eb27a40e0a0c47034f495de8cbfe04b2b6d3f9114dd50c1bc25c81cf6589"
+    },
+    {
+      "id": "showtrials-2731:ru",
+      "file": "originais/showtrials/showtrials-2731.ru.md",
+      "sha256": "1c23db5c9889a656b7f322ea2420e9a198044de788181430b20ee3a2911f9a8e"
+    },
+    {
+      "id": "showtrials-2732:ru",
+      "file": "originais/showtrials/showtrials-2732.ru.md",
+      "sha256": "61f4d990d8aa80b5758a8994cbe0ee18439a4f8baf31c38434f588a54bbc14d1"
+    },
+    {
+      "id": "showtrials-2733:ru",
+      "file": "originais/showtrials/showtrials-2733.ru.md",
+      "sha256": "4390530d53bf14a0d3dec13f8fc4108666707ea260cc1511f62fb1ac4ef7ae8b"
+    },
+    {
+      "id": "showtrials-2735:ru",
+      "file": "originais/showtrials/showtrials-2735.ru.md",
+      "sha256": "136cce17d53a24a1b845a77452f4ae3384d496d9450f9bf9a420737b90b564cc"
+    },
+    {
+      "id": "showtrials-2736:ru",
+      "file": "originais/showtrials/showtrials-2736.ru.md",
+      "sha256": "776fb903b0b95f1fc33129ac4e5d770d1027a668c8a6595d1cee1b9b0cd3c1ad"
+    },
+    {
+      "id": "showtrials-2738:ru",
+      "file": "originais/showtrials/showtrials-2738.ru.md",
+      "sha256": "a0aaaca47d8fa6bea4597a2393d88f36f6b2af30a9927d326c70b794e846e6a8"
+    },
+    {
+      "id": "showtrials-2739:ru",
+      "file": "originais/showtrials/showtrials-2739.ru.md",
+      "sha256": "a418487b8269d04476c5fd2836dc639157189493092cebd3fe3d4167fe08b0cf"
+    },
+    {
+      "id": "showtrials-2740:ru",
+      "file": "originais/showtrials/showtrials-2740.ru.md",
+      "sha256": "c6ea19e0384dc845c33d9d112b995be2ba0be4baed9964c5b5aef077c4b5b6cc"
+    },
+    {
+      "id": "showtrials-2782:ru",
+      "file": "originais/showtrials/showtrials-2782.ru.md",
+      "sha256": "8310bb8cb1b1b2bb0e352485da11f5bbe4c72da108f22f44b9efc830317778d0"
+    },
+    {
+      "id": "showtrials-2783:ru",
+      "file": "originais/showtrials/showtrials-2783.ru.md",
+      "sha256": "ba8e26d16e48a0c67563b1f20ae89a276c0700d6d599c14ef0c39ead73206cb9"
+    },
+    {
+      "id": "showtrials-2785:ru",
+      "file": "originais/showtrials/showtrials-2785.ru.md",
+      "sha256": "19cfbef3f1c4b2b43a7c9205a57ada6da1086293eed92bcfd7961dc46459d47b"
+    },
+    {
+      "id": "showtrials-2787:ru",
+      "file": "originais/showtrials/showtrials-2787.ru.md",
+      "sha256": "b6a9b11f50a2813c2a35d6a956379b915b926c2b33a10cdd1bf945939afd5f34"
+    },
+    {
+      "id": "showtrials-2789:ru",
+      "file": "originais/showtrials/showtrials-2789.ru.md",
+      "sha256": "84f02974b80de41ec6d78ff2882b641ad300c8353e14a19bb2b77570f5b68a1b"
+    },
+    {
+      "id": "showtrials-2794:ru",
+      "file": "originais/showtrials/showtrials-2794.ru.md",
+      "sha256": "c5701042a09486e14fce36daab1ae642d52e0094d7cf06474b3e910513fe60f8"
+    },
+    {
+      "id": "showtrials-2996:ru",
+      "file": "originais/showtrials/showtrials-2996.ru.md",
+      "sha256": "bcc607657ffdf892d8db6250f26000b2adbeea7fa78cb840af6b6ccbd2db132e"
+    },
+    {
+      "id": "showtrials-3000:ru",
+      "file": "originais/showtrials/showtrials-3000.ru.md",
+      "sha256": "1af48e2810e0c2c4ebb26224db1168921ce6e50cc46eecce742e1745c6f101d6"
+    },
+    {
+      "id": "showtrials-3004:ru",
+      "file": "originais/showtrials/showtrials-3004.ru.md",
+      "sha256": "25bb2ff646f102ad33e13915088045b245ccd9c6412d7155fdf72cb8abe27ec7"
+    },
+    {
+      "id": "showtrials-3005:ru",
+      "file": "originais/showtrials/showtrials-3005.ru.md",
+      "sha256": "f034e5ee45ced8ebf79e755b75c93b4cad510968d7d48f693e758719c6ffa5b9"
+    },
+    {
+      "id": "showtrials-3006:ru",
+      "file": "originais/showtrials/showtrials-3006.ru.md",
+      "sha256": "62fb52afa769a7b348eade30c4bf4c96c499f47ff272db3943e73ec968f40c21"
+    },
+    {
+      "id": "showtrials-3007:ru",
+      "file": "originais/showtrials/showtrials-3007.ru.md",
+      "sha256": "6876116528f36925ebfe71f15ec644a8991b1ce4937b3c8506f8d3d86e6b96f9"
+    },
+    {
+      "id": "showtrials-3008:ru",
+      "file": "originais/showtrials/showtrials-3008.ru.md",
+      "sha256": "db459e4e02ab910e53819e877f820c600edf545d6326f6a3b3adee77775e270e"
+    },
+    {
+      "id": "showtrials-3009:ru",
+      "file": "originais/showtrials/showtrials-3009.ru.md",
+      "sha256": "7e7f537cacfc156a950af175a01b5de739a9cb0f3a14e8cd91740e4cb60fecf1"
+    },
+    {
+      "id": "showtrials-3010:ru",
+      "file": "originais/showtrials/showtrials-3010.ru.md",
+      "sha256": "9d96f9845e258b06f966a3c09a82748172a4a03e59dbda186e95db7c134ac559"
+    },
+    {
+      "id": "showtrials-3011:ru",
+      "file": "originais/showtrials/showtrials-3011.ru.md",
+      "sha256": "d1a537ca90b29ff079547b21fdd8cf045b2b42fa9d7e96903884ae7c60179801"
+    },
+    {
+      "id": "showtrials-3012:ru",
+      "file": "originais/showtrials/showtrials-3012.ru.md",
+      "sha256": "affeb43542b79c4292c0276fa8bd9e8e510ed8185726b0238eafe06fbbb01e96"
+    },
+    {
+      "id": "showtrials-3013:ru",
+      "file": "originais/showtrials/showtrials-3013.ru.md",
+      "sha256": "4be29c769ed35eb1415325be5de89d8acc1230cb021a435bc8a5592022f99cf5"
+    },
+    {
+      "id": "showtrials-3014:ru",
+      "file": "originais/showtrials/showtrials-3014.ru.md",
+      "sha256": "9cf6bd4f26badaa5b73e1c0a5a802c48312088250b55ba7cde5940fcf487116f"
+    },
+    {
+      "id": "showtrials-3015:ru",
+      "file": "originais/showtrials/showtrials-3015.ru.md",
+      "sha256": "f1baafa92b95173735cd0d3677bb1b4d373c10c3d34f3634e00757d3bea20847"
+    },
+    {
+      "id": "showtrials-3016:ru",
+      "file": "originais/showtrials/showtrials-3016.ru.md",
+      "sha256": "51a2f3ae4cc2ad0db2bc25cf0236cd27b457b8a57a129979a6e13a36529df70a"
+    },
+    {
+      "id": "showtrials-3017:ru",
+      "file": "originais/showtrials/showtrials-3017.ru.md",
+      "sha256": "5880cc958da4b32ebc407617131da18ae0f7821025629db83e064d54e4c3d867"
+    },
+    {
+      "id": "showtrials-3018:ru",
+      "file": "originais/showtrials/showtrials-3018.ru.md",
+      "sha256": "ab8554a68e6895bc619f93948ed206cd85abba1fa8ff162e77f56f7a181830e3"
+    },
+    {
+      "id": "showtrials-3019:ru",
+      "file": "originais/showtrials/showtrials-3019.ru.md",
+      "sha256": "64668e878d9a4994b437bd7d4b8fe4aeacf5fa1c0680189707d363056d93209c"
+    },
+    {
+      "id": "showtrials-3021:ru",
+      "file": "originais/showtrials/showtrials-3021.ru.md",
+      "sha256": "cfc6567c83880bd24ae21c0d71976c1bebd56d4894db8d99f8b0e8a596b6eea3"
+    },
+    {
+      "id": "showtrials-3020:ru",
+      "file": "originais/showtrials/showtrials-3020.ru.md",
+      "sha256": "ebc660a1e924942622f5601f4677b278872ef1b5e85f19d1f926d32a5e296c3d"
+    },
+    {
+      "id": "showtrials-3023:ru",
+      "file": "originais/showtrials/showtrials-3023.ru.md",
+      "sha256": "13f4077b37948444746e19cb0916dbf4aecdc755b7eccdf30d43d4d0e162457c"
+    },
+    {
+      "id": "showtrials-3022:ru",
+      "file": "originais/showtrials/showtrials-3022.ru.md",
+      "sha256": "a1c48e48dd6259c77fac6be2bc2cbda684a65e6a0487837c9ca9cfe5e6f8fed6"
+    },
+    {
+      "id": "showtrials-3027:ru",
+      "file": "originais/showtrials/showtrials-3027.ru.md",
+      "sha256": "04ae0971921b2377a351dd7ab1c28acb6a4ae67905a4edc7ee73ee05f5e94295"
+    },
+    {
+      "id": "showtrials-3028:ru",
+      "file": "originais/showtrials/showtrials-3028.ru.md",
+      "sha256": "15b2890045a04efb73b45380fc5301137acd7e0c950f5ea79bdf4540c87c778c"
+    },
+    {
+      "id": "showtrials-3029:ru",
+      "file": "originais/showtrials/showtrials-3029.ru.md",
+      "sha256": "3acf69ff98af868c1ccb32dd86e034a18cde861df2bd37c5e8d887b04bd254db"
+    },
+    {
+      "id": "showtrials-3030:ru",
+      "file": "originais/showtrials/showtrials-3030.ru.md",
+      "sha256": "2b218f4b76026f12620a23fe85732a821c14d92be73ba049b04732bc3b2753b9"
+    },
+    {
+      "id": "showtrials-3031:ru",
+      "file": "originais/showtrials/showtrials-3031.ru.md",
+      "sha256": "6b0bd3853aa837059300bd556fe0531dcd023c2b7f3b2266218735e0b1c120d4"
+    },
+    {
+      "id": "showtrials-3041:ru",
+      "file": "originais/showtrials/showtrials-3041.ru.md",
+      "sha256": "704a2b30bbd159cc1c203caa3c33e016767fc14dea2a9fe2d4e518eae829d151"
+    },
+    {
+      "id": "showtrials-3042:ru",
+      "file": "originais/showtrials/showtrials-3042.ru.md",
+      "sha256": "fc08b236b01221b000270940ddafdc632d51b50edf5e8f3d71a3487ec2777bd9"
+    },
+    {
+      "id": "showtrials-3043:ru",
+      "file": "originais/showtrials/showtrials-3043.ru.md",
+      "sha256": "e9432e04fb01212e9e00590123c20359542c77ac6673ea96758321a8ece43344"
+    },
+    {
+      "id": "showtrials-3047:ru",
+      "file": "originais/showtrials/showtrials-3047.ru.md",
+      "sha256": "efcc75c8a32ff207d88c3831bb613bff4029ad2e3f54a9abe3b354a80b304cdc"
+    },
+    {
+      "id": "showtrials-3058:ru",
+      "file": "originais/showtrials/showtrials-3058.ru.md",
+      "sha256": "ad1c6c9f6fed3abbc58f544ee079a4c248618c810bd18b6eee0f821740008dd1"
+    },
+    {
+      "id": "showtrials-3059:ru",
+      "file": "originais/showtrials/showtrials-3059.ru.md",
+      "sha256": "3234f689071edbc0ed8adc7ae7dd6b1fc111c20b43eb69f9ce92e40a85879475"
+    },
+    {
+      "id": "showtrials-3060:ru",
+      "file": "originais/showtrials/showtrials-3060.ru.md",
+      "sha256": "ae6441139588f800b6e0a86450c8ad08f6f8645f54269da655bcd78ce870e5ad"
+    },
+    {
+      "id": "showtrials-3061:ru",
+      "file": "originais/showtrials/showtrials-3061.ru.md",
+      "sha256": "a92e97f2b564935dd7c8372f49b17cf30775c897fe4d4de8c5ce9a3bfdca35f1"
+    },
+    {
+      "id": "showtrials-3062:ru",
+      "file": "originais/showtrials/showtrials-3062.ru.md",
+      "sha256": "ac6006ba414971ca75a50f178041ac5735d1e7200cbfd29f0d9daf65a61d330b"
+    },
+    {
+      "id": "showtrials-3063:ru",
+      "file": "originais/showtrials/showtrials-3063.ru.md",
+      "sha256": "48fe738922f0e15a4f346694e2c778e9ef9cfc37526144a04ebc3602a13dcfb3"
+    },
+    {
+      "id": "showtrials-3064:ru",
+      "file": "originais/showtrials/showtrials-3064.ru.md",
+      "sha256": "7f463ad6c95808b685925c07db1b0deb20ac4dba87ec49ec85aaa7d58ab52be8"
+    },
+    {
+      "id": "showtrials-3109:ru",
+      "file": "originais/showtrials/showtrials-3109.ru.md",
+      "sha256": "bd7a40a23fcb0acde1b675813fd6c5f2244a8b6a3d768f67ebe26f82794c9248"
+    },
+    {
+      "id": "showtrials-3115:ru",
+      "file": "originais/showtrials/showtrials-3115.ru.md",
+      "sha256": "b46e45b8259c15402bb61888d0ec28093856944fadde0e93b5327d17c18c0a98"
+    },
+    {
+      "id": "showtrials-3110:ru",
+      "file": "originais/showtrials/showtrials-3110.ru.md",
+      "sha256": "b651bdff6be487587ea7f9080c832a3cbd7bf43d5754498735baa6d857cca4d4"
+    },
+    {
+      "id": "showtrials-3111:ru",
+      "file": "originais/showtrials/showtrials-3111.ru.md",
+      "sha256": "7ff9b78e832b353a6a0ac840bb12280ebb880f633d0a2a4298201172eaa5820d"
+    },
+    {
+      "id": "showtrials-3112:ru",
+      "file": "originais/showtrials/showtrials-3112.ru.md",
+      "sha256": "7b90186f3206b11f41c78c381af0ff9dce658586f44045dda229534937fc8ef3"
+    },
+    {
+      "id": "showtrials-3113:ru",
+      "file": "originais/showtrials/showtrials-3113.ru.md",
+      "sha256": "eefe8ff87ec9df81ae674068f6e5cc4e815c351ca2449c3fe3d77220777706c2"
+    },
+    {
+      "id": "showtrials-3114:ru",
+      "file": "originais/showtrials/showtrials-3114.ru.md",
+      "sha256": "9c896f9f4fb9030acc339ecfa3e3dc49d77d0d5e10cbbccfbfb4d3b6ccfdb45e"
+    },
+    {
+      "id": "showtrials-3116:ru",
+      "file": "originais/showtrials/showtrials-3116.ru.md",
+      "sha256": "6d04f32a3e08b83a9fe9ccede19cae3028a4776b31a5d2b0eda084229a1c3bed"
+    },
+    {
+      "id": "showtrials-3117:ru",
+      "file": "originais/showtrials/showtrials-3117.ru.md",
+      "sha256": "0303087b1991cc8b1e8be5ff177f0676da33a84ed128eceb28037a68b5e5f75b"
+    },
+    {
+      "id": "showtrials-3118:ru",
+      "file": "originais/showtrials/showtrials-3118.ru.md",
+      "sha256": "98d6580d505243abe5385375c33a593bbaead720a223af60b36923a9d3373540"
+    },
+    {
+      "id": "showtrials-3129:ru",
+      "file": "originais/showtrials/showtrials-3129.ru.md",
+      "sha256": "f85a0959e945a321cb5e6aa1a1927cc4347f5a418bc503ef1f4e65b444b1a283"
+    },
+    {
+      "id": "showtrials-3130:ru",
+      "file": "originais/showtrials/showtrials-3130.ru.md",
+      "sha256": "a4e9ce71442af8bebc91112ca23ba361ce182aaaa78f729ebee5c3df845791db"
+    },
+    {
+      "id": "showtrials-3131:ru",
+      "file": "originais/showtrials/showtrials-3131.ru.md",
+      "sha256": "412cbed213667f1737f3ac4b93d90bb6bfab4ffdfa9584a211205736e2eca6e8"
+    },
+    {
+      "id": "showtrials-3132:ru",
+      "file": "originais/showtrials/showtrials-3132.ru.md",
+      "sha256": "4fecc6c7e9a85fc170eeeb0a989e62e84100aab549c7bad760da46ac4e956ff8"
+    },
+    {
+      "id": "showtrials-3133:ru",
+      "file": "originais/showtrials/showtrials-3133.ru.md",
+      "sha256": "eb4971ea5bc7a3c9b54a48656839f8658235fb1a20f1e65918d6caab2becaf21"
+    },
+    {
+      "id": "showtrials-3134:ru",
+      "file": "originais/showtrials/showtrials-3134.ru.md",
+      "sha256": "6c46477cbf3ae46a5736a856655bebca84153b200874c11a2af11986edeaf3c1"
+    },
+    {
+      "id": "showtrials-9718:ru",
+      "file": "originais/showtrials/showtrials-9718.ru.md",
+      "sha256": "40f8a4ba1429a0e6167f85898debdae7478a7b11e17457754239c94401469b9d"
+    },
+    {
+      "id": "showtrials-3136:ru",
+      "file": "originais/showtrials/showtrials-3136.ru.md",
+      "sha256": "20a71f5043d33ce764a932764c1c1db48e885f7076f91f72e6ec477c04a0ecde"
+    },
+    {
+      "id": "showtrials-3137:ru",
+      "file": "originais/showtrials/showtrials-3137.ru.md",
+      "sha256": "ed208ec28a902505fffed50a15c0153cdfc98fb854f7475cbb3da3fb2537d917"
+    },
+    {
+      "id": "showtrials-3138:ru",
+      "file": "originais/showtrials/showtrials-3138.ru.md",
+      "sha256": "f8b75778390601d6c492db4411794a6d9794d9c3fea506163d545d4e21035a33"
+    },
+    {
+      "id": "showtrials-3149:ru",
+      "file": "originais/showtrials/showtrials-3149.ru.md",
+      "sha256": "dd75d2999f7c82a59256d6fe556f26221e3193229e4d06b4e557539f544fc531"
+    },
+    {
+      "id": "showtrials-3150:ru",
+      "file": "originais/showtrials/showtrials-3150.ru.md",
+      "sha256": "9df99767c247ce12f1e2878b249f0378f1e592b56fcece0ed2582f2a7c6f92ba"
+    },
+    {
+      "id": "showtrials-3152:ru",
+      "file": "originais/showtrials/showtrials-3152.ru.md",
+      "sha256": "ade1dd0c8fb6f0593fa805cddff4c7492e0e9fe8a007c8b120cbefa129252e10"
+    },
+    {
+      "id": "showtrials-3151:ru",
+      "file": "originais/showtrials/showtrials-3151.ru.md",
+      "sha256": "ad6c0d729658e4e88eebe9d02c2ed6939beacf7f875a247185e347d15a028a2d"
+    },
+    {
+      "id": "showtrials-9725:ru",
+      "file": "originais/showtrials/showtrials-9725.ru.md",
+      "sha256": "9eb236c9776c1334c080028cdd7aceb49e80261a497625d8fb57dd9a6501e9cb"
+    },
+    {
+      "id": "showtrials-3154:ru",
+      "file": "originais/showtrials/showtrials-3154.ru.md",
+      "sha256": "3192f9b8a9712cdae45f502dc560df458b7af2d77bc6b4c0a945b04035d7a4e0"
+    },
+    {
+      "id": "showtrials-3156:ru",
+      "file": "originais/showtrials/showtrials-3156.ru.md",
+      "sha256": "b5bebbc424388c8307953f1a543f78222e2ede032660dee33d1a08292f9796b0"
+    },
+    {
+      "id": "showtrials-3155:ru",
+      "file": "originais/showtrials/showtrials-3155.ru.md",
+      "sha256": "2b05cda792824bc691ec46ebc1ad1945b428d40df57c6c2441eea49ab160bdec"
+    },
+    {
+      "id": "showtrials-3157:ru",
+      "file": "originais/showtrials/showtrials-3157.ru.md",
+      "sha256": "6009c0e9b4d228986992d1b53ae1a090a71e7bc98b8bbedfab9fbdafda2802b1"
+    },
+    {
+      "id": "showtrials-3158:ru",
+      "file": "originais/showtrials/showtrials-3158.ru.md",
+      "sha256": "f0f01c7f9c65e6fd3088aa03341000dd1fb664649a6e0d3313f0a74106d9a5bf"
+    },
+    {
+      "id": "showtrials-3159:ru",
+      "file": "originais/showtrials/showtrials-3159.ru.md",
+      "sha256": "45ff8233f806082987dc055f9e6316058e13e3fd670d710321cdb625a2587dc4"
+    },
+    {
+      "id": "showtrials-3172:ru",
+      "file": "originais/showtrials/showtrials-3172.ru.md",
+      "sha256": "e9277134fef7e95640dafd023c693d5c5f2b8e053a35cd3e74d722754c43ab6d"
+    },
+    {
+      "id": "showtrials-3173:ru",
+      "file": "originais/showtrials/showtrials-3173.ru.md",
+      "sha256": "dfd6a4d4448780be7b3838c11888c76167d265c9ab3c388e1992c8450d5f1fbd"
+    },
+    {
+      "id": "showtrials-3174:ru",
+      "file": "originais/showtrials/showtrials-3174.ru.md",
+      "sha256": "7ee592faeadd3bce14527cb00379b8d3d5134fe54a0772024070653251c8a8d2"
+    },
+    {
+      "id": "showtrials-3175:ru",
+      "file": "originais/showtrials/showtrials-3175.ru.md",
+      "sha256": "44d63fec9fa63f9e06f4d83ce672f24cb32ad9baae6c1e6d596d04066a30249c"
+    },
+    {
+      "id": "showtrials-3176:ru",
+      "file": "originais/showtrials/showtrials-3176.ru.md",
+      "sha256": "41f243a21c8a9e239a7b7f444674773390f09b34f221ea4787c13e67941af795"
+    },
+    {
+      "id": "showtrials-3182:ru",
+      "file": "originais/showtrials/showtrials-3182.ru.md",
+      "sha256": "3ddda22d245b45b8591b43fb628d4fb0597dd669fd30d0efa4b3228b25a512c6"
+    },
+    {
+      "id": "showtrials-3183:ru",
+      "file": "originais/showtrials/showtrials-3183.ru.md",
+      "sha256": "882c5da9c7831a01891f1e3aad37e5756212c7e49bb1e1bd23f10a8190cccdf6"
+    },
+    {
+      "id": "showtrials-3184:ru",
+      "file": "originais/showtrials/showtrials-3184.ru.md",
+      "sha256": "7fdca202df47b84df0f483bb1c3c97ce98c8ae79542667926ea0637e6a5a83b8"
+    },
+    {
+      "id": "showtrials-3190:ru",
+      "file": "originais/showtrials/showtrials-3190.ru.md",
+      "sha256": "4c240e739f7e68090ef987670b582192578e864d4aecd717c9d5db1f03cd507a"
+    },
+    {
+      "id": "showtrials-3188:ru",
+      "file": "originais/showtrials/showtrials-3188.ru.md",
+      "sha256": "23db99991ace6c637232c4012c8e164e340fc5571c5d950dd7013470a1e6d8b0"
+    },
+    {
+      "id": "showtrials-3191:ru",
+      "file": "originais/showtrials/showtrials-3191.ru.md",
+      "sha256": "a43f6c1ed74580d464f74847d81ac19d1506e5935264b0b0c546f59758a56ea7"
+    },
+    {
+      "id": "showtrials-3192:ru",
+      "file": "originais/showtrials/showtrials-3192.ru.md",
+      "sha256": "e65355b206bea46971cf4cfe09ada4847d3eb27ff8062fc224602ee8652d5fd0"
+    },
+    {
+      "id": "showtrials-3193:ru",
+      "file": "originais/showtrials/showtrials-3193.ru.md",
+      "sha256": "0dc79b9eab93c92aa877e7a6dab25b35fe81f13555919a7cf0a22e03f6a220fa"
+    },
+    {
+      "id": "showtrials-3194:ru",
+      "file": "originais/showtrials/showtrials-3194.ru.md",
+      "sha256": "409251f814848b728f628edc36ff03e47a7ac9d6ca310b08ace02e5aec4eb33a"
+    },
+    {
+      "id": "showtrials-3195:ru",
+      "file": "originais/showtrials/showtrials-3195.ru.md",
+      "sha256": "bd62adafc52482899a4bafc743badae85cf6f83dcf2c33f70adc44db60f02767"
+    },
+    {
+      "id": "showtrials-3208:ru",
+      "file": "originais/showtrials/showtrials-3208.ru.md",
+      "sha256": "7fb4280d91713526349df2e299abd0f40f92a18bdb70cd6fd9e4ed5bc8beffd1"
+    },
+    {
+      "id": "showtrials-3210:ru",
+      "file": "originais/showtrials/showtrials-3210.ru.md",
+      "sha256": "cb4d8d85ae15bbff4f44674bd9e4a0c90a967c17d572b8616d179b28d2a1cdfb"
+    },
+    {
+      "id": "showtrials-3212:ru",
+      "file": "originais/showtrials/showtrials-3212.ru.md",
+      "sha256": "8d9fab5bd2e7444a747357f1464a0113c2101b7ee08dd22e796c200ac0e89c1d"
+    },
+    {
+      "id": "showtrials-3213:ru",
+      "file": "originais/showtrials/showtrials-3213.ru.md",
+      "sha256": "aa6fe217fa3e663902b488ea6ee8e02e5fe178c30873e6bc2ef6b326b4c8b159"
+    },
+    {
+      "id": "showtrials-3214:ru",
+      "file": "originais/showtrials/showtrials-3214.ru.md",
+      "sha256": "86c776986af511379592135d92ee3e2ac8b76b98030ef6433058c45abf98f30e"
+    },
+    {
+      "id": "showtrials-3216:ru",
+      "file": "originais/showtrials/showtrials-3216.ru.md",
+      "sha256": "854a734a15a5f486c16b79382cb68f4d869c1ddbc711be6e6c690292bf565920"
+    },
+    {
+      "id": "showtrials-3215:ru",
+      "file": "originais/showtrials/showtrials-3215.ru.md",
+      "sha256": "d6514c84cab55b2fabd7222c21fe28b7c5d0aa7fc977eff918f12711b6216950"
+    },
+    {
+      "id": "showtrials-3217:ru",
+      "file": "originais/showtrials/showtrials-3217.ru.md",
+      "sha256": "96490f2260a19378c77365f8e075d9ebbcf479fcb30f0267ad686616ea259cff"
+    },
+    {
+      "id": "showtrials-3218:ru",
+      "file": "originais/showtrials/showtrials-3218.ru.md",
+      "sha256": "b5574549058b17890b21fea108f82cbfc8129ce38ed67e536e4858d0568895c0"
+    },
+    {
+      "id": "showtrials-3226:ru",
+      "file": "originais/showtrials/showtrials-3226.ru.md",
+      "sha256": "90d1037230c9313197c4e05a9152527dc8cac751a33c92ac4d72d928bf603f98"
+    },
+    {
+      "id": "showtrials-3228:ru",
+      "file": "originais/showtrials/showtrials-3228.ru.md",
+      "sha256": "68d4faf5cd1c7c8b1dadc5bcf863ce5fe1057e9ac02480f4593448ec41b1cfb5"
+    },
+    {
+      "id": "showtrials-3227:ru",
+      "file": "originais/showtrials/showtrials-3227.ru.md",
+      "sha256": "7bb0fc5635dcf54006cc8a84027602338825e402001584f5641b4ba849e28eda"
+    },
+    {
+      "id": "showtrials-3229:ru",
+      "file": "originais/showtrials/showtrials-3229.ru.md",
+      "sha256": "eb82ae94b267f3aaf68e52e7c90f97e6e3203ed99060d5403dadece403506cdb"
+    },
+    {
+      "id": "showtrials-3230:ru",
+      "file": "originais/showtrials/showtrials-3230.ru.md",
+      "sha256": "0413219e1efef8b3dcc4bb656105bc2e142e43c17ac01b8ad0b27b8bef591a9f"
+    },
+    {
+      "id": "showtrials-3236:ru",
+      "file": "originais/showtrials/showtrials-3236.ru.md",
+      "sha256": "b6358340579bc83e1741d5f87377435f81d941c65c46ed405ab125e8420344ef"
+    },
+    {
+      "id": "showtrials-3237:ru",
+      "file": "originais/showtrials/showtrials-3237.ru.md",
+      "sha256": "9a461c179c3f1c128545a65f2ef2054d388e8263142f8a4fb0cf1db4247c863d"
+    },
+    {
+      "id": "showtrials-2683:pt",
+      "file": "originais/showtrials/showtrials-2683.pt.md",
+      "sha256": "eb66a4ef29d7959c1ba193dc427542467fdc22665215140619fd57ecd2e137b7"
+    },
+    {
+      "id": "showtrials-2684:pt",
+      "file": "originais/showtrials/showtrials-2684.pt.md",
+      "sha256": "e7c12fc3812c3aa0401ada27c02012c45293e03e5901638c2968c2b4e6199d1c"
+    }
+  ]
+}

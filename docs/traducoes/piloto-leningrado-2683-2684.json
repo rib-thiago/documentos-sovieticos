@@ -1,0 +1,76 @@
+[
+  {
+    "document_id": "showtrials-2683",
+    "findings": [],
+    "structure": {
+      "original": {
+        "study_blocks": 19,
+        "paragraphs": 19,
+        "headings": 0,
+        "lists": 0,
+        "tables": 0,
+        "code_blocks": 0,
+        "export_headers": 0
+      },
+      "current": null,
+      "uploaded": {
+        "study_blocks": 19,
+        "paragraphs": 19,
+        "headings": 0,
+        "lists": 0,
+        "tables": 0,
+        "code_blocks": 0,
+        "export_headers": 0
+      }
+    },
+    "save": {
+      "saved": true,
+      "history_id": "20261018054308617182-c9141315f096",
+      "document_id": "showtrials-2683",
+      "revision": "9ac9a55e70d578407b5d1141d79262107c85b86f13d1ddf1b0a1080cd1815553",
+      "entity": {
+        "kind": "document",
+        "id": "showtrials-2683"
+      },
+      "document_exists": true,
+      "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+    }
+  },
+  {
+    "document_id": "showtrials-2684",
+    "findings": [],
+    "structure": {
+      "original": {
+        "study_blocks": 13,
+        "paragraphs": 13,
+        "headings": 0,
+        "lists": 0,
+        "tables": 0,
+        "code_blocks": 0,
+        "export_headers": 0
+      },
+      "current": null,
+      "uploaded": {
+        "study_blocks": 13,
+        "paragraphs": 13,
+        "headings": 0,
+        "lists": 0,
+        "tables": 0,
+        "code_blocks": 0,
+        "export_headers": 0
+      }
+    },
+    "save": {
+      "saved": true,
+      "history_id": "20261018054329573321-ca1835e813e2",
+      "document_id": "showtrials-2684",
+      "revision": "eed8f289e587fa33bcf76249699c572445605fbeea138f1c3e6eef1782fb4c65",
+      "entity": {
+        "kind": "document",
+        "id": "showtrials-2684"
+      },
+      "document_exists": true,
+      "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+    }
+  }
+]
