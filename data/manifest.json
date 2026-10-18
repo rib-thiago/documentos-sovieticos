@@ -28927,9 +28927,16 @@
           "label": "Tradução portuguesa",
           "file": "originais/showtrials/showtrials-5690.pt.md",
           "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-5690.en.md",
+          "format": "markdown"
         }
       ],
       "title_pt": "Protocolo de interrogatório de P. A. Lipshits",
+      "title_en": "Interrogation Record of P. A. Lipshits",
       "collected_date": "1936-07-10T01:10:00"
     },
     {

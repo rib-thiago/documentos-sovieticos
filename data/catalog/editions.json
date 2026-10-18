@@ -44004,5 +44004,24 @@
       "file",
       "format"
     ]
+  },
+  {
+    "id": "showtrials-5690:en",
+    "document_id": "showtrials-5690",
+    "language": "en",
+    "label": "Tradução inglesa",
+    "file": "originais/showtrials/showtrials-5690.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "471399cdf5804f826e4e3d4900776215fa7cfc98b3decacd2d15035b63a3cc93",
+    "bytes": 24153,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
   }
 ]
