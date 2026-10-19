@@ -63441,5 +63441,81 @@
       "file",
       "format"
     ]
+  },
+  {
+    "id": "showtrials-2643:pt",
+    "document_id": "showtrials-2643",
+    "language": "pt",
+    "label": "Tradução portuguesa",
+    "file": "originais/showtrials/showtrials-2643.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "50c8d1c5fcf50676248cc152ebe64e5c31c79ec5b835f2ad462a4d1550ff7915",
+    "bytes": 2028,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2643:en",
+    "document_id": "showtrials-2643",
+    "language": "en",
+    "label": "Tradução inglesa",
+    "file": "originais/showtrials/showtrials-2643.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "f3dbc3d6cd277c4575f457461555a578980a14a246ecbdfb7d1fa383b4579575",
+    "bytes": 2152,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2646:pt",
+    "document_id": "showtrials-2646",
+    "language": "pt",
+    "label": "Tradução portuguesa",
+    "file": "originais/showtrials/showtrials-2646.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "b6ed2648b52ef66edb1dffbff0f1659df2b3a098a23653c6a4dc1fdcdf221404",
+    "bytes": 12654,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2646:en",
+    "document_id": "showtrials-2646",
+    "language": "en",
+    "label": "Tradução inglesa",
+    "file": "originais/showtrials/showtrials-2646.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "0057b783af242ed37dc598168cea9a7ee0a7e34f8cf7ad1949eb5a66fcee9cb0",
+    "bytes": 12712,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
   }
 ]

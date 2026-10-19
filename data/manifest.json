@@ -23953,8 +23953,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2643.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2643.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2643.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "COMUNICADO DA PROCURADORIA DA URSS",
+      "title_en": "COMMUNIQUÉ OF THE PROCURACY OF THE USSR",
       "collected_date": "1935-01-14T10:36:00"
     },
     {
@@ -24010,8 +24024,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2646.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2646.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2646.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "SENTENÇA",
+      "title_en": "VERDICT",
       "collected_date": "1935-01-16T19:42:00"
     },
     {

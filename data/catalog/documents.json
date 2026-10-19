@@ -27609,7 +27609,9 @@
     "id": "showtrials-2643",
     "kind": "document",
     "titles": {
-      "ru": "СООБЩЕНИЕ ПРОКУРАТУРЫ СССР"
+      "ru": "СООБЩЕНИЕ ПРОКУРАТУРЫ СССР",
+      "pt": "COMUNICADO DA PROCURADORIA DA URSS",
+      "en": "COMMUNIQUÉ OF THE PROCURACY OF THE USSR"
     },
     "document_type": "administrative_report",
     "historical_date": {
@@ -27756,7 +27758,9 @@
     "id": "showtrials-2646",
     "kind": "document",
     "titles": {
-      "ru": "ПРИГОВОР"
+      "ru": "ПРИГОВОР",
+      "pt": "SENTENÇA",
+      "en": "VERDICT"
     },
     "document_type": "verdict_or_sentence",
     "historical_date": {
