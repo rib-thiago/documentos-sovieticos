@@ -23986,8 +23986,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2644.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2644.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2644.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "SESSÃO DE 15 DE JANEIRO DE 1935",
+      "title_en": "SESSION OF JANUARY 15, 1935",
       "collected_date": "1935-01-15T10:37:00"
     },
     {
@@ -24005,8 +24019,22 @@
           "label": "Disponível em russo",
           "file": "originais/showtrials/showtrials-2645.ru.md",
           "format": "markdown"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/showtrials/showtrials-2645.pt.md",
+          "format": "markdown"
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/showtrials/showtrials-2645.en.md",
+          "format": "markdown"
         }
       ],
+      "title_pt": "SESSÃO DE 16 DE JANEIRO DE 1935",
+      "title_en": "SESSION OF JANUARY 16, 1935",
       "collected_date": "1935-01-16T10:40:00"
     },
     {
