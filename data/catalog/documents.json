@@ -8884,7 +8884,9 @@
     "id": "showtrials-1541",
     "kind": "document",
     "titles": {
-      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте бывших зиновьевцев"
+      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте бывших зиновьевцев",
+      "pt": "Comunicação de G. Yagoda a Stalin sobre prisões",
+      "en": "Report by G. Yagoda to Stalin on Arrests"
     },
     "document_type": "special_report",
     "historical_date": {
@@ -8933,7 +8935,9 @@
     "id": "showtrials-2707",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.М. Гертика"
+      "ru": "Протокол допроса А.М. Гертика",
+      "pt": "Protocolo de interrogatório de A. M. Gertik",
+      "en": "Interrogation Record of A. M. Gertik"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -8982,7 +8986,9 @@
     "id": "showtrials-3240",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.А. Виноградова"
+      "ru": "Протокол допроса В.А. Виноградова",
+      "pt": "Protocolo de interrogatório de V. A. Vinogradov",
+      "en": "Interrogation Record of V. A. Vinogradov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9031,7 +9037,9 @@
     "id": "showtrials-3241",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.А. Виноградова"
+      "ru": "Протокол допроса В.А. Виноградова",
+      "pt": "Protocolo de interrogatório complementar de V. A. Vinogradov",
+      "en": "Supplementary Interrogation Record of V. A. Vinogradov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9080,7 +9088,9 @@
     "id": "showtrials-3242",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.К. Наумова"
+      "ru": "Протокол допроса И.К. Наумова",
+      "pt": "Protocolo de interrogatório de I. K. Naumov",
+      "en": "Interrogation Record of I. K. Naumov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9129,7 +9139,9 @@
     "id": "showtrials-11228",
     "kind": "document",
     "titles": {
-      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте бывших зиновьевцев"
+      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте бывших зиновьевцев",
+      "pt": "Comunicação de G. Yagoda a Stalin sobre novas prisões",
+      "en": "Report by G. Yagoda to Stalin on Further Arrests"
     },
     "document_type": "special_report",
     "historical_date": {
@@ -9180,7 +9192,9 @@
     "id": "showtrials-3243",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.А. Виноградова"
+      "ru": "Протокол допроса В.А. Виноградова",
+      "pt": "Protocolo de interrogatório de V. A. Vinogradov",
+      "en": "Interrogation record of V. A. Vinogradov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9229,7 +9243,9 @@
     "id": "showtrials-3244",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.П. Бакаева"
+      "ru": "Протокол допроса И.П. Бакаева",
+      "pt": "Protocolo de interrogatório de I. P. Bakaev",
+      "en": "Interrogation record of I. P. Bakaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9278,7 +9294,9 @@
     "id": "showtrials-3245",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Евдокимова"
+      "ru": "Протокол допроса Г.Е. Евдокимова",
+      "pt": "Protocolo de interrogatório de G. E. Evdokimov",
+      "en": "Interrogation record of G. E. Evdokimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9327,7 +9345,9 @@
     "id": "showtrials-3246",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Я. Файвиловича"
+      "ru": "Протокол допроса Л.Я. Файвиловича",
+      "pt": "Protocolo de interrogatório de L. Ya. Faivilovich",
+      "en": "Interrogation record of L. Ya. Faivilovich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9376,7 +9396,9 @@
     "id": "showtrials-3247",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Protocolo de interrogatório de I. S. Gorshenin",
+      "en": "Interrogation record of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9425,7 +9447,9 @@
     "id": "showtrials-3248",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.Ф. Башкирова"
+      "ru": "Протокол допроса А.Ф. Башкирова",
+      "pt": "Protocolo de interrogatório de A. F. Bashkirov",
+      "en": "Interrogation record of A. F. Bashkirov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9474,7 +9498,9 @@
     "id": "showtrials-3255",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Попова"
+      "ru": "Протокол допроса Г.Ф. Попова",
+      "pt": "Protocolo de interrogatório de G. F. Popov",
+      "en": "Interrogation record of G. F. Popov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9523,7 +9549,9 @@
     "id": "showtrials-3256",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Попова"
+      "ru": "Протокол допроса Г.Ф. Попова",
+      "pt": "Protocolo de interrogatório de G. F. Popov",
+      "en": "Interrogation record of G. F. Popov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9572,7 +9600,9 @@
     "id": "showtrials-3257",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.Н. Ширяева"
+      "ru": "Протокол допроса Д.Н. Ширяева",
+      "pt": "Protocolo de interrogatório de D. N. Shiryaev",
+      "en": "Interrogation record of D. N. Shiryaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9621,7 +9651,9 @@
     "id": "showtrials-3258",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.П. Поташникова"
+      "ru": "Протокол допроса Г.П. Поташникова",
+      "pt": "Protocolo de interrogatório de G. P. Potashnikov",
+      "en": "Interrogation record of G. P. Potashnikov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9670,7 +9702,9 @@
     "id": "showtrials-3259",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Александрова"
+      "ru": "Протокол допроса А.И. Александрова",
+      "pt": "Protocolo de interrogatório de A. I. Aleksandrov",
+      "en": "Interrogation record of A. I. Aleksandrov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9719,7 +9753,9 @@
     "id": "showtrials-3260",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ф.Ф. Фадеева"
+      "ru": "Протокол допроса Ф.Ф. Фадеева",
+      "pt": "Protocolo de interrogatório de F. F. Fadeev",
+      "en": "Interrogation record of F. F. Fadeev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9768,7 +9804,9 @@
     "id": "showtrials-3261",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.М. Гессена"
+      "ru": "Протокол допроса С.М. Гессена",
+      "pt": "Protocolo de interrogatório de S. M. Gessen",
+      "en": "Interrogation record of S. M. Gessen"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9817,7 +9855,9 @@
     "id": "showtrials-3262",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Л. Браво"
+      "ru": "Протокол допроса Б.Л. Браво",
+      "pt": "Protocolo de interrogatório de B. L. Bravo",
+      "en": "Interrogation record of B. L. Bravo"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9866,7 +9906,9 @@
     "id": "showtrials-3271",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.М. Гертика"
+      "ru": "Протокол допроса А.М. Гертика",
+      "pt": "Protocolo de interrogatório de A. M. Gertik",
+      "en": "Interrogation record of A. M. Gertik"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9915,7 +9957,9 @@
     "id": "showtrials-3273",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.Н. Ширяева"
+      "ru": "Протокол допроса Д.Н. Ширяева",
+      "pt": "Protocolo de interrogatório de D. N. Shiryaev",
+      "en": "Interrogation record of D. N. Shiryaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -9964,7 +10008,9 @@
     "id": "showtrials-3274",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Попова"
+      "ru": "Протокол допроса Г.Ф. Попова",
+      "pt": "Protocolo de interrogatório de G. F. Popov",
+      "en": "Interrogation record of G. F. Popov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10013,7 +10059,9 @@
     "id": "showtrials-3275",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.В. Муравьева"
+      "ru": "Протокол допроса М.В. Муравьева",
+      "pt": "Protocolo de interrogatório de M. V. Muravyov",
+      "en": "Interrogation record of M. V. Muravyov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10062,7 +10110,9 @@
     "id": "showtrials-3276",
     "kind": "document",
     "titles": {
-      "ru": "Письмо Г.Е. Зиновьева И.В. Сталину"
+      "ru": "Письмо Г.Е. Зиновьева И.В. Сталину",
+      "pt": "Carta de G. E. Zinoviev a I. V. Stalin",
+      "en": "Letter from G. E. Zinoviev to I. V. Stalin"
     },
     "document_type": "letter",
     "historical_date": {
@@ -10111,7 +10161,9 @@
     "id": "showtrials-3277",
     "kind": "document",
     "titles": {
-      "ru": "Письмо Г.И. Сафарова И.В. Сталину"
+      "ru": "Письмо Г.И. Сафарова И.В. Сталину",
+      "pt": "Carta de G. I. Safarov a I. V. Stalin",
+      "en": "Letter from G. I. Safarov to I. V. Stalin"
     },
     "document_type": "letter",
     "historical_date": {
@@ -10160,7 +10212,9 @@
     "id": "showtrials-3288",
     "kind": "document",
     "titles": {
-      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте Г.Е. Зиновьева, Л.Б. Каменева, Г.И. Сафарова"
+      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте Г.Е. Зиновьева, Л.Б. Каменева, Г.И. Сафарова",
+      "pt": "Informe especial de G. G. Yagoda a I. V. Stalin sobre a prisão de G. E. Zinoviev, L. B. Kamenev e G. I. Safarov",
+      "en": "Special report from G. G. Yagoda to I. V. Stalin on the arrest of G. E. Zinoviev, L. B. Kamenev and G. I. Safarov"
     },
     "document_type": "special_report",
     "historical_date": {
@@ -10209,7 +10263,9 @@
     "id": "showtrials-3290",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.К. Наумова"
+      "ru": "Протокол допроса И.К. Наумова",
+      "pt": "Protocolo de interrogatório de I. K. Naumov",
+      "en": "Interrogation record of I. K. Naumov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10258,7 +10314,9 @@
     "id": "showtrials-3289",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.М. Гертика"
+      "ru": "Протокол допроса А.М. Гертика",
+      "pt": "Protocolo de interrogatório de A. M. Gertik",
+      "en": "Interrogation record of A. M. Gertik"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10307,7 +10365,9 @@
     "id": "showtrials-3291",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Protocolo de interrogatório de I. S. Gorshenin",
+      "en": "Interrogation record of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10356,7 +10416,9 @@
     "id": "showtrials-3292",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.А. Царькова"
+      "ru": "Протокол допроса Н.А. Царькова",
+      "pt": "Protocolo de interrogatório de N. A. Tsarkov",
+      "en": "Interrogation record of N. A. Tsarkov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10405,7 +10467,9 @@
     "id": "showtrials-3293",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Б. Каменева"
+      "ru": "Протокол допроса Л.Б. Каменева",
+      "pt": "Protocolo de interrogatório de L. B. Kamenev",
+      "en": "Interrogation record of L. B. Kamenev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10454,7 +10518,9 @@
     "id": "showtrials-3295",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Александрова"
+      "ru": "Протокол допроса А.И. Александрова",
+      "pt": "Protocolo de interrogatório de A. I. Aleksandrov",
+      "en": "Interrogation record of A. I. Aleksandrov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10503,7 +10569,9 @@
     "id": "showtrials-3294",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Я.И. Богомольного"
+      "ru": "Протокол допроса Я.И. Богомольного",
+      "pt": "Protocolo de interrogatório de Ya. I. Bogomolny",
+      "en": "Interrogation record of Ya. I. Bogomolny"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10552,7 +10620,9 @@
     "id": "showtrials-3296",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Е.К. Коршунова с приложением письма И.П. Бакаева Е.К. Коршунову от 6 июля 1928 г."
+      "ru": "Протокол допроса Е.К. Коршунова с приложением письма И.П. Бакаева Е.К. Коршунову от 6 июля 1928 г.",
+      "pt": "Protocolo de interrogatório de E. K. Korshunov, com carta de I. P. Bakaev a E. K. Korshunov de 6 de julho de 1928 em anexo",
+      "en": "Interrogation record of E. K. Korshunov, with an attached letter from I. P. Bakaev to E. K. Korshunov dated July 6, 1928"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10602,7 +10672,9 @@
     "id": "showtrials-3306",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Protocolo de interrogatório de I. S. Gorshenin",
+      "en": "Interrogation record of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10651,7 +10723,9 @@
     "id": "showtrials-9542",
     "kind": "document",
     "titles": {
-      "ru": "Письмо Л.Б. Каменева И.В. Сталину"
+      "ru": "Письмо Л.Б. Каменева И.В. Сталину",
+      "pt": "Carta de L. B. Kamenev a I. V. Stalin",
+      "en": "Letter from L. B. Kamenev to I. V. Stalin"
     },
     "document_type": "letter",
     "historical_date": {
@@ -10700,7 +10774,9 @@
     "id": "showtrials-3307",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.А. Царькова"
+      "ru": "Протокол допроса Н.А. Царькова",
+      "pt": "Protocolo de interrogatório de N. A. Tsarkov",
+      "en": "Interrogation record of N. A. Tsarkov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10749,7 +10825,9 @@
     "id": "showtrials-3309",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Федорова"
+      "ru": "Протокол допроса Г.Ф. Федорова",
+      "pt": "Protocolo de interrogatório de G. F. Fedorov",
+      "en": "Interrogation record of G. F. Fedorov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10798,7 +10876,9 @@
     "id": "showtrials-3308",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.С. Куклина"
+      "ru": "Протокол допроса А.С. Куклина",
+      "pt": "Protocolo de interrogatório de A. S. Kuklin",
+      "en": "Interrogation record of A. S. Kuklin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10847,7 +10927,9 @@
     "id": "showtrials-9627",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.А. Муштакова"
+      "ru": "Протокол допроса А.А. Муштакова",
+      "pt": "Protocolo de interrogatório de A. A. Mushtakov",
+      "en": "Interrogation record of A. A. Mushtakov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10896,7 +10978,9 @@
     "id": "showtrials-3311",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.Н. Ширяева"
+      "ru": "Протокол допроса Д.Н. Ширяева",
+      "pt": "Protocolo de interrogatório de D. N. Shiryaev",
+      "en": "Interrogation record of D. N. Shiryaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10945,7 +11029,9 @@
     "id": "showtrials-3312",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ф.Ф. Фадеева"
+      "ru": "Протокол допроса Ф.Ф. Фадеева",
+      "pt": "Protocolo de interrogatório de F. F. Fadeev",
+      "en": "Interrogation record of F. F. Fadeev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -10994,7 +11080,9 @@
     "id": "showtrials-3313",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.П. Северова"
+      "ru": "Протокол допроса П.П. Северова",
+      "pt": "Protocolo de interrogatório de P. P. Severov",
+      "en": "Interrogation record of P. P. Severov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11043,7 +11131,9 @@
     "id": "showtrials-3314",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.П. Поташникова"
+      "ru": "Протокол допроса Г.П. Поташникова",
+      "pt": "Protocolo de interrogatório de G. P. Potashnikov",
+      "en": "Interrogation record of G. P. Potashnikov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11092,7 +11182,9 @@
     "id": "showtrials-3315",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Я. Файвиловича с приложением письма И.И. Рейнгольда Л.Я. Файвиловичу от 1929 г."
+      "ru": "Протокол допроса Л.Я. Файвиловича с приложением письма И.И. Рейнгольда Л.Я. Файвиловичу от 1929 г.",
+      "pt": "Protocolo de interrogatório de L. Ya. Faivilovich, com carta de I. I. Reingold a L. Ya. Faivilovich de 1929 em anexo",
+      "en": "Interrogation record of L. Ya. Faivilovich, with an attached letter from I. I. Reingold to L. Ya. Faivilovich dated 1929"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11142,7 +11234,9 @@
     "id": "showtrials-3317",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Попова"
+      "ru": "Протокол допроса Г.Ф. Попова",
+      "pt": "Protocolo de interrogatório de G. F. Popov",
+      "en": "Interrogation record of G. F. Popov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11191,7 +11285,9 @@
     "id": "showtrials-3316",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Попова"
+      "ru": "Протокол допроса Г.Ф. Попова",
+      "pt": "Protocolo de interrogatório de G. F. Popov",
+      "en": "Interrogation record of G. F. Popov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11240,7 +11336,9 @@
     "id": "showtrials-3318",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Г.Ф. Поповым и Н.Н. Шатским"
+      "ru": "Протокол очной ставки между Г.Ф. Поповым и Н.Н. Шатским",
+      "pt": "Protocolo de acareação entre G. F. Popov e N. N. Shatsky",
+      "en": "Record of a confrontation between G. F. Popov and N. N. Shatsky"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -11289,7 +11387,9 @@
     "id": "showtrials-3332",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.В. Муравьева"
+      "ru": "Протокол допроса М.В. Муравьева",
+      "pt": "Protocolo de interrogatório de M. V. Muravyov",
+      "en": "Interrogation record of M. V. Muravyov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11338,7 +11438,9 @@
     "id": "showtrials-3333",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Protocolo de interrogatório de I. S. Gorshenin",
+      "en": "Interrogation record of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11387,7 +11489,9 @@
     "id": "showtrials-3334",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Зиновьева с дополнением и приложением письма Г.Е. Зиновьева В.В. Румянцеву от 30 апреля 1928 г."
+      "ru": "Протокол допроса Г.Е. Зиновьева с дополнением и приложением письма Г.Е. Зиновьева В.В. Румянцеву от 30 апреля 1928 г.",
+      "pt": "Protocolo de interrogatório de G. E. Zinoviev, com complemento e carta de G. E. Zinoviev a V. V. Rumyantsev de 30 de abril de 1928 em anexo",
+      "en": "Interrogation record of G. E. Zinoviev, with a supplement and an attached letter from G. E. Zinoviev to V. V. Rumyantsev dated April 30, 1928"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11437,7 +11541,9 @@
     "id": "showtrials-3335",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.Ф. Башкирова"
+      "ru": "Протокол допроса А.Ф. Башкирова",
+      "pt": "Protocolo de interrogatório de A. F. Bashkirov",
+      "en": "Interrogation record of A. F. Bashkirov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11486,7 +11592,9 @@
     "id": "showtrials-3336",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.И. Тарасова"
+      "ru": "Протокол допроса И.И. Тарасова",
+      "pt": "Protocolo de interrogatório de I. I. Tarasov",
+      "en": "Interrogation record of I. I. Tarasov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11535,7 +11643,9 @@
     "id": "showtrials-3338",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Л. Браво"
+      "ru": "Протокол допроса Б.Л. Браво",
+      "pt": "Protocolo de interrogatório de B. L. Bravo",
+      "en": "Interrogation record of B. L. Bravo"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11584,7 +11694,9 @@
     "id": "showtrials-3337",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.И. Тарасова"
+      "ru": "Протокол допроса И.И. Тарасова",
+      "pt": "Protocolo de interrogatório de I. I. Tarasov",
+      "en": "Interrogation record of I. I. Tarasov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11633,7 +11745,9 @@
     "id": "showtrials-3339",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Л. Браво"
+      "ru": "Протокол допроса Б.Л. Браво",
+      "pt": "Protocolo de interrogatório de B. L. Bravo",
+      "en": "Interrogation record of B. L. Bravo"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11682,7 +11796,9 @@
     "id": "showtrials-3340",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Евдокимова"
+      "ru": "Протокол допроса Г.Е. Евдокимова",
+      "pt": "Protocolo de interrogatório de G. E. Evdokimov",
+      "en": "Interrogation record of G. E. Evdokimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11731,7 +11847,9 @@
     "id": "showtrials-3341",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.П. Бакаева"
+      "ru": "Протокол допроса И.П. Бакаева",
+      "pt": "Protocolo de interrogatório de I. P. Bakaev",
+      "en": "Interrogation record of I. P. Bakaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11780,7 +11898,9 @@
     "id": "showtrials-3343",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса К.Н. Емельянова"
+      "ru": "Протокол допроса К.Н. Емельянова",
+      "pt": "Protocolo de interrogatório complementar de K. N. Emelyanov",
+      "en": "Record of the supplementary interrogation of K. N. Emelyanov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11829,7 +11949,9 @@
     "id": "showtrials-3342",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса К.Н. Емельянова"
+      "ru": "Протокол допроса К.Н. Емельянова",
+      "pt": "Protocolo de interrogatório de K. N. Emelyanov",
+      "en": "Interrogation record of K. N. Emelyanov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11878,7 +12000,9 @@
     "id": "showtrials-9623",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.А. Муштакова"
+      "ru": "Протокол допроса А.А. Муштакова",
+      "pt": "Protocolo de interrogatório complementar de A. A. Mushtakov",
+      "en": "Record of the supplementary interrogation of A. A. Mushtakov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11927,7 +12051,9 @@
     "id": "showtrials-3345",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ф.Ф. Фадеева"
+      "ru": "Протокол допроса Ф.Ф. Фадеева",
+      "pt": "Protocolo de interrogatório de F. F. Fadeev",
+      "en": "Interrogation record of F. F. Fadeev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -11976,7 +12102,9 @@
     "id": "showtrials-3360",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.А. Виноградова"
+      "ru": "Протокол допроса В.А. Виноградова",
+      "pt": "Protocolo de interrogatório complementar de V. A. Vinogradov",
+      "en": "Record of the supplementary interrogation of V. A. Vinogradov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12025,7 +12153,9 @@
     "id": "showtrials-3362",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Б. Каменева"
+      "ru": "Протокол допроса Л.Б. Каменева",
+      "pt": "Protocolo de interrogatório complementar de L. B. Kamenev",
+      "en": "Record of the supplementary interrogation of L. B. Kamenev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12074,7 +12204,9 @@
     "id": "showtrials-3361",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.С. Куклина"
+      "ru": "Протокол допроса А.С. Куклина",
+      "pt": "Protocolo de interrogatório de A. S. Kuklin",
+      "en": "Interrogation record of A. S. Kuklin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12123,7 +12255,9 @@
     "id": "showtrials-3363",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.И. Тарасова"
+      "ru": "Протокол допроса И.И. Тарасова",
+      "pt": "Protocolo de interrogatório de I. I. Tarasov",
+      "en": "Interrogation record of I. I. Tarasov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12172,7 +12306,9 @@
     "id": "showtrials-3365",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12221,7 +12357,9 @@
     "id": "showtrials-3364",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.М. Гертика"
+      "ru": "Протокол допроса А.М. Гертика",
+      "pt": "Protocolo de interrogatório complementar de A. M. Gertik",
+      "en": "Record of the supplementary interrogation of A. M. Gertik"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12270,7 +12408,9 @@
     "id": "showtrials-3366",
     "kind": "document",
     "titles": {
-      "ru": "Заявление И.П. Бакаева Я.С. Агранову"
+      "ru": "Заявление И.П. Бакаева Я.С. Агранову",
+      "pt": "Declaração de I. P. Bakaev a Ya. S. Agranov com complementos aos depoimentos",
+      "en": "Statement by I. P. Bakaev to Ya. S. Agranov supplementing his testimony"
     },
     "document_type": "statement",
     "historical_date": {
@@ -12319,7 +12459,9 @@
     "id": "showtrials-3374",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Александрова"
+      "ru": "Протокол допроса А.И. Александрова",
+      "pt": "Protocolo de interrogatório de A. I. Aleksandrov",
+      "en": "Interrogation record of A. I. Aleksandrov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12368,7 +12510,9 @@
     "id": "showtrials-3375",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Б. Каменева"
+      "ru": "Протокол допроса Л.Б. Каменева",
+      "pt": "Protocolo de interrogatório de L. B. Kamenev",
+      "en": "Interrogation record of L. B. Kamenev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12417,7 +12561,9 @@
     "id": "showtrials-3377",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.А. Царькова"
+      "ru": "Протокол допроса Н.А. Царькова",
+      "pt": "Protocolo de interrogatório de N. A. Tsarkov",
+      "en": "Interrogation record of N. A. Tsarkov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12466,7 +12612,9 @@
     "id": "showtrials-3376",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Федорова"
+      "ru": "Протокол допроса Г.Ф. Федорова",
+      "pt": "Protocolo de interrogatório de G. F. Fedorov",
+      "en": "Interrogation record of G. F. Fedorov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12515,7 +12663,9 @@
     "id": "showtrials-3378",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Protocolo de interrogatório complementar de I. S. Gorshenin",
+      "en": "Record of the supplementary interrogation of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12564,7 +12714,9 @@
     "id": "showtrials-3384",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Зиновьева"
+      "ru": "Протокол допроса Г.Е. Зиновьева",
+      "pt": "Protocolo de interrogatório de G. E. Zinoviev",
+      "en": "Interrogation record of G. E. Zinoviev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12613,7 +12765,9 @@
     "id": "showtrials-3385",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.М. Гессена"
+      "ru": "Протокол допроса С.М. Гессена",
+      "pt": "Protocolo de interrogatório de S. M. Gessen",
+      "en": "Interrogation record of S. M. Gessen"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12662,7 +12816,9 @@
     "id": "showtrials-3387",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.А. Бака"
+      "ru": "Протокол допроса П.А. Бака",
+      "pt": "Protocolo de interrogatório de P. A. Bak",
+      "en": "Interrogation record of P. A. Bak"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12711,7 +12867,9 @@
     "id": "showtrials-3386",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.С. Рэма"
+      "ru": "Протокол допроса М.С. Рэма",
+      "pt": "Protocolo de interrogatório de M. S. Rem",
+      "en": "Interrogation record of M. S. Rem"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12760,7 +12918,9 @@
     "id": "showtrials-3388",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между И.И. Тарасовым и В.В. Румянцевым"
+      "ru": "Протокол очной ставки между И.И. Тарасовым и В.В. Румянцевым",
+      "pt": "Protocolo de acareação entre I. I. Tarasov e V. V. Rumyantsev",
+      "en": "Record of a confrontation between I. I. Tarasov and V. V. Rumyantsev"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -12809,7 +12969,9 @@
     "id": "showtrials-3389",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.П. Костиной"
+      "ru": "Протокол допроса А.П. Костиной",
+      "pt": "Protocolo de interrogatório de A. P. Kostina",
+      "en": "Interrogation record of A. P. Kostina"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -12858,7 +13020,9 @@
     "id": "showtrials-3390",
     "kind": "document",
     "titles": {
-      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте М.М. Харитонова"
+      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте М.М. Харитонова",
+      "pt": "Informe de G. G. Yagoda a I. V. Stalin sobre a prisão de M. M. Kharitonov",
+      "en": "Report from G. G. Yagoda to I. V. Stalin on the arrest of M. M. Kharitonov"
     },
     "document_type": "special_report",
     "historical_date": {
@@ -12907,7 +13071,9 @@
     "id": "showtrials-3391",
     "kind": "document",
     "titles": {
-      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину с приложением заявления М.М. Харитонова И.В. Сталину"
+      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину с приложением заявления М.М. Харитонова И.В. Сталину",
+      "pt": "Carta de M. M. Kharitonov a I. V. Stalin, com encaminhamento de G. G. Yagoda",
+      "en": "Letter from M. M. Kharitonov to I. V. Stalin, with a forwarding note by G. G. Yagoda"
     },
     "document_type": "special_report",
     "historical_date": {
@@ -12957,7 +13123,9 @@
     "id": "showtrials-3400",
     "kind": "document",
     "titles": {
-      "ru": "Письмо Г.Я. Сокольникова И.В. Сталину с объяснениями по поводу показаний И.К. Наумова"
+      "ru": "Письмо Г.Я. Сокольникова И.В. Сталину с объяснениями по поводу показаний И.К. Наумова",
+      "pt": "Carta de G. Ya. Sokolnikov a I. V. Stalin",
+      "en": "Letter from G. Ya. Sokolnikov to I. V. Stalin"
     },
     "document_type": "letter",
     "historical_date": {
@@ -13006,7 +13174,9 @@
     "id": "showtrials-3401",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ю.Б. Тартаковской"
+      "ru": "Протокол допроса Ю.Б. Тартаковской",
+      "pt": "Protocolo de interrogatório de Yu. B. Tartakovskaya",
+      "en": "Interrogation record of Yu. B. Tartakovskaya"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13055,7 +13225,9 @@
     "id": "showtrials-3403",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.В. Поздеевой"
+      "ru": "Протокол допроса М.В. Поздеевой",
+      "pt": "Protocolo de interrogatório de M. V. Pozdeeva",
+      "en": "Interrogation record of M. V. Pozdeeva"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13104,7 +13276,9 @@
     "id": "showtrials-3402",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.И. Тарасова"
+      "ru": "Протокол допроса И.И. Тарасова",
+      "pt": "Protocolo de interrogatório de I. I. Tarasov",
+      "en": "Interrogation record of I. I. Tarasov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13153,7 +13327,9 @@
     "id": "showtrials-3404",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.Ф. Башкирова"
+      "ru": "Протокол допроса А.Ф. Башкирова",
+      "pt": "Protocolo de interrogatório complementar de A. F. Bashkirov",
+      "en": "Record of the supplementary interrogation of A. F. Bashkirov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13202,7 +13378,9 @@
     "id": "showtrials-3405",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между А.Ф. Башкировым и Л.И. Сосицким"
+      "ru": "Протокол очной ставки между А.Ф. Башкировым и Л.И. Сосицким",
+      "pt": "Protocolo de acareação entre A. F. Bashkirov e L. I. Sositsky",
+      "en": "Record of a confrontation between A. F. Bashkirov and L. I. Sositsky"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -13251,7 +13429,9 @@
     "id": "showtrials-3406",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13300,7 +13480,9 @@
     "id": "showtrials-3414",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13349,7 +13531,9 @@
     "id": "showtrials-3416",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.С. Рэма"
+      "ru": "Протокол допроса М.С. Рэма",
+      "pt": "Protocolo de interrogatório de M. S. Rem",
+      "en": "Interrogation record of M. S. Rem"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13398,7 +13582,9 @@
     "id": "showtrials-3415",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Евдокимова"
+      "ru": "Протокол допроса Г.Е. Евдокимова",
+      "pt": "Protocolo de interrogatório de G. E. Evdokimov",
+      "en": "Interrogation record of G. E. Evdokimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13447,7 +13633,9 @@
     "id": "showtrials-3418",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.Г. Жестянникова"
+      "ru": "Протокол допроса И.Г. Жестянникова",
+      "pt": "Protocolo de interrogatório de I. G. Zhestyannikov",
+      "en": "Interrogation record of I. G. Zhestyannikov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13496,7 +13684,9 @@
     "id": "showtrials-3419",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.М. Харитонова"
+      "ru": "Протокол допроса М.М. Харитонова",
+      "pt": "Protocolo de interrogatório de M. M. Kharitonov",
+      "en": "Interrogation record of M. M. Kharitonov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13545,7 +13735,9 @@
     "id": "showtrials-3420",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Т.Д. Дмитриева"
+      "ru": "Протокол допроса Т.Д. Дмитриева",
+      "pt": "Protocolo de interrogatório de T. D. Dmitriev",
+      "en": "Interrogation record of T. D. Dmitriev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13594,7 +13786,9 @@
     "id": "showtrials-3421",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Попова"
+      "ru": "Протокол допроса Г.Ф. Попова",
+      "pt": "Protocolo de interrogatório de G. F. Popov",
+      "en": "Interrogation record of G. F. Popov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13643,7 +13837,9 @@
     "id": "showtrials-3422",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ф.Ф. Фадеева"
+      "ru": "Протокол допроса Ф.Ф. Фадеева",
+      "pt": "Protocolo de interrogatório de F. F. Fadeev",
+      "en": "Interrogation record of F. F. Fadeev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13692,7 +13888,9 @@
     "id": "showtrials-3424",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.В. Поздеевой"
+      "ru": "Протокол допроса М.В. Поздеевой",
+      "pt": "Protocolo de interrogatório de M. V. Pozdeeva",
+      "en": "Interrogation record of M. V. Pozdeeva"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13741,7 +13939,9 @@
     "id": "showtrials-3423",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.А. Дмитриева"
+      "ru": "Протокол допроса Н.А. Дмитриева",
+      "pt": "Protocolo de interrogatório de N. A. Dmitriev",
+      "en": "Interrogation record of N. A. Dmitriev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13790,7 +13990,9 @@
     "id": "showtrials-3425",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Л.Б. Каменева Я.С. Агранову"
+      "ru": "Заявление Л.Б. Каменева Я.С. Агранову",
+      "pt": "Declaração de L. B. Kamenev a Ya. S. Agranov",
+      "en": "Statement by L. B. Kamenev to Ya. S. Agranov"
     },
     "document_type": "statement",
     "historical_date": {
@@ -13839,7 +14041,9 @@
     "id": "showtrials-3436",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Protocolo de interrogatório de I. S. Gorshenin",
+      "en": "Interrogation record of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13888,7 +14092,9 @@
     "id": "showtrials-3437",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.М. Гессена"
+      "ru": "Протокол допроса С.М. Гессена",
+      "pt": "Protocolo de interrogatório de S. M. Gessen",
+      "en": "Interrogation record of S. M. Gessen"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13937,7 +14143,9 @@
     "id": "showtrials-3439",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Зильбермана"
+      "ru": "Протокол допроса А.И. Зильбермана",
+      "pt": "Protocolo de interrogatório de A. I. Zilberman",
+      "en": "Interrogation record of A. I. Zilberman"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -13986,7 +14194,9 @@
     "id": "showtrials-3438",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.В. Перимова"
+      "ru": "Протокол допроса А.В. Перимова",
+      "pt": "Protocolo de interrogatório de A. V. Perimov",
+      "en": "Interrogation record of A. V. Perimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14035,7 +14245,9 @@
     "id": "showtrials-3440",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Т.Д. Дмитриева"
+      "ru": "Протокол допроса Т.Д. Дмитриева",
+      "pt": "Protocolo de interrogatório de T. D. Dmitriev",
+      "en": "Interrogation record of T. D. Dmitriev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14084,7 +14296,9 @@
     "id": "showtrials-3441",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.П. Северова"
+      "ru": "Протокол допроса П.П. Северова",
+      "pt": "Protocolo de interrogatório de P. P. Severov",
+      "en": "Interrogation record of P. P. Severov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14133,7 +14347,9 @@
     "id": "showtrials-3442",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14182,7 +14398,9 @@
     "id": "showtrials-3450",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14231,7 +14449,9 @@
     "id": "showtrials-3451",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14280,7 +14500,9 @@
     "id": "showtrials-3452",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Л. Браво"
+      "ru": "Протокол допроса Б.Л. Браво",
+      "pt": "Protocolo de interrogatório de B. L. Bravo",
+      "en": "Interrogation Record of B. L. Bravo"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14329,7 +14551,9 @@
     "id": "showtrials-3453",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Я. Файвиловича"
+      "ru": "Протокол допроса Л.Я. Файвиловича",
+      "pt": "Protocolo de interrogatório de L. Ya. Faivilovich",
+      "en": "Interrogation Record of L. Ya. Faivilovich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14378,7 +14602,9 @@
     "id": "showtrials-3454",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.М. Харитонова"
+      "ru": "Протокол допроса М.М. Харитонова",
+      "pt": "Protocolo de interrogatório de M. M. Kharitonov",
+      "en": "Interrogation Record of M. M. Kharitonov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14427,7 +14653,9 @@
     "id": "showtrials-3455",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.И. Тарасова"
+      "ru": "Протокол допроса И.И. Тарасова",
+      "pt": "Protocolo de interrogatório de I. I. Tarasov",
+      "en": "Interrogation Record of I. I. Tarasov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14476,7 +14704,9 @@
     "id": "showtrials-3456",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.В. Герцберга"
+      "ru": "Протокол допроса А.В. Герцберга",
+      "pt": "Protocolo de interrogatório de A. V. Gertsberg",
+      "en": "Interrogation Record of A. V. Gertsberg"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14525,7 +14755,9 @@
     "id": "showtrials-3457",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Е.К. Коршунова"
+      "ru": "Протокол допроса Е.К. Коршунова",
+      "pt": "Protocolo de interrogatório de Ye. K. Korshunov",
+      "en": "Interrogation Record of Ye. K. Korshunov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14574,7 +14806,9 @@
     "id": "showtrials-3458",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Попова"
+      "ru": "Протокол допроса Г.Ф. Попова",
+      "pt": "Protocolo de interrogatório de G. F. Popov",
+      "en": "Interrogation Record of G. F. Popov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14623,7 +14857,9 @@
     "id": "showtrials-3901",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.Н. Ширяева"
+      "ru": "Протокол допроса Д.Н. Ширяева",
+      "pt": "Protocolo de interrogatório de D. N. Shiryaev",
+      "en": "Interrogation Record of D. N. Shiryaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14672,7 +14908,9 @@
     "id": "showtrials-3904",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14721,7 +14959,9 @@
     "id": "showtrials-3902",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ф.Г. Наливайко"
+      "ru": "Протокол допроса Ф.Г. Наливайко",
+      "pt": "Protocolo de interrogatório de F. G. Nalivaiko",
+      "en": "Interrogation Record of F. G. Nalivaiko"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14770,7 +15010,9 @@
     "id": "showtrials-3903",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.С. Куклина"
+      "ru": "Протокол допроса А.С. Куклина",
+      "pt": "Protocolo de interrogatório de A. S. Kuklin",
+      "en": "Interrogation Record of A. S. Kuklin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14819,7 +15061,9 @@
     "id": "showtrials-3905",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Анишева"
+      "ru": "Протокол допроса А.И. Анишева",
+      "pt": "Protocolo de interrogatório de A. I. Anishev",
+      "en": "Interrogation Record of A. I. Anishev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14868,7 +15112,9 @@
     "id": "showtrials-3906",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.Н. Ширяева"
+      "ru": "Протокол допроса Д.Н. Ширяева",
+      "pt": "Protocolo de interrogatório de D. N. Shiryaev",
+      "en": "Interrogation Record of D. N. Shiryaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14917,7 +15163,9 @@
     "id": "showtrials-3907",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.Н. Ширяева"
+      "ru": "Протокол допроса Д.Н. Ширяева",
+      "pt": "Depoimento de D. N. Shiryaev",
+      "en": "Testimony of D. N. Shiryaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -14966,7 +15214,9 @@
     "id": "showtrials-3915",
     "kind": "document",
     "titles": {
-      "ru": "Письмо Г.Е. Зиновьева в ЦК ВКП(б)"
+      "ru": "Письмо Г.Е. Зиновьева в ЦК ВКП(б)",
+      "pt": "Carta de G. E. Zinoviev ao Comitê Central do PC(b) da União",
+      "en": "Letter from G. E. Zinoviev to the Central Committee of the All-Union Communist Party (Bolsheviks)"
     },
     "document_type": "letter",
     "historical_date": {
@@ -15015,7 +15265,9 @@
     "id": "showtrials-3916",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Анишева"
+      "ru": "Протокол допроса А.И. Анишева",
+      "pt": "Protocolo de interrogatório de A. I. Anishev",
+      "en": "Interrogation Record of A. I. Anishev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15064,7 +15316,9 @@
     "id": "showtrials-3920",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Евдокимова"
+      "ru": "Протокол допроса Г.Е. Евдокимова",
+      "pt": "Protocolo de interrogatório complementar de G. E. Evdokimov",
+      "en": "Supplementary Interrogation Record of G. E. Evdokimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15113,7 +15367,9 @@
     "id": "showtrials-3921",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.М. Харитонова"
+      "ru": "Протокол допроса М.М. Харитонова",
+      "pt": "Protocolo de interrogatório de M. M. Kharitonov",
+      "en": "Interrogation Record of M. M. Kharitonov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15162,7 +15418,9 @@
     "id": "showtrials-3922",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15211,7 +15469,9 @@
     "id": "showtrials-3923",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Анишева"
+      "ru": "Протокол допроса А.И. Анишева",
+      "pt": "Protocolo de interrogatório de A. I. Anishev",
+      "en": "Interrogation Record of A. I. Anishev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15260,7 +15520,9 @@
     "id": "showtrials-3924",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.В. Герцберга"
+      "ru": "Протокол допроса А.В. Герцберга",
+      "pt": "Protocolo de interrogatório de A. V. Gertsberg",
+      "en": "Interrogation Record of A. V. Gertsberg"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15309,7 +15571,9 @@
     "id": "showtrials-3925",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Protocolo de interrogatório complementar de I. S. Gorshenin",
+      "en": "Supplementary Interrogation Record of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15358,7 +15622,9 @@
     "id": "showtrials-3926",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Н. Сахова"
+      "ru": "Протокол допроса Б.Н. Сахова",
+      "pt": "Protocolo de interrogatório de B. N. Sakhov",
+      "en": "Interrogation Record of B. N. Sakhov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15407,7 +15673,9 @@
     "id": "showtrials-3928",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Федорова"
+      "ru": "Протокол допроса Г.Ф. Федорова",
+      "pt": "Protocolo de interrogatório complementar de G. F. Fedorov",
+      "en": "Supplementary Interrogation Record of G. F. Fedorov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15456,7 +15724,9 @@
     "id": "showtrials-3927",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Федорова"
+      "ru": "Протокол допроса Г.Ф. Федорова",
+      "pt": "Protocolo de interrogatório complementar de G. F. Fedorov",
+      "en": "Supplementary Interrogation Record of G. F. Fedorov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15505,7 +15775,9 @@
     "id": "showtrials-3936",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15554,7 +15826,9 @@
     "id": "showtrials-3937",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Я. Файвиловича"
+      "ru": "Протокол допроса Л.Я. Файвиловича",
+      "pt": "Protocolo de interrogatório de L. Ya. Faivilovich",
+      "en": "Interrogation record of L. Ya. Faivilovich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15603,7 +15877,9 @@
     "id": "showtrials-3938",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.М. Харитонова"
+      "ru": "Протокол допроса М.М. Харитонова",
+      "pt": "Protocolo de interrogatório de M. M. Kharitonov",
+      "en": "Interrogation record of M. M. Kharitonov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15652,7 +15928,9 @@
     "id": "showtrials-3940",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.В. Перимова"
+      "ru": "Протокол допроса А.В. Перимова",
+      "pt": "Protocolo de interrogatório de A. V. Perimov",
+      "en": "Interrogation record of A. V. Perimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15701,7 +15979,9 @@
     "id": "showtrials-3939",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.В. Поздеевой"
+      "ru": "Протокол допроса М.В. Поздеевой",
+      "pt": "Protocolo de interrogatório de M. V. Pozdeeva",
+      "en": "Interrogation record of M. V. Pozdeeva"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15750,7 +16030,9 @@
     "id": "showtrials-3941",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Анишева"
+      "ru": "Протокол допроса А.И. Анишева",
+      "pt": "Protocolo de interrogatório de A. I. Anishev",
+      "en": "Interrogation record of A. I. Anishev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15799,7 +16081,9 @@
     "id": "showtrials-3942",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Я.И. Богомольного"
+      "ru": "Протокол допроса Я.И. Богомольного",
+      "pt": "Protocolo de interrogatório de Ya. I. Bogomolny",
+      "en": "Interrogation record of Ya. I. Bogomolny"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15848,7 +16132,9 @@
     "id": "showtrials-3943",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Исаева"
+      "ru": "Протокол допроса Г.И. Исаева",
+      "pt": "Protocolo de interrogatório de G. I. Isaev",
+      "en": "Interrogation record of G. I. Isaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15897,7 +16183,9 @@
     "id": "showtrials-3944",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.С. Рэма"
+      "ru": "Протокол допроса М.С. Рэма",
+      "pt": "Protocolo de interrogatório de M. S. Rem",
+      "en": "Interrogation record of M. S. Rem"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15946,7 +16234,9 @@
     "id": "showtrials-3945",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.Н. Цатуровой-Большаковой"
+      "ru": "Протокол допроса В.Н. Цатуровой-Большаковой",
+      "pt": "Protocolo de interrogatório de V. N. Tsaturova-Bolshakova",
+      "en": "Interrogation record of V. N. Tsaturova-Bolshakova"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -15995,7 +16285,9 @@
     "id": "showtrials-3946",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Шварца"
+      "ru": "Протокол допроса Г.И. Шварца",
+      "pt": "Protocolo de interrogatório de G. I. Shvarts",
+      "en": "Interrogation record of G. I. Shvarts"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16044,7 +16336,9 @@
     "id": "showtrials-3958",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Шварца"
+      "ru": "Протокол допроса Г.И. Шварца",
+      "pt": "Protocolo de interrogatório de G. I. Shvarts",
+      "en": "Interrogation record of G. I. Shvarts"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16093,7 +16387,9 @@
     "id": "showtrials-3959",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.К. Середохина"
+      "ru": "Протокол допроса А.К. Середохина",
+      "pt": "Protocolo de interrogatório de A.K. Seredokhin",
+      "en": "Interrogation record of A.K. Seredokhin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16142,7 +16438,9 @@
     "id": "showtrials-3960",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G.I. Safarov",
+      "en": "Interrogation record of G.I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16191,7 +16489,9 @@
     "id": "showtrials-3961",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Н. Сахова"
+      "ru": "Протокол допроса Б.Н. Сахова",
+      "pt": "Protocolo de interrogatório de B.N. Sakhov",
+      "en": "Interrogation record of B.N. Sakhov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16240,7 +16540,9 @@
     "id": "showtrials-3962",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.М. Гессена"
+      "ru": "Протокол допроса С.М. Гессена",
+      "pt": "Depoimento de S.M. Gessen",
+      "en": "Testimony of S.M. Gessen"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16289,7 +16591,9 @@
     "id": "showtrials-3963",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.А. Дмитриева"
+      "ru": "Протокол допроса Н.А. Дмитриева",
+      "pt": "Protocolo de interrogatório de N.A. Dmitriyev",
+      "en": "Interrogation record of N.A. Dmitriyev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16338,7 +16642,9 @@
     "id": "showtrials-3964",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.Н. Яковлева"
+      "ru": "Протокол допроса М.Н. Яковлева",
+      "pt": "Protocolo de interrogatório de M.N. Yakovlev",
+      "en": "Interrogation record of M.N. Yakovlev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16387,7 +16693,9 @@
     "id": "showtrials-3966",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.П. Минаева"
+      "ru": "Протокол допроса С.П. Минаева",
+      "pt": "Protocolo de interrogatório de S.P. Minayev",
+      "en": "Interrogation record of S.P. Minayev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16436,7 +16744,9 @@
     "id": "showtrials-3965",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Кострицкого"
+      "ru": "Протокол допроса И.С. Кострицкого",
+      "pt": "Protocolo de interrogatório de I.S. Kostritsky",
+      "en": "Interrogation record of I.S. Kostritsky"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16485,7 +16795,9 @@
     "id": "showtrials-3967",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.А. Антипиной"
+      "ru": "Протокол допроса А.А. Антипиной",
+      "pt": "Protocolo de interrogatório de A.A. Antipina",
+      "en": "Interrogation record of A.A. Antipina"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16534,7 +16846,9 @@
     "id": "showtrials-3968",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.П. Минаева"
+      "ru": "Протокол допроса С.П. Минаева",
+      "pt": "Protocolo de interrogatório de S.P. Minayev",
+      "en": "Interrogation record of S.P. Minayev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16583,7 +16897,9 @@
     "id": "showtrials-3980",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.Н. Панова"
+      "ru": "Протокол допроса А.Н. Панова",
+      "pt": "Protocolo de interrogatório de A.N. Panov",
+      "en": "Interrogation record of A.N. Panov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16632,7 +16948,9 @@
     "id": "showtrials-3981",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.Н. Яковлева"
+      "ru": "Протокол допроса М.Н. Яковлева",
+      "pt": "Protocolo de interrogatório de M.N. Yakovlev",
+      "en": "Interrogation record of M.N. Yakovlev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16681,7 +16999,9 @@
     "id": "showtrials-3982",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Анишева"
+      "ru": "Протокол допроса А.И. Анишева",
+      "pt": "Protocolo de interrogatório de A.I. Anishev",
+      "en": "Interrogation record of A.I. Anishev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16730,7 +17050,9 @@
     "id": "showtrials-3983",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G.I. Safarov",
+      "en": "Interrogation record of G.I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16779,7 +17101,9 @@
     "id": "showtrials-3984",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G.I. Safarov",
+      "en": "Interrogation record of G.I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16828,7 +17152,9 @@
     "id": "showtrials-3985",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Евдокимова"
+      "ru": "Протокол допроса Г.Е. Евдокимова",
+      "pt": "Protocolo de interrogatório de G.Ye. Evdokimov",
+      "en": "Interrogation record of G.Ye. Evdokimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16877,7 +17203,9 @@
     "id": "showtrials-3986",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Protocolo de interrogatório de I.S. Gorshenin",
+      "en": "Interrogation record of I.S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16926,7 +17254,9 @@
     "id": "showtrials-3987",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.М. Харитонова"
+      "ru": "Протокол допроса М.М. Харитонова",
+      "pt": "Protocolo de interrogatório de M.M. Kharitonov",
+      "en": "Interrogation record of M.M. Kharitonov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -16975,7 +17305,9 @@
     "id": "showtrials-3988",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Федорова"
+      "ru": "Протокол допроса Г.Ф. Федорова",
+      "pt": "Protocolo de interrogatório de G.F. Fyodorov",
+      "en": "Interrogation record of G.F. Fyodorov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17024,7 +17356,9 @@
     "id": "showtrials-3989",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.П. Костиной"
+      "ru": "Протокол допроса А.П. Костиной",
+      "pt": "Protocolo de interrogatório de A.P. Kostina",
+      "en": "Interrogation record of A.P. Kostina"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17073,7 +17407,9 @@
     "id": "showtrials-3990",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.С. Рэма"
+      "ru": "Протокол допроса М.С. Рэма",
+      "pt": "Protocolo de interrogatório de M.S. Rem",
+      "en": "Interrogation record of M.S. Rem"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17122,7 +17458,9 @@
     "id": "showtrials-3991",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.С. Рэма"
+      "ru": "Протокол допроса М.С. Рэма",
+      "pt": "Protocolo de interrogatório de M.S. Rem",
+      "en": "Interrogation record of M.S. Rem"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17171,7 +17509,9 @@
     "id": "showtrials-3993",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.А. Сорокина"
+      "ru": "Протокол допроса В.А. Сорокина",
+      "pt": "Protocolo de interrogatório de V.A. Sorokin",
+      "en": "Interrogation record of V.A. Sorokin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17220,7 +17560,9 @@
     "id": "showtrials-3992",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.П. Бурмистрова"
+      "ru": "Протокол допроса П.П. Бурмистрова",
+      "pt": "Protocolo de interrogatório de P.P. Burmistrov",
+      "en": "Interrogation record of P.P. Burmistrov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17269,7 +17611,9 @@
     "id": "showtrials-3994",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.М. Дрязгова"
+      "ru": "Протокол допроса Г.М. Дрязгова",
+      "pt": "Protocolo de interrogatório de G.M. Dryazgov",
+      "en": "Interrogation record of G.M. Dryazgov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17318,7 +17662,9 @@
     "id": "showtrials-3995",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.С. Панфилова"
+      "ru": "Протокол допроса М.С. Панфилова",
+      "pt": "Protocolo de interrogatório de M.S. Panfilov",
+      "en": "Interrogation record of M.S. Panfilov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17367,7 +17713,9 @@
     "id": "showtrials-3996",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.П. Бурмистрова"
+      "ru": "Протокол допроса П.П. Бурмистрова",
+      "pt": "Protocolo de interrogatório de P.P. Burmistrov",
+      "en": "Interrogation record of P.P. Burmistrov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17416,7 +17764,9 @@
     "id": "showtrials-3997",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Е.Т. Тимофеева"
+      "ru": "Протокол допроса Е.Т. Тимофеева",
+      "pt": "Protocolo de interrogatório de E.T. Timofeyev",
+      "en": "Interrogation record of E.T. Timofeyev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17465,7 +17815,9 @@
     "id": "showtrials-3999",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между А.М. Гертиком и А.И. Анишевым"
+      "ru": "Протокол очной ставки между А.М. Гертиком и А.И. Анишевым",
+      "pt": "Protocolo de acareação entre A.M. Gertik e A.I. Anishev",
+      "en": "Record of confrontation between A.M. Gertik and A.I. Anishev"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -17514,7 +17866,9 @@
     "id": "showtrials-4000",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Г.Ф. Федоровым и А.С. Куклиным"
+      "ru": "Протокол очной ставки между Г.Ф. Федоровым и А.С. Куклиным",
+      "pt": "Protocolo de acareação entre G.F. Fyodorov e A.S. Kuklin",
+      "en": "Record of confrontation between G.F. Fyodorov and A.S. Kuklin"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -17563,7 +17917,9 @@
     "id": "showtrials-6823",
     "kind": "document",
     "titles": {
-      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте и обыске у С.С. Зорина, А.Г. Шляпникова, Н.А. Емельянова и И.Т. Смилги"
+      "ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину об аресте и обыске у С.С. Зорина, А.Г. Шляпникова, Н.А. Емельянова и И.Т. Смилги",
+      "pt": "Comunicação de G.G. Yagoda a I.V. Stalin sobre prisões",
+      "en": "Communication from G.G. Yagoda to I.V. Stalin concerning arrests"
     },
     "document_type": "special_report",
     "historical_date": {
@@ -17612,7 +17968,9 @@
     "id": "showtrials-4020",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Зиновьева"
+      "ru": "Протокол допроса Г.Е. Зиновьева",
+      "pt": "Protocolo de interrogatório de G.Ye. Zinoviev",
+      "en": "Interrogation record of G.Ye. Zinoviev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17661,7 +18019,9 @@
     "id": "showtrials-4021",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.П. Бакаева"
+      "ru": "Протокол допроса И.П. Бакаева",
+      "pt": "Protocolo de interrogatório de I.P. Bakayev",
+      "en": "Interrogation record of I.P. Bakayev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17710,7 +18070,9 @@
     "id": "showtrials-4023",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G.I. Safarov",
+      "en": "Interrogation record of G.I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17759,7 +18121,9 @@
     "id": "showtrials-4022",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G.I. Safarov",
+      "en": "Interrogation record of G.I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17808,7 +18172,9 @@
     "id": "showtrials-4024",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G.I. Safarov",
+      "en": "Interrogation record of G.I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17857,7 +18223,9 @@
     "id": "showtrials-4025",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G.I. Safarov",
+      "en": "Interrogation record of G.I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17906,7 +18274,9 @@
     "id": "showtrials-4026",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Я. Файвиловича"
+      "ru": "Протокол допроса Л.Я. Файвиловича",
+      "pt": "Protocolo de interrogatório de L.Ya. Faivilovich",
+      "en": "Interrogation record of L.Ya. Faivilovich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -17955,7 +18325,9 @@
     "id": "showtrials-4027",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.И. Тарасова"
+      "ru": "Протокол допроса И.И. Тарасова",
+      "pt": "Protocolo de interrogatório de I.I. Tarasov",
+      "en": "Interrogation record of I.I. Tarasov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18004,7 +18376,9 @@
     "id": "showtrials-4028",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.С. Куклина"
+      "ru": "Протокол допроса А.С. Куклина",
+      "pt": "Protocolo de interrogatório de A.S. Kuklin",
+      "en": "Interrogation record of A.S. Kuklin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18053,7 +18427,9 @@
     "id": "showtrials-4029",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Л. Браво"
+      "ru": "Протокол допроса Б.Л. Браво",
+      "pt": "Auto de interrogatório de B. L. Bravo",
+      "en": "Interrogation record of B. L. Bravo"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18102,7 +18478,9 @@
     "id": "showtrials-4030",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.М. Гессена"
+      "ru": "Протокол допроса С.М. Гессена",
+      "pt": "Auto de interrogatório de S. M. Gessen",
+      "en": "Interrogation record of S. M. Gessen"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18151,7 +18529,9 @@
     "id": "showtrials-4032",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ю.Б. Тартаковской"
+      "ru": "Протокол допроса Ю.Б. Тартаковской",
+      "pt": "Auto de interrogatório de Y. B. Tartakovskaya",
+      "en": "Interrogation record of Y. B. Tartakovskaya"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18200,7 +18580,9 @@
     "id": "showtrials-4031",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.Н. Яковлева"
+      "ru": "Протокол допроса М.Н. Яковлева",
+      "pt": "Auto de interrogatório complementar de M. N. Yakovlev",
+      "en": "Supplementary interrogation record of M. N. Yakovlev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18249,7 +18631,9 @@
     "id": "showtrials-4047",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.А. Дмитриева"
+      "ru": "Протокол допроса Н.А. Дмитриева",
+      "pt": "Auto de interrogatório de N. A. Dmitriev",
+      "en": "Interrogation record of N. A. Dmitriev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18298,7 +18682,9 @@
     "id": "showtrials-4048",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Горбачева"
+      "ru": "Протокол допроса Г.Е. Горбачева",
+      "pt": "Auto de interrogatório de G. E. Gorbachev",
+      "en": "Interrogation record of G. E. Gorbachev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18347,7 +18733,9 @@
     "id": "showtrials-4049",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Миронова"
+      "ru": "Протокол допроса Г.И. Миронова",
+      "pt": "Auto de interrogatório de G. I. Mironov",
+      "en": "Interrogation record of G. I. Mironov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18396,7 +18784,9 @@
     "id": "showtrials-4050",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Н. Сахова"
+      "ru": "Протокол допроса Б.Н. Сахова",
+      "pt": "Auto de interrogatório de B. N. Sakhov",
+      "en": "Interrogation record of B. N. Sakhov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18445,7 +18835,9 @@
     "id": "showtrials-4055",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Н. Сахова"
+      "ru": "Протокол допроса Б.Н. Сахова",
+      "pt": "Auto de interrogatório de B. N. Sakhov",
+      "en": "Interrogation record of B. N. Sakhov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18494,7 +18886,9 @@
     "id": "showtrials-4056",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Горбачева"
+      "ru": "Протокол допроса Г.Е. Горбачева",
+      "pt": "Auto de interrogatório de G. E. Gorbachev",
+      "en": "Interrogation record of G. E. Gorbachev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18543,7 +18937,9 @@
     "id": "showtrials-4058",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Попова"
+      "ru": "Протокол допроса Г.Ф. Попова",
+      "pt": "Auto de interrogatório de G. F. Popov",
+      "en": "Interrogation record of G. F. Popov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18592,7 +18988,9 @@
     "id": "showtrials-4057",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ф.Ф. Фадеева"
+      "ru": "Протокол допроса Ф.Ф. Фадеева",
+      "pt": "Auto de interrogatório de F. F. Fadeev",
+      "en": "Interrogation record of F. F. Fadeev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18641,7 +19039,9 @@
     "id": "showtrials-4059",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Г.Ф. Попова следователю П.А. Коркину"
+      "ru": "Заявление Г.Ф. Попова следователю П.А. Коркину",
+      "pt": "Declaração de G. F. Popov ao investigador Korkin",
+      "en": "Statement of G. F. Popov to investigator Korkin"
     },
     "document_type": "statement",
     "historical_date": {
@@ -18690,7 +19090,9 @@
     "id": "showtrials-4060",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.Н. Яковлева"
+      "ru": "Протокол допроса М.Н. Яковлева",
+      "pt": "Auto de interrogatório de M. N. Yakovlev",
+      "en": "Interrogation record of M. N. Yakovlev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18739,7 +19141,9 @@
     "id": "showtrials-4061",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.Н. Яковлева"
+      "ru": "Протокол допроса М.Н. Яковлева",
+      "pt": "Auto de interrogatório de M. N. Yakovlev",
+      "en": "Interrogation record of M. N. Yakovlev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18788,7 +19192,9 @@
     "id": "showtrials-4062",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.К. Середохина"
+      "ru": "Протокол допроса А.К. Середохина",
+      "pt": "Auto de interrogatório de A. K. Seredokhin",
+      "en": "Interrogation record of A. K. Seredokhin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18837,7 +19243,9 @@
     "id": "showtrials-4064",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.П. Бакаева"
+      "ru": "Протокол допроса И.П. Бакаева",
+      "pt": "Mensagem por linha direta com o auto de interrogatório de I. P. Bakaev",
+      "en": "Direct-line message with the interrogation record of I. P. Bakaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18886,7 +19294,9 @@
     "id": "showtrials-4063",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.П. Албанского"
+      "ru": "Протокол допроса Д.П. Албанского",
+      "pt": "Auto de interrogatório de D. P. Albansky",
+      "en": "Interrogation record of D. P. Albansky"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18935,7 +19345,9 @@
     "id": "showtrials-4065",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.В. Поздеевой"
+      "ru": "Протокол допроса М.В. Поздеевой",
+      "pt": "Auto de interrogatório de M. V. Pozdeeva",
+      "en": "Interrogation record of M. V. Pozdeeva"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -18984,7 +19396,9 @@
     "id": "showtrials-4066",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.Н. Бограчева"
+      "ru": "Протокол допроса С.Н. Бограчева",
+      "pt": "Auto de interrogatório de S. N. Bograchev",
+      "en": "Interrogation record of S. N. Bograchev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19033,7 +19447,9 @@
     "id": "showtrials-4068",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Г.И. Сафарова в ЦК ВКП(б) и И.В. Сталину"
+      "ru": "Заявление Г.И. Сафарова в ЦК ВКП(б) и И.В. Сталину",
+      "pt": "Carta de G. I. Safarov ao Comitê Central e a I. V. Stalin",
+      "en": "Letter from G. I. Safarov to the Central Committee and I. V. Stalin"
     },
     "document_type": "statement",
     "historical_date": {
@@ -19082,7 +19498,9 @@
     "id": "showtrials-4067",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.Н. Цатуровой-Большаковой"
+      "ru": "Протокол допроса В.Н. Цатуровой-Большаковой",
+      "pt": "Auto de interrogatório complementar de V. N. Tsaturova-Bolshakova",
+      "en": "Supplementary interrogation record of V. N. Tsaturova-Bolshakova"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19131,7 +19549,9 @@
     "id": "showtrials-4069",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Г.И. Сафаровым и Б.Н. Саховым"
+      "ru": "Протокол очной ставки между Г.И. Сафаровым и Б.Н. Саховым",
+      "pt": "Auto de acareação entre G. I. Safarov e B. N. Sakhov",
+      "en": "Confrontation record between G. I. Safarov and B. N. Sakhov"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -19180,7 +19600,9 @@
     "id": "showtrials-4070",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между П.П. Северовым и Г.Ф. Поповым"
+      "ru": "Протокол очной ставки между П.П. Северовым и Г.Ф. Поповым",
+      "pt": "Auto de acareação entre P. P. Severov e G. F. Popov",
+      "en": "Confrontation record between P. P. Severov and G. F. Popov"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -19229,7 +19651,9 @@
     "id": "showtrials-4071",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Я.В. Шаровым и И.С. Горшениным"
+      "ru": "Протокол очной ставки между Я.В. Шаровым и И.С. Горшениным",
+      "pt": "Auto de acareação entre Ya. V. Sharov e I. S. Gorshenin",
+      "en": "Confrontation record between Ya. V. Sharov and I. S. Gorshenin"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -19278,7 +19702,9 @@
     "id": "showtrials-4089",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Я.Ф. Шарова"
+      "ru": "Протокол допроса Я.Ф. Шарова",
+      "pt": "Auto de interrogatório de Ya. F. Sharov",
+      "en": "Interrogation record of Ya. F. Sharov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19327,7 +19753,9 @@
     "id": "showtrials-4090",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Анишева"
+      "ru": "Протокол допроса А.И. Анишева",
+      "pt": "Auto de interrogatório de A. I. Anishev",
+      "en": "Interrogation record of A. I. Anishev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19376,7 +19804,9 @@
     "id": "showtrials-4091",
     "kind": "document",
     "titles": {
-      "ru": "Показания А.И. Анишева"
+      "ru": "Показания А.И. Анишева",
+      "pt": "Depoimento do acusado A. I. Anishev",
+      "en": "Testimony of the accused A. I. Anishev"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -19425,7 +19855,9 @@
     "id": "showtrials-4092",
     "kind": "document",
     "titles": {
-      "ru": "Показания А.И. Анишева"
+      "ru": "Показания А.И. Анишева",
+      "pt": "Depoimento do acusado A. I. Anishev",
+      "en": "Testimony of the accused A. I. Anishev"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -19474,7 +19906,9 @@
     "id": "showtrials-4093",
     "kind": "document",
     "titles": {
-      "ru": "Показания А.И. Анишева"
+      "ru": "Показания А.И. Анишева",
+      "pt": "Depoimento de A. I. Anishev",
+      "en": "Testimony of A. I. Anishev"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -19523,7 +19957,9 @@
     "id": "showtrials-4096",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.А. Царькова"
+      "ru": "Протокол допроса Н.А. Царькова",
+      "pt": "Auto de interrogatório de N. A. Tsarkov",
+      "en": "Interrogation record of N. A. Tsarkov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19572,7 +20008,9 @@
     "id": "showtrials-4095",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.М. Гертика"
+      "ru": "Протокол допроса А.М. Гертика",
+      "pt": "Auto de interrogatório de A. M. Gertik",
+      "en": "Interrogation record of A. M. Gertik"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19621,7 +20059,9 @@
     "id": "showtrials-4097",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.Ф. Башкирова"
+      "ru": "Протокол допроса А.Ф. Башкирова",
+      "pt": "Auto de interrogatório complementar de A. F. Bashkirov",
+      "en": "Supplementary interrogation record of A. F. Bashkirov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19670,7 +20110,9 @@
     "id": "showtrials-4099",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.К. Середохина"
+      "ru": "Протокол допроса А.К. Середохина",
+      "pt": "Auto de interrogatório de A. K. Seredokhin",
+      "en": "Interrogation record of A. K. Seredokhin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19719,7 +20161,9 @@
     "id": "showtrials-4098",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.Е. Кожуро"
+      "ru": "Протокол допроса А.Е. Кожуро",
+      "pt": "Auto de interrogatório de A. E. Kozhuro",
+      "en": "Interrogation record of A. Y. Kozhuro"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19768,7 +20212,9 @@
     "id": "showtrials-4100",
     "kind": "document",
     "titles": {
-      "ru": "Показания В.А. Виноградова"
+      "ru": "Показания В.А. Виноградова",
+      "pt": "Depoimento do acusado V. A. Vinogradov",
+      "en": "Testimony of the accused V. A. Vinogradov"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -19817,7 +20263,9 @@
     "id": "showtrials-4102",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ф.Ф. Фадеева"
+      "ru": "Протокол допроса Ф.Ф. Фадеева",
+      "pt": "Auto de interrogatório de F. F. Fadeev",
+      "en": "Interrogation record of F. F. Fadeev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19866,7 +20314,9 @@
     "id": "showtrials-4101",
     "kind": "document",
     "titles": {
-      "ru": "Показания В.А. Виноградова"
+      "ru": "Показания В.А. Виноградова",
+      "pt": "Depoimento do acusado V. A. Vinogradov",
+      "en": "Testimony of the accused V. A. Vinogradov"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -19915,7 +20365,9 @@
     "id": "showtrials-4103",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Ф.Ф. Фадеева"
+      "ru": "Протокол допроса Ф.Ф. Фадеева",
+      "pt": "Auto de interrogatório de F. F. Fadeev",
+      "en": "Interrogation record of F. F. Fadeev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -19964,7 +20416,9 @@
     "id": "showtrials-4104",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.Н. Авдеева"
+      "ru": "Протокол допроса М.Н. Авдеева",
+      "pt": "Auto de interrogatório de M. N. Avdeev",
+      "en": "Interrogation record of M. N. Avdeev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20013,7 +20467,9 @@
     "id": "showtrials-4105",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса К.Ф. Лебедева"
+      "ru": "Протокол допроса К.Ф. Лебедева",
+      "pt": "Auto de interrogatório de K. F. Lebedev",
+      "en": "Interrogation record of K. F. Lebedev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20062,7 +20518,9 @@
     "id": "showtrials-4106",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.Н. Яковлева"
+      "ru": "Протокол допроса М.Н. Яковлева",
+      "pt": "Auto de interrogatório de M. N. Yakovlev",
+      "en": "Interrogation record of M. N. Yakovlev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20111,7 +20569,9 @@
     "id": "showtrials-4107",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.М. Березина"
+      "ru": "Протокол допроса А.М. Березина",
+      "pt": "Auto de interrogatório de A. M. Berezin",
+      "en": "Interrogation record of A. M. Berezin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20160,7 +20620,9 @@
     "id": "showtrials-4108",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Горбачева"
+      "ru": "Протокол допроса Г.Е. Горбачева",
+      "pt": "Auto de interrogatório de G. E. Gorbachev",
+      "en": "Interrogation record of G. E. Gorbachev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20209,7 +20671,9 @@
     "id": "showtrials-4110",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между И.И. Тарасовым и Л.Я. Файвиловичем"
+      "ru": "Протокол очной ставки между И.И. Тарасовым и Л.Я. Файвиловичем",
+      "pt": "Auto de acareação entre I. I. Tarasov e L. Ya. Faivilovich",
+      "en": "Confrontation record between I. I. Tarasov and L. Ya. Faivilovich"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -20258,7 +20722,9 @@
     "id": "showtrials-4109",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Г.И. Сафаровым и А.В. Герцбергом"
+      "ru": "Протокол очной ставки между Г.И. Сафаровым и А.В. Герцбергом",
+      "pt": "Auto de acareação entre G. I. Safarov e A. V. Gertsberg",
+      "en": "Confrontation record between G. I. Safarov and A. V. Gertsberg"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -20307,7 +20773,9 @@
     "id": "showtrials-4131",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Auto de interrogatório de G. I. Safarov",
+      "en": "Interrogation record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20356,7 +20824,9 @@
     "id": "showtrials-5261",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Auto de interrogatório de G. I. Safarov",
+      "en": "Interrogation record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20406,7 +20876,9 @@
     "id": "showtrials-4132",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Э.Б. Абрамсона"
+      "ru": "Протокол допроса Э.Б. Абрамсона",
+      "pt": "Protocolo de interrogatório de E. B. Abramson",
+      "en": "Interrogation record of E. B. Abramson"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20455,7 +20927,9 @@
     "id": "showtrials-4134",
     "kind": "document",
     "titles": {
-      "ru": "Показания И.И. Тарасова"
+      "ru": "Показания И.И. Тарасова",
+      "pt": "Depoimento de I. I. Tarasov",
+      "en": "Testimony of I. I. Tarasov"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -20504,7 +20978,9 @@
     "id": "showtrials-4133",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Федорова"
+      "ru": "Протокол допроса Г.Ф. Федорова",
+      "pt": "Protocolo de interrogatório de G. F. Fedorov",
+      "en": "Interrogation record of G. F. Fedorov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20553,7 +21029,9 @@
     "id": "showtrials-4135",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.А. Аникина"
+      "ru": "Протокол допроса Д.А. Аникина",
+      "pt": "Protocolo de interrogatório de D. A. Anikin",
+      "en": "Interrogation record of D. A. Anikin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20602,7 +21080,9 @@
     "id": "showtrials-4136",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между С.Н. Бограчевым и Д.А. Аникиным"
+      "ru": "Протокол очной ставки между С.Н. Бограчевым и Д.А. Аникиным",
+      "pt": "Protocolo de acareação entre S. N. Bograchev e D. A. Anikin",
+      "en": "Record of confrontation between S. N. Bograchev and D. A. Anikin"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -20651,7 +21131,9 @@
     "id": "showtrials-4137",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.П. Костиной"
+      "ru": "Протокол допроса А.П. Костиной",
+      "pt": "Auto de interrogatório de A. P. Kostina",
+      "en": "Interrogation record of A. P. Kostina"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20700,7 +21182,9 @@
     "id": "showtrials-4138",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.П. Бакаева"
+      "ru": "Протокол допроса И.П. Бакаева",
+      "pt": "Protocolo de interrogatório de I. P. Bakaev",
+      "en": "Interrogation record of I. P. Bakaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20749,7 +21233,9 @@
     "id": "showtrials-4318",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Э.Б. Абрамсона"
+      "ru": "Протокол допроса Э.Б. Абрамсона",
+      "pt": "Auto de interrogatório de E. B. Abramson",
+      "en": "Interrogation record of E. B. Abramson"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20798,7 +21284,9 @@
     "id": "showtrials-4319",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса М.П. Стремякова"
+      "ru": "Протокол допроса М.П. Стремякова",
+      "pt": "Protocolo de interrogatório de M. P. Stremyakov",
+      "en": "Interrogation record of M. P. Stremyakov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20847,7 +21335,9 @@
     "id": "showtrials-4320",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.Ф. Касперского"
+      "ru": "Протокол допроса И.Ф. Касперского",
+      "pt": "Protocolo de interrogatório de I. F. Kaspersky",
+      "en": "Interrogation record of I. F. Kaspersky"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20896,7 +21386,9 @@
     "id": "showtrials-4321",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Анишева"
+      "ru": "Протокол допроса А.И. Анишева",
+      "pt": "Protocolo de interrogatório de A. I. Anishev",
+      "en": "Interrogation record of A. I. Anishev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -20945,7 +21437,9 @@
     "id": "showtrials-4322",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между А.М. Гертиком и И.С. Горшениным"
+      "ru": "Протокол очной ставки между А.М. Гертиком и И.С. Горшениным",
+      "pt": "Protocolo de acareação entre A. M. Gertik e I. S. Gorshenin",
+      "en": "Record of confrontation between A. M. Gertik and I. S. Gorshenin"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -20994,7 +21488,9 @@
     "id": "showtrials-4324",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между А.Ф. Башкировым и А.М. Гертиком"
+      "ru": "Протокол очной ставки между А.Ф. Башкировым и А.М. Гертиком",
+      "pt": "Protocolo de acareação entre A. F. Bashkirov e A. M. Gertik",
+      "en": "Record of confrontation between A. F. Bashkirov and A. M. Gertik"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -21043,7 +21539,9 @@
     "id": "showtrials-4323",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между А.Ф. Башкировым и С.М. Гессеном"
+      "ru": "Протокол очной ставки между А.Ф. Башкировым и С.М. Гессеном",
+      "pt": "Protocolo de acareação entre A. F. Bashkirov e S. M. Gessen",
+      "en": "Record of confrontation between A. F. Bashkirov and S. M. Gessen"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -21092,7 +21590,9 @@
     "id": "showtrials-4325",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между А.В. Герцбергом и А.С. Куклиным"
+      "ru": "Протокол очной ставки между А.В. Герцбергом и А.С. Куклиным",
+      "pt": "Protocolo de acareação entre A. V. Gertsberg e A. S. Kuklin",
+      "en": "Record of confrontation between A. V. Gertsberg and A. S. Kuklin"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -21141,7 +21641,9 @@
     "id": "showtrials-4326",
     "kind": "document",
     "titles": {
-      "ru": "Заявление И.С. Горшенина в Следственную комиссию"
+      "ru": "Заявление И.С. Горшенина в Следственную комиссию",
+      "pt": "Declaração de I. S. Gorshenin à Comissão de Investigação",
+      "en": "Statement by I. S. Gorshenin to the Investigative Commission"
     },
     "document_type": "statement",
     "historical_date": {
@@ -21190,7 +21692,9 @@
     "id": "showtrials-4327",
     "kind": "document",
     "titles": {
-      "ru": "Заявление И.И. Тарасова И.В. Сталину"
+      "ru": "Заявление И.И. Тарасова И.В. Сталину",
+      "pt": "Declaração de I. I. Tarasov a I. V. Stalin",
+      "en": "Statement by I. I. Tarasov to I. V. Stalin"
     },
     "document_type": "statement",
     "historical_date": {
@@ -21239,7 +21743,9 @@
     "id": "showtrials-4338",
     "kind": "document",
     "titles": {
-      "ru": "Заявление М.М. Харитонова в ЦК ВКП(б) И.В. Сталину"
+      "ru": "Заявление М.М. Харитонова в ЦК ВКП(б) И.В. Сталину",
+      "pt": "Declaração de M. M. Kharitonov ao CC do PCU(b), a I. V. Stalin",
+      "en": "Statement by M. M. Kharitonov to the AUCP(b) Central Committee, I. V. Stalin"
     },
     "document_type": "statement",
     "historical_date": {
@@ -21288,7 +21794,9 @@
     "id": "showtrials-4339",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Я.В. Шарова"
+      "ru": "Протокол допроса Я.В. Шарова",
+      "pt": "Protocolo de interrogatório de Ya. V. Sharov",
+      "en": "Interrogation record of Ya. V. Sharov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21337,7 +21845,9 @@
     "id": "showtrials-4340",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Я.В. Шарова"
+      "ru": "Протокол допроса Я.В. Шарова",
+      "pt": "Auto de interrogatório de Ya. V. Sharov",
+      "en": "Interrogation record of Ya. V. Sharov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21386,7 +21896,9 @@
     "id": "showtrials-4341",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.Е. Кожуро"
+      "ru": "Протокол допроса А.Е. Кожуро",
+      "pt": "Protocolo de interrogatório de A. Ye. Kozhuro",
+      "en": "Interrogation Record of A. Ye. Kozhuro"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21435,7 +21947,9 @@
     "id": "showtrials-4342",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Л. Браво"
+      "ru": "Протокол допроса Б.Л. Браво",
+      "pt": "Protocolo de interrogatório de B. L. Bravo",
+      "en": "Interrogation Record of B. L. Bravo"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21484,7 +21998,9 @@
     "id": "showtrials-4348",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Л. Браво"
+      "ru": "Протокол допроса Б.Л. Браво",
+      "pt": "Protocolo de interrogatório de B. L. Bravo",
+      "en": "Interrogation Record of B. L. Bravo"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21533,7 +22049,9 @@
     "id": "showtrials-4350",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.Е. Кожуро"
+      "ru": "Протокол допроса А.Е. Кожуро",
+      "pt": "Protocolo de interrogatório de A. Ye. Kozhuro",
+      "en": "Interrogation Record of A. Ye. Kozhuro"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21582,7 +22100,9 @@
     "id": "showtrials-4349",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Анишева"
+      "ru": "Протокол допроса А.И. Анишева",
+      "pt": "Protocolo de interrogatório de A. I. Anishev",
+      "en": "Interrogation Record of A. I. Anishev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21631,7 +22151,9 @@
     "id": "showtrials-4351",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.В. Вардина-Мгеладзе"
+      "ru": "Протокол допроса И.В. Вардина-Мгеладзе",
+      "pt": "Protocolo de interrogatório de I. V. Vardin–Mgeladze",
+      "en": "Interrogation Record of I. V. Vardin–Mgeladze"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21680,7 +22202,9 @@
     "id": "showtrials-4352",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.Ф. Касперского"
+      "ru": "Протокол допроса И.Ф. Касперского",
+      "pt": "Protocolo de interrogatório de I. F. Kaspersky",
+      "en": "Interrogation Record of I. F. Kaspersky"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21729,7 +22253,9 @@
     "id": "showtrials-4354",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.М. Репникова"
+      "ru": "Протокол допроса П.М. Репникова",
+      "pt": "Protocolo de interrogatório de P. M. Repnikov",
+      "en": "Interrogation Record of P. M. Repnikov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21778,7 +22304,9 @@
     "id": "showtrials-4353",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.Г. Семенова"
+      "ru": "Протокол допроса С.Г. Семенова",
+      "pt": "Protocolo de interrogatório de S. G. Semyonov",
+      "en": "Interrogation Record of S. G. Semyonov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21827,7 +22355,9 @@
     "id": "showtrials-4355",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21876,7 +22406,9 @@
     "id": "showtrials-4356",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21925,7 +22457,9 @@
     "id": "showtrials-4357",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -21974,7 +22508,9 @@
     "id": "showtrials-4358",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Б. Каменева"
+      "ru": "Протокол допроса Л.Б. Каменева",
+      "pt": "Protocolo de interrogatório de L. B. Kamenev",
+      "en": "Interrogation Record of L. B. Kamenev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22023,7 +22559,9 @@
     "id": "showtrials-4359",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между И.П. Бакаевым и Г.Е. Евдокимовым"
+      "ru": "Протокол очной ставки между И.П. Бакаевым и Г.Е. Евдокимовым",
+      "pt": "Protocolo de acareação entre I. P. Bakaev e G. E. Evdokimov",
+      "en": "Confrontation Record between I. P. Bakaev and G. E. Evdokimov"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -22072,7 +22610,9 @@
     "id": "showtrials-4360",
     "kind": "document",
     "titles": {
-      "ru": "Показания Г.Е. Евдокимова"
+      "ru": "Показания Г.Е. Евдокимова",
+      "pt": "Depoimento de G. E. Evdokimov",
+      "en": "Testimony of G. E. Evdokimov"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -22121,7 +22661,9 @@
     "id": "showtrials-4362",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Г.Е. Евдокимовым и И.С. Горшениным"
+      "ru": "Протокол очной ставки между Г.Е. Евдокимовым и И.С. Горшениным",
+      "pt": "Protocolo de acareação entre G. E. Evdokimov e I. S. Gorshenin",
+      "en": "Confrontation Record between G. E. Evdokimov and I. S. Gorshenin"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -22170,7 +22712,9 @@
     "id": "showtrials-4377",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Л. Браво"
+      "ru": "Протокол допроса Б.Л. Браво",
+      "pt": "Protocolo de interrogatório de B. L. Bravo",
+      "en": "Interrogation Record of B. L. Bravo"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22219,7 +22763,9 @@
     "id": "showtrials-4376",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Л. Браво"
+      "ru": "Протокол допроса Б.Л. Браво",
+      "pt": "Protocolo de interrogatório de B. L. Bravo",
+      "en": "Interrogation Record of B. L. Bravo"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22268,7 +22814,9 @@
     "id": "showtrials-4378",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Я.В. Шарова"
+      "ru": "Протокол допроса Я.В. Шарова",
+      "pt": "Protocolo de interrogatório de Ya. V. Sharov",
+      "en": "Interrogation Record of Ya. V. Sharov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22317,7 +22865,9 @@
     "id": "showtrials-4379",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Федорова"
+      "ru": "Протокол допроса Г.Ф. Федорова",
+      "pt": "Protocolo de interrogatório de G. F. Fedorov",
+      "en": "Interrogation Record of G. F. Fedorov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22366,7 +22916,9 @@
     "id": "showtrials-4380",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Евдокимова"
+      "ru": "Протокол допроса Г.Е. Евдокимова",
+      "pt": "Protocolo de interrogatório de G. Ye. Evdokimov",
+      "en": "Interrogation Record of G. Ye. Evdokimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22415,7 +22967,9 @@
     "id": "showtrials-4382",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.П. Костиной"
+      "ru": "Протокол допроса А.П. Костиной",
+      "pt": "Protocolo de interrogatório de A. P. Kostina",
+      "en": "Interrogation Record of A. P. Kostina"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22464,7 +23018,9 @@
     "id": "showtrials-4381",
     "kind": "document",
     "titles": {
-      "ru": "Показания Г.Е. Евдокимова"
+      "ru": "Показания Г.Е. Евдокимова",
+      "pt": "Depoimento de G. Ye. Evdokimov",
+      "en": "Testimony of G. Ye. Evdokimov"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -22513,7 +23069,9 @@
     "id": "showtrials-4383",
     "kind": "document",
     "titles": {
-      "ru": "Показания А.И. Александрова"
+      "ru": "Показания А.И. Александрова",
+      "pt": "Depoimento de A. I. Alexandrov",
+      "en": "Testimony of A. I. Alexandrov"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -22562,7 +23120,9 @@
     "id": "showtrials-4384",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Т.Д. Дмитриева"
+      "ru": "Протокол допроса Т.Д. Дмитриева",
+      "pt": "Protocolo de interrogatório de T. D. Dmitriev",
+      "en": "Interrogation record of T. D. Dmitriev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22611,7 +23171,9 @@
     "id": "showtrials-4385",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.А. Дмитриева"
+      "ru": "Протокол допроса Н.А. Дмитриева",
+      "pt": "Protocolo de interrogatório de N. A. Dmitriev",
+      "en": "Interrogation record of N. A. Dmitriev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22660,7 +23222,9 @@
     "id": "showtrials-6825",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.З. Ливянта"
+      "ru": "Протокол допроса Б.З. Ливянта",
+      "pt": "Protocolo de interrogatório de B. Z. Livyant",
+      "en": "Interrogation record of B. Z. Livyant"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -22709,7 +23273,9 @@
     "id": "showtrials-4386",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Г.Е. Евдокимовым и Я.В. Шаровым"
+      "ru": "Протокол очной ставки между Г.Е. Евдокимовым и Я.В. Шаровым",
+      "pt": "Protocolo de acareação entre G. E. Evdokimov e Ya. V. Sharov",
+      "en": "Confrontation record between G. E. Evdokimov and Ya. V. Sharov"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -22758,7 +23324,9 @@
     "id": "showtrials-4387",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между И.П. Бакаевым и И.С. Горшениным"
+      "ru": "Протокол очной ставки между И.П. Бакаевым и И.С. Горшениным",
+      "pt": "Protocolo de acareação entre I. P. Bakaev e I. S. Gorshenin",
+      "en": "Confrontation record between I. P. Bakaev and I. S. Gorshenin"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -22807,7 +23375,9 @@
     "id": "showtrials-4390",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Б.Н. Сахова И.В. Сталину"
+      "ru": "Заявление Б.Н. Сахова И.В. Сталину",
+      "pt": "Declaração de B. N. Sakhov a I. V. Stalin",
+      "en": "Statement by B. N. Sakhov to I. V. Stalin"
     },
     "document_type": "statement",
     "historical_date": {
@@ -22856,7 +23426,9 @@
     "id": "showtrials-4389",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между И.С. Горшениным и А.В. Перимовым"
+      "ru": "Протокол очной ставки между И.С. Горшениным и А.В. Перимовым",
+      "pt": "Protocolo da acareação entre I.S. Gorshenin e A.V. Perimov",
+      "en": "Record of the confrontation between I.S. Gorshenin and A.V. Perimov"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -22905,7 +23477,9 @@
     "id": "showtrials-4391",
     "kind": "document",
     "titles": {
-      "ru": "Заявление М.М. Харитонова Л.М. Кагановичу"
+      "ru": "Заявление М.М. Харитонова Л.М. Кагановичу",
+      "pt": "Declaração de M.M. Kharitonov a L.M. Kaganovich",
+      "en": "Statement by M.M. Kharitonov to L.M. Kaganovich"
     },
     "document_type": "statement",
     "historical_date": {
@@ -22954,7 +23528,9 @@
     "id": "showtrials-4392",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.Т. Смилги"
+      "ru": "Протокол допроса И.Т. Смилги",
+      "pt": "Protocolo de interrogatório de I.T. Smilga",
+      "en": "Interrogation record of I.T. Smilga"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23003,7 +23579,9 @@
     "id": "showtrials-4393",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Б. Каменева"
+      "ru": "Протокол допроса Л.Б. Каменева",
+      "pt": "Protocolo de interrogatório de L.B. Kamenev",
+      "en": "Interrogation record of L.B. Kamenev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23052,7 +23630,9 @@
     "id": "showtrials-4395",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.П. Бакаева"
+      "ru": "Протокол допроса И.П. Бакаева",
+      "pt": "Protocolo de interrogatório de I.P. Bakaev",
+      "en": "Interrogation record of I.P. Bakaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23101,7 +23681,9 @@
     "id": "showtrials-4414",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G.I. Safarov",
+      "en": "Interrogation record of G.I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23150,7 +23732,9 @@
     "id": "showtrials-4415",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.И. Анишева"
+      "ru": "Протокол допроса А.И. Анишева",
+      "pt": "Protocolo de interrogatório de A.I. Anishev",
+      "en": "Interrogation record of A.I. Anishev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23199,7 +23783,9 @@
     "id": "showtrials-4416",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.В. Любина"
+      "ru": "Протокол допроса И.В. Любина",
+      "pt": "Continuação do protocolo de interrogatório de I.V. Lyubin",
+      "en": "Continuation of the interrogation record of I.V. Lyubin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23248,7 +23834,9 @@
     "id": "showtrials-4418",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.М. Русанова"
+      "ru": "Протокол допроса И.М. Русанова",
+      "pt": "Protocolo de interrogatório de I.M. Rusanov",
+      "en": "Interrogation record of I.M. Rusanov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23297,7 +23885,9 @@
     "id": "showtrials-4417",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Э.Г. Лейкина"
+      "ru": "Протокол допроса Э.Г. Лейкина",
+      "pt": "Protocolo de interrogatório de E.G. Leikin",
+      "en": "Interrogation record of E.G. Leikin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23346,7 +23936,9 @@
     "id": "showtrials-4419",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.Э. Роцкана"
+      "ru": "Протокол допроса П.Э. Роцкана",
+      "pt": "Protocolo de interrogatório de P.E. Rotskan",
+      "en": "Interrogation record of P.E. Rotskan"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23395,7 +23987,9 @@
     "id": "showtrials-4421",
     "kind": "document",
     "titles": {
-      "ru": "Заявление А.Ф. Башкирова следствию по делу зиновьевской организации"
+      "ru": "Заявление А.Ф. Башкирова следствию по делу зиновьевской организации",
+      "pt": "Declaração de A.F. Bashkirov à investigação",
+      "en": "Statement by A.F. Bashkirov to the investigation"
     },
     "document_type": "statement",
     "historical_date": {
@@ -23444,7 +24038,9 @@
     "id": "showtrials-4420",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса З.Н. Гайдеровой"
+      "ru": "Протокол допроса З.Н. Гайдеровой",
+      "pt": "Protocolo de interrogatório de Z.N. Gaiderova",
+      "en": "Interrogation record of Z.N. Gaiderova"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23493,7 +24089,9 @@
     "id": "showtrials-4422",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Г.Е. Зиновьевым и М.М. Харитоновым"
+      "ru": "Протокол очной ставки между Г.Е. Зиновьевым и М.М. Харитоновым",
+      "pt": "Protocolo da acareação entre G.E. Zinoviev e M.M. Kharitonov",
+      "en": "Record of the confrontation between G.E. Zinoviev and M.M. Kharitonov"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -23542,7 +24140,9 @@
     "id": "showtrials-4423",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Г.Е. Зиновьевым и Г.И. Сафаровым"
+      "ru": "Протокол очной ставки между Г.Е. Зиновьевым и Г.И. Сафаровым",
+      "pt": "Protocolo da acareação entre G.E. Zinoviev e G.I. Safarov",
+      "en": "Record of the confrontation between G.E. Zinoviev and G.I. Safarov"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -23591,7 +24191,9 @@
     "id": "showtrials-4434",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Н.А. Царькова следствию по делу зиновьевской организации"
+      "ru": "Заявление Н.А. Царькова следствию по делу зиновьевской организации",
+      "pt": "Declaração de Tsarkov à investigação",
+      "en": "Statement by Tsarkov to the investigation"
     },
     "document_type": "statement",
     "historical_date": {
@@ -23640,7 +24242,9 @@
     "id": "showtrials-4435",
     "kind": "document",
     "titles": {
-      "ru": "Протокол очной ставки между Г.Е. Евдокимовым и Г.Е. Зиновьевым"
+      "ru": "Протокол очной ставки между Г.Е. Евдокимовым и Г.Е. Зиновьевым",
+      "pt": "Protocolo da acareação entre G.E. Evdokimov e G.E. Zinoviev",
+      "en": "Record of the confrontation between G.E. Evdokimov and G.E. Zinoviev"
     },
     "document_type": "confrontation_protocol",
     "historical_date": {
@@ -23689,7 +24293,9 @@
     "id": "showtrials-4436",
     "kind": "document",
     "titles": {
-      "ru": "Показания Г.Е. Евдокимова"
+      "ru": "Показания Г.Е. Евдокимова",
+      "pt": "Depoimento de G. E. Evdokimov",
+      "en": "Testimony of G. E. Evdokimov"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -23738,7 +24344,9 @@
     "id": "showtrials-4438",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.П. Бакаева"
+      "ru": "Протокол допроса И.П. Бакаева",
+      "pt": "Auto de interrogatório de I. P. Bakaev",
+      "en": "Interrogation record of I. P. Bakaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23787,7 +24395,9 @@
     "id": "showtrials-4440",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Auto de interrogatório de I. S. Gorshenin",
+      "en": "Interrogation record of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23836,7 +24446,9 @@
     "id": "showtrials-4439",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.П. Бакаева"
+      "ru": "Протокол допроса И.П. Бакаева",
+      "pt": "Auto de interrogatório de I. P. Bakaev",
+      "en": "Interrogation record of I. P. Bakaev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23885,7 +24497,9 @@
     "id": "showtrials-4441",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Б.Н. Сахова"
+      "ru": "Протокол допроса Б.Н. Сахова",
+      "pt": "Auto de interrogatório de B. N. Sakhov",
+      "en": "Interrogation record of B. N. Sakhov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23934,7 +24548,9 @@
     "id": "showtrials-4442",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.Д. Миронова"
+      "ru": "Протокол допроса В.Д. Миронова",
+      "pt": "Auto de interrogatório de V. D. Mironov",
+      "en": "Interrogation record of V. D. Mironov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -23983,7 +24599,9 @@
     "id": "showtrials-4444",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Л.Я. Файвиловича в ЦК ВКП(б) И.В. Сталину"
+      "ru": "Заявление Л.Я. Файвиловича в ЦК ВКП(б) И.В. Сталину",
+      "pt": "Carta de L. Ya. Faivilovich a I. V. Stalin",
+      "en": "Letter from L. Ya. Faivilovich to I. V. Stalin"
     },
     "document_type": "statement",
     "historical_date": {
@@ -24032,7 +24650,9 @@
     "id": "showtrials-4443",
     "kind": "document",
     "titles": {
-      "ru": "Показания Н.К. Магдарьева"
+      "ru": "Показания Н.К. Магдарьева",
+      "pt": "Depoimento complementar de N. K. Magdaryev",
+      "en": "Supplementary testimony of N. K. Magdaryev"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -24081,7 +24701,9 @@
     "id": "showtrials-4454",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Я.Р. Ельковича"
+      "ru": "Протокол допроса Я.Р. Ельковича",
+      "pt": "Auto de interrogatório de Ya. R. Elkovich",
+      "en": "Interrogation record of Ya. R. Elkovich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24130,7 +24752,9 @@
     "id": "showtrials-4456",
     "kind": "document",
     "titles": {
-      "ru": "Показания А.А. Израилитина"
+      "ru": "Показания А.А. Израилитина",
+      "pt": "Depoimento complementar de A. A. Izrailitin",
+      "en": "Supplementary testimony of A. A. Izrailitin"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -24179,7 +24803,9 @@
     "id": "showtrials-4455",
     "kind": "document",
     "titles": {
-      "ru": "Показания Н.К. Магдарьева"
+      "ru": "Показания Н.К. Магдарьева",
+      "pt": "Depoimento complementar de N. K. Magdaryev",
+      "en": "Supplementary testimony of N. K. Magdaryev"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -24228,7 +24854,9 @@
     "id": "showtrials-4457",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.Э. Роцкана"
+      "ru": "Протокол допроса П.Э. Роцкана",
+      "pt": "Auto de interrogatório de P. E. Rotskan",
+      "en": "Interrogation record of P. E. Rotskan"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24277,7 +24905,9 @@
     "id": "showtrials-4458",
     "kind": "document",
     "titles": {
-      "ru": "Показание С.М. Гессена"
+      "ru": "Показание С.М. Гессена",
+      "pt": "Depoimento de S. M. Gessen",
+      "en": "Testimony of S. M. Gessen"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -24326,7 +24956,9 @@
     "id": "showtrials-4460",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Auto complementar de interrogatório de G. I. Safarov",
+      "en": "Supplementary interrogation record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24375,7 +25007,9 @@
     "id": "showtrials-4459",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Ф. Федорова"
+      "ru": "Протокол допроса Г.Ф. Федорова",
+      "pt": "Auto de interrogatório de G. F. Fedorov",
+      "en": "Interrogation record of G. F. Fedorov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24424,7 +25058,9 @@
     "id": "showtrials-4461",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Г.Е. Зиновьева следствию по делу зиновьевской организации"
+      "ru": "Заявление Г.Е. Зиновьева следствию по делу зиновьевской организации",
+      "pt": "Depoimento de G. E. Zinoviev",
+      "en": "Testimony of G. E. Zinoviev"
     },
     "document_type": "statement",
     "historical_date": {
@@ -24473,7 +25109,9 @@
     "id": "showtrials-4462",
     "kind": "document",
     "titles": {
-      "ru": "Проект обвинительного заключения по делу “московского центра”"
+      "ru": "Проект обвинительного заключения по делу “московского центра”",
+      "pt": "Projeto de peça de acusação no processo do Centro de Moscou",
+      "en": "Draft indictment in the Moscow Center case"
     },
     "document_type": "indictment",
     "historical_date": {
@@ -24523,7 +25161,9 @@
     "id": "showtrials-4476",
     "kind": "document",
     "titles": {
-      "ru": "Показания А.М. Гертика"
+      "ru": "Показания А.М. Гертика",
+      "pt": "Depoimento de A. M. Gertik",
+      "en": "Testimony of A. M. Gertik"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -24572,7 +25212,9 @@
     "id": "showtrials-4477",
     "kind": "document",
     "titles": {
-      "ru": "Показания Г.Е. Евдокимова"
+      "ru": "Показания Г.Е. Евдокимова",
+      "pt": "Depoimento de G. E. Evdokimov sobre A. A. Korolev",
+      "en": "Testimony of G. E. Evdokimov concerning A. A. Korolev"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -24621,7 +25263,9 @@
     "id": "showtrials-4478",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Евдокимова"
+      "ru": "Протокол допроса Г.Е. Евдокимова",
+      "pt": "Auto de interrogatório de G. E. Evdokimov",
+      "en": "Interrogation record of G. E. Evdokimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24670,7 +25314,9 @@
     "id": "showtrials-4479",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Я.Р. Ельковича"
+      "ru": "Протокол допроса Я.Р. Ельковича",
+      "pt": "Protocolo de interrogatório de Ya. R. Yelkovich",
+      "en": "Interrogation record of Ya. R. Yelkovich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24719,7 +25365,9 @@
     "id": "showtrials-4481",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.В. Перимова"
+      "ru": "Протокол допроса А.В. Перимова",
+      "pt": "Protocolo de interrogatório de A. V. Perimov (complementar)",
+      "en": "Interrogation record of A. V. Perimov (additional)"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24768,7 +25416,9 @@
     "id": "showtrials-4480",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Protocolo de interrogatório complementar de I. S. Gorshenin",
+      "en": "Record of the additional interrogation of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24817,7 +25467,9 @@
     "id": "showtrials-4482",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.В. Перимова"
+      "ru": "Протокол допроса А.В. Перимова",
+      "pt": "Auto complementar de interrogatório de A. V. Perimov",
+      "en": "Supplementary interrogation record of A. V. Perimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24866,7 +25518,9 @@
     "id": "showtrials-4484",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.С. Куклина"
+      "ru": "Протокол допроса А.С. Куклина",
+      "pt": "Auto complementar de interrogatório de A. S. Kuklin",
+      "en": "Supplementary interrogation record of A. S. Kuklin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24915,7 +25569,9 @@
     "id": "showtrials-4483",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.В. Перимова"
+      "ru": "Протокол допроса А.В. Перимова",
+      "pt": "Auto complementar de interrogatório de A. V. Perimov",
+      "en": "Supplementary interrogation record of A. V. Perimov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -24964,7 +25620,9 @@
     "id": "showtrials-4485",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.К. Наумова"
+      "ru": "Протокол допроса И.К. Наумова",
+      "pt": "Auto de interrogatório de I. K. Naumov",
+      "en": "Interrogation record of I. K. Naumov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25013,7 +25671,9 @@
     "id": "showtrials-4486",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Auto complementar de interrogatório de G. I. Safarov",
+      "en": "Supplementary interrogation record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25062,7 +25722,9 @@
     "id": "showtrials-4487",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.Д. Миронова"
+      "ru": "Протокол допроса В.Д. Миронова",
+      "pt": "Auto complementar de interrogatório de V. D. Mironov",
+      "en": "Supplementary interrogation record of V. D. Mironov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25111,7 +25773,9 @@
     "id": "showtrials-4488",
     "kind": "document",
     "titles": {
-      "ru": "Показания П.М. Репникова"
+      "ru": "Показания П.М. Репникова",
+      "pt": "Depoimento complementar de P. M. Repnikov",
+      "en": "Supplementary testimony of P. M. Repnikov"
     },
     "document_type": "testimony",
     "historical_date": {
@@ -25160,7 +25824,9 @@
     "id": "showtrials-4504",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса К.А. Апанасевича"
+      "ru": "Протокол допроса К.А. Апанасевича",
+      "pt": "Auto de interrogatório de K. A. Apanasevich",
+      "en": "Interrogation record of K. A. Apanasevich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25209,7 +25875,9 @@
     "id": "showtrials-4505",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.Ф. Касперского"
+      "ru": "Протокол допроса И.Ф. Касперского",
+      "pt": "Ata de interrogatório de I. F. Kaspersky (continuação)",
+      "en": "Interrogation record of I. F. Kaspersky (continued)"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25258,7 +25926,9 @@
     "id": "showtrials-4506",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.Ф. Касперского"
+      "ru": "Протокол допроса И.Ф. Касперского",
+      "pt": "Auto de interrogatório de I. F. Kaspersky (continuação)",
+      "en": "Interrogation record of I. F. Kaspersky (continued)"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25307,7 +25977,9 @@
     "id": "showtrials-4508",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.А. Залуцкого"
+      "ru": "Протокол допроса П.А. Залуцкого",
+      "pt": "Ata de interrogatório de P. A. Zalutsky",
+      "en": "Interrogation record of P. A. Zalutsky"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25356,7 +26028,9 @@
     "id": "showtrials-4507",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Е.К. Коршунова"
+      "ru": "Протокол допроса Е.К. Коршунова",
+      "pt": "Auto de interrogatório de E. K. Korshunov",
+      "en": "Interrogation record of E. K. Korshunov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25405,7 +26079,9 @@
     "id": "showtrials-4509",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.Н. Зеликсона"
+      "ru": "Протокол допроса И.Н. Зеликсона",
+      "pt": "Ata de interrogatório de I. N. Zelikson",
+      "en": "Interrogation record of I. N. Zelikson"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25454,7 +26130,9 @@
     "id": "showtrials-4510",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Я.Р. Ельковича"
+      "ru": "Протокол допроса Я.Р. Ельковича",
+      "pt": "Ata de interrogatório de Ya. R. Elkovich",
+      "en": "Interrogation record of Ya. R. Elkovich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25503,7 +26181,9 @@
     "id": "showtrials-4518",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.Д. Миронова"
+      "ru": "Протокол допроса В.Д. Миронова",
+      "pt": "Auto complementar de interrogatório de V. D. Mironov",
+      "en": "Supplementary interrogation record of V. D. Mironov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25552,7 +26232,9 @@
     "id": "showtrials-4520",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.Э. Роцкана"
+      "ru": "Протокол допроса П.Э. Роцкана",
+      "pt": "Ata de interrogatório de P. E. Rotskan",
+      "en": "Interrogation record of P. E. Rotskan"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25601,7 +26283,9 @@
     "id": "showtrials-4519",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Е.А. Кондратьевой"
+      "ru": "Протокол допроса Е.А. Кондратьевой",
+      "pt": "Auto de interrogatório de E. A. Kondratieva",
+      "en": "Interrogation record of E. A. Kondratieva"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25650,7 +26334,9 @@
     "id": "showtrials-4521",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.К. Наумова"
+      "ru": "Протокол допроса И.К. Наумова",
+      "pt": "Auto de interrogatório de I. K. Naumov",
+      "en": "Interrogation record of I. K. Naumov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25699,7 +26385,9 @@
     "id": "showtrials-4522",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.Е. Зиновьева"
+      "ru": "Протокол допроса Г.Е. Зиновьева",
+      "pt": "Ata de interrogatório de G. E. Zinoviev",
+      "en": "Interrogation record of G. E. Zinoviev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25748,7 +26436,9 @@
     "id": "showtrials-4523",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Б.Н. Сахова в ЦК ВКП(б) И.В. Сталину"
+      "ru": "Заявление Б.Н. Сахова в ЦК ВКП(б) И.В. Сталину",
+      "pt": "Carta de B. Sakhov a I. V. Stalin",
+      "en": "Letter from B. Sakhov to I. V. Stalin"
     },
     "document_type": "statement",
     "historical_date": {
@@ -25797,7 +26487,9 @@
     "id": "showtrials-4530",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Г. Лелевича"
+      "ru": "Протокол допроса Л.Г. Лелевича",
+      "pt": "Ata de interrogatório de L. G. Lelevich",
+      "en": "Interrogation record of L. G. Lelevich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25846,7 +26538,9 @@
     "id": "showtrials-4531",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса П.А. Залуцкого"
+      "ru": "Протокол допроса П.А. Залуцкого",
+      "pt": "Ata de interrogatório de P. A. Zalutsky",
+      "en": "Interrogation record of P. A. Zalutsky"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25895,7 +26589,9 @@
     "id": "showtrials-4532",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Б. Каменева"
+      "ru": "Протокол допроса Л.Б. Каменева",
+      "pt": "Protocolo de interrogatório de L. B. Kamenev",
+      "en": "Interrogation record of L. B. Kamenev"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25944,7 +26640,9 @@
     "id": "showtrials-4536",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.М. Насонова"
+      "ru": "Протокол допроса Н.М. Насонова",
+      "pt": "Ata de interrogatório de N. M. Nasonov",
+      "en": "Interrogation record of N. M. Nasonov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -25993,7 +26691,9 @@
     "id": "showtrials-4537",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.С. Горшенина"
+      "ru": "Протокол допроса И.С. Горшенина",
+      "pt": "Ata de interrogatório de I. S. Gorshenin",
+      "en": "Interrogation record of I. S. Gorshenin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26042,7 +26742,9 @@
     "id": "showtrials-4538",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório complementar de G. I. Safarov",
+      "en": "Supplementary Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26091,7 +26793,9 @@
     "id": "showtrials-4542",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса А.М. Гертика"
+      "ru": "Протокол допроса А.М. Гертика",
+      "pt": "Ata de interrogatório complementar de A. M. Gertik",
+      "en": "Supplementary interrogation record of A. M. Gertik"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26140,7 +26844,9 @@
     "id": "showtrials-4543",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса И.К. Наумова"
+      "ru": "Протокол допроса И.К. Наумова",
+      "pt": "Ata de interrogatório de I. K. Naumov",
+      "en": "Interrogation record of I. K. Naumov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26189,7 +26895,9 @@
     "id": "showtrials-4544",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Г.Е. Зиновьева"
+      "ru": "Заявление Г.Е. Зиновьева",
+      "pt": "Declaração de G. E. Zinoviev",
+      "en": "Statement by G. E. Zinoviev"
     },
     "document_type": "statement",
     "historical_date": {
@@ -26238,7 +26946,9 @@
     "id": "showtrials-4545",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса С.С. Зорина"
+      "ru": "Протокол допроса С.С. Зорина",
+      "pt": "Ata de interrogatório de S. S. Zorin",
+      "en": "Interrogation record of S. S. Zorin"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26287,7 +26997,9 @@
     "id": "showtrials-4547",
     "kind": "document",
     "titles": {
-      "ru": "Заявление Я.Р. Ельковича Я.С. Агранову и Административной комиссии НКВД"
+      "ru": "Заявление Я.Р. Ельковича Я.С. Агранову и Административной комиссии НКВД",
+      "pt": "Declaração de Ya. R. Elkovich a Ya. S. Agranov e à Comissão Administrativa do NKVD",
+      "en": "Statement by Ya. R. Elkovich to Ya. S. Agranov and the Administrative Commission of the NKVD"
     },
     "document_type": "statement",
     "historical_date": {
@@ -26336,7 +27048,9 @@
     "id": "showtrials-4552",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Н.М. Насонова"
+      "ru": "Протокол допроса Н.М. Насонова",
+      "pt": "Ata de interrogatório de N. M. Nasonov",
+      "en": "Interrogation record of N. M. Nasonov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26385,7 +27099,9 @@
     "id": "showtrials-4553",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Г. Лелевича"
+      "ru": "Протокол допроса Л.Г. Лелевича",
+      "pt": "Protocolo de interrogatório de L. G. Lelevich",
+      "en": "Interrogation Record of L. G. Lelevich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26434,7 +27150,9 @@
     "id": "showtrials-4554",
     "kind": "document",
     "titles": {
-      "ru": "Заявление П.А. Залуцкого И.В. Сталину"
+      "ru": "Заявление П.А. Залуцкого И.В. Сталину",
+      "pt": "Carta de P. A. Zalutsky a I. V. Stalin",
+      "en": "Letter from P. A. Zalutsky to I. V. Stalin"
     },
     "document_type": "statement",
     "historical_date": {
@@ -26483,7 +27201,9 @@
     "id": "showtrials-4558",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26532,7 +27252,9 @@
     "id": "showtrials-4559",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Д.В. Полуяна"
+      "ru": "Протокол допроса Д.В. Полуяна",
+      "pt": "Protocolo de interrogatório complementar de D. V. Poluyan",
+      "en": "Supplementary Interrogation Record of D. V. Poluyan"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26581,7 +27303,9 @@
     "id": "showtrials-4560",
     "kind": "document",
     "titles": {
-      "ru": "Заявление В.Г. Лукина в Управление НКВД по Ленинградской области"
+      "ru": "Заявление В.Г. Лукина в Управление НКВД по Ленинградской области",
+      "pt": "Declaração de V. Lukin",
+      "en": "Statement by V. Lukin"
     },
     "document_type": "statement",
     "historical_date": {
@@ -26630,7 +27354,9 @@
     "id": "showtrials-4561",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Г.И. Сафарова"
+      "ru": "Протокол допроса Г.И. Сафарова",
+      "pt": "Protocolo de interrogatório de G. I. Safarov",
+      "en": "Interrogation Record of G. I. Safarov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26679,7 +27405,9 @@
     "id": "showtrials-4562",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса В.Д. Миронова"
+      "ru": "Протокол допроса В.Д. Миронова",
+      "pt": "Protocolo de interrogatório de V. D. Mironov",
+      "en": "Interrogation Record of V. D. Mironov"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26728,7 +27456,9 @@
     "id": "showtrials-4563",
     "kind": "document",
     "titles": {
-      "ru": "Протокол допроса Л.Г. Лелевича"
+      "ru": "Протокол допроса Л.Г. Лелевича",
+      "pt": "Protocolo de interrogatório de L. G. Lelevich",
+      "en": "Interrogation Record of L. G. Lelevich"
     },
     "document_type": "interrogation_protocol",
     "historical_date": {
@@ -26777,7 +27507,9 @@
     "id": "showtrials-6836",
     "kind": "document",
     "titles": {
-      "ru": "Заявление В.Д. Вуйовича Г.Г. Ягоде"
+      "ru": "Заявление В.Д. Вуйовича Г.Г. Ягоде",
+      "pt": "Declaração de V. D. Vuyovich encaminhada por G. Yagoda",
+      "en": "Statement by V. D. Vuyovich Forwarded by G. Yagoda"
     },
     "document_type": "statement",
     "historical_date": {
@@ -26826,7 +27558,9 @@
     "id": "showtrials-6719",
     "kind": "document",
     "titles": {
-      "ru": "Письмо Г.Я. Сокольникова в Политбюро ЦК ВКП(б) И.В. Сталину о показаниях Г.Е. Зиновьева"
+      "ru": "Письмо Г.Я. Сокольникова в Политбюро ЦК ВКП(б) И.В. Сталину о показаниях Г.Е. Зиновьева",
+      "pt": "Declaração de G. Sokolnikov a Stalin",
+      "en": "Statement by G. Sokolnikov to Stalin"
     },
     "document_type": "letter",
     "historical_date": {

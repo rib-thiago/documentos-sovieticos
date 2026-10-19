@@ -1,0 +1,19 @@
+{
+  "saved": true,
+  "history_id": "20261019142742284575-4d6c6db88f1b",
+  "document_id": null,
+  "revision": "6fad11cec3084804900a49b2b3dbaca8d1314ea6615c515bea24808723dfdb58",
+  "entity": {
+    "kind": "batch",
+    "id": "traducoes-moscou-investigacao-0016",
+    "document_ids": [
+      "showtrials-3440",
+      "showtrials-3441",
+      "showtrials-3442",
+      "showtrials-4532",
+      "showtrials-4537"
+    ]
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}

@@ -1,0 +1,47 @@
+INTERROGATION RECORD
+
+OF ELKOVICH, Yakov Rafailovich,
+
+dated January 13, 1935.
+
+ELKOVICH, Yakov Rafailovich, born in 1896, native of Odessa, residing in Sverdlovsk, Lenin Street, 5, apartment 125, Jewish, citizen of the USSR. Responsible editor of the Ural Soviet Encyclopedia and responsible editor of the newspaper “Kolkhoz Path.” Son of an artisan. Before the revolution a student, after the revolution an employee. Wife Polina Leonidovna ELKOVICH, member of the All-Union Communist Party (Bolsheviks), works at Oblpishchepromsoyuz in Sverdlovsk; son Leonid, aged 15; son Vil, aged 9; secondary education and incomplete higher education. Former member of the All-Union Communist Party (Bolsheviks) from October 1917. In 1927 expelled by the Smolensk Provincial Control Commission for factional work. In 1928 reinstated by the Central Control Commission among the “23.” Expelled again on December 23, 1934, in Sverdlovsk as an active Zinovievist. During the Kolchak regime spent six months in Barnaul prison; escaped from the prison hospital. On the military register in category 7. Engaged in Party and newspaper work from 1917 to 1925.
+
+QUESTION: The investigation has information that you are a member of the Zinovievist organization. Do you confirm this?
+
+ANSWER: Yes, I confirm it. From the Fifteenth Congress through 1934 I was a member of the Zinovievist counterrevolutionary organization. In this organization, throughout all these years up to my arrest, I carried out active political and organizational work.
+
+QUESTION: What do you know about the existence of the Moscow center of the Zinovievist organization?
+
+ANSWER: I personally know that the Moscow center of the counterrevolutionary Zinovievist organization, formed during the period of the Fifteenth Congress, existed with some changes until December 1934. This center included ZINOVIEV, KAMENEV, EVDOKIMOV, BAKAEV, and KUKLIN. In my practical activities in the organization I remained connected with the listed members of the center until recently, participated in discussion of a number of questions, particularly in developing certain tactical directives, and received a number of directives personally from ZINOVIEV (the last in November 1934), EVDOKIMOV, and BAKAEV.
+
+QUESTION: What can you testify about the Moscow center's closest connections?
+
+ANSWER: Of those directly participating in the center's work and closely associated with its members, I can name GORSHENIN, GERTIK, SHAROV, and KHARITONOV. As far as I know, the latter's organizational ties with the center have weakened somewhat recently.
+
+QUESTION: Did the center have ties with the Zinovievist underground in other cities? What form did these ties take? Who personally maintained them?
+
+ANSWER: Yes, such ties existed all the time. GORSHENIN played a considerable role in maintaining ties with the provinces. GORSHENIN's organizational role grew particularly after ZINOVIEV's return from Kustanai. For reasons of underground security, it was recommended to avoid direct meetings with ZINOVIEV. These meetings, including those with members of the organization arriving from other cities, were often arranged through GORSHENIN. I personally traveled regularly from Sverdlovsk to Moscow. My trips to Leningrad in 1929, 1930, and 1932 were also used in the organization's interests. I shall testify separately about the directives I conveyed to members of the Leningrad organization during these visits. I know of the directive for Leningrad conveyed by EVDOKIMOV to BOGRACHEV during the latter's visit to Moscow in late 1932. (This concerned tactics in connection with ZINOVIEV's exile.) Through GORSHENIN, ties were also maintained with the organization's most active members in the localities: GESSEN (Smolensk), FURTICHEV (the city of Gorky), and myself, ELKOVICH (Sverdlovsk). Each of those listed in turn maintained ties with other members of the center as well, but particularly with Leningrad (myself and GESSEN). The member of the center KUKLIN played a major role in maintaining ties with Leningrad. He was closest to LEVIN Vladimir; moreover, KUKLIN maintained ties with Rostov, chiefly through DMITRIEV Timofei. Ties with O. RAVICH (Voronezh) were maintained chiefly through KHARITONOV. The latter was connected with BASHKIROV in Leningrad. GORSHENIN also maintained ties with the member of the organization KAPITONOV (Novosibirsk). I shall give additional testimony about other connections of the center in Moscow, Leningrad, and other cities.
+
+QUESTION: What was the substance of the directives you personally received from ZINOVIEV?
+
+ANSWER: In the affairs of the counterrevolutionary organization I was connected with ZINOVIEV throughout all the years (from 1927 through 1934 inclusive), except for the second half of 1933 and the first half of 1934, when for reasons of underground security I maintained ties with ZINOVIEV chiefly through GORSHENIN. GORSHENIN and BAKAEV warned me about this precaution in 1933 in response to my intention to visit ZINOVIEV personally. Of the individual directives, assessments of certain events, and assignments that I received from ZINOVIEV recently, I now recall the following: I visited ZINOVIEV several times during the days of preparation for his departure for Kustanai. All conversations between ZINOVIEV and myself during those days centered on the question of his exile. ZINOVIEV declared that STEN's delivery of Ryutin's platform to him had been merely a pretext for the Central Committee and STALIN to deal with him, that he had received this platform after all members of the Central Committee already had it, and that therefore he least of all thought he ought to inform anyone about it. This directive, given by ZINOVIEV in a somewhat veiled form, was deciphered by GORSHENIN, who, knowing that I was going to Leningrad, instructed me to dispel the unfavorable impression that ZINOVIEV's bloc with the RYUTIN–STEN group might have created among the Zinovievist cadres in Leningrad. In particular, I was advised to see the member of the organization NATANSON M., who “abuses ZINOVIEV.” Carrying out this assignment from ZINOVIEV–GORSHENIN formed the basis of all my meetings with members of the Zinovievist organization in Leningrad (NATANSON, ANISHEV, BASHKIROV, SHURYGIN, and others) during my trip to Leningrad, which took place in December 1932. I naturally intended that this directive, which I conveyed to the listed persons, should be disseminated more widely by them, that is, to the Zinovievist cadres with whom they in turn were connected. I return to the conversation with ZINOVIEV before his departure for Kustanai. The conversation turned to the fact that, in Sverdlovsk, I was one of his nearest neighbors. We agreed that, if necessary, I would serve as an emergency link between ZINOVIEV and the Moscow center (EVDOKIMOV's surname was specifically mentioned).
+
+My last meeting with the member of the center ZINOVIEV dates from November 1934. We met in Kislovodsk. In conversation we touched on the question of his removal from “Bolshevik.” This conversation, too, was double-dealing in character. ZINOVIEV emphasized that he was not to blame and that ADORATSKY had let him down. At the same time, in cautious terms, ZINOVIEV gave me to understand that it was not a matter of this particular case, but of the fact that “Bolshevik” was an enormous platform with a huge circulation, that his popularity and importance in “Bolshevik” had greatly increased, that a mass of letters addressed to him arrived at the editorial office of “Bolshevik,” and that all this taken together could not please the Central Committee and, in particular, STALIN. Among the active Zinovievists, myself, KOZHURO, GORSHENIN, and others constantly discussed ZINOVIEV's removal from “Bolshevik” as another act of persecution by the Party leadership.
+
+In this same conversation with ZINOVIEV in Kislovodsk, I informed him of my meetings in Moscow with BAKAEV and GORSHENIN. ZINOVIEV and I agreed (at my suggestion) to renew our ties and that I would visit him in Moscow.
+
+At the time of the arrests of EVDOKIMOV, BAKAEV, and others I was in Moscow. I was returning from vacation and stayed with GORSHENIN. At his home I learned of the arrests from KOZHURO. GORSHENIN, myself, KOZHURO, and KOSTINA decided to warn ZINOVIEV. At our suggestion KOZHURO went to ZINOVIEV. Returning from ZINOVIEV's, KOZHURO told me and GORSHENIN that, upon hearing of BAKAEV's and EVDOKIMOV's arrests, ZINOVIEV declared: “Eremeich and Petrovich arrested! There is nowhere further to go!” This assessment by ZINOVIEV of the facts of EVDOKIMOV's and BAKAEV's arrests, which then met with unanimous support from the three of us (myself, KOZHURO, GORSHENIN), in character and meaning sounded like a confirmation of the old Zinovievist counterrevolutionary slander about the Thermidorian degeneration of the Party leadership and Soviet power.
+
+I shall speak in my subsequent testimony about other members of the Zinovievist organization known to me, whom I met and encountered in the course of my counterrevolutionary work, about the aims and tasks of the organization, political directives, and the methods and system of counterrevolutionary Zinovievism.
+
+Correctly recorded from my words and read by me, which I confirm by my signature.
+
+Ya. ELKOVICH.
+
+INTERROGATED BY —
+
+HEAD OF THE 1ST SECTION OF THE SPO OF THE UGB — LULOV.
+
+CERTIFIED CORRECT: Kazakova
+
+RGASPI, F. 671, Op. 1, D. 134, fols. 100-105.

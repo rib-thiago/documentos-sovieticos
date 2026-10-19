@@ -1,0 +1,51 @@
+Copy.
+
+TESTIMONY
+
+OF GESSEN, Sergei Mikhailovich—
+
+January 1, 1935.
+
+In response to the questions put to me by the investigation, I testify:
+
+I find it difficult to give a detailed account of the role of individual members of the Zinovievist group because of the irregular and scattered nature of my meetings with them. I know the situation in 1929 best, when I spent a fairly substantial amount of time in Moscow (twice for two months). After moving to Smolensk (January 1930), I usually visited Moscow at intervals of two or three months for two, three or four days; consequently, the range of my meetings narrowed considerably, and my meetings with most members of the Zinovievist group became much less frequent. During this period (1930–1932), I most often met EVDOKIMOV, NAUMOV and GORSHENIN, and several times BAKAYEV, GERTIK and KHARITONOV. Over the last two years, I met EVDOKIMOV and GORSHENIN more or less regularly, BAKAYEV rarely (three or four times); the other Zinovievists I either did not see at all or met in chance circumstances and in passing.
+
+The main points I can testify to regarding the question put to me are as follows:
+
+1\. EVDOKIMOV—in political terms, he was one of the leading figures of the Zinovievist center. His political views coincided in all essential respects with the position of ZINOVIEV, KAMENEV and the entire Zinovievist group, which I have already characterized in my earlier testimony. As he himself told me, EVDOKIMOV maintained contact with ZINOVIEV and KAMENEV until recently through repeated visits to their apartments (I last saw EVDOKIMOV in July 1934). EVDOKIMOV's political position continued to be hostile to the party line and leadership even in the most recent period. For instance, I remember a conversation with EVDOKIMOV in 1934 (I believe GORSHENIN also took part) concerning the decisions of the Seventeenth Party Congress, in which the abolition of the Central Control Commission was assessed negatively as supposedly the formal abolition of one of the points of Lenin's testament, although it was also said that, essentially, little had changed, since previously the Central Control Commission had never, as we maintained, played the role of the “hoop” binding party unity that LENIN had envisaged for it. However, in this last period, EVDOKIMOV's negative statements about the party leadership were not connected with any practical orientation toward the possibility of renewing the struggle against the party. As for EVDOKIMOV's personal connections with broader circles of Zinovievists, my impression is that they were not particularly frequent. In any event, when visiting EVDOKIMOV in recent years, I almost never found any Zinovievists at his home, which may be partly explained by the circumstances of his life (returning home late, living away from the city center, and so on).
+
+2\. KUKLIN—during 1928–1932, he visited ZINOVIEV repeatedly and KAMENEV somewhat less often, and took part in discussing the political questions facing the Zinovievist group. In recent years, I saw him very rarely. I had not visited KUKLIN himself since 1929 and cannot say whom he met most often.
+
+3\. GERTIK—during 1928–1930, Artyom and Dina GERTIK's home was a sort of “headquarters” of the Zinovievists. At that time they lived in a separate apartment on Arbat Square, where Zinovievists visiting Moscow usually stayed and where other\<s\> gathered without arrangement or invitation. From 1930, when the GERTIKS moved to a new apartment on Kolobovsky Lane, which they did not occupy alone, the circle of Zinovievists visiting them became considerably narrower. As far as I know, their most frequent visitors were EVDOKIMOV, BAKAYEV, KHARITONOV, PERIMOV and other\<s\>. I myself last visited GERTIK's apartment in the spring of 1932.
+
+As I have already testified, GERTIK visited ZINOVIEV fairly often.
+
+The political views expressed by GERTIK at my meetings with him did not differ in any essential respect from those of the other members of the Zinovievist group. After GERTIK returned from exile, I saw him only once at GORSHENIN's home, but I do not remember any political statements of interest on his part.
+
+4\. SHAROV—I met him in 1928–1930 at the homes of ZINOVIEV, KAMENEV and EVDOKIMOV, and once visited him with EVDOKIMOV. I do not know how often he visited ZINOVIEV and KAMENEV during this period, or with whom he generally had close connections.
+
+5\. FYODOROV—he was a regular participant in meetings at ZINOVIEV's and KAMENEV's homes and was in daily contact with all members of the Zinovievist group until 1931. Later, as far as I can remember, I did not encounter FYODOROV at ZINOVIEV's or KAMENEV's home and saw him very rarely in general. According to EVDOKIMOV and other\<s\>, he was rather solitary in his personal connections during this period and rarely visited other Zinovievists.
+
+6\. GORSHENIN—a student of the Institute of Red Professors who joined the Trotskyist-Zinovievist bloc after the Fourteenth Party Congress, he was initially relatively little known to the top leadership of the Zinovievist organization. In 1926, he left with LASHEVICH for the Chinese Eastern Railway. Thanks to the personal connection he established with LASHEVICH and the reports the latter gave of him at the end of 1927, upon returning from Manchuria (I believe in 1928), GORSHENIN was welcomed as one of the most reliable supporters of ZINOVIEV's and KAMENEV's views; in subsequent years he grew closely associated, politically and personally, with the entire Moscow group of Zinovievists. Besides frequent meetings with ZINOVIEV and KAMENEV throughout the period after the Fifteenth Party Congress (meetings which, according to GORSHENIN himself, continued until recently), he maintained constant contact with EVDOKIMOV, GERTIK, KHARITONOV, BAKAYEV and other\<s\>, kept abreast of all political questions discussed in the Zinovievist circle, and himself actively participated in discussing these questions and tactical plans. GORSHENIN's apartment was one of the places where Zinovievists frequently met. GORSHENIN's connections were mainly confined to the circle of Zinovievists living in Moscow; as far as I know, he knew few of those living in Leningrad and hardly ever met them.
+
+7\. BAKAYEV—throughout the Zinovievists' struggle against the party, he was one of the most prominent members of the Zinovievist political center. Until 1930, he lived in Vyatka and Gorky and came to Moscow on visits (fairly often). In recent years, when he was already living in Moscow, I met him, apart from at ZINOVIEV's and KAMENEV's apartments, at GORSHENIN's and GERTIK's homes; I visited BAKAYEV himself fairly rarely (probably four times altogether). The same characterization of his political position applies as was given above for EVDOKIMOV.
+
+8\. ZALUTSKY—he was a regular participant in meetings at ZINOVIEV's and KAMENEV's homes and maintained daily contact with all the principal members of the Zinovievist group during 1928–1929. From 1930, he stopped appearing at KAMENEV's and ZINOVIEV's homes and also broke off or minimized his connections with other Zinovievists. I did not personally discuss the reasons for this withdrawal with him, but from accounts by EVDOKIMOV, BAKAYEV and other\<s\>, I knew roughly the following explanation: “Nothing will come of this [that is, of the Zinovievist center's plans]; we must ‘grow into’ the party as it is.” I last saw ZALUTSKY in December 1932 in Sochi. He then took a negative position toward ZINOVIEV and KAMENEV and told me that they themselves were to blame for their fate.
+
+9\. PERIMOV—I often saw him in 1929–1930. At that time, he was one of the most convinced Zinovievists. I have had no occasion to meet him since the end of 1930.
+
+10\. KHARITONOV—until 1932, he was an active member of the Zinovievist group, frequently visited ZINOVIEV and KAMENEV, and maintained contact with the other Zinovievists. Compared with other members of the Zinovievist center, KHARITONOV was more conciliatory toward the party leadership. At the end of 1932, in connection with the Ryutin platform case, KHARITONOV took a sharply negative position toward ZINOVIEV and KAMENEV and resolutely condemned their behavior in this affair. According to GORSHENIN, when leaving for England KHARITONOV declared that he would pointedly refuse to go and say goodbye to ZINOVIEV. From Boris KUSHNER I also know of a very sharp attack by KHARITONOV on ZINOVIEV and KAMENEV at a meeting of the party cell of the Berlin diplomatic mission. I did not see KHARITONOV after his departure for England.
+
+11\. RAVICH—living all the time in Voronezh, she came to Moscow only on visits. I met her several times at ZINOVIEV's and KHARITONOV's homes. I also met RAVICH in December 1932 in Sochi. When I arrived, she was already about to leave. Our conversation was limited to my passing on the latest information about the exile of ZINOVIEV, KAMENEV, GERTIK and other\<s\>.
+
+12\. DYAKOV. I met DYAKOV in 1925 in Minsk, when he was head of the Organization Department and I was head of Agitprop of the CC of the VKP(b)B. DYAKOV then left for the Yakutsk region as secretary of the regional party committee, from where he returned after the Fourteenth Party Congress. After several months of hesitation, DYAKOV joined the Trotskyist-Zinovievist bloc and carried on anti-party work in Siberia until the Fifteenth Party Congress. After the Fifteenth Congress, he lived in Moscow and was hostile to the party leadership, but at the same time sometimes spoke negatively about ZINOVIEV in conversations. DYAKOV had no firm connections within the Zinovievist circle; I alone visited him at his apartment. In 1930, according to Dyakov, NUSINOV called on him and tried through him to sound out the possibility of some contact with the Zinovievists (NUSINOV had a personal connection with DYAKOV from their earlier work in Belorussia). DYAKOV told me that he had “put NUSINOV off,” since both of us, and especially I, had a negative opinion of NUSINOV as a person; this attempt by NUSINOV had no further consequences.
+
+Written in GESSEN's own hand.
+
+S. GESSEN
+
+INTERROGATED BY: RUTKOVSKY.
+
+CERTIFIED CORRECT: illegible
+
+RGASPI, F. 671, Op. 1, D. 126, fols. 110–116.
