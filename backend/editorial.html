@@ -4,17 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Área editorial — Documentos Soviéticos</title>
-  <link rel="stylesheet" href="/assets/editorial.css?v=editorial-sidebar-1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/editorial.css?v=workspace-3">
   <script src="/assets/vendor/markdown-it/markdown-it.umd.min.js" defer></script>
   <script src="/assets/vendor/markdown-it-footnote/markdown-it-footnote.min.js" defer></script>
   <script src="/assets/vendor/dompurify/purify.min.js" defer></script>
   <script src="/assets/export-header.js?v=3" defer></script>
-  <script src="/assets/catalog-ui.js?v=stable-week-1" defer></script>
-  <script src="/assets/editorial.js?v=editorial-sidebar-1" defer></script>
+  <script src="/assets/catalog-ui.js?v=workspace-3" defer></script>
+  <script src="/assets/interface.js?v=workspace-3" defer></script>
+  <script src="/assets/editorial.js?v=workspace-3" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#editorial-view">Ir para a área de trabalho</a>
   <header class="editorial-header">
-    <a class="brand" href="/">§ Documentos Soviéticos</a>
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">§</span><span>Documentos Soviéticos</span></a>
     <span>Área editorial local</span>
     <a class="editorial-site-link" href="/#/busca" target="_blank" rel="noopener">Abrir o site ↗</a>
   </header>
@@ -22,22 +27,37 @@
   <aside class="editorial-sidebar">
     <button type="button" class="sidebar-toggle" aria-controls="editorial-sidebar-content" aria-expanded="true" aria-label="Recolher navegação lateral" title="Recolher navegação lateral" hidden>‹</button>
     <div id="editorial-sidebar-content">
-    <p class="sidebar-caption">Organizar o acervo</p>
-    <nav aria-label="Área editorial">
-      <a href="#/fila">Fila de revisão</a>
-      <a href="#/catalogo">Editar catálogo</a>
-      <a href="#/novo-documento">Novo documento</a>
-      <a href="#/lote">Importar lote</a>
-      <a href="#/colecoes">Coleções e subcoleções</a>
-      <a href="#/markdown" data-markdown-nav>Editar Markdown</a>
-      <a href="#/importar">Importar tradução</a>
-      <a href="#/historico">Histórico</a>
-    </nav>
+    <div class="sidebar-nav-group">
+      <p class="sidebar-caption">Revisão</p>
+      <nav aria-label="Revisão editorial">
+        <a href="#/fila" data-icon="compass">Fila de revisão</a>
+        <a href="#/historico" data-icon="history">Histórico</a>
+      </nav>
+    </div>
+    <div class="sidebar-nav-group">
+      <p class="sidebar-caption">Acervo</p>
+      <nav aria-label="Organização do acervo">
+        <a href="#/catalogo" data-icon="search">Catálogo e metadados</a>
+        <a href="#/colecoes" data-icon="catalog">Coleções e subcoleções</a>
+        <a href="#/novo-documento" data-icon="plus">Novo documento</a>
+        <a href="#/lote" data-icon="download">Importar lote</a>
+      </nav>
+    </div>
+    <div class="sidebar-nav-group">
+      <p class="sidebar-caption">Textos e traduções</p>
+      <nav aria-label="Textos e traduções">
+        <a href="#/markdown" data-icon="edit" data-markdown-nav>Editar Markdown</a>
+        <a href="#/importar" data-icon="language">Importar tradução</a>
+      </nav>
+    </div>
     <div class="sidebar-document" hidden></div>
     <p class="sidebar-note">Revise antes de salvar.<br>As versões anteriores ficam no histórico.</p>
     </div>
   </aside>
+  <div class="editorial-workspace">
+    <div class="editorial-workspace-bar"><span id="editorial-location">Área editorial</span><span class="workspace-local">Acervo local · prévia antes de salvar</span></div>
   <main id="editorial-view" tabindex="-1"><p role="status">Carregando a área editorial…</p></main>
+  </div>
   </div>
   <noscript>Ative JavaScript para editar o catálogo.</noscript>
   <footer>Gravação somente local, sem publicação automática. A edição altera apenas a versão escolhida; versões anteriores são recuperáveis em Histórico. Cópias em .local/editorial/.</footer>

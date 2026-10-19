@@ -26,6 +26,7 @@
     apply();
   }
   setupSidebar();
+  for(const link of document.querySelectorAll(".editorial-sidebar [data-icon]"))link.prepend(archiveIcon(link.dataset.icon));
   let session, collections, vocabularies, controller;
   let dirty = false, saving = false, lastHash = location.hash || "#/fila";
   let readerReturn=null;
@@ -798,11 +799,13 @@
       documentContext=null;document.querySelector("[data-markdown-nav]").href="#/markdown";
     }
     document.querySelector(".sidebar-document").hidden=!documentContext;
-    view.replaceChildren();view.focus();window.scrollTo({top:0});
+    const names={fila:"Fila de revisão",catalogo:"Catálogo e metadados",colecoes:"Coleções",markdown:"Editor de texto",importar:"Importar tradução",historico:"Histórico","novo-documento":"Novo documento",lote:"Importar lote"};
+    document.getElementById("editorial-location").textContent="Área editorial / "+(names[active]||"Documento");
+    view.replaceChildren(node("p",{class:"status editorial-loading",role:"status",text:"Carregando a área de trabalho…"}));view.focus();window.scrollTo({top:0});
     try {
       const [freshSession,freshCollections]=await Promise.all([api("/api/editorial/session",null,signal),api("/api/collections",null,signal)]);
       if(signal.aborted)return;
-      session=freshSession;collections=freshCollections.items;
+      session=freshSession;collections=freshCollections.items;view.replaceChildren();
       if(path==="lote")await batchPage(params,signal);
       else if(path==="novo-documento")await newDocumentPage(params,signal);
       else if(path==="colecoes")await collectionsPage(params,signal);
@@ -831,7 +834,8 @@
     try {
       vocabularies=await api("/api/vocabularies");
       window.addEventListener("hashchange",route);await route();
-    }catch(error){view.replaceChildren(node("p",{role:"alert",class:"status error",text:error.message+". Reinicie com python3 -m backend e recarregue esta página."}));}
+    }catch(error){
+      view.querySelector(".editorial-loading")?.remove();view.replaceChildren(node("p",{role:"alert",class:"status error",text:error.message+". Reinicie com python3 -m backend e recarregue esta página."}));}
   }
   start();
 })();

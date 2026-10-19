@@ -3,18 +3,18 @@ input,select,textarea {
   width:100%;
   min-width:0;
   padding:.65rem .75rem;
-  border:1px solid #dcd4c7;
+  border:1px solid var(--rule);
   border-radius:6px;
-  background:#fdfcfb;
-  color:#292723;
+  background:var(--paper);
+  color:var(--ink);
   font-size:.88rem;
   line-height:1.6;
 }
 input:hover,select:hover,textarea:hover {
-  border-color:#b9ab99;
+  border-color:#aab5af;
 }
 input:focus,select:focus,textarea:focus {
-  border-color:#a96a61;
+  border-color:var(--accent);
   background:var(--paper);
 }
 textarea {
@@ -22,26 +22,27 @@ textarea {
   min-height:6rem;
 }
 input[type="checkbox"] {
+  accent-color:var(--accent);
   width:auto;
   margin-right:.5rem;
 }
 input[type="file"] {
   padding:.5rem;
-  background:#faf8f4;
+  background:var(--ru-bg);
   font-size:.8rem;
 }
 input[type="file"]::file-selector-button {
-  border:1px solid #d8cebf;
+  border:1px solid var(--rule);
   border-radius:4px;
   background:var(--paper);
-  color:#685548;
+  color:var(--ink-soft);
   font:inherit;
   padding:.35rem .7rem;
   margin-right:.7rem;
   cursor:pointer;
 }
 #editorial-view input[readonly] {
-  background:#f3f0eb;
+  background:var(--rule-soft);
   color:var(--muted);
   cursor:default;
 }
@@ -75,7 +76,7 @@ legend {
   min-width:0;
   font-size:.77rem;
   font-weight:500;
-  color:#665b50;
+  color:var(--ink-soft);
   gap:.45rem;
 }
 .wide {
@@ -94,20 +95,20 @@ legend {
   gap:1rem;
 }
 .collection-group {
-  border:1px solid #e6ded1;
-  background:#fdfbf8;
+  border:1px solid var(--rule);
+  background:var(--paper);
   border-radius:6px;
   padding:.9rem;
 }
 .collection-group label {
   display:block;
   font-size:.78rem;
-  color:#736454;
+  color:var(--ink-soft);
   margin:.3rem 0;
 }
 .collection-group .child {
   padding-left:1.25rem;
-  color:#8a7c6c;
+  color:var(--muted);
 }
 .issue-heading {
   display:flex;
@@ -125,9 +126,9 @@ legend {
   font-size:.66rem;
   line-height:1.5;
   padding:.22rem .5rem;
-  border:1px solid #e6ded1;
-  color:#7a6b59;
-  background:#f7f3ec;
+  border:1px solid var(--rule);
+  color:var(--muted);
+  background:var(--ru-bg);
   border-radius:4px;
 }
 .priority-urgente {

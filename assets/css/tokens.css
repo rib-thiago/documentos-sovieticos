@@ -1,0 +1,32 @@
+/* Linguagem visual compartilhada pelo acervo e pela área editorial. */
+:root {
+  --bg:#f5f5f2;
+  --paper:#fff;
+  --ink:#222b2c;
+  --ink-soft:#465152;
+  --muted:#626e6e;
+  --rule:#dce1de;
+  --rule-soft:#edf0ed;
+  --accent:#812e38;
+  --accent-soft:#f7eef0;
+  --ru-bg:#f6f7f4;
+  --radius:6px;
+  --maxw:1440px;
+  --col-gap:2.2rem;
+  --font-ui:Inter,system-ui,-apple-system,sans-serif;
+  --font-reading:"Source Serif 4",Georgia,serif;
+  --font-heading:var(--font-reading);
+  --shadow:0 12px 32px #222b2c09;
+  --site-header-height:5rem;
+  --reader-panel-height:0px;
+}
+:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.page,#editorial-view { scroll-margin-top:calc(var(--site-header-height) + 1rem); }
+::selection { background:#ead4d8; color:#222b2c; }
+.skip-link { position:fixed; top:.5rem; left:1rem; z-index:100; padding:.7rem 1rem; background:var(--ink); color:white; font:500 .85rem var(--font-ui); transform:translateY(-160%); }
+.skip-link:focus { transform:translateY(0); }
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; }
+}
+
+.ui-icon { width:18px; height:18px; flex:0 0 auto; vertical-align:middle; }

@@ -33,6 +33,14 @@ def handler_for(repository, editorial):
         server_version = "DocumentosSovieticos/1"
 
         def send_data(self, data, content_type, status=200):
+            try:
+                self.write_response(data, content_type, status)
+            except (ConnectionError, TimeoutError):
+                # O cliente pode cancelar/recarregar a página. Não enviar uma segunda resposta.
+                self.close_connection = True
+
+        def write_response(self, data, content_type, status=200):
+            self.connection.settimeout(30)
             self.send_response(status)
             self.send_header("Content-Type", content_type)
             self.send_header("Content-Length", str(len(data)))
@@ -112,8 +120,14 @@ def handler_for(repository, editorial):
                 raise EditorialError("A área editorial exige backend em 127.0.0.1 e acesso por localhost ou 127.0.0.1", 403)
 
         def do_GET(self):
-            with editorial.lock:
+            path = unquote(urlsplit(self.path).path)
+            # Recursos estáticos e capacidades não leem o estado mutável do catálogo.
+            # Uma conexão lenta não deve impedir o leitor de descobrir a edição local.
+            if not path.startswith("/api/") or path == "/api/editorial/capabilities":
                 self.get_locked()
+            else:
+                with editorial.lock:
+                    self.get_locked()
 
         def get_locked(self):
             try:
@@ -131,7 +145,10 @@ def handler_for(repository, editorial):
                     self.send_data(page, "text/html; charset=utf-8")
                 elif path.startswith("/api/editorial/"):
                     self.require_local_editorial()
-                    if path == "/api/editorial/session":
+                    if path == "/api/editorial/capabilities":
+                        self.send_json({"mode": "local_editorial",
+                                        "features": ["translation_import", "markdown_edit", "reader_integration", "study_passage_edit"]})
+                    elif path == "/api/editorial/session":
                         self.send_json({"token": editorial.token, "statuses": STATUSES, "priorities": list(PRIORITIES), "revision": editorial.revision(),
                                         "features": ["translation_import", "markdown_edit", "reader_integration", "study_passage_edit", "catalog_intake", "batch_intake"]})
                     elif path == "/api/editorial/queue":

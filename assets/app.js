@@ -373,7 +373,7 @@ function updateParallelSelects() {
 function renderNav() {
   const nav = document.getElementById("docNav");
   nav.innerHTML = "";
-  nav.appendChild(el("a", { class: "nav-link", href: "#/", text: "Todas as coleções" }));
+  nav.appendChild(el("a", { class: "nav-link", href: "#/", text: "Acervo" }));
   const select = el("select", {
     class: "collection-select", "aria-label": "Abrir coleção",
   });
@@ -385,7 +385,9 @@ function renderNav() {
     if (select.value) location.hash = `#/colecao/${select.value}`;
   });
   nav.appendChild(select);
-  nav.appendChild(el("a", { class: "nav-link search-nav-link", href: "#/busca", text: "Buscar" }));
+  const searchLink=el("a", { class: "nav-link search-nav-link", href: "#/busca", text: "Pesquisar" });
+  searchLink.prepend(archiveIcon("search"));nav.appendChild(searchLink);
+  nav.appendChild(el("a",{class:"nav-link nav-editorial",href:"/editorial",text:"Área editorial",hidden:state.editorialAvailable?null:"hidden"}));
 }
 
 function setActiveNav(collectionId) {
@@ -698,6 +700,8 @@ function languageField(langs,className,label,code) {
 function renderToolbar(langs, meta) {
   const bar = el("section", { class: "doc-toolbar", "aria-label":"Painel do documento" });
   const controls=el("div",{class:"reader-panel-controls",id:"reader-panel-controls"});
+  const tabs=el("div",{class:"reader-panel-tabs",role:"tablist","aria-label":"Ferramentas do documento"});
+  const panels=new Map();let activePanel="control-viewing";
   const actions=el("div",{class:"reader-panel-actions"});
   const heading=el("div",{class:"reader-panel-heading"},[
     el("span",{class:"reader-panel-title",text:"Painel do documento"}),
@@ -710,26 +714,39 @@ function renderToolbar(langs, meta) {
   const expand=el("button",{type:"button",class:"panel-button panel-expand","aria-controls":"reader-panel-controls"});
   const applyExpanded=()=>{
     controls.hidden=!expanded;
-    expand.textContent=expanded?"Recolher ▴":"Expandir ▾";
+    expand.replaceChildren(archiveIcon("chevron"),el("span",{text:expanded?"Recolher":"Ferramentas"}));
+    for(const [key,{group,tab}] of panels){
+      const active=expanded&&key===activePanel;group.hidden=!active;
+      tab.setAttribute("aria-selected",String(active));tab.tabIndex=key===activePanel?0:-1;
+    }
     expand.setAttribute("aria-expanded",String(expanded));
     bar.classList.toggle("is-collapsed",!expanded);
     if(!expanded)for(const item of controls.querySelectorAll("details[open]"))item.open=false;
     updateReadingLayout();
   };
   expand.addEventListener("click",()=>{expanded=!expanded;applyExpanded();});
-  const section=(title,className)=>{
+  const section=(title,className,icon,description)=>{
     const body=el("div",{class:"control-section-body"});
-    const group=el("section",{class:"control-section "+className},[
-      el("div",{class:"control-section-heading"},[el("h2",{text:title})]),body
+    const group=el("section",{class:"control-section "+className,id:className,role:"tabpanel","aria-labelledby":className+"-tab"},[
+      el("div",{class:"control-section-heading"},[el("h2",{text:title}),el("p",{text:description})]),body
     ]);
-    controls.append(group);
-    return body;
+    const tab=el("button",{type:"button",id:className+"-tab",role:"tab","aria-controls":className,text:title});
+    tab.prepend(archiveIcon(icon));
+    tab.addEventListener("click",()=>{activePanel=className;expanded=true;applyExpanded();});
+    tab.addEventListener("keydown",event=>{
+      const buttons=[...tabs.querySelectorAll("[role=tab]")];const index=buttons.indexOf(tab);
+      let target;if(event.key==="ArrowRight")target=(index+1)%buttons.length;
+      if(event.key==="ArrowLeft")target=(index+buttons.length-1)%buttons.length;
+      if(event.key==="Home")target=0;if(event.key==="End")target=buttons.length-1;
+      if(target!==undefined){event.preventDefault();buttons[target].focus();buttons[target].click();}
+    });
+    panels.set(className,{group,tab});tabs.append(tab);controls.append(group);return body;
   };
-  const navigation=section("Navegar no texto","control-navigation");
+  const viewing=section("Leitura e idiomas","control-viewing","read","Escolha como ler o documento e comparar suas versões.");
+  const navigation=section("Índice e posição","control-navigation","compass","Navegue pelas seções ou retome o parágrafo marcado.");
   navigation.append(el("div",{class:"reading-tools",role:"group","aria-label":"Índice e marcador do documento",hidden:"hidden"}));
-  const viewing=section("Visualização e idiomas","control-viewing");
-  const documentActions=section("Trabalhar com o documento","control-document-actions");
-  bar.append(head,controls);
+  const documentActions=section("Edição e arquivos","control-document-actions","edit","Trabalhe com as versões do documento e baixe o Markdown.");
+  bar.append(head,tabs,controls);
   // Os menus compartilham a mesma estrutura, incluindo a edição carregada localmente.
   bar.addEventListener("toggle",event=>{
     if(event.target.tagName==="DETAILS"&&event.target.open)
@@ -743,10 +760,9 @@ function renderToolbar(langs, meta) {
   };
   const pin=el("button",{type:"button",class:"toolbar-pin panel-button","aria-pressed":"false",title:"Fixar barra durante a rolagem",text:"Fixar"});
   let pinned=sessionRead("readerToolbarPinned")==="true";
-  const applyPin=()=>{bar.classList.toggle("is-pinned",pinned);pin.setAttribute("aria-pressed",String(pinned));pin.textContent=pinned?"Soltar":"Fixar";pin.title=pinned?"Deixar barra no início do texto":"Fixar barra durante a rolagem";updateReadingLayout();};
+  const applyPin=()=>{bar.classList.toggle("is-pinned",pinned);pin.setAttribute("aria-pressed",String(pinned));pin.replaceChildren(archiveIcon("pin"),el("span",{text:pinned?"Soltar":"Fixar"}));pin.title=pinned?"Deixar barra no início do texto":"Fixar barra durante a rolagem";updateReadingLayout();};
   pin.addEventListener("click",()=>{pinned=!pinned;sessionWrite("readerToolbarPinned",String(pinned));applyPin();});
   const hasTranslations = langs.length > 1;
-  const isStudy = hasTranslations && state.viewMode === "study";
 
   if (hasTranslations) {
     const modes = el("div", { class: "toolbar-group", role: "group", "aria-label": "Modo de visualização" });
@@ -759,7 +775,7 @@ function renderToolbar(langs, meta) {
       button.addEventListener("click", () => setViewMode(code));
       modes.appendChild(button);
     });
-    const modeMenu=menu("Modo · "+(isStudy?"Estudo":"Leitura"),modes);
+    const modeMenu=el("div",{class:"mode-switch"},[el("span",{class:"toolbar-label",text:"Modo de leitura"}),modes]);
     modeMenu.dataset.control="mode";viewing.appendChild(modeMenu);
 
     {
@@ -773,7 +789,7 @@ function renderToolbar(langs, meta) {
         button.addEventListener("click", () => setStudyMode(code));
         submodes.appendChild(button);
       });
-      const studyMenu=menu("Estudo · "+(state.studyMode==="parallel"?"Paralelo":"Por parágrafo"),submodes);
+      const studyMenu=el("div",{class:"study-layout-switch"},[el("span",{class:"toolbar-label",text:"Organização do estudo"}),submodes]);
       studyMenu.dataset.control="study";viewing.appendChild(studyMenu);
     }
     {
@@ -815,10 +831,13 @@ function renderToolbar(langs, meta) {
   exportGroup.appendChild(button);
   documentActions.appendChild(menu("Exportar Markdown",exportGroup));
   documentActions.appendChild(editorialReaderTools(meta,langs));
-  actions.append(quickResume,pin,expand);
+  const quickDownload=el("button",{type:"button",class:"panel-button panel-download",text:"Baixar"});
+  quickDownload.prepend(archiveIcon("download"));
+  quickDownload.addEventListener("click",()=>downloadMarkdown(meta,langs.find(lang=>lang.code===documentActionLanguage(meta,langs))||langs[0]));
+  actions.append(quickResume,editorialQuickAction(meta,langs),quickDownload,pin,expand);
   bar.updateViewing=()=>{
     const study=langs.length>1&&state.viewMode==="study";
-    bar.querySelector(".reader-panel-status").textContent=study?"Estudo":"Leitura";
+    bar.querySelector(".reader-panel-status").textContent=(study?"Estudo":"Leitura")+" · "+documentActionLanguage(meta,langs).toUpperCase();
     for(const select of bar.querySelectorAll(".reading-language,.export-language,.editorial-language")){
       if(select.classList.contains("reading-language"))select.value=readingLanguage(meta,langs);
       else if(select.classList.contains("export-language")||select.classList.contains("editorial-language")){
@@ -835,10 +854,10 @@ function renderToolbar(langs, meta) {
       const kind=item.dataset.control;
       item.hidden=kind==="study"?!study:kind==="reading"?study:kind==="columns"?!(study&&state.studyMode==="parallel"):false;
       if(item.hidden)item.open=false;
-      if(kind==="mode")item.querySelector("summary").textContent="Modo · "+(study?"Estudo":"Leitura");
-      if(kind==="study")item.querySelector("summary").textContent="Estudo · "+(state.studyMode==="parallel"?"Paralelo":"Por parágrafo");
+      if(kind==="reading")item.querySelector("summary").textContent="Idioma · "+(langs.find(lang=>lang.code===readingLanguage(meta,langs))?.label||readingLanguage(meta,langs).toUpperCase());
     }
   };
+  bar.closeTools=()=>{expanded=false;applyExpanded();};
   bar.updateViewing();applyExpanded();applyPin();
   if(typeof ResizeObserver!=="undefined"){
     bar.layoutObserver=new ResizeObserver(updateReadingLayout);
@@ -909,10 +928,7 @@ function readingViewportTop() {
 }
 
 function closeDocumentPanel() {
-  const panel = document.querySelector(".reading-panel");
-  if (!panel || !panel.open) return;
-  panel.open = false;
-  if (state.activeDocument) sessionWrite("readingPanel:v1:" + state.activeDocument.meta.id, "false");
+  document.querySelector(".doc-toolbar")?.closeTools?.();
 }
 
 function jumpToReadingBlock(target, offset = 0) {
@@ -1107,8 +1123,8 @@ function setupParagraphNavigation(meta, langs, content, entries, headings, mode)
   const tools = document.querySelector(".doc-toolbar .reading-tools");
   if(!tools)return;
   tools.innerHTML = "";
-  const panel = el("details", { class: "reading-panel editorial-menu" });
-  const summary = el("summary", {}, [
+  const panel = el("section", { class: "reading-panel" });
+  const summary = el("div", { class:"reading-index-overview" }, [
     el("span", { text: headings.length ? `Índice do texto · ${headings.length} seções` : "Posição de leitura" }),
     el("span", { class: "panel-marker", text: "●", title: "Há uma posição marcada", "aria-label": "Há uma posição marcada" }),
   ]);
@@ -1130,11 +1146,6 @@ function setupParagraphNavigation(meta, langs, content, entries, headings, mode)
     ]));
   }
   panel.appendChild(body);
-  panel.open = sessionRead("readingPanel:v1:" + meta.id) === "true";
-  panel.addEventListener("toggle", () => {
-    sessionWrite("readingPanel:v1:" + meta.id, String(panel.open));
-    updateReadingLayout();
-  });
   tools.appendChild(panel);
   tools.hidden = false;
 
@@ -1429,16 +1440,15 @@ function renderHome() {
   const wrap = el("section", { class: "home" });
 
   const intro = el("header", { class: "home-intro" });
-  intro.appendChild(el("p", { class: "doc-eyebrow", text: "Arquivo" }));
-  intro.appendChild(el("h1", {}, ["Documentos Soviéticos"]));
-  intro.appendChild(el("p", {
+  const introduction = el("div", { class: "home-introduction" });
+  introduction.appendChild(el("p", { class: "doc-eyebrow", text: "Biblioteca digital · Arquivo de pesquisa" }));
+  introduction.appendChild(el("h1", { text: "Documentos para compreender a história." }));
+  introduction.appendChild(el("p", {
     class: "home-subtitle",
-    text: "Fontes primárias e ensaios históricos sobre o período stalinista, em russo e em edições com traduções para português e inglês."
+    text: "Fontes primárias e ensaios sobre o período stalinista. Explore as coleções, consulte os originais e compare traduções em português e inglês."
   }));
-  wrap.appendChild(intro);
-
   const homeSearch = el("form", { class: "home-search", role: "search", "aria-label": "Buscar no acervo" });
-  const query = el("input", { type: "search", name: "q", maxlength: "500", "aria-label": "Palavras para buscar no acervo", placeholder: "Buscar no acervo…" });
+  const query = el("input", { type: "search", name: "q", maxlength: "500", "aria-label": "Palavras para buscar no acervo", placeholder: "Busque por nome, tema ou expressão…" });
   homeSearch.appendChild(query);
   homeSearch.appendChild(el("button", { type: "submit", class: "search-submit", text: "Buscar" }));
   homeSearch.addEventListener("submit", event => {
@@ -1447,16 +1457,62 @@ function renderHome() {
     if (query.value.trim()) params.set("q", query.value.trim());
     location.hash = searchURL(params);
   });
-  wrap.appendChild(homeSearch);
+  introduction.appendChild(homeSearch);
+  introduction.appendChild(el("p", { class: "home-search-hint", text: "Pesquise nos documentos e refine os resultados por coleção e idioma." }));
+  intro.appendChild(introduction);
+  const overview = el("aside", { class: "archive-overview", "aria-label": "O acervo em números" });
+  overview.appendChild(el("p", { class: "archive-overview-title", text: "Um acervo para consultar" }));
+  const stats = el("dl", { class: "archive-stats" });
+  const number = new Intl.NumberFormat("pt-BR");
+  const languages = new Set([...state.documentIndex.values()].flatMap(doc => (doc.languages || []).map(lang => lang.code)));
+  for (const [value, label] of [[state.documentIndex.size, "documentos no catálogo"], [state.manifest.collections.length, "coleções para explorar"], [languages.size, "idiomas disponíveis"]]) {
+    const stat = el("div", { class: "archive-stat" });
+    stat.appendChild(el("dt", { text: label }));
+    stat.appendChild(el("dd", { text: number.format(value) }));
+    stats.appendChild(stat);
+  }
+  overview.appendChild(stats);
+  intro.appendChild(overview);
+  wrap.appendChild(intro);
+  const collectionHeading = el("div", { class: "archive-section-heading" });
+  collectionHeading.appendChild(el("h2", { text: "Explore as coleções" }));
+  const collectionCount=el("p",{role:"status","aria-live":"polite",text:state.manifest.collections.length+" coleções"});
+  collectionHeading.appendChild(collectionCount);
+  wrap.appendChild(collectionHeading);
 
   const grid = el("div", { class: "collection-grid" });
+  const shelf=el("div",{class:"shelf-tools"});
+  const filter=el("input",{type:"search",class:"collection-filter",placeholder:"Filtrar coleções…","aria-label":"Filtrar coleções por nome"});
+  const layout=el("div",{class:"shelf-layout",role:"group","aria-label":"Apresentação das coleções"});
+  let shelfLayout=sessionRead("collectionLayout")==="list"?"list":"covers";
+  const layoutButtons=[];
+  const applyShelfLayout=()=>{
+    grid.classList.toggle("is-list",shelfLayout==="list");
+    for(const [button,value] of layoutButtons)button.setAttribute("aria-pressed",String(value===shelfLayout));
+  };
+  for(const [value,label,icon] of [["covers","Capas","read"],["list","Lista","catalog"]]){
+    const button=el("button",{type:"button",text:label});button.prepend(archiveIcon(icon));
+    button.addEventListener("click",()=>{shelfLayout=value;sessionWrite("collectionLayout",value);applyShelfLayout();});
+    layoutButtons.push([button,value]);layout.append(button);
+  }
+  shelf.append(filter,layout);wrap.append(shelf);applyShelfLayout();
+  const normalize=value=>String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+  const filterCollections=()=>{
+    const query=normalize(filter.value.trim());let visible=0;
+    for(const card of grid.children){card.hidden=!card.dataset.search.includes(query);if(!card.hidden)visible++;}
+    collectionCount.textContent=visible+" de "+state.manifest.collections.length+" coleções";
+    empty.hidden=visible>0;
+  };
+  filter.addEventListener("input",filterCollections);
   for (const c of state.manifest.collections) {
     const card = el("a", { class: "collection-card", href: `#/colecao/${c.id}` });
+    card.dataset.search=normalize([c.title_pt,c.title_ru,c.subtitle_pt].filter(Boolean).join(" "));
     card.style.setProperty("--accent", c.accent || "#8b2c2c");
     if (c.cover) {
       card.classList.add("has-cover");
       card.style.setProperty("--cover", `url("${absURL(c.cover)}")`);
     }
+    card.appendChild(el("div", { class: "collection-card-cover", "aria-hidden": "true" }));
     const body = el("div", { class: "collection-card-body" });
     body.appendChild(el("p", {
       class: "collection-card-eyebrow",
@@ -1468,10 +1524,16 @@ function renderHome() {
     body.appendChild(el("p", { class: "collection-card-ru", text: c.title_ru }));
     if (c.subtitle_pt)
       body.appendChild(el("p", { class: "collection-card-subtitle", text: c.subtitle_pt }));
+    const footer = el("div", { class: "collection-card-footer", "aria-hidden": "true" });
+    footer.appendChild(el("span", { text: "Explorar coleção" }));
+    footer.appendChild(el("span", { text: "↗" }));
+    body.appendChild(footer);
     card.appendChild(body);
     grid.appendChild(card);
   }
   wrap.appendChild(grid);
+  const empty=el("p",{class:"shelf-empty",text:"Nenhuma coleção encontrada. Tente outro nome.",hidden:"hidden"});
+  wrap.append(empty);
 
   root.appendChild(wrap);
   setActiveNav(null);
@@ -1568,15 +1630,12 @@ async function main() {
     document.addEventListener("click", event => {
       if(document.querySelector("dialog[open]"))return;
       for(const menu of document.querySelectorAll(".editorial-menu[open]"))if(!menu.contains(event.target))menu.open=false;
-      const tools = document.querySelector(".reading-tools");
-      if (tools && !tools.contains(event.target)) closeDocumentPanel();
     });
     document.addEventListener("keydown", event => {
       if(document.querySelector("dialog[open]"))return;
       if(event.key==="Escape")for(const menu of document.querySelectorAll(".editorial-menu[open]")){menu.open=false;menu.querySelector("summary")?.focus();}
-      if (event.key === "Escape" && document.querySelector(".reading-panel")?.open) {
-        closeDocumentPanel();
-        document.querySelector(".reading-panel > summary")?.focus();
+      if (event.key === "Escape" && document.querySelector(".doc-toolbar .panel-expand[aria-expanded=true]")) {
+        closeDocumentPanel();document.querySelector(".panel-expand")?.focus();
       }
     });
     window.addEventListener("pagehide", () => {stopReadingTracking();stopPanelLayoutTracking();});

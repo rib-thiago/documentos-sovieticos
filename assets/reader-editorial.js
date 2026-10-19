@@ -59,42 +59,89 @@ function restoreEditorialReading(context) {
   }));
 }
 
+function localEditorialHost() {
+  return ["localhost","127.0.0.1","[::1]"].includes(location.hostname);
+}
+
+function editorialLink(meta, langs, title, destination, icon="edit") {
+  const link=el("a",{class:"editorial-action-link",text:title});
+  link.prepend(archiveIcon(icon));
+  const update=capture=>{
+    const code=document.querySelector(".editorial-language")?.value||documentActionLanguage(meta,langs);
+    const params=new URLSearchParams({idioma:code,leitor:capture?editorialReturnAddress():"/"+location.hash});
+    let path;
+    if(destination==="importar"){path="importar";params.set("documento",meta.id);}
+    else if(destination==="markdown"&&(langs.find(lang=>lang.code===code)?.format||meta.format)!=="text")path="markdown/"+encodeURIComponent(meta.id+":"+code);
+    else path="documento/"+encodeURIComponent(meta.id);
+    link.href="/editorial#/"+path+"?"+params;
+  };
+  update(false);
+  link.addEventListener("pointerdown",()=>update(true));
+  link.addEventListener("click",()=>update(true));
+  return link;
+}
+
 function editorialReaderTools(meta,langs) {
-  const group=el("div",{class:"toolbar-group editorial-controls",hidden:"hidden","aria-label":"Edição local do documento"});
+  const group=el("div",{class:"toolbar-group editorial-controls","aria-label":"Edição local do documento"});
   group.dataset.docId=meta.id;
   function populate() {
-    if(!state.editorialAvailable||parseRoute().id!==meta.id)return;
-    group.hidden=false;
-    const menu=el("details",{class:"editorial-menu"});
-    menu.append(el("summary",{text:"Editar"}));
-    const panel=el("div",{class:"editorial-menu-body"});
-    const field=languageField(langs,"editorial-language","Idioma para edição",documentActionLanguage(meta,langs));
-    const select=field.select;
-    const edit=el("a",{class:"editorial-link",text:"Editar"});
-    const update=(capture=false)=>{
-      edit.href="/editorial#/documento/"+encodeURIComponent(meta.id)+"?"+new URLSearchParams({idioma:select.value,leitor:capture?editorialReturnAddress():"/"+location.hash});
-    };
-    update();
-    edit.addEventListener("pointerdown",()=>update(true));
-    edit.addEventListener("click",()=>update(true));
-    select.addEventListener("change",()=>update());
-    panel.append(field.element,edit);
-    menu.append(panel);group.replaceChildren(menu);
+    if(parseRoute().id!==meta.id)return;
+    group.replaceChildren();
+    group.hidden=!state.editorialAvailable&&!localEditorialHost();
+    if(group.hidden)return;
+    if(!state.editorialAvailable) {
+      group.append(el("p",{class:"control-help",text:state.editorialStatus==="checking"?"Conectando às ferramentas locais…":"A edição local não respondeu. Confira se o backend está aberto e tente novamente."}));
+      const retry=el("button",{type:"button",class:"editorial-reconnect",text:"Reconectar edição local"});
+      retry.disabled=state.editorialStatus==="checking";
+      retry.addEventListener("click",()=>detectReaderEditorial());group.append(retry);return;
+    }
+    group.append(el("p",{class:"editorial-local-note",text:"Edição local · alterações com prévia e histórico"}));
+    const field=languageField(langs,"editorial-language","Idioma da versão",documentActionLanguage(meta,langs));
+    group.append(el("span",{class:"toolbar-label",text:"Versão para editar"}),field.element);
+    const links=el("div",{class:"editorial-action-grid"});
+    links.append(editorialLink(meta,langs,"Editar Markdown","markdown","edit"),
+      editorialLink(meta,langs,"Adicionar tradução","importar","language"),
+      editorialLink(meta,langs,"Metadados","documento","catalog"));
+    // A rota de documento mantém o contexto; o editor Markdown continua na lateral editorial.
+    group.append(links);
   }
   group.populateEditorial=populate;populate();return group;
 }
 
+function editorialQuickAction(meta,langs) {
+  const group=el("div",{class:"editorial-controls editorial-quick-action"});
+  group.populateEditorial=()=>{
+    group.replaceChildren();group.hidden=!state.editorialAvailable&&!localEditorialHost();
+    if(state.editorialAvailable) {
+      const link=editorialLink(meta,langs,"Editar","documento");link.classList.add("panel-button","panel-edit");group.append(link);
+    } else if(localEditorialHost()) {
+      const button=el("button",{type:"button",class:"panel-button",text:state.editorialStatus==="checking"?"Conectando…":"Conectar edição"});
+      button.disabled=state.editorialStatus==="checking";button.addEventListener("click",()=>detectReaderEditorial());group.append(button);
+    }
+  };
+  group.populateEditorial();return group;
+}
+
 async function detectReaderEditorial() {
-  const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),3000);
-  try {
-    const response=await fetch("/api/editorial/session",{cache:"no-store",signal:controller.signal});
-    const data=response.ok&&(response.headers.get("content-type")||"").includes("application/json")?await response.json():null;
-    state.passageAvailable=typeof data?.token==="string"&&data.features?.includes("study_passage_edit")===true;
-    state.editorialAvailable=typeof data?.token==="string"&&data.features?.includes("markdown_edit")===true;
-  }catch{state.editorialAvailable=false;state.passageAvailable=false;}
-  finally{clearTimeout(timeout);}
-  for(const group of document.querySelectorAll(".editorial-controls"))group.populateEditorial?.();
-  installStudyPassageTools();
+  if(state.editorialDetection)return state.editorialDetection;
+  state.editorialStatus="checking";
+  document.querySelectorAll(".editorial-controls").forEach(group=>group.populateEditorial?.());
+  state.editorialDetection=(async()=>{
+    const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),15000);
+    try {
+      const response=await fetch("/api/editorial/capabilities",{cache:"no-store",signal:controller.signal});
+      const data=response.ok&&(response.headers.get("content-type")||"").includes("application/json")?await response.json():null;
+      const local=data?.mode==="local_editorial";
+      state.passageAvailable=local&&data.features?.includes("study_passage_edit")===true;
+      state.editorialAvailable=local&&data.features?.includes("markdown_edit")===true;
+      state.editorialStatus=state.editorialAvailable?"available":"unavailable";
+    }catch{state.editorialAvailable=false;state.passageAvailable=false;state.editorialStatus="unavailable";}
+    finally{clearTimeout(timeout);}
+    document.querySelectorAll(".editorial-controls").forEach(group=>group.populateEditorial?.());
+    document.querySelector(".nav-editorial")?.toggleAttribute("hidden",!state.editorialAvailable);
+    installStudyPassageTools();
+  })();
+  try{await state.editorialDetection;}finally{state.editorialDetection=null;}
 }
 
 async function reloadEditorialCatalog(preferredContext=null) {

@@ -6,6 +6,7 @@ As entradas públicas continuam sendo `assets/style.css` e `assets/editorial.css
 
 Ordem declarada em `style.css`:
 
+0. `tokens.css`: identidade e variáveis compartilhadas com a editoria.
 1. `site.css`: tema, reset, navegação superior, estrutura e coleções.
 2. `catalog.css`: listas, datas, paginação, navegação sequencial e busca.
 3. `reader.css`: cabeçalho do documento, Markdown, estudo e marcador de parágrafo.
@@ -16,12 +17,13 @@ Ordem declarada em `style.css`:
 
 Ordem declarada em `editorial.css`:
 
+0. `tokens.css`: identidade compartilhada.
 1. `editorial-base.css`: tema, links, botões, mensagens e estados ocultos.
 2. `editorial-layout.css`: cabeçalho, lateral, catálogo e listas de coleções.
 3. `editorial-forms.css`: campos, associações, pendências e estados de formulário.
 4. `editorial-preview.css`: prévias, diferenças, Markdown, importações e lotes.
 
-As duas páginas têm entradas independentes. Não se carrega o CSS editorial no leitor nem o inverso. Seus temas mantêm os valores já aprovados; as variáveis de fontes reduzem repetição dentro de cada contexto.
+As duas páginas têm entradas independentes. Não se carrega o CSS editorial no leitor nem o inverso. Ambas importam `tokens.css` para compartilhar paleta, tipografia, superfícies e foco; os componentes continuam separados.
 
 ## Manutenção
 
@@ -34,4 +36,4 @@ As duas páginas têm entradas independentes. Não se carrega o CSS editorial no
 - Reservar estilos inline para dados de apresentação específicos, como cor/capa de coleção e ordem das colunas. Estilos estáticos pertencem a estes arquivos.
 - Ao alterar uma versão visual, atualizar as consultas `?v=` das entradas HTML e dos imports CSS para não misturar arquivos em cache.
 
-A referência desta rodada é `stable-week-1`. Não foi criado um build, uma tag Git ou um mecanismo de publicação. Os percursos de avaliação prática estão em `docs/projeto/SEMANA-ESTAVEL.md`.
+A referência visual atual é `workspace-3`, descrita em `docs/projeto/INTERFACE-ARQUIVO.md`. A referência anterior era `stable-week-1`. Não foi criado um build, uma tag Git ou um mecanismo de publicação. Os percursos de avaliação prática estão em `docs/projeto/SEMANA-ESTAVEL.md`.
