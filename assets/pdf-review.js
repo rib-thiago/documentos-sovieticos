@@ -21,10 +21,11 @@ window.archivePDFReview=(()=>{
     const raw=node('details',{},[node('summary',{text:'Consultar extração bruta preservada'}),node('pre',{class:'pdf-raw-text',text:state.raw.raw_text||'(Sem texto pesquisável)'}),node('p',{class:'pdf-source-id',text:state.raw.engine+' · SHA-256 '+state.raw.text_sha256})]);
     const candidates=node('details',{},[node('summary',{text:'Candidatos OCR e comparação'})]),candidateBody=node('div');candidates.append(candidateBody);
     const history=node('details',{},[node('summary',{text:'Histórico recuperável desta página'})]),records=node('div');history.append(records);
+    const alignmentHost=node('section');
     const units=node('details',{},[node('summary',{text:'Referências dos trechos da revisão'})]),unitBody=node('div');units.append(unitBody);
     const form=node('form',{class:'pdf-source-form pdf-review-form'},[controls,preview]);
     const review=node('button',{type:'submit',class:'primary',text:'Conferir alterações'});controls.append(review);
-    host.append(node('h3',{text:'Revisão · página física '+number}),notice,basis,candidates,form,raw,units,history);
+    host.append(node('h3',{text:'Revisão · página física '+number}),notice,basis,candidates,form,raw,units,alignmentHost,history);
     const alive=()=>!disposed&&host.isConnected&&!signal?.aborted;
     const change=()=>{dirty=true;version++;setDirty(true);preview.hidden=true;try{sessionStorage.setItem(draftKey,JSON.stringify({revision:state.revision,text:text.value,status:status.value,printed_label:printed.value,notes:notes.value,basis:state.review.basis}));}catch{notice.textContent='Rascunho não pôde ser guardado na sessão. Salve antes de sair.';}};
     form.oninput=change;
@@ -34,6 +35,7 @@ window.archivePDFReview=(()=>{
     if(typeof MutationObserver!=='undefined'){observer=new MutationObserver(()=>{if(!host.isConnected)dispose();});observer.observe(document.documentElement,{childList:true,subtree:true});}
     function fill(){text.value=state.review.text;status.value=state.review.status;printed.value=state.review.printed_label;notes.value=state.review.notes;basis.textContent='Revisão '+state.revision+' · base: '+(state.review.basis==='native'?'extração nativa':state.review.basis)+'. Correções permanecem locais à fonte PDF.';}
     function showLists(){
+      if(window.archivePDFAlignment)archivePDFAlignment.mount(alignmentHost,{api,sourceId,number,signal,canEdit:()=>!dirty&&!saving,onSaved:next=>{state=next;fill();showLists();notice.textContent='Revisão estrutural salva; texto preservado.';document.dispatchEvent(new CustomEvent('archive:pdf-review-saved'));}}).catch(e=>{if(alive())notice.textContent=e.message;});
       candidateBody.replaceChildren();
       for(const c of state.candidates){const value=node('pre',{class:'pdf-raw-text',text:c.raw_text||'(OCR sem texto)'}),comparison=node('pre',{class:'pdf-raw-text'});
         const adopt=button('Carregar este candidato no editor',()=>{if(saving)return;if(dirty&&!confirm('Substituir o rascunho não salvo pelo candidato OCR?'))return;text.value=c.raw_text;state.review.basis=c.id;change();notice.textContent='Candidato carregado. Confira e salve para adotá-lo como transcrição de trabalho.';});
@@ -49,7 +51,7 @@ window.archivePDFReview=(()=>{
     async function prepare(extra={}){
       review.disabled=true;const submitted=version;
       try{const result=await api('/api/editorial/pdf/review/preview',{source_id:sourceId,page_number:number,revision:state.revision,...(extra.history_id?extra:{review:{text:text.value,status:status.value,printed_label:printed.value,notes:notes.value,basis:state.review.basis}})},signal);if(!alive()||submitted!==version)return;
-        preview.replaceChildren(node('h4',{text:'Confira antes de salvar'}),node('p',{text:'Conferência: '+statuses[result.before.status]+' → '+statuses[result.after.status]}),node('p',{text:'Rótulo impresso: '+(result.before.printed_label||'—')+' → '+(result.after.printed_label||'—')}),node('pre',{class:'pdf-raw-text',text:result.diff||'O texto não mudou.'}),node('p',{text:'Notas: '+(result.before.notes||'—')+' → '+(result.after.notes||'—')}),node('p',{class:'pdf-source-id',text:'Base: '+result.before.basis+' → '+result.after.basis}));
+        preview.replaceChildren(node('h4',{text:'Confira antes de salvar'}),node('p',{text:'Conferência: '+statuses[result.before.status]+' → '+statuses[result.after.status]}),node('p',{text:'Rótulo impresso: '+(result.before.printed_label||'—')+' → '+(result.after.printed_label||'—')}),node('pre',{class:'pdf-raw-text',text:result.diff||'O texto não mudou.'}),node('p',{class:'help',text:result.before.units?.some(u=>u.boxes?.length||u.boundary==='manual')&&result.before.text!==result.after.text?'A mudança textual pode retirar fronteiras/caixas das unidades alteradas; confira a revisão estrutural após salvar.':''}),node('p',{text:'Notas: '+(result.before.notes||'—')+' → '+(result.after.notes||'—')}),node('p',{class:'pdf-source-id',text:'Base: '+result.before.basis+' → '+result.after.basis}));
         const save=button('Confirmar gravação local',async()=>{saving=true;controls.disabled=true;save.disabled=true;setSaving(true);try{const next=await api('/api/editorial/pdf/review/save',{preview_id:result.preview_id},signal);state=next;dirty=false;try{sessionStorage.removeItem(draftKey);}catch{}setDirty(false);if(alive()){fill();showLists();preview.hidden=true;notice.textContent='Revisão salva. Texto bruto e original preservados.';document.dispatchEvent(new CustomEvent('archive:pdf-review-saved'));}}catch(e){if(alive())notice.textContent=e.message;}finally{saving=false;controls.disabled=false;save.disabled=false;setSaving(false);}});preview.append(save);preview.hidden=false;
       }catch(e){if(alive())notice.textContent=e.message;}finally{review.disabled=false;}
     }
@@ -95,6 +97,7 @@ window.archivePDFReview=(()=>{
     host.append(ocr,node('div',{class:'pdf-source-toolbar'},[button('← Anterior',()=>open(current-1)),input,button('Ir',()=>open(Number(input.value))),button('Próxima →',()=>open(current+1)),button('Atualizar página',()=>open(current))]),notice,node('div',{class:'pdf-source-grid'},[frame,editor]));
     const bindings=node('details',{class:'panel'},[node('summary',{text:'Vincular fonte a um documento'})]),bindingsHost=node('section');bindings.append(bindingsHost);host.append(bindings);
     let loaded=false;bindings.addEventListener('toggle',async()=>{if(!bindings.open||loaded)return;try{await archivePDFLinks.renderManager(bindingsHost,{api,sourceId,projectId,signal});loaded=true;}catch(e){bindingsHost.textContent=e.message;}});
+    const workflow=node('section');host.append(workflow);await archivePDFWorkflow.mount(workflow,{api,sourceId,projectId,signal});
     await mountOCR(ocr,{api,sourceId,currentPage:()=>current,signal});await open(current);
   }
   return {mountPage,mountOCR,renderSource};

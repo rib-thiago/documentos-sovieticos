@@ -141,14 +141,21 @@ class PDFReview:
                 # Match exact unchanged paragraphs, retaining IDs across edits/reordering.
                 pools = {}
                 for unit in old_units:
-                    pools.setdefault(unit['sha256'], []).append(unit['id'])
+                    pools.setdefault(unit['sha256'], []).append(unit)
                 units = []
                 for match in re.finditer(r'\S[\s\S]*?(?=\n\s*\n|\Z)', after['text']):
                     value = match.group().rstrip()
                     hashed = digest(value)
                     prior = pools.get(hashed, [])
-                    units.append({'id': prior.pop(0) if prior else 'unit-'+secrets.token_hex(16), 'start': match.start(), 'end': match.start()+len(value), 'sha256': hashed, 'boundary': 'blank_line_candidate'})
+                    previous = prior.pop(0) if prior else {}
+                    units.append({**previous, 'id': previous.get('id') or 'unit-'+secrets.token_hex(16), 'start': match.start(), 'end': match.start()+len(value), 'sha256': hashed, 'boundary': previous.get('boundary','blank_line_candidate')})
+                if after['text'] == current['review']['text']:
+                    units = old_units
                 after['units'] = units
+                after['structure_events'] = current['review'].get('structure_events', [])[-199:]
+                retired = [u['id'] for u in old_units if u['id'] not in {n['id'] for n in units}]
+                if retired:
+                    after['structure_events'] = after['structure_events']+[{'action':'text_edit','before':retired,'after':[u['id'] for u in units if u['id'] not in {n['id'] for n in old_units}]}]
             plan = {'source_id': source_id, 'page_number': number, 'revision': current['revision'],
                     'before': current['review'], 'after': after, 'raw_sha256': current['raw']['text_sha256']}
             diff = ''.join(difflib.unified_diff(current['review']['text'].splitlines(True), after['text'].splitlines(True), fromfile='Versão atual', tofile='Revisão proposta'))

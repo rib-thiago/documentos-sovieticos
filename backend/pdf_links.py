@@ -132,7 +132,7 @@ class PDFLinks:
         return source
 
     def anchor(self, repository, state, payload):
-        if not isinstance(payload, dict) or set(payload) != {'language', 'body_sha256', 'quote', 'start', 'end', 'page_number', 'notes'}:
+        if not isinstance(payload, dict) or set(payload)-{'unit_id'} != {'language', 'body_sha256', 'quote', 'start', 'end', 'page_number', 'notes'}:
             raise EditorialError('Associação de trecho inválida')
         language = payload['language']
         body = self.edition(repository, state, language)
@@ -157,6 +157,10 @@ class PDFLinks:
         result = {'id': existing['id'] if existing else 'anchor-'+secrets.token_hex(16), **payload,
                   'quote_sha256': sha(quote), 'notes': text(payload['notes'], 4000), 'page_revision': page['revision'] if page else 0,
                   'printed_label': page_state.get('printed_label', ''), 'assertion': 'manual_page_association'}
+        if payload.get('unit_id'):
+            unit=next((u for u in page_state.get('units',[]) if u['id']==payload['unit_id']),None)
+            if not unit:raise EditorialError('A unidade da página mudou. Atualize antes de associar.',409)
+            result.update(unit_id=unit['id'],unit_sha256=unit['sha256'],unit_boxes=copy.deepcopy(unit.get('boxes',[])))
         state['anchors'] = [a for a in state['anchors'] if a['id'] != result['id']]+[result]
         return result
 

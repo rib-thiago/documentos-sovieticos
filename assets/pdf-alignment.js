@@ -1,0 +1,27 @@
+/* Fronteiras e localização manual; coordenadas OCR são sugestões visuais. */
+window.archivePDFAlignment=(()=>{
+ const n=(tag,attrs={},kids=[])=>{const e=document.createElement(tag);for(const[k,v]of Object.entries(attrs))if(k==='text')e.textContent=v;else e.setAttribute(k,v);e.append(...kids);return e;};
+ const b=(text,run)=>{const e=n('button',{type:'button',text});e.onclick=run;return e;};
+ async function mount(host,{api,sourceId,number,signal,canEdit,onSaved}){
+  const data=await api('/api/editorial/pdf/'+sourceId+'/pages/'+number+'/geometry',null,signal);if(!host.isConnected||signal?.aborted)return;
+  const shell=n('details',{class:'panel pdf-alignment'},[n('summary',{text:'Revisar fronteiras e localizar unidades na imagem'})]);host.replaceChildren(shell);
+  const notice=n('p',{role:'status'}),select=n('select',{'aria-label':'Unidade da transcrição'}),text=n('textarea',{rows:'5',readonly:'','aria-label':'Unidade selecionada; posicione o cursor para dividir'});
+  for(const u of data.units)select.append(n('option',{value:u.id,text:u.id+' · '+Array.from(data.text).slice(u.start,u.end).join('').slice(0,55)}));select.value=data.units[0]?.id||'';
+  const picture=n('div',{class:'pdf-alignment-image'}),image=n('img',{src:'/api/editorial/pdf/'+sourceId+'/pages/'+number+'/image.png',alt:'Página física '+number+' para delimitação manual',loading:'lazy'}),svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 1000 1000');svg.setAttribute('preserveAspectRatio','none');picture.append(image,svg);
+  const fields=n('div',{class:'pdf-source-toolbar'}),coords=['x','y','largura','altura'].map((name,index)=>{const input=n('input',{type:'number',min:'0',max:'1',step:'0.001','aria-label':name});input.value=index<2?'0':'0.1';fields.append(n('label',{text:name},[input]));return input;});
+  const preview=n('section',{class:'pdf-preview',hidden:''});let boxes=[],start=null,busy=false,version=0;
+  const unit=()=>data.units.find(u=>u.id===select.value);
+  function invalidate(){version++;preview.hidden=true;}
+  function rectangle(box,kind){const r=document.createElementNS('http://www.w3.org/2000/svg','rect');for(const[k,v]of Object.entries({x:box[0]*1000,y:box[1]*1000,width:box[2]*1000,height:box[3]*1000,class:kind}))r.setAttribute(k,String(v));svg.append(r);}
+  function draw(){svg.replaceChildren();for(const box of boxes)rectangle(box,'manual-box');if(showOCR.checked)for(const word of data.words.slice(0,1500))rectangle(word.box,'ocr-box');}
+  const showOCR=n('input',{type:'checkbox'});showOCR.onchange=draw;
+  function choose(){const u=unit();text.value=u?Array.from(data.text).slice(u.start,u.end).join(''):'';boxes=(u?.boxes||[]).map(box=>[...box]);invalidate();draw();}select.onchange=choose;
+  const point=e=>{const r=picture.getBoundingClientRect();return[Math.max(0,Math.min(1,(e.clientX-r.left)/r.width)),Math.max(0,Math.min(1,(e.clientY-r.top)/r.height))];};
+  picture.onpointerdown=e=>{if(e.button!==0||busy||!canEdit())return;if(!image.complete||!image.naturalWidth){notice.textContent='Aguarde a imagem carregar antes de desenhar.';return;}start=point(e);picture.setPointerCapture(e.pointerId);e.preventDefault();};
+  picture.onpointerup=e=>{if(!start)return;const end=point(e),box=[Math.min(start[0],end[0]),Math.min(start[1],end[1]),Math.abs(start[0]-end[0]),Math.abs(start[1]-end[1])];start=null;if(box[2]>.003&&box[3]>.003){boxes.push(box);invalidate();draw();}};picture.onpointercancel=()=>{start=null;};
+  image.onerror=()=>{notice.textContent='Não foi possível renderizar a imagem. Confira Poppler e a fonte; as coordenadas numéricas continuam disponíveis.';};
+  async function prepare(action,extra={}){if(busy)return;if(!canEdit()){notice.textContent='Salve ou descarte o rascunho textual antes de alterar fronteiras ou caixas.';return;}const submitted=version;try{const result=await api('/api/editorial/pdf/alignment/preview',{source_id:sourceId,page_number:number,revision:data.revision,unit_id:select.value,action,...extra},signal);if(!shell.isConnected||submitted!==version)return;preview.replaceChildren(n('p',{text:result.diff}),n('pre',{class:'pdf-raw-text',text:JSON.stringify({sucessao:result.structure,unidades:result.after.units.filter(u=>result.structure.after.includes(u.id)).map(u=>({...u,text:Array.from(result.after.text).slice(u.start,u.end).join('')}))},null,2)}));preview.append(b('Confirmar revisão estrutural',async()=>{busy=true;try{const saved=await api('/api/editorial/pdf/review/save',{preview_id:result.preview_id},signal);onSaved(saved);}catch(e){notice.textContent=e.message;}finally{busy=false;}}));preview.hidden=false;}catch(e){notice.textContent=e.message;}}
+  shell.append(n('p',{class:'help',text:'O texto integral é preservado ao dividir/unir. Novos IDs registram sua origem; caixas não são transferidas automaticamente para unidades novas. Arraste na imagem para desenhar retângulos ou informe coordenadas de 0 a 1.'}),select,text,n('div',{class:'pdf-source-toolbar'},[b('Dividir na posição do cursor',()=>prepare('split',{offset:Array.from(text.value.slice(0,text.selectionStart)).length})),b('Unir à unidade seguinte',()=>prepare('merge'))]),n('label',{text:'Mostrar palavras OCR (sugestões)'},[showOCR]),picture,fields,b('Adicionar retângulo numérico',()=>{boxes.push(coords.map(c=>Number(c.value)));invalidate();draw();}),b('Limpar retângulos propostos',()=>{boxes=[];invalidate();draw();}),b('Conferir localização na imagem',()=>prepare('boxes',{boxes})),notice,preview);choose();
+ }
+ return {mount};
+})();

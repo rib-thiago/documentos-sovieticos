@@ -76,6 +76,8 @@ class PDFSources:
         self.review = PDFReview(self)
         from .pdf_links import PDFLinks
         self.links = PDFLinks(self)
+        from .pdf_alignment import PDFAlignment
+        self.alignment = PDFAlignment(self)
         self.worker = None
         if start_worker:
             self.start()
@@ -108,6 +110,26 @@ class PDFSources:
     def ocr_capabilities(self):
         from .pdf_review import ocr_capabilities
         return ocr_capabilities()
+
+    def page_image(self, source_id, number):
+        import shutil
+        source=self.source(source_id)
+        if type(number) is not int or not source['page_count'] or not 1 <= number <= source['page_count']:
+            raise EditorialError('Página inválida')
+        if not shutil.which('pdftoppm'):
+            raise EditorialError('Instale poppler-utils para visualizar a imagem de alinhamento',409)
+        target=self.directory/'page-images'/(source['sha256']+'-'+str(number)+'.png')
+        if not target.exists():
+            process=subprocess.Popen([sys.executable,'-m','backend.pdf_image_worker',str(self.root),source_id,str(number)],cwd=Path(__file__).resolve().parents[1],start_new_session=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+            try:
+                process.wait(timeout=80)
+            except subprocess.TimeoutExpired:
+                self._stop_process(process,signal.SIGKILL);process.wait()
+                raise EditorialError('A renderização excedeu o limite de tempo',409)
+            finally:
+                self._stop_process(process,signal.SIGKILL)
+            if process.returncode or not target.exists():raise EditorialError('Não foi possível renderizar a página; confira a fonte e o Poppler',409)
+        return target
 
     def require_engine(self):
         if importlib.util.find_spec('pypdf') is None:
