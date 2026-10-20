@@ -1,0 +1,3 @@
+# Opcional: instalar no mesmo Python usado por python3 -m backend.
+# Sem esta dependência, catálogo, traduções e leitor continuam disponíveis.
+pypdf>=6.1,<7
