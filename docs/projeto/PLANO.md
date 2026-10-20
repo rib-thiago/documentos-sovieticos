@@ -125,3 +125,7 @@ Implementadas revisão durável com prévia/histórico/conflitos, estados de con
 ## Fac-símiles no estudo — 20/10/2026
 
 Implementados vínculos locais documento/fonte/páginas, separados por contexto, com prévia, histórico e proteção concorrente. O estudo consulta PDF/transcrição e associa manualmente blocos Markdown a páginas por idioma/versão, sinalizando desatualizações e fornecendo referências com IDs/hashes. Documentos monolíngues também podem usar estudo. Aguarda validação manual conforme [Entrega PDF 4](pdf-ocr/ENTREGA-04-FACSIMILES.md). Próximas frentes: delimitação visual/divisão e união de unidades, continuação entre páginas, incorporação da transcrição revisada e publicação selecionada dos fac-símiles. Sem commit ou push.
+
+## Entrega conjunta: alinhamento, incorporação e publicação selecionada
+
+Implementados para validação: edição de fronteiras com sucessão de IDs e caixas manuais; incorporação de transcrições conferidas via fluxo editorial/projetos; preparação/aplicação local de fac-símiles estáticos, sem publicação automática. Histórico e integridade foram exercitados em fixtures, inclusive recuperação de escrita e servidor sem backend. O [roteiro das entregas 5–7](pdf-ocr/ENTREGAS-05-07.md) separa as três validações e suas pendências. Código novo sem commit/push até aprovação. Próximas evoluções: unidades multipágina, versões públicas de citação, preparo com progresso/cancelamento e refinamento visual.

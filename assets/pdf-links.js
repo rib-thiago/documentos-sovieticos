@@ -8,7 +8,7 @@ window.archivePDFLinks=(()=>{
   async function renderManager(host,{api,documentId='',sourceId='',projectId='',signal,onSaved=()=>{}}){
     const shell=node('section',{class:'pdf-tools pdf-links-manager'});host.replaceChildren(shell);
     const notice=node('p',{class:'status',role:'status'}),list=node('div'),preview=node('section',{class:'pdf-preview',hidden:''});
-    shell.append(node('h3',{text:'Documentos e fac-símiles'}),node('p',{class:'help',text:projectId?'Vínculos privados deste projeto. Não alteram os vínculos do acervo.':'Vínculos locais sem projeto. A disponibilização pública dos PDFs será uma ação editorial posterior.'}),notice);
+    shell.append(node('h3',{text:'Documentos e fac-símiles'}),node('p',{class:'help',text:projectId?'Vínculos privados deste projeto. Não alteram os vínculos do acervo.':'Vínculos locais sem projeto. Use a preparação de publicação para escolher quais fac-símiles integrarão a projeção estática.'}),notice);
     const sources=await api('/api/editorial/pdf/sources',null,signal);if(signal?.aborted||!shell.isConnected)return;
     const form=node('form',{class:'pdf-source-form'}),doc=node('input',{type:'text',required:'','aria-label':'ID do documento'});doc.value=documentId;doc.readOnly=!!documentId;
     if(!documentId){const search=node('input',{type:'search','aria-label':'Buscar documento por título ou termos'}),results=select([['','Selecione um resultado']]);const searchBox=node('div',{class:'pdf-source-toolbar'},[search,button('Buscar documento',async()=>{try{const result=await api('/api/documents?'+new URLSearchParams({q:search.value,limit:'30',scope:'all'}),null,signal);if(!shell.isConnected)return;results.replaceChildren(node('option',{value:'',text:'Selecione um resultado'}));for(const d of result.items)results.append(node('option',{value:d.id,text:d.id+' · '+(d.titles?.pt||d.titles?.ru||d.id)}));}catch(e){notice.textContent=e.message;}}),results]);results.onchange=()=>{if(results.value){doc.value=results.value;load();}};shell.append(searchBox);}
@@ -43,6 +43,7 @@ window.archivePDFLinks=(()=>{
       }catch(e){notice.textContent=e.message;}
     }
     await load();
+    if(!projectId){const publication=node('details',{class:'panel'},[node('summary',{text:'Preparar publicação estática'})]),body=node('section');publication.append(body);shell.append(publication);let ready=false;publication.addEventListener('toggle',async()=>{if(!publication.open||ready)return;try{await archivePDFWorkflow.renderPublication(body,{api,documentId:doc.value.trim(),sourceId,signal});ready=true;}catch(e){body.textContent=e.message;}});}
   }
   return {renderManager,query};
 })();

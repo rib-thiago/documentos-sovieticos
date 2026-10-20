@@ -72,3 +72,11 @@ Não trate o README antigo como retrato completo da interface atual.
 - `backend/pdf_review.py`, `pdf_ocr_worker.py`: revisão, histórico e OCR.
 - `backend/pdf_links.py`, `assets/reader-facsimile.js`: vínculos e fac-símiles.
 - `backend/research_projects.py`, `workspace_editions.py`: projetos e versões privadas.
+
+## Entregas 5–7, em validação
+
+- `backend/pdf_alignment.py`, `pdf_image_worker.py` e `assets/pdf-alignment.js`: fronteiras, sucessão e retângulos manuais.
+- `backend/pdf_incorporation.py` e `assets/pdf-workflow.js`: incorporação com prévia e recibos.
+- `backend/pdf_publication.py`, `pdf_publish_worker.py`: preparação privada, projeção estática e recuperação.
+- `data/facsimiles.json`, `assets/facsimiles/`: somente os artefatos aplicados explicitamente para futura publicação.
+- `tests/test_pdf_pipeline.py`: integração isolada das três entregas.

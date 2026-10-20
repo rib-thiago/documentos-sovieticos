@@ -149,13 +149,17 @@ async function detectReaderEditorial() {
   try{await state.editorialDetection;}finally{state.editorialDetection=null;}
 }
 
+async function refreshReaderCatalogue() {
+  state.manifest=await fetchJSON("data/manifest.json");
+  state.documentIndex=new Map((state.manifest.documents||[]).map(doc=>[doc.id,doc]));
+  state.cache.clear();renderNav();
+}
+
 async function reloadEditorialCatalog(preferredContext=null) {
   if(state.editorialReload){state.editorialReloadAgain=true;return state.editorialReload;}
   const context=preferredContext||captureEditorialReading();
   state.editorialReload=(async()=>{
-    state.manifest=await fetchJSON("data/manifest.json");
-    state.documentIndex=new Map((state.manifest.documents||[]).map(doc=>[doc.id,doc]));
-    state.cache.clear();state.pendingEditorialContext=context;renderNav();
+    await refreshReaderCatalogue();state.pendingEditorialContext=context;
     try{await route();}finally{state.pendingEditorialContext=null;}
   })();
   try{await state.editorialReload;}finally{

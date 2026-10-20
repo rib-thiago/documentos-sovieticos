@@ -77,3 +77,20 @@
   .document-facsimile { grid-column: 1; grid-row: auto; position: static; }
 }
 .pdf-link-dialog .pdf-facsimile { height: 45vh; min-height: 16rem; margin-block: .5rem; }
+
+/* Revisão geométrica e incorporação: ferramentas optativas da oficina. */
+.pdf-alignment-image { position:relative; margin:.8rem 0; touch-action:none; user-select:none; border:1px solid var(--rule,#ddd); min-height:5rem; }
+.pdf-alignment-image img { width:100%; height:auto; display:block; pointer-events:none; }
+.pdf-alignment-image svg { position:absolute; inset:0; width:100%; height:100%; }
+.pdf-alignment-image .manual-box { fill:#bd254e26; stroke:#a41738; stroke-width:3; }
+.pdf-alignment-image .ocr-box { fill:none; stroke:#33588780; stroke-width:1; pointer-events:none; }
+.pdf-alignment .pdf-source-toolbar label { width:5rem; }
+.pdf-alignment .pdf-source-toolbar input { width:100%; }
+.pdf-alignment textarea { width:100%; font:1rem/1.6 var(--font-reading,serif); }
+.pdf-tools fieldset { min-width:0; }
+.pdf-tools .reading-content { max-height:28rem; overflow:auto; padding:1rem; border:1px solid var(--rule,#ddd); border-radius:8px; }
+.document-facsimile .pdf-alignment-image { max-height:65vh; overflow:auto; }
+.pdf-tools summary,.pdf-alignment summary { cursor:pointer; font-weight:600; padding:.5rem 0; }
+.document-facsimile .pdf-alignment-image { max-height:none; overflow:visible; }
+.facsimile-location-scroll { max-height:65vh; overflow:auto; }
+.document-facsimile .pdf-alignment-image { touch-action:pan-y pinch-zoom; user-select:auto; }

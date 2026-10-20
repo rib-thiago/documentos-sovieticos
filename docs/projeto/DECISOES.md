@@ -264,3 +264,13 @@ Documentos passam a ter vínculos locais com fontes/páginas, com prévia obriga
 O leitor oferece fac-símile sob demanda no estudo, navegação das páginas vinculadas e consulta da transcrição corrigida. O modo estudo também fica disponível em documentos monolíngues. Um bloco Markdown pode receber associação editorial manual a uma página, por idioma/versão, com trecho literal, hash do corpo/trecho, offsets UTF-16, fonte/hash, página física, rótulo impresso e revisão da transcrição. Mudanças do texto/página tornam a associação pendente de reconferência, sem realocação silenciosa; referências incluem IDs e hashes, preservando a condição histórica quando desatualizadas.
 
 Isso implementa localização por página e prepara citações verificáveis. Alinhamento geométrico, sucessão de unidades após divisão/união, continuação de bloco entre páginas e publicação estática permanecem etapas explícitas. Testes isolados e roteiro em [Entrega PDF 4](pdf-ocr/ENTREGA-04-FACSIMILES.md). Sem commit ou push.
+
+### D40 — Fronteiras manuais, incorporação e projeção estática selecionada
+
+As entregas 5–7 formam um fluxo verificável. Unidades da página podem ser divididas/unidas preservando o texto e registrando pais/sucessores; retângulos normalizados são decisões manuais, enquanto coordenadas OCR permanecem sugestões. Alterações estruturais usam o histórico da revisão. Associações do leitor podem registrar unidade/hash/caixas e revisão, sem inferir correspondência entre idiomas.
+
+Transcrições só são incorporadas a partir de páginas conferidas/em branco. Destinos explícitos são novo documento, edição existente ou versão privada do projeto. O fluxo reutiliza gravação/histórico/manifesto/busca existentes, protege substituições com confirmação e registra proveniência; recibos permitem concluir vínculos sem repetir a gravação. Fronteiras de referência não reformatam silenciosamente o Markdown.
+
+Publicação é uma projeção separada: preparação privada, conferência e aplicação no repositório local, sem Git automático. Exporta derivados apenas das páginas escolhidas, imagens de localização e dados selecionados para `assets/facsimiles/` e `data/facsimiles.json`. Projetos, notas privadas e candidatos OCR não são publicados. Retirada/restauração usam blobs locais e registro pendente recuperável. Leitor estático usa as mesmas referências sem API privada.
+
+Roteiro e limites em [Entregas 5–7](pdf-ocr/ENTREGAS-05-07.md). Testes usam acervos temporários e o código novo fica sem commit/push até aprovação. A coleção de interface `teste01` foi excluída do commit Tukhachevsky, permanecendo apenas no catálogo/manifesto locais.

@@ -1,3 +1,5 @@
+> Continuação funcional: as entregas de alinhamento manual, incorporação de transcrições e projeção estática selecionada estão implementadas, aprovadas e registradas em commits, sem push nesta rodada. Consulte [o roteiro conjunto](../projeto/pdf-ocr/ENTREGAS-05-07.md). Preparar/aplicar arquivos públicos localmente não executa Git.
+
 > Atualização de continuidade — 20/10/2026: a interface Carmim, projetos/versões privadas, oficina PDF, OCR rus/eng/por, revisão por página e fac-símiles no estudo já estão implementados. Consulte os roteiros em `docs/projeto/pdf-ocr/`. Os ZIPs antigos e as propostas abaixo são fotografias históricas, não o estado executável atual. Dados de trabalho ficam em `.local/research/`; publicação exige seleção editorial e commit/push separados.
 
 # Como continuar o projeto com pouca troca de contexto

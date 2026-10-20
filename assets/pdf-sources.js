@@ -187,6 +187,7 @@ window.archivePDFSources = (() => {
       if(!result.items.length)records.append(node('p',{text:'Nenhuma confirmação de cadastro ainda.'}));
     }
     await showHistory();
+    const workflow=node('section');view.append(workflow);await archivePDFWorkflow.mount(workflow,{api,sourceId:id,projectId:project?.id||'',signal});
   }
   return {render};
 })();
