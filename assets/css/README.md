@@ -8,10 +8,12 @@ Ordem declarada em `style.css`:
 
 0. `tokens.css`: identidade e variáveis compartilhadas com a editoria.
 1. `site.css`: tema, reset, navegação superior, estrutura e coleções.
+   `portal.css`: composição da home, contagens e registros de incorporação.
 2. `catalog.css`: listas, datas, paginação, navegação sequencial e busca.
 3. `reader.css`: cabeçalho do documento, Markdown, estudo e marcador de parágrafo.
 4. `reader-panel.css`: painel de controle, idiomas, menus, índice, retomada e estados recolhido/fixado.
 5. `study-editor.css`: janela de correção de tradução e suas ações.
+6. `workbench.css`: abas reais, instrumentos e integração da bancada com o leitor.
 
 ## Área editorial
 
@@ -36,4 +38,4 @@ As duas páginas têm entradas independentes. Não se carrega o CSS editorial no
 - Reservar estilos inline para dados de apresentação específicos, como cor/capa de coleção e ordem das colunas. Estilos estáticos pertencem a estes arquivos.
 - Ao alterar uma versão visual, atualizar as consultas `?v=` das entradas HTML e dos imports CSS para não misturar arquivos em cache.
 
-A referência visual atual é `workspace-3`, descrita em `docs/projeto/INTERFACE-ARQUIVO.md`. A referência anterior era `stable-week-1`. Não foi criado um build, uma tag Git ou um mecanismo de publicação. Os percursos de avaliação prática estão em `docs/projeto/SEMANA-ESTAVEL.md`.
+A interface oficial é `carmim-1`, aprovada pelo responsável em 19 de outubro de 2026 para portal, leitor, bancada e editoria. Os próximos ajustes devem partir dessa identidade e organização. O histórico de `workspace-3` está em `docs/projeto/INTERFACE-ARQUIVO.md`; a referência mais antiga era `stable-week-1`. Não foi criado um build, uma tag Git ou um mecanismo de publicação. O registro da aprovação e o roteiro manual estão em `docs/projeto/PORTAL-BANCADA-CARMIM.md`.

@@ -1,5 +1,7 @@
 # Interface — biblioteca digital e arquivo de pesquisa
 
+Registro histórico das propostas anteriores. A interface oficial aprovada em 19 de outubro de 2026 é [Carmim — portal, leitor e bancada](PORTAL-BANCADA-CARMIM.md), identificada por `carmim-1`.
+
 ## Direção
 
 A proposta `archive-2` combina a presença visual de biblioteca digital com a organização de arquivo de pesquisa, conforme a preferência do responsável. Usa os recursos nativos existentes: HTML, CSS e JavaScript, sem npm, framework ou etapa de compilação.

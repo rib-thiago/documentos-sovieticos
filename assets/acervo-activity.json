@@ -1,0 +1,661 @@
+{
+  "basis": "Adição de arquivos no histórico Git local; não equivale à data de publicação online.",
+  "events": [
+    {
+      "commit": "97cb7f8",
+      "recorded_at": "2026-10-19T18:06:55-03:00",
+      "summary": "Adiciona traduções portuguesas e inglesas dos documentos 2644 e 2645",
+      "document_count": 2,
+      "version_count": 4,
+      "examples": [
+        {
+          "id": "showtrials-2644",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2645",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "f5af83f",
+      "recorded_at": "2026-10-19T16:12:26-03:00",
+      "summary": "Publica traduções dos documentos 2643 e 2646 e remove arquivo auxiliar",
+      "document_count": 2,
+      "version_count": 4,
+      "examples": [
+        {
+          "id": "showtrials-2643",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2646",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "38737d2",
+      "recorded_at": "2026-10-19T16:08:18-03:00",
+      "summary": "Traduz investigação do Centro de Moscou em português e inglês",
+      "document_count": 367,
+      "version_count": 734,
+      "examples": [
+        {
+          "id": "showtrials-11228",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-1541",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2707",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-3240",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "16a63af",
+      "recorded_at": "2026-10-18T09:56:35-03:00",
+      "summary": "Traduz andamento do processo do Centro de Leningrado em português e inglês",
+      "document_count": 3,
+      "version_count": 6,
+      "examples": [
+        {
+          "id": "showtrials-2617",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2618",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2619",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "fdaccdb",
+      "recorded_at": "2026-10-18T03:19:44-03:00",
+      "summary": "Completa traduções portuguesa e inglesa da investigação de Leningrado",
+      "document_count": 141,
+      "version_count": 282,
+      "examples": [
+        {
+          "id": "showtrials-2683",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2684",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2685",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2686",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "3497119",
+      "recorded_at": "2026-10-18T02:38:13-03:00",
+      "summary": "Publica tradução inglesa do interrogatório de Lipshits",
+      "document_count": 1,
+      "version_count": 1,
+      "examples": [
+        {
+          "id": "showtrials-5690",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "bcde9c7",
+      "recorded_at": "2026-10-17T16:46:35-03:00",
+      "summary": "Publica novas traduções dos documentos ShowTrials",
+      "document_count": 4,
+      "version_count": 7,
+      "examples": [
+        {
+          "id": "showtrials-10505",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-5690",
+          "languages": [
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-5711",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-5810",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "5862d9f",
+      "recorded_at": "2026-10-17T09:30:19-03:00",
+      "summary": "Incorpora coleção militar soviética de 1934 a 1936",
+      "document_count": 20,
+      "version_count": 20,
+      "examples": [
+        {
+          "id": "military-aviation-korolev-1935",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "military-gosplan-aircraft-1935",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "military-kpk-kuibyshev-1935",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "military-kpk-kuibyshev-1936",
+          "languages": [
+            "ru"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "military-aviation-korolev-1935",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "military-gosplan-aircraft-1935",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "military-kpk-kuibyshev-1935",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "military-kpk-kuibyshev-1936",
+          "languages": [
+            "ru"
+          ]
+        }
+      ]
+    },
+    {
+      "commit": "1f001df",
+      "recorded_at": "2026-10-17T08:41:11-03:00",
+      "summary": "Individualiza documentos de Ezhov nas três línguas e registra proveniência",
+      "document_count": 24,
+      "version_count": 72,
+      "examples": [
+        {
+          "id": "confessionezhov-ezh-001",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "confessionezhov-ezh-002",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "confessionezhov-ezh-003",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "confessionezhov-ezh-004",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "confessionezhov-ezh-001",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "confessionezhov-ezh-002",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "confessionezhov-ezh-003",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "confessionezhov-ezh-004",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        }
+      ]
+    },
+    {
+      "commit": "bf2553d",
+      "recorded_at": "2026-10-16T19:55:53-03:00",
+      "summary": "Publica traduções portuguesa e inglesa dos documentos 2679 a 2681",
+      "document_count": 3,
+      "version_count": 6,
+      "examples": [
+        {
+          "id": "showtrials-2679",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2680",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2681",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "7b569a2",
+      "recorded_at": "2026-10-16T14:22:40-03:00",
+      "summary": "Adiciona importação local de traduções com prévia e histórico",
+      "document_count": 3,
+      "version_count": 6,
+      "examples": [
+        {
+          "id": "showtrials-2676",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2677",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2678",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "edbab93",
+      "recorded_at": "2026-10-16T04:31:04-03:00",
+      "summary": "Publica traduções do ShowTrials e registra tabela corrigida",
+      "document_count": 5,
+      "version_count": 9,
+      "examples": [
+        {
+          "id": "showtrials-1665",
+          "languages": [
+            "en"
+          ]
+        },
+        {
+          "id": "showtrials-1666",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2674",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        },
+        {
+          "id": "showtrials-2675",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "0fc058e",
+      "recorded_at": "2026-10-16T02:14:04-03:00",
+      "summary": "feat: converte acervo ShowTrials para Markdown e registra revisão editorial",
+      "document_count": 2179,
+      "version_count": 2179,
+      "examples": [
+        {
+          "id": "showtrials-10004",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "showtrials-10040",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "showtrials-10058",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "showtrials-10069",
+          "languages": [
+            "ru"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "showtrials-10004",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "showtrials-10040",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "showtrials-10058",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "showtrials-10069",
+          "languages": [
+            "ru"
+          ]
+        }
+      ]
+    },
+    {
+      "commit": "64f88b2",
+      "recorded_at": "2026-10-15T04:13:35-03:00",
+      "summary": "feat: adiciona tradução portuguesa do interrogatório de Nikolaev",
+      "document_count": 1,
+      "version_count": 1,
+      "examples": [
+        {
+          "id": "showtrials-1665",
+          "languages": [
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "d35aea9",
+      "recorded_at": "2026-10-14T20:47:03-03:00",
+      "summary": "adicionando textos yezhov",
+      "document_count": 1,
+      "version_count": 3,
+      "examples": [
+        {
+          "id": "confessionezhov",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "confessionezhov",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        }
+      ]
+    },
+    {
+      "commit": "e886499",
+      "recorded_at": "2026-10-14T11:49:56-03:00",
+      "summary": "Adiciona coleção Yezhov vs Stalin, toggles por idioma e seletor de 2 colunas",
+      "document_count": 1,
+      "version_count": 2,
+      "examples": [
+        {
+          "id": "furr-yezhov",
+          "languages": [
+            "en",
+            "pt"
+          ]
+        }
+      ],
+      "source_examples": []
+    },
+    {
+      "commit": "efefcd1",
+      "recorded_at": "2026-10-14T00:13:23-03:00",
+      "summary": "Adiciona coleção 'Morte de Ordzhonikidze' e sistema de tipos documento/artigo",
+      "document_count": 1,
+      "version_count": 3,
+      "examples": [
+        {
+          "id": "sergo-2008",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "sergo-2008",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        }
+      ]
+    },
+    {
+      "commit": "1e9b22d",
+      "recorded_at": "2026-10-13T23:00:31-03:00",
+      "summary": "ajustando gitignore",
+      "document_count": 4,
+      "version_count": 9,
+      "examples": [
+        {
+          "id": "acareacao-1937-01-13",
+          "languages": [
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "astrov-1937-01-11",
+          "languages": [
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "bukharin-1937-06-02",
+          "languages": [
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "ryutin-1932",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "acareacao-1937-01-13",
+          "languages": [
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "astrov-1937-01-11",
+          "languages": [
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "bukharin-1937-06-02",
+          "languages": [
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "id": "ryutin-1932",
+          "languages": [
+            "en",
+            "pt",
+            "ru"
+          ]
+        }
+      ]
+    }
+  ]
+}

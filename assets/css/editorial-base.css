@@ -12,12 +12,12 @@ nav { display:flex; flex-wrap:wrap; gap:.6rem 1.2rem; }
 button,.button,main .actions>a,main .pagination>a,#editorial-view a.button {
   font:500 .77rem/1.5 var(--font-ui); min-height:40px; display:inline-flex;
   align-items:center; justify-content:center; gap:.45rem; padding:.6rem .9rem;
-  border:1px solid var(--rule); border-radius:4px; background:var(--paper);
+  border:1px solid var(--rule); border-radius:var(--control-radius); background:var(--paper);
   color:var(--ink-soft); text-decoration:none; cursor:pointer; transition:background .15s,border-color .15s;
 }
-button:hover,.button:hover,main .actions>a:hover,main .pagination>a:hover,#editorial-view a.button:hover { border-color:#aab5af; background:var(--ru-bg); color:var(--ink); }
+button:hover,.button:hover,main .actions>a:hover,main .pagination>a:hover,#editorial-view a.button:hover { border-color:#d39eac; background:var(--ru-bg); color:var(--ink); }
 button.primary { background:var(--accent); border-color:var(--accent); color:white; }
-button.primary:hover { background:#67232c; border-color:#67232c; color:white; }
+button.primary:hover { background:var(--accent-strong); border-color:var(--accent-strong); color:white; }
 button:disabled { cursor:not-allowed; opacity:.5; }
 main a:not(.button) { text-decoration:underline; text-decoration-color:#c4a4a9; }
 main a:hover { color:var(--accent); text-decoration-color:currentColor; }
@@ -28,7 +28,7 @@ main .actions a,main .pagination a,main .item h2 a { text-decoration:none; }
 .help { margin:.6rem 0 1.2rem; }
 .status { font-size:.8rem; line-height:1.75; padding:.7rem 0; color:var(--ink-soft); white-space:pre-line; }
 .status:empty { display:none; }
-.status.error { padding:.75rem 1rem; border:1px solid #e4c3c8; border-radius:4px; background:var(--accent-soft); color:var(--accent); }
+.status.error { padding:.75rem 1rem; border:1px solid #e4c3c8; border-radius:var(--control-radius); background:var(--accent-soft); color:var(--accent); }
 .summary { overflow-wrap:anywhere; }
 @media(max-width:760px) {
   h1 { font-size:1.65rem; }

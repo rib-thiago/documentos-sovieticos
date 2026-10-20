@@ -1,22 +1,24 @@
 /* Linguagem visual compartilhada pelo acervo e pela área editorial. */
 :root {
-  --bg:#f5f5f2;
+  --bg:#f8f6f6;
   --paper:#fff;
-  --ink:#222b2c;
-  --ink-soft:#465152;
-  --muted:#626e6e;
-  --rule:#dce1de;
-  --rule-soft:#edf0ed;
-  --accent:#812e38;
-  --accent-soft:#f7eef0;
-  --ru-bg:#f6f7f4;
-  --radius:6px;
+  --ink:#30282c;
+  --ink-soft:#594b52;
+  --muted:#75646d;
+  --rule:#eadfe3;
+  --rule-soft:#f5eff2;
+  --accent:#b52140;
+  --accent-strong:#8c1e36;
+  --accent-soft:#fbecf0;
+  --ru-bg:#faf5f7;
+  --radius:12px;
+  --control-radius:9px;
   --maxw:1440px;
   --col-gap:2.2rem;
   --font-ui:Inter,system-ui,-apple-system,sans-serif;
   --font-reading:"Source Serif 4",Georgia,serif;
   --font-heading:var(--font-reading);
-  --shadow:0 12px 32px #222b2c09;
+  --shadow:0 12px 32px #58283a0d;
   --site-header-height:5rem;
   --reader-panel-height:0px;
 }
