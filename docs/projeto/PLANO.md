@@ -89,3 +89,39 @@ Após conferir o funcionamento, o usuário aprovou a entrega e autorizou commit 
 ## Coleção militar de 1934–1936
 
 Incorporadas localmente as 20 entradas autorizadas (Conselho de 1935: 13; indústria de 1934–1936: sete), em russo, recuperadas por capturas do Wayback após indisponibilidade do Istmat. Fontes brutas, metadados e receitas preservados; catálogo, manifesto e busca atualizados, sem mudar o acervo anterior ou criar relações entre coleções. Foram acrescentadas 20 pendências à fila; a prioridade de conferência são as tabelas e as limitações da edição de cada peça. A documentação de 1937 e os depoimentos investigativos permanecem fora desta entrega. Conferência manual pendente conforme ../pesquisa/colecao-militar-1934-1936/README.md. Sem testes executados, commit ou push.
+
+Após avaliação manual, o responsável aprovou commit e push da coleção militar. Enviado 5862d9f, incluindo o commit anteriormente pendente da barra lateral. Autorizada a continuação com a coleção de 1937, mantendo as regras de trabalho.
+
+## Caso Tukhachevsky e documentação militar de 1937
+
+Criada separadamente a coleção caso-tukhachevsky-1937, com quatro subcoleções e 11 entradas: dez textos russos recuperados pelo Wayback e uma ficha de fontes do julgamento. PDFs RU/EN já locais foram preservados e disponibilizados como fontes, sem falsa transcrição ou pareamento. Catálogo, manifesto, pendências e busca atualizados; 201 notas finais convertidas. Pendentes conferência manual e edição textual do PDF russo. Roteiro em ../pesquisa/colecao-tukhachevsky-1937/README.md. Sem testes, commit ou push desta nova entrega.
+
+## Oficina de pesquisa — levantamento e plano de incorporação
+
+Em 19/10/2026, após a adoção da interface Carmim, o responsável solicitou o levantamento dos recursos dos pacotes importados. Inventariados 291 arquivos técnicos, com 165 conteúdos distintos; os 125 scripts do Discovery repetidos entre os dois pacotes principais são idênticos. Foram distinguidos algoritmos/dados reutilizáveis, propostas documentadas e ferramentas ainda por integrar, especialmente OCR e tradução integral por provedor.
+
+O [plano de ferramentas de pesquisa](PLANO-FERRAMENTAS-PESQUISA.md) organiza nove entregas: oficina de arquivos/tarefas; catalogação, nomes e glossário; PDF/Word; OCR; passagens/alinhamento; tradução; descoberta/deduplicação; pesquisa transversal; preparação de publicação. A recomendação inicial é F01, com diagnóstico de Markdown como tarefa piloto. O [levantamento com evidências](../pesquisa/ferramentas-importadas/LEVANTAMENTO.md) e os inventários conservam caminhos e limites. Planejamento apenas: sem implementação dessas ferramentas, instalação, testes, commit ou push nesta tarefa.
+
+## Oficina PDF/OCR — início em 20/10/2026
+
+Primeira entrega implementada para validação manual: recepção local de PDF, extração pesquisável em processo separado, persistência por página, cadastro com prévia/histórico e teclado virtual russo nos editores existentes. Não executa OCR nem cria automaticamente edições públicas. Referências candidatas de parágrafo preparam citações revisáveis. Próxima etapa: revisão durável de páginas/fronteiras e integração do fac-símile ao modo estudo; depois OCR rus/eng/por e publicação estática selecionada. Roteiro e pendências em [PDF — entrega 1](pdf-ocr/ENTREGA-01.md).
+
+## Projetos e instrumentos de pesquisa — 20/10/2026
+
+Implementado para validação manual o contexto mínimo de projetos locais: vínculos com documentos e PDFs, projeto ativo, prévia e histórico, filtro de fontes e integração à bancada. Não há migração do acervo ou publicação de projetos. Próxima entrega: recepção de fontes maiores e manipulação PDF com derivados/proveniência, começando por intervalos e divisão. Arquitetura, roteiro manual e pendências em [Projetos e ferramentas](PROJETOS-E-FERRAMENTAS.md).
+
+## Workspace e versões — 20/10/2026
+
+Ajustada a bancada para navegação na mesma guia, explorador lateral e seletor de projetos. Implementadas versões de trabalho por projeto/edição, incluindo correção de trecho e importação Markdown no projeto, com histórico e incorporação explícita ao acervo. Edição sem projeto mantém o fluxo principal. Aguardando validação manual conforme [Workspace e versões](WORKSPACE-E-VERSOES.md); PDF/OCR permanece a próxima frente funcional.
+
+## Manipulação PDF — 20/10/2026
+
+Entregue para validação manual: upload em fluxo de até 256 MiB por padrão (configurável), extração por seleção ordenada e divisão por quantidade/intervalos, com prévia, fila, retomada, derivados, correspondência de páginas e vínculos recuperáveis no projeto. Ferramenta disponível no painel da bancada e na área editorial. Piloto com o PDF integral de Tukhachevsky passou em cópia isolada. Próxima frente: revisão durável por página e OCR rus/eng/por. Combinar PDFs, girar páginas e revisão visual geral permanecem pendentes. Consulte [Entrega PDF 2](pdf-ocr/ENTREGA-02-PDF.md).
+
+## Revisão por página e OCR — 20/10/2026
+
+Implementadas revisão durável com prévia/histórico/conflitos, estados de conferência e OCR opcional rus/eng/por em lotes selecionados. Disponíveis na fonte editorial e no instrumento PDF da bancada. Extração nativa, candidatos OCR e revisão são preservados separadamente; não há gravação automática no acervo. Pilotos RU/EN e verificações isoladas passaram. Aguarda validação manual conforme [Entrega PDF 3](pdf-ocr/ENTREGA-03-REVISAO-OCR.md). Próxima frente: vínculos fonte/documento, fac-símile no estudo e revisão de fronteiras/alinhamento para citações; depois incorporação editorial e publicação selecionada.
+
+## Fac-símiles no estudo — 20/10/2026
+
+Implementados vínculos locais documento/fonte/páginas, separados por contexto, com prévia, histórico e proteção concorrente. O estudo consulta PDF/transcrição e associa manualmente blocos Markdown a páginas por idioma/versão, sinalizando desatualizações e fornecendo referências com IDs/hashes. Documentos monolíngues também podem usar estudo. Aguarda validação manual conforme [Entrega PDF 4](pdf-ocr/ENTREGA-04-FACSIMILES.md). Próximas frentes: delimitação visual/divisão e união de unidades, continuação entre páginas, incorporação da transcrição revisada e publicação selecionada dos fac-símiles. Sem commit ou push.

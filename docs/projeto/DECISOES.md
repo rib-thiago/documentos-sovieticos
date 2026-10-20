@@ -212,3 +212,55 @@ O Istmat apresentou timeouts. O responsável informou que conseguia abrir pelo W
 A conversão mantém as notas literais e converte 74 definições identificáveis para sintaxe de notas Markdown. Dez títulos centralizados conferidos na sessão de 08/12 alimentam o índice. As 13 tabelas são representadas como grades Markdown, combinando níveis de cabeçalho e indicando continuação de células mescladas sem repetir valores. Não foi habilitado HTML geral no leitor. As tabelas têm pendência de revisão alta; as demais peças têm conferência manual registrada. Foram preservadas as indicações de extrato, omissões e anexos não publicados, sem reconstrução conjectural.
 
 A gravação foi uma transação editorial com histórico recuperável, atualização de catálogo, manifesto e busca. Não houve execução de testes, servidor ou navegador, commit ou push. O roteiro e as limitações ficam em docs/pesquisa/colecao-militar-1934-1936/README.md.
+
+### D32 — Coleção própria de Tukhachevsky e documentação militar de 1937
+
+A aprovação da coleção de 1934–1936 autorizou seu commit/push (5862d9f) e a continuação com a documentação de 1937. A nova coleção caso-tukhachevsky-1937 distingue seis páginas do Conselho Militar, duas reuniões do NKO, dois depoimentos e uma ficha das fontes do julgamento. Não foram implementadas relações entre coleções. As dez páginas textuais foram recuperadas pelo Wayback e convertidas para Markdown em russo; notas finais edn passaram a ser reconhecidas ao lado das notas ftn. Foram convertidas 201 definições, sem apagar notas literais de outros formatos.
+
+O julgamento já existia no pacote como PDF russo de 172 páginas, e havia um apêndice inglês de 143 páginas. Ambos foram preservados sem regravação em fontes/tukhachevsky e na área de pesquisa, com hashes e procedência. A ficha visível é explicitamente editorial, não transcrição OCR. Não há tradução inglesa alinhada cadastrada, nem busca integral nas imagens. A transcrição e o cotejo são pendências altas; os textos de reuniões e investigação mantêm suas naturezas próprias. A restauração editorial não apaga os PDFs-fonte preservados.
+
+Os scripts de aquisição e preparação agora aceitam o inventário/perfil de 1937, conservando o padrão anterior de 1934–1936. O refinamento de receita usa uma transação recuperável e recusa sobrepor texto editado após a ingestão. Catálogo, manifesto, fila e busca foram atualizados na gravação inicial e na atualização das notas. Sem testes, servidor ou navegador executados. A nova entrega aguarda conferência manual, sem commit/push, conforme docs/pesquisa/colecao-tukhachevsky-1937/README.md.
+
+### D33 — Oficina PDF local, referências candidatas e teclado russo (20/10/2026)
+
+A recepção de PDF produz uma fonte candidata preservada em `.local/research/sources/`, com SHA-256 e extração pesquisável por página. Não cria automaticamente documentos nem altera o manifesto público. Cadastro da fonte tem prévia, revisão-base e histórico próprio no banco operacional `.local/research/jobs.sqlite3`, separado da busca reconstruível. Extração roda em processo isolado com limites e retomada; pypdf é opcional. OCR rus/eng/por permanece uma próxima entrega, sem converter automaticamente todo PDF em imagens.
+
+Citações orientam o modelo desde o início: fonte e páginas têm IDs; unidades candidatas têm ID, offsets Unicode e hash do texto. Fronteiras por linhas em branco são provisórias e não equivalem a alinhamento revisado. A próxima etapa deve permitir corrigir fronteiras, dividir/unir unidades com rastreabilidade e ligar fac-símiles ao estudo. Teclado russo virtual foi compartilhado entre os campos multilinha editáveis, incluindo Markdown, bancada e correções de trechos. Roteiro manual, armazenamento e limites em `docs/projeto/pdf-ocr/ENTREGA-01.md`. Sem testes, instalação, commit ou push executados.
+
+### D34 — Projetos privados como contexto das ferramentas (20/10/2026)
+
+Projeto de pesquisa, coleção documental e publicação são entidades distintas. A primeira implementação mantém projetos em `.local/research/projects.sqlite3`, com coleção de referência opcional, vínculos por ID com documentos/PDFs, prévia, revisão concorrente e histórico próprio. O contexto ativo é local e persistente para o pesquisador; não muda automaticamente o destino de uma operação já aberta. Upload pode vincular aditivamente uma fonte ao projeto explicitamente selecionado; bytes idênticos não duplicam o PDF.
+
+Criar, ativar, arquivar ou restaurar projetos não publica conteúdos nem modifica a organização do catálogo. A bancada mostra o contexto quando o backend está disponível; o ambiente público não consulta dados de projetos. Referências e próximos passos em `docs/projeto/PROJETOS-E-FERRAMENTAS.md`. Seguem pendentes manipulação PDF, OCR, revisão por página e painéis móveis. Sem execução de testes, servidor, instalação, commit ou push.
+
+### D35 — Workspace explícito e versões de trabalho isoladas (20/10/2026)
+
+Contexto de projeto é explícito na URL da bancada, sem inferir que toda edição pertence ao projeto preferido do backend. A lateral oferece seletor e explorador de documentos/fontes; os links do projeto abrem na mesma guia. Abas e contextos são separados por projeto. Versões de trabalho e histórico são persistidos no banco local de projetos, sem alterar arquivos canônicos, manifesto ou busca. Correções de tradução por trecho seguem o mesmo isolamento.
+
+Incorporar uma versão salva ao acervo é uma ação distinta, com diferenças contra a edição principal atual, confirmação explícita e verificação das revisões, reutilizando a gravação/histórico editoriais. Edição direta fora do projeto mantém o comportamento de atualizar o acervo local ao salvar. Nenhum dos caminhos publica automaticamente no GitHub. Detalhes e roteiro em `docs/projeto/WORKSPACE-E-VERSOES.md`. Sem testes, servidor, navegador, instalação, commit ou push.
+
+### D36 — Inicialização sem projeto e correções de contexto (20/10/2026)
+
+Após auditoria, o pesquisador autorizou corrigir marcadores, retomada e isolamento de falha do histórico, adiando mudanças visuais. A entrada inicial sem contexto e o recarregamento com F5 começam sem projeto ativo. Links explícitos ainda abrem um workspace; o atalho geral não infere um projeto a partir de abas antigas. O reset não exclui projetos, versões ou histórico. Marcas são identificadas por contexto/documento; registros legados sem contexto ficam somente no acervo. Falhas do histórico têm aviso/repetição independentes do editor. Dezesseis verificações de comportamento e análise sintática dos quatorze scripts próprios passaram em JavaScript com DOM/rede simulados; não foi alegada validação visual. Sem commit ou push.
+
+### D37 — Derivados PDF rastreáveis e recepção de fontes maiores (20/10/2026)
+
+Upload de PDF passa a ser em fluxo, com limite padrão de 256 MiB configurável por SHOWTRIALS_PDF_MAX_MIB. Extração de páginas e divisão geram novas fontes candidatas após prévia/confirmacão, sem substituir o original ou publicar textos. Receitas, hashes, motor e correspondência de páginas são persistidos no banco operacional; geração roda isolada na fila existente. Resultados podem ser vinculados aditivamente ao projeto numa única alteração recuperável. A ferramenta é compartilhada entre área editorial e painel da bancada, inclusive sem documento aberto. OCR não foi implementado nesta etapa.
+
+Testes específicos, regressão de backend/JavaScript e piloto HTTP usaram dados temporários. A cópia do PDF russo de Tukhachevsky (172 páginas, 69,8 MiB) foi recebida e suas duas primeiras páginas extraídas com proveniência; o hash original permaneceu igual. Roteiro, limites e pendências em `docs/projeto/pdf-ocr/ENTREGA-02-PDF.md`. Sem commit/push; conferência visual continua manual.
+
+### D38 — Revisão durável por página e OCR como candidatos (20/10/2026)
+
+A oficina passa a manter revisões de páginas em tabelas separadas da extração nativa: texto, estado de conferência, rótulo impresso, notas, revisão e histórico restaurável. Prévia é obrigatória; conflitos entre abas são recusados. A revisão é da fonte PDF local compartilhada, sem substituir automaticamente versões Markdown públicas ou privadas de projetos. Rascunhos auxiliares usam sessionStorage e não substituem o salvamento durável.
+
+OCR opcional usa Poppler e Tesseract, com rus/eng/por, páginas explícitas, DPI e segmentação. Cada resultado é candidato imutável; reprocessar não apaga correções. Fila e progresso por página persistem; retomada ignora os resultados já concluídos do mesmo lote. Fonte e receita têm hash/proveniência, texto e TSV de coordenadas são preservados. Processos e descendentes são encerrados juntos. Idiomas são diagnosticados, com pasta explícita SHOWTRIALS_TESSDATA_DIR ou detecção de instalações usuais.
+
+Unidades candidatas preservam IDs quando o conteúdo permanece igual, com revisão/offsets/hash para referência; alterações geram novos IDs e histórico conserva versões. Isso prepara, sem declarar concluído, o alinhamento geométrico para citações. Fac-símile no estudo e incorporação ao acervo continuam próximos passos. Testes isolados e pilotos OCR RU/EN passaram; o piloto russo mostrou erro no reconhecimento do ano, registrado sem correção silenciosa. Roteiro em [Entrega PDF 3](pdf-ocr/ENTREGA-03-REVISAO-OCR.md). Sem commit ou push.
+
+### D39 — Fac-símiles no estudo e associações manuais por versão (20/10/2026)
+
+Documentos passam a ter vínculos locais com fontes/páginas, com prévia obrigatória, revisão concorrente, desativação e histórico restaurável. Contextos sem projeto e por projeto são separados; um projeto precisa conter explicitamente documento e fonte. Nada é publicado nem altera catálogo, manifesto, textos ou busca ao gravar um vínculo.
+
+O leitor oferece fac-símile sob demanda no estudo, navegação das páginas vinculadas e consulta da transcrição corrigida. O modo estudo também fica disponível em documentos monolíngues. Um bloco Markdown pode receber associação editorial manual a uma página, por idioma/versão, com trecho literal, hash do corpo/trecho, offsets UTF-16, fonte/hash, página física, rótulo impresso e revisão da transcrição. Mudanças do texto/página tornam a associação pendente de reconferência, sem realocação silenciosa; referências incluem IDs e hashes, preservando a condição histórica quando desatualizadas.
+
+Isso implementa localização por página e prepara citações verificáveis. Alinhamento geométrico, sucessão de unidades após divisão/união, continuação de bloco entre páginas e publicação estática permanecem etapas explícitas. Testes isolados e roteiro em [Entrega PDF 4](pdf-ocr/ENTREGA-04-FACSIMILES.md). Sem commit ou push.
