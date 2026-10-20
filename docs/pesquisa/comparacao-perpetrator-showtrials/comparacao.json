@@ -1,0 +1,2255 @@
+{
+  "metodo": "Sequências de nove palavras; amostragem determinística 1/4; fórmulas presentes em mais de 25 documentos descartadas.",
+  "limites": "Similaridade textual não certifica identidade documental. Ausência de coincidência não comprova ineditismo. Cobertura é de sequências amostradas, não de caracteres ou páginas.",
+  "documentos_showtrials": 2179,
+  "arquivos_perpetrator": 95,
+  "resumo": {
+    "sobreposicao_a_revisar": 20,
+    "sem_correspondencia_detectada": 64,
+    "candidato_a_redundancia_integral": 11
+  },
+  "registros": [
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Confrontations.md",
+      "sha256": "b730a47f4ad0beda2e59530c768cb202f3aef97a0bcdbdba3ecea1810cb2c934",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.7644,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Confrontations.md",
+          "showtrials_id": "showtrials-8609",
+          "titulo_ru": "Протокол очной ставки между Н.И. Бухариным и Е.Ф. Куликовым в ЦК ВКП(б)",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8609",
+            "url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-n-i-buharinym-i-e-f-kulikovym-v-czk-vkpb/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8609.ru.md",
+          "url_site": "/#/doc/showtrials-8609",
+          "sequencias_comuns": 1491,
+          "cobertura_perpetrator": 0.3235,
+          "cobertura_showtrials": 0.8807,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "я неспособен к действию но я совершенно определенно говорю",
+            "создавал кадры перехожу к 1932 году однажды вызывает меня",
+            "обсуждали невский высказывал например такие вещи ты знаешь кто"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Confrontations.md",
+          "showtrials_id": "showtrials-8611",
+          "titulo_ru": "Стенограмма очной ставки между Л.С. Сосновским и Н.И. Бухариным в ЦК ВКП(б)",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8611",
+            "url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-l-s-sosnovskim-i-n-i-buharinym-v-czk-vkpb/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8611.ru.md",
+          "url_site": "/#/doc/showtrials-8611",
+          "sequencias_comuns": 1157,
+          "cobertura_perpetrator": 0.251,
+          "cobertura_showtrials": 0.9096,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "было только частично искренним а на самом деле этот",
+            "ли рассказать конкретно какие разговоры о терроре велись с",
+            "это значит у нас давнишние хорошие отношения по работе"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Confrontations.md",
+          "showtrials_id": "showtrials-8613",
+          "titulo_ru": "Стенограмма очной ставки между Ю.Л. Пятаковым и Н.И. Бухариным в ЦК ВКП(б)",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8613",
+            "url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-yu-l-pyatakovym-i-n-i-buharinym-v-czk-vkpb/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8613.ru.md",
+          "url_site": "/#/doc/showtrials-8613",
+          "sequencias_comuns": 489,
+          "cobertura_perpetrator": 0.1061,
+          "cobertura_showtrials": 0.8388,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "если заводы достанутся белогвардейцам причем речь шла не о",
+            "сохранилась и работа возобновляется я не могу припомнить сейчас",
+            "бухарин тогда сказал тяжело думать что все это достанется"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Confrontations.md",
+          "showtrials_id": "showtrials-8641",
+          "titulo_ru": "Письмо Н.И. Бухарина И.В. Сталину",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8641",
+            "url": "http://showtrials.ru/pismo-n-i-buharina-i-v-stalinu-11/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8641.ru.md",
+          "url_site": "/#/doc/showtrials-8641",
+          "sequencias_comuns": 335,
+          "cobertura_perpetrator": 0.0727,
+          "cobertura_showtrials": 0.8524,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "и вспомнить ряда фактов а вот потом только вспомнил",
+            "как ни при чем и в соответствующей работе слепкова",
+            "оправдываться по таким пунктам это же сказки для детей"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Confrontations.md",
+          "showtrials_id": "showtrials-8530",
+          "titulo_ru": "Письмо Н.И. Бухарина И.В. Сталину",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8530",
+            "url": "http://showtrials.ru/pismo-n-i-buharina-i-v-stalinu-8/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8530.ru.md",
+          "url_site": "/#/doc/showtrials-8530",
+          "sequencias_comuns": 333,
+          "cobertura_perpetrator": 0.0722,
+          "cobertura_showtrials": 0.888,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "и вспомнить ряда фактов а вот потом только вспомнил",
+            "как ни при чем и в соответствующей работе слепкова",
+            "оправдываться по таким пунктам это же сказки для детей"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Confrontations.md",
+          "showtrials_id": "showtrials-8630",
+          "titulo_ru": "Письмо Н.И. Бухарина И.В. Сталину и членам Политбюро ЦК ВКП(б)",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8630",
+            "url": "http://showtrials.ru/pismo-n-i-buharina-i-v-stalinu-i-chlenam-politbyuro-czk-vkpb/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8630.ru.md",
+          "url_site": "/#/doc/showtrials-8630",
+          "sequencias_comuns": 51,
+          "cobertura_perpetrator": 0.0111,
+          "cobertura_showtrials": 0.5426,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "все последние годы я верой и правдой служил партии",
+            "чтобы понять эту элементарную истину и сталин ргаспи ф",
+            "большого ума чтобы понять эту элементарную истину и сталин"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Confrontations.md",
+          "showtrials_id": "showtrials-8526",
+          "titulo_ru": "Письмо Н.И. Бухарина членам Политбюро ЦК ВКП(б)",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8526",
+            "url": "http://showtrials.ru/pismo-n-i-buharina-chlenam-politbyuro-czk-vkpb/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8526.ru.md",
+          "url_site": "/#/doc/showtrials-8526",
+          "sequencias_comuns": 51,
+          "cobertura_perpetrator": 0.0111,
+          "cobertura_showtrials": 0.7183,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "все последние годы я верой и правдой служил партии",
+            "чтобы понять эту элементарную истину и сталин ргаспи ф",
+            "большого ума чтобы понять эту элементарную истину и сталин"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Letter_April15_1937.md",
+      "sha256": "dbf5eba646e0142b584690704b719854c164422c694bfd113e99661eaf9f232e",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.852,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Letter_April15_1937.md",
+          "showtrials_id": "showtrials-8707",
+          "titulo_ru": "Спецсообщение Я.С. Агранова И.В. Сталину с приложением письма Н.И. Бухарина И.В. Сталину",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8707",
+            "url": "http://showtrials.ru/speczsoobshhenie-ya-s-agranova-i-v-stalinu-s-prilozheniem-pisma-n-i-buharina-i-v-stalinu/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8707.ru.md",
+          "url_site": "/#/doc/showtrials-8707",
+          "sequencias_comuns": 1140,
+          "cobertura_perpetrator": 0.852,
+          "cobertura_showtrials": 0.8315,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "понимаю серьезности своего положения я отлично знаю что со",
+            "исправлений я очень бы просил чтоб дали мне возможность",
+            "горящими глазами меня гложет то что я их когда"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Letters.md",
+      "sha256": "912913b45de343766c870b028f895beb153bf14961a53b9f2211d64bbc1af17d",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.6191,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Letters.md",
+          "showtrials_id": "showtrials-8536",
+          "titulo_ru": "Письмо Н.И. Бухарина членам Политбюро ЦК ВКП(б)",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8536",
+            "url": "http://showtrials.ru/pismo-n-i-buharina-chlenam-politbyuro-czk-vkpb-2/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8536.ru.md",
+          "url_site": "/#/doc/showtrials-8536",
+          "sequencias_comuns": 473,
+          "cobertura_perpetrator": 0.2538,
+          "cobertura_showtrials": 0.5671,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "говорят прямо легко объяснить почему не своим они об",
+            "писала в одной из передовых по поводу людей имена",
+            "на какие разговоры о терроре здесь разумеется не было"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Letters.md",
+          "showtrials_id": "showtrials-8712",
+          "titulo_ru": "Письмо Н.И. Бухарина И.В. Сталину",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8712",
+            "url": "http://showtrials.ru/pismo-n-i-buharina-i-v-stalinu-24/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8712.ru.md",
+          "url_site": "/#/doc/showtrials-8712",
+          "sequencias_comuns": 407,
+          "cobertura_perpetrator": 0.2183,
+          "cobertura_showtrials": 0.8605,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "жизнью за это прости меня коба я пишу и",
+            "с семьей во всяком случае я заявляю что работал",
+            "ко всему делу ничего кроме великой безграничной любви я"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Letters.md",
+          "showtrials_id": "showtrials-8600",
+          "titulo_ru": "Переписка Н.И. Бухарина и К.Е. Ворошилова",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8600",
+            "url": "http://showtrials.ru/perepiska-n-i-buharina-i-k-e-voroshilova/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8600.ru.md",
+          "url_site": "/#/doc/showtrials-8600",
+          "sequencias_comuns": 159,
+          "cobertura_perpetrator": 0.0853,
+          "cobertura_showtrials": 0.5179,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "письмо между тем мне необходимо возможно спокойнее ждать конца",
+            "буду жив буду проситься на драку не красное словцо",
+            "меня в твоей полной невиновности то убедил пока в"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Bukharin_Letters.md",
+          "showtrials_id": "showtrials-8719",
+          "titulo_ru": "Письмо Н.И. Бухарина А.М. Лариной",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8719",
+            "url": "http://showtrials.ru/pismo-n-i-buharina-a-m-larinoj/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8719.ru.md",
+          "url_site": "/#/doc/showtrials-8719",
+          "sequencias_comuns": 115,
+          "cobertura_perpetrator": 0.0617,
+          "cobertura_showtrials": 0.8273,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "этим тебя ждет огромное испытание умоляю тебя родная моя",
+            "друг мой милый об этом умоляю вторая просьба у",
+            "начала до конца есть еще та книга кризис капит"
+          ]
+        }
+      ],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Plea_For_Pardon.md",
+      "sha256": "175caee0815831c9adfda66c44d9e526d75f50d18d0fc479c7cceb2c92f6cfd1",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.9042,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Plea_For_Pardon.md",
+          "showtrials_id": "showtrials-8715",
+          "titulo_ru": "Прошения Н.И. Бухарина в Президиум Верховного Совета СССР о помиловании",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "8715",
+            "url": "http://showtrials.ru/prosheniya-n-i-buharina-v-prezidium-verhovnogo-soveta-sssr-o-pomilovanii/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-8715.ru.md",
+          "url_site": "/#/doc/showtrials-8715",
+          "sequencias_comuns": 151,
+          "cobertura_perpetrator": 0.9042,
+          "cobertura_showtrials": 0.7438,
+          "relacao": "perpetrator_contido_no_showtrials",
+          "trechos": [
+            "решение которое я заслужил своей преступной деятельностью и я",
+            "партия и правительство произвели генеральную чистку контрреволюция раздавлена и",
+            "в концентрационном лагере на северном полюсе в колыме где"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/Serovs_Letter_re_Bukharin_Trial.md",
+      "sha256": "abf37adb8cef91282edfc6c25e13b964bd6f0bc36cdf0b0fa849781bcf941b31",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Bukharin/To_Future_Generation_of_Party_Leaders.md",
+      "sha256": "6e4d32a78296ac29a54a91a181cfd0bf26eb892b79eb05b813be1a4483c554ee",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/DoctorsPlot/StalinDocsDP.md",
+      "sha256": "79f68c332877d78bae08b6ce495dd27ba11f05c6e3371a3b1624e14d5b157c25",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Beria_Order_00689.md",
+      "sha256": "b7226d12e68ea7ba13e66379f745e2315a691659b39e7543bb8df79cc0187911",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/CEC_Order_dated_1_12_1934.md",
+      "sha256": "d93db04e9be87ea2c0a775ac43984fd3191e0ab89cb64690b9af33fb1bd9cc3a",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Circular_Letter_106_20_May_1938.md",
+      "sha256": "ff4cb6d0711ceb07a45b02082e093db42f88e7642510fd83e1e51daedeb28bb4",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Coded_Telegram_On_Physical_Influence.md",
+      "sha256": "cad7e884c0ee743000817846511f2fb3875120973e41f7a8dab9352ad9e0f904",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Lead_Up_To_Terror.md",
+      "sha256": "b67fe9606d188513298d50bb87dee03d300a3bea1cfc122c234f1bba3f13a0f2",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Letter_On_POV.md",
+      "sha256": "007c8e5ff49eeea9b41d88c23e431a237dd06bc5d5057b82ef0bc34c77c8156e",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Number_of_Arrested_Condemned_by_Organs.md",
+      "sha256": "7609a86e9864955f02ea5693b4ed27b179f17c021ff140b64a8f7437174fa934",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir tabelas, células mescladas e sequência de leitura no Word."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Number_of_Condemned_by_Special_Commission.md",
+      "sha256": "80d13befd7b0559e3af0063bad0a579277bdfe51262698dec9eacaa9fa38d3c5",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Operative_Order_00439.md",
+      "sha256": "bffa434b2d9e552bd7c9f9d5ac7917a41b78e3e7c12c1538fa4761c7ea1763bd",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Operative_Order_00447.md",
+      "sha256": "22ca188a8b84e1f989b2f522c965ed59141b53628fa560869bc80621d7916e0c",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir tabelas, células mescladas e sequência de leitura no Word."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Operative_Order_00485.md",
+      "sha256": "85bb71a071e4ed3bb56cfc74e774d66342c524a5546aa28855532c6ab0a6a3d5",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Operative_Order_00486.md",
+      "sha256": "78c3eff34c99bfcff334fa49e8ebf023116e0d4308a39b6d0d2e334719dc700e",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Operative_Order_00593.md",
+      "sha256": "6f7ebb9c92ec5b8c8b8ed799dc5cabc9ea68ddf1b33b62ab1d335b534fbb0d61",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Politburo_Resolution_5_7_37.md",
+      "sha256": "e8d4c5266a49a58c68f88612054c266f321373d31233fd16f3615f1d0e133b92",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Pospelov_Commission_Report.md",
+      "sha256": "ae32ba84f2564b5f559b0776d9902faf88cf75ba1abebd80bf6179639ae7f2c2",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir tabelas, células mescladas e sequência de leitura no Word."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Great_Terror/Shvernik_Report/Shvernik_Report.md",
+      "sha256": "9ab5d5d36d5fd2c7b12d4ddfcb653fa7301230c31b0d9cf5e470a4390cb8bacb",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir tabelas, células mescladas e sequência de leitura no Word.",
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Khrushchev/Khrushchev13May1957.md",
+      "sha256": "69e779e4a3f99b4a45fd7c1c32b841823c66c8f9a401f638b17fc09ed942b230",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Khrushchev/Khrushchev19May1957.md",
+      "sha256": "4521b2d80bc886b88e071b13dee51a1b7aeddbf665119f3b5516163ec072a42e",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Khrushchev/Maniege1962.md",
+      "sha256": "06377cdb1f532f86304325ab4c9e34b6328827b6f3d01029d1ee0edc78887d8d",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Khrushchev/Meeting_with_Intelligentsia.md",
+      "sha256": "69b1fd451d876757bc98095c61edebbda8f247aa4ad432ccad09abf511efcc6c",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Khrushchev/Speech16March1948.md",
+      "sha256": "0a456ca216724b9639acb83a33f971f3f2794a88829b52778edde2d772516069",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Khrushchev/Speech3WritCongr.md",
+      "sha256": "010d2a2a33cfbb929974b736ad54102be9a23872ce961d9365514e5a79de66c9",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_1.md",
+      "sha256": "399dfb806f87a4bbce135e6579433329e512f88db1739202d6ec774b02725dde",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.2985,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_1.md",
+          "showtrials_id": "showtrials-4857",
+          "titulo_ru": "Протокол очной ставки между А.Е. Авдеевой и Е.С. Мишаковой",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4857",
+            "url": "http://showtrials.ru/protokol-ochnoj-stavki-mezhdu-a-e-avdeevoj-i-e-s-mishakovoj/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4857.ru.md",
+          "url_site": "/#/doc/showtrials-4857",
+          "sequencias_comuns": 20,
+          "cobertura_perpetrator": 0.2985,
+          "cobertura_showtrials": 0.4444,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "очень плохо а я ей сказала что я сейчас",
+            "сталин не русский с первой женой разошелся а вторую",
+            "пьет ест хорошо а мы питаемся очень плохо а"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_10.md",
+      "sha256": "927627e0bf7ad4ae3743db1560f867fae3030d3370337cdd333704b7d6a1d077",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.9027,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_10.md",
+          "showtrials_id": "showtrials-4964",
+          "titulo_ru": "Протокол допроса М.В. Королькова",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4964",
+            "url": "http://showtrials.ru/protokol-doprosa-m-v-korolkova/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4964.ru.md",
+          "url_site": "/#/doc/showtrials-4964",
+          "sequencias_comuns": 408,
+          "cobertura_perpetrator": 0.9027,
+          "cobertura_showtrials": 0.831,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "розенфельд какими то путями легко могла доставать пропуска на",
+            "несколько раньше шарапову вопрос следствие располагает точными данными о",
+            "а кроме кирика левина с кем из меньшевиков имел"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_11.md",
+      "sha256": "f13b963ad4b76814a829a82cac1da7290675a07b4acde54a9f492dbfd6f15b14",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.8171,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_11.md",
+          "showtrials_id": "showtrials-4972",
+          "titulo_ru": "Протокол допроса В.А. Ельчаниновой",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4972",
+            "url": "http://showtrials.ru/protokol-doprosa-v-a-elchaninovoj-2/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4972.ru.md",
+          "url_site": "/#/doc/showtrials-4972",
+          "sequencias_comuns": 134,
+          "cobertura_perpetrator": 0.8171,
+          "cobertura_showtrials": 0.7528,
+          "relacao": "perpetrator_contido_no_showtrials",
+          "trechos": [
+            "показания записаны верно в ельчанинова допросил пом нач 5",
+            "написана статья для стенгазеты о засоренности аппарата правительственной библиотеки",
+            "от 8 iii характеристике старшего секретаря секретариата цика авсенева"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_12.md",
+      "sha256": "30c4025bcaea7903fce845f76a1aebda9560e3b92250f842e8978b4a8b5f4798",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.854,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_12.md",
+          "showtrials_id": "showtrials-5005",
+          "titulo_ru": "Протокол допроса Р.Г. Миндель",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "5005",
+            "url": "http://showtrials.ru/protokol-doprosa-r-g-mindel/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-5005.ru.md",
+          "url_site": "/#/doc/showtrials-5005",
+          "sequencias_comuns": 462,
+          "cobertura_perpetrator": 0.854,
+          "cobertura_showtrials": 0.854,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "никогда вопрос кто из сотрудников кремлевской библиотеки помимо егоровой",
+            "ответ нет вопрос перечислите всех ваших знакомых иностранцев указав",
+            "кто с кем живет кто пользуется возможностями получения лучших"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_13.md",
+      "sha256": "45af80437d605b590cdec60a8ff6b2c19973e1860d2180dc8d27c9253c2945f4",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.9626,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_13.md",
+          "showtrials_id": "showtrials-5009",
+          "titulo_ru": "Спецсообщение Я.С. Агранова Н.И. Ежову с приложением протокола допроса Д.С. Азбеля",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "5009",
+            "url": "http://showtrials.ru/speczsoobshhenie-ya-s-agranova-n-i-ezhovu-s-prilozheniem-protokola-doprosa-d-s-azbelya/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-5009.ru.md",
+          "url_site": "/#/doc/showtrials-5009",
+          "sequencias_comuns": 360,
+          "cobertura_perpetrator": 0.9626,
+          "cobertura_showtrials": 0.9068,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "т сталина ответ да был еще один разговор в",
+            "д сосновской ответ о д сосновская рассказывала мне что",
+            "считал что убийством его как наиболее влиятельной решающей фигуры"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_14.md",
+      "sha256": "34ab7f47bc6397b87d61e839491f0428a62c52c7d7e76ce35b49486c06c564b1",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.8836,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_14.md",
+          "showtrials_id": "showtrials-5013",
+          "titulo_ru": "Протокол допроса И.В. Больших",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "5013",
+            "url": "http://showtrials.ru/protokol-doprosa-i-v-bolshih/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-5013.ru.md",
+          "url_site": "/#/doc/showtrials-5013",
+          "sequencias_comuns": 167,
+          "cobertura_perpetrator": 0.8836,
+          "cobertura_showtrials": 0.8789,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "брат капитон б летчик военно воздушного флота киевского гарнизона",
+            "раз 24 ii 35 г мы встретились у моей",
+            "не сообщала вопрос почему ответ я скрывала это так"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_15.md",
+      "sha256": "7cf5400c9bdce7f8b7d0eb5e4f7bf4ffa95e3ed2af8b907ee5b9f087af90da97",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.7105,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_15.md",
+          "showtrials_id": "showtrials-5029",
+          "titulo_ru": "Спецсообщение Я.С. Агранова Н.И. Ежову с приложением протокола допроса Л.Б. Каменева",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "5029",
+            "url": "http://showtrials.ru/speczsoobshhenie-ya-s-agranova-n-i-ezhovu-s-prilozheniem-protokola-doprosa-l-b-kameneva/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-5029.ru.md",
+          "url_site": "/#/doc/showtrials-5029",
+          "sequencias_comuns": 135,
+          "cobertura_perpetrator": 0.7105,
+          "cobertura_showtrials": 0.6585,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "взглядов аналогичных моим вопрос что вам известно о контрреволюционной",
+            "нарисовал несколько рисунков пасквилей на руководство партии в частности",
+            "к сталину я допускаю что н б розенфельд который"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_16.md",
+      "sha256": "143c656a845972748d853aba9265bd43044be49486304d812251f0acd85d85ef",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.9617,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_16.md",
+          "showtrials_id": "showtrials-9872",
+          "titulo_ru": "Постановление Политбюро ЦК ВКП(б) “Об аппарате ЦИК СССР и тов. Енукидзе”",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "9872",
+            "url": "http://showtrials.ru/postanovlenie-politbyuro-czk-vkpb-ob-apparate-czik-sssr-i-tov-enukidze/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-9872.ru.md",
+          "url_site": "/#/doc/showtrials-9872",
+          "sequencias_comuns": 224,
+          "cobertura_perpetrator": 0.9532,
+          "cobertura_showtrials": 0.9372,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "нина розенфельд и николай розенфельд принимали как прямую директиву",
+            "из иностранных государств в москве от которой она в",
+            "а розенфельд ее сын троцкист б розенфельд создал самостоятельную"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_16.md",
+          "showtrials_id": "showtrials-4849",
+          "titulo_ru": "Справка по “Кремлевскому делу” для подготовки доклада Н.И. Ежова на июньском пленуме ЦК 1935 г. с выдержками из показаний обвиняемых",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4849",
+            "url": "http://showtrials.ru/spravka-po-kremlevskomu-delu-dlya-podgotovki-doklada-n-i-ezhova-na-iyunskom-plenume-czk-1935-g-s-vyderzhkami-iz-pokazanij-obvinyaemyh/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4849.ru.md",
+          "url_site": "/#/doc/showtrials-4849",
+          "sequencias_comuns": 42,
+          "cobertura_perpetrator": 0.1787,
+          "cobertura_showtrials": 0.0234,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "была связана с сотрудницей посольства одного из иностранных государств",
+            "имеющая с принципами советской власти система подбора работников в",
+            "розенфельд мухановой через минервину удалось помешать террористам в осуществлении"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_17.md",
+      "sha256": "5a671d9de307c8ee6008bb23dd75109045f958d0679d02ccfcfb98710d1cf554",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.3883,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_17.md",
+          "showtrials_id": "showtrials-5240",
+          "titulo_ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину о мерах наказания участникам террористических групп с пометками И.В. Сталина",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "5240",
+            "url": "http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-5240.ru.md",
+          "url_site": "/#/doc/showtrials-5240",
+          "sequencias_comuns": 226,
+          "cobertura_perpetrator": 0.3883,
+          "cobertura_showtrials": 0.3461,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "рсфср всех приговорить к 3 годам ссылки дела на",
+            "коллегии верховного суда союза сср 1 розенфельд нину александровну",
+            "1919 г начальника хим службы 2 го полка московской"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_18.md",
+      "sha256": "2bae075da545baa21b2edf6f70df8b9131f8db1c4c5f21c8bea2bf16cb4d5c08",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.6471,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_18.md",
+          "showtrials_id": "showtrials-5241",
+          "titulo_ru": "Постановление Политбюро ЦК ВКП(б) о мерах наказания по “Кремлевскому делу”",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "5241",
+            "url": "http://showtrials.ru/postanovlenie-politbyuro-czk-vkpb-o-merah-nakazaniya-po-kremlevskomu-delu/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-5241.ru.md",
+          "url_site": "/#/doc/showtrials-5241",
+          "sequencias_comuns": 22,
+          "cobertura_perpetrator": 0.6471,
+          "cobertura_showtrials": 0.6667,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "тюрьмы на 10 лет 2 обвиняемого чернявского расстрелять 3",
+            "обвиняемых по делу к р террористических групп в кремле",
+            "заключить в концентрационные лагеря и ссылку 6 л б"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_19.md",
+      "sha256": "bd0389c01aa2cdfb9479c8b99c0fa461e0c1a57fa0e410712652763bf7410a72",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.9257,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_19.md",
+          "showtrials_id": "showtrials-1704",
+          "titulo_ru": "Спецсообщение Я.С. Агранова Н.И. Ежову с приложением анонимного письма за подписью “Г.”",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "1704",
+            "url": "http://showtrials.ru/anonimka-5-sentyabrya-1935/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-1704.ru.md",
+          "url_site": "/#/doc/showtrials-1704",
+          "sequencias_comuns": 324,
+          "cobertura_perpetrator": 0.9257,
+          "cobertura_showtrials": 0.895,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "бы в пол отделе районе и т д но",
+            "аппарате цк на днях туда к тов броуну ходил",
+            "всех это ведь вопрос его личного престижа ты понимаешь"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_2.md",
+      "sha256": "224d067d1c58b500a3d245b184875823cab06dff7b201b8a725c157e0cfa5f31",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.7383,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_2.md",
+          "showtrials_id": "showtrials-4868",
+          "titulo_ru": "Спецсообщение Я.С. Агранова И.В. Сталину с приложением протокола допроса А.И. Синелобова",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4868",
+            "url": "http://showtrials.ru/speczsoobshhenie-ya-s-agranova-i-v-stalinu-s-prilozheniem-protokola-doprosa-a-i-sinelobova/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4868.ru.md",
+          "url_site": "/#/doc/showtrials-4868",
+          "sequencias_comuns": 79,
+          "cobertura_perpetrator": 0.7383,
+          "cobertura_showtrials": 0.2387,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "показаниями жалыбиной м с орлова а а признала что",
+            "отрицавшая свою причастность к распространению провокаций показала что она",
+            "показаниями жалыбиной м с катынская б я пока признала"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_3.md",
+      "sha256": "61f4267cd40842b90d5e984509f5f3904aceba6cf8a14e8c4b084ae0c0260080",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.9005,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_3.md",
+          "showtrials_id": "showtrials-4869",
+          "titulo_ru": "Спецсообщение Г.Г. Ягоды И.В. Сталину с приложением протокола допроса В.Г. Дорошина",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4869",
+            "url": "http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-s-prilozheniem-protokola-doprosa-v-g-doroshina/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4869.ru.md",
+          "url_site": "/#/doc/showtrials-4869",
+          "sequencias_comuns": 181,
+          "cobertura_perpetrator": 0.9005,
+          "cobertura_showtrials": 0.896,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "происходили в этом году наши беседы вопрос вы показываете",
+            "тов сталина шашкой записано с моих слов верно мною",
+            "вроде козырева и синелобова непрерывные разговоры о неправильной политике"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_4.md",
+      "sha256": "c0a4522a19cac12f19d9a25b83fec2f0fbd2f7132aadba186848ec991c26c65b",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.9521,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_4.md",
+          "showtrials_id": "showtrials-4870",
+          "titulo_ru": "Протокол допроса И.П. Лукьянова",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4870",
+            "url": "http://showtrials.ru/protokol-doprosa-i-p-lukyanova/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4870.ru.md",
+          "url_site": "/#/doc/showtrials-4870",
+          "sequencias_comuns": 179,
+          "cobertura_perpetrator": 0.9521,
+          "cobertura_showtrials": 0.9421,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "тов петерсон собрал у себя в кабинете меня секретаря",
+            "в кремле в к р целях вопрос следствию известно",
+            "неестественной смертью вопрос передавали ли вы об этом еще"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_5.md",
+      "sha256": "668cd129987927d96d14179111ae8dca59d4539632861e6e15f6e1707502a736",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.7989,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_5.md",
+          "showtrials_id": "showtrials-4882",
+          "titulo_ru": "Протокол допроса Е.К. Мухановой",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4882",
+            "url": "http://showtrials.ru/protokol-doprosa-e-k-muhanovoj/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4882.ru.md",
+          "url_site": "/#/doc/showtrials-4882",
+          "sequencias_comuns": 286,
+          "cobertura_perpetrator": 0.7989,
+          "cobertura_showtrials": 0.6356,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "не вернули ответ забыла вопрос почему на книге нет",
+            "моя большая ошибка вопрос может быть вы решили замять",
+            "каменева что сын ее был троцкистом сама розенфельд по"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_6.md",
+      "sha256": "9671d72760fb57206ace201c41e1afe10e72e2b650f57b78446ed843b0975a9c",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.8921,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_6.md",
+          "showtrials_id": "showtrials-4883",
+          "titulo_ru": "Протокол допроса К.И. Синелобовой",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4883",
+            "url": "http://showtrials.ru/protokol-doprosa-k-i-sinelobovoj/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4883.ru.md",
+          "url_site": "/#/doc/showtrials-4883",
+          "sequencias_comuns": 215,
+          "cobertura_perpetrator": 0.8921,
+          "cobertura_showtrials": 0.8704,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "уборщицей в правительственной библиотеке с октября 1930 года работаю",
+            "клевету ряду лиц вопрос еще какие провокации вы слышали",
+            "этаже затем уборщицей в правительственной библиотеке с октября 1930"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_7.md",
+      "sha256": "8e66353cb4067c7b6b5ce3d5d355e4b3c64cb856db5db3e750071410ab35c6a6",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.8503,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_7.md",
+          "showtrials_id": "showtrials-4922",
+          "titulo_ru": "Протокол допроса П.И. Гордеевой",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4922",
+            "url": "http://showtrials.ru/protokol-doprosa-p-i-gordeevoj-2/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4922.ru.md",
+          "url_site": "/#/doc/showtrials-4922",
+          "sequencias_comuns": 142,
+          "cobertura_perpetrator": 0.8503,
+          "cobertura_showtrials": 0.7845,
+          "relacao": "perpetrator_contido_no_showtrials",
+          "trechos": [
+            "лично мне клевету о том что н с аллилуева",
+            "поведение розенфельд и ее окружения которое в библиотеке носило",
+            "убийства тов кирова вопрос в чем конкретно это выражалось"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_8.md",
+      "sha256": "a5ce44ec4792b8a5b13d87b530c706081ba2acd30054993de1956d2d66174ddf",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.9189,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_8.md",
+          "showtrials_id": "showtrials-4949",
+          "titulo_ru": "Протокол допроса К.К. Муханова",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4949",
+            "url": "http://showtrials.ru/protokol-doprosa-k-k-muhanova/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4949.ru.md",
+          "url_site": "/#/doc/showtrials-4949",
+          "sequencias_comuns": 170,
+          "cobertura_perpetrator": 0.9189,
+          "cobertura_showtrials": 0.8673,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "кому вы лично передавали этот вымысел ответ об этом",
+            "находился в отпуску в ессентуках и в москву вернулся",
+            "что вам передавала екатерина по поводу убийства т кирова"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_9.md",
+      "sha256": "78e88a032b306c2ea3f4452769d386137f76d5d40769b8fe25dc7cd5e84443ae",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.8972,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_9.md",
+          "showtrials_id": "showtrials-4963",
+          "titulo_ru": "Протокол допроса Б.Н. Розенфельда",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "4963",
+            "url": "http://showtrials.ru/protokol-doprosa-b-n-rozenfelda-2/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-4963.ru.md",
+          "url_site": "/#/doc/showtrials-4963",
+          "sequencias_comuns": 323,
+          "cobertura_perpetrator": 0.8972,
+          "cobertura_showtrials": 0.8874,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "ее семьи принимал активное участие в белом движении сама",
+            "н б розенфельд вам сказал что подготовку террористической борьбы",
+            "заявила в моем присутствии в состоянии аффекта что она"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Kremlin_Affair/Kremlin_Affair_Memorandum.md",
+      "sha256": "a29e0cbe057bc1a20ee55ed973dde08eaecf22dc72ab1a485b3dd65b55f0b363",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Lenin/Church_Values_Confiscation.md",
+      "sha256": "5c4d5a6f87df72aad875cda98d6463162c0afb73a6828654602f4cad8d5fb744",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Lenin/Letter_to_the_Congress.md",
+      "sha256": "ec1f838e1b6ee3063d9c415967dbea9b26428646c6b1cc513747aef6bf6d915a",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Leningrad_Affair/Khrushchev_Speech_Leningrad.md",
+      "sha256": "586dfbdfbb7111bd2d68174b272d9bac785797ef9b236b19bc28c1364701eaf7",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Leningrad_Affair/Rudenko_Speech_Leningrad.md",
+      "sha256": "c9ff98780660cb3257e177bdfbd87dda31814551a3437a0350826dd58d8b6727",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Bukharin_Trial.md",
+      "sha256": "c75d0d3cb6058fe28ff17ef9d02fec9de973e2d65c81a4e3f75aec58659defbb",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/CPSU_Classified_Letter_on_Trotskyite_Zinovievite_Bloc.md",
+      "sha256": "cf81cd6030c13d12c6158bfc214c1ff58b55b4cda948a5f78771383a45965f9e",
+      "classificacao": "candidato_a_redundancia_integral",
+      "cobertura_conjunta": 0.9273,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/CPSU_Classified_Letter_on_Trotskyite_Zinovievite_Bloc.md",
+          "showtrials_id": "showtrials-5723",
+          "titulo_ru": "Закрытое письмо ЦК ВКП(б) от 29 июля 1936 г.",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "5723",
+            "url": "http://showtrials.ru/zakrytoe-pismo-czk-vkpb-ot-29-iyulya-1936-g/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-5723.ru.md",
+          "url_site": "/#/doc/showtrials-5723",
+          "sequencias_comuns": 1530,
+          "cobertura_perpetrator": 0.9273,
+          "cobertura_showtrials": 0.8911,
+          "relacao": "quase_integral_em_ambos",
+          "trechos": [
+            "московский центр зиновьевцев который не знал по видимому о",
+            "о новых фактах террористической деятельности троцкистов и зиновьевцев какова",
+            "под руководством цк вкп б преодолевая трудности успешно шла"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Orlov_Prison_Shooting.md",
+      "sha256": "d63aec7c58df18945de7533a17fefdb9b85633503f2e21b050965190ee91833f",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Radek_Pyatakov_Trial.md",
+      "sha256": "a62c15dda84153b9e9f315708d5462cb64943356491d2144d5d592871f30c396",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.2981,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Radek_Pyatakov_Trial.md",
+          "showtrials_id": "showtrials-2539",
+          "titulo_ru": "28 ЯНВАРЯ – ДНЕВНОЕ И ВЕЧЕРНЕЕ ЗАСЕДАНИЯ",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "2539",
+            "url": "http://showtrials.ru/28-yanvarya-dnevnoe-i-vechernee-zasedaniya/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-2539.ru.md",
+          "url_site": "/#/doc/showtrials-2539",
+          "sequencias_comuns": 2234,
+          "cobertura_perpetrator": 0.1008,
+          "cobertura_showtrials": 0.316,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "было не в 1936 году даже не в 1935",
+            "убийц с этой шайкой убийц поджигателей и бандитов может",
+            "наполнена грязными инсинуациями по поводу нашего великого учителя вождя"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Radek_Pyatakov_Trial.md",
+          "showtrials_id": "showtrials-2540",
+          "titulo_ru": "29 ЯНВАРЯ – УТРЕННЕЕ ЗАСЕДАНИЕ",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "2540",
+            "url": "http://showtrials.ru/29-yanvarya-utrennee-zasedanie/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-2540.ru.md",
+          "url_site": "/#/doc/showtrials-2540",
+          "sequencias_comuns": 2081,
+          "cobertura_perpetrator": 0.0939,
+          "cobertura_showtrials": 0.6276,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "смысле слова я это говорю т е та душа",
+            "которой стоит сталин и в своих крепких цепких руках",
+            "в резкой ее форме проявления пытался в ряде случаев"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Radek_Pyatakov_Trial.md",
+          "showtrials_id": "showtrials-7300",
+          "titulo_ru": "Обвинительное заключение по делу “параллельного антисоветского троцкистского центра”",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "7300",
+            "url": "http://showtrials.ru/obvinitelnoe-zaklyuchenie-po-delu-parallelnogo-antisovetskogo-troczkistskogo-czentra/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-7300.ru.md",
+          "url_site": "/#/doc/showtrials-7300",
+          "sequencias_comuns": 947,
+          "cobertura_perpetrator": 0.0427,
+          "cobertura_showtrials": 0.8752,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "так называемый запасный центр созданный по прямой директиве л",
+            "пятакова ю л радека к б сокольникова г я",
+            "в кемерове т 1 л д 309 в свою"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Radek_Pyatakov_Trial.md",
+          "showtrials_id": "showtrials-2537",
+          "titulo_ru": "27 ЯНВАРЯ – ВЕЧЕРНЕЕ ЗАСЕДАНИЕ",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "2537",
+            "url": "http://showtrials.ru/27-yanvarya-vechernee-zasedanie/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-2537.ru.md",
+          "url_site": "/#/doc/showtrials-2537",
+          "sequencias_comuns": 796,
+          "cobertura_perpetrator": 0.0359,
+          "cobertura_showtrials": 0.2281,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "официозными лицами германии с которыми он имел дело значит",
+            "я еще опознал монтера фирмы линде ленца вышинский это",
+            "с какими нибудь требованиями граше был такой случай в"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Radek_Pyatakov_Trial.md",
+          "showtrials_id": "showtrials-2541",
+          "titulo_ru": "29 ЯНВАРЯ – ВЕЧЕРНЕЕ ЗАСЕДАНИЕ",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "2541",
+            "url": "http://showtrials.ru/29-yanvarya-vechernee-zasedanie/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-2541.ru.md",
+          "url_site": "/#/doc/showtrials-2541",
+          "sequencias_comuns": 517,
+          "cobertura_perpetrator": 0.0233,
+          "cobertura_showtrials": 0.8366,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "в сложных вопросах политики и в результате я очутился",
+            "больше того что сказал гражданин государственный обвинитель я работал",
+            "судьи моя биография неразрывно связана со всей нашей революцией"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Radek_Pyatakov_Trial.md",
+          "showtrials_id": "showtrials-7275",
+          "titulo_ru": "Проект обвинительного заключения по делу “параллельного троцкистского центра”",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "7275",
+            "url": "http://showtrials.ru/proekt-obvinitelnogo-zaklyucheniya-po-delu-parallelnogo-troczkistskogo-czentra/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-7275.ru.md",
+          "url_site": "/#/doc/showtrials-7275",
+          "sequencias_comuns": 210,
+          "cobertura_perpetrator": 0.0095,
+          "cobertura_showtrials": 0.2138,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "так называемый запасный центр созданный по прямой директиве л",
+            "пятакова ю л радека к б сокольникова г я",
+            "поскольку это возможно ускорять столкновение между ссср и германией"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Radek_Pyatakov_Trial.md",
+          "showtrials_id": "showtrials-2538",
+          "titulo_ru": "27 ЯНВАРЯ – ВЕЧЕРНЕЕ ЗАКРЫТОЕ ЗАСЕДАНИЕ",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "2538",
+            "url": "http://showtrials.ru/27-yanvarya-vechernee-zakrytoe-zasedanie/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-2538.ru.md",
+          "url_site": "/#/doc/showtrials-2538",
+          "sequencias_comuns": 35,
+          "cobertura_perpetrator": 0.0016,
+          "cobertura_showtrials": 0.8333,
+          "relacao": "showtrials_contido_no_perpetrator",
+          "trechos": [
+            "других лиц о которых упоминалось в судебном следствии без",
+            "заседания состоялось закрытое заседание военной коллегии верховного суда союза",
+            "с установками троцкого на ускорение войны против ссср содействие"
+          ]
+        }
+      ],
+      "avisos_conversao": [
+        "Conferir tabelas, células mescladas e sequência de leitura no Word."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Radek_Sokolnikov_Murder.md",
+      "sha256": "a115109d223a05017d44f6b743d0b92d643ef013aab7931941f3262a81295d36",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Show_Trials/Zinoviev_Kamenev_Trial.md",
+      "sha256": "c8ade2359c15016f956bd145c6ea86936c32fc451b03a5d99382358464703b18",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Tukhachevsky/Plan_for_Defeat.md",
+      "sha256": "5b9b36585154c4963c36d3b95b51b1480c6e8297c3662aed8e00f1b58944486e",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Tukhachevsky/Tukhachevsky_Report/Доклад комиссии по Тухачевскому.md",
+      "sha256": "93894f86b841c0c3d04379958d946e77d3c8149b428efe3ec7a1621e7e989591",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Yagoda/Kirshon_s_Report_on_Yagoda_s_Behavior_in_Prison.md",
+      "sha256": "956de021a65757530567f7e652b9ae3421c61b5f8dfe6d9a1b365b3ad388192e",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Yagoda/Prosecutors_Interrogation_Record.md",
+      "sha256": "d8f8fdc6b5352e56cf57002bfa1c62e04442e446e17ebf0e12faccec03fdf80d",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Yagoda/Shothand_Record_of_Closed_Session.md",
+      "sha256": "243cbba52e8d1e4e333545009e45d6f6a99407458566f8d925bc61095418ec58",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Yagoda/Yagoda_Confrontation_Records.md",
+      "sha256": "e10607034bc2af3053ef3107f051af7601c0163827b1a3527e06c324199681ee",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Yagoda/Yagoda_Interrogation_Records.md",
+      "sha256": "1af23b107e3d3054da05383def63e6d62337d44a67ba25df9349de8647d9827f",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Yagoda/Yagoda_Search_Record.md",
+      "sha256": "e78f5f77b33fbf48406674fe895e099e236bdc310011b45d6129e60eb46ac36e",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Yezhov/Yezhov1.md",
+      "sha256": "eb4e45e364934c70e854c9aae372ae70248813120fe36ea9f79807aceefdff76",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Yezhov/Yezhov2.md",
+      "sha256": "08d417d010963635048a5e77a5d86bb149eafdc0fb10d0449da452b3930acd6b",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/Yezhov/YezhovQuiz26Apr1939.md",
+      "sha256": "eb1b25be64358182a0c62e465b202b0fef255bc64ab8b25901c34f737860571d",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/CCC_Memo_Shatunovskaya.md",
+      "sha256": "40c09277c4b0a6eceabd38af95ec03e3938be92fe1b4e55f228a1e82e15573c0",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Draft_Circular_Letter.md",
+      "sha256": "16ce2817949be3075f3827a3b827a5c52037411ba7d1627900bee9057e36c3e9",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Khanik_Documents_Records.md",
+      "sha256": "c629ee59c60851a15cb9461a51c4880804bf67bea9d70585d8a6f1609ba20d9f",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.3317,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Khanik_Documents_Records.md",
+          "showtrials_id": "showtrials-3013",
+          "titulo_ru": "Протокол допроса Л.О. Ханика",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "3013",
+            "url": "http://showtrials.ru/protokol-doprosa-l-o-hanika/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-3013.ru.md",
+          "url_site": "/#/doc/showtrials-3013",
+          "sequencias_comuns": 99,
+          "cobertura_perpetrator": 0.2415,
+          "cobertura_showtrials": 0.4267,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "нашей организации постоянно указывали что все зло исходит от",
+            "этого террористического акта ответ об этом мне лично известно",
+            "в стране будут продолжаться затруднения достижения в расчет не"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Khanik_Documents_Records.md",
+          "showtrials_id": "showtrials-3115",
+          "titulo_ru": "Протокол допроса Л.О. Ханика",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "3115",
+            "url": "http://showtrials.ru/protokol-doprosa-l-o-hanika-2/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-3115.ru.md",
+          "url_site": "/#/doc/showtrials-3115",
+          "sequencias_comuns": 37,
+          "cobertura_perpetrator": 0.0902,
+          "cobertura_showtrials": 0.3663,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "как начало широкой активизации направленной к возобновлению и организационному",
+            "звериной ненависти исходило в москве от руководящих деятелей центра",
+            "с фашизмом вопрос какие цели преследовала ваша организация ответ"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Kirilina_Interview.md",
+      "sha256": "292c022ffa98ff613faa964b77711c49f9f3ebbc542778b694782f05a80a32ee",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Kotolynov_Interrogation_Record.md",
+      "sha256": "f0cf65ee3dddb72eaba37dacd93be716e1ad65582a2fb893f1aa379a4b93faec",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Kotolynov_Interrogation_Record_12_Dec.md",
+      "sha256": "0e2c008f4676a3b857c091113c927e9ef507f28c7021da66dfa07cd0b824fd8f",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.5125,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Kotolynov_Interrogation_Record_12_Dec.md",
+          "showtrials_id": "showtrials-2738",
+          "titulo_ru": "Протокол допроса И.И. Котолынова",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "2738",
+            "url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-6/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-2738.ru.md",
+          "url_site": "/#/doc/showtrials-2738",
+          "sequencias_comuns": 41,
+          "cobertura_perpetrator": 0.5125,
+          "cobertura_showtrials": 0.5467,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "частности в момент возвращения в партию в августе 1928",
+            "организации ответ в румянцев с мандельштам а толмазов ф",
+            "центром к р организации ответ связи с москвой поддерживал"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Kotolynov_s_Statement_re_Indictment.md",
+      "sha256": "94f011dbb4a6328c4fb5a711ad485a44e018628caa80d886b48e5c1571d22cdd",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Kozlov_Memo.md",
+      "sha256": "7e7fc53fa5a8b33ef60556a06c79aa810c1b50af58d4125e087b11be187fe5cf",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Krov_Assassination_Memo_GPO_KGB.md",
+      "sha256": "1f3d645a8ec22caff1390d854fbfaf6af13531c03050085c78e639330c9c0f61",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Molotov_Commission_Borisov.md",
+      "sha256": "7b837b080c0bee4735df97803c301d9a73c2f1f79e8386ac6e241480c0f44789",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Molotov_Commission_Memo.md",
+      "sha256": "649289406243fe86da6dd1ec92f8529ba30c2528b2e41c89383b10077b42add8",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Nikolayev_Interrogation_Record_13_Dec.md",
+      "sha256": "d6a243d447afd556e1e4694e89efa57758aed6c644071b98c71759f10d207bab",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.381,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Nikolayev_Interrogation_Record_13_Dec.md",
+          "showtrials_id": "showtrials-3006",
+          "titulo_ru": "Протокол допроса Л.В. Николаева",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "3006",
+            "url": "http://showtrials.ru/protokol-doprosa-l-v-nikolaeva-19/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-3006.ru.md",
+          "url_site": "/#/doc/showtrials-3006",
+          "sequencias_comuns": 16,
+          "cobertura_perpetrator": 0.381,
+          "cobertura_showtrials": 0.3333,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "я должен был изобразить убийство кирова как единоличный акт",
+            "изобразить убийство кирова как единоличный акт чтобы скрыть участие",
+            "записано с моих слов правильно протокол мне прочитан л"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Professor_Dembo_s_Letter.md",
+      "sha256": "73abc01286df4c9a9a1bfc4207826b9826ebf01a3b900e8ead8cb57ff51d69b4",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Record_No_2.md",
+      "sha256": "a7c72e53cc811b2a7396437f9ed8bb48e6133b7df2369611b74768bd5a4bb2f8",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Roslakov1.md",
+      "sha256": "5d3360ba704d64d714f2e8c9d0f5a1398010b0bb4fdca66175f336742380aac7",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Salkov_Statement.md",
+      "sha256": "0c22a0b9905182af2301c25d04c30d03344a3274063432903c32093f76cee7fb",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Serov_Memo_Volkova.md",
+      "sha256": "8b7b6e22fa11b3a77deeda8bdb0ca238ba76f25e6dbab87ac067a298a4c14987",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Shatunovskaya_Letters.md",
+      "sha256": "90466251551a1b3b540ac5eedbac86fe6b8fa1be6dcf727e1f4123396a2ec965",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Special_Reports_to_Yagoda.md",
+      "sha256": "70f21fd5d3eaf6b4a6df288d4d9192f388792bd8fed8605084b4d191655fe15d",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/TheUnknownKirov.md",
+      "sha256": "c507b3b1f81d612135cda5114c03d68b1dae45212fedf704c043de80b74d9fcb",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.0055,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/TheUnknownKirov.md",
+          "showtrials_id": "showtrials-3013",
+          "titulo_ru": "Протокол допроса Л.О. Ханика",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "3013",
+            "url": "http://showtrials.ru/protokol-doprosa-l-o-hanika/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-3013.ru.md",
+          "url_site": "/#/doc/showtrials-3013",
+          "sequencias_comuns": 99,
+          "cobertura_perpetrator": 0.0024,
+          "cobertura_showtrials": 0.4267,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "нашей организации постоянно указывали что все зло исходит от",
+            "этого террористического акта ответ об этом мне лично известно",
+            "в стране будут продолжаться затруднения достижения в расчет не"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/TheUnknownKirov.md",
+          "showtrials_id": "showtrials-1665",
+          "titulo_ru": "Протокол допроса Л.В. Николаева",
+          "titulo_pt": "Protocolo do interrogatório de L. V. Nikolaev",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "1665",
+            "url": "http://showtrials.ru/dopros-nikolaeva-3-dekabrya-1934/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-1665.ru.md",
+          "url_site": "/#/doc/showtrials-1665",
+          "sequencias_comuns": 70,
+          "cobertura_perpetrator": 0.0017,
+          "cobertura_showtrials": 0.5469,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "мне по правой стене коридора идет сергей миронович киров",
+            "обкома у его кабинета попросил билет и получил ответ",
+            "я очнулся и постепенно начал приходить в себя я"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/TheUnknownKirov.md",
+          "showtrials_id": "showtrials-3115",
+          "titulo_ru": "Протокол допроса Л.О. Ханика",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "3115",
+            "url": "http://showtrials.ru/protokol-doprosa-l-o-hanika-2/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-3115.ru.md",
+          "url_site": "/#/doc/showtrials-3115",
+          "sequencias_comuns": 37,
+          "cobertura_perpetrator": 0.0009,
+          "cobertura_showtrials": 0.3663,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "как начало широкой активизации направленной к возобновлению и организационному",
+            "звериной ненависти исходило в москве от руководящих деятелей центра",
+            "с фашизмом вопрос какие цели преследовала ваша организация ответ"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/TheUnknownKirov.md",
+          "showtrials_id": "showtrials-3008",
+          "titulo_ru": "Протокол допроса И.И. Котолынова",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "3008",
+            "url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-8/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-3008.ru.md",
+          "url_site": "/#/doc/showtrials-3008",
+          "sequencias_comuns": 21,
+          "cobertura_perpetrator": 0.0005,
+          "cobertura_showtrials": 0.3333,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "среде зиновьевской молодежи резко враждебное отношение к руководителям вкп",
+            "к т сталину нам постоянно говорилось что сталин является",
+            "р настроениями и таким образом продолжали их культивировать и"
+          ]
+        }
+      ],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Trial_Record_Khanik.md",
+      "sha256": "68e4b967bf868b5e65010c451dfeb1357f7a5b209f52ec6f6ce834ee5abcedf7",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.5797,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Trial_Record_Khanik.md",
+          "showtrials_id": "showtrials-2618",
+          "titulo_ru": "ЗАСЕДАНИЕ 28 ДЕКАБРЯ 1934 Г.",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "2618",
+            "url": "http://showtrials.ru/zasedanie-voennogo-tribunala-verhovnogo-suda-sssr-28-dekabrya-1934-g/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-2618.ru.md",
+          "url_site": "/#/doc/showtrials-2618",
+          "sequencias_comuns": 120,
+          "cobertura_perpetrator": 0.5797,
+          "cobertura_showtrials": 0.0124,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "гребень волны это самое руководство председатель во время войны",
+            "использовать войну против советского союза расскажите подробнее интересно все",
+            "какими методами вы думали дать дорогу вашим вождям в"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Trial_Record_Kotolynov_et_al.md",
+      "sha256": "1425de90b748e0c96d070fc7332946f5818436ca2534ccb2a5aa38507612c18f",
+      "classificacao": "sobreposicao_a_revisar",
+      "cobertura_conjunta": 0.7322,
+      "candidatos": [
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Trial_Record_Kotolynov_et_al.md",
+          "showtrials_id": "showtrials-2618",
+          "titulo_ru": "ЗАСЕДАНИЕ 28 ДЕКАБРЯ 1934 Г.",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "2618",
+            "url": "http://showtrials.ru/zasedanie-voennogo-tribunala-verhovnogo-suda-sssr-28-dekabrya-1934-g/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-2618.ru.md",
+          "url_site": "/#/doc/showtrials-2618",
+          "sequencias_comuns": 564,
+          "cobertura_perpetrator": 0.7059,
+          "cobertura_showtrials": 0.0583,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "институте пусть скажет где и как была организована встреча",
+            "человек в том числе назвали себя так кто же",
+            "скажете антонов у нас в конце октября была встреча"
+          ]
+        },
+        {
+          "perpetrator": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Trial_Record_Kotolynov_et_al.md",
+          "showtrials_id": "showtrials-3008",
+          "titulo_ru": "Протокол допроса И.И. Котолынова",
+          "titulo_pt": "",
+          "data": {
+            "display": null,
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source": {
+            "name": "ShowTrials",
+            "id": "3008",
+            "url": "http://showtrials.ru/protokol-doprosa-i-i-kotolynova-8/"
+          },
+          "arquivo_showtrials": "originais/showtrials/showtrials-3008.ru.md",
+          "url_site": "/#/doc/showtrials-3008",
+          "sequencias_comuns": 21,
+          "cobertura_perpetrator": 0.0263,
+          "cobertura_showtrials": 0.3333,
+          "relacao": "sobreposicao_parcial",
+          "trechos": [
+            "среде зиновьевской молодежи резко враждебное отношение к руководителям вкп",
+            "к т сталину нам постоянно говорилось что сталин является",
+            "р настроениями и таким образом продолжали их культивировать и"
+          ]
+        }
+      ],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Volkova_s_Letter_Verification.md",
+      "sha256": "21a908b2eafc4ea205f7396520f8cc916b46dd6a277b42e4a1e78f48227a87bc",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": [
+        "Conferir notas e referências: convertidas as notas identificadas no DocBook."
+      ]
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Yakovlev_Memo.md",
+      "sha256": "6bafcce9d0ba4a543d7f1edf39bf93ead80db8b3a5a4a437e23244b4d81c523b",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    },
+    {
+      "arquivo": "temporario/perpetrator2004-markdown/markdown/documents/kirov/Zhukov_on_Kirov.md",
+      "sha256": "3ff26e876c6c75989226e1398be7eee05549a88467d47c49b27e917fa96cdcf2",
+      "classificacao": "sem_correspondencia_detectada",
+      "cobertura_conjunta": 0.0,
+      "candidatos": [],
+      "avisos_conversao": []
+    }
+  ]
+}
