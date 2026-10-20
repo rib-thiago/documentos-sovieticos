@@ -114762,5 +114762,1170 @@
       "source_url",
       "languages"
     ]
+  },
+  {
+    "id": "tukhachevsky-nko37-01-pm",
+    "kind": "document",
+    "titles": {
+      "ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. Вечернее заседание 1 июня 1937 г.",
+      "pt": "Conselho Militar — sessão da tarde/noite de 1º de junho"
+    },
+    "document_type": "session_transcript",
+    "historical_date": {
+      "display": "1937.06.01",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 158. Л. 1-134.",
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "27376",
+      "url": "https://web.archive.org/web/20250906080617/https://istmat.org/node/27376"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "nko37-01-pm",
+          "collection": "conselho-1937",
+          "date": "1937-06-01",
+          "title_ru": "Стенограмма Военного совета: вечернее заседание 1 июня",
+          "kind": "stenogram",
+          "site": "istmat",
+          "url": "https://istmat.org/node/27376",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_session",
+          "edition": "Военный совет при народном комиссаре обороны СССР. 1–4 июня 1937 г.: Документы и материалы. М.: РОССПЭН, 2008.",
+          "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 158. Л. 1–134.",
+          "topic": "processo-militar",
+          "priority": "P1",
+          "title_pt": "Conselho Militar — sessão da tarde/noite de 1º de junho",
+          "kit_collection": "conselho-1937"
+        },
+        "attempted_at": "2026-10-17T12:31:59.759267+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/27376",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20250906080617",
+        "captured_original_url": "https://istmat.org/node/27376",
+        "archive_url": "https://web.archive.org/web/20250906080617/https://istmat.org/node/27376",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20250906080617id_/https://istmat.org/node/27376",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/nko37-01-pm.html",
+        "bytes": 293408,
+        "sha256": "37a30462ba61dad48ac731a47f4e877103471bd7924969c631eb1327688186e0"
+      },
+      "conversion": {
+        "source_title": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. Вечернее заседание 1 июня 1937 г.",
+        "source_text_characters": 137662,
+        "source_start": "Вечернее заседание 1 июня 1937 г. [1] Ворошилов . Заседание Военного совета с участием приглашенных товарищей командиров и политработников из округов объявляю открытым. На повестке сегодняшнего заседания один вопрос: доклад о раскрытой орга",
+        "source_end": "КП(б)У. Прием бывших боротьбистов в КП(б)У производился в индивидуальном порядке (См.: Большая советская энциклопедия. М., 1970. Т. 3. С. 582.). [38] Здесь и далее в стенограмме неверно указана фамилия комкора А.И. Тодорского – «Подорский».",
+        "tables": 0,
+        "footnotes": 38,
+        "reviewed_headings": [],
+        "flags": [
+          {
+            "priority": "media",
+            "reason": "38 notas convertidas para sintaxe Markdown; cotejar chamadas, definições e navegação."
+          }
+        ],
+        "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 158. Л. 1-134.",
+        "source_date": "1937.06.01",
+        "publication": "Военный совет при народном комиссаре обороны СССР. 1—4 июня 1937 г.: Документы и материалы. — М.: Российская политическая энциклопедия (РОССПЭН), 2008, стр. 61-111",
+        "recipe": "military-html-v2",
+        "source_sha256": "37a30462ba61dad48ac731a47f4e877103471bd7924969c631eb1327688186e0",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "a5c3bff7284b01f38f7ed6b3ab86160fad9955e6be9bc26102336be73966dbad"
+      },
+      "inventory_archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 158. Л. 1–134.",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-02-am",
+    "kind": "document",
+    "titles": {
+      "ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г.(Утреннее заседание 2 июня 1937 г.)",
+      "pt": "Conselho Militar — sessão da manhã de 2 de junho"
+    },
+    "document_type": "session_transcript",
+    "historical_date": {
+      "display": "1937.06.02",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 59. Л. 1-76.  АП РФ. Ф. 45. Оп. 1. Д. 1120. Л. 48—81. Машинописный экземпляр неправленой стенограммы.",
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "27377",
+      "url": "https://web.archive.org/web/20250912163950/https://istmat.org/node/27377"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "nko37-02-am",
+          "collection": "conselho-1937",
+          "date": "1937-06-02",
+          "title_ru": "Стенограмма Военного совета: утреннее заседание 2 июня",
+          "kind": "stenogram",
+          "site": "istmat",
+          "url": "https://istmat.org/node/27377",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_session",
+          "edition": "Военный совет при народном комиссаре обороны СССР. 1–4 июня 1937 г.: Документы и материалы. М.: РОССПЭН, 2008.",
+          "archive_reference": "",
+          "topic": "processo-militar",
+          "priority": "P1",
+          "title_pt": "Conselho Militar — sessão da manhã de 2 de junho",
+          "kit_collection": "conselho-1937"
+        },
+        "attempted_at": "2026-10-17T12:32:23.064229+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/27377",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20250912163950",
+        "captured_original_url": "https://istmat.org/node/27377",
+        "archive_url": "https://web.archive.org/web/20250912163950/https://istmat.org/node/27377",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20250912163950id_/https://istmat.org/node/27377",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/nko37-02-am.html",
+        "bytes": 257533,
+        "sha256": "43b4eece160dd76e152d1a6147c11e71e0e09e548a5ec882218582fce1770b7f"
+      },
+      "conversion": {
+        "source_title": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г.(Утреннее заседание 2 июня 1937 г.)",
+        "source_text_characters": 115730,
+        "source_start": "Заседание Военного совета с участием приглашенных товарищей командиров и политработников 2 июня 1937 г. (Утреннее заседание) [1] Ворошилов . Заседание объявляю открытым. Слово предоставляется т. Петровскому. Петровский . Упрек народного ком",
+        "source_end": "ложений теорий глубокой операции и глубокого боя. Их опыт был использован при доработке проекта Временного Полевого устава РККА, введенного в действие приказом наркома обороны СССР от 30 декабря 1936 г. (Военная энциклопедия. Т. 4. С. 557).",
+        "tables": 0,
+        "footnotes": 29,
+        "reviewed_headings": [],
+        "flags": [
+          {
+            "priority": "media",
+            "reason": "29 notas convertidas para sintaxe Markdown; cotejar chamadas, definições e navegação."
+          }
+        ],
+        "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 59. Л. 1-76.  АП РФ. Ф. 45. Оп. 1. Д. 1120. Л. 48—81. Машинописный экземпляр неправленой стенограммы.",
+        "source_date": "1937.06.02",
+        "publication": "Военный совет при народном комиссаре обороны СССР. 1—4 июня 1937 г.: Документы и материалы. — М.: Российская политическая энциклопедия (РОССПЭН), 2008, стр. 111-155, Источник. 1994. № 3. С. 72—85",
+        "recipe": "military-html-v2",
+        "source_sha256": "43b4eece160dd76e152d1a6147c11e71e0e09e548a5ec882218582fce1770b7f",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "eb1b01bdbbb057fcc33ce12161c8122d9efc2bb93b10e91a63d532865420899b"
+      },
+      "inventory_archive_reference": "",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-02-pm",
+    "kind": "document",
+    "titles": {
+      "ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Вечернее заседание 2 июня 1937г.)",
+      "pt": "Conselho Militar — sessão da tarde/noite de 2 de junho"
+    },
+    "document_type": "session_transcript",
+    "historical_date": {
+      "display": "1937.06.02",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 59. Л. 77-212.",
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "27399",
+      "url": "https://web.archive.org/web/20260710084415/https://istmat.org/node/27399"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "nko37-02-pm",
+          "collection": "conselho-1937",
+          "date": "1937-06-02",
+          "title_ru": "Стенограмма Военного совета: вечернее заседание 2 июня",
+          "kind": "stenogram",
+          "site": "istmat",
+          "url": "https://istmat.org/node/27399",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_session",
+          "edition": "Военный совет при народном комиссаре обороны СССР. 1–4 июня 1937 г.: Документы и материалы. М.: РОССПЭН, 2008.",
+          "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 59. Л. 77–212.",
+          "topic": "processo-militar",
+          "priority": "P1",
+          "title_pt": "Conselho Militar — sessão da tarde/noite de 2 de junho",
+          "kit_collection": "conselho-1937"
+        },
+        "attempted_at": "2026-10-17T12:32:48.067346+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/27399",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20260710084415",
+        "captured_original_url": "https://istmat.org/node/27399",
+        "archive_url": "https://web.archive.org/web/20260710084415/https://istmat.org/node/27399",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20260710084415id_/https://istmat.org/node/27399",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/nko37-02-pm.html",
+        "bytes": 272993,
+        "sha256": "fa06577d087ef30a69b02026364795a80a13a1cb88dd635ce33cae48c47de352"
+      },
+      "conversion": {
+        "source_title": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Вечернее заседание 2 июня 1937г.)",
+        "source_text_characters": 121747,
+        "source_start": "2 июня 1937 г. Вечернее заседание Военного совета с участием приглашенных товарищей командиров и политработников. (Вечернее заседание) от 2.VI .1937г. [1] Ворошилов . Заседание продолжается. Слово имеет т. Шестаков. Шестаков . Мы, политрабо",
+        "source_end": " Однако многие гарнизоны ДОС продолжали сопротивление и сложили оружие только после капитуляции Франции (Военная энциклопедия. Т. 4. С. 516—517). [18] Так в стенограмме. Должно быть – «всего некоторое время». [19] Правильно: как кур в ощип.",
+        "tables": 0,
+        "footnotes": 19,
+        "reviewed_headings": [],
+        "flags": [
+          {
+            "priority": "media",
+            "reason": "19 notas convertidas para sintaxe Markdown; cotejar chamadas, definições e navegação."
+          }
+        ],
+        "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 59. Л. 77-212.",
+        "source_date": "1937.06.02",
+        "publication": "Военный совет при народном комиссаре обороны СССР. 1—4 июня 1937 г.: Документы и материалы. — М.: Российская политическая энциклопедия (РОССПЭН), 2008, стр. 155-202",
+        "recipe": "military-html-v2",
+        "source_sha256": "fa06577d087ef30a69b02026364795a80a13a1cb88dd635ce33cae48c47de352",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "cab3f0123cf56c8068d3b6017633e038d51751ff8819f07a495b6172eb7c9358"
+      },
+      "inventory_archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 59. Л. 77–212.",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-03-am",
+    "kind": "document",
+    "titles": {
+      "ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Утреннее заседание 3 июня 1937 г.)",
+      "pt": "Conselho Militar — sessão da manhã de 3 de junho"
+    },
+    "document_type": "session_transcript",
+    "historical_date": {
+      "display": "1937.06.03",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 1-139.",
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "27644",
+      "url": "https://web.archive.org/web/20250909124433/https://istmat.org/node/27644"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "nko37-03-am",
+          "collection": "conselho-1937",
+          "date": "1937-06-03",
+          "title_ru": "Стенограмма Военного совета: утреннее заседание 3 июня",
+          "kind": "stenogram",
+          "site": "istmat",
+          "url": "https://istmat.org/node/27644",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_session",
+          "edition": "Военный совет при народном комиссаре обороны СССР. 1–4 июня 1937 г.: Документы и материалы. М.: РОССПЭН, 2008.",
+          "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 1–139.",
+          "topic": "processo-militar",
+          "priority": "P1",
+          "title_pt": "Conselho Militar — sessão da manhã de 3 de junho",
+          "kit_collection": "conselho-1937"
+        },
+        "attempted_at": "2026-10-17T12:33:14.824916+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/27644",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20250909124433",
+        "captured_original_url": "https://istmat.org/node/27644",
+        "archive_url": "https://web.archive.org/web/20250909124433/https://istmat.org/node/27644",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20250909124433id_/https://istmat.org/node/27644",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/nko37-03-am.html",
+        "bytes": 283748,
+        "sha256": "a2d6e9f051e45c0c97b012d718522c78acaa01c2bd930b9e0b16e9426a95faf0"
+      },
+      "conversion": {
+        "source_title": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Утреннее заседание 3 июня 1937 г.)",
+        "source_text_characters": 129569,
+        "source_start": "Заседание Военного совета с участием приглашенных товарищей командиров и политработников (утреннее заседание) от 3. VI . 1937 г. [1] Ворошилов ( председательствующий). Заседание объявляю открытым. Слово имеет т. Алкснис. Алкснис . Товарищи,",
+        "source_end": "авильно – «в округах». [31] Имеется в виду Артиллерийское управление РККА. [32] Здесь и далее в стенограмме неверно указана фамилия армейского комиссара 2-го ранга Г.И. Векличева («Вехличев»). [33] Так в стенограмме. [34] Так в стенограмме.",
+        "tables": 0,
+        "footnotes": 34,
+        "reviewed_headings": [],
+        "flags": [
+          {
+            "priority": "media",
+            "reason": "34 notas convertidas para sintaxe Markdown; cotejar chamadas, definições e navegação."
+          }
+        ],
+        "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 1-139.",
+        "source_date": "1937.06.03",
+        "publication": "Военный совет при народном комиссаре обороны СССР. 1—4 июня 1937 г.: Документы и материалы. — М.: Российская политическая энциклопедия (РОССПЭН), 2008, стр. 202-250",
+        "recipe": "military-html-v2",
+        "source_sha256": "a2d6e9f051e45c0c97b012d718522c78acaa01c2bd930b9e0b16e9426a95faf0",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "c6390091f7dc9f459a10c4f3abb04cea978217216dd8eb7d1d0542eb0fb75763"
+      },
+      "inventory_archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 1–139.",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-03-pm",
+    "kind": "document",
+    "titles": {
+      "ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Вечернее заседание 3 июня 1937 г.)",
+      "pt": "Conselho Militar — sessão da tarde/noite de 3 de junho"
+    },
+    "document_type": "session_transcript",
+    "historical_date": {
+      "display": "1937.06.03",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 140-279.",
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "28261",
+      "url": "https://web.archive.org/web/20250906081340/https://istmat.org/node/28261"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "nko37-03-pm",
+          "collection": "conselho-1937",
+          "date": "1937-06-03",
+          "title_ru": "Стенограмма Военного совета: вечернее заседание 3 июня",
+          "kind": "stenogram",
+          "site": "istmat",
+          "url": "https://istmat.org/node/28261",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_session",
+          "edition": "Военный совет при народном комиссаре обороны СССР. 1–4 июня 1937 г.: Документы и материалы. М.: РОССПЭН, 2008.",
+          "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 140–279.",
+          "topic": "processo-militar",
+          "priority": "P1",
+          "title_pt": "Conselho Militar — sessão da tarde/noite de 3 de junho",
+          "kit_collection": "conselho-1937"
+        },
+        "attempted_at": "2026-10-17T12:33:40.678791+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/28261",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20250906081340",
+        "captured_original_url": "https://istmat.org/node/28261",
+        "archive_url": "https://web.archive.org/web/20250906081340/https://istmat.org/node/28261",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20250906081340id_/https://istmat.org/node/28261",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/nko37-03-pm.html",
+        "bytes": 261962,
+        "sha256": "407a83f2b3fce7a85598f60be0eafacb3a096c36a0fec21c1d7c35355fab9292"
+      },
+      "conversion": {
+        "source_title": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Вечернее заседание 3 июня 1937 г.)",
+        "source_text_characters": 118700,
+        "source_start": "Заседание Военного совета с участием приглашенных товарищей командиров и политработников (вечернее заседание) от 3. VI .37 г. [1] Ворошилов . Слово имеет т. Буденный. Буденный . Товарищи, разумеется, вопрос, который мы обсуждаем на Военном ",
+        "source_end": "н» и флагмана 1-го ранга К.И. Душенова – «Дубшинов». [23] Здесь и далее имеются в виду заключённые Управления лагерей особого назначения. [24] Так в стенограмме. [25] Так в стенограмме. Правильно — «Академии механизации и моторизации РККА».",
+        "tables": 0,
+        "footnotes": 25,
+        "reviewed_headings": [],
+        "flags": [
+          {
+            "priority": "media",
+            "reason": "25 notas convertidas para sintaxe Markdown; cotejar chamadas, definições e navegação."
+          }
+        ],
+        "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 140-279.",
+        "source_date": "1937.06.03",
+        "publication": "Военный совет при народном комиссаре обороны СССР. 1—4 июня 1937 г.: Документы и материалы. — М.: Российская политическая энциклопедия (РОССПЭН), 2008, стр. 250-297",
+        "recipe": "military-html-v2",
+        "source_sha256": "407a83f2b3fce7a85598f60be0eafacb3a096c36a0fec21c1d7c35355fab9292",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "eb1a94e3b2a075d6cfccb0637cd42b2818168eb42d00e9251579835e65a3d921"
+      },
+      "inventory_archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 140–279.",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-04-am",
+    "kind": "document",
+    "titles": {
+      "ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Утреннее заседание 4 июня 1937 г.)",
+      "pt": "Conselho Militar — sessão da manhã de 4 de junho"
+    },
+    "document_type": "session_transcript",
+    "historical_date": {
+      "display": "1937.06.04",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 61. Л. 1-191.",
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "28262",
+      "url": "https://web.archive.org/web/20251016040112/https://istmat.org/node/28262"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "nko37-04-am",
+          "collection": "conselho-1937",
+          "date": "1937-06-04",
+          "title_ru": "Стенограмма Военного совета: утреннее заседание 4 июня",
+          "kind": "stenogram",
+          "site": "istmat",
+          "url": "https://istmat.org/node/28262",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_session",
+          "edition": "Военный совет при народном комиссаре обороны СССР. 1–4 июня 1937 г.: Документы и материалы. М.: РОССПЭН, 2008.",
+          "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 61. Л. 1–191.",
+          "topic": "processo-militar",
+          "priority": "P1",
+          "title_pt": "Conselho Militar — sessão da manhã de 4 de junho",
+          "kit_collection": "conselho-1937"
+        },
+        "attempted_at": "2026-10-17T12:34:09.023511+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/28262",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20251016040112",
+        "captured_original_url": "https://istmat.org/node/28262",
+        "archive_url": "https://web.archive.org/web/20251016040112/https://istmat.org/node/28262",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20251016040112id_/https://istmat.org/node/28262",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/nko37-04-am.html",
+        "bytes": 378847,
+        "sha256": "4f1e4eb14e6131ce9f603ce3458b4f8c2a43ab8a760464e941dfffcfef8e4fd5"
+      },
+      "conversion": {
+        "source_title": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Утреннее заседание 4 июня 1937 г.)",
+        "source_text_characters": 175945,
+        "source_start": "Совещание Военного совета с участием приглашенных товарищей командиров и политработников 4 июня 1937 г. (утреннее заседание) [1] Ворошилов . Слово имеет т. Белов, командующий войсками Московского военного округа. Белов . Товарищи, некоторые",
+        "source_end": "ак в тексте. Правильно – Шестаков. [24] Так в тексте. Правильно – «люди моего артполка». [25] Так в тексте. Правильно – «сегодняшний и завтрашний день». [26] Так в тексте. Правильно – «высший». [27] Командир 12-го стр. корпуса М.Г. Ефремов.",
+        "tables": 0,
+        "footnotes": 27,
+        "reviewed_headings": [],
+        "flags": [
+          {
+            "priority": "media",
+            "reason": "27 notas convertidas para sintaxe Markdown; cotejar chamadas, definições e navegação."
+          }
+        ],
+        "archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 61. Л. 1-191.",
+        "source_date": "1937.06.04",
+        "publication": "Военный совет при народном комиссаре обороны СССР. 1—4 июня 1937 г.: Документы и материалы. — М.: Российская политическая энциклопедия (РОССПЭН), 2008, стр. 297-364",
+        "recipe": "military-html-v2",
+        "source_sha256": "4f1e4eb14e6131ce9f603ce3458b4f8c2a43ab8a760464e941dfffcfef8e4fd5",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "4b0a568fbb4d8c65008b9f734e3955893ca1396e0430e25086c8acdc27bfc7d6"
+      },
+      "inventory_archive_reference": "РГАСПИ. Ф. 17. Оп. 165. Д. 61. Л. 1–191.",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-activ-09",
+    "kind": "document",
+    "titles": {
+      "ru": "Стенограмма актива центрального аппарата НКО СССР 9 июня 1937 г.",
+      "pt": "Reunião do aparelho central do NKO — 9 de junho"
+    },
+    "document_type": "session_transcript",
+    "historical_date": {
+      "display": "1937.06.09",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": "РГВА. Ф. 4. Оп. 18. Д. 61. Л. 1-165.",
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "28392",
+      "url": "https://web.archive.org/web/20250907183819/https://istmat.org/node/28392"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "nko37-activ-09",
+          "collection": "nko-1937",
+          "date": "1937-06-09",
+          "title_ru": "Стенограмма актива центрального аппарата НКО СССР 09 июня 1937 г.",
+          "kind": "stenogram",
+          "site": "istmat",
+          "url": "https://istmat.org/node/28392",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_session",
+          "edition": "Военный совет при народном комиссаре обороны СССР. 1–4 июня 1937 г.: Документы и материалы. М.: РОССПЭН, 2008.",
+          "archive_reference": "",
+          "topic": "expurgos",
+          "priority": "P1",
+          "title_pt": "Reunião do aparelho central do NKO — 9 de junho",
+          "kit_collection": "conselho-1937"
+        },
+        "attempted_at": "2026-10-17T12:34:43.327504+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/28392",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20250907183819",
+        "captured_original_url": "https://istmat.org/node/28392",
+        "archive_url": "https://web.archive.org/web/20250907183819/https://istmat.org/node/28392",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20250907183819id_/https://istmat.org/node/28392",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/nko37-activ-09.html",
+        "bytes": 320004,
+        "sha256": "436ffc6ddf7661c4da6be21af3023a7af4c1745561107ae37994197f850a6d8d"
+      },
+      "conversion": {
+        "source_title": "Стенограмма актива центрального аппарата НКО СССР 9 июня 1937 г.",
+        "source_text_characters": 157607,
+        "source_start": "Заседание актива 9 июня 1937 г. [1] Ворошилов . Собрание актива Комиссариата обороны объявляю открытым. Предлагаю обсудить сегодня только один вопрос, а именно вопрос о последних событиях, относящихся к Красной армии. Вести собрание предлаг",
+        "source_end": "ение (для 1932 г. — в командное Управление ГУРККА) для объявления в приказе по армии (пункт 3) (РГВА. Ф. 4. Оп. 15 а. Д. 335. Л. 1. Типографский экз.). [14] Имеется в виду А.И. Егоров. [15] Имеются в виду курсы «Выстрел». [16] Так в тексте.",
+        "tables": 0,
+        "footnotes": 16,
+        "reviewed_headings": [],
+        "flags": [
+          {
+            "priority": "media",
+            "reason": "16 notas convertidas para sintaxe Markdown; cotejar chamadas, definições e navegação."
+          },
+          {
+            "priority": "media",
+            "reason": "Conferir notas, chamadas e âncoras; links relativos apontam para a fonte original."
+          }
+        ],
+        "archive_reference": "РГВА. Ф. 4. Оп. 18. Д. 61. Л. 1-165.",
+        "source_date": "1937.06.09",
+        "publication": "Военный совет при народном комиссаре обороны СССР. 1—4 июня 1937 г.: Документы и материалы. — М.: Российская политическая энциклопедия (РОССПЭН), 2008, стр. 367-423",
+        "recipe": "military-html-v2",
+        "source_sha256": "436ffc6ddf7661c4da6be21af3023a7af4c1745561107ae37994197f850a6d8d",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "c3d2603feed0d583a3d9c8cca616e33a29bd22ac95ae2423d03166740de0d618"
+      },
+      "inventory_archive_reference": "",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-activ-10",
+    "kind": "document",
+    "titles": {
+      "ru": "Стенограмма актива центрального аппарата НКО СССР 10 июня 1937 г.",
+      "pt": "Reunião do aparelho central do NKO — 10 de junho"
+    },
+    "document_type": "session_transcript",
+    "historical_date": {
+      "display": "1937.06.10",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": "РГВА. Ф. 4. Оп. 18. Д. 61. Л. 166-246.",
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "28393",
+      "url": "https://web.archive.org/web/20251209004905/https://istmat.org/node/28393"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "nko37-activ-10",
+          "collection": "nko-1937",
+          "date": "1937-06-10",
+          "title_ru": "Стенограмма актива центрального аппарата НКО СССР 10 июня 1937 г.",
+          "kind": "stenogram",
+          "site": "istmat",
+          "url": "https://istmat.org/node/28393",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_session",
+          "edition": "Военный совет при народном комиссаре обороны СССР. 1–4 июня 1937 г.: Документы и материалы. М.: РОССПЭН, 2008.",
+          "archive_reference": "",
+          "topic": "expurgos",
+          "priority": "P1",
+          "title_pt": "Reunião do aparelho central do NKO — 10 de junho",
+          "kit_collection": "conselho-1937"
+        },
+        "attempted_at": "2026-10-17T12:35:10.389871+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/28393",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20251209004905",
+        "captured_original_url": "https://istmat.org/node/28393",
+        "archive_url": "https://web.archive.org/web/20251209004905/https://istmat.org/node/28393",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20251209004905id_/https://istmat.org/node/28393",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/nko37-activ-10.html",
+        "bytes": 167593,
+        "sha256": "c0d1cb9c20162a8983eb352eb5f0bc2dec3c79af1f44ff70797c9f07470a85b7"
+      },
+      "conversion": {
+        "source_title": "Стенограмма актива центрального аппарата НКО СССР 10 июня 1937 г.",
+        "source_text_characters": 76260,
+        "source_start": "Заседание актива 10 июня 1937 г. [1] Заседание открывает народный комиссар обороны СССР Маршал Советского Союза тов. Ворошилов К.Е. [ Ворошилов .] Разрешите заседание объявить открытым. Вчера высказалось у нас 13 чел. Записавшихся, как вы п",
+        "source_end": "ф в ВС РККА». [5] Так в тексте. [6] Так в тексте. [7] Так в тексте. [8] Так в источнике. [9] Написано в верхней части листа от руки красным карандашом. [10] Так в тексте. [11] Имеются в виду Б.М. Шапошников и А.И. Егоров. [12] Так в тексте.",
+        "tables": 0,
+        "footnotes": 12,
+        "reviewed_headings": [
+          "Заключительное слово народного комиссара обороны СССР [9]"
+        ],
+        "flags": [
+          {
+            "priority": "media",
+            "reason": "12 notas convertidas para sintaxe Markdown; cotejar chamadas, definições e navegação."
+          }
+        ],
+        "archive_reference": "РГВА. Ф. 4. Оп. 18. Д. 61. Л. 166-246.",
+        "source_date": "1937.06.10",
+        "publication": "Военный совет при народном комиссаре обороны СССР. 1—4 июня 1937 г.: Документы и материалы. — М.: Российская политическая энциклопедия (РОССПЭН), 2008, стр. 423-452",
+        "recipe": "military-html-v2",
+        "source_sha256": "c0d1cb9c20162a8983eb352eb5f0bc2dec3c79af1f44ff70797c9f07470a85b7",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "bbb14b674b79674ed75ce5067456d95c174443119677926de473044f73536b74"
+      },
+      "inventory_archive_reference": "",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-tukh-1937-05-26",
+    "kind": "document",
+    "titles": {
+      "ru": "Показания М.Н. Тухачевского от 26 мая 1937 года",
+      "pt": "Depoimento de M. N. Tukhachevsky — 26 de maio"
+    },
+    "document_type": "testimony",
+    "historical_date": {
+      "display": "1937.05.26",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": null,
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "28944",
+      "url": "https://web.archive.org/web/20250912164454/https://istmat.org/node/28944"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "tukh-1937-05-26",
+          "collection": "investigacao-1937",
+          "date": "1937-05-26",
+          "title_ru": "Показания М.Н. Тухачевского от 26 мая 1937 года",
+          "kind": "investigation",
+          "site": "istmat",
+          "url": "https://istmat.org/node/28944",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_document",
+          "edition": "Как мы предали Сталина. М.: Алгоритм, 2012, с. 82.",
+          "archive_reference": "",
+          "topic": "tukhachevsky",
+          "priority": "P1",
+          "title_pt": "Depoimento de M. N. Tukhachevsky — 26 de maio",
+          "kit_collection": "investigacoes"
+        },
+        "attempted_at": "2026-10-17T12:35:38.349174+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/28944",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20250912164454",
+        "captured_original_url": "https://istmat.org/node/28944",
+        "archive_url": "https://web.archive.org/web/20250912164454/https://istmat.org/node/28944",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20250912164454id_/https://istmat.org/node/28944",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/tukh-1937-05-26.html",
+        "bytes": 21316,
+        "sha256": "6a9fe8ae2fc8d8ccf282b79c1e443b6523ada949d0e218d408ea4bdbb2761efb"
+      },
+      "conversion": {
+        "source_title": "Показания М.Н. Тухачевского от 26 мая 1937 года",
+        "source_text_characters": 614,
+        "source_start": "НАРОДНОМУ КОМИССАРУ ВНУТРЕННИХ ДЕЛ Н.И. ЕЖОВУ Будучи арестован 22-го мая, прибыв в Москву 24-го, впервые допрошен 25-го и сегодня, 26 мая, заявляю, что признаю наличие антисоветского заговора и то, что я был во главе его. Обязуюсь самостоят",
+        "source_end": "ора относится к 1932 году. Участие в нем принимали: Фельдман, Алафузов, Примаков, Путна и др., о чем я подробно покажу дополнительно. Тухачевский. 26. 5. 37. Заявление отбирал: ПОМ. НАЧ. 5 ОТДЕЛА ГУГБ, КАПИТАН ГОСУД. БЕЗ. УШАКОВ. (Подпись).",
+        "tables": 0,
+        "footnotes": 0,
+        "reviewed_headings": [],
+        "flags": [],
+        "archive_reference": null,
+        "source_date": "1937.05.26",
+        "publication": "Как мы предали Сталина / Михаил Тухачевский. – М.: Алгоритм, 2012, стр. 82",
+        "recipe": "military-html-v2",
+        "source_sha256": "6a9fe8ae2fc8d8ccf282b79c1e443b6523ada949d0e218d408ea4bdbb2761efb",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "5b70d81a2141b4973bdb2eb58bfd0446493266c76399f757e553199149593b93"
+      },
+      "inventory_archive_reference": "",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-tukh-1937-06-01",
+    "kind": "document",
+    "titles": {
+      "ru": "Показания М.Н. Тухачевского от 1 июня 1937 года",
+      "pt": "Depoimento de M. N. Tukhachevsky — 1º de junho"
+    },
+    "document_type": "testimony",
+    "historical_date": {
+      "display": "1937.06.01",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": null,
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Wayback Machine",
+      "id": "28950",
+      "url": "https://web.archive.org/web/20260519062427/https://istmat.org/node/28950"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "tukh-1937-06-01",
+          "collection": "investigacao-1937",
+          "date": "1937-06-01",
+          "title_ru": "Показания М.Н. Тухачевского от 1 июня 1937 года",
+          "kind": "investigation",
+          "site": "istmat",
+          "url": "https://istmat.org/node/28950",
+          "format": "html",
+          "verification": "web_confirmed",
+          "source_scope": "published_document_check",
+          "edition": "Как мы предали Сталина. М.: Алгоритм, 2012, с. 83–142.",
+          "archive_reference": "",
+          "topic": "tukhachevsky",
+          "priority": "P1",
+          "title_pt": "Depoimento de M. N. Tukhachevsky — 1º de junho",
+          "kit_collection": "investigacoes"
+        },
+        "attempted_at": "2026-10-17T12:36:01.257478+00:00",
+        "attempts": [],
+        "original_url": "https://istmat.org/node/28950",
+        "provider": "Wayback Machine",
+        "capture_timestamp": "20260519062427",
+        "captured_original_url": "https://istmat.org/node/28950",
+        "archive_url": "https://web.archive.org/web/20260519062427/https://istmat.org/node/28950",
+        "status": "acquired",
+        "final_url": "https://web.archive.org/web/20260519062427id_/https://istmat.org/node/28950",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "file": ".local/research/tukhachevsky-1937/raw/tukh-1937-06-01.html",
+        "bytes": 220265,
+        "sha256": "d2ce7d56cc48d2cdd734af64a9b8264d79eea0c390461217b886120ad7f5b32b"
+      },
+      "conversion": {
+        "source_title": "Показания М.Н. Тухачевского от 1 июня 1937 года",
+        "source_text_characters": 105606,
+        "source_start": "Настойчиво и неоднократно я пытался отрицать как свое участие в заговоре, так и отдельные факты моей антисоветской деятельности, но под давлением улик следствия я должен был шаг за шагом признать свою вину. В настоящих показаниях я излагаю ",
+        "source_end": "одвозе пополнений. Наши силы на Дальнем Востоке крайне слабы, и надо использовать всякую дополнительную возможность к увеличению числа войсковых соединений. Тухачевский 1 июня 1937 г. [1] Так в источнике, - количество дивизий не приводится.",
+        "tables": 0,
+        "footnotes": 1,
+        "reviewed_headings": [],
+        "flags": [
+          {
+            "priority": "media",
+            "reason": "1 notas convertidas para sintaxe Markdown; cotejar chamadas, definições e navegação."
+          }
+        ],
+        "archive_reference": null,
+        "source_date": "1937.06.01",
+        "publication": "Как мы предали Сталина / Михаил Тухачевский. – М.: Алгоритм, 2012, стр. 83-142",
+        "recipe": "military-html-v2",
+        "source_sha256": "d2ce7d56cc48d2cdd734af64a9b8264d79eea0c390461217b886120ad7f5b32b",
+        "dependencies": {
+          "beautifulsoup4": "4.15.0",
+          "markdownify": "1.2.3"
+        },
+        "content_sha256": "a62301cdcb87a422b9eed7eef14bfde639b76caadc42c9f72d8ad032eb62957f"
+      },
+      "inventory_archive_reference": "",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Documentação militar · Russo"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
+  },
+  {
+    "id": "tukhachevsky-tukh-trial-1937-06-11",
+    "kind": "document",
+    "titles": {
+      "ru": "Стенограмма судебного заседания 11 июня 1937 года — цифровые источники",
+      "pt": "Julgamento de Tukhachevsky e demais acusados — fontes PDF"
+    },
+    "document_type": "reference_note",
+    "historical_date": {
+      "display": "1937.06.11",
+      "value": null,
+      "precision": "not_recorded"
+    },
+    "archive_reference": "РГАСПИ. Ф. 17. Оп. 171. Д. 392. Л. 1–172. (Referência do inventário.)",
+    "author_label": null,
+    "source": {
+      "name": "Istmat · Cópia local preservada",
+      "id": "59108",
+      "url": "fontes/tukhachevsky/julgamento-1937-06-11.ru.pdf"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "acquisition": {
+        "inventory": {
+          "id": "tukh-trial-1937-06-11",
+          "collection": "julgamento-1937",
+          "date": "1937-06-11",
+          "title_ru": "Стенограмма судебного заседания 11 июня 1937 года",
+          "title_pt": "Julgamento de Tukhachevsky e demais acusados — fontes PDF",
+          "kind": "pdf_reference",
+          "site": "istmat",
+          "url": "https://www.istmat.org/node/59108",
+          "format": "pdf",
+          "verification": "local_copy_title_page_inspected",
+          "source_scope": "scanned_source_no_markdown_transcription",
+          "edition": "Digitalização russa e apêndice inglês preservados no pacote original; correspondência integral não cotejada.",
+          "archive_reference": "РГАСПИ. Ф. 17. Оп. 171. Д. 392. Л. 1–172. (Referência do inventário.)",
+          "source_id": "59108",
+          "priority": "P1"
+        },
+        "status": "acquired",
+        "provider": "Pacote local preservado",
+        "attempted_at": "2026-10-17T12:34:34.011077+00:00",
+        "original_url": "https://www.istmat.org/node/59108",
+        "file": ".local/research/tukhachevsky-1937/raw/julgamento-1937-06-11.ru.pdf",
+        "sha256": "afcb052ed8750c723ca5ed6e1b24c6f9b2128ff5f2e2c6d0073f3aa1d1c64cbb",
+        "bytes": 73195742,
+        "attachments": [
+          {
+            "language": "ru",
+            "file": "fontes/tukhachevsky/julgamento-1937-06-11.ru.pdf",
+            "source_package_file": "temporario/showtrials-portatil-20261015-003451/showtrials-portatil-20261015-003451/materiais-auxiliares/translation-assets/source-documents/tukhachevsky/ru-pdf/1937-tukhachevsky-trial-ru-rgaspi-17-171-392.pdf",
+            "bytes": 73195742,
+            "sha256": "afcb052ed8750c723ca5ed6e1b24c6f9b2128ff5f2e2c6d0073f3aa1d1c64cbb",
+            "pages": 172
+          },
+          {
+            "language": "en",
+            "file": "fontes/tukhachevsky/julgamento-1937-06-11.en.pdf",
+            "source_package_file": "temporario/showtrials-portatil-20261015-003451/showtrials-portatil-20261015-003451/materiais-auxiliares/translation-assets/source-documents/tukhachevsky/en-pdf/1937-tukhachevsky-trial-en-furr-bobrov-appendix.pdf",
+            "bytes": 4546422,
+            "sha256": "d8b8d769f076551fef192126e8db0555d6183d50e640b9c630495298e81dfce9",
+            "pages": 143
+          }
+        ],
+        "source_label": "Istmat · Cópia local preservada",
+        "public_url": "fontes/tukhachevsky/julgamento-1937-06-11.ru.pdf"
+      },
+      "conversion": {
+        "source_title": "Стенограмма судебного заседания 11 июня 1937 года — цифровые источники",
+        "source_text_characters": 0,
+        "source_start": "Ficha editorial de fontes PDF; sem transcrição.",
+        "source_end": "PDFs preservados; edição textual pendente.",
+        "tables": 0,
+        "footnotes": 0,
+        "source_date": "1937.06.11",
+        "archive_reference": "РГАСПИ. Ф. 17. Оп. 171. Д. 392. Л. 1–172. (Referência do inventário.)",
+        "publication": "Digitalização russa e apêndice inglês preservados no pacote original; correspondência integral não cotejada.",
+        "recipe": "preserved-pdf-reference-v1",
+        "source_sha256": "afcb052ed8750c723ca5ed6e1b24c6f9b2128ff5f2e2c6d0073f3aa1d1c64cbb",
+        "content_sha256": "589d9a35266a4b9645a121272703420888e7068e0ef8eb2a62376a38c7a9dec1",
+        "eyebrow": "Ficha editorial · PDF digitalizado",
+        "edition_label": "Карточка источника · PDF",
+        "flags": [
+          {
+            "priority": "alta",
+            "reason": "Julgamento disponível em PDF digitalizado; Markdown é ficha editorial, não transcrição. Transcrever/cotejar antes de tratar como texto editável. PDF inglês é publicação distinta, sem pareamento confirmado."
+          }
+        ]
+      },
+      "inventory_archive_reference": "РГАСПИ. Ф. 17. Оп. 171. Д. 392. Л. 1–172. (Referência do inventário.)",
+      "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."
+    },
+    "default_format": "markdown",
+    "presentation": {
+      "eyebrow": "Ficha editorial · PDF digitalizado"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "title_pt",
+      "title_ru",
+      "date",
+      "archive",
+      "document_type",
+      "format",
+      "eyebrow",
+      "source_name",
+      "source_id",
+      "source_url",
+      "languages"
+    ]
   }
 ]

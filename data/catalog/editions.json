@@ -43873,6 +43873,215 @@
     ]
   },
   {
+    "id": "tukhachevsky-nko37-01-pm:ru",
+    "document_id": "tukhachevsky-nko37-01-pm",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-nko37-01-pm.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 250874,
+    "sha256": "a5c3bff7284b01f38f7ed6b3ab86160fad9955e6be9bc26102336be73966dbad",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-02-am:ru",
+    "document_id": "tukhachevsky-nko37-02-am",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-nko37-02-am.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 211294,
+    "sha256": "eb1b01bdbbb057fcc33ce12161c8122d9efc2bb93b10e91a63d532865420899b",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-02-pm:ru",
+    "document_id": "tukhachevsky-nko37-02-pm",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-nko37-02-pm.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 223165,
+    "sha256": "cab3f0123cf56c8068d3b6017633e038d51751ff8819f07a495b6172eb7c9358",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-03-am:ru",
+    "document_id": "tukhachevsky-nko37-03-am",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-nko37-03-am.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 236687,
+    "sha256": "c6390091f7dc9f459a10c4f3abb04cea978217216dd8eb7d1d0542eb0fb75763",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-03-pm:ru",
+    "document_id": "tukhachevsky-nko37-03-pm",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-nko37-03-pm.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 216673,
+    "sha256": "eb1a94e3b2a075d6cfccb0637cd42b2818168eb42d00e9251579835e65a3d921",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-04-am:ru",
+    "document_id": "tukhachevsky-nko37-04-am",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-nko37-04-am.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 321697,
+    "sha256": "4b0a568fbb4d8c65008b9f734e3955893ca1396e0430e25086c8acdc27bfc7d6",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-activ-09:ru",
+    "document_id": "tukhachevsky-nko37-activ-09",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-nko37-activ-09.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 286318,
+    "sha256": "c3d2603feed0d583a3d9c8cca616e33a29bd22ac95ae2423d03166740de0d618",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-nko37-activ-10:ru",
+    "document_id": "tukhachevsky-nko37-activ-10",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-nko37-activ-10.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 138645,
+    "sha256": "bbb14b674b79674ed75ce5067456d95c174443119677926de473044f73536b74",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-tukh-1937-05-26:ru",
+    "document_id": "tukhachevsky-tukh-1937-05-26",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-tukh-1937-05-26.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 1179,
+    "sha256": "5b70d81a2141b4973bdb2eb58bfd0446493266c76399f757e553199149593b93",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-tukh-1937-06-01:ru",
+    "document_id": "tukhachevsky-tukh-1937-06-01",
+    "language": "ru",
+    "label": "Русский оригинал",
+    "file": "originais/tukhachevsky/tukhachevsky-tukh-1937-06-01.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 194020,
+    "sha256": "a62301cdcb87a422b9eed7eef14bfde639b76caadc42c9f72d8ad032eb62957f",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "tukhachevsky-tukh-trial-1937-06-11:ru",
+    "document_id": "tukhachevsky-tukh-trial-1937-06-11",
+    "language": "ru",
+    "label": "Карточка источника · PDF",
+    "file": "originais/tukhachevsky/tukhachevsky-tukh-trial-1937-06-11.ru.md",
+    "format": "markdown",
+    "position": 0,
+    "bytes": 2593,
+    "sha256": "589d9a35266a4b9645a121272703420888e7068e0ef8eb2a62376a38c7a9dec1",
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
     "id": "showtrials-5810:pt",
     "document_id": "showtrials-5810",
     "language": "pt",
@@ -51045,6 +51254,82 @@
     "position": 2,
     "sha256": "b8418530c2ed89a11db1a36601df86dce46ff109789384eea75fa5c03b7e49f8",
     "bytes": 15775,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2643:pt",
+    "document_id": "showtrials-2643",
+    "language": "pt",
+    "label": "Tradução portuguesa",
+    "file": "originais/showtrials/showtrials-2643.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "50c8d1c5fcf50676248cc152ebe64e5c31c79ec5b835f2ad462a4d1550ff7915",
+    "bytes": 2028,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2643:en",
+    "document_id": "showtrials-2643",
+    "language": "en",
+    "label": "Tradução inglesa",
+    "file": "originais/showtrials/showtrials-2643.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "f3dbc3d6cd277c4575f457461555a578980a14a246ecbdfb7d1fa383b4579575",
+    "bytes": 2152,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2646:pt",
+    "document_id": "showtrials-2646",
+    "language": "pt",
+    "label": "Tradução portuguesa",
+    "file": "originais/showtrials/showtrials-2646.pt.md",
+    "format": "markdown",
+    "position": 1,
+    "sha256": "b6ed2648b52ef66edb1dffbff0f1659df2b3a098a23653c6a4dc1fdcdf221404",
+    "bytes": 12654,
+    "editorial_status": "not_recorded",
+    "extra": {},
+    "compatibility_fields": [
+      "code",
+      "label",
+      "file",
+      "format"
+    ]
+  },
+  {
+    "id": "showtrials-2646:en",
+    "document_id": "showtrials-2646",
+    "language": "en",
+    "label": "Tradução inglesa",
+    "file": "originais/showtrials/showtrials-2646.en.md",
+    "format": "markdown",
+    "position": 2,
+    "sha256": "0057b783af242ed37dc598168cea9a7ee0a7e34f8cf7ad1949eb5a66fcee9cb0",
+    "bytes": 12712,
     "editorial_status": "not_recorded",
     "extra": {},
     "compatibility_fields": [
@@ -63433,82 +63718,6 @@
     "position": 2,
     "sha256": "a05c520c75cc7748aba58d7bafd6583ed27c2cf33a7acabce021414a27e6f479",
     "bytes": 8598,
-    "editorial_status": "not_recorded",
-    "extra": {},
-    "compatibility_fields": [
-      "code",
-      "label",
-      "file",
-      "format"
-    ]
-  },
-  {
-    "id": "showtrials-2643:pt",
-    "document_id": "showtrials-2643",
-    "language": "pt",
-    "label": "Tradução portuguesa",
-    "file": "originais/showtrials/showtrials-2643.pt.md",
-    "format": "markdown",
-    "position": 1,
-    "sha256": "50c8d1c5fcf50676248cc152ebe64e5c31c79ec5b835f2ad462a4d1550ff7915",
-    "bytes": 2028,
-    "editorial_status": "not_recorded",
-    "extra": {},
-    "compatibility_fields": [
-      "code",
-      "label",
-      "file",
-      "format"
-    ]
-  },
-  {
-    "id": "showtrials-2643:en",
-    "document_id": "showtrials-2643",
-    "language": "en",
-    "label": "Tradução inglesa",
-    "file": "originais/showtrials/showtrials-2643.en.md",
-    "format": "markdown",
-    "position": 2,
-    "sha256": "f3dbc3d6cd277c4575f457461555a578980a14a246ecbdfb7d1fa383b4579575",
-    "bytes": 2152,
-    "editorial_status": "not_recorded",
-    "extra": {},
-    "compatibility_fields": [
-      "code",
-      "label",
-      "file",
-      "format"
-    ]
-  },
-  {
-    "id": "showtrials-2646:pt",
-    "document_id": "showtrials-2646",
-    "language": "pt",
-    "label": "Tradução portuguesa",
-    "file": "originais/showtrials/showtrials-2646.pt.md",
-    "format": "markdown",
-    "position": 1,
-    "sha256": "b6ed2648b52ef66edb1dffbff0f1659df2b3a098a23653c6a4dc1fdcdf221404",
-    "bytes": 12654,
-    "editorial_status": "not_recorded",
-    "extra": {},
-    "compatibility_fields": [
-      "code",
-      "label",
-      "file",
-      "format"
-    ]
-  },
-  {
-    "id": "showtrials-2646:en",
-    "document_id": "showtrials-2646",
-    "language": "en",
-    "label": "Tradução inglesa",
-    "file": "originais/showtrials/showtrials-2646.en.md",
-    "format": "markdown",
-    "position": 2,
-    "sha256": "0057b783af242ed37dc598168cea9a7ee0a7e34f8cf7ad1949eb5a66fcee9cb0",
-    "bytes": 12712,
     "editorial_status": "not_recorded",
     "extra": {},
     "compatibility_fields": [

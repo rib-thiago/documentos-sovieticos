@@ -22738,5 +22738,115 @@
     "collection_id": "exercito-industria-defesa-1934-1936/industria-defesa-1934-1936",
     "document_id": "military-kpk-kuibyshev-1936",
     "position": 6
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-nko37-01-pm",
+    "position": 0
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/conselho-militar",
+    "document_id": "tukhachevsky-nko37-01-pm",
+    "position": 0
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-nko37-02-am",
+    "position": 1
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/conselho-militar",
+    "document_id": "tukhachevsky-nko37-02-am",
+    "position": 1
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-nko37-02-pm",
+    "position": 2
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/conselho-militar",
+    "document_id": "tukhachevsky-nko37-02-pm",
+    "position": 2
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-nko37-03-am",
+    "position": 3
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/conselho-militar",
+    "document_id": "tukhachevsky-nko37-03-am",
+    "position": 3
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-nko37-03-pm",
+    "position": 4
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/conselho-militar",
+    "document_id": "tukhachevsky-nko37-03-pm",
+    "position": 4
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-nko37-04-am",
+    "position": 5
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/conselho-militar",
+    "document_id": "tukhachevsky-nko37-04-am",
+    "position": 5
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-nko37-activ-09",
+    "position": 6
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/reunioes-nko",
+    "document_id": "tukhachevsky-nko37-activ-09",
+    "position": 0
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-nko37-activ-10",
+    "position": 7
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/reunioes-nko",
+    "document_id": "tukhachevsky-nko37-activ-10",
+    "position": 1
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-tukh-1937-05-26",
+    "position": 8
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/depoimentos",
+    "document_id": "tukhachevsky-tukh-1937-05-26",
+    "position": 0
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-tukh-1937-06-01",
+    "position": 9
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/depoimentos",
+    "document_id": "tukhachevsky-tukh-1937-06-01",
+    "position": 1
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937",
+    "document_id": "tukhachevsky-tukh-trial-1937-06-11",
+    "position": 10
+  },
+  {
+    "collection_id": "caso-tukhachevsky-1937/julgamento",
+    "document_id": "tukhachevsky-tukh-trial-1937-06-11",
+    "position": 0
   }
 ]

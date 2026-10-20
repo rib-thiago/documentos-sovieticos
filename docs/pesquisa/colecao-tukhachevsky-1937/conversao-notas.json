@@ -1,0 +1,25 @@
+{
+  "saved": true,
+  "history_id": "20261017123935021254-e35820da2327",
+  "document_id": null,
+  "revision": "d7fe740dd8d16ce755660fbc1c6c6b198945839c52fb88ce52ea984c36dae475",
+  "entity": {
+    "kind": "batch",
+    "id": "caso-tukhachevsky-1937",
+    "document_ids": [
+      "tukhachevsky-nko37-01-pm",
+      "tukhachevsky-nko37-02-am",
+      "tukhachevsky-nko37-02-pm",
+      "tukhachevsky-nko37-03-am",
+      "tukhachevsky-nko37-03-pm",
+      "tukhachevsky-nko37-04-am",
+      "tukhachevsky-nko37-activ-09",
+      "tukhachevsky-nko37-activ-10",
+      "tukhachevsky-tukh-1937-05-26",
+      "tukhachevsky-tukh-1937-06-01",
+      "tukhachevsky-tukh-trial-1937-06-11"
+    ]
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}

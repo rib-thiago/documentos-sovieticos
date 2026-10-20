@@ -25,17 +25,20 @@ def main():
     parser.add_argument("--id", action="append")
     parser.add_argument("--retry-failed", action="store_true")
     parser.add_argument("--wayback", action="store_true", help="Obtém captura pública e registra data/URL do arquivo")
+    parser.add_argument("--inventory", type=Path, default=KIT)
+    parser.add_argument("--work", type=Path, default=WORK)
     args = parser.parse_args()
-    WORK.mkdir(parents=True, exist_ok=True)
-    raw_dir = WORK / "raw"
+    work = args.work.resolve()
+    work.mkdir(parents=True, exist_ok=True)
+    raw_dir = work / "raw"
     raw_dir.mkdir(exist_ok=True)
-    items = json.loads(KIT.read_text())
-    if any(row["collection"] not in {"conselho-1935", "industria"} for row in items):
+    items = [row for row in json.loads(args.inventory.read_text()) if row["format"] == "html"]
+    if any(row["collection"] not in {"conselho-1935", "industria", "conselho-1937", "nko-1937", "investigacao-1937"} for row in items):
         raise ValueError("Inventário contém documentos fora do recorte autorizado")
-    (WORK / "inventory.json").write_text(json.dumps(items, ensure_ascii=False, indent=2) + "\n")
+    (work / "inventory.json").write_text(json.dumps(items, ensure_ascii=False, indent=2) + "\n")
     session = requests.Session()
     session.headers.update({"User-Agent": UA, "Accept-Language": "ru,en;q=0.5"})
-    robots_file = WORK / "robots.txt"
+    robots_file = work / "robots.txt"
     if not robots_file.exists():
         response = session.get("https://istmat.org/robots.txt", timeout=(15, 45))
         response.raise_for_status()
@@ -46,7 +49,7 @@ def main():
     for row in items:
         if args.id and row["id"] not in args.id:
             continue
-        metadata_file = WORK / (row["id"] + ".json")
+        metadata_file = work / (row["id"] + ".json")
         if metadata_file.exists():
             old = json.loads(metadata_file.read_text())
             if old.get("status") == "acquired" or not args.retry_failed:
@@ -66,7 +69,7 @@ def main():
                         "filter": ["statuscode:200", "mimetype:text/html"], "collapse": "digest",
                         "fl": "timestamp,original", "limit": "-3"}, timeout=(15, 45))
                     cdx.raise_for_status()
-                    (WORK / (row["id"] + ".cdx.json")).write_bytes(cdx.content)
+                    (work / (row["id"] + ".cdx.json")).write_bytes(cdx.content)
                     captures = cdx.json()
                     if len(captures) < 2:
                         raise ValueError("Nenhuma captura HTML com status 200 localizada no Wayback")

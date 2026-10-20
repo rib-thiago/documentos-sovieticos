@@ -28,6 +28,10 @@ WORK = ROOT / ".local/research/military-1934-1936"
 REPORT = ROOT / "docs/pesquisa/colecao-militar-1934-1936"
 INVENTORY = ROOT / "data/research/military-1934-1936.json"
 COLLECTION = "exercito-industria-defesa-1934-1936"
+COLLECTION_TITLE = "Exército e indústria de defesa soviéticos, 1934–1936"
+DOC_PREFIX = "military-"
+TEXT_DIRECTORY = "originais/militares"
+PROFILE = "military-1934-1936"
 SUBS = {"conselho-1935": ("conselho-militar-1935", "Conselho Militar de dezembro de 1935"),
         "industria": ("industria-defesa-1934-1936", "Indústria e abastecimento de defesa")}
 TYPES = {"stenogram": "session_transcript", "minutes": "session_transcript",
@@ -124,21 +128,22 @@ def convert(row, metadata):
     # Sem pareamento, conservar o bloco original em vez de descartar uma nota.
     footnotes, footnote_tokens = [], {}
     for definition in list(section.select("div[id]")):
-        match = re.fullmatch(r"ftn(\d+)", definition.get("id", ""))
+        match = re.fullmatch(r"(ftn|edn)(\d+)", definition.get("id", ""))
         if not match:
             continue
-        number = match.group(1)
-        calls = section.select(f'a[href="#_ftn{number}"]')
+        family, number = match.groups()
+        note_id = number if family == "ftn" else "end" + number
+        calls = section.select(f'a[href="#_{family}{number}"]')
         if not calls or definition.select("table"):
             continue
-        for back in definition.select(f'a[href="#_ftnref{number}"]'):
+        for back in definition.select(f'a[href="#_{family}ref{number}"]'):
             back.decompose()
         for link in definition.select("a[href]"):
             link["href"] = urljoin(metadata.get("captured_original_url", metadata.get("original_url", metadata["final_url"])), link["href"])
         note = markdownify(str(definition), heading_style="ATX", bullets="-").strip()
-        footnotes.append(f"[^{number}]: " + note.replace("\n", "\n    "))
-        token = f"MILITARYFOOTNOTEREF{number}END"
-        footnote_tokens[token] = f"[^{number}]"
+        footnotes.append(f"[^{note_id}]: " + note.replace("\n", "\n    "))
+        token = f"MILITARYFOOTNOTEREF{family}{number}END"
+        footnote_tokens[token] = f"[^{note_id}]"
         for call in calls:
             call.replace_with(section.new_string(token))
         definition.decompose()
@@ -186,7 +191,7 @@ def convert(row, metadata):
               "archive_reference": archive.get_text(" ", strip=True) if archive else None,
               "source_date": source_date,
               "publication": publication.get_text(" ", strip=True) if publication else row["edition"],
-              "recipe": "military-html-v1", "source_sha256": metadata["sha256"],
+              "recipe": "military-html-v2", "source_sha256": metadata["sha256"],
               "dependencies": {package: importlib.metadata.version(package) for package in ("beautifulsoup4", "markdownify")},
               "content_sha256": model.sha256(content.encode())}
     return content, detail
@@ -198,6 +203,8 @@ def collection_record(slug, title, position, parent=None):
         description = "Sessões e segmentos temáticos, ata e ordens relacionadas ao Conselho Militar de dezembro de 1935, preservando a divisão das páginas da fonte."
     elif parent:
         description = "Relatórios, memorandos e resoluções de 1934–1936 sobre aviação, armamentos, matérias-primas e indústria de defesa."
+    if PROFILE == "tukhachevsky-1937":
+        description = "Documentação de 1937: Conselho Militar, reuniões do NKO, depoimentos e fonte digitalizada do julgamento. Os tipos e contextos documentais permanecem distintos."
     return {"id": parent + "/" + slug if parent else slug, "slug": slug, "parent_id": parent,
             "position": position, "titles": {"pt": title}, "subtitle": "Documentação em russo",
             "description": description,
@@ -212,7 +219,7 @@ def apply(prepared):
         candidate = copy.deepcopy(current)
         if any(c["id"] == COLLECTION for c in current["collections"]):
             raise model.CatalogError("Coleção já existe; não sobrescrevendo edições posteriores")
-        candidate["collections"].append(collection_record(COLLECTION, "Exército e indústria de defesa soviéticos, 1934–1936",
+        candidate["collections"].append(collection_record(COLLECTION, COLLECTION_TITLE,
                                                         sum(c["parent_id"] is None for c in current["collections"])))
         for number, (_, (slug, title)) in enumerate(SUBS.items()):
             candidate["collections"].append(collection_record(slug, title, number, COLLECTION))
@@ -221,8 +228,8 @@ def apply(prepared):
         stream = io.StringIO(newline="")
         writer = csv.DictWriter(stream, fieldnames=queue_fields)
         for position, (row, metadata, content, detail) in enumerate(prepared):
-            ident = "military-" + row["id"]
-            target = f"originais/militares/{ident}.ru.md"
+            ident = DOC_PREFIX + row["id"]
+            target = f"{TEXT_DIRECTORY}/{ident}.ru.md"
             if any(d["id"] == ident for d in current["documents"]) or (ROOT / target).exists():
                 raise model.CatalogError("Destino já existe: " + ident)
             subgroup = COLLECTION + "/" + SUBS[row["collection"]][0]
@@ -230,14 +237,14 @@ def apply(prepared):
                    "document_type": TYPES[row["kind"]],
                    "historical_date": {"display": detail["source_date"] or row["date"], "value": None, "precision": "not_recorded"},
                    "archive_reference": detail["archive_reference"] or row["archive_reference"] or None, "author_label": None,
-                   "source": {"name": "Istmat · Wayback Machine" if metadata.get("archive_url") else "Istmat", "id": row["url"].rstrip("/").split("/")[-1], "url": metadata.get("archive_url", row["url"])},
+                   "source": {"name": metadata.get("source_label") or ("Istmat · Wayback Machine" if metadata.get("archive_url") else "Istmat"), "id": row.get("source_id") or row["url"].rstrip("/").split("/")[-1], "url": metadata.get("public_url") or metadata.get("archive_url", row["url"])},
                    "source_metadata": {"original_language": "ru", "acquisition": metadata, "conversion": detail,
                                        "inventory_archive_reference": row["archive_reference"],
                                        "historical_review": "Data e atribuição do inventário preservadas; cotejo histórico pendente."},
-                   "default_format": "markdown", "presentation": {"eyebrow": "Documentação militar · Russo"}, "extra": {},
+                   "default_format": "markdown", "presentation": {"eyebrow": detail.get("eyebrow", "Documentação militar · Russo")}, "extra": {},
                    "compatibility_fields": ["id", "type", "title_pt", "title_ru", "date", "archive", "document_type", "format", "eyebrow", "source_name", "source_id", "source_url", "languages"]}
             candidate["documents"].append(doc)
-            candidate["editions"].append({"id": ident + ":ru", "document_id": ident, "language": "ru", "label": "Русский оригинал",
+            candidate["editions"].append({"id": ident + ":ru", "document_id": ident, "language": "ru", "label": detail.get("edition_label", "Русский оригинал"),
                                           "file": target, "format": "markdown", "position": 0, "bytes": len(content.encode()),
                                           "sha256": model.sha256(content.encode()), "editorial_status": "not_recorded", "extra": {},
                                           "compatibility_fields": ["code", "label", "file", "format"]})
@@ -248,7 +255,7 @@ def apply(prepared):
             ids.append(ident)
             issue = dict.fromkeys(queue_fields, "")
             issue.update(chave=ident + ":fonte_militar", prioridade="alta" if any(f["priority"] == "alta" for f in detail["flags"]) else "media",
-                         dificuldade="media", status="pendente", id=ident, colecoes="Exército e indústria de defesa / " + SUBS[row["collection"]][1],
+                         dificuldade="media", status="pendente", id=ident, colecoes=COLLECTION_TITLE + " / " + SUBS[row["collection"]][1],
                          titulo_ru=detail["source_title"], problema="fonte_militar", dificuldade_encontrada=" | ".join(f["reason"] for f in detail["flags"]) or "Conferir início, fim, referências e possíveis sobreposições com sessões temáticas.",
                          acao_sugerida="Cotejar HTML preservado com Markdown, notas e dados numéricos; registrar a revisão.",
                          arquivo_markdown=target, url_teste="http://localhost:8000/#/doc/" + ident, fonte=row["url"], trechos="[]")
@@ -261,7 +268,7 @@ def apply(prepared):
         previous = (ROOT / queue_path).read_bytes().decode()
         files[queue_path] = previous + ("" if previous.endswith("\n") else "\r\n") + stream.getvalue()
         preview = editorial.store_preview(editorial.revision(), candidate, files, None,
-            [{"field": "Coleção militar 1934–1936", "before": None, "after": ids}],
+            [{"field": COLLECTION_TITLE, "before": None, "after": ids}],
             entity={"kind": "batch", "id": COLLECTION, "document_ids": ids})
         repository = Repository(ROOT, ROOT / ".local/catalog.sqlite3", current, {})
         result = editorial.save(repository, {"preview_id": preview["preview_id"]})
@@ -271,10 +278,116 @@ def apply(prepared):
         editorial.close()
 
 
+def refresh_conversion(prepared):
+    """Atualiza uma receita somente se o texto não foi editado após a ingestão."""
+    editorial = Editorial(ROOT)
+    try:
+        current = model.load(ROOT)
+        candidate = copy.deepcopy(current)
+        files, ids = {}, []
+        for row, _, content, detail in prepared:
+            ident = DOC_PREFIX + row["id"]
+            doc = next((d for d in candidate["documents"] if d["id"] == ident), None)
+            edition = next((e for e in candidate["editions"] if e["id"] == ident + ":ru"), None)
+            if not doc or not edition:
+                raise model.CatalogError("Documento ainda não cadastrado: " + ident)
+            origin = doc["source_metadata"]["conversion"]
+            if edition["sha256"] != origin["content_sha256"] or model.sha256((ROOT / edition["file"]).read_bytes()) != edition["sha256"]:
+                raise model.CatalogError("Há edição posterior; não sobrescrevendo: " + ident)
+            if origin["source_sha256"] != detail["source_sha256"]:
+                raise model.CatalogError("Fonte de origem mudou; cotejar antes de atualizar: " + ident)
+            if edition["sha256"] != detail["content_sha256"]:
+                files[edition["file"]] = content
+                edition.update(sha256=detail["content_sha256"], bytes=len(content.encode()))
+            doc["source_metadata"]["conversion"] = detail
+            ids.append(ident)
+        for name in ("documents", "editions"):
+            if candidate[name] != current[name]:
+                files[f"data/catalog/{name}.json"] = model.json_bytes(candidate[name]).decode()
+        if not files:
+            print("A receita já está aplicada; nenhum arquivo alterado.")
+            return
+        files["data/manifest.json"] = model.json_bytes(model.export_manifest(candidate)).decode()
+        preview = editorial.store_preview(editorial.revision(), candidate, files, None,
+            [{"field": "Atualização de conversão e notas — " + COLLECTION_TITLE, "before": None, "after": ids}],
+            entity={"kind": "batch", "id": COLLECTION, "document_ids": ids})
+        result = editorial.save(Repository(ROOT, ROOT / ".local/catalog.sqlite3", current, {}), {"preview_id": preview["preview_id"]})
+        (REPORT / "conversao-notas.json").write_bytes(model.json_bytes(result))
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    finally:
+        editorial.close()
+
+
+def configure_tukhachevsky():
+    global WORK, REPORT, INVENTORY, COLLECTION, COLLECTION_TITLE, DOC_PREFIX, TEXT_DIRECTORY, SUBS, PROFILE
+    PROFILE = "tukhachevsky-1937"
+    WORK = ROOT / ".local/research/tukhachevsky-1937"
+    REPORT = ROOT / "docs/pesquisa/colecao-tukhachevsky-1937"
+    INVENTORY = ROOT / "data/research/tukhachevsky-1937.json"
+    COLLECTION = "caso-tukhachevsky-1937"
+    COLLECTION_TITLE = "Caso Tukhachevsky e documentação militar de 1937"
+    DOC_PREFIX = "tukhachevsky-"
+    TEXT_DIRECTORY = "originais/tukhachevsky"
+    SUBS = {
+        "conselho-1937": ("conselho-militar", "Conselho Militar de 1–4 de junho de 1937"),
+        "nko-1937": ("reunioes-nko", "Reuniões do NKO de 9–10 de junho de 1937"),
+        "investigacao-1937": ("depoimentos", "Depoimentos de Tukhachevsky"),
+        "julgamento-1937": ("julgamento", "Julgamento de 11 de junho de 1937"),
+    }
+    TYPES.update(investigation="testimony", pdf_reference="reference_note")
+    REVIEWED_HEADINGS["nko37-activ-10"] = {"Заключительное слово народного комиссара обороны СССР [9]"}
+
+
+def pdf_reference(row, metadata):
+    """Ficha explícita de digitalização; não cria uma falsa transcrição OCR."""
+    for attachment in metadata["attachments"]:
+        path = ROOT / attachment["file"]
+        if model.sha256(path.read_bytes()) != attachment["sha256"]:
+            raise ValueError("PDF preservado mudou: " + attachment["file"])
+    russian, english = metadata["attachments"]
+    content = f'''# Стенограмма судебного заседания 11 июня 1937 года — цифровые источники
+
+> Редакционная карточка источников. Эта страница не является транскрипцией стенограммы.
+
+## Русская цифровая копия
+
+[Открыть PDF на русском языке — 172 страницы, 69,8 МиБ]({russian['file']})
+
+На первой странице указаны дата заседания — 11 июня 1937 года — и дело М. Н. Тухачевского, И. Э. Якира, И. П. Уборевича, А. И. Корка, Р. П. Эйдемана, Б. М. Фельдмана, В. М. Примакова и В. К. Путны.
+
+Архивная ссылка, указанная в исходном каталоге: {row['archive_reference']}
+
+Цифровая копия сохранена без изменений из локального пакета источников. Первые страницы не содержат извлекаемого текстового слоя. Для текстового издания необходимы транскрипция и сверка с изображениями.
+
+## Англоязычная публикация
+
+[Открыть PDF приложения «Trotsky and the Military Conspiracy» — 143 страницы, 4,3 МиБ]({english['file']})
+
+Это отдельная англоязычная публикация приложения, сохранённая в исходном пакете. Её пагинация отличается от русского PDF. Соответствие текста и полнота перевода здесь не установлены; автоматическое выравнивание не выполнялось.
+
+## Редакционное состояние
+
+Русский PDF и англоязычное приложение доступны для чтения как источники. Экспорт Markdown выгружает только эту карточку. В отличие от страниц заседаний Военного совета и опубликованных показаний, текст судебной стенограммы пока не подготовлен для построчного чтения и перевода в интерфейсе сайта.
+'''
+    detail = {"source_title": "Стенограмма судебного заседания 11 июня 1937 года — цифровые источники",
+              "source_text_characters": 0, "source_start": "Ficha editorial de fontes PDF; sem transcrição.",
+              "source_end": "PDFs preservados; edição textual pendente.", "tables": 0, "footnotes": 0,
+              "source_date": "1937.06.11", "archive_reference": row["archive_reference"],
+              "publication": row["edition"], "recipe": "preserved-pdf-reference-v1",
+              "source_sha256": russian["sha256"], "content_sha256": model.sha256(content.encode()),
+              "eyebrow": "Ficha editorial · PDF digitalizado", "edition_label": "Карточка источника · PDF",
+              "flags": [{"priority": "alta", "reason": "Julgamento disponível em PDF digitalizado; Markdown é ficha editorial, não transcrição. Transcrever/cotejar antes de tratar como texto editável. PDF inglês é publicação distinta, sem pareamento confirmado."}]}
+    return content, detail
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true")
+    parser.add_argument("--refresh-conversion", action="store_true", help="Atualiza receita sem sobrescrever edições posteriores")
+    parser.add_argument("--profile", choices=("military-1934-1936", "tukhachevsky-1937"), default="military-1934-1936")
     args = parser.parse_args()
+    if args.profile == "tukhachevsky-1937":
+        configure_tukhachevsky()
     items = json.loads(INVENTORY.read_text())
     prepared, report = [], []
     (WORK / "review").mkdir(parents=True, exist_ok=True)
@@ -288,7 +401,7 @@ def main():
                   "data_na_fonte": "", "inicio_texto": "", "fim_texto": ""}
         if metadata["status"] == "acquired":
             try:
-                content, detail = convert(row, metadata)
+                content, detail = pdf_reference(row, metadata) if row["format"] == "pdf" else convert(row, metadata)
                 target = WORK / "review" / (row["id"] + ".ru.md")
                 target.write_text(content)
                 (WORK / "review" / (row["id"] + ".json")).write_bytes(model.json_bytes(detail))
@@ -310,7 +423,7 @@ def main():
     if args.apply:
         if len(prepared) != len(items):
             raise model.CatalogError("Aquisição/conversão incompleta: acervo e coleção não alterados. Consultar pendencias.csv.")
-        apply(prepared)
+        refresh_conversion(prepared) if args.refresh_conversion else apply(prepared)
 
 
 if __name__ == "__main__":

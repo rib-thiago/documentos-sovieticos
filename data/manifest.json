@@ -6334,6 +6334,267 @@
           "original_language": "ru"
         }
       ]
+    },
+    {
+      "id": "caso-tukhachevsky-1937",
+      "title_pt": "Caso Tukhachevsky e documentação militar de 1937",
+      "subtitle_pt": "Documentação em russo",
+      "description_pt": "Documentação de 1937: Conselho Militar, reuniões do NKO, depoimentos e fonte digitalizada do julgamento. Os tipos e contextos documentais permanecem distintos.",
+      "documents": [
+        {
+          "id": "tukhachevsky-nko37-01-pm",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da tarde/noite de 1º de junho",
+          "title_ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. Вечернее заседание 1 июня 1937 г.",
+          "date": "1937.06.01",
+          "archive": "РГАСПИ. Ф. 17. Оп. 165. Д. 158. Л. 1-134.",
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "27376",
+          "source_url": "https://web.archive.org/web/20250906080617/https://istmat.org/node/27376",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-nko37-01-pm.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-nko37-02-am",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da manhã de 2 de junho",
+          "title_ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г.(Утреннее заседание 2 июня 1937 г.)",
+          "date": "1937.06.02",
+          "archive": "РГАСПИ. Ф. 17. Оп. 165. Д. 59. Л. 1-76.  АП РФ. Ф. 45. Оп. 1. Д. 1120. Л. 48—81. Машинописный экземпляр неправленой стенограммы.",
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "27377",
+          "source_url": "https://web.archive.org/web/20250912163950/https://istmat.org/node/27377",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-nko37-02-am.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-nko37-02-pm",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da tarde/noite de 2 de junho",
+          "title_ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Вечернее заседание 2 июня 1937г.)",
+          "date": "1937.06.02",
+          "archive": "РГАСПИ. Ф. 17. Оп. 165. Д. 59. Л. 77-212.",
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "27399",
+          "source_url": "https://web.archive.org/web/20260710084415/https://istmat.org/node/27399",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-nko37-02-pm.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-nko37-03-am",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da manhã de 3 de junho",
+          "title_ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Утреннее заседание 3 июня 1937 г.)",
+          "date": "1937.06.03",
+          "archive": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 1-139.",
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "27644",
+          "source_url": "https://web.archive.org/web/20250909124433/https://istmat.org/node/27644",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-nko37-03-am.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-nko37-03-pm",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da tarde/noite de 3 de junho",
+          "title_ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Вечернее заседание 3 июня 1937 г.)",
+          "date": "1937.06.03",
+          "archive": "РГАСПИ. Ф. 17. Оп. 165. Д. 60. Л. 140-279.",
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "28261",
+          "source_url": "https://web.archive.org/web/20250906081340/https://istmat.org/node/28261",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-nko37-03-pm.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-nko37-04-am",
+          "type": "document",
+          "title_pt": "Conselho Militar — sessão da manhã de 4 de junho",
+          "title_ru": "Стенограмма заседания Военного совета при наркоме обороны СССР 1-4 июня 1937 г. (Утреннее заседание 4 июня 1937 г.)",
+          "date": "1937.06.04",
+          "archive": "РГАСПИ. Ф. 17. Оп. 165. Д. 61. Л. 1-191.",
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "28262",
+          "source_url": "https://web.archive.org/web/20251016040112/https://istmat.org/node/28262",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-nko37-04-am.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-nko37-activ-09",
+          "type": "document",
+          "title_pt": "Reunião do aparelho central do NKO — 9 de junho",
+          "title_ru": "Стенограмма актива центрального аппарата НКО СССР 9 июня 1937 г.",
+          "date": "1937.06.09",
+          "archive": "РГВА. Ф. 4. Оп. 18. Д. 61. Л. 1-165.",
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "28392",
+          "source_url": "https://web.archive.org/web/20250907183819/https://istmat.org/node/28392",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-nko37-activ-09.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-nko37-activ-10",
+          "type": "document",
+          "title_pt": "Reunião do aparelho central do NKO — 10 de junho",
+          "title_ru": "Стенограмма актива центрального аппарата НКО СССР 10 июня 1937 г.",
+          "date": "1937.06.10",
+          "archive": "РГВА. Ф. 4. Оп. 18. Д. 61. Л. 166-246.",
+          "document_type": "session_transcript",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "28393",
+          "source_url": "https://web.archive.org/web/20251209004905/https://istmat.org/node/28393",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-nko37-activ-10.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-tukh-1937-05-26",
+          "type": "document",
+          "title_pt": "Depoimento de M. N. Tukhachevsky — 26 de maio",
+          "title_ru": "Показания М.Н. Тухачевского от 26 мая 1937 года",
+          "date": "1937.05.26",
+          "archive": null,
+          "document_type": "testimony",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "28944",
+          "source_url": "https://web.archive.org/web/20250912164454/https://istmat.org/node/28944",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-tukh-1937-05-26.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-tukh-1937-06-01",
+          "type": "document",
+          "title_pt": "Depoimento de M. N. Tukhachevsky — 1º de junho",
+          "title_ru": "Показания М.Н. Тухачевского от 1 июня 1937 года",
+          "date": "1937.06.01",
+          "archive": null,
+          "document_type": "testimony",
+          "format": "markdown",
+          "eyebrow": "Documentação militar · Russo",
+          "source_name": "Istmat · Wayback Machine",
+          "source_id": "28950",
+          "source_url": "https://web.archive.org/web/20260519062427/https://istmat.org/node/28950",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Русский оригинал",
+              "file": "originais/tukhachevsky/tukhachevsky-tukh-1937-06-01.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        },
+        {
+          "id": "tukhachevsky-tukh-trial-1937-06-11",
+          "type": "document",
+          "title_pt": "Julgamento de Tukhachevsky e demais acusados — fontes PDF",
+          "title_ru": "Стенограмма судебного заседания 11 июня 1937 года — цифровые источники",
+          "date": "1937.06.11",
+          "archive": "РГАСПИ. Ф. 17. Оп. 171. Д. 392. Л. 1–172. (Referência do inventário.)",
+          "document_type": "reference_note",
+          "format": "markdown",
+          "eyebrow": "Ficha editorial · PDF digitalizado",
+          "source_name": "Istmat · Cópia local preservada",
+          "source_id": "59108",
+          "source_url": "fontes/tukhachevsky/julgamento-1937-06-11.ru.pdf",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Карточка источника · PDF",
+              "file": "originais/tukhachevsky/tukhachevsky-tukh-trial-1937-06-11.ru.md",
+              "format": "markdown"
+            }
+          ],
+          "original_language": "ru"
+        }
+      ]
     }
   ],
   "documents": [

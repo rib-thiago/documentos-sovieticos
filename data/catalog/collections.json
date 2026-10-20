@@ -1177,5 +1177,110 @@
       "description_pt",
       "document_ids"
     ]
+  },
+  {
+    "id": "caso-tukhachevsky-1937",
+    "slug": "caso-tukhachevsky-1937",
+    "parent_id": null,
+    "position": 14,
+    "titles": {
+      "pt": "Caso Tukhachevsky e documentação militar de 1937"
+    },
+    "subtitle": "Documentação em russo",
+    "description": "Documentação de 1937: Conselho Militar, reuniões do NKO, depoimentos e fonte digitalizada do julgamento. Os tipos e contextos documentais permanecem distintos.",
+    "source": {},
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "documents"
+    ]
+  },
+  {
+    "id": "caso-tukhachevsky-1937/conselho-militar",
+    "slug": "conselho-militar",
+    "parent_id": "caso-tukhachevsky-1937",
+    "position": 0,
+    "titles": {
+      "pt": "Conselho Militar de 1–4 de junho de 1937"
+    },
+    "subtitle": "Documentação em russo",
+    "description": "Documentação de 1937: Conselho Militar, reuniões do NKO, depoimentos e fonte digitalizada do julgamento. Os tipos e contextos documentais permanecem distintos.",
+    "source": {},
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "caso-tukhachevsky-1937/reunioes-nko",
+    "slug": "reunioes-nko",
+    "parent_id": "caso-tukhachevsky-1937",
+    "position": 1,
+    "titles": {
+      "pt": "Reuniões do NKO de 9–10 de junho de 1937"
+    },
+    "subtitle": "Documentação em russo",
+    "description": "Documentação de 1937: Conselho Militar, reuniões do NKO, depoimentos e fonte digitalizada do julgamento. Os tipos e contextos documentais permanecem distintos.",
+    "source": {},
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "caso-tukhachevsky-1937/depoimentos",
+    "slug": "depoimentos",
+    "parent_id": "caso-tukhachevsky-1937",
+    "position": 2,
+    "titles": {
+      "pt": "Depoimentos de Tukhachevsky"
+    },
+    "subtitle": "Documentação em russo",
+    "description": "Documentação de 1937: Conselho Militar, reuniões do NKO, depoimentos e fonte digitalizada do julgamento. Os tipos e contextos documentais permanecem distintos.",
+    "source": {},
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "caso-tukhachevsky-1937/julgamento",
+    "slug": "julgamento",
+    "parent_id": "caso-tukhachevsky-1937",
+    "position": 3,
+    "titles": {
+      "pt": "Julgamento de 11 de junho de 1937"
+    },
+    "subtitle": "Documentação em russo",
+    "description": "Documentação de 1937: Conselho Militar, reuniões do NKO, depoimentos e fonte digitalizada do julgamento. Os tipos e contextos documentais permanecem distintos.",
+    "source": {},
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "document_ids"
+    ]
   }
 ]
