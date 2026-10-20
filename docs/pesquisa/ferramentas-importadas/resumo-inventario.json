@@ -1,0 +1,160 @@
+{
+  "escopo": "Arquivos .py, .sh e requirements sob temporario; leitura estática, sem executar scripts importados.",
+  "arquivos": 291,
+  "conteudos_distintos": 165,
+  "copias_identicas": 126,
+  "por_pacote_familia": [
+    {
+      "pacote": "frentes_pesquisa",
+      "familia": "coleta_kits",
+      "arquivos": 8
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "a-extraction",
+      "arquivos": 2
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "b-json-export-search",
+      "arquivos": 6
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "c-catalog-taxonomy",
+      "arquivos": 26
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "d-structural-chunking",
+      "arquivos": 16
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "e-semantic-layer",
+      "arquivos": 41
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "g-glossary",
+      "arquivos": 10
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "governanca_pacote",
+      "arquivos": 14
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "r-governance",
+      "arquivos": 5
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "t-translation-assets",
+      "arquivos": 8
+    },
+    {
+      "pacote": "metodologia",
+      "familia": "t-translation-planning",
+      "arquivos": 2
+    },
+    {
+      "pacote": "portatil",
+      "familia": "a-extraction",
+      "arquivos": 2
+    },
+    {
+      "pacote": "portatil",
+      "familia": "b-json-export-search",
+      "arquivos": 6
+    },
+    {
+      "pacote": "portatil",
+      "familia": "c-catalog-taxonomy",
+      "arquivos": 26
+    },
+    {
+      "pacote": "portatil",
+      "familia": "d-structural-chunking",
+      "arquivos": 16
+    },
+    {
+      "pacote": "portatil",
+      "familia": "descoberta_externa",
+      "arquivos": 27
+    },
+    {
+      "pacote": "portatil",
+      "familia": "e-semantic-layer",
+      "arquivos": 41
+    },
+    {
+      "pacote": "portatil",
+      "familia": "g-glossary",
+      "arquivos": 10
+    },
+    {
+      "pacote": "portatil",
+      "familia": "governanca_pacote",
+      "arquivos": 10
+    },
+    {
+      "pacote": "portatil",
+      "familia": "r-governance",
+      "arquivos": 5
+    },
+    {
+      "pacote": "portatil",
+      "familia": "t-translation-assets",
+      "arquivos": 8
+    },
+    {
+      "pacote": "portatil",
+      "familia": "t-translation-planning",
+      "arquivos": 2
+    }
+  ],
+  "imports_em_conteudos_distintos": {
+    "pathlib": 136,
+    "csv": 123,
+    "sys": 113,
+    "lib": 101,
+    "collections": 68,
+    "re": 45,
+    "__future__": 42,
+    "argparse": 36,
+    "json": 23,
+    "html": 15,
+    "_bootstrap": 15,
+    "russian_archives_discovery": 15,
+    "urllib": 14,
+    "hashlib": 10,
+    "config": 6,
+    "time": 6,
+    "dataclasses": 5,
+    "datetime": 5,
+    "catalog": 4,
+    "statistics": 4,
+    "subprocess": 4,
+    "classify": 3,
+    "difflib": 3,
+    "unittest": 3,
+    "typing": 2,
+    "importlib": 2,
+    "markdownify": 2,
+    "requests": 2,
+    "bs4": 2,
+    "shutil": 2,
+    "yaml": 1,
+    "archive_refs": 1,
+    "web": 1,
+    "pdfminer": 1,
+    "mimetypes": 1,
+    "coletar": 1,
+    "os": 1,
+    "coletar_wordpress": 1,
+    "tempfile": 1
+  },
+  "notas_leitura": []
+}
