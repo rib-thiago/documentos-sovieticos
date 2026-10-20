@@ -1,0 +1,79 @@
+/* Oficina PDF local e teclado compartilhado: usa a paleta Carmim existente. */
+.russian-keyboard { margin: .5rem 0; max-width: 100%; font: 400 .8rem/1.5 Inter, sans-serif; }
+.russian-keyboard summary { width: fit-content; cursor: pointer; color: var(--accent, #b52140); padding: .3rem .55rem; border: 1px solid #e5d8dc; border-radius: 7px; background: #fff; }
+.russian-keyboard p { font-size: .75rem; color: #70636a; margin: .4rem 0; }
+.russian-keyboard-keys { padding: .5rem; border: 1px solid #e5d8dc; border-radius: 9px; background: #faf6f7; width: fit-content; max-width: 100%; }
+.russian-keyboard-row { display: flex; flex-wrap: wrap; gap: .2rem; margin-bottom: .2rem; }
+.russian-keyboard-row button { min-width: 1.8rem; padding: .3rem .45rem; margin: 0; font: 500 .85rem/1.3 Inter, sans-serif; border: 1px solid #decdd3; border-radius: 5px; color: #45313a; background: white; }
+.russian-keyboard-row button:hover, .russian-keyboard-row button[aria-pressed=true] { background: #f3e2e7; color: #a01d39; }
+.pdf-source-form { display: grid; gap: 1rem; }
+.pdf-source-form label { display: grid; gap: .35rem; }
+.pdf-source-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; margin: .8rem 0; }
+.pdf-source-toolbar input[type=number] { width: 5rem; }
+.pdf-source-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 1rem; }
+.pdf-source-grid > section { min-width: 0; }
+.pdf-facsimile { width: 100%; height: 70vh; min-height: 25rem; border: 1px solid #e3d8dc; border-radius: 10px; background: #eee9eb; }
+.pdf-raw-text { white-space: pre-wrap; overflow-wrap: anywhere; font: 400 1rem/1.7 'Source Serif 4',serif; max-height: 70vh; overflow: auto; padding: 1rem; background: #fff; border: 1px solid #e3d8dc; border-radius: 10px; }
+.pdf-source-status { padding: .65rem .85rem; border-radius: 8px; background: #f6ecef; color: #6f2639; }
+.pdf-source-history { margin-top: 1rem; }
+.pdf-source-units { max-height: 18rem; overflow: auto; }
+.pdf-source-id { overflow-wrap: anywhere; font-size: .8rem; }
+.pdf-preview { margin-top: 1rem; padding: 1rem; border: 1px solid #decdd3; border-radius: 10px; background: #faf6f7; }
+@media (max-width: 950px) { .pdf-source-grid { grid-template-columns: 1fr; } .pdf-facsimile { height: 55vh; min-height: 18rem; } }
+
+/* Projetos privados compartilham o espaço editorial e a paleta da bancada. */
+.research-project-context { padding: .8rem 0; border-bottom: 1px solid var(--rule,#eadfe3); margin-bottom: .8rem; }
+.research-project-context select { width: 100%; min-width: 0; }
+.research-project-context .help { font-size: .72rem; line-height: 1.45; }
+.project-form { display: grid; gap: 1rem; }
+.project-selection { max-height: 24rem; overflow: auto; }
+.project-selection-item { display: flex; gap: .8rem; justify-content: space-between; align-items: center; padding: .6rem 0; border-bottom: 1px solid var(--rule,#eadfe3); }
+.project-selection-item span { overflow-wrap: anywhere; }
+.project-selection-item button { flex-shrink: 0; }
+.project-source-choice { display: flex !important; gap: .6rem; align-items: center; padding: .4rem 0; }
+.project-source-choice input { width: auto; }
+.project-document-links { display: flex; flex-wrap: wrap; gap: .5rem; }
+.project-diff { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 22rem; overflow: auto; font-size: .8rem; }
+.workspace-project-context { padding: .5rem .3rem; border-top: 1px solid var(--rule,#eadfe3); }
+.workspace-project-context a { display: block; padding: .35rem 0; font-size: .75rem; }
+
+/* Instrumento de páginas: componentes existentes, sem reformulação do layout. */
+.pdf-tools fieldset { display: grid; gap: .8rem; min-width: 0; padding: 0; border: 0; }
+.pdf-tools .field { display: grid; gap: .35rem; font: .78rem/1.5 var(--font-ui, sans-serif); }
+.pdf-tools input,.pdf-tools select { width: 100%; min-width: 0; padding: .55rem; border: 1px solid var(--rule,#eadfe3); border-radius: var(--control-radius,9px); background: var(--paper,#fff); color: var(--ink,#30282c); font: inherit; }
+.pdf-tools button,.pdf-tools .button { display: inline-flex; align-items: center; padding: .5rem .65rem; margin: .2rem; border: 1px solid var(--rule,#eadfe3); border-radius: var(--control-radius,9px); background: var(--paper,#fff); color: var(--ink,#30282c); font: .73rem/1.5 var(--font-ui,sans-serif); text-decoration: none; cursor: pointer; }
+.pdf-tools button.primary { color: white; background: var(--accent,#b52140); border-color: var(--accent,#b52140); }
+.pdf-tools button:disabled { opacity: .5; cursor: default; }
+.pdf-tools .pdf-operation-output { padding: .75rem 0; border-bottom: 1px solid var(--rule,#eadfe3); overflow-wrap: anywhere; }
+.pdf-operation-progress h3 { overflow-wrap: anywhere; }
+
+/* Revisão por página: usa as cores e controles da oficina existente. */
+.pdf-review-form fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.pdf-review-text { width: 100%; min-height: 28rem; font-family: var(--font-body, Georgia, serif); line-height: 1.65; resize: vertical; }
+.pdf-ocr-controls > summary { cursor: pointer; font-weight: 600; padding: .6rem 0; }
+.pdf-ocr-controls fieldset { display: flex; flex-wrap: wrap; gap: 1rem; border: 1px solid var(--border, #ddd); border-radius: .5rem; }
+.pdf-ocr-controls fieldset label { display: inline-flex; align-items: center; gap: .5rem; }
+.pdf-ocr-controls input[type="checkbox"] { width: auto; }
+.pdf-tool-review:empty { display: none; }
+.pdf-tool-review { margin-block: 1.5rem; }
+.pdf-source-grid > section { min-width: 0; }
+.pdf-review-form textarea { box-sizing: border-box; max-width: 100%; }
+
+/* Fontes do documento: a leitura mantém seus controles e o fac-símile é opcional. */
+.document-body.with-facsimile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .85fr); gap: 1.25rem; align-items: start; }
+.document-body.with-facsimile > .blocks,.document-body.with-facsimile > .col-labels { grid-column: 1; min-width: 0; }
+.document-facsimile { grid-column: 2; grid-row: 1 / span 2; min-width: 0; position: sticky; top: calc(var(--site-header-height, 70px) + var(--reader-panel-height, 0px) + 1rem); padding: .8rem; border: 1px solid var(--rule,#eadfe3); background: var(--paper,#fff); border-radius: 12px; }
+.document-facsimile h3 { margin-top: 0; font: 600 .85rem/1.4 var(--font-ui, sans-serif); color: var(--accent,#b52140); }
+.document-facsimile .pdf-facsimile { height: 62vh; min-height: 18rem; }
+.document-facsimile button,.facsimile-passage-action,.facsimile-anchor-action { font: 500 .72rem/1.5 var(--font-ui, sans-serif); border: 1px solid var(--rule,#eadfe3); border-radius: 7px; padding: .35rem .55rem; background: var(--paper,#fff); color: var(--accent,#b52140); cursor: pointer; }
+.facsimile-passage-action,.facsimile-anchor-action { margin: .5rem .35rem 0 0; }
+.pdf-link-dialog { width: min(850px, 94vw); }
+.pdf-links-manager .pdf-link-entry { display: grid; gap: .6rem; padding: 1rem; margin: 1rem 0; border: 1px solid var(--rule,#eadfe3); border-radius: 10px; }
+.pdf-links-manager input[type=checkbox] { width: auto; }
+.pdf-links-manager blockquote { font-size: .9rem; border-left: 2px solid var(--accent,#b52140); padding-left: .7rem; margin-left: 0; }
+.facsimile-controls { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+@media (max-width: 1200px) {
+  .document-body.with-facsimile { grid-template-columns: minmax(0, 1fr); }
+  .document-facsimile { grid-column: 1; grid-row: auto; position: static; }
+}
+.pdf-link-dialog .pdf-facsimile { height: 45vh; min-height: 16rem; margin-block: .5rem; }
