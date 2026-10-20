@@ -8,14 +8,18 @@ import ipaddress
 import json
 import mimetypes
 import secrets
+import re
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import parse_qs, unquote, urlsplit
+from urllib.parse import parse_qs, quote, unquote, urlsplit
 
 from . import catalog as model
 from .database import QueryError, Repository, ensure_index
 from .editorial import Editorial, EditorialError, STATUSES, PRIORITIES
 from .translations import MAX_TRANSLATION_BYTES
+from .pdf_sources import PDFSources
+from .research_projects import ResearchProjects
+from .workspace_editions import WorkspaceEditions
 
 
 class LocalServer(ThreadingHTTPServer):
@@ -24,6 +28,8 @@ class LocalServer(ThreadingHTTPServer):
 
     def server_close(self):
         super().server_close()
+        if hasattr(self, "pdf_sources"):
+            self.pdf_sources.close()
         if hasattr(self, "editorial"):
             self.editorial.close()
 
@@ -59,21 +65,107 @@ def handler_for(repository, editorial):
         def do_POST(self):
             try:
                 self.require_local_editorial()
-                if self.path not in {"/api/editorial/preview", "/api/editorial/save", "/api/editorial/translations/preview", "/api/editorial/markdown/preview", "/api/editorial/passages/preview", "/api/editorial/documents/preview", "/api/editorial/collections/preview", "/api/editorial/batches/preview"}:
+                request_path = urlsplit(self.path).path
+                if request_path not in {"/api/editorial/pdf/links/preview", "/api/editorial/pdf/links/save", "/api/editorial/pdf/review/preview", "/api/editorial/pdf/review/save", "/api/editorial/pdf/ocr/preview", "/api/editorial/pdf/ocr/start", "/api/editorial/pdf/ocr/resume", "/api/editorial/pdf/operations/preview", "/api/editorial/pdf/operations/start", "/api/editorial/pdf/operations/resume", "/api/editorial/workspace/preview", "/api/editorial/workspace/save", "/api/editorial/workspace/promotion-preview", "/api/editorial/workspace/promote", "/api/editorial/projects/preview", "/api/editorial/projects/save", "/api/editorial/projects/activate", "/api/editorial/pdf/upload", "/api/editorial/pdf/action", "/api/editorial/preview", "/api/editorial/save", "/api/editorial/translations/preview", "/api/editorial/markdown/preview", "/api/editorial/passages/preview", "/api/editorial/documents/preview", "/api/editorial/collections/preview", "/api/editorial/batches/preview"}:
                     self.send_json({"error": "Operação não permitida"}, 405)
                     return
                 if self.headers.get("Origin") != "http://" + self.headers.get("Host", ""):
                     raise EditorialError("A edição exige uma página aberta no próprio backend local", 403)
                 if not secrets.compare_digest(self.headers.get("X-Editorial-Token", ""), editorial.token):
                     raise EditorialError("Sessão editorial expirada. Recarregue a página.", 403)
+                if request_path == "/api/editorial/pdf/upload":
+                    project_id = self.headers.get("X-Research-Project", "")
+                    if project_id and editorial.projects.get(project_id)["archived"]:
+                        raise EditorialError("Selecione um projeto não arquivado")
+                    if self.headers.get_content_type() != "application/pdf":
+                        raise EditorialError("Envie um arquivo PDF", 415)
+                    length = int(self.headers.get("Content-Length", "0"))
+                    if not 1 <= length <= editorial.pdf_sources.max_bytes:
+                        raise EditorialError(f"O PDF deve ter até {editorial.pdf_sources.max_bytes // (1024 * 1024)} MiB", 413)
+                    self.connection.settimeout(60)
+                    result = editorial.pdf_sources.upload_stream(unquote(self.headers.get("X-PDF-Filename", "fonte.pdf")), self.rfile, length)
+                    if project_id:
+                        try:
+                            editorial.projects.attach_source(project_id, result["source_id"])
+                        except EditorialError as error:
+                            result["warning"] = "PDF preservado, mas não vinculado ao projeto: " + str(error)
+                    self.send_json(result)
+                    return
                 if self.headers.get_content_type() != "application/json":
                     raise EditorialError("Envie JSON", 415)
                 length = int(self.headers.get("Content-Length", "0"))
                 maximum = 130 * 1024 * 1024 if self.path == "/api/editorial/batches/preview" else MAX_TRANSLATION_BYTES * 6 + 200000 if self.path in {"/api/editorial/translations/preview", "/api/editorial/markdown/preview", "/api/editorial/passages/preview", "/api/editorial/documents/preview", "/api/editorial/collections/preview", "/api/editorial/batches/preview"} else 200000
+                if request_path.startswith("/api/editorial/pdf/links/"):
+                    maximum = 1024 * 1024
+                if request_path.startswith("/api/editorial/pdf/review/"):
+                    maximum = 16 * 1024 * 1024
+                if request_path.startswith("/api/editorial/projects/"):
+                    maximum = 2 * 1024 * 1024
+                if request_path.startswith("/api/editorial/workspace/"):
+                    maximum = MAX_TRANSLATION_BYTES * 6 + 200000
                 if not 1 <= length <= maximum:
                     raise EditorialError("Pedido vazio ou maior que o limite permitido", 413)
                 self.connection.settimeout(30)
                 payload = json.loads(self.rfile.read(length))
+                if request_path.startswith("/api/editorial/pdf/links/"):
+                    if not isinstance(payload, dict):
+                        raise EditorialError("Pedido inválido")
+                    with editorial.lock:
+                        operation = request_path.rsplit("/", 1)[1]
+                        self.send_json(getattr(editorial.pdf_sources.links, operation)(repository, payload))
+                    return
+                if request_path.startswith(("/api/editorial/pdf/review/", "/api/editorial/pdf/ocr/")):
+                    if not isinstance(payload, dict):
+                        raise EditorialError("Pedido inválido")
+                    kind, operation = request_path.rsplit("/", 2)[-2:]
+                    method = {("review", "preview"): "preview", ("review", "save"): "save",
+                              ("ocr", "preview"): "ocr_preview", ("ocr", "start"): "ocr_start",
+                              ("ocr", "resume"): "ocr_resume"}[(kind, operation)]
+                    self.send_json(getattr(editorial.pdf_sources.review, method)(payload))
+                    return
+                if request_path.startswith("/api/editorial/pdf/operations/"):
+                    operation = request_path.rsplit("/", 1)[1]
+                    if operation == "preview":
+                        result = editorial.pdf_sources.operations.preview(payload)
+                    elif operation == "start":
+                        result = editorial.pdf_sources.operations.enqueue(payload)
+                    else:
+                        result = editorial.pdf_sources.operations.resume(payload)
+                    self.send_json(result)
+                    return
+                if request_path.startswith("/api/editorial/workspace/"):
+                    with editorial.lock:
+                        operation = request_path.rsplit("/", 1)[1]
+                        if operation == "preview":
+                            result = editorial.workspace.preview(repository, payload)
+                        elif operation == "save":
+                            result = editorial.workspace.save(repository, payload)
+                        elif operation == "promotion-preview":
+                            result = editorial.workspace.promotion_preview(repository, editorial, payload)
+                        else:
+                            result = editorial.workspace.promote(repository, editorial, payload)
+                    self.send_json(result)
+                    return
+                if request_path.startswith("/api/editorial/projects/"):
+                    with editorial.lock:
+                        snapshot = repository.catalog
+                    operation = request_path.rsplit("/", 1)[1]
+                    if operation == "activate":
+                        if not isinstance(payload, dict) or set(payload) != {"project_id"}:
+                            raise EditorialError("Escolha um projeto ou nenhum")
+                        result = editorial.projects.activate(payload["project_id"])
+                    elif operation == "preview":
+                        result = editorial.projects.preview(payload, snapshot)
+                    else:
+                        result = editorial.projects.save(payload, snapshot)
+                    self.send_json(result)
+                    return
+                if request_path == "/api/editorial/pdf/action":
+                    # Extrações e consultas da oficina não seguram o bloqueio do catálogo.
+                    with editorial.lock:
+                        catalog_snapshot = repository.catalog
+                    self.send_json(editorial.pdf_sources.action(payload, catalog_snapshot))
+                    return
                 with editorial.lock:
                     if self.path == "/api/editorial/batches/preview":
                         result = editorial.preview_batch(repository, payload)
@@ -123,7 +215,7 @@ def handler_for(repository, editorial):
             path = unquote(urlsplit(self.path).path)
             # Recursos estáticos e capacidades não leem o estado mutável do catálogo.
             # Uma conexão lenta não deve impedir o leitor de descobrir a edição local.
-            if not path.startswith("/api/") or path == "/api/editorial/capabilities":
+            if not path.startswith("/api/") or path == "/api/editorial/capabilities" or path.startswith("/api/editorial/pdf/") or path.startswith("/api/editorial/projects"):
                 self.get_locked()
             else:
                 with editorial.lock:
@@ -145,12 +237,61 @@ def handler_for(repository, editorial):
                     self.send_data(page, "text/html; charset=utf-8")
                 elif path.startswith("/api/editorial/"):
                     self.require_local_editorial()
-                    if path == "/api/editorial/capabilities":
+                    if path == "/api/editorial/workspace/document":
+                        self.send_json(editorial.workspace.document(repository, params.get("project"), params.get("document")))
+                    elif path == "/api/editorial/workspace/edition":
+                        self.send_json(editorial.workspace.edition(repository, params.get("project"), params.get("edition")))
+                    elif path == "/api/editorial/workspace/history":
+                        self.send_json(editorial.workspace.history(repository, params.get("project"), params.get("edition")))
+                    elif path == "/api/editorial/projects":
+                        self.send_json(editorial.projects.listing())
+                    elif path.startswith("/api/editorial/projects/"):
+                        parts = path.removeprefix("/api/editorial/projects/").split("/")
+                        if len(parts) == 2 and parts[1] == "history":
+                            self.send_json(editorial.projects.history(parts[0]))
+                        elif len(parts) == 1:
+                            self.send_json(editorial.projects.get(parts[0]))
+                        else:
+                            raise EditorialError("Recurso de projeto não encontrado", 404)
+                    elif path.startswith("/api/editorial/pdf/"):
+                        suffix = path.removeprefix("/api/editorial/pdf/")
+                        if suffix == "links":
+                            with editorial.lock:
+                                self.send_json(editorial.pdf_sources.links.listing(repository, params))
+                        elif suffix.startswith("links/") and suffix.endswith("/history"):
+                            with editorial.lock:
+                                self.send_json(editorial.pdf_sources.links.history(repository, suffix.split("/")[1]))
+                        elif suffix == "operations":
+                            self.send_json(editorial.pdf_sources.operations.listing(params))
+                        elif suffix.startswith("operations/"):
+                            self.send_json(editorial.pdf_sources.operations.get(suffix.removeprefix("operations/")))
+                        elif suffix == "sources":
+                            self.send_json(editorial.pdf_sources.listing())
+                        elif suffix == "capabilities":
+                            self.send_json(editorial.pdf_sources.capabilities())
+                        else:
+                            parts = suffix.split("/")
+                            source_id = parts[0]
+                            if len(parts) == 2 and parts[1] == "file":
+                                self.send_pdf(source_id, download=params.get("download") == "1")
+                            elif len(parts) == 2 and parts[1] == "history":
+                                self.send_json(editorial.pdf_sources.history(source_id))
+                            elif len(parts) == 2 and parts[1] == "review":
+                                self.send_json(editorial.pdf_sources.review.overview(source_id))
+                            elif len(parts) == 4 and parts[1] == "pages" and parts[3] == "review":
+                                self.send_json(editorial.pdf_sources.review.page(source_id, int(parts[2])))
+                            elif len(parts) == 3 and parts[1] == "pages":
+                                self.send_json(editorial.pdf_sources.page(source_id, parts[2]))
+                            elif len(parts) == 1:
+                                self.send_json(editorial.pdf_sources.source(source_id))
+                            else:
+                                raise EditorialError("Recurso PDF não encontrado", 404)
+                    elif path == "/api/editorial/capabilities":
                         self.send_json({"mode": "local_editorial",
-                                        "features": ["translation_import", "markdown_edit", "reader_integration", "study_passage_edit"]})
+                                        "features": ["translation_import", "markdown_edit", "reader_integration", "study_passage_edit", "pdf_sources", "pdf_review", "pdf_ocr", "pdf_document_links", "research_projects", "workspace_versions"]})
                     elif path == "/api/editorial/session":
                         self.send_json({"token": editorial.token, "statuses": STATUSES, "priorities": list(PRIORITIES), "revision": editorial.revision(),
-                                        "features": ["translation_import", "markdown_edit", "reader_integration", "study_passage_edit", "catalog_intake", "batch_intake"]})
+                                        "features": ["translation_import", "markdown_edit", "reader_integration", "study_passage_edit", "catalog_intake", "batch_intake", "pdf_sources", "pdf_review", "pdf_ocr", "pdf_document_links", "research_projects", "workspace_versions"]})
                     elif path == "/api/editorial/queue":
                         self.send_json(editorial.queue(repository, params))
                     elif path == "/api/editorial/history":
@@ -211,11 +352,58 @@ def handler_for(repository, editorial):
                 self.log_error("Falha inesperada ao atender %s", self.path)
                 self.send_json({"error": "Falha interna; consulte o terminal do backend"}, 500)
 
+        def send_pdf(self, source_id, *, download=False):
+            source = editorial.pdf_sources.source(source_id)
+            path = editorial.pdf_sources.file_path(source_id)
+            size = path.stat().st_size
+            start, end, status = 0, size - 1, 200
+            requested = self.headers.get("Range")
+            if requested:
+                match = re.fullmatch(r"bytes=(\d*)-(\d*)", requested)
+                if not match or not any(match.groups()):
+                    raise EditorialError("Intervalo PDF inválido", 416)
+                if match[1]:
+                    start = int(match[1])
+                    end = min(int(match[2]), size - 1) if match[2] else size - 1
+                else:
+                    start, end = max(0, size - int(match[2])), size - 1
+                if not 0 <= start <= end < size:
+                    raise EditorialError("Intervalo PDF indisponível", 416)
+                status = 206
+            try:
+                self.connection.settimeout(30)
+                self.send_response(status)
+                self.send_header("Content-Type", "application/pdf")
+                disposition = 'attachment' if download else 'inline'
+                self.send_header("Content-Disposition", f"{disposition}; filename=\"fonte.pdf\"; filename*=UTF-8''{quote(source['filename'], safe='')}")
+                self.send_header("Accept-Ranges", "bytes")
+                self.send_header("Content-Length", str(end - start + 1))
+                self.send_header("Cache-Control", "no-store")
+                self.send_header("X-Content-Type-Options", "nosniff")
+                self.send_header("Content-Security-Policy", "frame-ancestors 'self'")
+                if status == 206:
+                    self.send_header("Content-Range", f"bytes {start}-{end}/{size}")
+                self.end_headers()
+                if self.command == "HEAD":
+                    return
+                with path.open("rb") as stream:
+                    stream.seek(start)
+                    remaining = end - start + 1
+                    while remaining:
+                        chunk = stream.read(min(1024 * 1024, remaining))
+                        if not chunk:
+                            break
+                        self.wfile.write(chunk)
+                        remaining -= len(chunk)
+            except (ConnectionError, TimeoutError):
+                self.close_connection = True
+
         def local_page(self):
             info = repository.info
             examples = [
                 ("Abrir o site e o leitor existentes", "/"),
                 ("Buscar no acervo", "/#/busca"),
+                ("Bancada de pesquisa: documentos e Markdown", "/#/doc/showtrials-1665?bancada=1"),
                 ("Área editorial local: revisão e metadados", "/editorial"),
                 ("Saúde e contagens do catálogo", "/api/health"),
                 ("Coleções e subcoleções", "/api/collections"),
@@ -227,16 +415,26 @@ def handler_for(repository, editorial):
             ]
             links = "".join(f'<li><a href="{html.escape(url, quote=True)}">{html.escape(label)}</a></li>' for label, url in examples)
             page = f'''<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-            <title>Ambiente local — Documentos Soviéticos</title><style>body{{max-width:760px;margin:3rem auto;padding:0 1rem;font:17px/1.6 system-ui;color:#252525;background:#faf8f4}}h1{{font:600 1.8rem Georgia,serif}}a{{color:#8b2c2c}}li{{margin:.6rem 0}}code{{font-size:.9em}}</style>
+            <title>Ambiente local — Documentos Soviéticos</title><link rel="stylesheet" href="/assets/style.css?v=carmim-1">
+            <body><main class="local-guide"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">§</span><span class="brand-text"><strong>Documentos Soviéticos</strong><small>Ambiente local</small></span></a>
             <h1>Ambiente local do acervo</h1><p>{info['documents']} documentos · {info['editions']} versões por idioma · {info['collections']} coleções · {info['subcollections']} subcoleções.</p>
             <p>Consulte o site, use a busca e abra a área editorial para revisar pendências e editar metadados com prévia e histórico. Os endpoints da API apresentam JSON.</p><ul>{links}</ul>
-            <p>Para encerrar, pressione <kbd>Ctrl+C</kbd> no terminal. As gravações da área editorial atualizam manifesto e busca automaticamente. Edições externas dos arquivos exigem reinicialização.</p></html>'''
+            <p>Para encerrar, pressione <kbd>Ctrl+C</kbd> no terminal. As gravações da área editorial atualizam manifesto e busca automaticamente. Edições externas dos arquivos exigem reinicialização.</p></main></body></html>'''
             self.send_data(page.encode("utf-8"), "text/html; charset=utf-8")
 
         def static_file(self, path):
+            if path == "/prototipo":
+                self.send_response(302)
+                self.send_header("Location", "/prototipo/")
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+                return
             relative = path.lstrip("/") or "index.html"
+            if relative == "prototipo/":
+                relative = "prototipo/index.html"
             # Apenas os recursos publicados do site; não expõe temporario/, Git ou o banco.
-            if not (relative == "index.html" or relative == "data/manifest.json" or relative.startswith(("assets/", "originais/"))):
+            prototype_files = {"prototipo/index.html", "prototipo/prototype.css", "prototipo/prototype.js"}
+            if not (relative == "index.html" or relative == "data/manifest.json" or relative in prototype_files or relative.startswith(("assets/", "originais/"))):
                 self.send_json({"error": "Recurso não publicado"}, 404)
                 return
             if ".." in Path(relative).parts or "\\" in relative or any(part.startswith(".") for part in Path(relative).parts):
@@ -261,12 +459,22 @@ def create_server(root, host="127.0.0.1", port=8000, db_path=None, rebuild=False
         path = db_path or root / ".local/catalog.sqlite3"
         info = ensure_index(root, path, catalog, rebuild, progress)
         repository = Repository(root, path, catalog, info)
+        editorial.pdf_sources = PDFSources(root, start_worker=False)
+        editorial.projects = ResearchProjects(root, editorial.pdf_sources)
+        editorial.pdf_sources.operations.projects = editorial.projects
+        editorial.workspace = WorkspaceEditions(editorial.projects)
+        editorial.pdf_sources.links.projects = editorial.projects
+        editorial.pdf_sources.links.workspace = editorial.workspace
         server = LocalServer((host, port), handler_for(repository, editorial))
+        editorial.pdf_sources.start()
     except Exception:
+        if hasattr(editorial, "pdf_sources"):
+            editorial.pdf_sources.close()
         editorial.close()
         raise
     server.repository = repository
     server.editorial = editorial
+    server.pdf_sources = editorial.pdf_sources
     return server
 
 

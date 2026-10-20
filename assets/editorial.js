@@ -420,6 +420,20 @@
     const workspace=node("div",{class:"markdown-workspace"});
     const textarea=node("textarea",{class:"markdown-source",name:"markdown",rows:"24",spellcheck:"false","aria-label":"Conteúdo Markdown da versão selecionada"});
     textarea.value=data.content;
+    const draftToken=params.get("rascunho");
+    const draftKey=draftToken&&/^[a-z0-9-]{1,100}$/.test(draftToken)?"workspaceDraft:v1:"+draftToken:null;
+    if(draftKey){
+      let draft=null;
+      try{draft=JSON.parse(sessionStorage.getItem(draftKey)||"null");}catch{}
+      const identified=draft?.document_id===data.document.id&&draft.language===data.edition.language&&typeof draft.content==="string";
+      if(identified&&draft.baseline_sha256===data.edition.sha256){
+        textarea.value=draft.content;dirty=textarea.value!==data.content;
+        view.append(node("p",{class:"help workspace-draft-arrival",text:"Rascunho recebido da bancada para esta versão. Nada foi salvo: confira a prévia e as diferenças antes de Confirmar e salvar."}));
+      }else if(identified){
+        const preserved=node("details",{class:"workspace-draft-conflict"},[node("summary",{text:"O arquivo mudou desde a abertura na bancada. Ver rascunho não aplicado"}),node("pre",{text:draft.content})]);
+        view.append(node("p",{class:"status error",text:"O rascunho não foi aplicado porque sua versão de origem difere da versão atual. O editor abaixo mantém o arquivo atual; compare o rascunho preservado antes de fazer alterações."}),preserved);
+      }else view.append(node("p",{class:"status error",text:"O rascunho da bancada não está disponível para este documento e idioma. O editor mantém o conteúdo atual do acervo."}));
+    }
     const previewArea=node("div");
     workspace.append(node("label",{class:"field"},["Markdown completo que será salvo",textarea]),previewArea);
     const updatePreview=()=>{
@@ -446,6 +460,7 @@
         const result=await api("/api/editorial/markdown/preview",{revision:data.revision,edition_id:data.edition.id,content_sha256:data.edition.sha256,content:textarea.value},signal);
         if(version!==submitted){status(notice,"O texto mudou durante a preparação. Revise novamente.");return;}
         preview=previewPanel(result,view,notice,(saved,panel)=>{
+          if(draftKey)try{sessionStorage.removeItem(draftKey);}catch{}
           editable.disabled=true;
           const reopen=node("button",{type:"button",text:"Reabrir esta versão"});reopen.addEventListener("click",()=>route());
           panel.append(node("div",{class:"actions"},[reopen,node("a",{href:"#/historico?document="+encodeURIComponent(saved.document_id),text:"Histórico / desfazer"})]));
@@ -723,6 +738,7 @@
     for(const root of collections){
       const panel=node("section",{class:"panel"},[node("h2",{text:title(root)}),node("p",{class:"muted",text:root.id+" · "+root.document_count+" documentos"})]);
       panel.append(node("div",{class:"actions"},[node("a",{href:"#/colecao/"+encodeURIComponent(root.id),text:"Editar coleção"}),node("a",{href:routeURL("nova-colecao",new URLSearchParams({pai:root.id})),text:"Nova subcoleção"}),node("a",{href:routeURL("novo-documento",new URLSearchParams({colecao:root.id})),text:"Novo documento"}),node("a",{href:"/#/colecao/"+root.slug,text:"Ver no site"})]));
+      panel.append(node("a",{href:routeURL("projetos/novo",new URLSearchParams({colecao:root.id})),text:"Iniciar projeto de pesquisa a partir desta coleção"}));
       for(const child of root.children)panel.append(node("div",{class:"collection-list-child"},[node("span",{text:title(child)+" · "+child.document_count+" documentos"}),node("a",{href:"#/colecao/"+encodeURIComponent(child.id),text:"Editar subcoleção"})]));
       view.append(panel);
     }
@@ -788,6 +804,12 @@
     dirty=false;lastHash=location.hash||"#/fila";
     controller?.abort();controller=new AbortController();const signal=controller.signal;
     const [path,query=""]=lastHash.replace(/^#\//,"").split("?");const params=new URLSearchParams(query);
+    const returnProject=new URLSearchParams((params.get('leitor')||'').split('?')[1]||'').get('projeto');
+    const projectScope=params.get('projeto')||returnProject;
+    if(projectScope&&(path.startsWith('markdown/')||path.startsWith('documento/')||path==='importar')){
+      const id=path==='importar'?params.get('documento'):decodeURIComponent(path.split('/').slice(1).join('/')).split(':')[0];
+      if(id){location.href='/#/doc/'+encodeURIComponent(id)+'?'+new URLSearchParams({bancada:'1',projeto:projectScope,idioma:params.get('idioma')||'pt'});return;}
+    }
     if(params.has("leitor"))readerReturn=safeReaderReturn(params.get("leitor"));
     document.body.dataset.editorialView=path.split("/")[0];
     const active=path==="nova-colecao"||path.startsWith("colecao/")?"colecoes":path.startsWith("markdown")?"markdown":path.startsWith("documento/")?"catalogo":path.split("/")[0]||"fila";
@@ -795,18 +817,23 @@
       if(link.getAttribute("href").split("?")[0]==="#/"+active)link.setAttribute("aria-current","page");
       else link.removeAttribute("aria-current");
     }
-    if(["novo-documento","lote","colecoes","nova-colecao"].includes(path)||path.startsWith("colecao/")){
+    if(["novo-documento","lote","colecoes","nova-colecao","pdf","projetos"].includes(path)||path.startsWith("colecao/")||path.startsWith("pdf/")||path.startsWith("projetos/")){
       documentContext=null;document.querySelector("[data-markdown-nav]").href="#/markdown";
     }
     document.querySelector(".sidebar-document").hidden=!documentContext;
-    const names={fila:"Fila de revisão",catalogo:"Catálogo e metadados",colecoes:"Coleções",markdown:"Editor de texto",importar:"Importar tradução",historico:"Histórico","novo-documento":"Novo documento",lote:"Importar lote"};
+    const names={fila:"Fila de revisão",catalogo:"Catálogo e metadados",colecoes:"Coleções",markdown:"Editor de texto",importar:"Importar tradução",historico:"Histórico","novo-documento":"Novo documento",lote:"Importar lote",pdf:"Fontes PDF",projetos:"Projetos de pesquisa"};
     document.getElementById("editorial-location").textContent="Área editorial / "+(names[active]||"Documento");
     view.replaceChildren(node("p",{class:"status editorial-loading",role:"status",text:"Carregando a área de trabalho…"}));view.focus();window.scrollTo({top:0});
     try {
       const [freshSession,freshCollections]=await Promise.all([api("/api/editorial/session",null,signal),api("/api/collections",null,signal)]);
       if(signal.aborted)return;
       session=freshSession;collections=freshCollections.items;view.replaceChildren();
-      if(path==="lote")await batchPage(params,signal);
+      await archiveResearchProjects.mountContext(api,signal);
+      if(signal.aborted)return;
+      if(path==="projetos"||path.startsWith("projetos/"))await archiveResearchProjects.render({view,path,params,signal,api,collections,setDirty:value=>{dirty=value;},setSaving:value=>{saving=value;}});
+      else if(path==="pdf/ferramentas")await archivePDFTools.render(view,{api,projectId:params.get('projeto')||'',sourceId:params.get('fonte')||'',operationId:params.get('tarefa')||'',signal,setDirty:value=>{dirty=value;},setSaving:value=>{saving=value;}});
+      else if(path==="pdf"||path.startsWith("pdf/"))await archivePDFSources.render({view,path,params,signal,api,collections,session,setDirty:value=>{dirty=value;},setSaving:value=>{saving=value;}});
+      else if(path==="lote")await batchPage(params,signal);
       else if(path==="novo-documento")await newDocumentPage(params,signal);
       else if(path==="colecoes")await collectionsPage(params,signal);
       else if(path==="nova-colecao")await collectionForm(null,params,signal);
@@ -826,12 +853,16 @@
     }
   }
   window.addEventListener("beforeunload",event=>{if(dirty||saving){event.preventDefault();event.returnValue="";}});
+  const refreshProjectContext=()=>{if(controller&&!controller.signal.aborted)archiveResearchProjects.mountContext(api,controller.signal).catch(()=>{});};
+  document.addEventListener("archive:projects-changed",refreshProjectContext);
+  window.addEventListener("storage",event=>{if(event.key==="researchProjectsChanged")refreshProjectContext();});
   document.addEventListener("click",event=>{
     const anchor=event.target.closest("a[href]");if(!anchor)return;
     const href=anchor.getAttribute("href");if(href.startsWith("#/"))anchor.setAttribute("href",withReaderContext(href));
   });
   async function start() {
     try {
+      await archiveResearchProjects.initializeContext();
       vocabularies=await api("/api/vocabularies");
       window.addEventListener("hashchange",route);await route();
     }catch(error){
