@@ -830,6 +830,8 @@ class Editorial:
         plan = self.previews.get(payload["preview_id"])
         if not plan or plan["expires"] <= time.time():
             raise EditorialError("A prévia expirou. Gere uma nova antes de salvar.", 409)
+        if plan.get("workspace_only"):
+            raise EditorialError("Esta versão pertence a um projeto. Use a confirmação explícita de incorporação ao acervo.", 409)
         if plan["revision"] != self.revision():
             raise EditorialError("Houve outra edição desde a prévia. Reabra o documento.", 409)
         if plan["warnings"] and payload.get("acknowledge_warnings") is not True:

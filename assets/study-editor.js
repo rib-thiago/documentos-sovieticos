@@ -1,5 +1,6 @@
 /* Correções locais de tradução: intervalo exato no Markdown, sem pareamento inferido. */
 function installStudyPassageTools() {
+  if(state.workspaceProject?.archived)return;
   if(!state.passageAvailable||state.viewMode!=="study"||!state.activeDocument)return;
   const {meta,langs}=state.activeDocument;
   const original=meta.original_language||meta.languages.find(language=>language.code==="ru")?.code||meta.languages[0]?.code;
@@ -29,6 +30,7 @@ function installStudyPassageTools() {
 }
 
 async function openStudyPassageEditor(meta,language,block,selection,trigger) {
+  const projectId=state.workspaceProject?.id;
   if(document.querySelector(".study-passage-dialog"))return;
   const context=captureEditorialReading();
   const dialog=el("dialog",{class:"study-passage-dialog","aria-labelledby":"passage-editor-title"});
@@ -65,7 +67,9 @@ async function openStudyPassageEditor(meta,language,block,selection,trigger) {
     return data;
   }
   try {
-    const [session,data]=await Promise.all([api("/api/editorial/session"),api("/api/editorial/editions/"+encodeURIComponent(meta.id+":"+language.code))]);
+    const editionURL=projectId?"/api/editorial/workspace/edition?"+new URLSearchParams({project:projectId,edition:meta.id+":"+language.code}):"/api/editorial/editions/"+encodeURIComponent(meta.id+":"+language.code);
+    const [session,data]=await Promise.all([api("/api/editorial/session"),api(editionURL)]);
+    if(projectId)data.edition={id:data.edition_id,sha256:data.content_sha256,language:data.language};
     if(!dialog.isConnected)return;
     if(!session.features?.includes("study_passage_edit"))throw new Error("Reinicie o backend atualizado para corrigir trechos.");
     token=session.token;
@@ -110,16 +114,20 @@ async function openStudyPassageEditor(meta,language,block,selection,trigger) {
       setBusy(true);proposed=null;preview.hidden=true;
       message("Preparando as diferenças. Nada foi gravado ainda…");
       try {
-        const result=await api("/api/editorial/passages/preview",{revision:data.revision,edition_id:data.edition.id,content_sha256:data.edition.sha256,
-          start:Array.from(body.slice(0,start)).length,end:Array.from(body.slice(0,end)).length,expected,replacement:replacement()});
+        const result=projectId
+          ?await api("/api/editorial/workspace/preview",{project_id:projectId,revision:data.revision,edition_id:data.edition.id,content_sha256:data.edition.sha256,
+            content:data.content.slice(0,data.content.length-body.length)+body.slice(0,start)+replacement()+body.slice(end)})
+          :await api("/api/editorial/passages/preview",{revision:data.revision,edition_id:data.edition.id,content_sha256:data.edition.sha256,
+            start:Array.from(body.slice(0,start)).length,end:Array.from(body.slice(0,end)).length,expected,replacement:replacement()});
+        if(projectId)result.passage_edit={diff:result.diff};
         if(!dialog.isConnected||version!==submitted)return;
         proposed=result;
-        const save=el("button",{type:"button",class:"passage-primary",text:"Confirmar e salvar localmente"});
+        const save=el("button",{type:"button",class:"passage-primary",text:projectId?"Confirmar e salvar no projeto":"Confirmar e salvar localmente"});
         const back=el("button",{type:"button",text:"Continuar editando"});
         back.addEventListener("click",()=>{proposed=null;preview.hidden=true;textarea.focus();});
         const diff=el("pre",{class:"passage-diff",text:result.passage_edit.diff.text});
         preview.replaceChildren(el("h3",{text:"Confira a correção · "+data.edition.language.toUpperCase()}),
-          el("p",{class:"passage-help",text:"Somente este intervalo será substituído. A versão anterior ficará no histórico; o leitor, catálogo e busca serão atualizados."}),diff,
+          el("p",{class:"passage-help",text:projectId?"Esta correção será salva somente na versão de trabalho deste projeto, com histórico. A edição do acervo permanece preservada.":"Somente este intervalo será substituído. A versão anterior ficará no histórico; o leitor, catálogo e busca serão atualizados."}),diff,
           el("div",{class:"passage-actions"},[save,back]));
         preview.hidden=false;save.focus({preventScroll:true});message("Confira as diferenças antes de confirmar. Nada foi gravado ainda.");
         save.addEventListener("click",async()=>{
@@ -127,11 +135,12 @@ async function openStudyPassageEditor(meta,language,block,selection,trigger) {
           setBusy(true);save.disabled=true;back.disabled=true;
           message("Salvando a correção e atualizando o acervo local…");
           try {
-            const result=await api("/api/editorial/save",{preview_id:proposed.preview_id,acknowledge_warnings:false});
+            const result=await api(projectId?"/api/editorial/workspace/save":"/api/editorial/save",{preview_id:proposed.preview_id,...(!projectId?{acknowledge_warnings:false}:{})});
             dirty=false;proposed=null;clearTimeout(timer);
-            try{localStorage.setItem("editorialCatalogChanged",Date.now()+":"+result.history_id);}catch{}
-            const history=el("a",{class:"passage-history",href:"/editorial#/historico?"+new URLSearchParams({document:meta.id,leitor:editorialReturnAddress()}),text:"Abrir histórico / desfazer"});
-            main.replaceChildren(el("p",{text:"Correção salva localmente. A versão anterior está preservada no histórico."}),history);
+            try{localStorage.setItem(projectId?"researchDraftChanged":"editorialCatalogChanged",Date.now()+":"+result.history_id);}catch{}
+            const history=el("a",{class:"passage-history",href:projectId?'#/doc/'+encodeURIComponent(meta.id)+'?'+new URLSearchParams({bancada:'1',projeto:projectId,idioma:language.code}):"/editorial#/historico?"+new URLSearchParams({document:meta.id,leitor:editorialReturnAddress()}),text:projectId?"Abrir versão e histórico do projeto":"Abrir histórico / desfazer"});
+            if(projectId)history.onclick=()=>{dialog.close();archiveWorkspace.showTool('markdown');};
+            main.replaceChildren(el("p",{text:projectId?"Correção salva no projeto. A edição do acervo não foi alterada.":"Correção salva localmente. A versão anterior está preservada no histórico."}),history);
             message("Salvo. Atualizando o documento…");
             try{await reloadEditorialCatalog(context);message("Documento atualizado. Você pode fechar esta janela e continuar a leitura.");}
             catch(error){message("A correção foi salva, mas não foi possível atualizar o leitor. Feche e recarregue a página. "+error.message,true);}

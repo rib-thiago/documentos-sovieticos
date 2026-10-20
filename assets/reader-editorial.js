@@ -7,7 +7,7 @@ function captureEditorialReading() {
   const entry=state.readingTracker?.entries.find(item=>{
     const rect=item.node.getBoundingClientRect();return rect.height>0&&rect.bottom>offset;
   });
-  return {document_id:meta.id,mode:langs.length>1?state.viewMode:"reading",studyMode:state.studyMode,
+  return {document_id:meta.id,mode:state.viewMode,studyMode:state.studyMode,
     language:readingLanguage(meta,langs),parallelCols:{...state.parallelCols},scroll:window.scrollY,
     position:entry?{language:entry.language,blockIndex:entry.blockIndex,signature:readingFingerprint(entry.node.textContent)}:null,
     top:entry?entry.node.getBoundingClientRect().top:0};
@@ -34,7 +34,7 @@ function editorialReadingContext(docId) {
 
 function applyEditorialReading(context,doc) {
   if(!context)return;
-  state.viewMode=context.mode==="study"&&doc.languages.length>1?"study":"reading";
+  state.viewMode=context.mode==="study"?"study":"reading";
   if(["paragraph","parallel"].includes(context.studyMode))state.studyMode=context.studyMode;
   if(doc.languages.some(l=>l.code===context.language))state.readingLanguages.set(doc.id,context.language);
   const pair=context.parallelCols;
@@ -69,6 +69,10 @@ function editorialLink(meta, langs, title, destination, icon="edit") {
   const update=capture=>{
     const code=document.querySelector(".editorial-language")?.value||documentActionLanguage(meta,langs);
     const params=new URLSearchParams({idioma:code,leitor:capture?editorialReturnAddress():"/"+location.hash});
+    if(state.workspaceProject){
+      link.href='#/doc/'+encodeURIComponent(meta.id)+'?'+new URLSearchParams({bancada:'1',projeto:state.workspaceProject.id,idioma:code});
+      return;
+    }
     let path;
     if(destination==="importar"){path="importar";params.set("documento",meta.id);}
     else if(destination==="markdown"&&(langs.find(lang=>lang.code===code)?.format||meta.format)!=="text")path="markdown/"+encodeURIComponent(meta.id+":"+code);
@@ -77,7 +81,7 @@ function editorialLink(meta, langs, title, destination, icon="edit") {
   };
   update(false);
   link.addEventListener("pointerdown",()=>update(true));
-  link.addEventListener("click",()=>update(true));
+  link.addEventListener("click",event=>{update(true);if(state.workspaceProject){event.preventDefault();history.replaceState(null,'',link.getAttribute('href'));archiveWorkspace.showTool(destination==='documento'?'metadata':'markdown');}});
   return link;
 }
 
@@ -95,7 +99,7 @@ function editorialReaderTools(meta,langs) {
       retry.disabled=state.editorialStatus==="checking";
       retry.addEventListener("click",()=>detectReaderEditorial());group.append(retry);return;
     }
-    group.append(el("p",{class:"editorial-local-note",text:"Edição local · alterações com prévia e histórico"}));
+    group.append(el("p",{class:"editorial-local-note",text:state.workspaceProject?"Versão de trabalho do projeto · acervo preservado":"Edição local · alterações com prévia e histórico"}));
     const field=languageField(langs,"editorial-language","Idioma da versão",documentActionLanguage(meta,langs));
     group.append(el("span",{class:"toolbar-label",text:"Versão para editar"}),field.element);
     const links=el("div",{class:"editorial-action-grid"});
@@ -113,7 +117,7 @@ function editorialQuickAction(meta,langs) {
   group.populateEditorial=()=>{
     group.replaceChildren();group.hidden=!state.editorialAvailable&&!localEditorialHost();
     if(state.editorialAvailable) {
-      const link=editorialLink(meta,langs,"Editar","documento");link.classList.add("panel-button","panel-edit");group.append(link);
+      const link=editorialLink(meta,langs,"Editar",state.workspaceProject?"markdown":"documento");link.classList.add("panel-button","panel-edit");group.append(link);
     } else if(localEditorialHost()) {
       const button=el("button",{type:"button",class:"panel-button",text:state.editorialStatus==="checking"?"Conectando…":"Conectar edição"});
       button.disabled=state.editorialStatus==="checking";button.addEventListener("click",()=>detectReaderEditorial());group.append(button);
@@ -140,6 +144,7 @@ async function detectReaderEditorial() {
     document.querySelectorAll(".editorial-controls").forEach(group=>group.populateEditorial?.());
     document.querySelector(".nav-editorial")?.toggleAttribute("hidden",!state.editorialAvailable);
     installStudyPassageTools();
+    document.dispatchEvent(new CustomEvent("archive:capabilities"));
   })();
   try{await state.editorialDetection;}finally{state.editorialDetection=null;}
 }
