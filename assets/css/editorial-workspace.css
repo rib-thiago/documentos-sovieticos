@@ -1,0 +1,22 @@
+/* Linguagem de trabalho comum. O portal e o texto público mantêm sua escala. */
+:is(#editorial-view,.workspace-dock){--control-radius:6px;--radius:9px;font-family:var(--font-ui,system-ui);font-size:13px;line-height:1.55}
+:is(#editorial-view,.workspace-dock)>h1{font:600 23px/1.3 var(--font-ui,system-ui);letter-spacing:-.025em;margin:8px 0 12px}
+:is(#editorial-view,.workspace-dock) :is(h2,h3,h4){font-family:var(--font-ui,system-ui);letter-spacing:-.015em}
+:is(#editorial-view,.workspace-dock) :is(.panel,.pdf-tools,.pdf-operation-output,.collection-group){background:#fffdfd;border:1px solid var(--rule,#eadfe3);border-radius:9px;box-shadow:none;padding:16px;margin:12px 0}
+:is(#editorial-view,.workspace-dock) :is(button,a.button,.actions>a){min-height:32px;font:500 12px/1.4 var(--font-ui,system-ui);padding:7px 11px;border-radius:6px;box-shadow:none}
+:is(#editorial-view,.workspace-dock) :is(input:not([type=checkbox]):not([type=range]),select,textarea:not(.pdf-review-text)){font-size:13px;line-height:1.5;border:1px solid #e3d5dd;border-radius:6px;background:#fffdfe;padding:7px 9px}
+:is(#editorial-view,.workspace-dock) :is(.field,.pdf-source-form>label){font:500 12px/1.5 var(--font-ui,system-ui);gap:5px;color:var(--ink-soft,#594b52)}
+:is(#editorial-view,.workspace-dock) :is(.fields,.filters){gap:12px 16px}
+:is(#editorial-view,.workspace-dock) .help{font-size:12px;line-height:1.6;margin:6px 0 12px;max-width:95ch}
+:is(#editorial-view,.workspace-dock) .actions{gap:7px;margin-top:12px;flex-wrap:wrap}
+:is(#editorial-view,.workspace-dock) details>summary{cursor:pointer;font:500 12px/1.5 var(--font-ui,system-ui);padding:8px 0;color:var(--ink-soft,#594b52)}
+:is(#editorial-view,.workspace-dock) .pdf-preview{border:1px solid #dfbecb;background:#fff7fa;border-radius:8px;padding:15px;margin:14px 0}
+:is(#editorial-view,.workspace-dock) :is(.pdf-raw-text,pre){font:12px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;max-height:45dvh;overflow:auto;border-radius:6px}
+:is(#editorial-view,.workspace-dock) .markdown-source{font:13px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;background:#fffcfd}
+:is(#editorial-view,.workspace-dock) :is(.reading-content,.markdown-reading){font-family:var(--font-reading,Georgia,serif)}
+:is(#editorial-view,.workspace-dock) .status.error{padding:10px 12px;border-left:3px solid var(--accent,#b52140);border-radius:6px}
+:is(#editorial-view,.workspace-dock) :is(button,a,input,select,textarea):focus-visible{outline:2px solid var(--accent,#b52140);outline-offset:2px}
+@media(max-width:760px){:is(#editorial-view,.workspace-dock) :is(.panel,.pdf-tools){padding:12px}:is(#editorial-view,.workspace-dock) :is(button,a.button){min-height:36px}}
+:is(#editorial-view,.workspace-dock) legend{font:600 12px/1.5 var(--font-ui,system-ui);margin:0 0 8px;color:var(--ink-soft,#594b52)}
+/* Manipulação PDF como tarefa guiada, sem uma ficha longa de parâmetros. */
+:is(#editorial-view,.workspace-dock) .pdf-operation-studio{border:0;background:transparent;padding:0;box-shadow:none}.pdf-operation-stages{display:flex;gap:8px;border-bottom:1px solid #e3d5dd;padding-bottom:10px;margin:16px 0}.pdf-operation-stages button[aria-current=step]{background:#a81f3c;color:white;border-color:#a81f3c}.pdf-operation-stage{max-width:820px;padding:20px;border:1px solid #e4d5dd;border-radius:10px;background:#fffcfd}.pdf-operation-stage>h3{margin:0 0 18px;font-size:17px}.pdf-operation-stage>.field{margin:14px 0;max-width:600px}.pdf-operation-choices{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}.pdf-operation-choices button{display:flex!important;flex-direction:column;align-items:flex-start!important;text-align:left;min-height:100px!important;padding:18px!important;font-size:15px!important;border:1px solid #dac4d0!important;background:white!important;color:#624351!important}.pdf-operation-choices button[aria-pressed=true]{border:2px solid #a81f3c!important;background:#fcf0f5!important;color:#941d39!important}.pdf-operation-choices small{font:12px/1.6 system-ui;color:#806976;margin-top:6px}.pdf-operation-form{border:0!important;padding:0!important;background:transparent!important;box-shadow:none!important}.pdf-operation-progress{border-left:3px solid #a81f3c!important}.pdf-operation-output{padding:12px;border-bottom:1px solid #e9dce3}@media(max-width:650px){.pdf-operation-choices{grid-template-columns:1fr}.pdf-operation-stage{padding:14px}}

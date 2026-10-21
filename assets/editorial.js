@@ -801,6 +801,7 @@
   async function route() {
     if(saving){history.replaceState(null,"",lastHash);return;}
     if(dirty&&!confirm("Há alterações ainda não salvas. Deseja sair desta edição?")){history.replaceState(null,"",lastHash);return;}
+    view.classList.remove("workspace-pdf-task");view.removeAttribute("data-workspace-source-root");
     dirty=false;lastHash=location.hash||"#/fila";
     controller?.abort();controller=new AbortController();const signal=controller.signal;
     const [path,query=""]=lastHash.replace(/^#\//,"").split("?");const params=new URLSearchParams(query);

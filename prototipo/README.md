@@ -76,3 +76,7 @@ Arquivos `index.html`, `prototype.css` e `prototype.js`, com autorização dos t
 CSS reorganizado para distinguir portal, leitor e bancada, com Carmim, curvas mais suaves e componentes compartilhados. Sem dependências novas; renderizador Markdown, notas, sanitizador e separador de cabeçalhos reutilizados. Metadados são escapados e conteúdo renderizado é sanitizado.
 
 Não foram executados testes, servidor, navegador, lint ou compilação. Avaliação visual e funcional em execução permanece manual. Sem commit ou push.
+
+## Novo estudo de workspace IDE — 20/10/2026
+
+O protótipo específico para reorganizar o trabalho editorial como IDE está em [`ide/`](ide/README.md), acessível em `/prototipo/ide/`. Ele tem grupos de abas, instrumentos documentais móveis e acesso aos fluxos locais existentes. Não substitui esta referência anterior nem a interface oficial. Veja o [diagnóstico e a proposta](../docs/projeto/WORKSPACE-IDE-DIAGNOSTICO.md).

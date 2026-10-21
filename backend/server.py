@@ -448,19 +448,20 @@ def handler_for(repository, editorial):
             self.send_data(page.encode("utf-8"), "text/html; charset=utf-8")
 
         def static_file(self, path):
-            if path == "/prototipo":
+            if path in {"/prototipo", "/prototipo/ide"}:
                 self.send_response(302)
-                self.send_header("Location", "/prototipo/")
+                self.send_header("Location", path + "/")
                 self.send_header("Content-Length", "0")
                 self.end_headers()
                 return
             relative = path.lstrip("/") or "index.html"
-            if relative == "prototipo/":
-                relative = "prototipo/index.html"
+            if relative in {"prototipo/", "prototipo/ide/"}:
+                relative += "index.html"
             # Apenas os recursos publicados do site; não expõe temporario/, Git ou o banco.
             # Fontes já incorporadas à coleção de 1937; não abrir fontes/ em geral.
             legacy_pdfs = {"fontes/tukhachevsky/julgamento-1937-06-11.ru.pdf", "fontes/tukhachevsky/julgamento-1937-06-11.en.pdf"}
-            prototype_files = {"prototipo/index.html", "prototipo/prototype.css", "prototipo/prototype.js"}
+            prototype_files = {"prototipo/index.html", "prototipo/prototype.css", "prototipo/prototype.js",
+                               "prototipo/ide/index.html", "prototipo/ide/workspace.css", "prototipo/ide/workspace.js"}
             if not (relative == "index.html" or relative in {"data/manifest.json","data/facsimiles.json"} or relative in prototype_files or relative in legacy_pdfs or relative.startswith(("assets/", "originais/"))):
                 self.send_json({"error": "Recurso não publicado"}, 404)
                 return

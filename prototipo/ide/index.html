@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShowTrials Discovery · Workspace experimental</title>
+<link rel="stylesheet" href="../../assets/css/tokens.css">
+<link rel="stylesheet" href="workspace.css?v=workflow-6">
+<script defer src="../../assets/vendor/markdown-it/markdown-it.umd.min.js"></script>
+<script defer src="../../assets/vendor/markdown-it-footnote/markdown-it-footnote.min.js"></script>
+<script defer src="../../assets/vendor/dompurify/purify.min.js"></script>
+<script defer src="workspace.js?v=workflow-6"></script>
+<script defer src="../../assets/russian-keyboard.js"></script>
+</head>
+<body>
+<a href="#editors" class="skip-link">Ir à área de trabalho</a>
+<header class="titlebar">
+<a class="identity" href="../../"><b>§</b><span>ShowTrials <small>Discovery</small></span></a>
+<button id="command-open" class="command-trigger"><span>⌕</span> Buscar documentos e comandos <kbd>Ctrl K</kbd></button>
+<a class="portal-link" href="../../">Portal público ↗</a><span class="prototype-badge">Protótipo IDE</span>
+</header>
+<div class="ide-shell">
+<nav class="activity" aria-label="Áreas de trabalho">
+<button data-section="explorer" title="Explorador" aria-label="Explorador">▤</button>
+<button data-section="search" title="Busca no acervo" aria-label="Busca no acervo">⌕</button>
+<button data-section="review" title="Revisão editorial" aria-label="Revisão editorial">✓</button>
+<button data-section="tools" title="Ferramentas de pesquisa" aria-label="Ferramentas de pesquisa">⚒</button>
+<button data-section="catalog" title="Organização do acervo" aria-label="Organização do acervo">▦</button>
+<button id="toggle-sidebar" class="activity-bottom" title="Recolher ou expandir lateral (Ctrl B)" aria-label="Recolher ou expandir lateral" aria-expanded="true">◧</button>
+</nav>
+<aside id="sidebar" aria-label="Explorador e ferramentas">
+<div class="sidebar-heading"><strong id="section-title">Explorador</strong><button id="sidebar-close" aria-label="Recolher lateral">‹</button></div>
+<label class="scope-label" for="project">Contexto de trabalho</label>
+<select id="project"><option value="">Acervo · sem projeto</option></select>
+<p id="scope-description" class="subtle">Versões do acervo. Rascunhos deste protótipo ficam na sessão.</p>
+<div id="sidebar-content"></div>
+</aside>
+<div id="sidebar-resizer" class="resizer vertical" role="separator" aria-label="Largura da lateral" aria-orientation="vertical" tabindex="0"></div>
+<main id="work-area">
+<div class="workspace-toolbar"><span id="workspace-label">Acervo / Área de trabalho</span><div>
+<button id="split-right" title="Criar grupo à direita">◫ <span>Dividir</span></button>
+<button id="split-down" title="Criar grupo abaixo">⊟ <span>Abaixo</span></button>
+<button id="toggle-bottom" title="Acompanhamento e notas">▱ <span>Painel</span></button>
+</div></div>
+<div id="editors" tabindex="-1" aria-label="Grupos de editores"></div>
+<div id="bottom-resizer" class="resizer horizontal" role="separator" aria-label="Altura do acompanhamento" aria-orientation="horizontal" tabindex="0"></div>
+<section id="bottom-panel" aria-label="Acompanhamento">
+<div class="bottom-tabs"><button data-bottom="activity" aria-pressed="true">Atividade desta sessão</button><button data-bottom="notes" aria-pressed="false">Notas de trabalho</button><span></span><button id="close-bottom" aria-label="Recolher acompanhamento">×</button></div>
+<div id="bottom-content"></div>
+</section>
+</main>
+</div>
+<footer class="statusbar"><span id="connection">Conectando…</span><span id="scope-status">Sem projeto</span><span id="document-status">Nenhum documento ativo</span><span id="draft-status">Sem gravação automática no acervo</span></footer>
+<dialog id="commands" aria-labelledby="commands-title"><h2 id="commands-title">Abrir documento ou executar comando</h2><div class="palette-search"><input id="command-search" type="search" placeholder="Título, ID ou comando…" autocomplete="off" aria-label="Buscar documento ou comando"><button id="commands-close" aria-label="Fechar comandos">Esc</button></div><div id="command-results"></div></dialog>
+<div id="announcements" class="toast" role="status" hidden></div>
+<noscript>Ative JavaScript para experimentar a bancada.</noscript>
+</body></html>

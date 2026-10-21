@@ -6,9 +6,9 @@ window.archivePDFWorkflow=(()=>{
  const field=(host,title,input)=>{host.append(n('label',{class:'field',text:title},[input]));return input;};
  async function mount(host,options){
   const {api,sourceId,projectId='',signal}=options;
-  const incorporation=n('details',{class:'panel pdf-tools'},[n('summary',{text:'Incorporar transcrição revisada'})]),body=n('section');incorporation.append(body);host.append(incorporation);
+  const incorporation=n('details',{class:'panel pdf-tools','data-workspace-zone':'incorporation'},[n('summary',{text:'Incorporar transcrição revisada'})]),body=n('section');incorporation.append(body);host.append(incorporation);
   let loaded=false;incorporation.addEventListener('toggle',async()=>{if(!incorporation.open||loaded)return;try{await renderIncorporation(body,options);loaded=true;}catch(e){body.textContent=e.message;}});
-  if(!projectId){const publication=n('details',{class:'panel pdf-tools'},[n('summary',{text:'Preparar publicação estática dos fac-símiles'})]),publicBody=n('section');publication.append(publicBody);host.append(publication);let ready=false;publication.addEventListener('toggle',async()=>{if(!publication.open||ready)return;try{await renderPublication(publicBody,{api,sourceId,signal});ready=true;}catch(e){publicBody.textContent=e.message;}});}
+  if(!projectId){const publication=n('details',{class:'panel pdf-tools','data-workspace-zone':'publication'},[n('summary',{text:'Preparar publicação estática dos fac-símiles'})]),publicBody=n('section');publication.append(publicBody);host.append(publication);let ready=false;publication.addEventListener('toggle',async()=>{if(!publication.open||ready)return;try{await renderPublication(publicBody,{api,sourceId,signal});ready=true;}catch(e){publicBody.textContent=e.message;}});}
  }
  async function renderIncorporation(host,{api,sourceId,projectId='',signal}){
   const [source,collections]=await Promise.all([api('/api/editorial/pdf/'+sourceId,null,signal),api('/api/collections',null,signal)]);if(!host.isConnected)return;

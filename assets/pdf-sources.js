@@ -27,7 +27,7 @@ window.archivePDFSources = (() => {
     const requestedProject=params.get('projeto')||(!params.has('todos')?projects.active_id:null);
     const project=projects.items.find(p=>p.id===requestedProject&&!p.archived);
     if(signal.aborted)return;
-    view.append(node('h1',{text:'Fontes PDF'}),node('p',{class:'help',text:'Preserve a fonte e confira a extração por página. As fontes, transcrições e candidatos OCR são locais; não criam documentos públicos automaticamente.'}));
+    view.append(node('h1',{'data-workspace-source-intro':'',text:'Fontes PDF'}),node('p',{class:'help','data-workspace-source-intro':'',text:'Preserve a fonte e confira a extração por página. As fontes, transcrições e candidatos OCR são locais; não criam documentos públicos automaticamente.'}));
     if(!data.capabilities.extraction) view.append(node('p',{class:'pdf-source-status',text:'Para habilitar a extração, instale no mesmo Python do backend: '+data.capabilities.installation}));
     if(path === 'pdf') {
       view.append(link('Receber PDF','#/pdf/novo'+(project?'?projeto='+project.id:'')),notice);
@@ -53,7 +53,7 @@ window.archivePDFSources = (() => {
       const submit=node('button',{type:'submit',class:'primary',text:'Enviar e preparar prévia'});
       submit.disabled=!data.capabilities.extraction;
       const limitMiB=Math.floor(data.capabilities.max_bytes/(1024*1024));
-      form.append(node('label',{text:'Projeto de destino (opcional)'},[destination]),node('label',{text:'Arquivo original (até '+limitMiB+' MiB)'},[upload]),node('p',{class:'help',text:'O PDF será preservado e analisado sem OCR. Depois confira as páginas e escolha coleção e subcoleção antes de confirmar o cadastro da fonte.'}),submit,notice);
+      form.append(node('label',{text:'Projeto de destino (opcional)'},[destination]),node('label',{text:'Arquivo original (até '+limitMiB+' MiB)'},[upload]),node('p',{class:'help',text:'O PDF será preservado e analisado sem OCR. Depois, abra a fonte e use OCR nas páginas que precisarem; extrair ou dividir o PDF antes é opcional. Confira também coleção e subcoleção no cadastro da fonte.'}),submit,notice);
       form.onsubmit=async event=>{
         event.preventDefault();const file=upload.files[0];if(!file)return;
         if(file.size>data.capabilities.max_bytes){error(new Error('O limite atual é '+limitMiB+' MiB por PDF.'));return;}
@@ -73,14 +73,16 @@ window.archivePDFSources = (() => {
     const id=path.slice(4);
     let source=await api('/api/editorial/pdf/'+encodeURIComponent(id),null,signal);
     if(signal.aborted)return;
-    view.append(link('← Fontes PDF','#/pdf'),node('h2',{text:source.metadata.title || source.filename}),notice);
+    view.setAttribute('data-workspace-source-root',id);
+    const back=link('← Fontes PDF','#/pdf');back.setAttribute('data-workspace-source-back','');
+    view.append(back,node('h2',{'data-workspace-source-title':'',text:source.metadata.title || source.filename}),notice);
     const sourceProjects=projects.items.filter(p=>p.source_ids.includes(id));
-    if(sourceProjects.length)view.append(node('p',{class:'help',text:'Projetos com vínculo a esta fonte: '+sourceProjects.map(p=>p.title).join(' · ')}));
-    const progress=node('p',{class:'pdf-source-status',role:'status'}), actions=node('div',{class:'actions'});
-    view.append(progress,node('p',{class:'pdf-source-id',text:'Fonte: '+id+' · SHA-256: '+source.sha256}),actions);
+    if(sourceProjects.length)view.append(node('p',{class:'help','data-workspace-zone':'metadata',text:'Projetos com vínculo a esta fonte: '+sourceProjects.map(p=>p.title).join(' · ')}));
+    const progress=node('p',{class:'pdf-source-status',role:'status'}), actions=node('div',{class:'actions','data-workspace-source-actions':''});
+    view.append(progress,node('p',{class:'pdf-source-id','data-workspace-zone':'metadata',text:'Fonte: '+id+' · SHA-256: '+source.sha256}),actions);
     actions.append(link('Extrair / dividir esta fonte','#/pdf/ferramentas?'+new URLSearchParams({fonte:id,...(project?{projeto:project.id}:{})})),node('a',{class:'button',href:'/api/editorial/pdf/'+id+'/file?download=1',download:source.filename,text:'Baixar PDF original desta fonte'}));
     if(source.provenance?.length){
-      const provenance=node('details',{},[node('summary',{text:'Proveniência e correspondência de páginas'})]);
+      const provenance=node('details',{'data-workspace-zone':'metadata'},[node('summary',{text:'Proveniência e correspondência de páginas'})]);
       for(const origin of source.provenance){
         provenance.append(node('p',{class:'pdf-source-id',text:'Origem: '+origin.parent_source_id+' · SHA-256: '+origin.source_sha256}),link('Consultar fonte de origem',url(origin.parent_source_id)+(project?'?projeto='+project.id:'')),node('p',{class:'help',text:origin.engine||'Motor registrado na operação'}),node('pre',{class:'pdf-raw-text',text:origin.pages.map((page,index)=>'Página '+(index+1)+' deste PDF → página física '+page+' da origem').join('\n')}));
       }
@@ -97,11 +99,11 @@ window.archivePDFSources = (() => {
     const unitList=node('div',{class:'pdf-source-units'});units.append(node('p',{class:'help',text:'Segmentação provisória por linhas em branco. IDs e offsets são preservados para a revisão futura; não equivalem a parágrafos validados.'}),unitList);
     const frame=node('iframe',{class:'pdf-facsimile',title:'Fac-símile do PDF original'});
     const external=link('Abrir PDF em outra aba','/api/editorial/pdf/'+id+'/file');external.target='_blank';external.rel='noopener';
-    const reviewHost=node('section'),ocrHost=node('section');let reviewController=null;
+    const reviewHost=node('section'),ocrHost=node('section',{'data-workspace-zone':'ocr'});let reviewController=null;
     let current=Number(pageNumber.value), pageRequest=0, timer,opening=false;
     async function openPage(number) {
       if(!Number.isInteger(number)||number<1||(source.page_count&&number>source.page_count))return;
-      if(opening||reviewController&&!reviewController.canLeave())return;
+      if(opening||reviewController&&!reviewController.canLeave())return false;
       reviewHost.replaceChildren();reviewController=null;
       current=number;pageNumber.value=String(number);const request=++pageRequest;
       if(frame.dataset.page!==String(number)){
@@ -124,11 +126,13 @@ window.archivePDFSources = (() => {
           unitList.append(node('div',{class:'panel'},[node('code',{class:'pdf-source-id',text:unit.id}),node('p',{text:content.slice(0,180)}),cite]));
         }
         reviewController=await archivePDFReview.mountPage(reviewHost,{api,sourceId:id,number,signal,setDirty:value=>{ownDirty=value;setDirty(value);},setSaving});
-        await api('/api/editorial/pdf/action',{action:'position',source_id:id,page_number:number},signal);
+        await api('/api/editorial/pdf/action',{action:'position',source_id:id,page_number:number},signal);return true;
       }catch(e){if(e.name!=='AbortError')error(e);}finally{opening=false;}
     }
-    const toolbar=node('div',{class:'pdf-source-toolbar'},[button('← Anterior',()=>openPage(current-1)),node('span',{text:'Página física'}),pageNumber,button('Ir',()=>openPage(Number(pageNumber.value))),button('Próxima →',()=>openPage(current+1)),button('Atualizar página / candidatos OCR',()=>openPage(current)),external]);
-    view.append(ocrHost,toolbar,node('div',{class:'pdf-source-grid'},[node('section',{},[node('h3',{text:'Fac-símile'}),frame]),node('section',{},[pageStatus,reviewHost,node('details',{},[node('summary',{text:'Segmentação nativa original'}),raw,units])])]));
+    const openOCRResult=async event=>{const number=Number(event.detail?.number);if(await openPage(number))view.dispatchEvent(new CustomEvent('archive:pdf-review-opened',{bubbles:true}));};
+    view.addEventListener('archive:pdf-open-review',openOCRResult);signal.addEventListener('abort',()=>view.removeEventListener('archive:pdf-open-review',openOCRResult),{once:true});
+    const toolbar=node('div',{class:'pdf-source-toolbar','data-workspace-zone':'review'},[button('← Anterior',()=>openPage(current-1)),node('span',{text:'Página física'}),pageNumber,button('Ir',()=>openPage(Number(pageNumber.value))),button('Próxima →',()=>openPage(current+1)),button('Atualizar página / candidatos OCR',()=>openPage(current)),external]);
+    view.append(ocrHost,toolbar,node('div',{class:'pdf-source-grid','data-workspace-zone':'review','data-workspace-source':id},[node('section',{},[node('h3',{text:'Fac-símile'}),frame]),node('section',{},[pageStatus,reviewHost,node('details',{'data-workspace-review-pane':'references'},[node('summary',{text:'Segmentação nativa original'}),raw,units])])]));
     pageNumber.onkeydown=event=>{if(event.key==='Enter'){event.preventDefault();openPage(Number(pageNumber.value));}};
     function updateProgress(){
       progress.textContent=(states[source.state]||source.state)+' · '+source.processed+' / '+(source.page_count??'?')+' páginas extraídas'+(source.error?' · '+source.error:'');
@@ -142,11 +146,14 @@ window.archivePDFSources = (() => {
       },1800);
     }
     signal.addEventListener('abort',()=>clearTimeout(timer),{once:true});
-    await archivePDFReview.mountOCR(ocrHost,{api,sourceId:id,currentPage:()=>current,signal});
-    updateProgress();await openPage(current);schedule();
-    const bindings=node('details',{class:'panel'},[node('summary',{text:'Vincular esta fonte a um documento'})]),bindingsHost=node('section');bindings.append(bindingsHost);view.append(bindings);
+    ocrHost.append(node('p',{class:'help',text:'Verificando disponibilidade do OCR…'}));
+    updateProgress();schedule();
+    const initialized=await Promise.allSettled([archivePDFReview.mountOCR(ocrHost,{api,sourceId:id,currentPage:()=>current,signal}),openPage(current)]);
+    if(signal.aborted)return;
+    if(initialized[0].status==='rejected')ocrHost.replaceChildren(node('p',{class:'status error',text:'Não foi possível carregar o OCR: '+initialized[0].reason.message}),button('Tentar novamente',()=>{location.reload();}));
+    const bindings=node('details',{class:'panel','data-workspace-zone':'links'},[node('summary',{text:'Vincular esta fonte a um documento'})]),bindingsHost=node('section');bindings.append(bindingsHost);view.append(bindings);
     let bindingsLoaded=false;bindings.addEventListener('toggle',async()=>{if(!bindings.open||bindingsLoaded)return;try{await archivePDFLinks.renderManager(bindingsHost,{api,sourceId:id,projectId:project?.id||'',signal});bindingsLoaded=true;}catch(e){bindingsHost.textContent=e.message;}});
-    const form=node('form',{class:'panel pdf-source-form'}), inputs={};
+    const form=node('form',{class:'panel pdf-source-form','data-workspace-zone':'metadata'}), inputs={};
     function field(name,label,value='',choices=null){const input=node(choices?'select':'input',{name,...(!choices?{type:'text',maxlength:'4000'}:{})});if(choices)for(const [key,caption]of choices)input.append(node('option',{value:key,text:caption}));input.value=value;inputs[name]=input;form.append(node('label',{text:label},[input]));return input;}
     form.append(node('h3',{text:'Cadastro local da fonte'}),node('p',{class:'help',text:'Confirme o destino da fonte. Isso ainda não cria um documento ou uma edição pública.'}));
     field('title','Título',source.metadata.title||source.filename).required=true;
@@ -179,7 +186,7 @@ window.archivePDFSources = (() => {
       });
       preview.append(save);preview.hidden=false;
     };
-    const history=node('details',{class:'pdf-source-history'},[node('summary',{text:'Histórico do cadastro da fonte'})]);const records=node('div');history.append(records);view.append(history);
+    const history=node('details',{class:'pdf-source-history','data-workspace-zone':'metadata'},[node('summary',{text:'Histórico do cadastro da fonte'})]);const records=node('div');history.append(records);view.append(history);
     async function showHistory(){
       const result=await api('/api/editorial/pdf/'+id+'/history',null,signal);if(signal.aborted)return;records.replaceChildren();
       for(const record of result.items){const entry=node('div',{class:'panel'},[node('p',{text:record.created_at}),node('pre',{class:'pdf-raw-text',text:JSON.stringify(record.before_state,null,2)})]);
