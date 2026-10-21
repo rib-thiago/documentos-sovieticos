@@ -2,6 +2,12 @@
 
 Site estático de fontes primárias e ensaios históricos, em russo e em edições com traduções para português e inglês.
 
+O leitor e a bancada de pesquisa continuam acessíveis pela home. Com o backend
+local, `/editorial` oferece cadastro, catálogo, traduções e PDF/OCR, com a linguagem
+visual da bancada e os fluxos completos de prévia e histórico. A adaptação visual
+não substitui os documentos e painéis da bancada. Ver
+[organização e conferência manual](docs/projeto/EDITORIAL-IDE.md).
+
 ## Acervo
 
 As edições de Bukharin/Astrov, Ryutin, Ordzhonikidze e Yezhov são acompanhadas pelo acervo ShowTrials: **2.179 documentos em russo**, organizados em nove coleções e 28 subcoleções.

@@ -245,7 +245,7 @@ def handler_for(repository, editorial):
                 if any(len(values) != 1 for values in raw_params.values()):
                     raise QueryError("Use cada parâmetro somente uma vez")
                 params = {key: values[0] for key, values in raw_params.items()}
-                if path == "/editorial":
+                if path in {"/editorial", "/editorial/", "/editorial/form", "/editorial/form/"}:
                     self.require_local_editorial()
                     page = (Path(__file__).parent / "editorial.html").read_bytes()
                     self.send_data(page, "text/html; charset=utf-8")

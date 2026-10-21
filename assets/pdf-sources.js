@@ -30,30 +30,45 @@ window.archivePDFSources = (() => {
     view.append(node('h1',{'data-workspace-source-intro':'',text:'Fontes PDF'}),node('p',{class:'help','data-workspace-source-intro':'',text:'Preserve a fonte e confira a extração por página. As fontes, transcrições e candidatos OCR são locais; não criam documentos públicos automaticamente.'}));
     if(!data.capabilities.extraction) view.append(node('p',{class:'pdf-source-status',text:'Para habilitar a extração, instale no mesmo Python do backend: '+data.capabilities.installation}));
     if(path === 'pdf') {
-      view.append(link('Receber PDF','#/pdf/novo'+(project?'?projeto='+project.id:'')),notice);
-      view.append(link('Extrair / dividir PDFs','#/pdf/ferramentas'+(project?'?projeto='+project.id:'')));
+      const search=node('input',{type:'search',placeholder:'Buscar fonte por título, arquivo ou ID…','aria-label':'Buscar fontes PDF'});
+      const stateFilter=node('select',{'aria-label':'Estado de extração'});stateFilter.append(node('option',{value:'',text:'Todos os estados'}));
+      for(const [key,value]of Object.entries(states))stateFilter.append(node('option',{value:key,text:value}));
+      view.append(node('div',{class:'editorial-source-toolbar'},[search,stateFilter,link('+ Receber PDF','#/pdf/novo'+(project?'?projeto='+project.id:'')),link('Manipular PDFs','#/pdf/ferramentas'+(project?'?projeto='+project.id:''))]),notice);
       if(project)view.append(node('p',{class:'pdf-source-status',text:'Fontes vinculadas ao projeto: '+project.title}),link('Mostrar todas as fontes','#/pdf?todos=1'));
       const items=project?data.items.filter(s=>project.source_ids.includes(s.id)):data.items;
       if(!items.length)view.append(node('p',{text:'Nenhuma fonte neste contexto. Envie um PDF ou vincule uma fonte existente na página do projeto.'}));
-      for(const item of items) view.append(node('article',{class:'panel'},[
+      const rows=[];
+      for(const item of items){const row=node('article',{class:'item editorial-result'},[
         node('h2',{text:item.metadata.title || item.filename}),
         node('p',{text:(states[item.state]||item.state)+' · '+(item.page_count ?? '?')+' páginas · '+(item.confirmed?'Fonte cadastrada':'Candidato ainda não confirmado')}),
-        link('Abrir fonte e páginas',url(item.id))
-      ]));
+        node('div',{class:'editorial-result-actions'},[link('Revisar páginas / OCR',url(item.id)),link('Extrair / dividir','#/pdf/ferramentas?fonte='+encodeURIComponent(item.id))])
+      ]);rows.push({row,item});view.append(row);}
+      const normalize=value=>value.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
+      const filter=()=>{const query=normalize(search.value.trim());let count=0;
+        for(const {row,item}of rows){row.hidden=!(normalize([item.metadata.title||'',item.filename,item.id].join(' ')).includes(query)&&(!stateFilter.value||item.state===stateFilter.value));if(!row.hidden)count++;}
+        notice.textContent=count+' de '+items.length+' fontes neste contexto';
+      };
+      search.addEventListener('input',filter);stateFilter.addEventListener('change',filter);filter();
       return;
     }
     if(path === 'pdf/novo') {
       view.append(link('← Fontes PDF','#/pdf'));
-      const form=node('form',{class:'panel pdf-source-form'});
+      const form=node('form',{class:'panel pdf-source-form editorial-task-form'});
       const upload=node('input',{type:'file',accept:'.pdf,application/pdf',required:'', 'aria-label':'Arquivo PDF'});
       const destination=node('select',{'aria-label':'Projeto de destino do PDF'});
       destination.append(node('option',{value:'',text:'Sem vínculo com projeto'}));
       for(const item of projects.items.filter(p=>!p.archived))destination.append(node('option',{value:item.id,text:item.title}));
       destination.value=project?.id||'';
+      const changed=()=>{ownDirty=upload.files.length>0;setDirty(ownDirty);};
+      upload.addEventListener('change',changed);destination.addEventListener('change',changed);
       const submit=node('button',{type:'submit',class:'primary',text:'Enviar e preparar prévia'});
       submit.disabled=!data.capabilities.extraction;
       const limitMiB=Math.floor(data.capabilities.max_bytes/(1024*1024));
-      form.append(node('label',{text:'Projeto de destino (opcional)'},[destination]),node('label',{text:'Arquivo original (até '+limitMiB+' MiB)'},[upload]),node('p',{class:'help',text:'O PDF será preservado e analisado sem OCR. Depois, abra a fonte e use OCR nas páginas que precisarem; extrair ou dividir o PDF antes é opcional. Confira também coleção e subcoleção no cadastro da fonte.'}),submit,notice);
+      archiveEditorialTasks.sections(form,[
+        ['Arquivo',[archiveEditorialTasks.upload(upload,'PDF original · até '+limitMiB+' MiB'),node('p',{class:'help',text:'O PDF é preservado e analisado sem OCR. Na revisão, use OCR nas páginas que precisarem. Extrair ou dividir antes é opcional.'})]],
+        ['Destino',[node('label',{class:'field',text:'Projeto de destino (opcional)'},[destination]),node('p',{class:'help',text:'Depois do envio, confira coleção e subcoleção no Cadastro da fonte. O envio não publica um documento automaticamente.'})]]
+      ]);
+      form.append(node('div',{class:'actions'},[submit]),notice);
       form.onsubmit=async event=>{
         event.preventDefault();const file=upload.files[0];if(!file)return;
         if(file.size>data.capabilities.max_bytes){error(new Error('O limite atual é '+limitMiB+' MiB por PDF.'));return;}

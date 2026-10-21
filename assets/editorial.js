@@ -29,6 +29,11 @@
   for(const link of document.querySelectorAll(".editorial-sidebar [data-icon]"))link.prepend(archiveIcon(link.dataset.icon));
   let session, collections, vocabularies, controller;
   let dirty = false, saving = false, lastHash = location.hash || "#/fila";
+  window.archiveEditorialShell?.setCloseGuard(()=>{
+    if(saving)return false;
+    if(dirty&&!confirm("Fechar esta aba descarta as alterações ainda não salvas. Deseja continuar?"))return false;
+    dirty=false;return true;
+  });
   let readerReturn=null;
   let documentContext=null;
   const labels = {pendente:"Pendente",em_revisao:"Em revisão",corrigido:"Corrigido",adiado:"Adiado",
@@ -123,14 +128,19 @@
     view.append(node("h1",{text:queue?"Fila de revisão":"Editar catálogo"}),node("p",{class:"help",text:queue
       ? "Pendências da revisão Markdown, ordenadas por prioridade. O motivo e a ação sugerida vêm dos registros existentes; você pode atualizar a triagem e suas notas."
       : "Localize qualquer documento para editar seus metadados, mesmo quando ele não tem pendências na fila."}));
-    const form=node("form",{class:"panel"});
+    const form=node("form",{class:"editorial-query-bar"});
     const filters=node("div",{class:"filters"});
     const inputs=[field(queue?"Título, ID ou motivo":"Título ou ID exato", "q",params.get("q"))];
     if(queue) inputs.push(field("Status","status",params.has("status")?params.get("status"):"pendente",{choices:[["","Todos"],...session.statuses.map(v=>[v,label(v)])]}),
       field("Prioridade","priority",params.get("priority"),{choices:[["","Todas"],...session.priorities.map(v=>[v,label(v)])]}));
     inputs.push(field("Coleção","collection",params.get("collection"),{choices:[["","Todas"],...collections.map(c=>[c.id,c.titles.pt||c.id])]}));
-    for(const input of inputs) filters.append(input.wrap);
-    form.append(filters,node("div",{class:"actions"},[node("button",{class:"primary",type:"submit",text:queue?"Filtrar fila":"Localizar documentos"}),node("a",{href:"#/"+path,text:"Limpar"})]));
+    inputs[0].input.placeholder=queue?"Buscar documento, motivo ou identificador…":"Buscar por título ou identificador…";
+    const search=node("div",{class:"editorial-query-search"},[inputs[0].wrap,node("button",{class:"primary",type:"submit",text:"Buscar"})]);
+    for(const input of inputs.slice(1)) filters.append(input.wrap);
+    const applied=inputs.slice(1).filter(input=>input.input.value).length;
+    const advanced=node("details",{class:"editorial-query-filters"},[node("summary",{text:"Filtros"+(applied?" · "+applied+" ativos":"")}),filters,
+      node("div",{class:"actions"},[node("button",{type:"submit",text:"Aplicar filtros"}),node("a",{href:"#/"+path,text:"Limpar filtros"})])]);
+    form.append(search,advanced);
     form.addEventListener("submit",event=>{event.preventDefault();const next=new URLSearchParams();for(const [k,v]of new FormData(form)) next.set(k,String(v).trim());navigate(routeURL(path,next));});
     view.append(form);
     const notice=node("p",{class:"status",role:"status",text:"Carregando…"});view.append(notice);
@@ -160,12 +170,15 @@
     status(notice,`${data.total} ${queue?"pendências":"documentos"} · exibindo ${data.items.length?data.offset+1:0}–${Math.min(data.offset+data.limit,data.total)}`);
     if(!data.items.length) view.append(node("p",{text:"Nenhum resultado nesta página. Amplie os filtros ou volte para a primeira página."}));
     for(const row of data.items) {
-      const item=node("article",{class:"item"});
+      const item=node("article",{class:"item editorial-result"});
       if(queue) item.append(badges(row));
       item.append(node("div",{class:"document-title-line"},[node("h2",{},[node("a",{class:"document-title-link",href:documentURL(row.id,queue?row.chave:""),text:title(row)})]),dateBadge(row)]));
       if(queue) item.append(node("p",{text:row.dificuldade_encontrada}),node("p",{class:"muted",text:"Ação sugerida: "+row.acao_sugerida}));
       else item.append(node("p",{class:"muted",text:row.id+" · "+row.languages.map(l=>l.toUpperCase()).join(" · ")}));
-      item.append(node("a",{href:routeURL("importar",new URLSearchParams({documento:row.id})),text:"Importar tradução para este documento"}));
+      item.append(node("div",{class:"editorial-result-actions"},[
+        node("a",{href:documentURL(row.id,queue?row.chave:""),text:queue?"Revisar documento":"Editar ficha"}),
+        node("a",{href:routeURL("importar",new URLSearchParams({documento:row.id})),text:"Importar tradução"}),
+        node("a",{href:"/#/doc/"+encodeURIComponent(row.id)+"?bancada=1",text:"Abrir na bancada"})]));
       view.append(item);
     }
     const visible=new URLSearchParams(params);
@@ -355,6 +368,15 @@
       issueControls.push({key:issue.chave,inputs});
     }
     editable.append(issuesPanel);
+    const sectionNav=node("div",{class:"editorial-section-switch",role:"group","aria-label":"Seções do documento"});
+    const documentSections=[["metadata","Metadados",fields],["collections","Coleções",membershipPanel],["issues","Pendências · "+data.issues.length,issuesPanel]];
+    const sectionButtons=new Map();
+    function showDocumentSection(key){
+      for(const [id,,panel]of documentSections){panel.hidden=id!==key;sectionButtons.get(id).setAttribute("aria-pressed",String(id===key));}
+    }
+    for(const [key,caption]of documentSections){const button=node("button",{type:"button",text:caption});button.addEventListener("click",()=>showDocumentSection(key));sectionButtons.set(key,button);sectionNav.append(button);}
+    editable.prepend(sectionNav);showDocumentSection(params.has("pendencia")?"issues":"metadata");
+    form.addEventListener("invalid",event=>{for(const [key,,panel]of documentSections)if(panel.contains(event.target)){showDocumentSection(key);break;}},true);
     const submit=node("button",{type:"submit",class:"primary",text:"Revisar alterações"});
     editable.append(node("div",{class:"actions"},[submit,node("a",{href:"#/historico?document="+encodeURIComponent(id),text:"Histórico deste documento"})]));
     form.append(editable);view.append(form);
@@ -529,19 +551,20 @@
   async function importPage(params,signal) {
     if(readerReturn)returnToReading(view,params.get("documento")||"");
     view.append(node("h1",{text:"Importar tradução Markdown"}),node("p",{class:"help",text:"Escolha o documento, confirme o idioma e envie o arquivo. A prévia não grava nada; a tradução só entra no acervo local depois de Confirmar e salvar. Não há publicação automática."}));
-    const chooser=node("form",{class:"panel"});const chooserFields=node("fieldset");
+    const chooser=node("form",{class:"editorial-query-bar"});const chooserFields=node("fieldset",{class:"editorial-query-search"});
     const documentInput=field("ID do documento","document_id",params.get("documento"),{maxlength:200});
     documentInput.input.required=true;
     const choose=node("button",{type:"submit",text:"Selecionar documento"});
-    chooserFields.append(documentInput.wrap,node("div",{class:"actions"},[choose,node("a",{href:"#/catalogo",text:"Procurar um documento pelo título"})]));
+    documentInput.input.placeholder="Identificador do documento…";
+    chooserFields.append(documentInput.wrap,choose,node("a",{href:"#/catalogo",text:"Buscar por título"}));
     chooser.append(chooserFields);view.append(chooser);
     const selected=node("section",{class:"panel import-selected",hidden:true});view.append(selected);
-    const form=node("form",{class:"panel import-form"});const fields=node("fieldset",{disabled:true});
+    const form=node("form",{class:"panel import-form editorial-task-form"});const fields=node("fieldset",{disabled:true});
     const language=field("Idioma da tradução","language","",{choices:[["","Selecione explicitamente o idioma"]]});language.input.required=true;
     const filename=node("input",{type:"file",name:"markdown",accept:".md,.markdown,text/markdown,text/plain",required:true});
     const translationTitle=field("Título da tradução no catálogo (opcional)","title","",{maxlength:2000});
     const submit=node("button",{type:"submit",class:"primary",text:"Revisar importação",disabled:true});
-    fields.append(language.wrap,node("label",{class:"field"},["Arquivo Markdown em UTF-8",filename]),translationTitle.wrap,
+    fields.append(language.wrap,archiveEditorialTasks.upload(filename,"Tradução Markdown · UTF-8, até 4 MiB"),translationTitle.wrap,
       node("p",{class:"help",text:"Arquivos .md ou .markdown de até 4 MiB. O conteúdo será mantido, incluindo cabeçalhos e quebras de parágrafo. O título opcional altera apenas o cadastro, sem reescrever o arquivo."}),
       node("div",{class:"actions"},[submit]));form.append(fields);view.append(form);
     const notice=node("p",{class:"status",role:"status","aria-live":"polite"});view.append(notice);
@@ -611,7 +634,8 @@
     const choices=node("div",{class:"collection-checks"});
     const inputs=new Map();
     for(const root of collections){
-      const group=node("div",{class:"collection-group"});
+      const group=node("details",{class:"collection-group editorial-destination-group",open:[root,...root.children].some(item=>selected.includes(item.id))});
+      group.append(node("summary",{text:title(root)}));
       for(const item of [root,...root.children]){
         const input=node("input",{type:"checkbox",value:item.id,checked:selected.includes(item.id)});
         inputs.set(item.id,input);
@@ -674,10 +698,18 @@
     add("Tipo documental","document_type","",{choices:[["","Sem classificação específica"],...Object.entries(vocabularies.document_types).sort((a,b)=>a[1].localeCompare(b[1],"pt"))]});
     add("Data para exibição","date");add("Autoria","author");add("Referência arquivística","archive");add("Nome da fonte","source_name");
     add("URL da fonte","source_url","",{maxlength:2000}).type="url";add("ID na fonte (opcional)","source_id");
-    fields.append(grid,node("p",{class:"help",text:"O identificador define uma URL permanente. Use letras minúsculas sem acentos, números e hífens; por exemplo, carta-exemplo-1937. O arquivo será copiado para originais/locais/, sem substituir documentos existentes."}));
+    const identityHelp=node("p",{class:"help",text:"O identificador define uma URL permanente. Use letras minúsculas sem acentos, números e hífens. O arquivo será copiado para originais/locais/, sem substituir documentos existentes."});
     const file=node("input",{type:"file",accept:".md,.markdown,.txt,text/markdown,text/plain",required:true});
-    fields.append(node("label",{class:"field wide"},["Arquivo original — UTF-8, até 4 MiB",file]),node("h2",{text:"Coleções e subcoleções"}));
-    const choices=collectionChoices(params.get("colecao")?[params.get("colecao")]:[]);fields.append(choices.element);
+    const choices=collectionChoices(params.get("colecao")?[params.get("colecao")]:[]);
+    form.classList.add("editorial-task-form");
+    const provenance=node("div",{class:"fields"});
+    for(const key of ["archive","source_name","source_url","source_id"])provenance.append(inputs[key].closest("label"));
+    archiveEditorialTasks.sections(fields,[
+      ["Arquivo",[archiveEditorialTasks.upload(file,"Documento original · Markdown ou TXT"),node("p",{class:"help",text:"UTF-8 · até 4 MiB. A gravação só acontece depois da prévia e da confirmação."})]],
+      ["Identificação",[grid,identityHelp]],
+      ["Destino",[node("p",{class:"help",text:"Escolha as coleções e subcoleções do documento."}),choices.element]],
+      ["Proveniência",[provenance]]
+    ]);
     const submit=node("button",{type:"submit",class:"primary",text:"Revisar novo documento"});fields.append(node("div",{class:"actions"},[submit,node("a",{href:"#/nova-colecao",text:"Criar coleção"})]));form.append(fields);view.append(form);
     const notice=node("p",{class:"status",role:"status"});view.append(notice);
     bindCreation(form,fields,submit,notice,async()=>{
@@ -706,12 +738,14 @@
     const form=node("form",{class:"panel"});const fields=node("fieldset");
     const csv=node("input",{type:"file",accept:".csv,text/csv",required:true});
     const files=node("input",{type:"file",accept:".md,.markdown,.txt,text/markdown,text/plain",multiple:true,required:true});
-    fields.append(node("label",{class:"field"},["Planilha CSV em UTF-8 — até 1 MiB",csv]),
-      node("label",{class:"field"},["Documentos originais — até 100 arquivos, 4 MiB por arquivo e 20 MiB no total",files]));
     const selection=node("p",{class:"help",role:"status",text:"Nenhum documento selecionado."});
     files.addEventListener("change",()=>{const list=[...files.files];selection.textContent=list.length+" documentos selecionados · "+(list.reduce((sum,file)=>sum+file.size,0)/(1024*1024)).toFixed(2)+" MiB";});
-    fields.append(selection,node("h2",{text:"Coleções padrão (opcional)"}),node("p",{class:"help",text:"Esta seleção só vale nas linhas sem colecoes preenchidas. Uma subcoleção inclui sua coleção principal automaticamente."}));
-    const choices=collectionChoices();fields.append(choices.element);
+    const choices=collectionChoices();form.classList.add("editorial-task-form");
+    archiveEditorialTasks.sections(fields,[
+      ["Arquivos",[archiveEditorialTasks.upload(csv,"Planilha CSV · UTF-8, até 1 MiB"),archiveEditorialTasks.upload(files,"Documentos originais · até 100 arquivos"),selection,node("p",{class:"help",text:"Até 4 MiB por arquivo e 20 MiB no total. Os nomes devem corresponder à planilha."})]],
+      ["Destino padrão",[node("p",{class:"help",text:"Seleção opcional: vale somente para linhas sem coleções preenchidas. Uma subcoleção inclui sua coleção principal."}),choices.element]],
+      ["Guia da planilha",[reference]]
+    ]);
     const submit=node("button",{type:"submit",class:"primary",text:"Revisar lote"});fields.append(node("div",{class:"actions"},[submit]));form.append(fields);view.append(form);
     const notice=node("p",{class:"status",role:"status"});view.append(notice);
     bindCreation(form,fields,submit,notice,async()=>{
@@ -734,14 +768,33 @@
     },signal);
   }
   async function collectionsPage(params,signal) {
-    view.append(node("h1",{text:"Coleções e subcoleções"}),node("p",{class:"help",text:"Crie coleções, organize subcoleções e revise seus títulos, descrição e capa. A associação dos documentos é feita no cadastro de cada documento."}),node("a",{href:"#/nova-colecao",text:"Nova coleção"}));
+    view.append(node("h1",{text:"Coleções e subcoleções"}),node("p",{class:"help",text:"Explore a organização do acervo. Expanda uma coleção para trabalhar com suas subcoleções e documentos."}));
+    const search=node("input",{type:"search",placeholder:"Localizar coleção ou subcoleção…","aria-label":"Localizar coleção ou subcoleção"});
+    view.append(node("div",{class:"editorial-collection-toolbar"},[search,node("a",{class:"button",href:"#/nova-colecao",text:"+ Nova coleção"})]));
+    const tree=node("div",{class:"editorial-collection-tree"});view.append(tree);
+    const entries=[];
     for(const root of collections){
-      const panel=node("section",{class:"panel"},[node("h2",{text:title(root)}),node("p",{class:"muted",text:root.id+" · "+root.document_count+" documentos"})]);
-      panel.append(node("div",{class:"actions"},[node("a",{href:"#/colecao/"+encodeURIComponent(root.id),text:"Editar coleção"}),node("a",{href:routeURL("nova-colecao",new URLSearchParams({pai:root.id})),text:"Nova subcoleção"}),node("a",{href:routeURL("novo-documento",new URLSearchParams({colecao:root.id})),text:"Novo documento"}),node("a",{href:"/#/colecao/"+root.slug,text:"Ver no site"})]));
-      panel.append(node("a",{href:routeURL("projetos/novo",new URLSearchParams({colecao:root.id})),text:"Iniciar projeto de pesquisa a partir desta coleção"}));
-      for(const child of root.children)panel.append(node("div",{class:"collection-list-child"},[node("span",{text:title(child)+" · "+child.document_count+" documentos"}),node("a",{href:"#/colecao/"+encodeURIComponent(child.id),text:"Editar subcoleção"})]));
-      view.append(panel);
+      const panel=node("details",{class:"editorial-collection-branch"});
+      panel.append(node("summary",{},[node("span",{class:"editorial-collection-name",text:title(root)}),node("span",{class:"muted",text:root.document_count+" documentos · "+root.children.length+" subcoleções"})]));
+      panel.append(node("p",{class:"editorial-collection-id",text:root.id}));
+      panel.append(node("div",{class:"editorial-result-actions"},[node("a",{href:"#/colecao/"+encodeURIComponent(root.id),text:"Editar coleção"}),node("a",{href:routeURL("nova-colecao",new URLSearchParams({pai:root.id})),text:"+ Subcoleção"}),node("a",{href:routeURL("novo-documento",new URLSearchParams({colecao:root.id})),text:"+ Documento"}),node("a",{href:routeURL("catalogo",new URLSearchParams({collection:root.id})),text:"Ver documentos"}),node("a",{href:"/#/colecao/"+root.slug,text:"Ver no site"}),node("a",{href:routeURL("projetos/novo",new URLSearchParams({colecao:root.id})),text:"Iniciar projeto"})]));
+      for(const child of root.children)panel.append(node("div",{class:"editorial-collection-child"},[
+        node("div",{},[node("strong",{text:title(child)}),node("small",{text:child.document_count+" documentos · "+child.id})]),
+        node("div",{class:"editorial-result-actions"},[node("a",{href:"#/colecao/"+encodeURIComponent(child.id),text:"Editar"}),node("a",{href:routeURL("novo-documento",new URLSearchParams({colecao:child.id})),text:"+ Documento"}),node("a",{href:routeURL("catalogo",new URLSearchParams({collection:child.id})),text:"Ver documentos"})])]));
+      tree.append(panel);entries.push({panel,root,open:false});
+      panel.addEventListener("toggle",()=>{if(!search.value.trim())entries.find(entry=>entry.panel===panel).open=panel.open;});
     }
+    const empty=node("p",{class:"help",text:"Nenhuma coleção corresponde à busca.",hidden:true});view.append(empty);
+    search.addEventListener("input",()=>{
+      const normalize=value=>value.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
+      const query=normalize(search.value.trim());let visible=0;
+      for(const entry of entries){
+        const match=normalize([entry.root,...entry.root.children].map(item=>title(item)+' '+item.id).join(' ')).includes(query);
+        entry.panel.hidden=!match;if(match)visible++;
+        entry.panel.open=query?match:entry.open;
+      }
+      empty.hidden=visible>0;
+    });
   }
   async function collectionForm(id,params,signal) {
     const data=id?await api("/api/editorial/collections/"+encodeURIComponent(id),null,signal):null;
@@ -760,7 +813,33 @@
     add("Capa existente em assets/covers/ (opcional)","cover",collection?.presentation.cover||"",{maxlength:1000});
     add("Cor de destaque","accent",collection?.presentation.accent||"#8b2c2c",{maxlength:7});
     add("URL da fonte (opcional)","source_url",collection?.source.url||"",{maxlength:2000}).type="url";
-    fields.append(grid,node("p",{class:"help",text:"A capa pode ficar em branco. Para usar uma imagem, coloque-a em assets/covers/ e informe o caminho, por exemplo assets/covers/minha-colecao.jpg. O cadastro não move nem substitui imagens."}));
+    const stages=[
+      ["identity","Identificação",["title_pt","slug","parent_id","title_ru"]],
+      ["presentation","Apresentação",["subtitle","description","cover","accent"]],
+      ["source","Fonte",["source_url"]]
+    ];
+    form.classList.add("editorial-collection-editor");
+    const navigation=node("div",{class:"editorial-section-switch","aria-label":"Seções da coleção",role:"group"});
+    const sections=new Map(),buttons=new Map();
+    function showSection(key){
+      for(const [id,section]of sections)section.hidden=id!==key;
+      for(const [id,button]of buttons)button.setAttribute("aria-pressed",String(id===key));
+    }
+    for(const [key,caption,names]of stages){
+      const section=node("section",{class:"editorial-edit-section"},[node("h2",{text:caption})]);
+      const sectionGrid=node("div",{class:"fields"});
+      for(const name of names)sectionGrid.append(inputs[name].closest("label"));
+      section.append(sectionGrid);sections.set(key,section);
+      const button=node("button",{type:"button",text:caption});button.addEventListener("click",()=>showSection(key));buttons.set(key,button);navigation.append(button);
+    }
+    sections.get("identity").append(node("p",{class:"help",text:"O identificador define o endereço permanente. Para criar uma subcoleção, escolha sua coleção principal."}));
+    sections.get("presentation").append(node("p",{class:"help",text:"A capa é opcional. Use uma imagem existente em assets/covers/. O cadastro não move nem substitui imagens."}));
+    sections.get("source").append(node("p",{class:"help",text:"Registre o endereço de origem da coleção, quando houver. A confirmação final mostrará todas as alterações, incluindo as outras seções."}));
+    fields.append(navigation,...sections.values());showSection("identity");
+    form.addEventListener("invalid",event=>{
+      const first=[...form.elements].find(input=>input.willValidate&&!input.validity.valid);if(first&&first!==event.target)return;
+      for(const [key,section]of sections)if(section.contains(event.target)){showSection(key);break;}
+    },true);
     const submit=node("button",{type:"submit",class:"primary",text:"Revisar coleção"});fields.append(node("div",{class:"actions"},[submit,node("a",{href:"#/colecoes",text:"Voltar às coleções"})]));form.append(fields);view.append(form);
     const notice=node("p",{class:"status",role:"status"});view.append(notice);
     bindCreation(form,fields,submit,notice,async()=>({revision,collection_id:id||null,...Object.fromEntries(Object.entries(inputs).map(([key,input])=>[key,input.value.trim()]))}),"/api/editorial/collections/preview",(saved,panel)=>{
@@ -822,8 +901,9 @@
       documentContext=null;document.querySelector("[data-markdown-nav]").href="#/markdown";
     }
     document.querySelector(".sidebar-document").hidden=!documentContext;
-    const names={fila:"Fila de revisão",catalogo:"Catálogo e metadados",colecoes:"Coleções",markdown:"Editor de texto",importar:"Importar tradução",historico:"Histórico","novo-documento":"Novo documento",lote:"Importar lote",pdf:"Fontes PDF",projetos:"Projetos de pesquisa"};
+    const names={inicio:"Início",fila:"Fila de revisão",catalogo:"Catálogo e metadados",colecoes:"Coleções",markdown:"Editor de texto",importar:"Importar tradução",historico:"Histórico","novo-documento":"Novo documento",lote:"Importar lote",pdf:"Fontes PDF",projetos:"Projetos de pesquisa"};
     document.getElementById("editorial-location").textContent="Área editorial / "+(names[active]||"Documento");
+    window.archiveEditorialShell?.activate(lastHash,names[active]||"Documento");
     view.replaceChildren(node("p",{class:"status editorial-loading",role:"status",text:"Carregando a área de trabalho…"}));view.focus();window.scrollTo({top:0});
     try {
       const [freshSession,freshCollections]=await Promise.all([api("/api/editorial/session",null,signal),api("/api/collections",null,signal)]);
@@ -844,6 +924,7 @@
       else if(path.startsWith("markdown/"))await markdownPage(decodeURIComponent(path.slice(9)),params,signal);
       else if(path.startsWith("documento/"))await documentPage(decodeURIComponent(path.slice(10)),params,signal);
       else if(path==="historico")await historyPage(params,signal);
+      else if(path==="inicio")view.append(node("h1",{text:"Área editorial"}),node("p",{class:"help",text:"Nenhuma tarefa aberta. Escolha uma atividade na lateral para continuar."}),node("div",{class:"actions"},[node("a",{href:"#/novo-documento",text:"Novo documento"}),node("a",{href:"#/catalogo",text:"Catálogo"}),node("a",{href:"#/pdf",text:"Fontes PDF"})]));
       else await listPage(path==="catalogo"?"catalogo":"fila",params,signal);
     }catch(error){
       if(error.name!=="AbortError") {
