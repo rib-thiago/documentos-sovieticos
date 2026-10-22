@@ -557,7 +557,49 @@ class Editorial:
         changes.append({"field": "Fila de revisão", "before": None, "after": "Pendente · prioridade média · conferir cadastro e apresentação"})
         return self.store_preview(payload["revision"], candidate, files, document_id, changes, creation=detail)
 
+    def guided_batch(self, payload):
+        """Converte a revisão explícita dos arquivos ao fluxo transacional existente."""
+        if set(payload) != {"revision", "entries", "defaults"}:
+            raise EditorialError("Lote guiado inválido")
+        entries, defaults = payload["entries"], payload["defaults"]
+        if not isinstance(entries, list) or not 1 <= len(entries) <= 100 or not isinstance(defaults, dict):
+            raise EditorialError("Selecione entre 1 e 100 arquivos")
+        columns = ["arquivo", "id", "titulo", "idioma", "colecoes", "titulo_pt", "data", "autoria", "nome_fonte", "url_fonte", "referencia_arquivistica"]
+        stream = io.StringIO(newline="")
+        writer = csv.DictWriter(stream, fieldnames=columns)
+        writer.writeheader()
+        originals, translated, names, size = [], [], set(), 0
+        for item in entries:
+            if not isinstance(item, dict) or set(item) != {"filename", "content", "id", "title", "language", "role"}:
+                raise EditorialError("Associação de arquivo inválida")
+            name = text(item["filename"], 255)
+            if name in names:
+                raise EditorialError("Nome de arquivo repetido: " + name)
+            names.add(name)
+            if not isinstance(item["content"], str):
+                raise EditorialError("Conteúdo inválido")
+            size += len(item["content"].encode("utf-8"))
+            if item["role"] == "translation":
+                translated.append(item)
+            elif item["role"] == "original":
+                originals.append({"filename": name, "content": item["content"]})
+                writer.writerow({"arquivo": name, "id": item["id"], "titulo": item["title"], "idioma": item["language"],
+                                 "data": defaults.get("date", ""), "autoria": defaults.get("author", ""),
+                                 "nome_fonte": defaults.get("source_name", ""), "url_fonte": defaults.get("source_url", ""),
+                                 "referencia_arquivistica": defaults.get("archive", "")})
+            else:
+                raise EditorialError("Escolha original ou tradução para cada arquivo")
+        if size > 20 * 1024 * 1024:
+            raise EditorialError("O lote deve ter no máximo 20 MiB", 413)
+        if not originals:
+            raise EditorialError("Inclua um original para cada documento novo. Para documentos existentes, use Importar tradução.")
+        return {"revision": payload["revision"], "csv_content": stream.getvalue(), "files": originals,
+                "collection_ids": defaults.get("collection_ids", [])}, translated
+
     def preview_batch(self, repository, payload):
+        translated = []
+        if isinstance(payload, dict) and "entries" in payload:
+            payload, translated = self.guided_batch(payload)
         allowed = {"revision", "csv_content", "files", "collection_ids"}
         if not isinstance(payload, dict) or set(payload) != allowed:
             raise EditorialError("Lote inválido: envie a planilha CSV e os arquivos")
@@ -639,6 +681,31 @@ class Editorial:
             raise EditorialError("A planilha não contém documentos")
         if errors:
             return {"can_save": False, "batch": {"errors": errors, "valid_count": len(prepared), "total_files": len(uploaded)}}
+        by_id = {entry["document"]["id"]: entry for entry in prepared}
+        translation_entries = {}
+        seen_editions = {(entry["document"]["id"], entry["edition"]["language"]) for entry in prepared}
+        for item in translated:
+            document_id, language = item["id"], item["language"]
+            if document_id not in by_id:
+                raise EditorialError("Tradução sem original neste lote: " + str(document_id))
+            if (document_id, language) in seen_editions:
+                raise EditorialError("Idioma repetido para o documento " + str(document_id))
+            original = by_id[document_id]
+            doc = original["document"]
+            proposed = {"revision": payload["revision"], "id": document_id, "title": item["title"], "title_pt": "",
+                        "language": language, "kind": doc["kind"], "document_type": doc["document_type"] or "",
+                        "date": doc["historical_date"]["display"] or "", "author": doc["author_label"] or "",
+                        "archive": doc["archive_reference"] or "", "source_name": doc["source"]["name"] or "",
+                        "source_url": doc["source"]["url"] or "", "source_id": doc["source"]["id"] or "",
+                        "collection_ids": original["collections"], "filename": item["filename"], "content": item["content"]}
+            entry = self.preview_document_creation(repository, proposed, _defer=True, _queue_fields=queue_fields)
+            entry["edition"]["label"] = "Tradução de trabalho · " + language.upper()
+            entry["edition"]["extra"]["imported_filename"] = item["filename"]
+            entry["detail"]["warnings"].append("Tradução de trabalho; alinhamento por parágrafos não confirmado.")
+            entry["detail"]["structure"] = {"original": translations.structure(original["detail"]["content"], original["edition"]["format"]),
+                                              "translation": translations.structure(item["content"], entry["edition"]["format"])}
+            translation_entries.setdefault(document_id, []).append(entry)
+            seen_editions.add((document_id, language))
         candidate = copy.deepcopy(repository.catalog)
         contents, warnings, changes, items = {}, [], [], []
         for entry in prepared:
@@ -665,6 +732,16 @@ class Editorial:
                           "sha256": edition["sha256"], "titles": [value.casefold() for value in doc["titles"].values()], "source_url": doc["source"].get("url")})
             changes.append({"field": "Novo documento: " + doc["id"], "before": None,
                             "after": {"title": items[-1]["title"], "language": edition["language"], "file": edition["file"], "collections": entry["collections"]}})
+        for item in items:
+            for index, translated_entry in enumerate(translation_entries.get(item["id"], []), 1):
+                edition, detail = translated_entry["edition"], translated_entry["detail"]
+                edition["position"] = index
+                candidate["editions"].append(edition)
+                contents[edition["file"]] = detail["content"]
+                by_id[item["id"]]["document"]["titles"][edition["language"]] = translated_entry["document"]["titles"][edition["language"]]
+                warnings.extend(item["id"] + ": " + warning for warning in detail["warnings"])
+                item.setdefault("translations", []).append(detail)
+                changes.append({"field": "Tradução: " + edition["id"], "before": None, "after": {"file": edition["file"], "language": edition["language"]}})
         files = self.creation_files(repository, candidate, contents)
         stream = io.StringIO(newline="")
         writer = csv.DictWriter(stream, fieldnames=queue_fields)

@@ -221,7 +221,16 @@
         details.addEventListener("toggle",()=>{if(!details.open||rendered)return;rendered=true;
           if(item.format==="markdown")details.append(markdownReading(item.content,item.language));
           else details.append(node("pre",{class:"import-source",text:item.content}));
-        });list.append(details);
+        });
+        for(const translated of item.translations||[]){
+          const version=node("details",{class:"batch-preview-item"},[node("summary",{text:"Tradução · "+translated.language.toUpperCase()})]);
+          version.append(node("p",{class:"help",text:translated.file}),node("ul",{},translated.warnings.map(text=>node("li",{class:"import-warning",text}))));
+          const diagnostic=node("table",{class:"batch-structure"},[node("thead",{},[node("tr",{},[node("th",{text:"Estrutura"}),node("th",{text:"Original"}),node("th",{text:"Tradução"})])])]);
+          const body=node("tbody");for(const [key,label] of [["study_blocks","Blocos"],["paragraphs","Parágrafos"],["headings","Títulos"],["lists","Listas"],["tables","Tabelas"]])body.append(node("tr",{},[node("th",{text:label}),node("td",{text:String(translated.structure.original[key])}),node("td",{text:String(translated.structure.translation[key])})]));diagnostic.append(body);version.append(diagnostic,node("p",{class:"help",text:"Contagens aproximadas para conferência; não comprovam alinhamento nem forçam pareamento."}));
+          let shown=false;version.addEventListener("toggle",()=>{if(!version.open||shown)return;shown=true;version.append(translated.format==="markdown"?markdownReading(translated.content,translated.language):node("pre",{class:"import-source",text:translated.content}));});
+          details.append(version);
+        }
+        list.append(details);
       }
       panel.append(list);
     }
@@ -669,7 +678,7 @@
             node("ul",{},result.batch.errors.map(error=>node("li",{text:(error.line?"Linha "+error.line+" · ":"")+(error.filename?error.filename+" · ":"")+error.message})))
           ]);
           view.append(preview);preview.focus();preview.scrollIntoView({block:"start",behavior:"smooth"});
-          status(notice,"Há problemas no lote. Corrija a planilha/arquivos e gere uma nova prévia.",true);return;
+          status(notice,"Há problemas no lote. Corrija as associações ou arquivos e gere uma nova prévia.",true);return;
         }
         preview=previewPanel(result,view,notice,afterSave,value=>{fieldset.disabled=value;});
         status(notice,"Confira a prévia e os destinos. Somente Confirmar e salvar grava no acervo local.");
@@ -722,6 +731,71 @@
     },signal);
   }
   async function batchPage(params,signal) {
+    if(params.get("csv")==="1")return batchCsvPage(params,signal);
+    view.append(node("h1",{text:"Importar um corpus"}),node("p",{class:"help",text:"Defina os dados comuns, selecione originais e traduções e confira a associação de cada arquivo. Nenhum CSV é necessário. Nada será gravado antes da confirmação final."}));
+    if(!collections.length){view.append(node("a",{href:"#/nova-colecao",text:"Criar uma coleção para começar"}));return;}
+    const revision=session.revision,form=node("form",{class:"panel editorial-task-form"}),fields=node("fieldset");
+    const corpus=node("div",{class:"fields"});
+    const language=field("Idioma dos originais","original_language","ru",{choices:[["ru","Russo"],["pt","Português"],["en","Inglês"]]});
+    const expected=field("Quantidade esperada de arquivos (opcional)","expected","");expected.input.type="number";expected.input.min="1";expected.input.max="100";
+    const collection=field("Coleção principal","collection","",{choices:[["","Selecione a coleção"],...collections.map(c=>[c.id,title(c)])]});collection.input.required=true;
+    const subcollection=field("Subcoleção","subcollection","",{choices:[["","Sem subcoleção"]]});
+    collection.input.onchange=()=>{subcollection.input.replaceChildren(node("option",{value:"",text:"Sem subcoleção"}));for(const sub of collections.find(c=>c.id===collection.input.value)?.children||[])subcollection.input.append(node("option",{value:sub.id,text:title(sub)}));};
+    const common={};
+    for(const [key,caption] of [["author","Autoria comum (opcional)"],["date","Data comum (opcional)"],["source_name","Nome da fonte"],["source_url","URL da fonte"],["archive","Referência arquivística comum (opcional)"]]){common[key]=field(caption,key,"");if(key==="source_url")common[key].input.type="url";}
+    corpus.append(collection.wrap,subcollection.wrap,language.wrap,expected.wrap,...Object.values(common).map(f=>f.wrap));
+    const files=node("input",{type:"file",accept:".md,.markdown,.txt",multiple:true,required:true});
+    const selection=node("p",{class:"help",role:"status",text:"Nenhum arquivo selecionado."});
+    const list=node("div",{class:"batch-associations"});let rows=[],loading=null,selectionVersion=0;
+    const rebuild=async()=>{
+      const version=++selectionVersion;
+      rows=[];list.replaceChildren();
+      const uploaded=[...files.files];
+      if(uploaded.length>100)throw new Error("Selecione no máximo 100 arquivos.");
+      if(uploaded.some(f=>f.size>4*1024*1024)||uploaded.reduce((n,f)=>n+f.size,0)>20*1024*1024)throw new Error("Limites: 4 MiB por arquivo e 20 MiB por lote.");
+      const prepared=[];
+      for(const file of uploaded){
+        let content;try{content=new TextDecoder("utf-8",{fatal:true,ignoreBOM:true}).decode(await file.arrayBuffer());}catch{throw new Error("Salve "+file.name+" em UTF-8.");}
+        const suffix=file.name.match(/\.(ru|pt|en)\.(?:md|markdown|txt)$/i);
+        const code=suffix?suffix[1].toLowerCase():language.input.value;
+        const base=file.name.replace(/\.(?:md|markdown|txt)$/i,"").replace(/\.(?:ru|pt|en)$/i,"");
+        const embedded=content.match(/^(?:ID do documento|ID ShowTrials|Document ID)\s*:\s*(\S+)/im)?.[1];
+        const header=content.match(/^#\s+(.+)$/m)?.[1];
+        prepared.push({file,content,code,base,id:slug(embedded?(/^\d+$/.test(embedded)?"showtrials-"+embedded:embedded):base),title:header||base});
+      }
+      if(version!==selectionVersion||signal.aborted)return;
+      for(const item of prepared){
+        const card=node("article",{class:"batch-association"});
+        const id=field("Documento / ID comum ao original e traduções","id",item.id);id.input.required=true;
+        const name=field("Título desta versão","title",item.title);name.input.required=true;
+        const lang=field("Idioma deste arquivo","language",item.code,{choices:[["ru","Russo"],["pt","Português"],["en","Inglês"]]});
+        const role=field("Papel deste arquivo","role",item.code===language.input.value?"original":"translation",{choices:[["original","Original — cria o documento"],["translation","Tradução — vincula ao original do lote"]]});
+        const grid=node("div",{class:"fields"},[role.wrap,lang.wrap,id.wrap,name.wrap]);
+        card.append(node("h3",{text:item.file.name}),node("p",{class:"help",text:"Associação sugerida pelo nome e cabeçalho; confirme ou ajuste os campos abaixo."}),grid);
+        list.append(card);rows.push({item,id,name,lang,role});
+      }
+      selection.textContent=uploaded.length+" arquivos carregados. Abra a etapa Associação para conferir.";
+    };
+    files.addEventListener("change",()=>{loading=rebuild().catch(error=>{rows=[];list.replaceChildren();selection.textContent=error.message;throw error;});loading.catch(()=>{});});
+    const stages=archiveEditorialTasks.sections(fields,[
+      ["1 · Corpus",[node("p",{class:"help",text:"Coleção é o conjunto principal; subcoleção é uma divisão interna opcional. Os metadados comuns serão aplicados a todos os documentos. Deixe em branco o que varia entre eles — poderá editar cada cadastro depois."}),corpus]],
+      ["2 · Arquivos",[archiveEditorialTasks.upload(files,"Originais e traduções · Markdown ou TXT"),selection,node("p",{class:"help",text:"Exemplo: carta-01.ru.md, carta-01.pt.md e carta-01.en.md pertencem ao mesmo documento. Até 100 arquivos, 4 MiB por arquivo e 20 MiB no total. Sem sufixo de idioma, será sugerido o idioma original do corpus."})]],
+      ["3 · Associação",[node("p",{class:"help",text:"Cada documento deve ter exatamente um original. Use o mesmo ID nas traduções correspondentes e um idioma diferente em cada versão. Arquivos ambíguos precisam de ajuste manual. Este fluxo cria documentos novos; não substitui versões já cadastradas."}),list]]
+    ]);
+    const next=node("button",{type:"button",text:"Conferir associações"});next.onclick=()=>stages.show(2);
+    const submit=node("button",{type:"submit",class:"primary",text:"Gerar prévia do corpus"});
+    fields.append(node("div",{class:"actions"},[next,submit,node("a",{href:"#/lote?csv=1",text:"Usar CSV (avançado)"})]));form.append(fields);view.append(form);
+    const notice=node("p",{class:"status",role:"status"});view.append(notice);
+    bindCreation(form,fields,submit,notice,async()=>{
+      if(loading)await loading;
+      if(!rows.length)throw new Error("Selecione os arquivos do corpus.");
+      if(expected.input.value&&Number(expected.input.value)!==rows.length)throw new Error("A quantidade esperada difere dos "+rows.length+" arquivos selecionados. Confira a seleção ou ajuste a quantidade.");
+      const ids=new Map();for(const row of rows){const id=row.id.input.value.trim();if(!ids.has(id))ids.set(id,[]);ids.get(id).push(row);}
+      for(const [id,group] of ids){if(group.filter(r=>r.role.input.value==="original").length!==1)throw new Error(id+": selecione exatamente um original e associe suas traduções ao mesmo ID.");if(new Set(group.map(r=>r.lang.input.value)).size!==group.length)throw new Error(id+": há idiomas repetidos.");}
+      return {revision,defaults:{...Object.fromEntries(Object.entries(common).map(([key,f])=>[key,f.input.value.trim()])),collection_ids:[collection.input.value,...(subcollection.input.value?[subcollection.input.value]:[])]},entries:rows.map(r=>({filename:r.item.file.name,content:r.item.content,id:r.id.input.value.trim(),title:r.name.input.value.trim(),language:r.lang.input.value,role:r.role.input.value}))};
+    },"/api/editorial/batches/preview",(saved,panel)=>{panel.append(node("p",{text:saved.entity.document_ids.length+" documentos e suas versões cadastrados."}),node("div",{class:"actions"},[node("a",{href:"#/historico?document="+saved.entity.id,text:"Histórico / desfazer lote"}),node("a",{href:"#/catalogo",text:"Abrir catálogo"})]));},signal);
+  }
+  async function batchCsvPage(params,signal) {
     view.append(node("h1",{text:"Importar documentos em lote"}),node("p",{class:"help",text:"Selecione uma planilha CSV e os arquivos originais correspondentes. Confira cada item antes de confirmar a gravação conjunta. Para traduções de documentos já cadastrados, use Importar tradução."}));
     const revision=session.revision;
     const template=node("button",{type:"button",text:"Baixar modelo CSV"});
