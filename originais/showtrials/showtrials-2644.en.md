@@ -43,187 +43,31 @@ TOP SECRET.
 
 REFERENCE TO THE TRANSCRIPT.
 
-Nos.
-
-item
-
-SURNAMES.
-
-Interrogation pages.
-
-Pa\<ge\> of the final statement.
-
-1.
-
-EVDOKIMOV
-
-6
-
-262
-
-2.
-
-ANISHEV
-
-26
-
-263
-
-3.
-
-BAKAEV
-
-41
-
-269
-
-4.
-
-GORSHENIN
-
-84
-
-272
-
-5.
-
-GESSEN
-
-97
-
-273
-
-6.
-
-HERTSBERG
-
-101
-
-280
-
-7.
-
-BRAVO
-
-108
-
-281
-
-8.
-
-SHAROV
-
-114
-
-282
-
-9.
-
-ZINOVIEV
-
-125
-
-285
-
-10.
-
-KAMENEV
-
-155
-
-292
-
-11.
-
-HERTIK
-
-165
-
-303
-
-12.
-
-TARASOV
-
-176
-
-807
-
-13.
-
-PERIMOV
-
-187
-
-311
-
-14.
-
-FEDOROV
-
-189
-
-312
-
-15.
-
-KUKLIN
-
-195
-
-316
-
-16.
-
-FAIVILOVICH
-
-200
-
-316
-
-17.
-
-TSARKOV
-
-203
-
-320
-
-18.
-
-BASHKIROV
-
-208
-
-321
-
-19.
-
-SAKHOV
-
-21 1
-
-322
-
-WITNESSES
-
-1.
-
-SAFAROV
-
-57
-
-2.
-
-ELKOVICH
-
-242
-
-3.
-
-KHARITONOV
-
-254
+| Nos. item | SURNAMES. | Interrogation pages. | Pa\<ge\> of the final statement. |
+| --- | --- | --- | --- |
+| 1. | EVDOKIMOV | 6 | 262 |
+| 2. | ANISHEV | 26 | 263 |
+| 3. | BAKAEV | 41 | 269 |
+| 4. | GORSHENIN | 84 | 272 |
+| 5. | GESSEN | 97 | 273 |
+| 6. | HERTSBERG | 101 | 280 |
+| 7. | BRAVO | 108 | 281 |
+| 8. | SHAROV | 114 | 282 |
+| 9. | ZINOVIEV | 125 | 285 |
+| 10. | KAMENEV | 155 | 292 |
+| 11. | HERTIK | 165 | 303 |
+| 12. | TARASOV | 176 | 807 |
+| 13. | PERIMOV | 187 | 311 |
+| 14. | FEDOROV | 189 | 312 |
+| 15. | KUKLIN | 195 | 316 |
+| 16. | FAIVILOVICH | 200 | 316 |
+| 17. | TSARKOV | 203 | 320 |
+| 18. | BASHKIROV | 208 | 321 |
+| 19. | SAKHOV | 21 1 | 322 |
+|  | WITNESSES |  |  |
+| 1. | SAFAROV | 57 |  |
+| 2. | ELKOVICH | 242 |  |
+| 3. | KHARITONOV | 254 |  |
 
 TOP SECRET
 
@@ -2776,3 +2620,10 @@ RGASPI, Fond 17, Inventory 171, File 208, folios 2–188.
 \[59\] Erroneously in the text: “изуитической” [izuiticheskoi].
 
 \[60\] This is how I. Kotolynov described that conversation in his interrogation of December 12, 1934: “On one of the evenings I spent in Moscow the three of us gathered at Faivilovich's apartment (Tarasov I., myself — Kotolynov — and Faivilovich). First we exchanged opinions about how each of us had passed the party purge; then the conversation turned to the party leadership. During the conversation all of us made the most malicious counterrevolutionary attacks against Comrade Stalin. After that, I do not remember how the transition occurred, but we had a discussion about who could replace Comrade Stalin. It was mentioned that Kaganovich, although not a bad organizer, did not enjoy the party's confidence and could not be admitted into the party leadership. In connection with this discussion about replacing Comrade Stalin, Faivilovich named Zinoviev, saying that he — ZINOVIEV — could become the party's leader. Besides that, the question was raised of the possibility of making use of Bakaev, Evdokimov, and Kharitonov in party leadership positions.”
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> In the preserved HTML of the source publication, the #_edn52 reference has no element bearing the corresponding identifier. The marker and note texts are preserved; the missing HTML destination has not been replaced by an inferred correspondence.

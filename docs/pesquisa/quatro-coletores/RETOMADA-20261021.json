@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-21",
+  "interface_commit": "f317fd3",
+  "push": false,
+  "collection_job": "stopped_with_checkpoints",
+  "catalog_modified_this_round": false,
+  "svitlana": {
+    "previous_acquired_urls": 67,
+    "acquired_urls": 221,
+    "new_acquired_urls": 154,
+    "remaining_urls": 558,
+    "failed_urls": 18,
+    "never_attempted_urls": 540,
+    "units": 222,
+    "ready_candidates": 13
+  },
+  "mozokhin": {
+    "ready_candidates": 241,
+    "resolved": [
+      "mozokhin-2013-v2-294",
+      "mozokhin-2013-v2-295"
+    ],
+    "decision": "mozokhin-v2-294-295-notes-20261021"
+  },
+  "sakharov": {
+    "english_units_retained": 4,
+    "missing_english_references_located_in_russian": 14,
+    "notes_translated": false
+  },
+  "brest": {
+    "iskra_retries": 6,
+    "successful_collector_acquisitions": 0,
+    "error": "robots.txt returned HTTP 403; no override used"
+  }
+}

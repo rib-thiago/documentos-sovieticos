@@ -1,0 +1,79 @@
+{
+  "batch_id": "onda1-pilotos-20261021",
+  "editions_changed": 8,
+  "issue_outcomes": 11,
+  "closed_issues": 9,
+  "queue_before_sha256": "b9a5a776d8113fc70fdb8cc53d6fce5e76c726a7817611e213abb660e7552080",
+  "queue_after_sha256": "9f5cfef2254ac629669eb5adaf4437a3f4b2d64f39ea1c9dd477d99024672419",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R1-tabelas_imagens-0025",
+      "result_file": "temporario/revisao-onda1/tabelas-a/result.json",
+      "result_sha256": "5289dafc3f0262b9c840c2e1403fb93a38caac8bbf7a891bf77e4b2ab61b3925",
+      "editions_prepared": 5,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4504:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4504:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4576:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4576:links_nao_reconstruidos",
+          "outcome": "parcial"
+        },
+        {
+          "key": "showtrials-4578:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4578:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0024",
+      "result_file": "temporario/revisao-onda1/tabela2644/result.json",
+      "result_sha256": "c9e7ce7f7767a72cf5399d6e74c4a35c88d7eade6825e4696ac2c6ea0e692e1b",
+      "editions_prepared": 3,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2644:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-2644:links_nao_reconstruidos",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0001",
+      "result_file": "temporario/revisao-onda1/militares/result.json",
+      "result_sha256": "cce34f57991534862b8dff8699860bd32f0dd225c6ece1405429bd49bf30d036",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-aviation-korolev-1935:fonte_militar",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "military-gosplan-aircraft-1935:fonte_militar",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "military-rkka-raw-materials-1934:fonte_militar",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    }
+  ]
+}

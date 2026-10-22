@@ -1,0 +1,72 @@
+{
+  "saved": true,
+  "history_id": "20261021170901891656-f7f4322013df",
+  "document_id": null,
+  "revision": "1f08128c85569363b7c4bc8436bc5b398b86acdc677cade30234fa7ca1ebb634",
+  "entity": {
+    "kind": "batch",
+    "id": "coletas-incremental-20261021",
+    "document_ids": [
+      "svitlana-ec79e8c3b631d152-state-farms-1931-11-28",
+      "svitlana-9f0c1698988a39f0-boytsov-1938-12-12",
+      "svitlana-4a97a2173e8f980f-correspondents-1933-02-19",
+      "mozokhin-2013-v2-294",
+      "mozokhin-2013-v2-295",
+      "brest-iskra-primeira-sessao",
+      "brest-iskra-27-dez",
+      "brest-iskra-jan-11-manha",
+      "brest-iskra-jan-11-tarde",
+      "brest-iskra-fase-2-apresentacao",
+      "brest-iskra-fase-2-ioffe",
+      "brest-iskra-fase-2-delegacoes",
+      "brest-iskra-jan-31",
+      "brest-iskra-mar-1-manha",
+      "brest-iskra-mar-1-tarde",
+      "brest-iskra-mar-1-presidentes"
+    ],
+    "collection_ids": [
+      "sakharov-testamento-lenin-2003",
+      "transcricoes-arquivos-sovieticos",
+      "politburo-trotsky-mozokhin",
+      "brest-litovsk"
+    ]
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados.",
+  "approved_package_sha256": "6a409f507e57990a972f23f22aface8512010bbabb833e66db0e10db2a1e386a",
+  "new_documents": 16,
+  "new_editions": 16,
+  "new_collections": 0,
+  "new_subcollections": 1,
+  "review_queue_added": 16,
+  "retained_units": 0,
+  "files_to_write": 23,
+  "document_ids": [
+    "svitlana-ec79e8c3b631d152-state-farms-1931-11-28",
+    "svitlana-9f0c1698988a39f0-boytsov-1938-12-12",
+    "svitlana-4a97a2173e8f980f-correspondents-1933-02-19",
+    "mozokhin-2013-v2-294",
+    "mozokhin-2013-v2-295",
+    "brest-iskra-primeira-sessao",
+    "brest-iskra-27-dez",
+    "brest-iskra-jan-11-manha",
+    "brest-iskra-jan-11-tarde",
+    "brest-iskra-fase-2-apresentacao",
+    "brest-iskra-fase-2-ioffe",
+    "brest-iskra-fase-2-delegacoes",
+    "brest-iskra-jan-31",
+    "brest-iskra-mar-1-manha",
+    "brest-iskra-mar-1-tarde",
+    "brest-iskra-mar-1-presidentes"
+  ],
+  "active_counts": {
+    "rebuilt": true,
+    "revision": "0d28759750fdd9d512af102be7db1bad3915731382ac3a3aae1adfad858e98f8",
+    "documents": 2630,
+    "editions": 3760,
+    "collections": 20,
+    "subcollections": 58,
+    "memberships": 5348
+  },
+  "history_file": ".local/editorial/history/20261021170901891656-f7f4322013df.json.gz"
+}

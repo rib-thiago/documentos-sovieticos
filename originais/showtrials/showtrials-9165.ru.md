@@ -4,8 +4,8 @@
 
 P.S. Bitte meine beste Grüsse Herrn und Frau Ratke, auch Kusse der kleine Gerda zu übergeben. Auch mein besten Dank für genossenschaftliche Freundschaft die sie meinen Sohn erweisen. Bitte auch auf weiteres ihn nicht zu verlassen bis ich Komme.
 
-Ihre ergeben P. Olberg \[1\]
+Ihre ergeben P. Olberg [\[1\]](<http://showtrials.ru/pismo-p-i-beskinoj-v-p-olbergu/#_edn1>)
 
 РГАСПИ Ф. 495, Оп. 205, Д. 8318, Л. 180-182. Автограф.
 
-\[1\] Мои наилучшие пожелания господину и госпоже Ратке, а также поцелуи маленькой Герде. Также моя наилучшая благодарность за то дружеское участие, которое вы проявляете к моему сыну. Пожалуйста, не оставляйте его одного до моего приезда. С уважением, П. Ольберг
+[\[1\]](<http://showtrials.ru/pismo-p-i-beskinoj-v-p-olbergu/#_ednref1>) Мои наилучшие пожелания господину и госпоже Ратке, а также поцелуи маленькой Герде. Также моя наилучшая благодарность за то дружеское участие, которое вы проявляете к моему сыну. Пожалуйста, не оставляйте его одного до моего приезда. С уважением, П. Ольберг

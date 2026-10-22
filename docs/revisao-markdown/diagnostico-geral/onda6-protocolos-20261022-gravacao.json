@@ -1,0 +1,229 @@
+{
+  "batch_id": "onda6-protocolos-20261022",
+  "editions_changed": 2,
+  "issue_outcomes": 18,
+  "documents_metadata_changed": [],
+  "closed_issues": 18,
+  "queue_before_sha256": "58887a3f1c532c8953401e168e1756d4ea15e3139f963d68bd70d0676655d391",
+  "queue_after_sha256": "37db002d67faf8cd768be63630d8f24d756a83f3b50f2ac0d0e75e04f16cc46c",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R2-secoes_listas-0105",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0105.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/7b6c66b86f4f33bd34abe32896ca936e6b5728e178d95432448ad1077da33dac-R2-secoes_listas-0105.result.json",
+      "result_sha256": "7b6c66b86f4f33bd34abe32896ca936e6b5728e178d95432448ad1077da33dac",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7625:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0106",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0106.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/286109cdf9d8672afc3d538c2ab75394f347bf3f0b6268311c86f1a2d8d96ed2-R2-secoes_listas-0106.result.json",
+      "result_sha256": "286109cdf9d8672afc3d538c2ab75394f347bf3f0b6268311c86f1a2d8d96ed2",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7627:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0107",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0107.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/67fbd068657fbe604201f74ccd50d5175cb5b003e443da0b515120280cec6335-R2-secoes_listas-0107.result.json",
+      "result_sha256": "67fbd068657fbe604201f74ccd50d5175cb5b003e443da0b515120280cec6335",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7630:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0108",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0108.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/9060b7fba82825b24e389e4b42fae74ce70623d97e0a27a7f0f4db655cec1fd9-R2-secoes_listas-0108.result.json",
+      "result_sha256": "9060b7fba82825b24e389e4b42fae74ce70623d97e0a27a7f0f4db655cec1fd9",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7644:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0109",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0109.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/f0aa07d37b99ce868929c9ae16487b333d2e2c7b96342f6275eda9f6b490cde1-R2-secoes_listas-0109.result.json",
+      "result_sha256": "f0aa07d37b99ce868929c9ae16487b333d2e2c7b96342f6275eda9f6b490cde1",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7707:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0110",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0110.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/84d6312cba1bbbb18891544333ca7ed03baf47fe31ccd2091aafe820d71aea7e-R2-secoes_listas-0110.result.json",
+      "result_sha256": "84d6312cba1bbbb18891544333ca7ed03baf47fe31ccd2091aafe820d71aea7e",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7713:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7724:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0111",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0111.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/9122819bf7192391d2141fb0f36cb0a5e017acd60214b5f84f775d51f5ea747a-R2-secoes_listas-0111.result.json",
+      "result_sha256": "9122819bf7192391d2141fb0f36cb0a5e017acd60214b5f84f775d51f5ea747a",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7726:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7756:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0112",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0112.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/dc4a8b468ecf8be8eece95e1962f1825e0e867ae529f6fae5a202423ddd4b180-R2-secoes_listas-0112.result.json",
+      "result_sha256": "dc4a8b468ecf8be8eece95e1962f1825e0e867ae529f6fae5a202423ddd4b180",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7787:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0113",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0113.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/ce7a7935091cd53b0c637903a308b9998d6a1a08eb979e878d41d0f2b43c0cdf-R2-secoes_listas-0113.result.json",
+      "result_sha256": "ce7a7935091cd53b0c637903a308b9998d6a1a08eb979e878d41d0f2b43c0cdf",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7789:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0114",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0114.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/5521bd139aa7deb7f0cda034e42e93a988d9b023f7b8a822708dbf2aa770b190-R2-secoes_listas-0114.result.json",
+      "result_sha256": "5521bd139aa7deb7f0cda034e42e93a988d9b023f7b8a822708dbf2aa770b190",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7792:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0115",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0115.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/090117312f34cf3561b398d3adbdcaa2ce01d20e75479aedf73292030c47502d-R2-secoes_listas-0115.result.json",
+      "result_sha256": "090117312f34cf3561b398d3adbdcaa2ce01d20e75479aedf73292030c47502d",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7840:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0116",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0116.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/3521f7b0e8cb1b695104dd290e818fcf9a33d5dccf9130980a8d86dda6954425-R2-secoes_listas-0116.result.json",
+      "result_sha256": "3521f7b0e8cb1b695104dd290e818fcf9a33d5dccf9130980a8d86dda6954425",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7878:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0117",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0117.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/b3e4b14e8eb78d63daafde5b91e65ee8c0f29fec3070bfed2e7c6bcd997744bb-R2-secoes_listas-0117.result.json",
+      "result_sha256": "b3e4b14e8eb78d63daafde5b91e65ee8c0f29fec3070bfed2e7c6bcd997744bb",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7913:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7915:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0119",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0119.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/91a03da14b95493e0e70352a6004767520af3ecb54791c005795f89d4ea0f8c0-R2-secoes_listas-0119.result.json",
+      "result_sha256": "91a03da14b95493e0e70352a6004767520af3ecb54791c005795f89d4ea0f8c0",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7952:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0120",
+      "result_file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0120.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/b5f931f9a09ba4210c199859a9d2d3446a7124c27b2ce24e8d64de4c3299731e-R2-secoes_listas-0120.result.json",
+      "result_sha256": "b5f931f9a09ba4210c199859a9d2d3446a7124c27b2ce24e8d64de4c3299731e",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8003:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    }
+  ],
+  "saved": true,
+  "history_id": "20261022103819534645-d2d4dc99f1c4",
+  "document_id": null,
+  "revision": "c1f1899633e90b189ad7561f4b24227c91d91d24cfcc8eca74fbf4d8b367c743",
+  "entity": {
+    "kind": "batch",
+    "id": "onda6-protocolos-20261022"
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}

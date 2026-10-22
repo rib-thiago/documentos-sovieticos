@@ -29,3 +29,10 @@ CHEFE DA I SEÇÃO DO SPO DA GUGB DO NKVD DA URSS PETROVSKY.
 Confere: Churbanova
 
 RGASPI, fundo 671, inventário 1, dossiê 121, folha 209.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> No cargo de Lyushkov, a publicação eletrônica russa emprega “ГУГВ”, enquanto linhas próximas usam “ГУГБ”. As traduções preservam GUGV nessa linha; a sigla não foi normalizada silenciosamente.

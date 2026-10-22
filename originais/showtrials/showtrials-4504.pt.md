@@ -4,83 +4,21 @@ realizado na Administração do NKVD da Região de Leningrado pelo assistente do
 
 BRICCI, em 17/1/1935.
 
-1.
-
-Sobrenome —
-
-APANASEVICH.
-
-2.
-
-Nome, patronímico —
-
-Konstantin Adamovich.
-
-3.
-
-Idade —
-
-Nascido em 1903.
-
-4.
-
-Origem —
-
-Natural de Leningrado. Funcionário de origem operária. Russo, cidadão da URSS.
-
-5.
-
-Residência —
-
-Leningrado, rua Romenskaya, nº 7, apartamento 29.
-
-6.
-
-Ocupação —
-
-Instrutor responsável do Presidium do Conselho Regional dos Sindicatos.
-
-7.
-
-Estado civil —
-
-Solteiro. Mãe, Elena Ivanovna, sob meu sustento; irmã Antonina, trabalha na Fábrica de Margarina nº 2 como assistente de contabilidade.
-
-8.
-
-Situação patrimonial —
-
-Sem posses.
-
-9.
-
-Escolaridade —
-
-Superior incompleto.
-
-10.
-
-Filiação partidária —
-
-Membro do PCU(b) desde 1921. Não tive sanções partidárias.
-
-11.
-
-Informações sobre condenações —
-
-Nunca condenado.
-
-12.
-
-Categoria do registro militar —
-
-Registrado na categoria de pessoal técnico subalterno.
-
-13.
-
-Serviço entre os brancos —
-
-Não serviu.
+|  |  |  |
+| --- | --- | --- |
+| 1. | Sobrenome — | APANASEVICH. |
+| 2. | Nome, patronímico — | Konstantin Adamovich. |
+| 3. | Idade — | Nascido em 1903. |
+| 4. | Origem — | Natural de Leningrado. Funcionário de origem operária. Russo, cidadão da URSS. |
+| 5. | Residência — | Leningrado, rua Romenskaya, nº 7, apartamento 29. |
+| 6. | Ocupação — | Instrutor responsável do Presidium do Conselho Regional dos Sindicatos. |
+| 7. | Estado civil — | Solteiro. Mãe, Elena Ivanovna, sob meu sustento; irmã Antonina, trabalha na Fábrica de Margarina nº 2 como assistente de contabilidade. |
+| 8. | Situação patrimonial — | Sem posses. |
+| 9. | Escolaridade — | Superior incompleto. |
+| 10. | Filiação partidária — | Membro do PCU(b) desde 1921. Não tive sanções partidárias. |
+| 11. | Informações sobre condenações — | Nunca condenado. |
+| 12. | Categoria do registro militar — | Registrado na categoria de pessoal técnico subalterno. |
+| 13. | Serviço entre os brancos — | Não serviu. |
 
 Depoimento sobre o mérito do processo:
 

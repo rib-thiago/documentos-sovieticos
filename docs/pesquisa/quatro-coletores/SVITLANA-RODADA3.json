@@ -1,0 +1,34 @@
+{
+  "inventory_updated_at": "2026-10-21T20:08:50.369660+00:00",
+  "candidate_pages": 779,
+  "acquired_pages": 779,
+  "unattempted": 0,
+  "failed": 0,
+  "units": 780,
+  "ready_for_import": 13,
+  "retained_units": 767,
+  "ready_hashes_unchanged": true,
+  "ready_markdown_hashes": {
+    "svitlana-aa02ccdf0bad5a13-tiflis-1903": "a30281d661f78997aee3b888f3ffc3dbbed92e76983635f7162edcfe4da8feb1",
+    "svitlana-cf7c0161d6bb507f-24-7": "c611308671e9353c7337770078361f8285acc29b36aae847e8c24a1c0d1dfa76",
+    "svitlana-cf7c0161d6bb507f-24-1": "cc14b4fcb89c27c94f000683a96b91aa135ec58e3d1c8fb4351791c957bdf8a7",
+    "svitlana-8e787b136fb8a966-circular-30-1923": "19422149b0bdc4ba533dcd058a5017b27e380040bb3d8639e0e24708b258b2c6",
+    "svitlana-577e70a9559cdd6f-georgia-1924-09-02": "74d5840363d71351aee38b563eb97d52c27d55b87b8bdf6d5f52cc583a3ae6be",
+    "svitlana-c07a09902a9439f2-politburo-1925-10-26": "64d2850dc8e7160ef1916f2134f35a145bfe4f3f5750a72d7d7ea6b97091c34d",
+    "svitlana-1fbcb9e9dc8f0d85-ezhov-1937-02-02": "036b98b001b2b95a272b2b38ac580233bb04333757f9ce8005828539dee6c037",
+    "svitlana-6b2926270ce20d42-ostrovityanov-1952-02-07": "3c13b7c1a47fddbbec7c13035adac68cbdd72b85017e83bd48ec9f3c2e526cec",
+    "svitlana-ec79e8c3b631d152-state-farms-1931-11-28": "dfdc4e3dd4ed9680dcd6f35fa5ddd70f1d86421864f5df7a2233f0dc6e652287",
+    "svitlana-9f0c1698988a39f0-boytsov-1938-12-12": "8627ede1f3236f56da07b9c2df9cb41d90f2b981bac2a0eadcc8b49e62aff034",
+    "svitlana-4a97a2173e8f980f-correspondents-1933-02-19": "b786a01e278d26dc7bb882b79f587c2037205f0283a310330290972fa44485d4",
+    "svitlana-72884aff564b53a6-bakhmut-1920-11-25": "ff9ec70ec2189c2e6ec412edbc354a6d27da27ae7c414d6e12172b7fde168a2e",
+    "svitlana-11af007562ceaa14-repair-plants-1938-01-29": "ca420e4cee970c1d6154b5eba3d134e68bb1adf814c42d08a2596165fb62e846"
+  },
+  "warnings": {
+    "source_word_container_selected_series_masthead_preserved_in_raw": 219,
+    "complex_table_requires_review_source_html": 21,
+    "generic_body_extraction_requires_boundary_review": 561,
+    "short_body_requires_review": 44,
+    "pdf_wrapper_not_document_text": 24
+  },
+  "canonical_import_performed": false
+}

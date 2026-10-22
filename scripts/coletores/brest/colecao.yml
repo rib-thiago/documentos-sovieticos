@@ -1,0 +1,58 @@
+id: brest-litovsk
+nome: Brest-Litovsk
+periodo:
+  inicio: '1917-11-07'
+  fim: '1918-12-31'
+escopo: >
+  Negociações, decisões internas do partido bolchevique, imprensa e posições
+  dos comunistas de esquerda, congressos e ratificação da paz de Brest-Litovsk.
+organizacao:
+  - id: '01-negociacoes'
+    titulo: Negociações de paz e sessões diplomáticas (1917–1918)
+  - id: '02-comite-central'
+    titulo: Comitê Central — atas, votações e resoluções
+  - id: '03-lenin'
+    titulo: Lenin — teses, discursos, telegramas e polêmicas
+  - id: '04-trotsky'
+    titulo: Trotsky — negociações, correspondência e intervenções
+  - id: '05-comunistas-de-esquerda'
+    titulo: Bukharin e comunistas de esquerda — imprensa e textos programáticos
+  - id: '06-congressos'
+    titulo: VII Congresso do Partido e IV Congresso dos Sovietes
+  - id: '07-tratados'
+    titulo: Tratados, ultimatos, atos diplomáticos e ratificação
+  - id: '08-facsimiles'
+    titulo: Edições originais, fac-símiles, arquivos e referências bibliográficas
+  - id: '09-desdobramentos'
+    titulo: Desdobramentos políticos e econômicos ao longo de 1918
+  - id: '10-interpretacoes'
+    titulo: Reconstituições retrospectivas e historiografia (separadas dos documentos)
+campos_documento:
+  - id
+  - titulo
+  - titulo_original
+  - autores
+  - data_original
+  - calendario
+  - idioma
+  - idioma_do_original
+  - edicao_fonte
+  - referencia_arquivistica
+  - url_fonte
+  - url_edicao
+  - colecao
+  - subcolecoes_secundarias
+  - genero
+  - tipo_versao
+  - integralidade
+  - estado_aquisicao
+  - status_traducao
+  - checksum_raw_sha256
+  - checksum_texto_sha256
+politica:
+  - Sem interpretação obrigatória ou advertências editoriais na interface.
+  - Preservar originais, notas, títulos, estrutura e intervenções de cada orador.
+  - Datas duplas do calendário juliano/gregoriano sempre mantidas literalmente.
+  - Transcrição, tradução e edição historiográfica são versões distintas.
+  - Não publicar automaticamente traduções de terceiros; verificar direitos e crédito.
+  - Os originais em russo são priorizados para futuras traduções pt e en.

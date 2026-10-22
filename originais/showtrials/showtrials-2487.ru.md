@@ -1,10 +1,10 @@
-MONTREAL GAZETTE, August 20, 1936
+## MONTREAL GAZETTE, August 20, 1936
 
-16 CONFESS PLOT TO SLAY STALIN, DESTROY SOVIET
+### 16 CONFESS PLOT TO SLAY STALIN, DESTROY SOVIET
 
 Zinovieff and Kameneff Admit Guilt, Incriminate Trotzky
 
-NAZI GESTAPO IS NAMED
+#### NAZI GESTAPO IS NAMED
 
 German Secret Police Provided Terrorists With False Passports, Is Claim
 
@@ -28,7 +28,7 @@ Asked by the Prosecutor, Andrei Vishinsky, what he had done about Mr. Troizky, R
 
 “Oh, we were not quite sure what we would do with Trozky after we got into power.”
 
-TO KILL ASSASSINS.
+#### TO KILL ASSASSINS.
 
 And then came this cynical part of the alleged plot, reminding one of the days of Ivan the Terrible. According to Reingold I. Bakaieff, another of the defendants, a slim, black bearded, fiery-eyed zealot — the perfect embodiment of the outside world’s idea of a Bolshevik— was to be made head of the Ogpu (Soviet secret police). He was to have put to death all the actual assassins and any Ogpu men having dangerous knowledge so that the actual origin of the plot would never be known.
 
@@ -48,7 +48,7 @@ The Zinovieff and Trotzkyist groups joined in 1932 for the purpose of seizing po
 
 According to the confessions and the testimony today Trotzky further counselled that Stalin should not be killed privately but in spectacular circumstances such as the International Communist Party congress where it would startle delegates from all over the world and in hopes that it would stir up an uprising among the masses in Russia and perhaps prompt foreign intervention against the existing regime.
 
-STALIN’S ESCAPE.
+#### STALIN’S ESCAPE.
 
 Fritz David, according to the confessions—his own among others —was chosen by Trotzky for the “historic mission” of killing Stalin. David related he was a member of the German Communist party and a secret member of the Trotzkyist faction. He came as a delegate to the Comintern congress last summer and sat with a concealed pistol during the sessions of the Comintern in the very build.ng where’ he is now on trial. Describing it in the confession, he said:
 
@@ -72,7 +72,7 @@ Zinovieff was asked by the prosecutor if he organized the terrorists.
 
 “Yes. I am guilty of every charge in the indictment.”
 
-PLOT LAID TO TROTZKY.
+#### PLOT LAID TO TROTZKY.
 
 As the trial started amid the elegance of the former Moscow Nobles Club hall, the prosecutors laid the plot directly to Leon Trotzky. They said he and the co-conspirators bid for international aid to overthrow the Government.
 
@@ -96,7 +96,7 @@ Smirnoff, one of the lesser defendants, denied he had carried instructions from 
 
 “I belonged to the (conspiracy) centre and accept full responsibility for membership in that group.”
 
-PLOT WITHIN THE PLOT.
+#### PLOT WITHIN THE PLOT.
 
 Sokolnikoff already is under arrest.
 
@@ -118,7 +118,7 @@ Trotsky, in exile now in Norway was reported to be enraged by the failure to “
 
 Orders have been issued for the arrest of Trotzky and his son, who was accused of playing a messenger’s role in the dramatic plot, should either set foot in the Soviet Union.
 
-TROTZKY DERIDES TRIAL.
+#### TROTZKY DERIDES TRIAL.
 
 Hoenefoss, Norway. August 19 (UPI).—Leon Trotzky, whose alleged followers are on trial in Moscow charged with a plot to overthrow the Soviet Government, derided the proceedings tonight as “humbug”.
 
@@ -130,11 +130,11 @@ Hoenefoss, Norway. August 19 (UPI).—Leon Trotzky, whose alleged followers are 
 
 “I will make the accusers the accused.”
 
-MONTREAL GAZETTE, August 21, 1936
+## MONTREAL GAZETTE, August 21, 1936
 
-STALIN MISSED DEATH ON MAY DAY
+### STALIN MISSED DEATH ON MAY DAY
 
-TERRORIST ACCUSED TELLS COURT
+#### TERRORIST ACCUSED TELLS COURT
 
 Says Fourth Attempt on His Life in Two Years Failed This Spring – Trotzky Emerges as Real Defendant of Trial
 
@@ -162,7 +162,7 @@ Today he revealed the real reason Stalin had escaped death on December 1, 1934, 
 
 “Also, you and Zinovieff are responsible for the suicide of Bogden who killed himself rather than carry out your orders,” he shouted at Kameneff.
 
-INDIFFERENT TO DEATH.
+#### INDIFFERENT TO DEATH.
 
 Today, even more than yesterday, was apparent the incomprehensible desire of the defendants to convict themselves. Instead of the drama of a murder trial with the defendant fighting for his life, the spectacle here is one of 16 men accused of a crime having only one possible penalty and with no possibility of any technicality saving them, facing the court with “We who are about to die salute you.”
 
@@ -182,7 +182,7 @@ Zinovieff and Kameneff again testified for hours. They shared the day’s spotli
 
 Smirnoff, wriggling for hours while Prosecutors Vishinsky and Ulrich and his own fellow-defendants bombarded him with accusations, admitted point by point to conferring with Trotzky’s son while purchasing supplies for the Soviet in Berlin, then to discussing terrorism against Stalin with Trotzky’s son, then to bringing terroristic instructions about Stalin to the Moscow bloc, and finally agreeing to accept the title “leader of the Trotzkyist group,” but still denying he himself counselled violence.
 
-TURNED TO FASCISM.
+#### TURNED TO FASCISM.
 
 But Zinovieff, less abject than yesterday and with a trace of his old fire back, testified almost eloquently. He even admitted he had gone all the way “from opposition through counter-revolution to terrorism and actually to Fascism.”
 
@@ -206,7 +206,7 @@ Abruptly Kameneff asserted:
 
 “I did not\! I had no intention of writing an article.”
 
-BOTH WERE CONVICTED.
+#### BOTH WERE CONVICTED.
 
 Both men were convicted and sentenced to long prison terms in connection with the Kiroff death in 1934 and presumably were arrested in prison on the conspiracy charge.
 
@@ -260,7 +260,7 @@ The prosecution’s main efforts were to tie the plot directly to Trotzky. Even 
 
 Observers seemed amazed that the prisoners continued to heap on lavish details of their activities. There was no evident pressure on the witnesses in the courtroom. They appeared eager to offer damaging evidence which almost certainly will mean their death.
 
-EXILE DENIES ANY CRIME.
+#### EXILE DENIES ANY CRIME.
 
 Oslo. Norway, August 20—Leon Trotzky, exiled Communist leader, in a long declaration denied tonight he had violated an agreement with Norway by participating in political activities in the country.
 
@@ -278,9 +278,9 @@ Major Vidkun Quisling, chief of the Norwegian Nazi party, urged King Haakon to c
 
 Quisling, in a letter to the monarch, described the situation in Norway as so tense there was danger citizens acting on their own initiative might harm the exiled Communist leader.
 
-MONTREAL GAZETTE, August 22, 1936
+## MONTREAL GAZETTE, August 22, 1936
 
-Gunman Attempted Stalin’s Life On Trotzky’s Orders, He Admits
+### Gunman Attempted Stalin’s Life On Trotzky’s Orders, He Admits
 
 Moscow, August 21.—The admitted ace-triggerman in an alleged plot to overthrow the Soviet Government declared from the witness stand today he attempted to kill Joseph Stalin under direct order from Leon Trotzky.
 
@@ -316,13 +316,13 @@ Lourier said long-made plans to shoot Voroshiloff failed because the Commissar�
 
 Corroborating testimony there were three separate attempts to kill Stalin, witnesses said bombs labelled “diploma” were to have been sent him as he stood on the tomb of Lenin in Moscow’s Red Square during the last May Day celebration.
 
-MONTREAL GAZETTE, 24 August, 1936.
+## MONTREAL GAZETTE, 24 August, 1936.
 
-SOVIET IMPOSES DEATH PENALTY ON 16 PLOTTERS
+### SOVIET IMPOSES DEATH PENALTY ON 16 PLOTTERS
 
 Prisoners Deliver Valedictories Saying Sentence Is Justified
 
-HAVE 3 DAYS TO APPEAL
+#### HAVE 3 DAYS TO APPEAL
 
 But It Is Held Inconceivable Clemency Will Be Granted Them
 
@@ -340,7 +340,7 @@ The prisoners and the entire court rose as V.V. Ulrich and his three associate j
 
 The judges turned abruptly and left the courtroom. Guards escorted the prisoners out. Zinovieff walking with bowed shoulders. Kameneff rigidly erect, and the trial ‒ most notable in the history of the Soviet Union and perhaps the most important political trial ever held anywhere ‒ was over.
 
-TOMSKY TAKES LIFE.
+#### TOMSKY TAKES LIFE.
 
 As the trial came to its climax, Maikil Tomsky, one of the officials implicated in the conspiracy testimony, died suddenly in his home near Moscow.
 
@@ -384,9 +384,9 @@ The appeal was evidently partly based on the erroneous supposition that the tria
 
 In their last statements they were permitted to speak as long and as freely as they wished. The only check came when the defendants launched dissertations on Communist party history and curiously enough, in view of the prominence given the defendants’ alleged link with German Fascism, Ulrich twice stopped the defendants’ attacks on Nazi leaders.
 
-MONTREAL GAZETTE, August 25, 1936
+## MONTREAL GAZETTE, August 25, 1936
 
-16 Plotters Executed in Soviet; Appeal Is Rejected by Committee
+### 16 Plotters Executed in Soviet; Appeal Is Rejected by Committee
 
 Kameneff, Zinovieff and 14 Other Conspirators Shot – Trotzky, Implicated in Trial, Declares He Is Willing to Face Norwegian Court
 
@@ -404,7 +404,7 @@ The communique said: “The Presidium of the Central Executive Committee decline
 
 No mention was made of where or how the executions were performed, nor why the action was so sudden. A previous announcement had said they would have the 72 hours of grace.
 
-TROTZKY READY TO FACE COURT.
+#### TROTZKY READY TO FACE COURT.
 
 Oslo. Norway. August 24 (AP)—Leon Trotzky, exiled Russian Bolshevist leader, said tonight he stood ready to answer charges he had fomented a plot to overthrow the Soviet regime and incidentally kill Joseph Stalin.
 

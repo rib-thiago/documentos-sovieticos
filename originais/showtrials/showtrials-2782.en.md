@@ -25,3 +25,10 @@ HEAD OF THE 1ST SECTION, SPO, GUGB — PETROVSKY.
 RGASPI, fond 671, inventory 1, file 114, fols. 161–162.
 
 [1] Probably an error when the record was retyped.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The self-reference “АНТОНОВА” and callout [i], with the note labelled [1], occur in the Russian electronic publication. They are preserved, together with the source note suggesting a retyping error. No conjectured name has been substituted.

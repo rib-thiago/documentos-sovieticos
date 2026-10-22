@@ -1,0 +1,107 @@
+{
+  "decision": "mozokhin-notes-round6-20261021",
+  "scope": "Final additional note ownership corrections:56 in153;38/39 within100;40 from102 to101. Document100 remains blocked by large-table reconstruction and exact transcription review; original numbering intentionally preserved.",
+  "units": [
+    {
+      "id": "mozokhin-2013-v1-153",
+      "expected_sha256": "12c8431acab5521dd936fb7996bab496bc40c057d8ffdb63678ead3fd78f56b0",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "56 Приложение печатается частично",
+          "new": ""
+        },
+        {
+          "old": "подполья56:",
+          "new": "подполья[^56]:"
+        },
+        {
+          "old": "\n297\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^56]: Приложение печатается частично"
+      ],
+      "reviewed_pdf_pages": [
+        298
+      ],
+      "remaining": null,
+      "expected_result_sha256": "d7b7ad59e67cf42a2c97945a05e4629cc988b73e3bc08f4f79030a26cfac7325"
+    },
+    {
+      "id": "mozokhin-2013-v1-100",
+      "expected_sha256": "779081d698a1a861d6abc0cf471e06c73e122a8d6764e6485537ad451f117013",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "38 Строка заретуширована",
+          "new": ""
+        },
+        {
+          "old": "39 Строка заретуширована",
+          "new": ""
+        },
+        {
+          "old": "19838.",
+          "new": "198[^38]."
+        },
+        {
+          "old": "78039.",
+          "new": "780[^39]."
+        }
+      ],
+      "append_notes": [
+        "[^38]: Строка заретуширована",
+        "[^39]: Строка заретуширована"
+      ],
+      "reviewed_pdf_pages": [
+        175,
+        179,
+        180
+      ],
+      "remaining": "Reconstruir e conferir a lista nominal em duas colunas nas páginas PDF174–180 (com início na174). Notas38/39 pertencem às linhas retocadas198/780, já ligadas. A fonte impressa tem séries tipográficas900/949/950 e termina865 apesar de declarar863 assinaturas; não renumerar nem preencher nomes ocultos. Há lacunas/leituras OCR nos nomes e anos que exigem confronto página a página; candidatura retida.",
+      "expected_result_sha256": "c2e65f9e0c73c1bf8eee00c5134f635e6551ac82deed796a0774553188ed79fa"
+    },
+    {
+      "id": "mozokhin-2013-v1-101",
+      "expected_sha256": "8de9677c247d30f11ca32677138069ce76079431b7347dcb12223d5fcdcaeeb4",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "ЦК40",
+          "new": "ЦК[^40]"
+        }
+      ],
+      "append_notes": [
+        "[^40]: Подпись не разборчива."
+      ],
+      "reviewed_pdf_pages": [
+        180
+      ],
+      "remaining": null,
+      "expected_result_sha256": "8c193d27b4f7e272a8b98c9f29d2b812b903f8d5d508b02a045fe2998ffdfd36"
+    },
+    {
+      "id": "mozokhin-2013-v1-102",
+      "expected_sha256": "899aaa00304d82352a5d9579e5a63f1d8214cbd10c4bcb7e26bfb94090300045",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "40 Подпись не разборчива.",
+          "new": ""
+        },
+        {
+          "old": "\n179\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        180
+      ],
+      "remaining": null,
+      "expected_result_sha256": "d06ad5b8111a8ef27644f52b44419ddf9baa4e7e7e89de21f9d3272dc3fe9539"
+    }
+  ]
+}

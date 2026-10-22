@@ -19,3 +19,10 @@ INTERROGATED BY — KOGAN
 Certified correct: — illegible
 
 RGASPI, fond 671, inventory 1, file 120, folio 11.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The question and answer refer to “13/XII-31”, although the record dates from 15 December 1934. The translations spell out 1931 in accordance with the Russian electronic publication; the date has not been harmonized by inference.

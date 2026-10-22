@@ -1,0 +1,34 @@
+### Official Government Documents from the People’s Commissar for Foreign Affairs
+
+## Leon Trotsky
+
+##### The documents presented here are the official documents and proclamations from the People’s Commissariat for Foreign Affairs, headed by Leon Trotsky from November of 1917 to March of 1918. These documents were originally transcribed by [Brian Baggins](https://www.marxists.org/admin/volunteers/steering.htm) for the [History of the Soviet Government Documents](https://www.marxists.org/history/ussr/index.htm) web site.
+
+---
+
+  
+  
+
+#### STATEMENT BY TROTSKY AT THE BREST-LITOVSK PEACE CONFERENCE ON RUSSIA’S WITHDRAWAL FROM THE WAR
+
+**10 February 1918**
+
+It was the task of the sub-commission, as we understood it, to provide an answer to the question to what extent the frontier proposed by the other side could secure to the Russian people, even in a minimum degree, the right of self-determination. We have heard the reports of our representatives on the territorial sub-commission and, after prolonged discussion and a thorough examination of the question, we have come to the conclusion that the hour of decision has struck. The peoples are impatiently awaiting the results of the peace negotiations at Brest-Litovsk. They are asking, when will there be an end to this unparalleled self-destruction of humanity provoked by the selfish and ambitious ruling classes of all countries. If ever the war was being fought in selfdefence, that has long ceased to be true for either side. When Great Britain seizes African colonies, Baghdad and Jerusalem, that is no longer a war of self-defence; when Germany occupies Serbia, Belgium, Poland, Lithuania, and Rumania, and seizes the Moon Islands, that too is not a war of defence. That is a struggle for the partition of the world. Now it is clear, clearer than ever before.
+
+We do not wish to take part any longer in this purely imperialist war, in which the claims of the propertied classes are being paid in blood. We are as implacably opposed to the imperialism of one camp as to the other, and we are no longer willing to shed the blood of our soldiers to defend the interests of one imperialist side against the other.
+
+While awaiting the time, which we hope is not far off, when the oppressed working classes of all countries will take power into their own hands, as the working people of Russia have done, we are withdrawing our army and our people from the war. Our peasant-soldiers must return to their land, so that they can this spring cultivate the soil which the revolution took from the landlords and gave to the peasants. Our workmen-soldiers must return to the workshops to produce there, not the weapons of destruction, but tools for creative labour, and together with the peasants build a new socialist economy.
+
+We are withdrawing from the war. We are informing all peoples and all Governments of this. We are issuing orders for the complete demobilization of our armies now confronting the German, Austro-Hungarian, Turkish, and Bulgarian troops. We expect and firmly believe that other peoples will soon follow our example. At the same time we declare that the terms of peace proposed by the Governments of Germany and Austria-Hungary are basically opposed to the interests of all peoples. These terms will be rejected by the working masses of all countries, including even the peoples of Austria-Hungary and Germany. The peoples of Poland, the Ukraine, Lithuania, Courland, and Estonia regard these conditions as a violation of their will, while for the Russian people themselves they represent a permanent threat. The popular masses of the entire world, guided by political consciousness or by moral instinct, reject these conditions, in expectation of the day when the working classes of all countries will establish their own standards of the peaceful co-existence and friendly co-operation of peoples. We refuse to give our sanction to the conditions which German and Austro-Hungarian imperialism writes with the sword on the body of living peoples. We cannot put the signature of the Russian revolution to conditions which carry with them oppression, misfortune, and misery to millions of human beings.
+
+The Governments of Germany and Austria-Hungary want to rule over lands and peoples by the right of armed conquest. Let them do their work openly. We cannot approve violence. We are withdrawing from the war but we are compelled to refuse to sign the treaty of peace.
+
+In connexion with this statement, I am handing to the joint delegations the following written and signed declaration:
+
+In the name of the Council of People's Commissars, the Government of the Russian Federal Republic informs the Governments and peoples of the countries at war with us, and of the Allied and neutral countries that, while refusing to sign an annexationist peace, Russia, for its part, declares the state of war with Germany, Austria-Hungary, Bulgaria, and Turkey at an end. At the same time, an order is being given for the complete demobilization of the Russian troops along the entire front.
+
+(Signed) L. TROTSKY, A. JOFFE, M. POKROVSKY, A. BITSENKO, V. KARELIN.
+
+I have little to add to what is said in our declaration. The Russian Government in this written declaration says that for its part, it declares the state of war at an end and that, in execution of this decision, it is issuing orders for the complete demobilization of the army on all external fronts. As to the practical difficulties arising from the situation thus created, I am unable to suggest any juridical formula to surmount them. The absence of a necessary juridical formula is not due to an accidental misunderstanding; the entire course of the peace negotiations showed that the divergence in our fundamental attitudes was too great to permit a formula defining the mutual relations of the Russian Government and the Central Powers. As far as I understood the Chairman of the German delegation, he seemed to admit, at least in theory, the practical possibility of finding the missing formula, counting in future on the help of guns and bayonets. I do not believe in that. However greatly the meaning of national defence was abused in the course of this war, and the idea of the defence of the fatherland violated, not one honest man in the whole world will say that in these circumstances the continuation of military operations by Germany and Austria-Hungary is necessary to their national defence. I am profoundly convinced that the German people and the peoples of Austria-Hungary will not allow it; and if our fundamental point of view becomes clear to all, then the practical difficulties will settle themselves one way or another. The document we have handed over leaves no doubt in regard to our intentions. We, on our side, declare the state of war at an end,, and are sending our soldiers back to peaceful labour.
+
+---

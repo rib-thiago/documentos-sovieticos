@@ -69,3 +69,10 @@ ASSISTENTE DO CHEFE DO EKO DA GUGB DO NKVD — DMITRIEV
 Confere: ilegível
 
 RGASPI, fundo 671, inventário 1, dossiê 120, folhas 7–10.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> O texto afirma um reencontro nos dias de Outubro de 1934 e, em seguida, que não houve mais encontros depois de agosto de 1934. Ambas as afirmações constam da publicação russa; a divergência não foi harmonizada.

@@ -1,0 +1,198 @@
+{
+  "history_id": "20261022103819534645-d2d4dc99f1c4",
+  "receipt": "docs/revisao-markdown/diagnostico-geral/onda6-protocolos-20261022-gravacao.json",
+  "files": [
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0105.result.json",
+      "sha256": "7b6c66b86f4f33bd34abe32896ca936e6b5728e178d95432448ad1077da33dac"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/7b6c66b86f4f33bd34abe32896ca936e6b5728e178d95432448ad1077da33dac-R2-secoes_listas-0105.result.json",
+      "sha256": "7b6c66b86f4f33bd34abe32896ca936e6b5728e178d95432448ad1077da33dac"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0106.result.json",
+      "sha256": "286109cdf9d8672afc3d538c2ab75394f347bf3f0b6268311c86f1a2d8d96ed2"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/286109cdf9d8672afc3d538c2ab75394f347bf3f0b6268311c86f1a2d8d96ed2-R2-secoes_listas-0106.result.json",
+      "sha256": "286109cdf9d8672afc3d538c2ab75394f347bf3f0b6268311c86f1a2d8d96ed2"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0107.result.json",
+      "sha256": "67fbd068657fbe604201f74ccd50d5175cb5b003e443da0b515120280cec6335"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/67fbd068657fbe604201f74ccd50d5175cb5b003e443da0b515120280cec6335-R2-secoes_listas-0107.result.json",
+      "sha256": "67fbd068657fbe604201f74ccd50d5175cb5b003e443da0b515120280cec6335"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0108.result.json",
+      "sha256": "9060b7fba82825b24e389e4b42fae74ce70623d97e0a27a7f0f4db655cec1fd9"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/9060b7fba82825b24e389e4b42fae74ce70623d97e0a27a7f0f4db655cec1fd9-R2-secoes_listas-0108.result.json",
+      "sha256": "9060b7fba82825b24e389e4b42fae74ce70623d97e0a27a7f0f4db655cec1fd9"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0109.result.json",
+      "sha256": "f0aa07d37b99ce868929c9ae16487b333d2e2c7b96342f6275eda9f6b490cde1"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/f0aa07d37b99ce868929c9ae16487b333d2e2c7b96342f6275eda9f6b490cde1-R2-secoes_listas-0109.result.json",
+      "sha256": "f0aa07d37b99ce868929c9ae16487b333d2e2c7b96342f6275eda9f6b490cde1"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0110.result.json",
+      "sha256": "84d6312cba1bbbb18891544333ca7ed03baf47fe31ccd2091aafe820d71aea7e"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/84d6312cba1bbbb18891544333ca7ed03baf47fe31ccd2091aafe820d71aea7e-R2-secoes_listas-0110.result.json",
+      "sha256": "84d6312cba1bbbb18891544333ca7ed03baf47fe31ccd2091aafe820d71aea7e"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0111.result.json",
+      "sha256": "9122819bf7192391d2141fb0f36cb0a5e017acd60214b5f84f775d51f5ea747a"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/9122819bf7192391d2141fb0f36cb0a5e017acd60214b5f84f775d51f5ea747a-R2-secoes_listas-0111.result.json",
+      "sha256": "9122819bf7192391d2141fb0f36cb0a5e017acd60214b5f84f775d51f5ea747a"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0112.result.json",
+      "sha256": "dc4a8b468ecf8be8eece95e1962f1825e0e867ae529f6fae5a202423ddd4b180"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/dc4a8b468ecf8be8eece95e1962f1825e0e867ae529f6fae5a202423ddd4b180-R2-secoes_listas-0112.result.json",
+      "sha256": "dc4a8b468ecf8be8eece95e1962f1825e0e867ae529f6fae5a202423ddd4b180"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0113.result.json",
+      "sha256": "ce7a7935091cd53b0c637903a308b9998d6a1a08eb979e878d41d0f2b43c0cdf"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/ce7a7935091cd53b0c637903a308b9998d6a1a08eb979e878d41d0f2b43c0cdf-R2-secoes_listas-0113.result.json",
+      "sha256": "ce7a7935091cd53b0c637903a308b9998d6a1a08eb979e878d41d0f2b43c0cdf"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0114.result.json",
+      "sha256": "5521bd139aa7deb7f0cda034e42e93a988d9b023f7b8a822708dbf2aa770b190"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/5521bd139aa7deb7f0cda034e42e93a988d9b023f7b8a822708dbf2aa770b190-R2-secoes_listas-0114.result.json",
+      "sha256": "5521bd139aa7deb7f0cda034e42e93a988d9b023f7b8a822708dbf2aa770b190"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0115.result.json",
+      "sha256": "090117312f34cf3561b398d3adbdcaa2ce01d20e75479aedf73292030c47502d"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/090117312f34cf3561b398d3adbdcaa2ce01d20e75479aedf73292030c47502d-R2-secoes_listas-0115.result.json",
+      "sha256": "090117312f34cf3561b398d3adbdcaa2ce01d20e75479aedf73292030c47502d"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0116.result.json",
+      "sha256": "3521f7b0e8cb1b695104dd290e818fcf9a33d5dccf9130980a8d86dda6954425"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/3521f7b0e8cb1b695104dd290e818fcf9a33d5dccf9130980a8d86dda6954425-R2-secoes_listas-0116.result.json",
+      "sha256": "3521f7b0e8cb1b695104dd290e818fcf9a33d5dccf9130980a8d86dda6954425"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0117.result.json",
+      "sha256": "b3e4b14e8eb78d63daafde5b91e65ee8c0f29fec3070bfed2e7c6bcd997744bb"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/b3e4b14e8eb78d63daafde5b91e65ee8c0f29fec3070bfed2e7c6bcd997744bb-R2-secoes_listas-0117.result.json",
+      "sha256": "b3e4b14e8eb78d63daafde5b91e65ee8c0f29fec3070bfed2e7c6bcd997744bb"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0119.result.json",
+      "sha256": "91a03da14b95493e0e70352a6004767520af3ecb54791c005795f89d4ea0f8c0"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/91a03da14b95493e0e70352a6004767520af3ecb54791c005795f89d4ea0f8c0-R2-secoes_listas-0119.result.json",
+      "sha256": "91a03da14b95493e0e70352a6004767520af3ecb54791c005795f89d4ea0f8c0"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0120.result.json",
+      "sha256": "b5f931f9a09ba4210c199859a9d2d3446a7124c27b2ce24e8d64de4c3299731e"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda6-protocolos-20261022/b5f931f9a09ba4210c199859a9d2d3446a7124c27b2ce24e8d64de4c3299731e-R2-secoes_listas-0120.result.json",
+      "sha256": "b5f931f9a09ba4210c199859a9d2d3446a7124c27b2ce24e8d64de4c3299731e"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0109/showtrials-7707.evidence.json",
+      "sha256": "531ff779516eb27b4331ec5a702cbabba46139a392959e97a9d7fcdfdc06ffbe"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0110/showtrials-7713.evidence.json",
+      "sha256": "c1dc7a0d12718ac72a120edcac344ddcb9896c95ab99aeb2357fecc486790454"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0110/showtrials-7724.evidence.json",
+      "sha256": "a85b23bc2c75e5e991926e1e3e2215eb1dc06225e6717a4f1d903e74500fcd62"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0108/showtrials-7644.evidence.json",
+      "sha256": "9cdd437013165d684d698f2a755d9cdf8608d66f8c351838f5a8a2979b2b24eb"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0107/showtrials-7630.evidence.json",
+      "sha256": "6b96c63d40f0d83e232cfacd05113314a9042791da5c10eb63087fa5a1f006c7"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0114/showtrials-7792.evidence.json",
+      "sha256": "df710bddcc5d179e239fcb7aff3c69b2f30192e1a9b1a693036f38dda37d6f42"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0119/showtrials-7952.evidence.json",
+      "sha256": "f6ed59464dd9056dc3318955986dfe1378f84521db4a45e79c5d97e111153bed"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0117/showtrials-7913.evidence.json",
+      "sha256": "0e39f26cee3d67772a14b083df1999eb61e8ba262074d49255b84e413a7bcca6"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0117/showtrials-7915.evidence.json",
+      "sha256": "b63d333c19c9af8543d3af56c3761586df2e73b6522f2717688f92616313d019"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0113/showtrials-7789.evidence.json",
+      "sha256": "c805ebda190b9c79548a1f9511a1bb33b52aa0a17b40a122d6a0e86c54e2bb3d"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0120/showtrials-8003.evidence.json",
+      "sha256": "aaf705a63b0c8f0186d4ba35a6d86a37f8411208cfccdc448ed21e1f878257b5"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0116/showtrials-7878.evidence.json",
+      "sha256": "5ba58eb4ef07e25afb61f7ff3419efe38a509e0528fa54814c94a4a4ac422dcc"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0111/showtrials-7726.evidence.json",
+      "sha256": "e1a6891c4e2058aeec59fe32cb0481f322a0a62d12e7c5ed763a8e0e8ff8b2e9"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0111/showtrials-7756.evidence.json",
+      "sha256": "0082d83e603bf3c805b0be9be6eca1737faed1cc53df72e5952f21c97e8745eb"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0105/showtrials-7625.evidence.json",
+      "sha256": "8365ed41252ec9d314a5038e7a10d288d5b8a3cdd138031f9ad87267b073e756"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0112/showtrials-7787.evidence.json",
+      "sha256": "274a8d4af8660566af5ee324ebc66144a4559d0f5fe5328e760c621aa966dae5"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0115/showtrials-7840.evidence.json",
+      "sha256": "3297cb8716da0e009b28bde0b53b37ee1deb0114ad4d1ce4d1b013d91d5d3386"
+    },
+    {
+      "file": "temporario/revisao-onda6/secoes/R2-secoes_listas-0106/showtrials-7627.evidence.json",
+      "sha256": "5454f450532550d4b1234efe13085b3042a4180c2c71135c214a516b553e3df7"
+    }
+  ]
+}

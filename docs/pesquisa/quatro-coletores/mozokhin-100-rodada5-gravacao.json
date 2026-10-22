@@ -1,0 +1,42 @@
+{
+  "saved": true,
+  "history_id": "20261021202407360792-27bacdd7df3d",
+  "document_id": null,
+  "revision": "d61d57744ce5ee02a79b591ed95139db057c66e4208f30c94ac9d2ed9e00d856",
+  "entity": {
+    "kind": "batch",
+    "id": "mozokhin-100-rodada5",
+    "document_ids": [
+      "mozokhin-2013-v1-100"
+    ],
+    "collection_ids": [
+      "sakharov-testamento-lenin-2003",
+      "transcricoes-arquivos-sovieticos",
+      "politburo-trotsky-mozokhin",
+      "brest-litovsk"
+    ]
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados.",
+  "approved_package_sha256": "dde91780d2fed6f4511386c89ccb8279b2f93feadc90848652eff5302daa9484",
+  "new_documents": 1,
+  "new_editions": 1,
+  "new_collections": 0,
+  "new_subcollections": 0,
+  "review_queue_added": 1,
+  "retained_units": 785,
+  "files_to_write": 7,
+  "document_ids": [
+    "mozokhin-2013-v1-100"
+  ],
+  "active_counts": {
+    "rebuilt": true,
+    "revision": "92321026e1346ef8e9374963a919376b1201ce3e9b114aab30344ca61c6fbfa0",
+    "documents": 2727,
+    "editions": 3859,
+    "collections": 20,
+    "subcollections": 61,
+    "memberships": 5542
+  },
+  "history_file": ".local/editorial/history/20261021202407360792-27bacdd7df3d.json.gz"
+}

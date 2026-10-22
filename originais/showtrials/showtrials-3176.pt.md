@@ -55,3 +55,10 @@ AGENTE OPERACIONAL DO SPO DA GUGB DO NKVD DA URSS — FEDOROV
 Confere:
 
 RGASPI, fundo 671, inventário 1, dossiê 120, folhas 205–206.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A resposta de Yuskin contém a construção “что убивать КИРОВА, надо убить СТАЛИНА” na publicação eletrônica russa. A dificuldade sintática foi preservada; não se introduziu uma negação ausente desse texto. É necessário cotejar fac-símile ou outro testemunho antes de emendar a frase.

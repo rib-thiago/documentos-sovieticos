@@ -1,0 +1,294 @@
+{
+  "batch_id": "onda1-militares-restantes-20261021",
+  "editions_changed": 0,
+  "issue_outcomes": 28,
+  "documents_metadata_changed": [
+    "military-nko35-protocol"
+  ],
+  "closed_issues": 27,
+  "queue_before_sha256": "9f5cfef2254ac629669eb5adaf4437a3f4b2d64f39ea1c9dd477d99024672419",
+  "queue_after_sha256": "579bed2618cd2eef0c75341fadb69e9618960d14e86695a37153dd40cac247cc",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R1-fontes_militares-0002",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0002/result.json",
+      "result_sha256": "0d469bf71c9ddbbd0f78d27e40f19ebe5b113ef938e98c0c396f402f759ecc97",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-kpk-kuibyshev-1935:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "military-kpk-kuibyshev-1936:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0003",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0003/result.json",
+      "result_sha256": "f0d83c691bf35dfe375b82694a063b2ca3599e33ba51776dc42b1c77d64a49db",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-08-am:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0004",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0004/result.json",
+      "result_sha256": "f71f519fe4559987909211d847818810275d5958f290ead26d730b1cbcd99f68",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-08-pm:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0005",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0005/result.json",
+      "result_sha256": "c83f6076d75212793dc66a432eedeaa515bc2bf3445c2164316a29ca5f0b5baf",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-09-am:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0006",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0006/result.json",
+      "result_sha256": "df7a2c5c0d2e089f6d2a42891865c11967be30f533140f0b440e440e3d117af7",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-09-pm:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0007",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0007/result.json",
+      "result_sha256": "699124545c70ddf5a3f083e2ce8d33b55a62caa4206d50c8a9ecb2cd05cda86c",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-10-am:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0008",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0008/result.json",
+      "result_sha256": "f0a6c87a5861a77ccfaf821517c4bc9a7ee1317c3eb51801924c00303368fc88",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-10-pm-aviation:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0009",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0009/result.json",
+      "result_sha256": "5f8a9aaa29166e6fac28266fccb0391c7030ab280c0f0d954db8b7650faa5a70",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-11-am-weapons:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0010",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0010/result.json",
+      "result_sha256": "cb402b56724357f645e0fe311546afd0d6ea3fd07635fd9a68adfcffcc023d15",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-11-pm-food:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "military-nko35-11-pm-uniform:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0011",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0011/result.json",
+      "result_sha256": "9a6a5eb7a7af54b97c97b4172c21e95c27d68151fafccdac34ee20797a4634ee",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-14-pm:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "military-nko35-order-food:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "military-nko35-order-weapons:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0012",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0012/result.json",
+      "result_sha256": "b43f68c5daa18e698627e3bcf3d91e30a6f26123d84a5a1ff73897965e4da535",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "military-nko35-protocol:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "military-tank-policy-1935:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "military-voroshilov-artillery-1936:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0013",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0013/result.json",
+      "result_sha256": "e8328b592829c63adfbd59b5d6ccbd44d9365094e4699611161ecf4c28f8711c",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-tukh-trial-1937-06-11:fonte_militar",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0014",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0014/result.json",
+      "result_sha256": "f83ab90d36f9819ffc5104d68f5b5c5b6f77e6e7a965fc1556e1ee71d31c174c",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-nko37-01-pm:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0015",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0015/result.json",
+      "result_sha256": "d435868157ede31a8c58f8e921a3f3ab1eb70b0e0be9cea25d038f004276e4ec",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-nko37-02-am:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0016",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0016/result.json",
+      "result_sha256": "3f3ccf7d0d53ce64d8b0356d8e57c1b32386ebf89d901e806986b59d3435ead4",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-nko37-02-pm:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0017",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0017/result.json",
+      "result_sha256": "37c039474931805e9c15f1873c5dd1ee03cb7373f7b61f459a49bd30d28983c4",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-nko37-03-am:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0018",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0018/result.json",
+      "result_sha256": "4070a6ccd39659f8e5aaacef204d468edd12dfb95efe5d6db64d5d33fd88922f",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-nko37-03-pm:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0019",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0019/result.json",
+      "result_sha256": "bee03a7f1587c82da686642f79745464674e476101d3d7e72e172b59ba63700b",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-nko37-04-am:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0020",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0020/result.json",
+      "result_sha256": "0fde1d93511727a4e7ad467652efc24232e6fa2062a8496ffd0e42273d633938",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-nko37-activ-09:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0021",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0021/result.json",
+      "result_sha256": "7a16d05160bb4288493ad6e98a96ec9f40c694a8d0450cd5cc862fb510e2b2f0",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-nko37-activ-10:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "tukhachevsky-tukh-1937-05-26:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-fontes_militares-0022",
+      "result_file": "temporario/revisao-onda1/militares-restantes/R1-fontes_militares-0022/result.json",
+      "result_sha256": "9f512df6b02d085a735ca8cb0a775d8f35dd4f3da458dc3ae67c18f5c325927b",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "tukhachevsky-tukh-1937-06-01:fonte_militar",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    }
+  ]
+}

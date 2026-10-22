@@ -31,3 +31,10 @@ RGASPI, fundo 671, inventário 1, dossiê 114, folhas 63–64.
 [1] No texto, erroneamente: “35”.
 
 [2i] Aqui e adiante no texto, erroneamente: “Каталынов” (Katalynov).
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A publicação eletrônica russa traz a chamada [2] e a definição [2i]. A divergência de numeração foi preservada; a nota da fonte informa a grafia “Каталынов”.

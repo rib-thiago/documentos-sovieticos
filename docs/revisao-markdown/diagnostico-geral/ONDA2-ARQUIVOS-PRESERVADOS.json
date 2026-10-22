@@ -1,0 +1,850 @@
+{
+  "artifacts": [
+    {
+      "original": "temporario/revisao-onda2/cotejo-leningrado.md",
+      "snapshot": "temporario/revisao-onda2/frozen/6d236cec8ad74e56a1c4cfca575f35e00e785ec3d6dd2a64102a6d75fff61afd-cotejo-leningrado.md",
+      "sha256": "6d236cec8ad74e56a1c4cfca575f35e00e785ec3d6dd2a64102a6d75fff61afd",
+      "bytes": 17783
+    },
+    {
+      "original": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0069.json",
+      "snapshot": "temporario/revisao-onda2/frozen/a19a35ca9653da6e1b096de8981b586e65a22dfd07593e70a908d17eeb7d2bc4-R2-secoes_listas-0069.json",
+      "sha256": "a19a35ca9653da6e1b096de8981b586e65a22dfd07593e70a908d17eeb7d2bc4",
+      "bytes": 1349
+    },
+    {
+      "original": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0086.json",
+      "snapshot": "temporario/revisao-onda2/frozen/1b0e6209bf33f71423cf7d4108d5d407256bd449c90797c922ed9c364fba9d7b-R2-secoes_listas-0086.json",
+      "sha256": "1b0e6209bf33f71423cf7d4108d5d407256bd449c90797c922ed9c364fba9d7b",
+      "bytes": 1349
+    },
+    {
+      "original": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0116.json",
+      "snapshot": "temporario/revisao-onda2/frozen/c444d8f8da35f14f3a4218592c3da2c6aceb6d01f6599dad6367b2183cfa20ea-R2-secoes_listas-0116.json",
+      "sha256": "c444d8f8da35f14f3a4218592c3da2c6aceb6d01f6599dad6367b2183cfa20ea",
+      "bytes": 1312
+    },
+    {
+      "original": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0117.json",
+      "snapshot": "temporario/revisao-onda2/frozen/71f85a81c47538b1ee63e75aed5c2bce27b670be3711b36eef62be6b6268cd45-R2-secoes_listas-0117.json",
+      "sha256": "71f85a81c47538b1ee63e75aed5c2bce27b670be3711b36eef62be6b6268cd45",
+      "bytes": 3626
+    },
+    {
+      "original": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0118.json",
+      "snapshot": "temporario/revisao-onda2/frozen/0576d212aa115a0688263a43eb8bfd7c8f36588c410102d7e6350e284c541fbe-R2-secoes_listas-0118.json",
+      "sha256": "0576d212aa115a0688263a43eb8bfd7c8f36588c410102d7e6350e284c541fbe",
+      "bytes": 4322
+    },
+    {
+      "original": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0119.json",
+      "snapshot": "temporario/revisao-onda2/frozen/07990e48bac4510d1d7b7226a18293ded2de799b02de9f1b5f2d8d7c3f7981c5-R2-secoes_listas-0119.json",
+      "sha256": "07990e48bac4510d1d7b7226a18293ded2de799b02de9f1b5f2d8d7c3f7981c5",
+      "bytes": 3349
+    },
+    {
+      "original": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0120.json",
+      "snapshot": "temporario/revisao-onda2/frozen/aee4da6858a296ebea73da16549b87c553be0b3ab1d6ad4f39829da469aff1bb-R2-secoes_listas-0120.json",
+      "sha256": "aee4da6858a296ebea73da16549b87c553be0b3ab1d6ad4f39829da469aff1bb",
+      "bytes": 2327
+    },
+    {
+      "original": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0003-result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/ce65abf866543460961d59f540754463f716d7f6a2aa07094c24183b4853c999-R2-divergencias_idiomas-0003-result.json",
+      "sha256": "ce65abf866543460961d59f540754463f716d7f6a2aa07094c24183b4853c999",
+      "bytes": 7413
+    },
+    {
+      "original": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0004-result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/e8ac8a784db663e5e96501033578fbf44448f2d41edda29aa284484fea235ea5-R2-divergencias_idiomas-0004-result.json",
+      "sha256": "e8ac8a784db663e5e96501033578fbf44448f2d41edda29aa284484fea235ea5",
+      "bytes": 1017
+    },
+    {
+      "original": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0005-result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/ce799dcfc194101826516391ceacda1e2c384afebefade3ad9230d828f2f93bb-R2-divergencias_idiomas-0005-result.json",
+      "sha256": "ce799dcfc194101826516391ceacda1e2c384afebefade3ad9230d828f2f93bb",
+      "bytes": 9328
+    },
+    {
+      "original": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0006-result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/e96ab9ac17291af91f2ef246e703d3d7496fdd54fe5a1aef532d11f77fc532f0-R2-divergencias_idiomas-0006-result.json",
+      "sha256": "e96ab9ac17291af91f2ef246e703d3d7496fdd54fe5a1aef532d11f77fc532f0",
+      "bytes": 2700
+    },
+    {
+      "original": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0007-result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/2e7d32eaf3401761073ec7cd79183a27980492dcfd0622355c37b0b1feac1774-R2-divergencias_idiomas-0007-result.json",
+      "sha256": "2e7d32eaf3401761073ec7cd79183a27980492dcfd0622355c37b0b1feac1774",
+      "bytes": 1902
+    },
+    {
+      "original": "temporario/revisao-onda2/ezhov/RESULTADO.md",
+      "snapshot": "temporario/revisao-onda2/frozen/e37549edb5cc518859498552d406aa666099d27fb9eba9485dc3671831845e58-RESULTADO.md",
+      "sha256": "e37549edb5cc518859498552d406aa666099d27fb9eba9485dc3671831845e58",
+      "bytes": 4015
+    },
+    {
+      "original": "temporario/revisao-onda2/ezhov/audit.py",
+      "snapshot": "temporario/revisao-onda2/frozen/4919ac2f749a58b244fb4c4b8e57ec4eaa888faf8ca66fe6dd37b44d624b4fe6-audit.py",
+      "sha256": "4919ac2f749a58b244fb4c4b8e57ec4eaa888faf8ca66fe6dd37b44d624b4fe6",
+      "bytes": 7253
+    },
+    {
+      "original": "temporario/revisao-onda2/ezhov/confessionezhov-ezh-013.en.candidate.md",
+      "snapshot": "temporario/revisao-onda2/frozen/d3eb7aa877205e83a82ea76c737e1fdff91c2d27f134ce57ebb86b06f583a3ce-confessionezhov-ezh-013.en.candidate.md",
+      "sha256": "d3eb7aa877205e83a82ea76c737e1fdff91c2d27f134ce57ebb86b06f583a3ce",
+      "bytes": 13734
+    },
+    {
+      "original": "temporario/revisao-onda2/ezhov/evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/168a4f5c7cb27c6bca3a7d13a14f608a37200cc552cfeba2dd1358b2a8a63f76-evidence.json",
+      "sha256": "168a4f5c7cb27c6bca3a7d13a14f608a37200cc552cfeba2dd1358b2a8a63f76",
+      "bytes": 200812
+    },
+    {
+      "original": "temporario/revisao-onda2/heading-inventory.json",
+      "snapshot": "temporario/revisao-onda2/frozen/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945-heading-inventory.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/R2-divergencias_idiomas-0008.json",
+      "snapshot": "temporario/revisao-onda2/frozen/bfb390f85ce66b545f218cae0565c32c163c06797e5120ecc95b5d073a013447-R2-divergencias_idiomas-0008.json",
+      "sha256": "bfb390f85ce66b545f218cae0565c32c163c06797e5120ecc95b5d073a013447",
+      "bytes": 43055
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/R2-divergencias_idiomas-0009.json",
+      "snapshot": "temporario/revisao-onda2/frozen/ee4c599bd38725cf3b52f9d950d86722af4082891785a15318059a2070cf8248-R2-divergencias_idiomas-0009.json",
+      "sha256": "ee4c599bd38725cf3b52f9d950d86722af4082891785a15318059a2070cf8248",
+      "bytes": 18239
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/prepare.py",
+      "snapshot": "temporario/revisao-onda2/frozen/505a7c6513bca5ffd85220cbf65338eada1d33e0765925aca3d17f54598748e7-prepare.py",
+      "sha256": "505a7c6513bca5ffd85220cbf65338eada1d33e0765925aca3d17f54598748e7",
+      "bytes": 19643
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2685.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/a33785fca075e7314ece302f1e588cbb603849f1fe63555b6fecfed0aa034f32-showtrials-2685.en.md",
+      "sha256": "a33785fca075e7314ece302f1e588cbb603849f1fe63555b6fecfed0aa034f32",
+      "bytes": 2123
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2685.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/03bb8aba4e900f8c93e0d23faaf515786e2d5e91f207c64bb497c9694a125fca-showtrials-2685.pt.md",
+      "sha256": "03bb8aba4e900f8c93e0d23faaf515786e2d5e91f207c64bb497c9694a125fca",
+      "bytes": 2201
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2685.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/49073295a28fc95d4196f5cafb66d2e0362b1a53332f457632219022666df623-showtrials-2685.ru.md",
+      "sha256": "49073295a28fc95d4196f5cafb66d2e0362b1a53332f457632219022666df623",
+      "bytes": 3565
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2717.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/73425810b7b293de931dfc193e8057a24a5438c76e5ed057e95e8613f27226a4-showtrials-2717.en.md",
+      "sha256": "73425810b7b293de931dfc193e8057a24a5438c76e5ed057e95e8613f27226a4",
+      "bytes": 7649
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2717.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/d413fb578bbf648f2bedae9323c588d58ce20dcc5ad9edc887c20c42891aadae-showtrials-2717.pt.md",
+      "sha256": "d413fb578bbf648f2bedae9323c588d58ce20dcc5ad9edc887c20c42891aadae",
+      "bytes": 8064
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2717.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/30f5d6948c109d46cb738797e5a71ba7e79d88315e0dda1a95904a035a4db13c-showtrials-2717.ru.md",
+      "sha256": "30f5d6948c109d46cb738797e5a71ba7e79d88315e0dda1a95904a035a4db13c",
+      "bytes": 13250
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2723.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/79f8244dd67c9704cb64272a0d09a0b85c8c67ab17b29465db133257c6ca35db-showtrials-2723.en.md",
+      "sha256": "79f8244dd67c9704cb64272a0d09a0b85c8c67ab17b29465db133257c6ca35db",
+      "bytes": 1288
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2723.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/655fdec6d322ccf43c7771398849128cc7c21126e0e6f2145b0455d9151f9da5-showtrials-2723.pt.md",
+      "sha256": "655fdec6d322ccf43c7771398849128cc7c21126e0e6f2145b0455d9151f9da5",
+      "bytes": 1302
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2723.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/a267279681b05b23a38d882986c2fcd052e980247f51593aa99f32f90ba5d553-showtrials-2723.ru.md",
+      "sha256": "a267279681b05b23a38d882986c2fcd052e980247f51593aa99f32f90ba5d553",
+      "bytes": 2159
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2782.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/ae72a2c54a5cdc35621b215383f19f9a9c9ab42445a7c5ef76f04ddb5dc45688-showtrials-2782.en.md",
+      "sha256": "ae72a2c54a5cdc35621b215383f19f9a9c9ab42445a7c5ef76f04ddb5dc45688",
+      "bytes": 3170
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2782.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/215d57c22e2ad4551b015b8b48f234ccda6fdbde1623d51e9d7c3dc09190dbcf-showtrials-2782.pt.md",
+      "sha256": "215d57c22e2ad4551b015b8b48f234ccda6fdbde1623d51e9d7c3dc09190dbcf",
+      "bytes": 3365
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-2782.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/08b9e0ea00fc1fdb0a4c26f1a8a1b0c9acf9d8f2d38cccab1d093e85271dbf30-showtrials-2782.ru.md",
+      "sha256": "08b9e0ea00fc1fdb0a4c26f1a8a1b0c9acf9d8f2d38cccab1d093e85271dbf30",
+      "bytes": 5367
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3020.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/96ac4835f08f463208abac671c0507816644790ff4db489503c2d97c04a8a202-showtrials-3020.en.md",
+      "sha256": "96ac4835f08f463208abac671c0507816644790ff4db489503c2d97c04a8a202",
+      "bytes": 2897
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3020.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/51bb878f338ef1f43e6d01e2ee921cae9a2943e79b5ca99e3218bb9d99dcfb15-showtrials-3020.pt.md",
+      "sha256": "51bb878f338ef1f43e6d01e2ee921cae9a2943e79b5ca99e3218bb9d99dcfb15",
+      "bytes": 3091
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3020.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/352f1368e9f9e5d5bce43ffb63e6e9723272c36f244314a05e7bbab8ad00dc5f-showtrials-3020.ru.md",
+      "sha256": "352f1368e9f9e5d5bce43ffb63e6e9723272c36f244314a05e7bbab8ad00dc5f",
+      "bytes": 5139
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3022.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/6e5e6b98b0e8ebe30fcb1e8ea17c9cc2d723cc71302bdddf4ecd3bbc5e847ce6-showtrials-3022.en.md",
+      "sha256": "6e5e6b98b0e8ebe30fcb1e8ea17c9cc2d723cc71302bdddf4ecd3bbc5e847ce6",
+      "bytes": 3649
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3022.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/4b65fe99ee69fa7f6e1eae474bd3a193a7571a3eeada5f26cb5d763f0edc341a-showtrials-3022.pt.md",
+      "sha256": "4b65fe99ee69fa7f6e1eae474bd3a193a7571a3eeada5f26cb5d763f0edc341a",
+      "bytes": 3756
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3022.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/17fb08179ca8201336472df61d5bd2ac9380bb131dc80624a731161d6b558a43-showtrials-3022.ru.md",
+      "sha256": "17fb08179ca8201336472df61d5bd2ac9380bb131dc80624a731161d6b558a43",
+      "bytes": 5833
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3041.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/fbf880f7993b94c60e5ee821661a7e1b59f72ded785d497804c6111271ac1e70-showtrials-3041.en.md",
+      "sha256": "fbf880f7993b94c60e5ee821661a7e1b59f72ded785d497804c6111271ac1e70",
+      "bytes": 8815
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3041.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/b681d02b728c4ea79e5b4f4b138c3e39608e630fde2987f62c60d6e8f40e842a-showtrials-3041.pt.md",
+      "sha256": "b681d02b728c4ea79e5b4f4b138c3e39608e630fde2987f62c60d6e8f40e842a",
+      "bytes": 9315
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3041.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/635892689a2d09dd2372ba18f35b821f3d99b79dbe70f94409f624690878d7d1-showtrials-3041.ru.md",
+      "sha256": "635892689a2d09dd2372ba18f35b821f3d99b79dbe70f94409f624690878d7d1",
+      "bytes": 16197
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3042.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/0b3561575164cd4e06016b37971f90713690f55fe77a2aa56d0e1e6614cab485-showtrials-3042.en.md",
+      "sha256": "0b3561575164cd4e06016b37971f90713690f55fe77a2aa56d0e1e6614cab485",
+      "bytes": 6002
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3042.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/3164a365c0efcb8480a76fd1a5cdfdf03050d674b428ca72c14a42b8a60195ea-showtrials-3042.pt.md",
+      "sha256": "3164a365c0efcb8480a76fd1a5cdfdf03050d674b428ca72c14a42b8a60195ea",
+      "bytes": 6449
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3042.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/ed4ff6a8baa72318da61fadcf807683e71b7b24f2c035662e39171b24c27ada4-showtrials-3042.ru.md",
+      "sha256": "ed4ff6a8baa72318da61fadcf807683e71b7b24f2c035662e39171b24c27ada4",
+      "bytes": 11048
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3043.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/d73e747afe33f3b6177ebde935284879c60e151b223f0bf2c860926c2befbe5a-showtrials-3043.en.md",
+      "sha256": "d73e747afe33f3b6177ebde935284879c60e151b223f0bf2c860926c2befbe5a",
+      "bytes": 1526
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3043.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/a6ee4a5a5fe14911a81c75198274e11699dd2135ab4ea39d0c00008a20e571ab-showtrials-3043.pt.md",
+      "sha256": "a6ee4a5a5fe14911a81c75198274e11699dd2135ab4ea39d0c00008a20e571ab",
+      "bytes": 1625
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3043.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/d16ef38df5d5da6285889c3e941022c939bdf411598c9a36bd97d06482a1ca69-showtrials-3043.ru.md",
+      "sha256": "d16ef38df5d5da6285889c3e941022c939bdf411598c9a36bd97d06482a1ca69",
+      "bytes": 2554
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3064.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/1500548d906d183c464555417f650c7ab39bd8a7820d6d2f802667fd13fefef8-showtrials-3064.en.md",
+      "sha256": "1500548d906d183c464555417f650c7ab39bd8a7820d6d2f802667fd13fefef8",
+      "bytes": 5448
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3064.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/cd341a9cf543b04d7bbc4763bcc7eb4a292338ffc5f4887be65a48195581f74b-showtrials-3064.pt.md",
+      "sha256": "cd341a9cf543b04d7bbc4763bcc7eb4a292338ffc5f4887be65a48195581f74b",
+      "bytes": 5731
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3064.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/4cec3d39fa5f484845684c4a8b8dda3aec951b9a66619a07c1fceaf92ec94565-showtrials-3064.ru.md",
+      "sha256": "4cec3d39fa5f484845684c4a8b8dda3aec951b9a66619a07c1fceaf92ec94565",
+      "bytes": 9173
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3112.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/331804b180737415196cb6275f914160cdf71b0e05b8352fe94540473a5052da-showtrials-3112.en.md",
+      "sha256": "331804b180737415196cb6275f914160cdf71b0e05b8352fe94540473a5052da",
+      "bytes": 3271
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3112.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/7cbb5244091ebe1301fcfbb339673fa95587b9d21a878995e6e68ba0ac47b64c-showtrials-3112.pt.md",
+      "sha256": "7cbb5244091ebe1301fcfbb339673fa95587b9d21a878995e6e68ba0ac47b64c",
+      "bytes": 3332
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3112.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/793b58ebab3b6ddbbe0e0fe70854c23acbb8dc3a5d50ab5c852fb885242fd316-showtrials-3112.ru.md",
+      "sha256": "793b58ebab3b6ddbbe0e0fe70854c23acbb8dc3a5d50ab5c852fb885242fd316",
+      "bytes": 5416
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3129.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/69ece9bafe550d32d8884495a252b20809da9de6a779a9c0b0a9b9142d87336c-showtrials-3129.en.md",
+      "sha256": "69ece9bafe550d32d8884495a252b20809da9de6a779a9c0b0a9b9142d87336c",
+      "bytes": 4598
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3129.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/7d72e1279919b704c087f44c129b990650a7dbfe95f3d4bd2fe00f3c9a5e214c-showtrials-3129.pt.md",
+      "sha256": "7d72e1279919b704c087f44c129b990650a7dbfe95f3d4bd2fe00f3c9a5e214c",
+      "bytes": 4634
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3129.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/1913dc8e5e125f43b77da28be956ea1f22ece6045290180c5dfedd970ad69011-showtrials-3129.ru.md",
+      "sha256": "1913dc8e5e125f43b77da28be956ea1f22ece6045290180c5dfedd970ad69011",
+      "bytes": 7669
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3131.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/e5dab6cb0e0d0466a1661f7dd4d3344c9ff8a1e893d65098763b61b18b495313-showtrials-3131.en.md",
+      "sha256": "e5dab6cb0e0d0466a1661f7dd4d3344c9ff8a1e893d65098763b61b18b495313",
+      "bytes": 5716
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3131.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/4a09f226115e9d46bce6e39aa20f5a8c025cc23b731d51bd778bb88b2bf945b6-showtrials-3131.pt.md",
+      "sha256": "4a09f226115e9d46bce6e39aa20f5a8c025cc23b731d51bd778bb88b2bf945b6",
+      "bytes": 5857
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3131.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/97d5544b21958425b11be4c3653c4471c9361f8e79ecec4b620e0f05c62c3b1e-showtrials-3131.ru.md",
+      "sha256": "97d5544b21958425b11be4c3653c4471c9361f8e79ecec4b620e0f05c62c3b1e",
+      "bytes": 9635
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3172.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/a76c25c7fcc062459c2d02918bab29c5768af93ed82e82dc5f3f322baac111d0-showtrials-3172.en.md",
+      "sha256": "a76c25c7fcc062459c2d02918bab29c5768af93ed82e82dc5f3f322baac111d0",
+      "bytes": 2962
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3172.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/21f55995b35f3fe1b9ac3b8967fea6aae182d8f3853d9a6ac019f65f1ae7780f-showtrials-3172.pt.md",
+      "sha256": "21f55995b35f3fe1b9ac3b8967fea6aae182d8f3853d9a6ac019f65f1ae7780f",
+      "bytes": 2942
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3172.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/061bf27e089cbd7356b02ca8ee1598fff917ffbec6cedd687ad55952ee3d9c4e-showtrials-3172.ru.md",
+      "sha256": "061bf27e089cbd7356b02ca8ee1598fff917ffbec6cedd687ad55952ee3d9c4e",
+      "bytes": 4663
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3175.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/3fbc695a359b8ddb9879c3f72758f0012f1928bb988b5afd49280648dd782c76-showtrials-3175.en.md",
+      "sha256": "3fbc695a359b8ddb9879c3f72758f0012f1928bb988b5afd49280648dd782c76",
+      "bytes": 4187
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3175.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/2c4b96b330db0a71304af9b35c4356d519d67fd0992459599aff9caedee383b2-showtrials-3175.pt.md",
+      "sha256": "2c4b96b330db0a71304af9b35c4356d519d67fd0992459599aff9caedee383b2",
+      "bytes": 3985
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3175.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/283c4f040d7bcb12e4fb75223eefc2cb31ecaceb600a33e8aa0db021d2cf4f99-showtrials-3175.ru.md",
+      "sha256": "283c4f040d7bcb12e4fb75223eefc2cb31ecaceb600a33e8aa0db021d2cf4f99",
+      "bytes": 6677
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3176.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/05bc69d5934e96565bbe04b69393031df11f85c2d127e47623d654330eac6472-showtrials-3176.en.md",
+      "sha256": "05bc69d5934e96565bbe04b69393031df11f85c2d127e47623d654330eac6472",
+      "bytes": 3007
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3176.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/8812eec8c67924ca11eab454a17aa896ab58ee4493a084bbf2e0f0154970f4f4-showtrials-3176.pt.md",
+      "sha256": "8812eec8c67924ca11eab454a17aa896ab58ee4493a084bbf2e0f0154970f4f4",
+      "bytes": 2947
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3176.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/c3b8e395b1fd8a2cada121fd9d2ecbc99f1aa456e4b530840543baad88da8860-showtrials-3176.ru.md",
+      "sha256": "c3b8e395b1fd8a2cada121fd9d2ecbc99f1aa456e4b530840543baad88da8860",
+      "bytes": 4874
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3228.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/d1c6ccc3d6cab0c0454befd31d08bc7a817a6f84868120fa5eb6d7459c44b346-showtrials-3228.en.md",
+      "sha256": "d1c6ccc3d6cab0c0454befd31d08bc7a817a6f84868120fa5eb6d7459c44b346",
+      "bytes": 1998
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3228.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/f8d40e8687376df3987ce7d118f1dfed2801c62334da4dfcf0cf94efd64f2e98-showtrials-3228.pt.md",
+      "sha256": "f8d40e8687376df3987ce7d118f1dfed2801c62334da4dfcf0cf94efd64f2e98",
+      "bytes": 1944
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-candidatos/showtrials-3228.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/ad833f55fd9a0ba3e5dc21a88e825b20502e67642df07a4cb068c4a9af5aa9dd-showtrials-3228.ru.md",
+      "sha256": "ad833f55fd9a0ba3e5dc21a88e825b20502e67642df07a4cb068c4a9af5aa9dd",
+      "bytes": 3167
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-corpus.txt",
+      "snapshot": "temporario/revisao-onda2/frozen/c78485521fbed6b5f3e1136cde38e8e68095a5c25163e35275dedbf9d8fa6312-leningrado-corpus.txt",
+      "sha256": "c78485521fbed6b5f3e1136cde38e8e68095a5c25163e35275dedbf9d8fa6312",
+      "bytes": 345636
+    },
+    {
+      "original": "temporario/revisao-onda2/leningrado-evidencias.json",
+      "snapshot": "temporario/revisao-onda2/frozen/1ba6e51955fda24ab96e451337f84f60f9cc4db5a140aa86adcde8269a1f32ae-leningrado-evidencias.json",
+      "sha256": "1ba6e51955fda24ab96e451337f84f60f9cc4db5a140aa86adcde8269a1f32ae",
+      "bytes": 13245
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/R2-secoes_listas-0116.result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/30520e228586bbca43cfd918070082cd995e612782ab810745f928219bc0305a-R2-secoes_listas-0116.result.json",
+      "sha256": "30520e228586bbca43cfd918070082cd995e612782ab810745f928219bc0305a",
+      "bytes": 1107
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/R2-secoes_listas-0117.result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/a301eb6b92f56975e4a1c41c4fa97fb44f282272c8c3327ed92566e870d70ca8-R2-secoes_listas-0117.result.json",
+      "sha256": "a301eb6b92f56975e4a1c41c4fa97fb44f282272c8c3327ed92566e870d70ca8",
+      "bytes": 1108
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/R2-secoes_listas-0118.result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/1835c0b22e502d703978ee73169ce99422cea64933fcb0c708b72bae76c98fd9-R2-secoes_listas-0118.result.json",
+      "sha256": "1835c0b22e502d703978ee73169ce99422cea64933fcb0c708b72bae76c98fd9",
+      "bytes": 4117
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/R2-secoes_listas-0119.result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/edec4fed71f023c73890d40fef2920ee517563df7935b3a1b20ce256bad850ae-R2-secoes_listas-0119.result.json",
+      "sha256": "edec4fed71f023c73890d40fef2920ee517563df7935b3a1b20ce256bad850ae",
+      "bytes": 3144
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/R2-secoes_listas-0120.result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/12e6a67f69efab9deafd6c44bd2ed26f2d563a03635efda47ce10b8ff92d142b-R2-secoes_listas-0120.result.json",
+      "sha256": "12e6a67f69efab9deafd6c44bd2ed26f2d563a03635efda47ce10b8ff92d142b",
+      "bytes": 2122
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/README.md",
+      "snapshot": "temporario/revisao-onda2/frozen/e4f2aeeb3b4bd032b7c1955e803fe17e500041b814687ee66b9f63b02688254a-README.md",
+      "sha256": "e4f2aeeb3b4bd032b7c1955e803fe17e500041b814687ee66b9f63b02688254a",
+      "bytes": 2263
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/SUMMARY.json",
+      "snapshot": "temporario/revisao-onda2/frozen/1e14eb2506271d590088512ffac3102913361dc9fb589912cd880f43d4815abe-SUMMARY.json",
+      "sha256": "1e14eb2506271d590088512ffac3102913361dc9fb589912cd880f43d4815abe",
+      "bytes": 4838
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/inspect_lists.py",
+      "snapshot": "temporario/revisao-onda2/frozen/33549596fbd66bdc86c185e688fe6adac7748460090fd5f68d6a78a312de4c62-inspect_lists.py",
+      "sha256": "33549596fbd66bdc86c185e688fe6adac7748460090fd5f68d6a78a312de4c62",
+      "bytes": 857
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/prepare_lists.py",
+      "snapshot": "temporario/revisao-onda2/frozen/be7a2a952cbea8f02292bebac9d61f18a6b3bff6355701e5daa8bee2d4ff37c9-prepare_lists.py",
+      "sha256": "be7a2a952cbea8f02292bebac9d61f18a6b3bff6355701e5daa8bee2d4ff37c9",
+      "bytes": 7075
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-10768.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/e49003aeb70352f2bcd310ca3932bcf1a2b00a2037359c7ce7e8958e9bb6cda6-showtrials-10768.diff",
+      "sha256": "e49003aeb70352f2bcd310ca3932bcf1a2b00a2037359c7ce7e8958e9bb6cda6",
+      "bytes": 1117
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-10768.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/2f7b618e98a42e5979bfc7ce400b77cfd9a58341fccdc9a49b66ac5290e16c54-showtrials-10768.evidence.json",
+      "sha256": "2f7b618e98a42e5979bfc7ce400b77cfd9a58341fccdc9a49b66ac5290e16c54",
+      "bytes": 5771
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-10768.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/54728308a94055cc97e7587828329411882ca4b333920bcbb65ae169a1764fe0-showtrials-10768.ru.md",
+      "sha256": "54728308a94055cc97e7587828329411882ca4b333920bcbb65ae169a1764fe0",
+      "bytes": 1740
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-10801.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/9e4b322ffc35bc5d4e9572b6ba51a3158766faca56985ad395df7bf64746c159-showtrials-10801.diff",
+      "sha256": "9e4b322ffc35bc5d4e9572b6ba51a3158766faca56985ad395df7bf64746c159",
+      "bytes": 9910
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-10801.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/75503577aa6c835f7186e132508842229ef26acddcf04d2fb62618151e4aa7b8-showtrials-10801.evidence.json",
+      "sha256": "75503577aa6c835f7186e132508842229ef26acddcf04d2fb62618151e4aa7b8",
+      "bytes": 17487
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-10801.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/b874182aaed4dd3f9b40f09a3fdde16c6edeac918f8f72b09ab2c10454d017f6-showtrials-10801.ru.md",
+      "sha256": "b874182aaed4dd3f9b40f09a3fdde16c6edeac918f8f72b09ab2c10454d017f6",
+      "bytes": 9912
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-3246.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/9d4d4b04ae098a08f34b89bd1c3e09e8a5bd23d8dd71bb530a7e07b7795a7000-showtrials-3246.diff",
+      "sha256": "9d4d4b04ae098a08f34b89bd1c3e09e8a5bd23d8dd71bb530a7e07b7795a7000",
+      "bytes": 2854
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-3246.en.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/e6a76d88c3275e539acae6735f74502b8083aeb20787c1703b75d50da33e8988-showtrials-3246.en.diff",
+      "sha256": "e6a76d88c3275e539acae6735f74502b8083aeb20787c1703b75d50da33e8988",
+      "bytes": 1738
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-3246.en.md",
+      "snapshot": "temporario/revisao-onda2/frozen/832c69c9d9de97b108eb7b6b1282ec8c89b679382850fd0d64c67a4d9593e156-showtrials-3246.en.md",
+      "sha256": "832c69c9d9de97b108eb7b6b1282ec8c89b679382850fd0d64c67a4d9593e156",
+      "bytes": 3376
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-3246.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/afe0321a7baccff35a00da92f692d71f086720f3162e522ae44085cfa0bb077b-showtrials-3246.evidence.json",
+      "sha256": "afe0321a7baccff35a00da92f692d71f086720f3162e522ae44085cfa0bb077b",
+      "bytes": 11018
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-3246.pt.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/d35fd9b8651d403ef68b8154db9d5e3ba1f945d94efb04e2cde4f310d3dccb58-showtrials-3246.pt.diff",
+      "sha256": "d35fd9b8651d403ef68b8154db9d5e3ba1f945d94efb04e2cde4f310d3dccb58",
+      "bytes": 1856
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-3246.pt.md",
+      "snapshot": "temporario/revisao-onda2/frozen/fa44b2101478e19303f4c4ed39096211877c41b723b9a40b753708697c5e4d31-showtrials-3246.pt.md",
+      "sha256": "fa44b2101478e19303f4c4ed39096211877c41b723b9a40b753708697c5e4d31",
+      "bytes": 3493
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-3246.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/6862ef4ec40eb0f9b3139be135b9b96b18fe58066680bdc0beecc4b6206fd47c-showtrials-3246.ru.md",
+      "sha256": "6862ef4ec40eb0f9b3139be135b9b96b18fe58066680bdc0beecc4b6206fd47c",
+      "bytes": 5594
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-5612.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/7964f51b3503a63e1fc9f95d3adfcfcd92ae9ff4fda64663d951de8a39f18e26-showtrials-5612.diff",
+      "sha256": "7964f51b3503a63e1fc9f95d3adfcfcd92ae9ff4fda64663d951de8a39f18e26",
+      "bytes": 3143
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-5612.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/d879db31913d29faab318b5ee3da56e7890b8dbef113eaa9c5c1bf0b358c0c93-showtrials-5612.evidence.json",
+      "sha256": "d879db31913d29faab318b5ee3da56e7890b8dbef113eaa9c5c1bf0b358c0c93",
+      "bytes": 8467
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-5612.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/23ae578232d41194c53d381fd0c2b5444dbf97560597e09b839c66a4e73f876f-showtrials-5612.ru.md",
+      "sha256": "23ae578232d41194c53d381fd0c2b5444dbf97560597e09b839c66a4e73f876f",
+      "bytes": 3081
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-5773.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/52cbaaa2a272adf72dca877cf662fac7b7b241cb0acc708f9607df138dd8eb62-showtrials-5773.diff",
+      "sha256": "52cbaaa2a272adf72dca877cf662fac7b7b241cb0acc708f9607df138dd8eb62",
+      "bytes": 781
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-5773.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/a8fc1d599630dc3e551188735407df5c65512062080992d8597ea3dd9f7742a0-showtrials-5773.evidence.json",
+      "sha256": "a8fc1d599630dc3e551188735407df5c65512062080992d8597ea3dd9f7742a0",
+      "bytes": 2799
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-5773.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/a48080633cedc50e72ed911b834410c0961da4c04f88f901139e3edef9f2eb59-showtrials-5773.ru.md",
+      "sha256": "a48080633cedc50e72ed911b834410c0961da4c04f88f901139e3edef9f2eb59",
+      "bytes": 29482
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-5786.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/6ebafd27874b08e26c8a4c1a218d30ce026fb9d4ef72939fb30d172e8e3ff1b3-showtrials-5786.diff",
+      "sha256": "6ebafd27874b08e26c8a4c1a218d30ce026fb9d4ef72939fb30d172e8e3ff1b3",
+      "bytes": 1120
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-5786.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/31f8a98a68704f32053b7a441eac7059da11a3e4f041fd8f082595f940d78d78-showtrials-5786.evidence.json",
+      "sha256": "31f8a98a68704f32053b7a441eac7059da11a3e4f041fd8f082595f940d78d78",
+      "bytes": 4298
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-5786.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/50b15f5420f3b4e19b0a35fd5ba43dab68c4fae4c5cdd2c75442cbbbdf2c6aae-showtrials-5786.ru.md",
+      "sha256": "50b15f5420f3b4e19b0a35fd5ba43dab68c4fae4c5cdd2c75442cbbbdf2c6aae",
+      "bytes": 10699
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-6431.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/a89062f71fa27b2df043f96894bc3b9a9d1132ecd2aca78633660475fde34b52-showtrials-6431.diff",
+      "sha256": "a89062f71fa27b2df043f96894bc3b9a9d1132ecd2aca78633660475fde34b52",
+      "bytes": 418
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-6431.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/fdc71ad81336e9cbbc149d9ec93a6367601a6d422ad1730cc003c861bca7bb6a-showtrials-6431.evidence.json",
+      "sha256": "fdc71ad81336e9cbbc149d9ec93a6367601a6d422ad1730cc003c861bca7bb6a",
+      "bytes": 1891
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-6431.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/5f27cd74260b7c72421816b149c3b09249e91df0186ae19dc7c96a316696a90f-showtrials-6431.ru.md",
+      "sha256": "5f27cd74260b7c72421816b149c3b09249e91df0186ae19dc7c96a316696a90f",
+      "bytes": 26108
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-6711.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/7321e8983176f0f5d880ad64e4046ee143675cd17d6239a5c35065dd27376aa1-showtrials-6711.diff",
+      "sha256": "7321e8983176f0f5d880ad64e4046ee143675cd17d6239a5c35065dd27376aa1",
+      "bytes": 5643
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-6711.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/d8db7c210b2e4c2ab9dab82a71660fadffa2cfd8b2782503fb8f907cacddb0e1-showtrials-6711.evidence.json",
+      "sha256": "d8db7c210b2e4c2ab9dab82a71660fadffa2cfd8b2782503fb8f907cacddb0e1",
+      "bytes": 9646
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-6711.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/20c5acf1b55bcc110f30f526b3280389effe89c246cd744e1d294d40b8f45592-showtrials-6711.ru.md",
+      "sha256": "20c5acf1b55bcc110f30f526b3280389effe89c246cd744e1d294d40b8f45592",
+      "bytes": 13046
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-7196.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/b74410f76e2ba2ee78270b4af38b1a01d6b99208e6a39100e8435a97f2ae165f-showtrials-7196.diff",
+      "sha256": "b74410f76e2ba2ee78270b4af38b1a01d6b99208e6a39100e8435a97f2ae165f",
+      "bytes": 1039
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-7196.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/e2b3d5294b83529c158deaba2f9d7f28092cbdd5fb5e65a258cb9e553e6f4c4b-showtrials-7196.evidence.json",
+      "sha256": "e2b3d5294b83529c158deaba2f9d7f28092cbdd5fb5e65a258cb9e553e6f4c4b",
+      "bytes": 2285
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-7196.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/6fa09c980264576b15758f1aa5224921b2d8c058e4b2ae747e58c3f594839f79-showtrials-7196.ru.md",
+      "sha256": "6fa09c980264576b15758f1aa5224921b2d8c058e4b2ae747e58c3f594839f79",
+      "bytes": 10920
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-7214.diff",
+      "snapshot": "temporario/revisao-onda2/frozen/cbb1ffb4735e8dd02ad009535ae52b3786281d997773a57d9c6e9376ccb0526c-showtrials-7214.diff",
+      "sha256": "cbb1ffb4735e8dd02ad009535ae52b3786281d997773a57d9c6e9376ccb0526c",
+      "bytes": 2316
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-7214.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/dd1d9c7de659b4044c92d8f9c4a05102c0087c9b55d2be2ed1895d31e5f8463f-showtrials-7214.evidence.json",
+      "sha256": "dd1d9c7de659b4044c92d8f9c4a05102c0087c9b55d2be2ed1895d31e5f8463f",
+      "bytes": 5908
+    },
+    {
+      "original": "temporario/revisao-onda2/listas/showtrials-7214.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/3599583828489bcb03660d129e56aaf94fa98b0a088c7270c92772183445dc37-showtrials-7214.ru.md",
+      "sha256": "3599583828489bcb03660d129e56aaf94fa98b0a088c7270c92772183445dc37",
+      "bytes": 88341
+    },
+    {
+      "original": "temporario/revisao-onda2/secoes1790/R2-secoes_listas-0011-result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/cd08cbb82d96172faf1ff1a02069c953f33d28bf31bed421ee7a5e562c12badd-R2-secoes_listas-0011-result.json",
+      "sha256": "cd08cbb82d96172faf1ff1a02069c953f33d28bf31bed421ee7a5e562c12badd",
+      "bytes": 1445
+    },
+    {
+      "original": "temporario/revisao-onda2/secoes1790/evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/6860c7aba2508cd61e8e999acb824f785b3816c4b4b2488ca6aff860bb9694dd-evidence.json",
+      "sha256": "6860c7aba2508cd61e8e999acb824f785b3816c4b4b2488ca6aff860bb9694dd",
+      "bytes": 6521
+    },
+    {
+      "original": "temporario/revisao-onda2/secoes1790/prepare.py",
+      "snapshot": "temporario/revisao-onda2/frozen/3352cf40b28ee5bc0e837c12762400f7841bfa4f58728343ab6a378471b54517-prepare.py",
+      "sha256": "3352cf40b28ee5bc0e837c12762400f7841bfa4f58728343ab6a378471b54517",
+      "bytes": 4800
+    },
+    {
+      "original": "temporario/revisao-onda2/secoes1790/showtrials-1790.ru.candidate.md",
+      "snapshot": "temporario/revisao-onda2/frozen/ba05b9094ebf54548bb4837bfb15930bb5e156d27224f37463e5f01883ce3c82-showtrials-1790.ru.candidate.md",
+      "sha256": "ba05b9094ebf54548bb4837bfb15930bb5e156d27224f37463e5f01883ce3c82",
+      "bytes": 286413
+    },
+    {
+      "original": "temporario/revisao-onda2/secoes4828/evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/94432ed0fbfbd4faacaee65a4a95e252badf3bad5cde0dbca2df6c9d5b0b2e17-evidence.json",
+      "sha256": "94432ed0fbfbd4faacaee65a4a95e252badf3bad5cde0dbca2df6c9d5b0b2e17",
+      "bytes": 1392
+    },
+    {
+      "original": "temporario/revisao-onda2/secoes4828/result.json",
+      "snapshot": "temporario/revisao-onda2/frozen/c35df66bf74734bd3298fb137990c12aa7a98a6b5cbdc6a491b4deeb6c72a407-result.json",
+      "sha256": "c35df66bf74734bd3298fb137990c12aa7a98a6b5cbdc6a491b4deeb6c72a407",
+      "bytes": 1241
+    },
+    {
+      "original": "temporario/revisao-onda2/secoes4828/showtrials-4828.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/eec69df11b060c7fd433df74240d7091eacef229c82e6f46c2c31ab2ce767af5-showtrials-4828.ru.md",
+      "sha256": "eec69df11b060c7fd433df74240d7091eacef229c82e6f46c2c31ab2ce767af5",
+      "bytes": 5160
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/R2-secoes_listas-0069.json",
+      "snapshot": "temporario/revisao-onda2/frozen/af02c4aff400bc0bc316c3076b1b5f6ed6fa26ec0731728454112f3a30d85e79-R2-secoes_listas-0069.json",
+      "sha256": "af02c4aff400bc0bc316c3076b1b5f6ed6fa26ec0731728454112f3a30d85e79",
+      "bytes": 1150
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/R2-secoes_listas-0086.json",
+      "snapshot": "temporario/revisao-onda2/frozen/41e1373528174e2d1814bd55ae77a9a6b91be7a42d914ec348d34a8b971aa9e4-R2-secoes_listas-0086.json",
+      "sha256": "41e1373528174e2d1814bd55ae77a9a6b91be7a42d914ec348d34a8b971aa9e4",
+      "bytes": 1150
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/R2-secoes_listas-0117.json",
+      "snapshot": "temporario/revisao-onda2/frozen/cb4b3f1b8c605fdc5bc8a45d3e6713373b8efce94f3f1100b0140bf0418eeafa-R2-secoes_listas-0117.json",
+      "sha256": "cb4b3f1b8c605fdc5bc8a45d3e6713373b8efce94f3f1100b0140bf0418eeafa",
+      "bytes": 2220
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/RELATORIO.md",
+      "snapshot": "temporario/revisao-onda2/frozen/01596f933ccca7c7a29f63914f900fcd8cdd28d8d17c0a68d37309576f6db655-RELATORIO.md",
+      "sha256": "01596f933ccca7c7a29f63914f900fcd8cdd28d8d17c0a68d37309576f6db655",
+      "bytes": 2550
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/prepare.py",
+      "snapshot": "temporario/revisao-onda2/frozen/d272b3deecbe0be45d9cbedb9f64d7cd488c95e02c5c0e7ba41389139e578f15-prepare.py",
+      "sha256": "d272b3deecbe0be45d9cbedb9f64d7cd488c95e02c5c0e7ba41389139e578f15",
+      "bytes": 6536
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-1611.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/25135f286d43edce606ae00977de6f3b59c59ff3da37395552e584ee176f3861-showtrials-1611.evidence.json",
+      "sha256": "25135f286d43edce606ae00977de6f3b59c59ff3da37395552e584ee176f3861",
+      "bytes": 3020
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-1611.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/fe1a51259f1c5a8f23e2a9e3ad0da565e4dfb497602142ac1824b2bc964bfd0f-showtrials-1611.ru.md",
+      "sha256": "fe1a51259f1c5a8f23e2a9e3ad0da565e4dfb497602142ac1824b2bc964bfd0f",
+      "bytes": 19496
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-1611.source.html",
+      "snapshot": "temporario/revisao-onda2/frozen/dc2ab21232c6b879a3172d52c53ba4e9070c1318741310a2ab33e9e504eff701-showtrials-1611.source.html",
+      "sha256": "dc2ab21232c6b879a3172d52c53ba4e9070c1318741310a2ab33e9e504eff701",
+      "bytes": 21058
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-2484.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/96bae398c328e3b6355fb7cf975bf8e8645257406ca5bee842e4dad22857da13-showtrials-2484.evidence.json",
+      "sha256": "96bae398c328e3b6355fb7cf975bf8e8645257406ca5bee842e4dad22857da13",
+      "bytes": 5227
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-2484.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/94f7cb8e83674c4ec704146d3e92288088e065d8ddc92b7948f803da802b75dd-showtrials-2484.ru.md",
+      "sha256": "94f7cb8e83674c4ec704146d3e92288088e065d8ddc92b7948f803da802b75dd",
+      "bytes": 21451
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-2484.source.html",
+      "snapshot": "temporario/revisao-onda2/frozen/e4e4404b3f2702b735e6926de5f5cd79d13743d046167c7885e57c65f9e423ed-showtrials-2484.source.html",
+      "sha256": "e4e4404b3f2702b735e6926de5f5cd79d13743d046167c7885e57c65f9e423ed",
+      "bytes": 35173
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-5793.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/39eb4359113ddca2958f1c2c83e029c1f6da229838e56d5ae39f88781fea0fad-showtrials-5793.evidence.json",
+      "sha256": "39eb4359113ddca2958f1c2c83e029c1f6da229838e56d5ae39f88781fea0fad",
+      "bytes": 1724
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-5793.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/da01f867089c182e1002b52d3d0cf2e43b708ee7cf04c77ca154579580783418-showtrials-5793.ru.md",
+      "sha256": "da01f867089c182e1002b52d3d0cf2e43b708ee7cf04c77ca154579580783418",
+      "bytes": 60267
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-5793.source.html",
+      "snapshot": "temporario/revisao-onda2/frozen/e1831dc8584eaea47f97f72bb68fe6977b380546361a890813a1ad8a154c8d24-showtrials-5793.source.html",
+      "sha256": "e1831dc8584eaea47f97f72bb68fe6977b380546361a890813a1ad8a154c8d24",
+      "bytes": 66104
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-6958.evidence.json",
+      "snapshot": "temporario/revisao-onda2/frozen/5d688d1e0788db5949f6471acd62e85826dd13bdb58846a5925f1699f7871264-showtrials-6958.evidence.json",
+      "sha256": "5d688d1e0788db5949f6471acd62e85826dd13bdb58846a5925f1699f7871264",
+      "bytes": 1806
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-6958.ru.md",
+      "snapshot": "temporario/revisao-onda2/frozen/c68882ef4f5c3994f7ab1abc376b3f6c4a4a9d0f26954560401b748b041fe1a1-showtrials-6958.ru.md",
+      "sha256": "c68882ef4f5c3994f7ab1abc376b3f6c4a4a9d0f26954560401b748b041fe1a1",
+      "bytes": 45990
+    },
+    {
+      "original": "temporario/revisao-onda2/titulos/showtrials-6958.source.html",
+      "snapshot": "temporario/revisao-onda2/frozen/bd5e0ad829d465c9e5628da2639e41074816eba0087b91f2c736ed84150e053e-showtrials-6958.source.html",
+      "sha256": "bd5e0ad829d465c9e5628da2639e41074816eba0087b91f2c736ed84150e053e",
+      "bytes": 55465
+    }
+  ]
+}

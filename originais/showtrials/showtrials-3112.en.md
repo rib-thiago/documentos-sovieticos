@@ -35,3 +35,10 @@ Annotation [at the top of the document, the inscription: to Comrade Dmitriev. Si
 RGASPI, fond 671, inventory 1, file 120, leaves 64–65.
 
 Published in: Roman Nikitin. Kirov First, Stalin Second. The Case of Leonid Nikolaev's Relatives. Documents and Studies. Moscow: ROSSPEN, 2019, pp. 116–117.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The sentence containing “несмотря на то что постепенно” is syntactically disrupted in the Russian electronic publication. The translation preserves this difficulty without conjecturally completing the statement. Comparison with a facsimile or another textual witness remains necessary.

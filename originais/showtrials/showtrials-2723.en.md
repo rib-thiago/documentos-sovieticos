@@ -27,3 +27,10 @@ HEAD OF THE 1ST SECTION, SPO, GUGB — PETROVSKY
 Certified true:
 
 RGASPI, fond 671, inventory 1, file 114, fol. 113.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> This record identifies Antonov as Nikolai Vasilievich; document showtrials-2782 uses Nikolai Semenovich. The forms in the Russian publication are preserved. Comparison of the electronic texts does not establish whether they refer to the same person; identification remains pending.

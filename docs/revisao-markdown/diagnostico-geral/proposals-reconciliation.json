@@ -1,0 +1,110 @@
+{
+  "queue_sha256": "b0e862c955343369e02806a3fdc956159864655b455012830d4ea00efa9bd6ce",
+  "proposed_closures": 0,
+  "proposals": [
+    {
+      "chave": "mozokhin-2013-v1-054:conferencia_notas_20261021",
+      "status_proposto": "pendente",
+      "prioridade_proposta": "media",
+      "categoria": "resolved_component_preventive_remaining",
+      "sha256": "25dc7665784b985a42814fb61b75ee9e0cf78482c1cdaad753f8cba39ca849a5",
+      "candidate_sha256": "25dc7665784b985a42814fb61b75ee9e0cf78482c1cdaad753f8cba39ca849a5",
+      "arquivo": "originais/coletores/mozokhin/mozokhin-2013-v1-054.ru.md",
+      "dificuldade_encontrada_proposta": "Correção de atribuição de notas já aplicada e confirmada pelo hash da edição corrigida; resta conferência preventiva da versão atual. Não representa erro de notas ainda aberto.",
+      "acao_sugerida_proposta": "Conferir pontualmente as notas na versão corrigida e o histórico. Manter a revisão integral dos metadados no registro coleta_quatro_colecoes, evitando repetir esse trabalho nesta linha.",
+      "notas_do_revisor_propostas": "Correção estrutural de notas; não representa revisão crítica integral ou alteração das alegações da fonte. | Reconciliação de 21/10/2026: correção da atribuição de notas aplicada no histórico 20261021172931544115-d005bfa87be7; hash atual coincide com o candidato corrigido. Este registro é conferência preventiva da edição corrigida, não erro de atribuição ainda aberto. O cotejo integral dos demais metadados permanece pendente no registro coleta_quatro_colecoes do mesmo documento.",
+      "evidence": [
+        {
+          "file": "docs/pesquisa/quatro-coletores/mozokhin-correcao-notas-20261021-gravacao.json",
+          "sha256": "abb97f42403559ea66da21a41e715bcbf8361171138d5d15a2f410712a83f82a"
+        },
+        {
+          "file": "docs/pesquisa/quatro-coletores/NOTAS-RODADA3.md",
+          "sha256": "ebef838e09885c68235a30ecba2482c4540f4c4c70003fdac4aa7248983ffe54"
+        },
+        {
+          "file": "docs/pesquisa/quatro-coletores/NOTAS-RODADA3-mozokhin.csv",
+          "sha256": "19a407b8e51c4ebfbf373ef4df31675a81232ca927dade82b9fc6f79255f9544"
+        }
+      ]
+    },
+    {
+      "chave": "mozokhin-2013-v1-101:conferencia_notas_20261021",
+      "status_proposto": "pendente",
+      "prioridade_proposta": "media",
+      "categoria": "resolved_component_preventive_remaining",
+      "sha256": "8c193d27b4f7e272a8b98c9f29d2b812b903f8d5d508b02a045fe2998ffdfd36",
+      "candidate_sha256": "8c193d27b4f7e272a8b98c9f29d2b812b903f8d5d508b02a045fe2998ffdfd36",
+      "arquivo": "originais/coletores/mozokhin/mozokhin-2013-v1-101.ru.md",
+      "dificuldade_encontrada_proposta": "Correção de atribuição de notas já aplicada e confirmada pelo hash da edição corrigida; resta conferência preventiva da versão atual. Não representa erro de notas ainda aberto.",
+      "acao_sugerida_proposta": "Conferir pontualmente as notas na versão corrigida e o histórico. Manter a revisão integral dos metadados no registro coleta_quatro_colecoes, evitando repetir esse trabalho nesta linha.",
+      "notas_do_revisor_propostas": "Correção estrutural de notas; não representa revisão crítica integral ou alteração das alegações da fonte. | Reconciliação de 21/10/2026: correção da atribuição de notas aplicada no histórico 20261021172931544115-d005bfa87be7; hash atual coincide com o candidato corrigido. Este registro é conferência preventiva da edição corrigida, não erro de atribuição ainda aberto. O cotejo integral dos demais metadados permanece pendente no registro coleta_quatro_colecoes do mesmo documento.",
+      "evidence": [
+        {
+          "file": "docs/pesquisa/quatro-coletores/mozokhin-correcao-notas-20261021-gravacao.json",
+          "sha256": "abb97f42403559ea66da21a41e715bcbf8361171138d5d15a2f410712a83f82a"
+        },
+        {
+          "file": "docs/pesquisa/quatro-coletores/NOTAS-RODADA3.md",
+          "sha256": "ebef838e09885c68235a30ecba2482c4540f4c4c70003fdac4aa7248983ffe54"
+        },
+        {
+          "file": "docs/pesquisa/quatro-coletores/NOTAS-RODADA3-mozokhin.csv",
+          "sha256": "19a407b8e51c4ebfbf373ef4df31675a81232ca927dade82b9fc6f79255f9544"
+        }
+      ]
+    },
+    {
+      "chave": "mozokhin-2013-v1-145:conferencia_notas_20261021",
+      "status_proposto": "pendente",
+      "prioridade_proposta": "media",
+      "categoria": "resolved_component_preventive_remaining",
+      "sha256": "f1c3b9624875b125142b4ad4b38e09b1909d4a6c7659c421b8cb281dd7840311",
+      "candidate_sha256": "f1c3b9624875b125142b4ad4b38e09b1909d4a6c7659c421b8cb281dd7840311",
+      "arquivo": "originais/coletores/mozokhin/mozokhin-2013-v1-145.ru.md",
+      "dificuldade_encontrada_proposta": "Correção de atribuição de notas já aplicada e confirmada pelo hash da edição corrigida; resta conferência preventiva da versão atual. Não representa erro de notas ainda aberto.",
+      "acao_sugerida_proposta": "Conferir pontualmente as notas na versão corrigida e o histórico. Manter a revisão integral dos metadados no registro coleta_quatro_colecoes, evitando repetir esse trabalho nesta linha.",
+      "notas_do_revisor_propostas": "Correção estrutural de notas; não representa revisão crítica integral ou alteração das alegações da fonte. | Reconciliação de 21/10/2026: correção da atribuição de notas aplicada no histórico 20261021172931544115-d005bfa87be7; hash atual coincide com o candidato corrigido. Este registro é conferência preventiva da edição corrigida, não erro de atribuição ainda aberto. O cotejo integral dos demais metadados permanece pendente no registro coleta_quatro_colecoes do mesmo documento.",
+      "evidence": [
+        {
+          "file": "docs/pesquisa/quatro-coletores/mozokhin-correcao-notas-20261021-gravacao.json",
+          "sha256": "abb97f42403559ea66da21a41e715bcbf8361171138d5d15a2f410712a83f82a"
+        },
+        {
+          "file": "docs/pesquisa/quatro-coletores/NOTAS-RODADA3.md",
+          "sha256": "ebef838e09885c68235a30ecba2482c4540f4c4c70003fdac4aa7248983ffe54"
+        },
+        {
+          "file": "docs/pesquisa/quatro-coletores/NOTAS-RODADA3-mozokhin.csv",
+          "sha256": "19a407b8e51c4ebfbf373ef4df31675a81232ca927dade82b9fc6f79255f9544"
+        }
+      ]
+    },
+    {
+      "chave": "mozokhin-2013-v1-146:conferencia_notas_20261021",
+      "status_proposto": "pendente",
+      "prioridade_proposta": "media",
+      "categoria": "resolved_component_preventive_remaining",
+      "sha256": "9ddaca617279761a143e08a405c4ae047b985618a7491884819972a75c7c7ffd",
+      "candidate_sha256": "9ddaca617279761a143e08a405c4ae047b985618a7491884819972a75c7c7ffd",
+      "arquivo": "originais/coletores/mozokhin/mozokhin-2013-v1-146.ru.md",
+      "dificuldade_encontrada_proposta": "Correção de atribuição de notas já aplicada e confirmada pelo hash da edição corrigida; resta conferência preventiva da versão atual. Não representa erro de notas ainda aberto.",
+      "acao_sugerida_proposta": "Conferir pontualmente as notas na versão corrigida e o histórico. Manter a revisão integral dos metadados no registro coleta_quatro_colecoes, evitando repetir esse trabalho nesta linha.",
+      "notas_do_revisor_propostas": "Correção estrutural de notas; não representa revisão crítica integral ou alteração das alegações da fonte. | Reconciliação de 21/10/2026: correção da atribuição de notas aplicada no histórico 20261021172931544115-d005bfa87be7; hash atual coincide com o candidato corrigido. Este registro é conferência preventiva da edição corrigida, não erro de atribuição ainda aberto. O cotejo integral dos demais metadados permanece pendente no registro coleta_quatro_colecoes do mesmo documento.",
+      "evidence": [
+        {
+          "file": "docs/pesquisa/quatro-coletores/mozokhin-correcao-notas-20261021-gravacao.json",
+          "sha256": "abb97f42403559ea66da21a41e715bcbf8361171138d5d15a2f410712a83f82a"
+        },
+        {
+          "file": "docs/pesquisa/quatro-coletores/NOTAS-RODADA3.md",
+          "sha256": "ebef838e09885c68235a30ecba2482c4540f4c4c70003fdac4aa7248983ffe54"
+        },
+        {
+          "file": "docs/pesquisa/quatro-coletores/NOTAS-RODADA3-mozokhin.csv",
+          "sha256": "19a407b8e51c4ebfbf373ef4df31675a81232ca927dade82b9fc6f79255f9544"
+        }
+      ]
+    }
+  ]
+}

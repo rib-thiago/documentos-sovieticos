@@ -10,13 +10,13 @@ ANSWER: I was transferred from work in Central Asia to Moscow in March 1932. Dur
 
 I recall the following persons:
 
-Leonid KHANIK called at my workplace in 1932–1933.  
-Andrei TOLMAZOV visited my home in 1932.  
-Ivan Ivanovich TARASOV visited my home several times, most recently in November 1934.  
-Nikolai DMITRIEV visited several times at different dates, most recently in November 1934.  
-Aleksandr SEREDOKHIN visited twice, in late November and early December 1934.  
-Ivan Ivanovich KOTOLYNOV visited my home once in December 1933 and stayed overnight with I. I. TARASOV.  
-Yakov TSEITLIN called a couple of times in summer 1934; he also visited me here in Leningrad during my business trip in October or November 1934.
+1. Leonid KHANIK called at my workplace in 1932–1933.  
+2. Andrei TOLMAZOV visited my home in 1932.  
+3. Ivan Ivanovich TARASOV visited my home several times, most recently in November 1934.  
+4. Nikolai DMITRIEV visited several times at different dates, most recently in November 1934.  
+5. Aleksandr SEREDOKHIN visited twice, in late November and early December 1934.  
+6. Ivan Ivanovich KOTOLYNOV visited my home once in December 1933 and stayed overnight with I. I. TARASOV.  
+7. Yakov TSEITLIN called a couple of times in summer 1934; he also visited me here in Leningrad during my business trip in October or November 1934.
 
 I also had two chance meetings with EVDOKIMOV in Moscow, a month and a half ago at the Council of People's Commissars and on 18/VIII at the aviation festival. I think it was in 1932 that I met KHARITONOV in the street; he was then arriving from England, at the time of the rupture of trade relations with England.
 

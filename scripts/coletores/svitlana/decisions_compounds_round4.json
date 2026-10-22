@@ -1,0 +1,179 @@
+{
+  "svitlana-4898e43af1b5adac": {
+    "expected_markdown_sha256": "92d3dbf94c99ab6940bcc6610a95e0f2104f48b4932da074c405fe0ba5991bcb",
+    "expected_raw_sha256": "8968269d09c219513932e142d7e6b8649d1381ff0b21ccfcc288b8b05a52cecf",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "HTML bruto integral e Markdown candidato; fronteiras, assinaturas e aparato cotejados sem revisão filológica da tradução",
+    "range_semantics": "Unicode character offsets into original Markdown; half-open [start,end); join stripped ranges with two newlines, append one newline; normalize_layout_quotes thereafter",
+    "shared_ranges": [
+      [
+        92,
+        173
+      ]
+    ],
+    "ignored_ranges": [],
+    "units": [
+      {
+        "suffix": "ezhov-cover-1938-04-15",
+        "title_literal": "Ezhov to Stalin with a copy of A.I. Uspensky about the course of the Polish operation — covering letter",
+        "date_literal": "April 15, 1938",
+        "ranges": [
+          [
+            0,
+            900
+          ]
+        ],
+        "range": "ranges",
+        "normalize_layout_quotes": true,
+        "ready_for_import": true,
+        "reason": "Carta nº102983 termina na assinatura Ezhov. Data de15 de abril é desta carta; as notas1 e2 pertencem ao texto anexo. Cota da página identifica o conjunto, sem foliação individual inventada.",
+        "issues": [
+          "title_editorially_distinguishes_component",
+          "archival_reference_applies_to_source_dossier"
+        ],
+        "extent": "covering_letter_with_shared_archival_reference",
+        "expected_output_sha256": "f57b3d4d7eea4947caba2972335abdce9f92022802d510f990dd4962676ce7b2",
+        "boundary_evidence": {
+          "first_160": "Ezhov to Stalin with a copy of A.I. Uspensky about the course of the Polish operation \n\nArchive:  AP RF. F. 3. Op. 58. D. 255. L. 24-41. Script. Typescript.\n\nAp",
+          "last_160": "is of a number of testimonies of active participants in the POV.\n\nPeople's Commissar of Internal Affairs of the USSR\n\nGeneral Commissar of State Security Ezhov\n"
+        }
+      },
+      {
+        "suffix": "uspensky-telegram-926",
+        "title_literal": "Telegram No. 926 of A.I. Uspensky enclosed with Ezhov’s letter to Stalin",
+        "date_literal": null,
+        "ranges": [
+          [
+            92,
+            173
+          ],
+          [
+            900,
+            22282
+          ]
+        ],
+        "range": "ranges",
+        "normalize_layout_quotes": true,
+        "ready_for_import": true,
+        "reason": "Anexo nº926 identificado na carta; inicia In accordance with your instructions e termina USPENSKY, seguido das notas1 e2, cujas chamadas estão neste anexo. Data própria ausente: não herdar15 de abril da carta. O corte (..) já existe na fonte.",
+        "issues": [
+          "editorially_supplied_component_title",
+          "enclosure_date_not_stated",
+          "source_contains_explicit_omission",
+          "archival_reference_applies_to_source_dossier",
+          "source_note_2_has_unclosed_quotation"
+        ],
+        "extent": "source_excerpt_with_its_two_notes",
+        "expected_output_sha256": "2f330e96dd123e059d134fc3584b1210ea66cb5f9b337fe9d3d8b148b1a2d1ce",
+        "boundary_evidence": {
+          "first_160": "Archive:  AP RF. F. 3. Op. 58. D. 255. L. 24-41. Script. Typescript.\n\nIn accordance with your instructions, all organs of the NKVD in Ukraine were tasked with d",
+          "last_160": "terrogations.\n\nUSPENSKY\n\n[1] Slang term for the Polish Military Organization (POW).\n\n[2] On the first page there is a handwritten note: “For the arrest. I. St.\n"
+        }
+      }
+    ]
+  },
+  "svitlana-c5ed6f188cc197d3": {
+    "expected_markdown_sha256": "be235fe06b16fd9c7290d309e4ae2e95109167964007e66acae754ed7e67ff66",
+    "expected_raw_sha256": "96914c0863402929ed1f2a746a8a264e84456f9ecf9f66ac157dc014524b67cb",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "HTML bruto integral e Markdown candidato; fronteiras, assinaturas e aparato cotejados sem revisão filológica da tradução",
+    "range_semantics": "Unicode character offsets into original Markdown; half-open [start,end); join stripped ranges with two newlines, append one newline; normalize_layout_quotes thereafter",
+    "shared_ranges": [
+      [
+        253,
+        450
+      ]
+    ],
+    "ignored_ranges": [
+      [
+        0,
+        126
+      ]
+    ],
+    "units": [
+      {
+        "suffix": "preliminary-peace-1920-10-12",
+        "title_literal": "An armistice and preliminary peace conditions between Russia and Ukraine on the one hand, and Poland on the other.",
+        "date_literal": "October 12, 1920",
+        "ranges": [
+          [
+            126,
+            18623
+          ]
+        ],
+        "range": "ranges",
+        "normalize_layout_quotes": true,
+        "ready_for_import": true,
+        "reason": "Instrumento principal: apresentação da publicação Art.516, preâmbulo, artigos I–XVII e assinaturas até Mikhail Vikhlinsky. Data literal no fecho; anexo2 individualizado separadamente.",
+        "issues": [
+          "appendix_1_map_not_present",
+          "source_translation_requires_review"
+        ],
+        "extent": "preliminary_peace_treaty_with_publication_wrapper_without_map",
+        "expected_output_sha256": "f2b1c58cfe69df804c5033c5a447c04723c7934bcfec92427602ba9371fb4878",
+        "boundary_evidence": {
+          "first_160": "Truce and preliminary peace conditions between Russia and Ukraine, on the one hand, and Poland, on the other. 1920\n\nCollection of legalizations and orders of th",
+          "last_160": "rabsky.\n\nL. Obolensky.\n\nWitold Kamenetsky.\n\nVladislav Kernik.\n\nMechislav Kulinsky.\n\nAdam Mechkovsky.\n\nLeon Vasilevsky.\n\nLudwig Vashkevich.\n\nMikhail Vikhlinsky.\n"
+        }
+      },
+      {
+        "suffix": "armistice-annex-2-1920-10-12",
+        "title_literal": "Armistice agreement.",
+        "date_literal": "October 12, 1920",
+        "ranges": [
+          [
+            253,
+            450
+          ],
+          [
+            18623,
+            25449
+          ]
+        ],
+        "range": "ranges",
+        "normalize_layout_quotes": true,
+        "ready_for_import": true,
+        "reason": "Anexo2, §§1–13 e assinaturas próprias; data do fecho em Riga. Fonte bibliográfica compartilhada; não confundir início da cessação de hostilidades18 de outubro com assinatura.",
+        "issues": [
+          "source_translation_requires_review"
+        ],
+        "extent": "complete_annex_2_as_transcribed_on_source_page",
+        "expected_output_sha256": "2694eabf7b7f56acbba5e844c59db00d55ee083f6f57505a70dff672e492fc55",
+        "boundary_evidence": {
+          "first_160": "Collection of legalizations and orders of the government for 1920. Administration of the Affairs of the Council of People's Commissars of the USSR M. 1943, pp. ",
+          "last_160": "rabsky.\n\nL. Obolensky.\n\nWitold Kamenetsky.\n\nVladislav Kernik.\n\nMechislav Kulinsky.\n\nAdam Mechkovsky.\n\nLeon Vasilevsky.\n\nLudwig Vashkevich.\n\nMikhail Vikhlinsky.\n"
+        }
+      },
+      {
+        "suffix": "ratification-1920-10-23",
+        "title_literal": "Instrument of ratification of the armistice and preliminary peace conditions — All-Russian Central Executive Committee",
+        "date_literal": "October 23, 1920",
+        "ranges": [
+          [
+            253,
+            450
+          ],
+          [
+            25449,
+            26286
+          ]
+        ],
+        "range": "ranges",
+        "normalize_layout_quotes": true,
+        "ready_for_import": true,
+        "reason": "Instrumento de ratificação inicia After considering this treaty; data Moscow October23 e assinaturas Lutovinov/Yenukidze. Preserva informação editorial final da troca em Libau November2, sem tratá-la como data do instrumento.",
+        "issues": [
+          "editorially_supplied_component_title",
+          "ratification_exchange_note_preserved",
+          "source_translation_requires_review"
+        ],
+        "extent": "ratification_instrument_with_exchange_notice",
+        "expected_output_sha256": "d5fa48ce8b78a4cc426f12b32a8e2909406d4f9fb66caaffe885af8aaae184fe",
+        "boundary_evidence": {
+          "first_160": "Collection of legalizations and orders of the government for 1920. Administration of the Affairs of the Council of People's Commissars of the USSR M. 1943, pp. ",
+          "last_160": " Cossacks and Red Army Deputies Yu. Lutovinov .\n\nSecretary A. Yenukidze .\n\nThe exchange of instruments of ratification took place in Libau on November 2, 1920.\n"
+        }
+      }
+    ]
+  }
+}

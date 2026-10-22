@@ -37,3 +37,10 @@ Anotação: [no alto do documento, a inscrição: ao camarada Dmitriev]
 RGASPI, fundo 671, inventário 1, dossiê 120, folhas 66–98.
 
 Publicado em: Roman Nikitin. Kirov — o primeiro, Stalin — o segundo. O caso dos parentes de Leonid Nikolaev. Documentos e estudos. Moscou: ROSSPEN, 2019, pp. 118–119.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A referência a folhas 66–98 consta da publicação eletrônica russa e foi preservada. Essa indicação arquivística, por si só, não comprova ausência de páginas na transcrição; sua extensão deverá ser conferida na unidade de arquivo.

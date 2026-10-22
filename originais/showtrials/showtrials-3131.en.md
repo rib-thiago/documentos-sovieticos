@@ -55,3 +55,10 @@ ASSISTANT HEAD OF THE EKO OF THE GUGB OF THE NKVD OF THE USSR — DMITRIEV
 Certified true: illegible
 
 RGASPI, fond 671, inventory 1, file 120, leaves 85–87.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The Russian expression “этот путь будет заказан” is translated as a path being closed, despite the tension with the context. It occurs in the electronic publication; its meaning has not been reversed by conjecture. Comparison with a facsimile or another textual witness remains pending.

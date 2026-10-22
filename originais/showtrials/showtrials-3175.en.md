@@ -67,3 +67,10 @@ HEAD OF THE 1ST SECTION OF THE SPO OF THE UGB OF THE NKVD DIRECTORATE FOR LENING
 Certified true: —
 
 RGASPI, fond 671, inventory 1, file 120, folios 202–204.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> In question 11, “НИКОЛАЕВЫМ” follows “Смольном” in the Russian electronic publication. The apparently misplaced word is preserved in the translation. Removing or replacing it requires comparison with a facsimile or another textual witness.

@@ -67,3 +67,10 @@ CHEFE DA 1ª SEÇÃO DO SPO DA UGB DA DIREÇÃO DO NKVD DA REGIÃO DE LENINGRADO
 Confere: —
 
 RGASPI, fundo 671, inventário 1, dossiê 120, folhas 202–204.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> Na pergunta 11, “НИКОЛАЕВЫМ” aparece depois de “Смольном” na publicação eletrônica russa. A palavra aparentemente deslocada foi preservada na tradução. Sua supressão ou substituição exige cotejo com fac-símile ou outro testemunho.

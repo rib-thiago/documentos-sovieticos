@@ -1,0 +1,128 @@
+{
+  "decision": "mozokhin-v1-notes-round3-20261021",
+  "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+  "groups": [
+    {
+      "page": 53,
+      "numbers": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "notes": [
+        {
+          "label": "18",
+          "owner": 12,
+          "carrier": 13,
+          "call": "вечера18",
+          "definition": "Подпись не разборчива"
+        }
+      ]
+    },
+    {
+      "page": 81,
+      "numbers": [
+        36,
+        37,
+        38
+      ],
+      "notes": [
+        {
+          "label": "24",
+          "owner": 36,
+          "carrier": 37,
+          "call": "Губкома24",
+          "definition": "Конец декабря 1924 г. -начало января 1925 г."
+        },
+        {
+          "label": "25",
+          "owner": 37,
+          "carrier": 37,
+          "call": "Кубяк25",
+          "definition": "Конец декабря 1924 г. -начало января 1925 г."
+        }
+      ]
+    },
+    {
+      "page": 93,
+      "numbers": [
+        50,
+        51,
+        52
+      ],
+      "notes": [
+        {
+          "label": "27",
+          "owner": 50,
+          "carrier": 52,
+          "call": "/Бройдо/27",
+          "definition": "без даты"
+        },
+        {
+          "label": "28",
+          "owner": 51,
+          "carrier": 52,
+          "call": "Ленина28",
+          "definition": "без даты"
+        }
+      ]
+    },
+    {
+      "page": 120,
+      "numbers": [
+        78,
+        79,
+        80
+      ],
+      "notes": [
+        {
+          "label": "36",
+          "owner": 78,
+          "carrier": 80,
+          "call": "жизнь36.",
+          "definition": "Опубликовано «Правда» № 240 (3469) 17.10.1926 г."
+        }
+      ]
+    },
+    {
+      "page": 181,
+      "numbers": [
+        102,
+        103,
+        104
+      ],
+      "notes": [
+        {
+          "label": "41",
+          "owner": 102,
+          "carrier": 103,
+          "call": "партии41.",
+          "definition": "Опубликовано в газете «Правда» № 244 (3776) от 25октября 1927 г."
+        }
+      ]
+    }
+  ],
+  "expected": {
+    "mozokhin-2013-v1-011": "0fbf6254cd5ccc4757455277af2df6d09e5eb120a8d541fe665d14ececcc9868",
+    "mozokhin-2013-v1-012": "5d7749c2cefca3008a47974dd627577132b3d0067a4f4fb8e14dd6283fa8027e",
+    "mozokhin-2013-v1-013": "3c8c08fc96b21fad3900ba5a685ae3519273f91c50b63dc416c9ee2b1ccc97c9",
+    "mozokhin-2013-v1-014": "469f8cb5b7fa9a774d52c2b10e4c2eb3f705c6b2cc6d08cb9e38cf00b660c59a",
+    "mozokhin-2013-v1-036": "3d498d9f1a99f162599dfc814f47be90227e492cb6dd6e5b1d0a5d3ed0253b18",
+    "mozokhin-2013-v1-037": "b9e71db58d138829b6145f83fb7c987fdda4657bfd0b13627a2444d37ae1b872",
+    "mozokhin-2013-v1-038": "407f0d1fba20cadda52d5e02b322fbf5dcb1dc99abf21a9c623637de342256c9",
+    "mozokhin-2013-v1-050": "fbacebf8b034eb5c503b6963370d81525c8a909186d066ff7dd7207ac6eda7b0",
+    "mozokhin-2013-v1-051": "524ec61c94a94a3f2589a0715768ed5ea7cf3a5f7dfee6a33afeddb5cec5e80f",
+    "mozokhin-2013-v1-052": "3e15bc17b07dcc88741dbbcc30b0434fc6bb920bfcd1556cd800cad4f9419f4f",
+    "mozokhin-2013-v1-078": "8eacd23c1a6683c8100209cafc161c4fb1fad7c0353cdd27b4f3c3d028355caf",
+    "mozokhin-2013-v1-079": "c1e04b354aaa00518b8086a5a764aeced8e9b6bdf22ecebd93beda459acb3a35",
+    "mozokhin-2013-v1-080": "d0cf080f0a2057fdd5dc5c11f989b20f13a193709e69b09301a60243c2ade5c4",
+    "mozokhin-2013-v1-102": "82913919e5c89fc303ff1b23d2baadc83d22031971a3a427346561ee89ddd150",
+    "mozokhin-2013-v1-103": "d4f30c133112a990d727168a84b08de907ae38882008d18ce7102338c2cd54d1",
+    "mozokhin-2013-v1-104": "01206a08ee8c1d525c53f73467c170f1a40c5364a60e3fc059b25d7ebc851500"
+  },
+  "still_blocked": {
+    "mozokhin-2013-v1-078": "Página PDF 117: chamada/definição 35 ainda não conferida.",
+    "mozokhin-2013-v1-052": "Chamada 29 no fim do documento ainda não reconciliada com a imagem seguinte."
+  }
+}

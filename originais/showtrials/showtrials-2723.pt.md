@@ -27,3 +27,10 @@ CHEFE DA 1ª SEÇÃO DO SPO DA GUGB — PETROVSKY
 Confere:
 
 RGASPI, fundo 671, inventário 1, dossiê 114, folha 113.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> Este protocolo identifica Antonov como Nikolai Vasilievich; o documento showtrials-2782 emprega Nikolai Semenovich. As formas da publicação russa foram preservadas. O cotejo eletrônico não estabelece se ambos se referem à mesma pessoa; a identificação permanece pendente.

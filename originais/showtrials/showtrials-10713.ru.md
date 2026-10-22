@@ -4,7 +4,7 @@ Herrn Paul Olberg
 
 Stockholm
 
-DER FALL VALENTIN OLBERG
+## DER FALL VALENTIN OLBERG
 
 (War Der Kronzeuge im Moskauer Prozess ein Revolutionär oder ein Agent der GPU?)
 
@@ -90,7 +90,7 @@ Kurt Landau
 
 IISG, CNT (España) Archives, 103F.1
 
-СЛУЧАЙ ВАЛЕНТИНА ОЛЬБЕРГА
+## СЛУЧАЙ ВАЛЕНТИНА ОЛЬБЕРГА
 
 (Кем был главный свидетель на Московском процессе –
 

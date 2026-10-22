@@ -44,7 +44,7 @@ II. По делу “78” выехало 31/1-35 г. 18 семей – 43 че�
 
 10\. Сестра ТАРТАКОВСКОЙ.
 
-11\. Жена РЭМА  \[1\] .
+11\. Жена РЭМА  [\[1\]](<http://showtrials.ru/svodka-%e2%84%96-4-o-hode-vyseleniya-iz-leningrada-chlenov-semej-licz-osuzhdennyh-po-delam-14-19-i-78/#_edn1>) .
 
 12\. Жена и дочь БОГОМОЛЬНОГО.
 
@@ -138,4 +138,4 @@ III. Оставлено на жительство в Ленинграде вре
 
 РГАСПИ Ф. 671, Оп. 1, Д. 144, Л. 60-61.
 
-\[1\] В тексте ошибочно – “Ремма”.
+[\[1\]](<http://showtrials.ru/svodka-%e2%84%96-4-o-hode-vyseleniya-iz-leningrada-chlenov-semej-licz-osuzhdennyh-po-delam-14-19-i-78/#_ednref1>) В тексте ошибочно – “Ремма”.

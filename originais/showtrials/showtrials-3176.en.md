@@ -55,3 +55,10 @@ OPERATIONAL OFFICER OF THE SPO OF THE GUGB OF THE NKVD OF THE USSR — FEDOROV
 Certified true:
 
 RGASPI, fond 671, inventory 1, file 120, folios 205–206.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> Yuskin’s answer contains the construction “что убивать КИРОВА, надо убить СТАЛИНА” in the Russian electronic publication. The syntactic difficulty is preserved; no negation absent from that text has been introduced. A facsimile or another textual witness must be consulted before amending the sentence.

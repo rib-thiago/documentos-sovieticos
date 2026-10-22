@@ -12,4 +12,4 @@
 
 14 янв\<аря 1931 г.\>
 
-Harvard, Houghton Library, Leon Trotsky Exile Papers, MS Russ 13.1, 12880.
+Harvard, Houghton Library, Leon Trotsky Exile Papers, MS Russ 13.1, [12880.](<https://iiif.lib.harvard.edu/manifests/view/ids:51287317>)

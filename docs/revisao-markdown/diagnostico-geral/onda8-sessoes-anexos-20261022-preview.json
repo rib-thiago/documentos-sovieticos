@@ -1,0 +1,578 @@
+{
+  "batch_id": "onda8-sessoes-anexos-20261022",
+  "editions_changed": 47,
+  "issue_outcomes": 47,
+  "documents_metadata_changed": [],
+  "closed_issues": 47,
+  "queue_before_sha256": "e9b5e2371e78df407ba927694245cfb5d21640ba863efe6ddee0e67077deb654",
+  "queue_after_sha256": "0ed9ff677a3d342bd60cb11e48205197a8810f5bd7a65328a2396275e9ccd802",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R2-secoes_listas-0006",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0006.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/50cb6acdb93753a215bb6f1814ea807bb86aa40156309724949f64aefe2b58d1-R2-secoes_listas-0006.result.json",
+      "result_sha256": "50cb6acdb93753a215bb6f1814ea807bb86aa40156309724949f64aefe2b58d1",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-1847:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0007",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0007.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/6bb9f40951f7f1a5cefe52a160a3f0323607bf69e3142d4c66db5d90f7973675-R2-secoes_listas-0007.result.json",
+      "result_sha256": "6bb9f40951f7f1a5cefe52a160a3f0323607bf69e3142d4c66db5d90f7973675",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2443:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0008",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0008.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/1d5d7f72c9c8e989f2cfee450d2fb352fa800689d11aa3625f20a4f3cb8d18fe-R2-secoes_listas-0008.result.json",
+      "result_sha256": "1d5d7f72c9c8e989f2cfee450d2fb352fa800689d11aa3625f20a4f3cb8d18fe",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2444:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0009",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0009.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/ae03f96e6969920e29ec763fd929273322e5128ab7ab3df6bbb0fdb72b857932-R2-secoes_listas-0009.result.json",
+      "result_sha256": "ae03f96e6969920e29ec763fd929273322e5128ab7ab3df6bbb0fdb72b857932",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2478:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0010",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0010.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/ad8ffba2477c8fb728d147816469cc98849f0cc86496a8c8c911957b2064b3c8-R2-secoes_listas-0010.result.json",
+      "result_sha256": "ad8ffba2477c8fb728d147816469cc98849f0cc86496a8c8c911957b2064b3c8",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2480:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0011",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0011.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/66e4a2dafb28559eca11a9f1c67d24fb8ee83cab8a6981ffd236a27408fbb08f-R2-secoes_listas-0011.result.json",
+      "result_sha256": "66e4a2dafb28559eca11a9f1c67d24fb8ee83cab8a6981ffd236a27408fbb08f",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2519:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0012",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0012.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/bdab48448eba013ee919ba5cd265421882b12ba787967f39f5cf9b1042cd8796-R2-secoes_listas-0012.result.json",
+      "result_sha256": "bdab48448eba013ee919ba5cd265421882b12ba787967f39f5cf9b1042cd8796",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2521:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0013",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0013.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/d7ac8996743475ae8e4e61aa1418ec6b8b1ad69e70b10914073b2a1e5c0b270b-R2-secoes_listas-0013.result.json",
+      "result_sha256": "d7ac8996743475ae8e4e61aa1418ec6b8b1ad69e70b10914073b2a1e5c0b270b",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2522:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0014",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0014.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/457b449dd77a34df8374c2589d88fb282b4e7fba8902ad9f1b3fe92964447770-R2-secoes_listas-0014.result.json",
+      "result_sha256": "457b449dd77a34df8374c2589d88fb282b4e7fba8902ad9f1b3fe92964447770",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2523:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0015",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0015.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/b265fcf0bb53bce1fe1857926b62c51a5927b6ad4413f64ff77203504424f6ac-R2-secoes_listas-0015.result.json",
+      "result_sha256": "b265fcf0bb53bce1fe1857926b62c51a5927b6ad4413f64ff77203504424f6ac",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2525:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0016",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0016.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/393c41f6edb29ddee60e4ef60345f58be1e715cb30a8e9c4c5ee71dde79458d9-R2-secoes_listas-0016.result.json",
+      "result_sha256": "393c41f6edb29ddee60e4ef60345f58be1e715cb30a8e9c4c5ee71dde79458d9",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2526:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0017",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0017.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/de3e30b1854ae0853146bd5f6b16048475d0f20e0e82114b68444c4223d03311-R2-secoes_listas-0017.result.json",
+      "result_sha256": "de3e30b1854ae0853146bd5f6b16048475d0f20e0e82114b68444c4223d03311",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2527:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0018",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0018.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/81c809ec4683fe455a8c80f4394424bc56a359dd498dc0d957fe43dbf690eaf9-R2-secoes_listas-0018.result.json",
+      "result_sha256": "81c809ec4683fe455a8c80f4394424bc56a359dd498dc0d957fe43dbf690eaf9",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2536:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0019",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0019.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/b3fab572a9e134b0b88b5e6b31ad55bcd60ef59a9c7c6549f5f4b58ee06fbaa9-R2-secoes_listas-0019.result.json",
+      "result_sha256": "b3fab572a9e134b0b88b5e6b31ad55bcd60ef59a9c7c6549f5f4b58ee06fbaa9",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2539:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0020",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0020.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/d7095098a7327163d8b1ca768c1096cf08cf6d42f9144c1e04ad4db78fbff022-R2-secoes_listas-0020.result.json",
+      "result_sha256": "d7095098a7327163d8b1ca768c1096cf08cf6d42f9144c1e04ad4db78fbff022",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2618:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0005",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0005.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/3f65b6b6ea8f8704d03536a8b1c13050c05ebf2e9e3f26ef70289ef6e84985a6-R2-secoes_listas-0005.result.json",
+      "result_sha256": "3f65b6b6ea8f8704d03536a8b1c13050c05ebf2e9e3f26ef70289ef6e84985a6",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-11413:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0031",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0031.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/d9ddc11f0363d745128844e076596d2b3ce1ddff23976467b3f19156b8ff4d98-R2-secoes_listas-0031.result.json",
+      "result_sha256": "d9ddc11f0363d745128844e076596d2b3ce1ddff23976467b3f19156b8ff4d98",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2479:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0032",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0032.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/6186c795f67b05410521bc998a50e9367cdf49787647d09aeb1c1d2afebb9e8b-R2-secoes_listas-0032.result.json",
+      "result_sha256": "6186c795f67b05410521bc998a50e9367cdf49787647d09aeb1c1d2afebb9e8b",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2481:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0033",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0033.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/49f8420fca2d032d6b73add4b1ad4eecf732eaa25dc651746ce198003a249874-R2-secoes_listas-0033.result.json",
+      "result_sha256": "49f8420fca2d032d6b73add4b1ad4eecf732eaa25dc651746ce198003a249874",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2482:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0035",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0035.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/763f2dec748c35e397f62a46097c09e9287b2322e60aff799956b07d4f16f0dd-R2-secoes_listas-0035.result.json",
+      "result_sha256": "763f2dec748c35e397f62a46097c09e9287b2322e60aff799956b07d4f16f0dd",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2508:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0037",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0037.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/1591448efce5e6dacf20d9e1add9598f31dc2b4751178146057c84ba9c9a58a6-R2-secoes_listas-0037.result.json",
+      "result_sha256": "1591448efce5e6dacf20d9e1add9598f31dc2b4751178146057c84ba9c9a58a6",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2540:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0038",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0038.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/0c646adc0bccfb87b8941377cd698ebd887556216b71d48c55630445296d0e50-R2-secoes_listas-0038.result.json",
+      "result_sha256": "0c646adc0bccfb87b8941377cd698ebd887556216b71d48c55630445296d0e50",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4288:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0039",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0039.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/b09625e4d74250e7f181338ffee5a399b585a436e5ec81e8ad87fd61084a201f-R2-secoes_listas-0039.result.json",
+      "result_sha256": "b09625e4d74250e7f181338ffee5a399b585a436e5ec81e8ad87fd61084a201f",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4423:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0040",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0040.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/6181c66136a7fb720ea5cd451f49aef0dfe29c5c602ecdfdb0f779b0be50dfc5-R2-secoes_listas-0040.result.json",
+      "result_sha256": "6181c66136a7fb720ea5cd451f49aef0dfe29c5c602ecdfdb0f779b0be50dfc5",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4435:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4580:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0041",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0041.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/dd6bc672089b86c9142f132369c461e281db29a7d3bfea7bfb8e49d4ba357e91-R2-secoes_listas-0041.result.json",
+      "result_sha256": "dd6bc672089b86c9142f132369c461e281db29a7d3bfea7bfb8e49d4ba357e91",
+      "editions_prepared": 3,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4581:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4584:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4665:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0082",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0082.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/f6774d980981be024c35c9ab5e923a99f2fc81c2782c80f05001e99a6a016a4a-R2-secoes_listas-0082.result.json",
+      "result_sha256": "f6774d980981be024c35c9ab5e923a99f2fc81c2782c80f05001e99a6a016a4a",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-6312:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0083",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0083.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/6dc91dac1888c81f0c04a117a49f560608daa148c7c80610c59572377314b52b-R2-secoes_listas-0083.result.json",
+      "result_sha256": "6dc91dac1888c81f0c04a117a49f560608daa148c7c80610c59572377314b52b",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-6354:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-6360:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0129",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0129.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/e7d164e3431fff569d713c4fab9e5e42b434b6ff318ed802e25c95f6d472cf05-R2-secoes_listas-0129.result.json",
+      "result_sha256": "e7d164e3431fff569d713c4fab9e5e42b434b6ff318ed802e25c95f6d472cf05",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8609:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-8611:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0130",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0130.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/59d61a2ae4038d1d1c663f77dad1d282c996fd5734eb49319b8bc289f4433cde-R2-secoes_listas-0130.result.json",
+      "result_sha256": "59d61a2ae4038d1d1c663f77dad1d282c996fd5734eb49319b8bc289f4433cde",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8617:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0131",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0131.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/5d1913880dc8529b6c8160a906a17806dc887c5f5cd502427000edf5df645e65-R2-secoes_listas-0131.result.json",
+      "result_sha256": "5d1913880dc8529b6c8160a906a17806dc887c5f5cd502427000edf5df645e65",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8621:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0133",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0133.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/d4719ba154d7f0b7881d368eff81e99ceb49d2e13039003e3aaa4c2c9b5d3437-R2-secoes_listas-0133.result.json",
+      "result_sha256": "d4719ba154d7f0b7881d368eff81e99ceb49d2e13039003e3aaa4c2c9b5d3437",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-9431:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0030",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0030.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/3465c96ece1fe3e2836b4792245d3b7f9b0580796a77883401ad0049e5f34f90-R2-secoes_listas-0030.result.json",
+      "result_sha256": "3465c96ece1fe3e2836b4792245d3b7f9b0580796a77883401ad0049e5f34f90",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-10470:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0023",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0023.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/cdad054b4789d6d58d4f7396de50fdd2ea90043c4f16b50b2e2df7669956538e-R2-secoes_listas-0023.result.json",
+      "result_sha256": "cdad054b4789d6d58d4f7396de50fdd2ea90043c4f16b50b2e2df7669956538e",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8173:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0122",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0122.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/b1d251c54a7369435ef4b53c68621ce3e7da663cdbece6dd80c850ee5803fc84-R2-secoes_listas-0122.result.json",
+      "result_sha256": "b1d251c54a7369435ef4b53c68621ce3e7da663cdbece6dd80c850ee5803fc84",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-810:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0097",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0097.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/8793afd573d3a0619da932ef3b3cf6e5e0c6747bf15fec3df6f243e5282f4a05-R2-secoes_listas-0097.result.json",
+      "result_sha256": "8793afd573d3a0619da932ef3b3cf6e5e0c6747bf15fec3df6f243e5282f4a05",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7275:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0062",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0062.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/4434c1a12676ad0db87cf9deb4e7e3435f8ab76b8749532a88a22f44798d8d10-R2-secoes_listas-0062.result.json",
+      "result_sha256": "4434c1a12676ad0db87cf9deb4e7e3435f8ab76b8749532a88a22f44798d8d10",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5779:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0061",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0061.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/5edbc1c0e493884b20a8d67897f1871288cb8e2840be52baabe794fd2c059dd8-R2-secoes_listas-0061.result.json",
+      "result_sha256": "5edbc1c0e493884b20a8d67897f1871288cb8e2840be52baabe794fd2c059dd8",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5766:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0024",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0024.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/ad3163fa2314a5f1e5625c2737d668ad5ace4845d5deba33c17664275085a8b2-R2-secoes_listas-0024.result.json",
+      "result_sha256": "ad3163fa2314a5f1e5625c2737d668ad5ace4845d5deba33c17664275085a8b2",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8938:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0025",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0025.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/8e8684f3ec7a407c42d8788bb88d669d408948d19630a8908982d3856b39ba9a-R2-secoes_listas-0025.result.json",
+      "result_sha256": "8e8684f3ec7a407c42d8788bb88d669d408948d19630a8908982d3856b39ba9a",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8946:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0026",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0026.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/a3672c60b67078689add4186597d0e7badfda05c47e1ea2acd55ac70e4c93200-R2-secoes_listas-0026.result.json",
+      "result_sha256": "a3672c60b67078689add4186597d0e7badfda05c47e1ea2acd55ac70e4c93200",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8951:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0027",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0027.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/7ced003da90b0634d933c2c9cb5e76d8754c9804452e1e7b0a09c3e4bba47693-R2-secoes_listas-0027.result.json",
+      "result_sha256": "7ced003da90b0634d933c2c9cb5e76d8754c9804452e1e7b0a09c3e4bba47693",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8954:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0028",
+      "result_file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0028.result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/18ee81c97f114db2bec2f6fab8b4997f70aff633ba3b99316489a3ac08d6478a-R2-secoes_listas-0028.result.json",
+      "result_sha256": "18ee81c97f114db2bec2f6fab8b4997f70aff633ba3b99316489a3ac08d6478a",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8956:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    }
+  ]
+}

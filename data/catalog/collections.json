@@ -1282,5 +1282,719 @@
       "description_pt",
       "document_ids"
     ]
+  },
+  {
+    "id": "sakharov-testamento-lenin-2003",
+    "slug": "sakharov-testamento-lenin-2003",
+    "parent_id": null,
+    "position": 15,
+    "titles": {
+      "pt": "O testamento político de Lenin — Sakharov (2003)"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "accent",
+      "documents",
+      "subcollections"
+    ]
+  },
+  {
+    "id": "sakharov-testamento-lenin-2003/selecao-inglesa",
+    "slug": "selecao-inglesa",
+    "parent_id": "sakharov-testamento-lenin-2003",
+    "position": 0,
+    "titles": {
+      "pt": "Seleção em inglês"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "sakharov-testamento-lenin-2003/apendices",
+    "slug": "apendices",
+    "parent_id": "sakharov-testamento-lenin-2003",
+    "position": 1,
+    "titles": {
+      "pt": "Apêndices documentais"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "sakharov-testamento-lenin-2003/preliminares",
+    "slug": "preliminares",
+    "parent_id": "sakharov-testamento-lenin-2003",
+    "position": 2,
+    "titles": {
+      "pt": "Preliminares da obra"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "sakharov-testamento-lenin-2003/parte-1-nep",
+    "slug": "parte-1-nep",
+    "parent_id": "sakharov-testamento-lenin-2003",
+    "position": 3,
+    "titles": {
+      "pt": "Parte I — NEP"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "sakharov-testamento-lenin-2003/parte-2-testamento-fontes",
+    "slug": "parte-2-testamento-fontes",
+    "parent_id": "sakharov-testamento-lenin-2003",
+    "position": 4,
+    "titles": {
+      "pt": "Parte II — O testamento de Lenin e suas fontes"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "sakharov-testamento-lenin-2003/parte-3-luta-politica",
+    "slug": "parte-3-luta-politica",
+    "parent_id": "sakharov-testamento-lenin-2003",
+    "position": 5,
+    "titles": {
+      "pt": "Parte III — A luta política"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "sakharov-testamento-lenin-2003/conclusao",
+    "slug": "conclusao",
+    "parent_id": "sakharov-testamento-lenin-2003",
+    "position": 6,
+    "titles": {
+      "pt": "Conclusão"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "transcricoes-arquivos-sovieticos",
+    "slug": "transcricoes-arquivos-sovieticos",
+    "parent_id": null,
+    "position": 16,
+    "titles": {
+      "pt": "Transcrições dos arquivos soviéticos — Svitlana/Erdogan"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "accent",
+      "documents",
+      "subcollections"
+    ]
+  },
+  {
+    "id": "transcricoes-arquivos-sovieticos/vol-01",
+    "slug": "vol-01",
+    "parent_id": "transcricoes-arquivos-sovieticos",
+    "position": 0,
+    "titles": {
+      "pt": "Volume 1 — 1903–1926"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "transcricoes-arquivos-sovieticos/tema-to-stalin",
+    "slug": "tema-to-stalin",
+    "parent_id": "transcricoes-arquivos-sovieticos",
+    "position": 1,
+    "titles": {
+      "pt": "To Stalin — Top Secret Summaries of Testimonies"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "transcricoes-arquivos-sovieticos/tema-stalin",
+    "slug": "tema-stalin",
+    "parent_id": "transcricoes-arquivos-sovieticos",
+    "position": 2,
+    "titles": {
+      "pt": "Stalin — Transcripts from Soviet Archives"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "transcricoes-arquivos-sovieticos/tema-other",
+    "slug": "tema-other",
+    "parent_id": "transcricoes-arquivos-sovieticos",
+    "position": 3,
+    "titles": {
+      "pt": "Other Transcripts Not in the Books"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "politburo-trotsky-mozokhin",
+    "slug": "politburo-trotsky-mozokhin",
+    "parent_id": null,
+    "position": 17,
+    "titles": {
+      "pt": "Politburo e Lev Trotsky — edição organizada por Mozokhin"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "accent",
+      "documents",
+      "subcollections"
+    ]
+  },
+  {
+    "id": "politburo-trotsky-mozokhin/livro-1-2013",
+    "slug": "livro-1-2013",
+    "parent_id": "politburo-trotsky-mozokhin",
+    "position": 0,
+    "titles": {
+      "pt": "Livro I — edição de 2013"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "politburo-trotsky-mozokhin/livro-2-2013",
+    "slug": "livro-2-2013",
+    "parent_id": "politburo-trotsky-mozokhin",
+    "position": 1,
+    "titles": {
+      "pt": "Livro II — edição de 2013"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "brest-litovsk",
+    "slug": "brest-litovsk",
+    "parent_id": null,
+    "position": 18,
+    "titles": {
+      "pt": "Brest-Litovsk — negociações e debates políticos"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "subtitle_pt",
+      "description_pt",
+      "accent",
+      "documents",
+      "subcollections"
+    ]
+  },
+  {
+    "id": "brest-litovsk/03-lenin",
+    "slug": "03-lenin",
+    "parent_id": "brest-litovsk",
+    "position": 0,
+    "titles": {
+      "pt": "Lenin — teses, discursos e polêmicas"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "brest-litovsk/02-comite-central",
+    "slug": "02-comite-central",
+    "parent_id": "brest-litovsk",
+    "position": 1,
+    "titles": {
+      "pt": "Comitê Central — intervenções e decisões"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "brest-litovsk/07-tratados",
+    "slug": "07-tratados",
+    "parent_id": "brest-litovsk",
+    "position": 2,
+    "titles": {
+      "pt": "Tratados e atos diplomáticos"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "brest-litovsk/06-congressos",
+    "slug": "06-congressos",
+    "parent_id": "brest-litovsk",
+    "position": 3,
+    "titles": {
+      "pt": "VII Congresso do Partido e IV Congresso dos Sovietes"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "brest-litovsk/09-desdobramentos",
+    "slug": "09-desdobramentos",
+    "parent_id": "brest-litovsk",
+    "position": 4,
+    "titles": {
+      "pt": "Desdobramentos de 1918"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "brest-litovsk/05-comunistas-de-esquerda",
+    "slug": "05-comunistas-de-esquerda",
+    "parent_id": "brest-litovsk",
+    "position": 5,
+    "titles": {
+      "pt": "Comunistas de esquerda — imprensa e textos programáticos"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "brest-litovsk/04-trotsky",
+    "slug": "04-trotsky",
+    "parent_id": "brest-litovsk",
+    "position": 6,
+    "titles": {
+      "pt": "Trotsky — textos e intervenções"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "revolucao-russa-e-guerra-civil-1917-1922",
+    "slug": "revolucao-russa-e-guerra-civil-1917-1922",
+    "parent_id": null,
+    "position": 19,
+    "titles": {
+      "pt": "Revolução Russa e Guerra Civil (1917–1922)",
+      "ru": "Русская революция и гражданская война (1917–1922)"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {},
+    "presentation": {
+      "accent": "#8b2c2c"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "description_pt",
+      "cover",
+      "accent",
+      "documents",
+      "subcollections"
+    ]
+  },
+  {
+    "id": "revolucao-russa-e-guerra-civil-1917-1922/formacao-do-exercito-vermelho-e-guerra-polaco-sovietica-1917-1920",
+    "slug": "formacao-do-exercito-vermelho-e-guerra-polaco-sovietica-1917-1920",
+    "parent_id": "revolucao-russa-e-guerra-civil-1917-1922",
+    "position": 0,
+    "titles": {
+      "pt": "Formação do Exército Vermelho e Guerra Polaco-Soviética (1917–1920)",
+      "ru": "Формирование Красной Армии и польско-советская война (1917–1920)"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "url": "https://mlrg.online/history/soviet-polish-relations-from-the-soviet-polish-war-to-the-warsaw-uprising-of-1944/"
+    },
+    "presentation": {
+      "accent": "#8b2c2c"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "description_pt",
+      "cover",
+      "accent",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "revolucao-russa-e-guerra-civil-1917-1922/tentativa-menchevique-de-derrubar-o-bolchevismo",
+    "slug": "tentativa-menchevique-de-derrubar-o-bolchevismo",
+    "parent_id": "revolucao-russa-e-guerra-civil-1917-1922",
+    "position": 1,
+    "titles": {
+      "pt": "Tentativa menchevique de derrubar o bolchevismo",
+      "ru": "меньшевистская попытка свергнуть большевизм"
+    },
+    "subtitle": null,
+    "description": null,
+    "source": {
+      "url": "https://mltheory.wordpress.com/"
+    },
+    "presentation": {
+      "accent": "#8b2c2c"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "title_ru",
+      "subtitle_pt",
+      "description_pt",
+      "cover",
+      "accent",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "brest-litovsk/01-negociacoes",
+    "slug": "01-negociacoes",
+    "parent_id": "brest-litovsk",
+    "position": 7,
+    "titles": {
+      "pt": "Negociações e sessões diplomáticas"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "transcricoes-arquivos-sovieticos/tema-politburo-church",
+    "slug": "tema-politburo-church",
+    "parent_id": "transcricoes-arquivos-sovieticos",
+    "position": 4,
+    "titles": {
+      "pt": "Politburo and the Church"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "transcricoes-arquivos-sovieticos/tema-correspondence",
+    "slug": "tema-correspondence",
+    "parent_id": "transcricoes-arquivos-sovieticos",
+    "position": 5,
+    "titles": {
+      "pt": "Correspondence between Bolshevik Leaders"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
+  },
+  {
+    "id": "transcricoes-arquivos-sovieticos/tema-stalin-correspondence",
+    "slug": "tema-stalin-correspondence",
+    "parent_id": "transcricoes-arquivos-sovieticos",
+    "position": 6,
+    "titles": {
+      "pt": "Stalin — Other Correspondence"
+    },
+    "subtitle": "Fontes e edições de pesquisa",
+    "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
+    "source": {},
+    "presentation": {
+      "accent": "#982d40"
+    },
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "title_pt",
+      "description_pt",
+      "document_ids"
+    ]
   }
 ]

@@ -91,3 +91,10 @@ Certified correct: illegible
 RGASPI, fond 671, inventory 1, file 120, folios 1–6.
 
 \[i\] So in the text.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The question mentions September 1931 and “three months”, although the record dates from December 1934 and another passage mentions August 1934. This discrepancy occurs in the Russian publication and is preserved.

@@ -41,3 +41,10 @@ Confere: ilegível
 RGASPI, fundo 671, inventário 1, dossiê 114, folhas 219–220.
 
 \[1\] Foi introduzida uma correção; no original, a frase aparece assim: “… de sua participação na organização, e de sua participação dirigente, sabia principalmente pelas palavras de SHATSKY, RUMYANTSEV, no passado secretário do Comitê Regional do Komsomol em Leningrado, é um membro respeitado e influente da organização”.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A grafia “РУМЯНЦЕВАВ” (RUMYANTSEVAV) consta da publicação eletrônica russa. A nota [1] da fonte registra uma correção da construção da frase; ela foi mantida e não foi tomada como autorização para alterar silenciosamente essa grafia.

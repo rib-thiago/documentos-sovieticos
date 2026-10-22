@@ -39,3 +39,10 @@ CERTIFIED CORRECT: M. Koroleva
 RGASPI, fond 671, inventory 1, file 114, folios 215–216.
 
 Published in: Roman Nikitin. Kirov First, Stalin Second. The Case of Leonid Nikolaev's Relatives. Documents and Studies. Moscow: Rosspen, 219, pp. 135–136.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The bibliographic year “219” is reproduced from the Russian electronic publication. It has not been completed by inference; the printed-edition reference requires independent verification.

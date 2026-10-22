@@ -41,3 +41,10 @@ Certified correct: illegible
 RGASPI, fond 671, inventory 1, file 114, folios 219–220.
 
 \[1\] A correction has been introduced; in the original the sentence reads: “… of his participation in the organization, and a leading participation at that, I knew mainly from the words of SHATSKY, RUMYANTSEV, formerly secretary of the Komsomol Regional Committee in Leningrad, is an authoritative and influential member of the organization.”
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The spelling “РУМЯНЦЕВАВ” (RUMYANTSEVAV) occurs in the Russian electronic publication. Source note [1] records a correction to the sentence construction; it is retained and has not been treated as authorization to change this spelling silently.

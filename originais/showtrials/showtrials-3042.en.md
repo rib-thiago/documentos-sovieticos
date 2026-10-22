@@ -69,3 +69,10 @@ ASSISTANT TO THE HEAD OF THE EKO, GUGB, NKVD — DMITRIEV
 Certified correct: illegible
 
 RGASPI, fond 671, inventory 1, file 120, folios 7–10.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The text describes another encounter during the October days of 1934 and then states that there were no further encounters after August 1934. Both statements occur in the Russian publication; the discrepancy has not been harmonized.

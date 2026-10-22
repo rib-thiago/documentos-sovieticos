@@ -55,3 +55,10 @@ ASSISTENTE DO CHEFE DO EKO DA GUGB DO NKVD DA URSS — DMITRIEV
 Confere: ilegível
 
 RGASPI, fundo 671, inventário 1, dossiê 120, folhas 85–87.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A expressão russa “этот путь будет заказан” foi traduzida no sentido de caminho vedado, apesar da tensão com o contexto. Ela consta da publicação eletrônica; não se inverteu seu sentido por conjectura. O cotejo com fac-símile ou outro testemunho permanece pendente.

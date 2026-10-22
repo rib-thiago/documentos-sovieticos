@@ -1,0 +1,135 @@
+{
+  "kind": "post_transaction_content_receipt",
+  "test_suite_executed": false,
+  "history_id": "20261021202030701731-12da7260f03e",
+  "versions_checked": 21,
+  "hashes_match": true,
+  "editions": [
+    {
+      "id": "svitlana-4898e43af1b5adac-ezhov-cover-1938-04-15",
+      "language": "en",
+      "sha256": "f57b3d4d7eea4947caba2972335abdce9f92022802d510f990dd4962676ce7b2",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-4898e43af1b5adac-uspensky-telegram-926",
+      "language": "en",
+      "sha256": "2f330e96dd123e059d134fc3584b1210ea66cb5f9b337fe9d3d8b148b1a2d1ce",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-c5ed6f188cc197d3-preliminary-peace-1920-10-12",
+      "language": "en",
+      "sha256": "f2b1c58cfe69df804c5033c5a447c04723c7934bcfec92427602ba9371fb4878",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-c5ed6f188cc197d3-armistice-annex-2-1920-10-12",
+      "language": "en",
+      "sha256": "2694eabf7b7f56acbba5e844c59db00d55ee083f6f57505a70dff672e492fc55",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-c5ed6f188cc197d3-ratification-1920-10-23",
+      "language": "en",
+      "sha256": "d5fa48ce8b78a4cc426f12b32a8e2909406d4f9fb66caaffe885af8aaae184fe",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-3d0ff93fc3e6f7ae-nakhichevan-1937-09-26",
+      "language": "en",
+      "sha256": "6ea13d594c41c58f164c5c4692a245ebc7e68a683d2698ca02c08dbf6457958b",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-887819644036e053-kabakov-1930-03-22",
+      "language": "en",
+      "sha256": "098c5284aa4f5abb85b75c488445309f256488f4a62532dd6913e15b9ec630bd",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-51788061600c4d83-church-23-6",
+      "language": "en",
+      "sha256": "f73c9d6f513e226b0eb4eabb9e8a6eaa0291eb1e32fb8cc926e4e28a31ca72b9",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-48df580719b47240-church-23-24",
+      "language": "en",
+      "sha256": "3ecf85ce540fe1b58117a1f152d45071265e77d6311840e550c59a8af1d6f4f3",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-08117b09c6cfa156-church-23-26",
+      "language": "en",
+      "sha256": "e9c7df460e9df7574145e1e1f00c5ad6f34c67615c1e73f04a03e597c38d2ac6",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-1d7db46f4dc9f588-church-23-35",
+      "language": "en",
+      "sha256": "21d7d2bd2566d07173002ecf10ae2868c7457ee51e97c29b4123facc8d8a9a11",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-d3a501ae3804db98-church-23-37",
+      "language": "en",
+      "sha256": "cd8af14843b232ad9819019f23022de70f04316af9935865d36ed4e60d89d127",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-8d1a585caa8bb31c-church-23-40",
+      "language": "en",
+      "sha256": "89a173f308a7848114f2dc5fc3e870a21f65757c5a5b0a7cc59a92eec9b03b24",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-cdb790fb4c4b3902-church-23-42",
+      "language": "en",
+      "sha256": "1777ad9827187f01704898c533c188f738f09155486cd185c228ed225caa4f98",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-b5a0f3332e560b90-church-23-43",
+      "language": "en",
+      "sha256": "a855398436b12e075e8e9b14aebf732825714a9f04d9d1ae57dcdaf5ba8274b7",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-f48adeaaa98ae3b5-church-24-3",
+      "language": "en",
+      "sha256": "f7ed7e3ef8192c5930abdaae27312ae999b535472e435b14ab78d12cd9701d99",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-542fa39d9fda7da9-church-24-25",
+      "language": "en",
+      "sha256": "d42e867fe1d79459b7c72044fbe9cbd32ed934a4e40d9de8c6cd5dba1e6f2f6a",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-62501981e8905118-dzerzhinsky-reingold-1924-06-12",
+      "language": "en",
+      "sha256": "9381a214b37f03c9ac2a239404af407b056a4c05174556230ef0adaf831ff165",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-f36bed6f0cef1d55-pyatakov-stalin-1919-10-13",
+      "language": "en",
+      "sha256": "96b8a439b9323bde5596c5789ba159d6eecdc22c45c09eec5e001df1bc91290b",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-7eaa34b7b06d2715-stalin-budyonny-voroshilov-1920-07-29",
+      "language": "en",
+      "sha256": "4376dd800639d5ebc3b44eab871de07bc11fa30505c1b6ddb75c213138c21aea",
+      "matches_catalog": true
+    },
+    {
+      "id": "svitlana-dde2d2f60490c92b-ordzhonikidze-stalin-1920-12-08",
+      "language": "en",
+      "sha256": "d2c6f550b272ad7f84639f91c1bb95293e70ef3235270057a1710bf7e33f010a",
+      "matches_catalog": true
+    }
+  ]
+}

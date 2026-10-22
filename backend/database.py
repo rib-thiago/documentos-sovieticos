@@ -14,7 +14,7 @@ from urllib.parse import quote
 from . import catalog as model
 from .translations import split_export_headers
 
-INDEX_VERSION = "2"
+INDEX_VERSION = "3"
 
 
 def fingerprint(root):
@@ -27,6 +27,10 @@ def fingerprint(root):
 def plain_text(source, format):
     if format == "markdown":
         source = split_export_headers(source)["body"]
+        # Links restored from the preserved HTML use angle-delimited URLs.
+        # Index their visible labels, not percent-encoded destinations, while
+        # leaving escaped literal source text untouched. Unescape afterwards.
+        source = re.sub(r'(?<!\\)\[((?:\\.|[^\\\]\r\n])*)\]\(<[^<>\r\n]+>\)', r'\1', source)
         source = re.sub(r"(?m)^#{1,6}\s+", "", source)
         source = re.sub(r"\\([!\"#$%&'()*+,\-./:;<=>?@\[\\\]^_`{|}~])", r"\1", source)
     return re.sub(r"\s+", " ", source).strip()

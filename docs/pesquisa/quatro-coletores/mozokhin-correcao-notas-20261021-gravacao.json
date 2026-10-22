@@ -1,0 +1,34 @@
+{
+  "saved": true,
+  "history_id": "20261021172931544115-d005bfa87be7",
+  "document_id": null,
+  "revision": "ce2e625159f2969bb44743488167752965d058dc3b92d6e0de398dd093b19393",
+  "entity": {
+    "kind": "batch",
+    "id": "mozokhin-correcao-notas-20261021",
+    "document_ids": [
+      "mozokhin-2013-v1-054",
+      "mozokhin-2013-v1-101",
+      "mozokhin-2013-v1-145",
+      "mozokhin-2013-v1-146"
+    ]
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados.",
+  "updated_documents": [
+    "mozokhin-2013-v1-054",
+    "mozokhin-2013-v1-101",
+    "mozokhin-2013-v1-145",
+    "mozokhin-2013-v1-146"
+  ],
+  "already_current": [],
+  "active_counts": {
+    "rebuilt": true,
+    "revision": "a423c82c005052ca60bc3776cbe14b7908fa29f07ea05b5e88dfae6d99492cbb",
+    "documents": 2705,
+    "editions": 3837,
+    "collections": 20,
+    "subcollections": 58,
+    "memberships": 5498
+  }
+}

@@ -43,187 +43,31 @@ ULTRASSECRETO.
 
 REFERÊNCIA À TRANSCRIÇÃO.
 
-Nºs
-
-ord.
-
-SOBRENOMES.
-
-Páginas do interrogatório.
-
-Pág\<ina\> das últimas palavras.
-
-1.
-
-EVDOKIMOV
-
-6
-
-262
-
-2.
-
-ANISHEV
-
-26
-
-263
-
-3.
-
-BAKAEV
-
-41
-
-269
-
-4.
-
-GORSHENIN
-
-84
-
-272
-
-5.
-
-GESSEN
-
-97
-
-273
-
-6.
-
-HERTSBERG
-
-101
-
-280
-
-7.
-
-BRAVO
-
-108
-
-281
-
-8.
-
-SHAROV
-
-114
-
-282
-
-9.
-
-ZINOVIEV
-
-125
-
-285
-
-10.
-
-KAMENEV
-
-155
-
-292
-
-11.
-
-HERTIK
-
-165
-
-303
-
-12.
-
-TARASOV
-
-176
-
-807
-
-13.
-
-PERIMOV
-
-187
-
-311
-
-14.
-
-FEDOROV
-
-189
-
-312
-
-15.
-
-KUKLIN
-
-195
-
-316
-
-16.
-
-FAIVILOVICH
-
-200
-
-316
-
-17.
-
-TSARKOV
-
-203
-
-320
-
-18.
-
-BASHKIROV
-
-208
-
-321
-
-19.
-
-SAKHOV
-
-21 1
-
-322
-
-TESTEMUNHAS
-
-1.
-
-SAFAROV
-
-57
-
-2.
-
-ELKOVICH
-
-242
-
-3.
-
-KHARITONOV
-
-254
+| Nºs ord. | SOBRENOMES. | Páginas do interrogatório. | Pág\<ina\> das últimas palavras. |
+| --- | --- | --- | --- |
+| 1. | EVDOKIMOV | 6 | 262 |
+| 2. | ANISHEV | 26 | 263 |
+| 3. | BAKAEV | 41 | 269 |
+| 4. | GORSHENIN | 84 | 272 |
+| 5. | GESSEN | 97 | 273 |
+| 6. | HERTSBERG | 101 | 280 |
+| 7. | BRAVO | 108 | 281 |
+| 8. | SHAROV | 114 | 282 |
+| 9. | ZINOVIEV | 125 | 285 |
+| 10. | KAMENEV | 155 | 292 |
+| 11. | HERTIK | 165 | 303 |
+| 12. | TARASOV | 176 | 807 |
+| 13. | PERIMOV | 187 | 311 |
+| 14. | FEDOROV | 189 | 312 |
+| 15. | KUKLIN | 195 | 316 |
+| 16. | FAIVILOVICH | 200 | 316 |
+| 17. | TSARKOV | 203 | 320 |
+| 18. | BASHKIROV | 208 | 321 |
+| 19. | SAKHOV | 21 1 | 322 |
+|  | TESTEMUNHAS |  |  |
+| 1. | SAFAROV | 57 |  |
+| 2. | ELKOVICH | 242 |  |
+| 3. | KHARITONOV | 254 |  |
 
 ULTRASSECRETO
 
@@ -2776,3 +2620,10 @@ RGASPI, Fundo 17, Inventário 171, Dossiê 208, folhas 2–188.
 \[59\] No texto, incorretamente: “изуитической” [izuititcheskoi].
 
 \[60\] Eis como I. Kotolynov descreveu essa conversa em seu interrogatório de 12 de dezembro de 1934: “Numa das noites em que estive em Moscou, nós três nos reunimos na casa de Faivilovitch (Tarasov I., eu — Kotolynov — e Faivilovitch). Primeiro trocamos impressões sobre como cada um havia passado pela depuração partidária; depois a conversa girou em torno da direção do partido. Durante a conversa, todos fizemos os mais hostis ataques contrarrevolucionários contra o camarada Stalin. Em seguida, não me lembro como ocorreu a transição, mas discutimos quem poderia substituir o camarada Stalin. Mencionou-se que Kaganovitch, embora não fosse mau organizador, não gozava da confiança do partido e não poderia ser admitido à direção partidária. Nessa conversa sobre a substituição do camarada Stalin, Faivilovitch mencionou Zinoviev, afirmando que ele — ZINOVIEV — poderia tornar-se dirigente do partido. Além disso, levantou-se a questão da possibilidade de aproveitar Bakaev, Evdokimov e Kharitonov em cargos de direção no partido”.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> No HTML preservado da publicação de origem, a chamada #_edn52 não tem elemento com o identificador correspondente. A chamada e os textos das notas foram preservados; não se substituiu o destino HTML ausente por uma correspondência inferida.

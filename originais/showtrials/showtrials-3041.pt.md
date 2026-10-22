@@ -91,3 +91,10 @@ Confere: ilegível
 RGASPI, fundo 671, inventário 1, dossiê 120, folhas 1–6.
 
 \[i\] Assim no texto.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A pergunta menciona setembro de 1931 e “três meses”, embora o protocolo seja de dezembro de 1934 e outro trecho mencione agosto de 1934. Essa divergência consta da publicação russa e foi preservada.

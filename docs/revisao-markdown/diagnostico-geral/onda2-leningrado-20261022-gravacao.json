@@ -1,0 +1,108 @@
+{
+  "batch_id": "onda2-leningrado-20261022",
+  "editions_changed": 51,
+  "issue_outcomes": 17,
+  "documents_metadata_changed": [],
+  "closed_issues": 11,
+  "queue_before_sha256": "5dc43461b4c80ebb51e181cb746555f6562dc91334b48915351ebaff7d0f1c45",
+  "queue_after_sha256": "b4434668bd4b860fdd3594dfbf63c1dbfa60e48edc89b8abbb2aec9be356ff6c",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R2-divergencias_idiomas-0008",
+      "result_file": "temporario/revisao-onda2/leningrado-candidatos/R2-divergencias_idiomas-0008.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-leningrado-20261022/bfb390f85ce66b545f218cae0565c32c163c06797e5120ecc95b5d073a013447-R2-divergencias_idiomas-0008.json",
+      "result_sha256": "bfb390f85ce66b545f218cae0565c32c163c06797e5120ecc95b5d073a013447",
+      "editions_prepared": 36,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2717:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-2723:ressalva_traducao_leningrado",
+          "outcome": "parcial"
+        },
+        {
+          "key": "showtrials-2782:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-3041:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-3042:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-3043:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-3064:ressalva_traducao_leningrado",
+          "outcome": "parcial"
+        },
+        {
+          "key": "showtrials-3112:ressalva_traducao_leningrado",
+          "outcome": "parcial"
+        },
+        {
+          "key": "showtrials-3131:ressalva_traducao_leningrado",
+          "outcome": "parcial"
+        },
+        {
+          "key": "showtrials-3172:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-3175:ressalva_traducao_leningrado",
+          "outcome": "parcial"
+        },
+        {
+          "key": "showtrials-3176:ressalva_traducao_leningrado",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-divergencias_idiomas-0009",
+      "result_file": "temporario/revisao-onda2/leningrado-candidatos/R2-divergencias_idiomas-0009.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-leningrado-20261022/ee4c599bd38725cf3b52f9d950d86722af4082891785a15318059a2070cf8248-R2-divergencias_idiomas-0009.json",
+      "result_sha256": "ee4c599bd38725cf3b52f9d950d86722af4082891785a15318059a2070cf8248",
+      "editions_prepared": 15,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2685:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-3020:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-3022:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-3129:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-3228:ressalva_traducao_leningrado",
+          "outcome": "ressalva_da_fonte_preservada"
+        }
+      ]
+    }
+  ],
+  "saved": true,
+  "history_id": "20261022030537438381-16089cc608b5",
+  "document_id": null,
+  "revision": "a3aa7b848e777a9fec20480a4770fcff8a2edca11824d4646884900c9d2103e7",
+  "entity": {
+    "kind": "batch",
+    "id": "onda2-leningrado-20261022"
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}

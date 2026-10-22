@@ -24,8 +24,8 @@ IV . С этим заявлением я в присутствии секрет�
 
 V . После этих переговоров с тов. Енукидзе мною копия данного заявления была через члена Комиссии по чистке т. Ермакова передана уполномоченному ОГПУ Ленинского района.
 
-Е.Н. Васильева  \[1\]
+Е.Н. Васильева  [\[1\]](<http://showtrials.ru/obyasneniya-e-n-vasileva-v-kpk-pri-czk-vkpb-m-f-shkiryatovu-o-reagirovanii-na-signaly-o-neblagopoluchnom-polozhenii-v-pravitelstvennoj-biblioteke-vo-vremya-chistki-1933-g/#_edn1>)
 
 РГАСПИ Ф. 671, Оп. 1, Д. 103, Л. 48-50. Автограф.
 
-\[1\] Так в тексте.
+[\[1\]](<http://showtrials.ru/obyasneniya-e-n-vasileva-v-kpk-pri-czk-vkpb-m-f-shkiryatovu-o-reagirovanii-na-signaly-o-neblagopoluchnom-polozhenii-v-pravitelstvennoj-biblioteke-vo-vremya-chistki-1933-g/#_ednref1>) Так в тексте.

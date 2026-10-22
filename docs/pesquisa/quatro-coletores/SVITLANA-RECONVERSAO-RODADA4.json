@@ -1,0 +1,951 @@
+{
+  "generated_at": "2026-10-21T20:14:18.709636+00:00",
+  "network_used": false,
+  "changed_pages": 118,
+  "changes": [
+    {
+      "candidate_id": "svitlana-96f74074dd13ad46",
+      "before_sha256": "ea9281e14c0be31713c3cbcaa284eec2740f49f2a77d6e4d898a8ca15540ea75",
+      "after_sha256": "984b4c6dd0eca8d6fe58f54376f5142091148f39fffee9c13f28ba4c2b81ff17",
+      "before_characters": 33757,
+      "after_characters": 45003,
+      "raw_sha256": "012c0d7a51e510b01450f68c49cc91334f3ddd89ceaa56a79b75d628d4349ce2"
+    },
+    {
+      "candidate_id": "svitlana-4421990b3d343e4d",
+      "before_sha256": "df09be045cf46bb38e6223713a4bcf5646c5f8a86050062bc9dc85e07717d9f7",
+      "after_sha256": "d776b65ac5f620caec257ebc809b4394f544709bf8daf694625afe3d55e836d5",
+      "before_characters": 15372,
+      "after_characters": 44427,
+      "raw_sha256": "920f43ce2b62bd5703af6dfb5ddb4376aa5e51202a33a0872dfbe17ccc5c9a4d"
+    },
+    {
+      "candidate_id": "svitlana-a90c9fb5f5447649",
+      "before_sha256": "3a8782756fa3a85be97b1cb8af7c07322a6b8a7006ce62d203132d4520f990ee",
+      "after_sha256": "ff8ea002a52163b70056a5b2fb22ae84622288c2ba6c2173a51a2971fd6eb3f3",
+      "before_characters": 11537,
+      "after_characters": 21557,
+      "raw_sha256": "8e809ea2708901e4dafbdb3daa45210b382f7986cf4e14975140e0d62e66a9a3"
+    },
+    {
+      "candidate_id": "svitlana-1e0f7b1edf424f0d",
+      "before_sha256": "f4109a4df73733faccfdcb692a39c726f3f7b4e7eb0f638f1a68734d361cd9b5",
+      "after_sha256": "1a341d4784274584d3846e24f2d448379e1549ba68b4428efeb440bd6a2d6d4b",
+      "before_characters": 11053,
+      "after_characters": 16133,
+      "raw_sha256": "1bfadb06762583240de30efdc1f8d24415a437589db29698c6672f4a253643e4"
+    },
+    {
+      "candidate_id": "svitlana-95b78d41e40f579f",
+      "before_sha256": "0c3fb89b533fbea1024eb33a548ad1d91c7ec4e161ef23678b4da3c34e362706",
+      "after_sha256": "f6198fd6136416774676a64faa495ee89838543e0431815d7b5ea4086809c38b",
+      "before_characters": 14408,
+      "after_characters": 46680,
+      "raw_sha256": "206d5d30a9944dfc9968ddbdb8f4b9eac8063ae9aeb9e77822d349d207325436"
+    },
+    {
+      "candidate_id": "svitlana-31fed31b5f9e560c",
+      "before_sha256": "195c1c0f557b23a150a72f50b0547b645ce63b7d186a863338b4986d409a1ba0",
+      "after_sha256": "aa2334ba4e1f4261e34a36156212e74ca48bf3d7c37adf40e106abf376441f4b",
+      "before_characters": 10585,
+      "after_characters": 13009,
+      "raw_sha256": "c948b4e6eb1fe5f8de2de6459023a7aaa4b331d0e1a7ed659fa25d50c9776186"
+    },
+    {
+      "candidate_id": "svitlana-315b95e82cfe13e6",
+      "before_sha256": "ff985365a108c051e95b7b87086753c0b021b9c8e106d2ce6e95b3e525b281f7",
+      "after_sha256": "f085d1920c0baddfbddcea2a388923844c1c3d3afa2dc31cba920a01da49dcc8",
+      "before_characters": 8766,
+      "after_characters": 36571,
+      "raw_sha256": "0f60f7bd0896af636e5ffdf40ad3db8262696a92cc488ad434d7276a9b0b6436"
+    },
+    {
+      "candidate_id": "svitlana-2fb359bf867293ca",
+      "before_sha256": "354c34d63446e362160c72167fbb33fae54ecf4c035db5be08e7532031dfca59",
+      "after_sha256": "88a3a66907ae7ed99ed5308eb16b7cc3b5f79f0dd6bbea7285a13f5eb45d65dc",
+      "before_characters": 46234,
+      "after_characters": 194806,
+      "raw_sha256": "6e468ce60f712dd7687f24aa2062de336e5a25245c04972dff6de7d36981dc0c"
+    },
+    {
+      "candidate_id": "svitlana-168959fee0b19811",
+      "before_sha256": "c7033a5dec81cc45be970db492e62b6b2b03f2845e86c66175c25a32915bdf78",
+      "after_sha256": "0711dd3ebcd4ce3285eeacde62c6d231c81fe425c3544e3638c874644273a44e",
+      "before_characters": 195083,
+      "after_characters": 251432,
+      "raw_sha256": "363eaba5a6c7ef58fb075155fdc9b9e52e14d5fcac6333855053c8a7bfb23ffc"
+    },
+    {
+      "candidate_id": "svitlana-2a95093271f3930f",
+      "before_sha256": "1c5df5afc6de784609928b4caf06ca084bc514bbf968b90e0b76a85572c9532f",
+      "after_sha256": "e57f7d493fc4f742dbf192bb69647ba9c33ea9363a2ca5f20926b8f209d3a79a",
+      "before_characters": 83450,
+      "after_characters": 274501,
+      "raw_sha256": "7d97a2ab7e21b434db03f1f0d56ff6d4763d614f0e42cfb017985a9c54dc7c81"
+    },
+    {
+      "candidate_id": "svitlana-e78919fae206ebf6",
+      "before_sha256": "764b719924d5ed5462dca4fef1e26fbe1b7c5fbb885ee29e613da2a49b9774b0",
+      "after_sha256": "662c1e12703bac4acf0d82a4f4196b2cc72c36c1b495547bd000353ba7881388",
+      "before_characters": 160213,
+      "after_characters": 220508,
+      "raw_sha256": "adca39cb496fac7bf400a1db952cca1200b4821624a4d3ef6a951bc831b6c7c6"
+    },
+    {
+      "candidate_id": "svitlana-6a15bad5710faf00",
+      "before_sha256": "136e2614c890d3ab12079d0847fd6ff80dca2174ebc8a6616eebeba96898a899",
+      "after_sha256": "38b0720d73827ad17cd3d5f90e1bd6a31a11a8a4f27731e6402acd43c9e54461",
+      "before_characters": 246687,
+      "after_characters": 326979,
+      "raw_sha256": "cb282b199183ab3c496609708abb2382c3bf7ccb5b09b217d69fdb27531f4ff4"
+    },
+    {
+      "candidate_id": "svitlana-dbfbb1184544ea12",
+      "before_sha256": "badbd967372bb692a66c165f8866ee1c4f98e199afa51d85575b864ee22c79a3",
+      "after_sha256": "a1d3b5f833dc1583bc561e7f4ace9aca9f22f975c9e4d0c78992225567288a2c",
+      "before_characters": 286132,
+      "after_characters": 357291,
+      "raw_sha256": "a90532447d0c4e808ff7bf55467ada3701e6cd342d234107fb8f920c92ae4434"
+    },
+    {
+      "candidate_id": "svitlana-da1f3c28dbb56236",
+      "before_sha256": "2ec424473665a6c63c0476677f4f7d50806de2716b3a60a91db4733537f9cb53",
+      "after_sha256": "cfdb4f6e2c4b3583f5953281b140f451823f45a44d7df410a834c3a19c672d25",
+      "before_characters": 197,
+      "after_characters": 245228,
+      "raw_sha256": "4904b0258a2ce718bbea491576ae2c2c742646ac5608445b84b232bc30deac66"
+    },
+    {
+      "candidate_id": "svitlana-4c9dd0fc68efc9c2",
+      "before_sha256": "c36ca36ab873bccee1f665494dd2d5fe38542821ca8a463ae10c78254bbe11b7",
+      "after_sha256": "1718af311ac3218794c444ac4ddcf59b9c76b51ed29a998d26d87c9f5faf8c55",
+      "before_characters": 193434,
+      "after_characters": 374742,
+      "raw_sha256": "78a8cf8a7f1ca0d0e80df3319738f926096844a5e9e6fc7a8c888af371171fbd"
+    },
+    {
+      "candidate_id": "svitlana-e3b418af20c5a48d",
+      "before_sha256": "e763b3abd43bfa3c4d0c2d1692b20c382896757dfecca85867a35935c5820d36",
+      "after_sha256": "52f935536bf774a4bd55929eeef77fcf95a95de6789f8fefe21f858066ecf6dc",
+      "before_characters": 70062,
+      "after_characters": 237194,
+      "raw_sha256": "a40ac8956c8a2a2c2b7f8922d52be1634fdab8d1ba5b2df4c79731ad4a40253d"
+    },
+    {
+      "candidate_id": "svitlana-c5ed47a5a49778a0",
+      "before_sha256": "d626539e74b9d1b2dc6058961038477e784f872f35ca4ba90db0211329330d43",
+      "after_sha256": "b7731090dfd0dcf94801715fe162dc22b10406f7c18771890729f5145974c055",
+      "before_characters": 128900,
+      "after_characters": 209000,
+      "raw_sha256": "58c143c75afca0cd30f979f2d8be78bbdc39a180f76f39c8bcd47eacfb138774"
+    },
+    {
+      "candidate_id": "svitlana-b75f044ef047d394",
+      "before_sha256": "308b3c870f278e6e0a73bd04c65a8c96d457a3ae962b0e650d7c2ffa34ce5125",
+      "after_sha256": "4dd105ae6e547a4fee4513858d38481365a34d9223e0b4049cbcb667c03a0da9",
+      "before_characters": 150834,
+      "after_characters": 232117,
+      "raw_sha256": "d0ee34f2b43f20b6d1a93ebecee80e1ac8df66b38746c5bba545beee9a858418"
+    },
+    {
+      "candidate_id": "svitlana-4447f9bba31b1cd4",
+      "before_sha256": "43fd60168a10a16123cd0eec04a99694ff8fb6aceb09f34bd1c800ce1863134b",
+      "after_sha256": "d7373857f2137bd6db58545f255ff0fd950fe3c07f98ad7ccb8ea3f955286cd2",
+      "before_characters": 12954,
+      "after_characters": 164229,
+      "raw_sha256": "272f3a4682805f44ccb7c122b39e142dd2f3cf39ae4535ed8253a35d6098f450"
+    },
+    {
+      "candidate_id": "svitlana-fbeeece6a42323d2",
+      "before_sha256": "08c4a948e775d6dd67181fcdb2517d647ac39fb9ab1012dc702c42f5a87c9116",
+      "after_sha256": "b45b2b2f1724f49aff67834a146cc3b22fc6441a5bebb1f68220f6199c41cd85",
+      "before_characters": 23416,
+      "after_characters": 136719,
+      "raw_sha256": "0fb2f85b0fdabb1ff96dce96e00b07b03e1679b550d2bf330ec18234820e63b5"
+    },
+    {
+      "candidate_id": "svitlana-1e34ba6e62b5f3ee",
+      "before_sha256": "cc1e575f6b760ec0af4c11640b1ab5807a6d4f8d28767986a6ebff6b24abe69e",
+      "after_sha256": "a7157e4710ec65682ab93094090973d379072d2f1da9784a27434189a31153b6",
+      "before_characters": 146963,
+      "after_characters": 197556,
+      "raw_sha256": "facff3b4a2ad14868b3f6d75d93067e1c7c07c0671aa799744af6e9109bc6ac4"
+    },
+    {
+      "candidate_id": "svitlana-4ad77397c3c6d902",
+      "before_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "after_sha256": "399c3dccd409712796788a6293aa65b7fe432ad62a809014fd19874a418f45b8",
+      "before_characters": 1,
+      "after_characters": 122634,
+      "raw_sha256": "f8839c41312569fc0d43f7e64ba85d55ee3c14467f14614b04b983bcb4d41878"
+    },
+    {
+      "candidate_id": "svitlana-cfe31a9361707830",
+      "before_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "after_sha256": "6b593a746150c3566eb3de3c0a3cf3cf06a295e89505fa6e24542544156af268",
+      "before_characters": 1,
+      "after_characters": 200577,
+      "raw_sha256": "077ee3097854fd4af34818c4705007c905b998674247dc7d04bffbb5cc7eb1a1"
+    },
+    {
+      "candidate_id": "svitlana-7728bf1cd013e0a2",
+      "before_sha256": "6b3f442efda4bb71d4da5e7612fdde6b96a938dc12df8e86db0f97a547f098a5",
+      "after_sha256": "3156e055ae0394ff31d6ca20e82db8ccff42c8a3290932b04668ca6c9dfe2ae6",
+      "before_characters": 49141,
+      "after_characters": 183515,
+      "raw_sha256": "deeb2b1bc14fb0da6a1ff3d1332707c923a77c58029836922bdbc5a3eab3095f"
+    },
+    {
+      "candidate_id": "svitlana-992885d2bacb643c",
+      "before_sha256": "303d26e96406ce3466b64e31878557cbdc2a03ac8e7ec49f1c10abf38c9a7f4a",
+      "after_sha256": "379dc27fd58b0b2e3b54166ff1997d1cfa3dac9a09a7222e732646fcb69321d0",
+      "before_characters": 56343,
+      "after_characters": 150744,
+      "raw_sha256": "a2ebc0f6117ef870cf78d4f45cae8683cbed767e68ed9ebbc564a69132868527"
+    },
+    {
+      "candidate_id": "svitlana-18bb6eb8450c0fc3",
+      "before_sha256": "7c016bfd4e849732a5e4f9ec98ab138d5f90b14c0df9bf9b483ec916fb0a2ad2",
+      "after_sha256": "edf6a0d431a1c81768268dcf81f5811fde2a6a9b8d57c6736b518c0b01f01bbc",
+      "before_characters": 48385,
+      "after_characters": 174783,
+      "raw_sha256": "d418276df1bb7d2518c40aac8723bb6a14cd18521dbc0ef9bbe9ccd11a3f2acc"
+    },
+    {
+      "candidate_id": "svitlana-eba6c95e8d52ea00",
+      "before_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "after_sha256": "931bd549e7d5427c4464ba99d280e5621dafacf0f5a01ddda4a12d5b03701454",
+      "before_characters": 1,
+      "after_characters": 146270,
+      "raw_sha256": "906dba2b45cf1962d163ced5c34a8d06dc44172ce34bf84631f43f9ba323efff"
+    },
+    {
+      "candidate_id": "svitlana-a462c55c23546a7c",
+      "before_sha256": "a01c43af1c133e2244bb3ea29369664602fc34eea9803cdfd8252c26070af10c",
+      "after_sha256": "726d675a52b25ae5eb24627c9fb905f93325cdb1ed437abad580b7934995a437",
+      "before_characters": 28325,
+      "after_characters": 261980,
+      "raw_sha256": "1b44f96fe9987a134f27e0a2c01ecc53ea9c4c18438abeb95d1441b7a174e004"
+    },
+    {
+      "candidate_id": "svitlana-9d52de689679e296",
+      "before_sha256": "14a44b966c2eedc55520768062840d51dc026db348c00b0782baa9b7e5f29c65",
+      "after_sha256": "9b2a871b630b70d8882134591de6a42472c9b0739190eb1b1624499629e5b493",
+      "before_characters": 111143,
+      "after_characters": 253149,
+      "raw_sha256": "d59f42566284ba734025f558144c133a1b87c5a5551111b6aedb347cc148eff9"
+    },
+    {
+      "candidate_id": "svitlana-75e7a9a0ec96f94b",
+      "before_sha256": "845c8b914055b0c3d24d1deed0b7e03e8620a8762d1c743abd39cf60d00aba36",
+      "after_sha256": "516f49f98b1cbee51aca252457d7db8e5d98c7c97e5def7f5891f70afd229b04",
+      "before_characters": 100683,
+      "after_characters": 149506,
+      "raw_sha256": "40658ad61113ffc2e8898fe466c9116358aee8ecac5eb6f6dff3280e331eacef"
+    },
+    {
+      "candidate_id": "svitlana-e853a29f60578a0b",
+      "before_sha256": "cea9d8990cf2ef77b7af43bba8d2ad1309c83149aec72e3dbca01aa47cbeb8ab",
+      "after_sha256": "21f87c41e46c3066da5562d5bc827fc30172d680cb951574f53ec0d49ec164a6",
+      "before_characters": 76145,
+      "after_characters": 95277,
+      "raw_sha256": "4a7fbc0e3c00f973864003dbf0f65f023b637ae0913ca8f71157632cf410771f"
+    },
+    {
+      "candidate_id": "svitlana-abd9ec82f39c088c",
+      "before_sha256": "e359169bf74bb24570f8b7bac3e3d3785a848aedaea4aecfe004bf800662f3c8",
+      "after_sha256": "f810f798c835fff0a4385d8480f15ec638b429c3ddaf68efda2c11398512a56c",
+      "before_characters": 18565,
+      "after_characters": 138279,
+      "raw_sha256": "e07deff98998939bf0a996b03a98149bc16048da1e44316e36277e4427eb7bb3"
+    },
+    {
+      "candidate_id": "svitlana-a6c809f2d5aab2b1",
+      "before_sha256": "4931e05d5e5f1bf82314ea558cd6393b362a88d74cbd0c181303344b280f91e8",
+      "after_sha256": "8215d975558ab2b8973cc806675b326da3bf3e01635001e86750f605f6854b2e",
+      "before_characters": 1512,
+      "after_characters": 27126,
+      "raw_sha256": "be18497591bc220d77dd9cc5e09d211639e80ca692ded58fc6b054ed35573c57"
+    },
+    {
+      "candidate_id": "svitlana-4369f72063e25ad1",
+      "before_sha256": "99403e59e152bced2acf43246aab2c5fbcc6c4d1ecdcb19a8f633f69df9bea55",
+      "after_sha256": "33890b2c9221aa588108db43d427f49225a15ea2fb628b6a58ac33bdfb5ac2c8",
+      "before_characters": 15153,
+      "after_characters": 50228,
+      "raw_sha256": "ba7d6fcdad3bf99854ffbc515796eb82396376beadc67aea45864bf12743d37b"
+    },
+    {
+      "candidate_id": "svitlana-e6e6f2cf899d280c",
+      "before_sha256": "e738a367191009bffb1750177fcbe5791ef5bb0183bdde6f82142b5a2cdf6a20",
+      "after_sha256": "4145bb1acc4a70b952d3506451b55895a0c0e1b00249f6e1e937fe8f6b267ddf",
+      "before_characters": 3292,
+      "after_characters": 11483,
+      "raw_sha256": "1834225fcdb2dd311c8970851048b25d7c58602aaaab56a3badec18fab200097"
+    },
+    {
+      "candidate_id": "svitlana-059b8fa3e518a235",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "9c06b7d518d5c2dbb8b76bd94b7ceadc81be2547f07452f385739f4f89ad05de",
+      "before_characters": 38,
+      "after_characters": 1370,
+      "raw_sha256": "32b32ba912b5e8560f75c75be2f2e5d27607748488e27c5a8e5d62a5a8c4cfbb"
+    },
+    {
+      "candidate_id": "svitlana-50e2d0a9e6cd689c",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "9bc770872fa8ab0eaf639653ca419f81fee0b8c6794eb4345926e24eee6351f5",
+      "before_characters": 38,
+      "after_characters": 1359,
+      "raw_sha256": "9aa82220e26ae32c4f211317bab35282d34dda45159a4492290cf44ebb30c8b1"
+    },
+    {
+      "candidate_id": "svitlana-66dd37b295c92d15",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "418960634485e50ec75625421b2a40b4bf685ae8a9e6c6b77edf421d62f6261f",
+      "before_characters": 38,
+      "after_characters": 5154,
+      "raw_sha256": "7ac106a4287833b7891ba6552c2fbd71eb313dde8817b5ab2c186e391fca3278"
+    },
+    {
+      "candidate_id": "svitlana-1b4999ecb115acc5",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "e179e6a2754f74cb753a9151f6f7b12aa4127a8aeb4e84c62ec8231509362ed9",
+      "before_characters": 38,
+      "after_characters": 6064,
+      "raw_sha256": "831c608bf7313f35005cfd389d873dc1d64750a403eb952d0d6a306c05ae98fb"
+    },
+    {
+      "candidate_id": "svitlana-2e720eb570644084",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "3c45345e7b71741f0ff288aef672a4b05fa364ce9129ac9103383c0fba88b550",
+      "before_characters": 38,
+      "after_characters": 2367,
+      "raw_sha256": "59bb3d2983c873a92aa046e8b2c4a43183eab3b2bdfca3991f58fe6401418dd6"
+    },
+    {
+      "candidate_id": "svitlana-a0c4c36d387ab891",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "b995c5f7d1a38a82e1581b7720612b307f5c864d5bee5d7d170c35f2399997a2",
+      "before_characters": 38,
+      "after_characters": 3043,
+      "raw_sha256": "c6be3461503371b9407c76997b3723e45b3a6654747fd2c8a304347c1238c43b"
+    },
+    {
+      "candidate_id": "svitlana-ecf39b650afa497a",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "bbe3c3090a86508dbc858f2036448d88b4a1bfaff841bb7a8375ce34e902b039",
+      "before_characters": 38,
+      "after_characters": 36201,
+      "raw_sha256": "84484dcb7c521add4566b34962a942d88b273d81604e74c5d5758ed2a9e334bc"
+    },
+    {
+      "candidate_id": "svitlana-766d737b129cd181",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "9c8a22e0cb0d57163240b46b9837f809843c66ff4ae874f7fa228342aa9cdcfa",
+      "before_characters": 38,
+      "after_characters": 3068,
+      "raw_sha256": "952d3262b29091f78b362d6c43c58e801abc6edb346297882e5c58695e873e7e"
+    },
+    {
+      "candidate_id": "svitlana-32b54bb9eb2ec138",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "2dd540df475d82e2c5e8134090004c77138ceb16a15ed75ce1912b8f37975764",
+      "before_characters": 38,
+      "after_characters": 11944,
+      "raw_sha256": "b781dd45fcbc719e233df429bdf6e2f9710d4bd3e0c8b4fb5454a411f8a49fff"
+    },
+    {
+      "candidate_id": "svitlana-99b064ea1355b5d4",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "d191f84a69bfd37cd9cc6d1c4f4831e5681f0fe5e6e38c9f666b69fedc6390ed",
+      "before_characters": 38,
+      "after_characters": 1699,
+      "raw_sha256": "ce1070cb57e37f41373dcf3b4cdfc4912d3591adabef050a54498f5bca816331"
+    },
+    {
+      "candidate_id": "svitlana-88107d4ccb3561aa",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "79847758cdd15f2226316ca0f9130db2adcad81deab88ffe2ef9f74e4bd2ea6f",
+      "before_characters": 38,
+      "after_characters": 9447,
+      "raw_sha256": "cee04fb4345ae45910c1eef8dbddfef5b9030c19aeacb25a9dd4892424f4edbc"
+    },
+    {
+      "candidate_id": "svitlana-935a3538345b3135",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "cc5236808ec2c9bb24ad1d9f471c9db862a0124da607c41e4478b0c85b2f55de",
+      "before_characters": 38,
+      "after_characters": 1300,
+      "raw_sha256": "8c667531fa7ada1fd3fa4fd8a7588070e9237efcbe589cb1bc35b48d49840389"
+    },
+    {
+      "candidate_id": "svitlana-0ef4812e4bbaceb0",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "b5632f83a918a73362d08dcc79ae842dc3cea5ce1b499406243df84b8226026e",
+      "before_characters": 38,
+      "after_characters": 3400,
+      "raw_sha256": "c6b283b321c8a35759d349407ca1a61b432df01c2ac83f6163b273b185951f76"
+    },
+    {
+      "candidate_id": "svitlana-f92c766908b0ada9",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "7f09c6c1552d3e22c08f628d434cfeef36ac21ee1e7acd32f96cebca07700168",
+      "before_characters": 38,
+      "after_characters": 5526,
+      "raw_sha256": "1a2d0ca04945dcd716f52d1faf4fc21a07cfc4bff6d7e0320b1b3d36145708e3"
+    },
+    {
+      "candidate_id": "svitlana-92a368443be6c903",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "1710c5c90067fef40e66e369021379a5eb82c769069cd6d71dbe38cf5e2a031f",
+      "before_characters": 38,
+      "after_characters": 1649,
+      "raw_sha256": "46ca51400ebcb8dfe150f9b64d710216dccc793fb527ffce03964154db531ec9"
+    },
+    {
+      "candidate_id": "svitlana-b48bac0337e36128",
+      "before_sha256": "d7997f12d511a46fd6f6fd665c9d1768219e526736e49b8c612ec6f3861d8b8e",
+      "after_sha256": "a9db767e6f9fec9a5505bd3f9c1fbf824cf9d34eb42ffb673baa56d2c5f02302",
+      "before_characters": 38,
+      "after_characters": 4021,
+      "raw_sha256": "e617685f074415bcf89490e5ebe54a0125e66ceb96735631822acbfae1506236"
+    },
+    {
+      "candidate_id": "svitlana-08117b09c6cfa156",
+      "before_sha256": "335748213340290ea666fea74e9ed66a0194a1b6c53e588ba49eaac2731b98a1",
+      "after_sha256": "fbc9daa4b4dc336f84bc6a852d8ee134c8ec497792904ab95371291291e8567c",
+      "before_characters": 747,
+      "after_characters": 1026,
+      "raw_sha256": "26a06b44c1e30975716f8507c5571762e3efc682545c1294e8de0eebccbe4501"
+    },
+    {
+      "candidate_id": "svitlana-f2caf61423c6d8bc",
+      "before_sha256": "33e6c6bcf7ae8c3b9e6b45e2dd3730bcb4dfc675373add2a46434322fa5fb921",
+      "after_sha256": "0afe9223f6b203fc6053784b41b0123e202e383925a5694213e0732e01bd985a",
+      "before_characters": 23632,
+      "after_characters": 60532,
+      "raw_sha256": "af1d00dd9646978f0a06ce267d937c9d19e87d4e424efb39ca03bf3bd6dfd7a3"
+    },
+    {
+      "candidate_id": "svitlana-deac581081a7d727",
+      "before_sha256": "5f7ebd8f965c50f89520049637fab321b658c8188abc054ecf00d60182924a9a",
+      "after_sha256": "00450053e28ce4b1433935815c8fd2de9c1ba1fe853a500e32f26d410e50477d",
+      "before_characters": 1958,
+      "after_characters": 2474,
+      "raw_sha256": "8e58287c295ff1003d2eeff4a46cb0d42072d042b3fba38b289159c85ac8248c"
+    },
+    {
+      "candidate_id": "svitlana-2d7c02d72925a8e7",
+      "before_sha256": "f438d8d6c1aecf07fb38f6504d43dfbdcc43d14eab7af6335066651d37568e1b",
+      "after_sha256": "1f44c896b3a9892a951c4a2db608e75499ed51b6b33e56da2a15ba36152f7913",
+      "before_characters": 1119,
+      "after_characters": 1667,
+      "raw_sha256": "c33a283a1baaabd1c3a5efd1ecced41c390d7c994992441bdb6e4e2baf85dc93"
+    },
+    {
+      "candidate_id": "svitlana-256b11066c020dfd",
+      "before_sha256": "a48837a69ccba8720ac6ca4ad78cb1a044fe9a4f0b209c3f214674a0df5f130f",
+      "after_sha256": "4527bb9c6ae61003114f373de9d67416d16b638782c408d1714697c852869871",
+      "before_characters": 1070,
+      "after_characters": 1618,
+      "raw_sha256": "a773fca6050772143aeb7818aae0d1faff043bdba955631c21197e6780647f73"
+    },
+    {
+      "candidate_id": "svitlana-9dd06fb4aa7925e7",
+      "before_sha256": "6ca88a5ba59fa03a5e5f70b980fcff62a6e2709712f05606c1e0e7a51a2bb90b",
+      "after_sha256": "89ff60cfaef73984752a5e18fc0e622b557a4246079ed0c202a420837e176501",
+      "before_characters": 2184,
+      "after_characters": 2760,
+      "raw_sha256": "d3e6beac034e6948ef7367de64a4fa06c9b1275624a0e71366d9e89b11bf9116"
+    },
+    {
+      "candidate_id": "svitlana-897ac765ff0cb05d",
+      "before_sha256": "ea79ba0011eb8cd7354fa8bc669bbee1c1b6e7e95dd6a1f6c9705693a0f88200",
+      "after_sha256": "14de36ec19e4dcd88d84aa79da2e921604763ded267e4e026a3f3cc290553ff8",
+      "before_characters": 1037,
+      "after_characters": 1514,
+      "raw_sha256": "e5a82f667ca3e1b22d36300e57bf47a10446fa5122f5473f0b30ad9096fd2530"
+    },
+    {
+      "candidate_id": "svitlana-dab38626c245a4cb",
+      "before_sha256": "6ced4d69acd8d347d16573b52d70c2289d42095a3a96d0bbcf10e8f44e0d922c",
+      "after_sha256": "0fa0bd818e82e9707481c04b5bfc8457c33aa0e22550a56f03cfc605f938064a",
+      "before_characters": 2416,
+      "after_characters": 2926,
+      "raw_sha256": "b046c50184efd21c2da1f5856eea7457fb87f4a7d6570e7ec04592cce1505754"
+    },
+    {
+      "candidate_id": "svitlana-eba66764caf34aee",
+      "before_sha256": "b3a184ce93ff7f5d18a09b92a3de18f787d82572aeffd4df4873776281fb2b8e",
+      "after_sha256": "8874fa559ed632fd20050e6f18535867dea4ea630b1b69d12ee5267df4fd7311",
+      "before_characters": 2092,
+      "after_characters": 2695,
+      "raw_sha256": "f83c83e2aa5b8ea29a97bba8c2c3999b20787d31322e4349f38143b6ed226362"
+    },
+    {
+      "candidate_id": "svitlana-080ed09ed51bd071",
+      "before_sha256": "b5de086dbf6dd3b16ce2496e1cdcde7648daca725f6dc8101294ee98169392bd",
+      "after_sha256": "986033b62fcc152830782885fbd77bc1aabfdfb5804086281938f40cb2d16ab3",
+      "before_characters": 1042,
+      "after_characters": 1508,
+      "raw_sha256": "d6724695b6cb42bcfa0dc500599bf84397d0f87720dc6351b20c91512043c105"
+    },
+    {
+      "candidate_id": "svitlana-62d57c0d02644425",
+      "before_sha256": "ef07f5a3ae24e458591790c800cc73b0dc261c10822dfc0266c12bf967fe0f14",
+      "after_sha256": "d8f071973c76be1e49e16c1173450eaab829a65b407525585b568fbe9292870c",
+      "before_characters": 5340,
+      "after_characters": 7136,
+      "raw_sha256": "30db479ccf0a222d14bcb27214eabb3769782fa64d3529188bbff1b0d9adaf2a"
+    },
+    {
+      "candidate_id": "svitlana-5d77e613ab7af5b3",
+      "before_sha256": "0517b2c1dc29f7fae545f1044dde2812fca91794c0ded392d7882a373f6ea755",
+      "after_sha256": "92f4001aa7c352421d0ad4ecac38b6b678674b3e79463cf56631c49d2e16c75e",
+      "before_characters": 981,
+      "after_characters": 1647,
+      "raw_sha256": "f76b205baafedb0c64d2b088efbdef09e6a7d32e45021ae7e6b4c07a5d936a24"
+    },
+    {
+      "candidate_id": "svitlana-8bdb6c1274caa578",
+      "before_sha256": "afd49d82fc0a337a0c16c5997f0b26c291e0ef821c47e71021c4c75d204aad28",
+      "after_sha256": "36c87aba6eca1bd000f41980e655cebf49ef79cdb4c159713f10a5c8025e71a6",
+      "before_characters": 1878,
+      "after_characters": 2411,
+      "raw_sha256": "f94c8f42fc57f3e41b41ca049efb744042217572ffabc8572fdc613543b302ac"
+    },
+    {
+      "candidate_id": "svitlana-282a7a8b2f95a673",
+      "before_sha256": "e8a4fff47c0e93c10925e35219d66aa904c4dbfd113a2f67b81f254db3ebb738",
+      "after_sha256": "40f708dd14cebb94d8f9cf4a85b3ce2ec5fcd62e567efc6af9008f77b215fc6f",
+      "before_characters": 2378,
+      "after_characters": 3215,
+      "raw_sha256": "dc1a9025bddc27d44f86193b5ff2c4486a7002c2906ce4bb15208f93523c8fc3"
+    },
+    {
+      "candidate_id": "svitlana-02216c789e6b6e1a",
+      "before_sha256": "27f1a9420d3edd6d8acbe237dd72663542b962a47d63aee8e5855ecc23315ec0",
+      "after_sha256": "f21978c273df7d3a102a8ceee4ec50fd8f3b25394435ee2fd1a27f7cfa7fac13",
+      "before_characters": 863,
+      "after_characters": 1434,
+      "raw_sha256": "dc8ae78c15888c1e71a44382895cc628ce86d1b86f4999c14f4e22ab0c82cb2d"
+    },
+    {
+      "candidate_id": "svitlana-2aa26c192c31d65a",
+      "before_sha256": "a78331b55af9f95be1ce7b8f55c5e696308cf59c5a698f0bfd84e09d155d0032",
+      "after_sha256": "1ce940e85c512665321300e90668dfd4cf6a1b45196d36796d18f476828d207a",
+      "before_characters": 712,
+      "after_characters": 1264,
+      "raw_sha256": "7f7df72b9a25e1280ae106b561acee4338323e3d92ed929f11ebe95df76126bc"
+    },
+    {
+      "candidate_id": "svitlana-3bc9c03c006406b4",
+      "before_sha256": "59d9a9db52ac6a8b1cdb9c11572a5897dabe9bca06bd4d7ff6bce25b37c9543e",
+      "after_sha256": "decdafa5c7c397783f5f69275a3621083ee2ea8853a8691e3b9f499403e483fa",
+      "before_characters": 1799,
+      "after_characters": 2364,
+      "raw_sha256": "bcef2b9417a7475cb4a0676a381d06339954b4d184561867c9bf45a5b72beab5"
+    },
+    {
+      "candidate_id": "svitlana-3f42747b1d28cf65",
+      "before_sha256": "bbc792750251a4f4392c79b9f9865c3c001661f17ff7447286fbd81afdb88b84",
+      "after_sha256": "109e3cc15a6b04e9cd5e1f693f285a6f54e6f009bfa8e3c175f775313ce31bb2",
+      "before_characters": 2944,
+      "after_characters": 3737,
+      "raw_sha256": "256e6a86f1a96c7ba729b0ef69c3ecb3bbb552cc93732d0ca445728d7755eb1e"
+    },
+    {
+      "candidate_id": "svitlana-49f180e5f06f58ed",
+      "before_sha256": "9115920853666c1483667fd4b9ea8b113fc7a937ede8168bb20565cc860062f4",
+      "after_sha256": "1bd9c759c2d6e5051c2c41b1f76160e709537a69ba1675c7e1b4412ce9a15f1b",
+      "before_characters": 2151,
+      "after_characters": 2773,
+      "raw_sha256": "e6c3bd21d10b55c5f63d42966d6bf8d4435ae2f12325597b6dafc016dba88ac0"
+    },
+    {
+      "candidate_id": "svitlana-d83c47473a11ce69",
+      "before_sha256": "d21b8f478f96f8a0020c518037d0cc399e5e17e2defaba71a70036cd8fd0b7a1",
+      "after_sha256": "e4c5e5d62e8573ba438081c949154603833a23e3729ff073302916f2d2b6ad61",
+      "before_characters": 1488,
+      "after_characters": 2110,
+      "raw_sha256": "d7a04543b223711858c1d6207db24bfb4d078a77a276fcf026f7b1eb2fe2ecb3"
+    },
+    {
+      "candidate_id": "svitlana-42c2e9761d65cab6",
+      "before_sha256": "e8f367a720f4c9b656caa39c54eb030d649fd6b8b6383b660726ac9a5978fcaf",
+      "after_sha256": "206bad65ab2ee376d169ab3b8dd3b3abbcd5f04855e9f94a162ccfb3ece5d673",
+      "before_characters": 2843,
+      "after_characters": 3541,
+      "raw_sha256": "6f684067e32aabec71c635d208a3a13d8698730e0e994b291264c0da810ca16e"
+    },
+    {
+      "candidate_id": "svitlana-eef7a830b162ed1e",
+      "before_sha256": "433d8790d430af174bd36f192b065ad0d2b325bf8eaedd51b30c8593e3bec02d",
+      "after_sha256": "d4764ad77973ab06d21583bf05bedaf393a3547a909e5900bba19c325adfc48a",
+      "before_characters": 2320,
+      "after_characters": 3037,
+      "raw_sha256": "da7efbc6a0e2455d824a4178330aa3f54b19ed82a37b9ecf4df46139ad2abe52"
+    },
+    {
+      "candidate_id": "svitlana-660f45ba9b7283a1",
+      "before_sha256": "5df69377623ef765457b8993ea8c27d4355e44ecad6d09f14073cc531940cc47",
+      "after_sha256": "454b991624ca7a002c520271afd5a40bb2a624412d8e122b2133a90d452aec40",
+      "before_characters": 1033,
+      "after_characters": 1750,
+      "raw_sha256": "bd9ce81bf95361ebf80cd21f65d48eecde2207931887a8f3eb1d944434518fa4"
+    },
+    {
+      "candidate_id": "svitlana-eb7b7040d09ad617",
+      "before_sha256": "85c219095de6f6521c99173666f67fd7b1b3af97cdf335e8e106cef702b0b83b",
+      "after_sha256": "6be1c2838a8500a4e173a319f6ac69959ee8bf3d00ad0ea454129ad91944c3d0",
+      "before_characters": 1408,
+      "after_characters": 1907,
+      "raw_sha256": "31250a6315f98cb7df14c3723137f901e7723d7105e56cde271dc334fad02cb9"
+    },
+    {
+      "candidate_id": "svitlana-b2b8a71ae9c650fb",
+      "before_sha256": "56740221f90d683bd06e9cecf746dc06e170069b4272cebb2b1d91c583f13697",
+      "after_sha256": "71866e9a9c218e8e27e4e2c2b21a45ea79a0989b4f032f808cc3a1adc0b38c28",
+      "before_characters": 1849,
+      "after_characters": 2293,
+      "raw_sha256": "afe3323dca6703352ef6d5e17f46845b5f2a35e36505977cd344ca9402d8dddc"
+    },
+    {
+      "candidate_id": "svitlana-f473b404d9b5e3cf",
+      "before_sha256": "1090a6fc88fc60d61afd344a578f5fc8c09b1cc38b825db1bab3dab4df98778f",
+      "after_sha256": "ef09b2be2c5588481fe0c738f87c1e82eec04e4de61cdae60cca02f1fc21f0ae",
+      "before_characters": 1405,
+      "after_characters": 1904,
+      "raw_sha256": "6665d63afeea06c303a3f89ace0ddd76a17cb59b46b2bd0f84ba5788fa92bf86"
+    },
+    {
+      "candidate_id": "svitlana-a54e0d27a3c59662",
+      "before_sha256": "741a4bfc6e2f266bd02a8bb44d762b42d285a2f10aeac93632897b6982da925a",
+      "after_sha256": "9f376abad5d111ef18e6bd23399e0324009ebbe9f23de438cedcb22c8d3cb0fe",
+      "before_characters": 1857,
+      "after_characters": 2334,
+      "raw_sha256": "fa95e24a456ed340560f7b14c7d3f4467e3afc0bb8d5ce806e127270a6849337"
+    },
+    {
+      "candidate_id": "svitlana-764e90c13760ecd0",
+      "before_sha256": "bccf96d8e41d9e94bcf3233bcbfdb553ca9252de0bf099c0767512566740cf6e",
+      "after_sha256": "ea45f23e802577e7f83bc186e67c111be2eefe08cb2905cd07656238ddb68455",
+      "before_characters": 1313,
+      "after_characters": 1779,
+      "raw_sha256": "0f26f629e540c45dc1fb5673b33754e83f7e74819243ca142d67c78581dbfbac"
+    },
+    {
+      "candidate_id": "svitlana-a9a971f505fcc8c0",
+      "before_sha256": "237e1be79cf554b7eff5a1268853f4eabdbf07e3aa64ca5b4cd7304c93258876",
+      "after_sha256": "f1b76f05d2d6bab805edf30c6dea6ed8332b3cf4ad1c26b84ebf6d46147c5229",
+      "before_characters": 1627,
+      "after_characters": 2115,
+      "raw_sha256": "4e9f44caef69c44549af745b88d679fea9d5d228b2a2317e97e51e33d87f8ac9"
+    },
+    {
+      "candidate_id": "svitlana-fa9bd9492e8dc5e5",
+      "before_sha256": "ba44528d1ad87e07817ee1adb1f6c12439e46bafe337a39a1629c8b6e62b95ec",
+      "after_sha256": "02cc9392df66199904fcf550267d15ddf9fd11b37632d6c937f05f697e7db2cf",
+      "before_characters": 2199,
+      "after_characters": 2736,
+      "raw_sha256": "752c2826fe9549dc803cfc7ef6ae120736b4f1062010abbde7a8ebd745e9a63f"
+    },
+    {
+      "candidate_id": "svitlana-b1bcf5fcb6100a5c",
+      "before_sha256": "da4a370cfd53e62ac4d2a37c00a87dd0bcd1cadf8585604c7818718d6ef4fea8",
+      "after_sha256": "f77f27f0f0a20cb666dda176808b61a2abbd1b87bd9f608ac15dbde137a48b12",
+      "before_characters": 1035,
+      "after_characters": 1523,
+      "raw_sha256": "bd35adaae01e5a562e1e1c7722cc683b8ceb83a03ae0565680390c738563a165"
+    },
+    {
+      "candidate_id": "svitlana-eb01ebafcde19c26",
+      "before_sha256": "0fa07b8d3931d1a3b97f13bc9919ce8740b2cd0565102f886d9fe0d4c5b8045d",
+      "after_sha256": "2d7b5ac41a6ecac1c22ea69bbd35d568af79d70251d2be313c0b67fd1c9faa29",
+      "before_characters": 1497,
+      "after_characters": 1985,
+      "raw_sha256": "9a593f335c973ad93eb2016f4e6c1d196cf142f5eda51d99c444ff8e3d2c7c2b"
+    },
+    {
+      "candidate_id": "svitlana-5c243d6cfdeeb1d6",
+      "before_sha256": "49643b721ecb28a56ea7cfae36dd5d4d7a54ab35cfb93b3b2f95c0199627cf63",
+      "after_sha256": "ffb15f7d79cd7f2a808319a80802fd8123807537452663deae09fe375803a38d",
+      "before_characters": 1809,
+      "after_characters": 2253,
+      "raw_sha256": "82bb51c48722966bad22306d916ff26bef91f89a4c70cf44eac1ccae0703b540"
+    },
+    {
+      "candidate_id": "svitlana-09e7ceefc0887340",
+      "before_sha256": "792326c0faaac4ec80dfd7c4c0eb8fff327467e136c001831e107fbb462c21e7",
+      "after_sha256": "b37ea145734b70226591b59582111eceb95fc367955fd861ad589a09f769ae25",
+      "before_characters": 2664,
+      "after_characters": 3419,
+      "raw_sha256": "469bbca3cce910882622f616f096a83c2188186f6405a3498a2633b03714d6f8"
+    },
+    {
+      "candidate_id": "svitlana-20f6a4f34bc531d9",
+      "before_sha256": "a0b7597dd5c0c893528fcb68403aa8e19ba8940ddb75df30c0ba2bd641c21ec0",
+      "after_sha256": "b52cba79cee91a9c3d5e5d5f6b6d29fd700375e5c792240714d090d2be2aa6e2",
+      "before_characters": 1652,
+      "after_characters": 2255,
+      "raw_sha256": "d4ad244465e2e4c552dd5b17203d2047b0cbbbfad4208f8352ad4d0d48390065"
+    },
+    {
+      "candidate_id": "svitlana-7e9b28d5f68cefd6",
+      "before_sha256": "3d2ea473f0edca08467911942fcb5b75e166d4bf55f4f74d669fa88d4230aad7",
+      "after_sha256": "9f23bd9fc7c38f2a0f4ef35c537e191f24856d1278886f5316a6fa86349e5eb2",
+      "before_characters": 1362,
+      "after_characters": 1984,
+      "raw_sha256": "956f8a29468fda1685ec2645d05196063e1eb2bb62f3a6d93b288c2e42246d87"
+    },
+    {
+      "candidate_id": "svitlana-656fc767fcc03e3c",
+      "before_sha256": "7ccb4c66cb9dc40164479024a615ddf54ee2d0a8f76aa07e5f60d74a3ca009c5",
+      "after_sha256": "1e613c558c3e6bf7d927de2115a98952c385342e89c606d18a1d8a95a7deafe4",
+      "before_characters": 3200,
+      "after_characters": 4031,
+      "raw_sha256": "f5e99d1836b17ae7f1dc5b6e71334d8529474c11cb5bf400450246563d66fdf3"
+    },
+    {
+      "candidate_id": "svitlana-8b33914174fd22c4",
+      "before_sha256": "fdf63005bdb9d5820488fb2b96d662d409371bde2bf284708b4db50a7211b74f",
+      "after_sha256": "ee0e38301b36f4693ee7215d77ce75deba0d86bc1250462987ca0a2090b6952c",
+      "before_characters": 3023,
+      "after_characters": 3740,
+      "raw_sha256": "6f5bb10c95fc69b69f571b3aefcddd42106c56f055da72880702e434d4c1ff76"
+    },
+    {
+      "candidate_id": "svitlana-36d4add36d712982",
+      "before_sha256": "bbd196d008b015996b11ecb4dd9799604806e5f3060189f12595c0a56ece69fc",
+      "after_sha256": "4cd727e59de31d62c6ed54e98fdadd30ac451abd2a3702b274bb6b84ca05fd8c",
+      "before_characters": 710,
+      "after_characters": 1256,
+      "raw_sha256": "f2871c8ddc95f62a0d74c851d957fb233b029bf31a43079e4ae9434a839e27a9"
+    },
+    {
+      "candidate_id": "svitlana-9dda889558368c57",
+      "before_sha256": "14fe5057531e4fe5b0f487c27dc478380b953f086cc7f2786f5a60e37d4ed735",
+      "after_sha256": "3f461a82d476fc73ed66baccf5dfe14e3667e09052784a3d2eb944dc206aea4b",
+      "before_characters": 1317,
+      "after_characters": 1920,
+      "raw_sha256": "fedd091061550cf98c92e08e9c6c98e4ac1724525860dfda948b9b0e8308c3d8"
+    },
+    {
+      "candidate_id": "svitlana-474fbc0d3623025b",
+      "before_sha256": "ff220d8e77de3fe818f70e0ff70462f036382a89779eae4878ed5b263aa43878",
+      "after_sha256": "492fb369977cf8068e1cff2f598a7061bae0b7fa5fee82110e991bf11c6dec8f",
+      "before_characters": 1309,
+      "after_characters": 1874,
+      "raw_sha256": "71532d07f49e576d6c1bb22970ac607b1cc3b79c1b2da21315779085172ddcc8"
+    },
+    {
+      "candidate_id": "svitlana-bd1e9b2cfbb8eda4",
+      "before_sha256": "8b83800c1eaa2a1d52edb3372ff6f0be600aef692898172eebb191a6c796e2e2",
+      "after_sha256": "48af402151102a1f5bd4f5465396b74492746260092fb8ba4ecb231b81364193",
+      "before_characters": 1976,
+      "after_characters": 2598,
+      "raw_sha256": "10c92b28555d9e48faef8c39d305bfdcea627d315c5f0c7245eb0793a80c2a26"
+    },
+    {
+      "candidate_id": "svitlana-dcff64f7df621223",
+      "before_sha256": "128359ebe78564582a34796489d848d5d11883dd3ce203ef6255828942d64e5e",
+      "after_sha256": "96a0fc4023952581b0a56a8fa1b64fdbd8fb2595598e69361092823e84de3d26",
+      "before_characters": 2193,
+      "after_characters": 2834,
+      "raw_sha256": "ca4ce52e9141d4d6ad613db3f86e6ba1b13cfe0ebf186b3849b0d37c6aa7071f"
+    },
+    {
+      "candidate_id": "svitlana-c34c620a17ae1515",
+      "before_sha256": "1cad937d65f17b10061933db2fd2282993e54a860b6e2dc3edcb675565d38915",
+      "after_sha256": "9371ae741a53e96b03b34d608ca48a7fbb77bb8702d21c9b42cb716988f0914d",
+      "before_characters": 2080,
+      "after_characters": 2987,
+      "raw_sha256": "ecb7c4d8c025413ce3eca87c622d0cbcff08f1cc58ec533c823e3bbe6cee55a6"
+    },
+    {
+      "candidate_id": "svitlana-ee1defb7eb3c773e",
+      "before_sha256": "ee3c8d56a1ed0edd9b0216a770e1591e11e71b020687566b4dd0ced776504a9d",
+      "after_sha256": "d20f70854ef1421a7244fc8a06b8c78990ef6dd1961fc3ddf26f29aa427ccdbb",
+      "before_characters": 823,
+      "after_characters": 1369,
+      "raw_sha256": "99b6c6f79a7add5b6a5c9098462b8543ed75350eef3b5d8e668b8daa9fe0a110"
+    },
+    {
+      "candidate_id": "svitlana-986e78f72a486a76",
+      "before_sha256": "9c4d0eaa57a90df2e706cdd2f396d162c17ab1b2a2f6ac3b7359c5105097d3e4",
+      "after_sha256": "9d3d78906bbe42fccd65a0b84c0d459b9c5bb1f0812f9e41b4fbd6a72347e904",
+      "before_characters": 2979,
+      "after_characters": 3696,
+      "raw_sha256": "705ec441f04fc7b0202023d912f8aa2c6e5d095a42f4c1d28e04e117d20fd175"
+    },
+    {
+      "candidate_id": "svitlana-6e59e7ea1effe9a8",
+      "before_sha256": "afad54137d5ab5050874311483e92482b9330b7a13b380d89858decf30346d07",
+      "after_sha256": "e792923a20050e1016b6ffe4145cf2ce9d06573dca8d5e927f2575afc5f23a91",
+      "before_characters": 1141,
+      "after_characters": 1763,
+      "raw_sha256": "4ab5288259ddd79d266706b862d96b81dd0e8a839c7150904201c49cf843dcaf"
+    },
+    {
+      "candidate_id": "svitlana-607433ede7df1e4f",
+      "before_sha256": "25a2c864b61983e6242ef3f3b21809c93b72409d3a39d62feecf2fb9c36b747c",
+      "after_sha256": "60f3e14e82f56606d9e92e0b0fdbb9485397d040677def159b4dadd18ffc72de",
+      "before_characters": 1573,
+      "after_characters": 2214,
+      "raw_sha256": "15a0c5b1e633469ffd90ce67ec996f0196b13524789362dc328cae6241b89c57"
+    },
+    {
+      "candidate_id": "svitlana-e0961eb044357ec2",
+      "before_sha256": "8cdaf176042d3326719c69ca65c8e0ec3aa90386051d21ef97bc50c49b6e9021",
+      "after_sha256": "7bb5181ea00803e7c814bf9c896224202764b4e9f1f5a5d906a0b2b4e637c1da",
+      "before_characters": 3033,
+      "after_characters": 3788,
+      "raw_sha256": "32f3cf6e958fab25a5cf2c945ec8957026cb3e741254392cbb748a3747c0945a"
+    },
+    {
+      "candidate_id": "svitlana-c2218f6bc900ef9c",
+      "before_sha256": "38e9ccade4e92b3500ce93d76d1754fbdbeac62f1a3fa2654ccb6f5cfa16f712",
+      "after_sha256": "6e72b72030f386e71007b95d99f139d512e10f404a7ad7ad58a8ebceb99a48f5",
+      "before_characters": 1246,
+      "after_characters": 1868,
+      "raw_sha256": "b82da152a0878b8b55825d757b18a89d188bea53ffe7fa5914bfefd51cb58fe0"
+    },
+    {
+      "candidate_id": "svitlana-68d20f8abcefb2fc",
+      "before_sha256": "a123e28444f6021c17619751e32274dc0687bc1b87f4d2843300cda61cf3b2de",
+      "after_sha256": "2e3c00bcda0a26508e2ab3d07fb859f379c98a5e7139bfae1779ccd8b33dd392",
+      "before_characters": 2638,
+      "after_characters": 3222,
+      "raw_sha256": "e5989df823594053b75085d7bb879b75ab175027a2b7401618036d8177ebea48"
+    },
+    {
+      "candidate_id": "svitlana-b05b5218ec082e81",
+      "before_sha256": "b284ffd4a0ceaba634753d7097767be3d3030ae7a9f7716538f80ea697dff90e",
+      "after_sha256": "7eae88cfc845d09d31c426d992d992688fee6e519e1ef78784d51c504fe2f046",
+      "before_characters": 2735,
+      "after_characters": 3452,
+      "raw_sha256": "9a1b3aba86d260b773a55df7a13ec83b8059ce58d923b9772001791707d775fe"
+    },
+    {
+      "candidate_id": "svitlana-4116a466e9c0c7ac",
+      "before_sha256": "b0fc138d44a4c97d3fbdebb8ffe4364b2d350c72789387b607789ed57e7ebf7d",
+      "after_sha256": "8903edd79a0c3badcb9de31bd8efab79965ff71668cf8822878db11cbfe343b7",
+      "before_characters": 2715,
+      "after_characters": 3489,
+      "raw_sha256": "e19bef42b5b0bc0ff08a45819690a67240f746fa3c5ecb2171ee88b7c031cbd4"
+    },
+    {
+      "candidate_id": "svitlana-992ebe4f75ef0d91",
+      "before_sha256": "303db8e0dbcdc589e0daaa6c631052e50f0c09ec0abd9d5a9b32407ba046e683",
+      "after_sha256": "3d10be32e777dc41edeea918c524fdabccd33baf9ce7b966fe9c855292accb5b",
+      "before_characters": 1386,
+      "after_characters": 1951,
+      "raw_sha256": "646a1599c65cbcb53ea9ef707a28b38f647eab55f03085f220bd046be59c9c35"
+    },
+    {
+      "candidate_id": "svitlana-7673b362cd3e18d3",
+      "before_sha256": "109d0ee58ea68211831399aabf79f0d66ea830cee749dcd701cbbcf3b7923aa2",
+      "after_sha256": "f6bfe119a1dddf6b12a59406fac6c6cccfb97c136339cea75443e29c2ca58d99",
+      "before_characters": 2570,
+      "after_characters": 3249,
+      "raw_sha256": "07cd722c3a9b8f9d0d34830e3b8a88f89f5ad2d497ead8d7e97d13b6746478fe"
+    },
+    {
+      "candidate_id": "svitlana-e1edefd7cea2f2c9",
+      "before_sha256": "04d97d42d8c4e5659f88389838863322534328f8f5a0eafb99f4b29beb057725",
+      "after_sha256": "ed38db6850c60ba6f736d50dccbf9129d533749151f0127910b96c03a004dfb3",
+      "before_characters": 1862,
+      "after_characters": 2560,
+      "raw_sha256": "75c602a93d6ef66a5cbfbd03388f3af928c091f26362a7a8f59b4855d318f46b"
+    },
+    {
+      "candidate_id": "svitlana-9e6a56914baebeb0",
+      "before_sha256": "0bd3d732feeacce9a584c4dc208e52fbe9a231005d707f9e578fcf40b8aab894",
+      "after_sha256": "4251429975f713943a73889b6a9a4f81b5661b4139f842a82e6dbfcbcab28bc3",
+      "before_characters": 984,
+      "after_characters": 1568,
+      "raw_sha256": "a3e2b80c2d767ae9603cd7a435e0d4ff01380f6c55180750df6f484f8e628eed"
+    },
+    {
+      "candidate_id": "svitlana-3e9ae71869c20314",
+      "before_sha256": "0b02fdb86e99b3e9c2b8941eb6429071d1837100e280baa8e6dfe04f2a097df5",
+      "after_sha256": "cd4fff17d2f4fe49060efd3d5774f3ff5791b58bb48abd05e20cb92a7df757a3",
+      "before_characters": 2496,
+      "after_characters": 3220,
+      "raw_sha256": "48a9cbc802b9039569c570f3c2b11ac08d30b0ed396069684b75b53c37cbd890"
+    },
+    {
+      "candidate_id": "svitlana-66a2b803eba39d16",
+      "before_sha256": "c601453d1b6625d9b5a0bb00478b53fee0635ceb2b6363a99d17e170163030fa",
+      "after_sha256": "57708f1d40fb0cc1c904110d980ce74fdf1f7c4ffc13f436b9b8ac52b2de9c19",
+      "before_characters": 1200,
+      "after_characters": 1746,
+      "raw_sha256": "26a98404d0195775fd80c8a710f313fe8abe03a74cdac7e48c4fabc8a67c089b"
+    },
+    {
+      "candidate_id": "svitlana-150356d968dcb608",
+      "before_sha256": "2103cc5ef4a59f3fbfdafcca1a272c36c67d2985d8946c645eb414ce960fca01",
+      "after_sha256": "52ea080d55fd7b8a3957c210067860c6b5109a35c5baa5da0f1a1b895047881d",
+      "before_characters": 1512,
+      "after_characters": 2096,
+      "raw_sha256": "688728b21b114bfa9307a660f884f062bb5112d1f1c54487396baa3bbebb7d85"
+    },
+    {
+      "candidate_id": "svitlana-f6244e156e990fde",
+      "before_sha256": "9d0122008d38e9b7afd8392eb5bdc6887ebbd673e2da1d553612b568caea4c34",
+      "after_sha256": "dde913173d98388b7bcb3fd558bc0657f092542072ff3dd0c188892127c230be",
+      "before_characters": 1033,
+      "after_characters": 1617,
+      "raw_sha256": "5602090cb49d37653ab7a8500f260c121859f772066252fe9c13ac75457c55db"
+    },
+    {
+      "candidate_id": "svitlana-19fbb7acff2705e7",
+      "before_sha256": "815b4847d38fb513c06cd1b67b937c4f66bd27c2bbe06070feb99c5a19a61f29",
+      "after_sha256": "130060d010163f6fabf28eab37613d656982602ae981ca0f2939922f4679df34",
+      "before_characters": 2236,
+      "after_characters": 2858,
+      "raw_sha256": "89f413044e50857832666514b20e8cac2c91426384cb143fbf5d9b6788d13b09"
+    },
+    {
+      "candidate_id": "svitlana-a8bc56d25645d661",
+      "before_sha256": "3fb621274c0e5766737b7e1947624edd3d1bd0fdb8007832ac8c9e9ce05a2005",
+      "after_sha256": "5c06b9b6aca2c492120c2673460277d48141943debe6253ad3a95a823eeb22f1",
+      "before_characters": 2736,
+      "after_characters": 3472,
+      "raw_sha256": "be212d925427dfe39b879a85c1dd71476fc63bf22c582ab7daec677a4cdc90f4"
+    },
+    {
+      "candidate_id": "svitlana-30b996440c16faef",
+      "before_sha256": "888173411668b15a3ee7ec40608a75d02792543e74e682c47b3bce344ea4589d",
+      "after_sha256": "ef6d3146c8488bda02009831446159f27802edfd40afb946e0a121d8ac7adf19",
+      "before_characters": 3660,
+      "after_characters": 5023,
+      "raw_sha256": "773713ac10890d590aed1ffd5d893d8089f7aabfbb5f8e6c5b80b3fd5195613f"
+    },
+    {
+      "candidate_id": "svitlana-e51ca811e1f3627b",
+      "before_sha256": "18737056cd3e05e6b2a0eb21ee9d4b69afb1baed23889271a300f41d2407661a",
+      "after_sha256": "02b4fa8fbad78c0e1844fce2a46cdbbd6b84349507f10c1c889d433c7189d9a7",
+      "before_characters": 1191,
+      "after_characters": 1775,
+      "raw_sha256": "5280dddb6a4a8b78ce7899f195cd8df058fc5eb23c6f6d56bdaa61970b7e9753"
+    },
+    {
+      "candidate_id": "svitlana-4c959834909d1cc4",
+      "before_sha256": "e9fd94e5f150b17c048ddded2ec3f947e2e4a68b8f7a2b993b8df3ecd4747e3c",
+      "after_sha256": "6b50a7f73a2ec1dc6c63397aefbba467b6ec2201e2d69c023050b59657a36a81",
+      "before_characters": 1912,
+      "after_characters": 2313,
+      "raw_sha256": "66a50c41d76b1584724a52a82c17503885db9734e67b391879cd2c88e2577706"
+    },
+    {
+      "candidate_id": "svitlana-86d93d1763ddc325",
+      "before_sha256": "7a0bf8657752701e87b241dca363c14873504ac1ee7f34d8987e3313f52d32a8",
+      "after_sha256": "3bf13e2dfeef3d0cfa5893859b520494ccf06c12409f0336357b0e0410124883",
+      "before_characters": 6110,
+      "after_characters": 7450,
+      "raw_sha256": "120033910506320d4080add7098b9ae851c2260e428e80bf7d6856d57fa1e442"
+    }
+  ]
+}

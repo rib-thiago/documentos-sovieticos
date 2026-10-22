@@ -43,3 +43,10 @@ Certified correct: —
 RGASPI, fond 671, inventory 1, file 120, folios 43–45.
 
 \[1\] Here and subsequently the text incorrectly reads “Gaidarova” (Гайдарову), instead of “Gaiderova.”
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The Russian electronic publication brings 1933 and 1934 together in the sentence about the journey from Sochi to Moscow, without punctuation clarifying the relation between the dates. Both are preserved. Moscow as a destination does not in itself contradict the later visits to Leningrad. Comparison with another textual witness remains pending.

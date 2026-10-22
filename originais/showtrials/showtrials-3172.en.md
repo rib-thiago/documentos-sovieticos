@@ -11,3 +11,10 @@ Certified true: illegible
 Reproduced from: The Echo of the Shot in the Smolny. The History of the Investigation into the Murder of S. M. Kirov According to Documents of the CC of the CPSU // Moscow: International Democracy Foundation, 1917, p. 216.
 
 \[1\] Thus in the text.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The expressions “руководимым центром” and “к-p. революц.” occur in the Russian electronic publication. The unclear construction and redundancy are preserved in the translations, together with source note [1]; they have not been normalized by conjecture.

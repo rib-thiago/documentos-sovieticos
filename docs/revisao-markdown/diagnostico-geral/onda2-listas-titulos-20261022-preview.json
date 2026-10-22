@@ -1,0 +1,131 @@
+{
+  "batch_id": "onda2-listas-titulos-20261022",
+  "editions_changed": 16,
+  "issue_outcomes": 14,
+  "documents_metadata_changed": [],
+  "closed_issues": 14,
+  "queue_before_sha256": "048731606f2486e299ba409a2ab9b5f5c9ee13e373a5b189b80aee34339b1232",
+  "queue_after_sha256": "b6dadbcc8ce83d084e559c26db788e47f60f5e20965ea6fd8b2d8fd0b0125aea",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R2-secoes_listas-0069",
+      "result_file": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0069.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-listas-titulos-20261022/a19a35ca9653da6e1b096de8981b586e65a22dfd07593e70a908d17eeb7d2bc4-R2-secoes_listas-0069.json",
+      "result_sha256": "a19a35ca9653da6e1b096de8981b586e65a22dfd07593e70a908d17eeb7d2bc4",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5793:titulos_ambiguos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0086",
+      "result_file": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0086.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-listas-titulos-20261022/1b0e6209bf33f71423cf7d4108d5d407256bd449c90797c922ed9c364fba9d7b-R2-secoes_listas-0086.json",
+      "result_sha256": "1b0e6209bf33f71423cf7d4108d5d407256bd449c90797c922ed9c364fba9d7b",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-6958:titulos_ambiguos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0116",
+      "result_file": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0116.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-listas-titulos-20261022/c444d8f8da35f14f3a4218592c3da2c6aceb6d01f6599dad6367b2183cfa20ea-R2-secoes_listas-0116.json",
+      "result_sha256": "c444d8f8da35f14f3a4218592c3da2c6aceb6d01f6599dad6367b2183cfa20ea",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-10768:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0117",
+      "result_file": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0117.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-listas-titulos-20261022/71f85a81c47538b1ee63e75aed5c2bce27b670be3711b36eef62be6b6268cd45-R2-secoes_listas-0117.json",
+      "result_sha256": "71f85a81c47538b1ee63e75aed5c2bce27b670be3711b36eef62be6b6268cd45",
+      "editions_prepared": 3,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-10801:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-1611:titulos_ambiguos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-2484:titulos_ambiguos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0118",
+      "result_file": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0118.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-listas-titulos-20261022/0576d212aa115a0688263a43eb8bfd7c8f36588c410102d7e6350e284c541fbe-R2-secoes_listas-0118.json",
+      "result_sha256": "0576d212aa115a0688263a43eb8bfd7c8f36588c410102d7e6350e284c541fbe",
+      "editions_prepared": 5,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-3246:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-5612:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-5773:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0119",
+      "result_file": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0119.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-listas-titulos-20261022/07990e48bac4510d1d7b7226a18293ded2de799b02de9f1b5f2d8d7c3f7981c5-R2-secoes_listas-0119.json",
+      "result_sha256": "07990e48bac4510d1d7b7226a18293ded2de799b02de9f1b5f2d8d7c3f7981c5",
+      "editions_prepared": 3,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5786:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-6431:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-6711:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0120",
+      "result_file": "temporario/revisao-onda2/estruturas-merge/R2-secoes_listas-0120.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-listas-titulos-20261022/aee4da6858a296ebea73da16549b87c553be0b3ab1d6ad4f39829da469aff1bb-R2-secoes_listas-0120.json",
+      "result_sha256": "aee4da6858a296ebea73da16549b87c553be0b3ab1d6ad4f39829da469aff1bb",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7196:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-7214:listas_sem_marcacao",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    }
+  ]
+}

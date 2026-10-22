@@ -1,0 +1,197 @@
+{
+  "date": "2026-10-21",
+  "status": "six_sources_recovered_and_segmented",
+  "catalog_changed": false,
+  "push": false,
+  "commit": false,
+  "captures": [
+    {
+      "seed": "iskra-primeira-sessao",
+      "original_url": "https://iskra-research.org/USSR/Brest/1917-12-22.shtml",
+      "capture": "https://web.archive.org/web/20180514052247id_/http://iskra-research.org:80/USSR/Brest/1917-12-22.shtml",
+      "timestamp": "20180514052247",
+      "raw_sha256": "b55e7b1ac4cdef1948ce498e9777a30df0ce9c7584a9ad2b551f636f2c9e93cf",
+      "raw": "raw/01-negociacoes/iskra-primeira-sessao/b55e7b1ac4cdef1948ce498e9777a30df0ce9c7584a9ad2b551f636f2c9e93cf.html"
+    },
+    {
+      "seed": "iskra-27-dez",
+      "original_url": "https://iskra-research.org/USSR/Brest/1917-12-27.shtml",
+      "capture": "https://web.archive.org/web/20211027165932id_/https://iskra-research.org/USSR/Brest/1917-12-27.shtml",
+      "timestamp": "20211027165932",
+      "raw_sha256": "61156b9aad6ffb236c36c21842950bbac2809ca65cd659e1d36586f255a64b5c",
+      "raw": "raw/01-negociacoes/iskra-27-dez/61156b9aad6ffb236c36c21842950bbac2809ca65cd659e1d36586f255a64b5c.html"
+    },
+    {
+      "seed": "iskra-jan-11",
+      "original_url": "https://iskra-research.org/USSR/Brest/1918-1-11.shtml",
+      "capture": "https://web.archive.org/web/20211027172556id_/https://iskra-research.org/USSR/Brest/1918-1-11.shtml",
+      "timestamp": "20211027172556",
+      "raw_sha256": "5f294e31cf212afd9a704546052cb578f3a4b49e88cc44779045f05ca0ebf415",
+      "raw": "raw/01-negociacoes/iskra-jan-11/5f294e31cf212afd9a704546052cb578f3a4b49e88cc44779045f05ca0ebf415.html"
+    },
+    {
+      "seed": "iskra-fase-2",
+      "original_url": "https://iskra-research.org/USSR/Brest/1918-2.shtml",
+      "capture": "https://web.archive.org/web/20211027161446id_/https://iskra-research.org/USSR/Brest/1918-2.shtml",
+      "timestamp": "20211027161446",
+      "raw_sha256": "3f7f3c5007df34af3951a2f4e7cb83eaa3a1a5105d2349890dd33b271d5990e9",
+      "raw": "raw/01-negociacoes/iskra-fase-2/3f7f3c5007df34af3951a2f4e7cb83eaa3a1a5105d2349890dd33b271d5990e9.html"
+    },
+    {
+      "seed": "iskra-jan-31",
+      "original_url": "https://iskra-research.org/USSR/Brest/1918-1-31.shtml",
+      "capture": "https://web.archive.org/web/20211027161124id_/https://iskra-research.org/USSR/Brest/1918-1-31.shtml",
+      "timestamp": "20211027161124",
+      "raw_sha256": "cf056b860fffa80e89f56f06a12784ce0ecd85f8f0c5feb441c8f9782d89173b",
+      "raw": "raw/01-negociacoes/iskra-jan-31/cf056b860fffa80e89f56f06a12784ce0ecd85f8f0c5feb441c8f9782d89173b.html"
+    },
+    {
+      "seed": "iskra-mar-1",
+      "original_url": "https://iskra-research.org/USSR/Brest/1918-3-01.shtml",
+      "capture": "https://web.archive.org/web/20211027165900id_/https://iskra-research.org/USSR/Brest/1918-3-01.shtml",
+      "timestamp": "20211027165900",
+      "raw_sha256": "4748c9c74ad4d73d2dd67bb24f1f1215a8c966009715163a8677379dc1a34691",
+      "raw": "raw/01-negociacoes/iskra-mar-1/4748c9c74ad4d73d2dd67bb24f1f1215a8c966009715163a8677379dc1a34691.html"
+    }
+  ],
+  "preparation": {
+    "sources": 6,
+    "units": 11,
+    "ready": 11,
+    "catalog_changed": false,
+    "units_review": [
+      {
+        "id": "brest-iskra-primeira-sessao",
+        "source": "iskra-primeira-sessao",
+        "title_pt": "Sessão plenária de 22/9 de dezembro de 1917",
+        "ready": true,
+        "raw_sha256": "b55e7b1ac4cdef1948ce498e9777a30df0ce9c7584a9ad2b551f636f2c9e93cf",
+        "markdown_sha256": "7d9f04f13b7e1e4be46441cbe7b9a21068693d9c0a897f59c849d878c9366005",
+        "layout_tables_unwrapped": 2,
+        "tables_retained": 0,
+        "source_notes": 0,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-27-dez",
+        "source": "iskra-27-dez",
+        "title_pt": "Comissão Política — sessão de 27/14 de dezembro de 1917",
+        "ready": true,
+        "raw_sha256": "61156b9aad6ffb236c36c21842950bbac2809ca65cd659e1d36586f255a64b5c",
+        "markdown_sha256": "e783d302f491a7b82b750f08f10812844fbd7abf3d540109c31aca0cd6048b61",
+        "layout_tables_unwrapped": 1,
+        "tables_retained": 0,
+        "source_notes": 1,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-jan-11-manha",
+        "source": "iskra-jan-11",
+        "title_pt": "Comissão Política — sessão da manhã de 11 de janeiro de 1918",
+        "ready": true,
+        "raw_sha256": "5f294e31cf212afd9a704546052cb578f3a4b49e88cc44779045f05ca0ebf415",
+        "markdown_sha256": "e7462f4daf2b399c134018ed0d9d271bad2529b48388051a5ae50591b0c4d65b",
+        "layout_tables_unwrapped": 0,
+        "tables_retained": 0,
+        "source_notes": 2,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-jan-11-tarde",
+        "source": "iskra-jan-11",
+        "title_pt": "Comissão Política — sessão da tarde de 11 de janeiro de 1918",
+        "ready": true,
+        "raw_sha256": "5f294e31cf212afd9a704546052cb578f3a4b49e88cc44779045f05ca0ebf415",
+        "markdown_sha256": "7f154b022c5b9631e153031843b7a5cd0892e9b3c915829e79cd9b597f8476ac",
+        "layout_tables_unwrapped": 0,
+        "tables_retained": 0,
+        "source_notes": 2,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-fase-2-apresentacao",
+        "source": "iskra-fase-2",
+        "title_pt": "Segundo período das negociações — apresentação editorial da fonte",
+        "ready": true,
+        "raw_sha256": "3f7f3c5007df34af3951a2f4e7cb83eaa3a1a5105d2349890dd33b271d5990e9",
+        "markdown_sha256": "97dbd83c31072c6ccb9fd4e8ca11e68b46c477eacb249493bacfe74e0f5688e8",
+        "layout_tables_unwrapped": 0,
+        "tables_retained": 0,
+        "source_notes": 0,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-fase-2-ioffe",
+        "source": "iskra-fase-2",
+        "title_pt": "Segundo período das negociações — nota de A. Ioffe, abril de 1919",
+        "ready": true,
+        "raw_sha256": "3f7f3c5007df34af3951a2f4e7cb83eaa3a1a5105d2349890dd33b271d5990e9",
+        "markdown_sha256": "1754d70b5ac41399a61cbc5870732b50622f780d124b25a3adc3ff7fd9d67d6d",
+        "layout_tables_unwrapped": 0,
+        "tables_retained": 0,
+        "source_notes": 0,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-fase-2-delegacoes",
+        "source": "iskra-fase-2",
+        "title_pt": "Segundo período das negociações — composição das delegações",
+        "ready": true,
+        "raw_sha256": "3f7f3c5007df34af3951a2f4e7cb83eaa3a1a5105d2349890dd33b271d5990e9",
+        "markdown_sha256": "9993271dad4a158bbf22c2d7e3dc9b66c6b3bdf960e510d6a34c1fc9f1082291",
+        "layout_tables_unwrapped": 3,
+        "tables_retained": 1,
+        "source_notes": 0,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-jan-31",
+        "source": "iskra-jan-31",
+        "title_pt": "Comissão Política — sessão de 31 de janeiro de 1918",
+        "ready": true,
+        "raw_sha256": "cf056b860fffa80e89f56f06a12784ce0ecd85f8f0c5feb441c8f9782d89173b",
+        "markdown_sha256": "aefe08ea70961abfa19fb75caf8710d04b41a6439595f0144a4253956323e628",
+        "layout_tables_unwrapped": 0,
+        "tables_retained": 0,
+        "source_notes": 0,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-mar-1-manha",
+        "source": "iskra-mar-1",
+        "title_pt": "Sessão plenária da manhã de 1º de março de 1918",
+        "ready": true,
+        "raw_sha256": "4748c9c74ad4d73d2dd67bb24f1f1215a8c966009715163a8677379dc1a34691",
+        "markdown_sha256": "6e04212a12b1375f58739219ffb9ad4498253ca41bfd2d1df6572f91edccc941",
+        "layout_tables_unwrapped": 0,
+        "tables_retained": 0,
+        "source_notes": 0,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-mar-1-tarde",
+        "source": "iskra-mar-1",
+        "title_pt": "Sessão plenária da tarde de 1º de março de 1918",
+        "ready": true,
+        "raw_sha256": "4748c9c74ad4d73d2dd67bb24f1f1215a8c966009715163a8677379dc1a34691",
+        "markdown_sha256": "8f78a080599819324e94ff462525d3d3172ef9fe9b9091c18639dc352249908f",
+        "layout_tables_unwrapped": 0,
+        "tables_retained": 0,
+        "source_notes": 0,
+        "missing_tokens": {}
+      },
+      {
+        "id": "brest-iskra-mar-1-presidentes",
+        "source": "iskra-mar-1",
+        "title_pt": "Reunião dos presidentes das delegações de 1º de março de 1918",
+        "ready": true,
+        "raw_sha256": "4748c9c74ad4d73d2dd67bb24f1f1215a8c966009715163a8677379dc1a34691",
+        "markdown_sha256": "781ad29a5cc3df9acdc456a9dae83af827523ad3758b3d65c82ce52b491f2b96",
+        "layout_tables_unwrapped": 0,
+        "tables_retained": 0,
+        "source_notes": 0,
+        "missing_tokens": {}
+      }
+    ]
+  }
+}

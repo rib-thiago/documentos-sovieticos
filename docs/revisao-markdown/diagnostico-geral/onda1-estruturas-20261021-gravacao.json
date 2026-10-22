@@ -1,0 +1,306 @@
+{
+  "batch_id": "onda1-estruturas-20261021",
+  "editions_changed": 20,
+  "issue_outcomes": 41,
+  "documents_metadata_changed": [],
+  "closed_issues": 40,
+  "queue_before_sha256": "579bed2618cd2eef0c75341fadb69e9618960d14e86695a37153dd40cac247cc",
+  "queue_after_sha256": "22a08bdc1ca83c83a66789cb226e0a69daa9a03e2541173eb8208c97dbf32477",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R1-tabelas_imagens-0023",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0023/result.json",
+      "result_sha256": "c9dafab919dea056fd858c4cbcfbabbc99b527a86f902b75b5cf6fcea977a4b2",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-10647:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-10722:imagens_sem_transcricao_confirmada",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0026",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0026/result.json",
+      "result_sha256": "578353cbc8f49ae9107cf271852557df1e483ca326d50b6f1ab7c33a506b6824",
+      "editions_prepared": 3,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4581:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4580:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4583:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0027",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0027/result.json",
+      "result_sha256": "eed2d9b3cbbf8dcec38557bba35b7ae4b1e1206088bb49bc02ddb8333fd63036",
+      "editions_prepared": 3,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4665:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4584:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4771:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0028",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0028/result.json",
+      "result_sha256": "cfc383869666058ecf15c05bd270325e3a6694b584d03403b03b0650697f770b",
+      "editions_prepared": 3,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4791:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4796:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4828:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0029",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0029/result.json",
+      "result_sha256": "31d276e07e4ec2ae7c70a2ea786298de5c141f6f7318b92e0ab0295fb3bf4276",
+      "editions_prepared": 3,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4847:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-5337:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-5284:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0030",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0030/result.json",
+      "result_sha256": "109ed0584f16a0826d3e04742a8b1ac72a6a54d93454b55706adbe32a52d9fcc",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5660:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0031",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0031/result.json",
+      "result_sha256": "39164b1eae68447794d121e8612bbdbc336d556da8579a7a46ed921f3c008037",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7075:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-5864:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0032",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0032/result.json",
+      "result_sha256": "c0588737e1c6fcae1a2e5782ce9e66d65d2f9d3340d4a00305abd51f6bc7e360",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8849:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-1442:imagens_sem_transcricao_confirmada",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-1733:imagens_sem_transcricao_confirmada",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0033",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0033/result.json",
+      "result_sha256": "9ddca0648b8a8ee184e59f1c2c58996fe8129ef3284d963274a1d2c53fcb54da",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-3276:imagens_sem_transcricao_confirmada",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-2537:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-3277:imagens_sem_transcricao_confirmada",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0034",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0034/result.json",
+      "result_sha256": "839795ec0bfc1e4370d61fd8b45d5eaf83dfbc2f2fc8e172728e812b82930876",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4666:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4848:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-3405:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0035",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0035/result.json",
+      "result_sha256": "7660c38b63c355a4bb39502457aca1ffc889cdfd808f96e653be51765307f999",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4857:tabelas_linearizadas",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-6680:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-5360:imagens_sem_transcricao_confirmada",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0036",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0036/result.json",
+      "result_sha256": "bfa606d3868cfe7372fd41968a390c427060184985830f119fb1e922cb746404",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-6687:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7096:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7150:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0037",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0037/result.json",
+      "result_sha256": "4076e1b34e80f02abb54dd99e3d430776d8c3fe1ef6ef6fcc892846681821681",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7262:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7265:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7267:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0038",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0038/result.json",
+      "result_sha256": "2c062e612827f579d30bdec07336671b71b4813c2a2febd6d1d28aab80057075",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7271:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7273:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7383:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R1-tabelas_imagens-0039",
+      "result_file": "temporario/revisao-onda1/estruturas-root/R1-tabelas_imagens-0039/result.json",
+      "result_sha256": "72d24e887f740937abee80307314778f3c0807ba68f99affbcc83f15f8486b7c",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7385:tabelas_linearizadas",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-7391:imagens_sem_transcricao_confirmada",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-9061:imagens_sem_transcricao_confirmada",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    }
+  ],
+  "saved": true,
+  "history_id": "20261022023857336344-7f4739c22525",
+  "document_id": null,
+  "revision": "5dd203f7af568fdd6141e4445d3d0c78b11b4ca8e9a9e003c769cb0279f67603",
+  "entity": {
+    "kind": "batch",
+    "id": "onda1-estruturas-20261021"
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}

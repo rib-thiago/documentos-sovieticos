@@ -1,0 +1,35 @@
+{
+  "colecao": "politburo-e-lev-trotsky",
+  "titulo_original": "Политбюро и Лев Троцкий",
+  "observacao": "Fontes e estados de acesso consultados em 2026-10-20; verificar os termos e o acesso na execução local.",
+  "volumes_2013": {
+    "v1": {
+      "edicao": "mozokhin-2013-v1", "primeiro_numero": 1, "ultimo_numero": 215,
+      "isbn": "978-80-87786-59-8", "local": "Praha", "editora": "Sociosféra-CZ", "ano": 2013,
+      "catalogo": "https://docs.historyrussia.org/ru/nodes/405028-politbyuro-i-lev-trotskiy-1923-1940-gg-kn-1",
+      "leitura": "https://djvu.online/file/Cpto0fbsiVoGW",
+      "pdf_alternativo": "https://wr-nsk.ru/wp-content/uploads/2023/04/politbyuro-i-lev-troczkij-1-2013.pdf",
+      "descoberta_pdf": "https://wr-nsk.ru/partijnoe-stroitelstvo/",
+      "catalogo_biblioteca": "https://search.rsl.ru/ru/record/01006736958",
+      "volume": 1
+    },
+    "v2": {
+      "edicao": "mozokhin-2013-v2", "primeiro_numero": 216, "ultimo_numero": 295,
+      "isbn": "978-80-87786-60-4", "local": "Praha", "editora": "Sociosféra-CZ", "ano": 2013,
+      "catalogo": "https://docs.historyrussia.org/ru/nodes/405030-politbyuro-i-lev-trotskiy-1923-1940-gg-kn-2",
+      "catalogo_alternativo": "https://newspapers.historyrussia.org/ru/nodes/405030-politbyuro-i-lev-trotskiy-1923-1940-gg-kn-2",
+      "leitura": "https://djvu.online/file/B0n1vSjUG0odl",
+      "pdf_alternativo": "https://wr-nsk.ru/wp-content/uploads/2023/04/politbyuro-i-lev-troczkij-2-2013.pdf",
+      "descoberta_pdf": "https://wr-nsk.ru/partijnoe-stroitelstvo/",
+      "catalogo_biblioteca": "https://search.rsl.ru/ru/record/01006736960",
+      "volume": 2
+    }
+  },
+  "edicao_2017": {
+    "edicao": "mozokhin-2017", "ano": 2017, "editora": "Историческая литература", "local": "Москва",
+    "isbn": "978-5-9908943-9-6", "numeros_sumario": 307,
+    "leitura": "https://djvu.online/file/j6lpXpwfotQwr",
+    "editora_amostra": "https://histlit.com/upload/books/Trozki-for%20site.pdf",
+    "estado_conhecido": "sumario_e_paginas_iniciais; texto_completo_nao_confirmado"
+  }
+}

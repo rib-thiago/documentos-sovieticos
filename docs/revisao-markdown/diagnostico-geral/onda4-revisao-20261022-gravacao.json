@@ -1,0 +1,403 @@
+{
+  "batch_id": "onda4-revisao-20261022",
+  "editions_changed": 41,
+  "issue_outcomes": 48,
+  "documents_metadata_changed": [],
+  "closed_issues": 48,
+  "queue_before_sha256": "4d62a2aaf2420d8ca8933fb852ca1d927737be570c6e8bb0f5e1866cbc0f6bf0",
+  "queue_after_sha256": "860f8ea24d6cbc817812adfab1996f9eb812183768759f0dcc42eccd772420b7",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R2-secoes_listas-0021",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0021.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/24b4a663d257daabc56f6472fe74ec6a231f8453e369c3b6744fccad1a8ab778-R2-secoes_listas-0021.json",
+      "result_sha256": "24b4a663d257daabc56f6472fe74ec6a231f8453e369c3b6744fccad1a8ab778",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4810:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0022",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0022.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/b287474d95e2dcc939b71ca1e245128394c30b155fd454ca0183d2a2ad2c60ae-R2-secoes_listas-0022.json",
+      "result_sha256": "b287474d95e2dcc939b71ca1e245128394c30b155fd454ca0183d2a2ad2c60ae",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4811:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0023",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0023.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/4bec67ce95d876ab95d495bf6a979d69d57d00fc0ffce1dfe1e57c3073cfa7ff-R2-secoes_listas-0023.json",
+      "result_sha256": "4bec67ce95d876ab95d495bf6a979d69d57d00fc0ffce1dfe1e57c3073cfa7ff",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5660:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0036",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0036.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/3126bde87a7028f0aad6e9e852ca5effed1e0122c286ae555d6593555bcc4452-R2-secoes_listas-0036.json",
+      "result_sha256": "3126bde87a7028f0aad6e9e852ca5effed1e0122c286ae555d6593555bcc4452",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2485:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0037",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0037.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/d894fd938069f35bc6595053ce62fc4d2e1966e1afb221d11cb125c6d2f4782e-R2-secoes_listas-0037.json",
+      "result_sha256": "d894fd938069f35bc6595053ce62fc4d2e1966e1afb221d11cb125c6d2f4782e",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2487:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-2488:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0039",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0039.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/0f993aa7e5ca26e3506869bb05c67c48936e22f4cf2cb77bfa6c973979653b43-R2-secoes_listas-0039.json",
+      "result_sha256": "0f993aa7e5ca26e3506869bb05c67c48936e22f4cf2cb77bfa6c973979653b43",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2537:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0041",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0041.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/0dcc172af235b998ed5f1635718d12a0816359247061e8b3d53ff7378d772d09-R2-secoes_listas-0041.json",
+      "result_sha256": "0dcc172af235b998ed5f1635718d12a0816359247061e8b3d53ff7378d772d09",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4203:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0043",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0043.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/dbc8220d464e1d67a01432e27caec28f2ac07aac112c01a44238f67949041705-R2-secoes_listas-0043.json",
+      "result_sha256": "dbc8220d464e1d67a01432e27caec28f2ac07aac112c01a44238f67949041705",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4580:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4581:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0044",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0044.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/75512279b8cb96dfc6cda63ca916c8962cf9129b7f02eb955c07966b4095a095-R2-secoes_listas-0044.json",
+      "result_sha256": "75512279b8cb96dfc6cda63ca916c8962cf9129b7f02eb955c07966b4095a095",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4584:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4665:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0045",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0045.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/04e57493c90481e68c5eb21626ab4d7c8477cd2c26f10e9e9f3ccb9e0cbe7c94-R2-secoes_listas-0045.json",
+      "result_sha256": "04e57493c90481e68c5eb21626ab4d7c8477cd2c26f10e9e9f3ccb9e0cbe7c94",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4847:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0047",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0047.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/46d3ced8a7dd4dfd90c4f9eb0d50bff062529b73566696cf847f1cdf587e2e74-R2-secoes_listas-0047.json",
+      "result_sha256": "46d3ced8a7dd4dfd90c4f9eb0d50bff062529b73566696cf847f1cdf587e2e74",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5149:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0048",
+      "result_file": "temporario/revisao-onda4/merged/R2-secoes_listas-0048.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/4da403c0961af5f95dcf6f05b356790941a14565a49b6d47a65cb6d0eaa2894e-R2-secoes_listas-0048.json",
+      "result_sha256": "4da403c0961af5f95dcf6f05b356790941a14565a49b6d47a65cb6d0eaa2894e",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5284:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R3-recuperacao_links-0136",
+      "result_file": "temporario/revisao-onda4/merged/R3-recuperacao_links-0136.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/9311d542d3adac86486add0559b2c595a3c11513155d4e12349fe9309e0b0128-R3-recuperacao_links-0136.json",
+      "result_sha256": "9311d542d3adac86486add0559b2c595a3c11513155d4e12349fe9309e0b0128",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-1442:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-1733:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R3-recuperacao_links-0137",
+      "result_file": "temporario/revisao-onda4/merged/R3-recuperacao_links-0137.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/7dc08fdca1a7908a2fde9df9974ec47e94bb5f904041716472aba7fe94268e5a-R3-recuperacao_links-0137.json",
+      "result_sha256": "7dc08fdca1a7908a2fde9df9974ec47e94bb5f904041716472aba7fe94268e5a",
+      "editions_prepared": 3,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2644:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        }
+      ]
+    },
+    {
+      "batch_id": "R3-recuperacao_links-0138",
+      "result_file": "temporario/revisao-onda4/merged/R3-recuperacao_links-0138.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/e50f146c62a483b7e61c1dac5d3d969b34b488f576079a8f269083cbb87f5aec-R3-recuperacao_links-0138.json",
+      "result_sha256": "e50f146c62a483b7e61c1dac5d3d969b34b488f576079a8f269083cbb87f5aec",
+      "editions_prepared": 12,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4882:links_nao_reconstruidos",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-5005:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-5087:links_nao_reconstruidos",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-5435:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-5465:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-5747:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-5785:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-10746:links_nao_reconstruidos",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-4583:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4666:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4771:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4848:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4857:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-5337:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4576:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R3-recuperacao_links-0139",
+      "result_file": "temporario/revisao-onda4/merged/R3-recuperacao_links-0139.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/853e77d0113128399cf01bf235ca44e6b9bcbaba1062e7f9cd50349d681e2d7a-R3-recuperacao_links-0139.json",
+      "result_sha256": "853e77d0113128399cf01bf235ca44e6b9bcbaba1062e7f9cd50349d681e2d7a",
+      "editions_prepared": 6,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5791:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-5823:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-5826:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-6188:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-7117:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-5864:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R3-recuperacao_links-0140",
+      "result_file": "temporario/revisao-onda4/merged/R3-recuperacao_links-0140.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/0a436262d3eda161e6984608d928749cad239efbf6df8ef7393dce5ef4ccf68d-R3-recuperacao_links-0140.json",
+      "result_sha256": "0a436262d3eda161e6984608d928749cad239efbf6df8ef7393dce5ef4ccf68d",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7377:links_nao_reconstruidos",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-8704:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        },
+        {
+          "key": "showtrials-9411:links_nao_reconstruidos",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "showtrials-8849:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R3-recuperacao_links-0141",
+      "result_file": "temporario/revisao-onda4/merged/R3-recuperacao_links-0141.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/20627eafcc1572a6e9aa8d0d1d3b72de865786c85a086c4fedb73682e8aeb26c-R3-recuperacao_links-0141.json",
+      "result_sha256": "20627eafcc1572a6e9aa8d0d1d3b72de865786c85a086c4fedb73682e8aeb26c",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-9930:links_nao_reconstruidos",
+          "outcome": "ressalva_da_fonte_preservada"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0157",
+      "result_file": "temporario/revisao-onda4/merged/R4-conferencia_colecoes-0157.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/500c2970dfbd3c5a226d1b2b9af823df6365d7697f11e49199ccbf46b9d97de1-R4-conferencia_colecoes-0157.json",
+      "result_sha256": "500c2970dfbd3c5a226d1b2b9af823df6365d7697f11e49199ccbf46b9d97de1",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "mozokhin-2013-v1-054:conferencia_notas_20261021",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0160",
+      "result_file": "temporario/revisao-onda4/merged/R4-conferencia_colecoes-0160.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/650db0c0a38f0039d69a0d68766f9671a5aad4623e20cc06bc30acdfb1198647-R4-conferencia_colecoes-0160.json",
+      "result_sha256": "650db0c0a38f0039d69a0d68766f9671a5aad4623e20cc06bc30acdfb1198647",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "mozokhin-2013-v1-101:conferencia_notas_20261021",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0164",
+      "result_file": "temporario/revisao-onda4/merged/R4-conferencia_colecoes-0164.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda4-revisao-20261022/bd9afc1093727c50b4ae2870211b9340988550a1ea9d49172e0f5a2ceb9e45ff-R4-conferencia_colecoes-0164.json",
+      "result_sha256": "bd9afc1093727c50b4ae2870211b9340988550a1ea9d49172e0f5a2ceb9e45ff",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "mozokhin-2013-v1-145:conferencia_notas_20261021",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "mozokhin-2013-v1-146:conferencia_notas_20261021",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    }
+  ],
+  "saved": true,
+  "history_id": "20261022092621546848-bbb25f5c1914",
+  "document_id": null,
+  "revision": "339f620f27f29c67d8729f0092ec687e2a0a537fd7be3775451b56178cd357ec",
+  "entity": {
+    "kind": "batch",
+    "id": "onda4-revisao-20261022"
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}

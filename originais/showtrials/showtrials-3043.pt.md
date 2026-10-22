@@ -19,3 +19,10 @@ INTERROGOU — KOGAN
 Confere: — ilegível
 
 RGASPI, fundo 671, inventário 1, dossiê 120, folha 11.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A pergunta e a resposta remetem a “13/XII-31”, embora o protocolo seja de 15 de dezembro de 1934. As traduções explicitam 1931 conforme a publicação eletrônica russa; a data não foi harmonizada por inferência.

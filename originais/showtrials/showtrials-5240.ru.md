@@ -46,7 +46,7 @@
 
 18\. КЛЕЙНА Владимира Карловича, 1883 г\<ода\> р\<ождения\>, б\<ес\>п\<артийного\>, заместителя директора Оружейной Палаты Кремля.
 
-19\. ПРЕЗЕНТА \[1\] Михаила Яковлевича, 1898 г\<ода\> р\<ождения\>, в 1917 г. быв\<шего\> члена ПСР, б/п, редактора Гос. Литиздата.
+19\. ПРЕЗЕНТА [\[1\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn1>) Михаила Яковлевича, 1898 г\<ода\> р\<ождения\>, в 1917 г. быв\<шего\> члена ПСР, б/п, редактора Гос. Литиздата.
 
 – ВСЕХ ПРИГОВОРИТЬ К 5 ГОДАМ КОНЦЛАГЕРЯ.
 
@@ -78,7 +78,7 @@
 
 33\. ЛОПАТИНСКОГО Бориса Львовича, 1881 г\<ода\> р\<ождения\>, б\<ес\>п\<артийного\>, художника.
 
-34\. ИГНАТЬЕВА \[2\] Владимира Ивановича, 1887 г\<ода\> р\<ождения\>, с 1906 г. члена партии эсеров, с 1917 по 1919 г. члена ЦК «Трудовой Народно-Социалистической Партии», члена «Московской коллегии защитников».
+34\. ИГНАТЬЕВА [\[2\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn2>) Владимира Ивановича, 1887 г\<ода\> р\<ождения\>, с 1906 г. члена партии эсеров, с 1917 по 1919 г. члена ЦК «Трудовой Народно-Социалистической Партии», члена «Московской коллегии защитников».
 
 –  ВСЕХ ПРИГОВОРИТЬ К 3 ГОДАМ ССЫЛКИ.
 
@@ -88,7 +88,7 @@
 
 ## II. ПРЕДАТЬ СУДУ ВОЕННОЙ КОЛЛЕГИИ ВЕРХОВНОГО СУДА СОЮЗА ССР
 
-36\. КАМЕНЕВА \[3\] Льва Борисовича, ввиду открывшихся после процесса по делу убийства тов. КИРОВА новых обстоятельств, которыми установлено, что КАМЕНЕВ является организатором подготовки убийства тов. СТАЛИНА.
+36\. КАМЕНЕВА [\[3\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn3>) Льва Борисовича, ввиду открывшихся после процесса по делу убийства тов. КИРОВА новых обстоятельств, которыми установлено, что КАМЕНЕВ является организатором подготовки убийства тов. СТАЛИНА.
 
 ## III. КОНТРРЕВОЛЮЦИОННАЯ ТЕРРОРИСТИЧЕСКАЯ ТРОЦКИСТСКАЯ ГРУППА ВОЕННЫХ РАБОТНИКОВ
 
@@ -96,13 +96,13 @@
 
 37\. ДОРОШИНА Василия Григорьевича, 1894 г. р., члена ВКП(б) с 1918 г., пом\<ощника\> коменданта Кремля.
 
-38\. КОЗЫРЕВА \[4\] Василия Ивановича, 1899 г\<ода\> р\<ождения\>, члена ВКП(б) с 1919 г., слушателя Военно-Химической Академии.
+38\. КОЗЫРЕВА [\[4\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn4>) Василия Ивановича, 1899 г\<ода\> р\<ождения\>, члена ВКП(б) с 1919 г., слушателя Военно-Химической Академии.
 
 39\. ЧЕРНЯВСКОГО Михаила Кондратьевича, 1901 г\<ода\> р\<ождения\>, члена ВКП(б), сотрудника Разведупра Наркомата Обороны.
 
-40\. ИВАНОВА \[5\] Федора Георгиевича, 1901 г\<ода\> р\<ождения\>, члена ВКП(б) с 1919 г., слушателя Военно-Химической Академии.
+40\. ИВАНОВА [\[5\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn5>) Федора Георгиевича, 1901 г\<ода\> р\<ождения\>, члена ВКП(б) с 1919 г., слушателя Военно-Химической Академии.
 
-41\. НОВОЖИЛОВА \[6\] Максима Ивановича, 1897 г\<ода\> р\<ождения\>, члена ВКП(б), инженера-механика ЦАГИ.
+41\. НОВОЖИЛОВА [\[6\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn6>) Максима Ивановича, 1897 г\<ода\> р\<ождения\>, члена ВКП(б), инженера-механика ЦАГИ.
 
 42\. СИНЕЛОБОВА Алексея Ивановича, 1899 г\<ода\> р\<ождения\>, члена ВКП(б) с 1930 г., для поручений при Комендатуре Кремля.
 
@@ -114,13 +114,13 @@
 
 44\. ЛИБЕРМАНА Григория Борисовича, 1900 г. р., быв. Члена ВКП(б), состоящего в распоряжении Управления по начсоставу РККА.
 
-45\. БЕНЕТ \[7\] Раису Соломоновну 1899 г\<ода\> р\<ождения\>, члена ВКП(б) с 1927 г., сотрудницу Разведупра Наркомата Обороны.
+45\. БЕНЕТ [\[7\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn7>) Раису Соломоновну 1899 г\<ода\> р\<ождения\>, члена ВКП(б) с 1927 г., сотрудницу Разведупра Наркомата Обороны.
 
 46\. РОХИНСОНА Владимира Матвеевича 1896 г\<ода\> р\<ождения\>, члена ВКП(б), помощника начальника Хим. Управления РККА и начальника Научно-исследовательского ин-та РККА.
 
 – ВСЕХ ПРИГОВОРИТЬ К 5 ГОДАМ КОНЦЛАГЕРЯ.
 
-47\. РЯБИНИНА \[8\] Матвея Николаевича, 1889 г\<ода\> р\<ождения\>, члена ВКП(б) с 1919 г., заместителя начальника 1-го Отдела Разведупра Наркомата Обороны.
+47\. РЯБИНИНА [\[8\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn8>) Матвея Николаевича, 1889 г\<ода\> р\<ождения\>, члена ВКП(б) с 1919 г., заместителя начальника 1-го Отдела Разведупра Наркомата Обороны.
 
 – ПРИГОВОРИТЬ К 3 ГОДАМ ССЫЛКИ.
 
@@ -240,7 +240,7 @@
 
 84\. НИКИТИНСКУЮ Анну Ивановну, 1904 г\<ода\> р\<ождения\>, б\<ес\>п\<артийную\>, домашнюю хозяйку.
 
-85\. ГОГУА \[9\] Ирину Калистратовну, 1904 г\<ода\> р\<ождения\>, б\<ес\>п\<артийную\>, технического секретаря Бюджетной Комиссии ЦИК.
+85\. ГОГУА [\[9\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn9>) Ирину Калистратовну, 1904 г\<ода\> р\<ождения\>, б\<ес\>п\<артийную\>, технического секретаря Бюджетной Комиссии ЦИК.
 
 – ПРИГОВОРИТЬ К 5 ГОДАМ КОНЦЛАГЕРЯ.
 
@@ -250,15 +250,15 @@
 
 – ПРИГОВОРИТЬ К 3 ГОДАМ КОНЦЛАГЕРЯ.
 
-88\. МИНЕРВИНУ \[10\] Любовь Николаевну, 1895 г\<ода\> р\<ождения\>, б\<ес\>п\<артийную\>, сотрудницу Секретариата ЦИК СССР.
+88\. МИНЕРВИНУ [\[10\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn10>) Любовь Николаевну, 1895 г\<ода\> р\<ождения\>, б\<ес\>п\<артийную\>, сотрудницу Секретариата ЦИК СССР.
 
-89\. МИНДЕЛЬ \[11\] Раису Григорьевну, 1906 г\<ода\> р\<ождения\>, б\<ес\>п\<артийную\>, референта Секретариата Президиума ЦИК СССР.
+89\. МИНДЕЛЬ [\[11\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn11>) Раису Григорьевну, 1906 г\<ода\> р\<ождения\>, б\<ес\>п\<артийную\>, референта Секретариата Президиума ЦИК СССР.
 
-90\. ЕЛЬЧАНИНОВУ \[12\] Веру Александровну, 1910 г\<ода\> р\<ождения\>, члена ВЛКСМ, сотрудницу Секретариата Президиума ЦИК СССР.
+90\. ЕЛЬЧАНИНОВУ [\[12\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn12>) Веру Александровну, 1910 г\<ода\> р\<ождения\>, члена ВЛКСМ, сотрудницу Секретариата Президиума ЦИК СССР.
 
 91\. БОЛЬШИХ Ирину Васильевну, 1903 г\<ода\> р\<ождения\>, б\<ес\>п\<артийную\>, сотрудницу Секретариата Президиума ЦИК СССР.
 
-92\. АГРАНОВИЧА \[13\] Федора Семеновича, 1903 г\<ода\> р\<ождения\>, члена ВКП(б) с 1920 г., консультанта СНК СССР.
+92\. АГРАНОВИЧА [\[13\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_edn13>) Федора Семеновича, 1903 г\<ода\> р\<ождения\>, члена ВКП(б) с 1920 г., консультанта СНК СССР.
 
 93\. КУНЬЕВУ Елену Васильевну, 1897 г\<ода\> р\<ождения\>, б\<ес\>п\<артийную\>, секретаря Управления Делами СНК РСФСР.
 
@@ -354,28 +354,28 @@
 
 Воспроизводится по: Лубянка. Сталин и ВЧК-ГПУ-ОГПУ-НКВД. Архив Сталина. Документы высших органов партийной и государственной власти. Январь 1922 – декабрь 1936., М.: МФД, 2003, с. 663-669.
 
-\[1\] Напротив фамилии М.Я. Презента вписано: “10 лет к\<онц\>л\<агеря\>”.
+[\[1\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref1>) Напротив фамилии М.Я. Презента вписано: “10 лет к\<онц\>л\<агеря\>”.
 
-\[2\] Напротив фамилии В.И. Игнатьева вписано: “5 лет к\<онц\>л\<агеря\>”.
+[\[2\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref2>) Напротив фамилии В.И. Игнатьева вписано: “5 лет к\<онц\>л\<агеря\>”.
 
-\[3\] Напротив фамилии Л.Б. Каменева вписано: “10 лет тюрьмы”.
+[\[3\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref3>) Напротив фамилии Л.Б. Каменева вписано: “10 лет тюрьмы”.
 
-\[4\] Напротив фамилии В.И. Козырева вписано: “10 лет тюрьмы”.
+[\[4\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref4>) Напротив фамилии В.И. Козырева вписано: “10 лет тюрьмы”.
 
-\[5\] Напротив фамилии Ф.Г. Иванова вписано: “10 лет тюрьмы”.
+[\[5\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref5>) Напротив фамилии Ф.Г. Иванова вписано: “10 лет тюрьмы”.
 
-\[6\] Напротив фамилии М.И. Новожилова вписано: “10 лет тюрьмы”.
+[\[6\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref6>) Напротив фамилии М.И. Новожилова вписано: “10 лет тюрьмы”.
 
-\[7\] Напротив фамилии Р.С. Беннет вписано: “10 лет тюрьмы”.
+[\[7\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref7>) Напротив фамилии Р.С. Беннет вписано: “10 лет тюрьмы”.
 
-\[8\] Напротив фамилии М.Н. Рябинина вписано: “10 лет тюрьмы”.
+[\[8\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref8>) Напротив фамилии М.Н. Рябинина вписано: “10 лет тюрьмы”.
 
-\[9\] Напротив фамилии И.К. Гогуа вписано: “Отпустить”. В тексте фамилия Гогуа ошибочно написана “Гугуа”.
+[\[9\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref9>) Напротив фамилии И.К. Гогуа вписано: “Отпустить”. В тексте фамилия Гогуа ошибочно написана “Гугуа”.
 
-\[10\] Напротив фамилии Л.Н. Минервиной вписано: “Отпустить”.
+[\[10\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref10>) Напротив фамилии Л.Н. Минервиной вписано: “Отпустить”.
 
-\[11\] Напротив фамилии Р.Г. Миндель вписано: “Отпустить”.
+[\[11\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref11>) Напротив фамилии Р.Г. Миндель вписано: “Отпустить”.
 
-\[12\] Напротив фамилии В.А. Ельчаниновой вписано: “Отпустить”.
+[\[12\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref12>) Напротив фамилии В.А. Ельчаниновой вписано: “Отпустить”.
 
-\[13\] Напротив фамилии Ф.С. Аграновича вписано: “5 лет к\<онц\>л\<агеря\>”.
+[\[13\]](<http://showtrials.ru/speczsoobshhenie-g-g-yagody-i-v-stalinu-o-merah-nakazaniya-uchastnikam-terroristicheskih-grupp-s-pometkami-i-v-stalina/#_ednref13>) Напротив фамилии Ф.С. Аграновича вписано: “5 лет к\<онц\>л\<агеря\>”.

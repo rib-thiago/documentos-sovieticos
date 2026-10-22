@@ -1,6 +1,6 @@
 The Pittsburgh Press, August 19, 1936
 
-16 TRIED FOR PLOT TO MURDER STALIN
+## 16 TRIED FOR PLOT TO MURDER STALIN
 
 Shadow of Firing Squad Hangs Over Grim-Faced Men, Including Founders of Russian Communism, Who Admit Conspiring to Overthrow Government
 
@@ -62,7 +62,7 @@ At one meeting, David was quoted as confessing, one of the defendants, M. Lurie,
 
 David was quoted further as confessing that Trotzky instructed him to assassinate Stalin at the Seventh Congress of the Communist International in July, 1935, because Trotzky said it would “cause an international commotion.”
 
-Couldn’t Take Aim
+### Couldn’t Take Aim
 
 David’s seat at the congress was too far back for him to get proper aim, the indictment said.
 
@@ -70,7 +70,7 @@ The indictment charged that Trotzky’s main idea was to disorganize the Red Arm
 
 According to the confession of V.P. Olberg, he entered the Soviet Union on a passport forged by the German secret police and had 12,000 Czechoslovakian kronen received from Trotzky’s son. The indictment said that the defendant, S.V. Mirachkovsky in 1936 received direct orders from Trotzky’s son.
 
-Like Beaten Man
+### Like Beaten Man
 
 Zinoviev was weak-voiced and a perfect picture of a beaten man, in contrast to the famous orator he used to be. He stood for an hour while Vishinsky, looking like a cor­poration lawyer with his iron-gray hair and decisive bearing, questioned him and Smirnov.
 
@@ -88,11 +88,11 @@ Loy H. Henderson, American charge d’affaires, attended the trial.
 
 The Pittsburgh Press, August 20, 1936
 
-SOVIETS BOAST OF CONSPIRACY TO KILL STALIN
+## SOVIETS BOAST OF CONSPIRACY TO KILL STALIN
 
 12 More Are Added to List of Those Facing Almost Certain Death
 
-ONE WOMAN NAMED
+### ONE WOMAN NAMED
 
 Mass Executions Are Recalled as Dignitaries Calmly Admit Guilt
 
@@ -106,13 +106,13 @@ All pleaded guilty and confessed frankly and even boastingly to the plot.
 
 Zinoviev admitted that he had ordered his former secretary, Bogden, to kill Stalin.
 
-Secretary Kills Self
+### Secretary Kills Self
 
 While Kamenev was testifying. I.I. Reingold, another defendant, interrupted to say that Bogden was to have been killed by I.P. Bakaev, also a member of the conspiracy, after Bogden had killed Stalin, so that the affair could be covered up fully. Bogden, however, committed suicide without making the attempt on Stalin.
 
 Speaking vehemently, Reingold, a slight, tallish, dark man, accused Kamenev and Zinoviev of moral responsibility for Bogden’s suicide, which he ascribed to unwillingness to kill Stalin.
 
-Accuses Trotzky
+### Accuses Trotzky
 
 Kamenev was asked directly by Andrew Vishinsky, the prosecutor, whether he had participated in the killing of Sergei Kirov, Stalin’s old friend and associate, in 1934, for which 115 men and two women were executed and more than 100 others jailed.
 
@@ -120,7 +120,7 @@ Kamenev replied that he was in the Trotzkyist bloc and late in 1932 discussed th
 
 Kamenev implicated Alexis Rykov, Soviet commissar of posts and telegraphs, in his group, and said he believed Karl Radek, one of the editors of Izvestia, would have been sympathetic.
 
-“Moral Supporter”
+### “Moral Supporter”
 
 In his testimony, Zinoviev implicated Trotzky as a conspirator from his exile abroad — although more in the role of a moral supporter than an active participant.
 
@@ -128,7 +128,7 @@ He denied a break with Trotzky in the period after the Zinoviev and Trotzky grou
 
 “This was not true.” Zinoviev said. “We never did break with Trotzky and never strayed our alliance with his group. We did, however, deceive the party by playing a hypocritical role, on the one hand pledging party loyalty and on the other hand fighting the party with the same weapons as Trotzky, only in a different manner. There simply existed a division of labor between us and Ttotzky.”
 
-Worked with Trotzky
+### Worked with Trotzky
 
 “We were actually a branch of Trotzky’s foreign organization. What he did outside more openly, we did here secretly. We pursued the same purposes but employed different methods.”
 
@@ -138,7 +138,7 @@ In admitting the guilt Kamenev spoke in a professorial manner directly to the p
 
 “I am now finally determined to tell all the truth,” he declared. “I have no illusions after my grave past as to the reaction of the court to my words, but I will tell the truth.”
 
-Admits He Lied
+### Admits He Lied
 
 Referring to a charge made yesterday by I. Smirnov, another defendant, that he had lied, Zino­viev said: “Yes, I lied often since I started the struggle with the Bolshevist party. I went all the way from opposition to counter-revolution to terrorism and actually to Fascism, because Trotzkyism plus terrorism is Fascism.
 
@@ -146,7 +146,7 @@ The sixteen men on trial for complicity in a terrorist plot against the governm
 
 Names of 12 more men and a woman—Safonova Faivilovich—were announced today as held for separate examination and probable trial.
 
-Last Names Disclosed
+### Last Names Disclosed
 
 Only the last names of the 12 men added to the list of alleged con­spirators were announced: Gertik, Grinberg, Gaven, Karev, K\<uz\>michev, Konstant, Matorin, Paul Oldberg, Radin, Esteman, and Schmidt.
 
@@ -158,7 +158,7 @@ It was nearly midnight before the first day’s session was adjourned — in a w
 
 R.V. Pickel, last of those to tes­tify, said that his co-defendant, I.P. Bakaev, was prominent in the plot but now sought to minimize his role.
 
-Accuses Co-Defendant
+### Accuses Co-Defendant
 
 This comment was on Bakaev’s statement that one Bogden, one-time secretary to Zinoviev, was to kill Stalin at his office at the Com­munist Party headquarters. Bogden—who, it was disclosed for the first time, committed suicide—told Bakaev that he could not kill Stalin single-handed and needed help. Bakaev said that he did not aid Bogden.
 
@@ -174,7 +174,7 @@ Kamenev, testifying today, paid a graceful compliment to the government he trie
 
 The economic situation (which is improving) and the general solidarity of the government, he said, made terror the only means of unseating Stalin because there was no chance of an internal collapse. He pointed out that the government had remained strong through all its difficulties.
 
-Admits Conspiracy
+### Admits Conspiracy
 
 Kamenev admitted his part in the conspiracy and said he fully sympathized with Trotzky.
 
@@ -186,13 +186,13 @@ Kamenev admitted his part in the conspiracy and said he fully sympathized with T
 
 The indictment of the 16 now on trial charged that the main idea of Trotzky, alleged leader of the plot, was to disorganize the Red Army, so that in the resulting confusion the government might be overthrown. S.V. Mirach\<k\>avsky, one of the defendants, said the first aim was to eliminate Stalin.
 
-Prominent Men Named
+### Prominent Men Named
 
 I.I. Re\<i\>ngold testified that Rykov, commissar of communications, Buk­harin, Tomsky, and Gregory Sokol­nikov, former ambassador to Great Britain, in 1932 endorsed the assassination of Stalin as “the only way to cleanse the government.” Sokol­nikov was arrested. Rykov, Buk­harin and Tomsky all recanted.
 
 Re\<i\>ngold said Kamenev was slated to become head of the government; Zinoviev to become head of the Communist Party, and the Comin­tern, and Bakaev, head of the secret police.
 
-Zinoviev Blamed
+### Zinoviev Blamed
 
 One of the defendants, testifying in response to questioning by the prosecutor, blamed Zinoviev for having failed to shoot Stalin at the same time Kirov was assassinated. He said the plot was to kill them both at the same time and that his group did their job while Zinoviev was “weak and vacillating.” He said that assassination of Stalin was as­signed to Zinoviev’s group when in a meeting in Zinoviev’s apartment Zinoviev declared:
 
@@ -202,11 +202,11 @@ Uniformed guards armed with bayoneted rifles and holstered pis­tols stood in pa
 
 Pittsburgh Press, August 21, 1936
 
-YOUNG WOMAN IS SENSATION OF PLOT TRIAL
+## YOUNG WOMAN IS SENSATION OF PLOT TRIAL
 
 Bobbed-Haired Wife Shouts ‘Liar’ at Husband, Who Faces Death,
 
-CONFESSES OWN GUILT
+### CONFESSES OWN GUILT
 
 ‘Safanova’ Admits She Conspired to Assassinate Dictator Stalin
 
@@ -218,7 +218,7 @@ She appeared as a witness against 16 men on trial, charged with plot­ting “at
 
 All implicated in the conspiracy—and all so far have admitted their guilt—face execution.
 
-Not Yet on Trial
+### Not Yet on Trial
 
 Safanova, about 35, is not yet on trial herself, but admitted plotting with Gregory Zinoviev, Leon Kamenev and others formerly high in the Communist party, and said they were directed by Trotzky, one-time co-dictator with Stalin and now an exile in Finland.
 
@@ -228,7 +228,7 @@ The trial developed a tense domestic drama when Safanova called her former husb
 
 “The idea of terrorism was given us by Trotzky.” she testified. “But long before instructions came from him our group was discussing terror­ist methods.”
 
-Accuses Husband
+### Accuses Husband
 
 Safanova quoted her former husband as saying: “Stalin must be killed. Stalin shall be killed.” Smir­nov shook his head, and Safanova shouted, “He lies\!”
 
@@ -238,7 +238,7 @@ M. Rachkovski, one of the defendants, interjected:
 
 “There are plenty of witnesses to Smirnov. You are lying now, but you will be dragged out into the light by your ears.”
 
-Minors ‘Steal Show’
+### Minors ‘Steal Show’
 
 Unexpected histrionic ability by minor members of the cast robbed the stars of their spotlights today as the trial continued of 16 prominent Bolsheviks for complicity in a plot to overthrow the government.
 
@@ -248,7 +248,7 @@ As the trial resumed today, the audience of 200 in the little court room in the 
 
 But V. P. Olberg was accorded first honors.
 
-Planned ‘Bomb Squad’
+### Planned ‘Bomb Squad’
 
 Where others said they thought of killing Stalin and others by means of a pistol shot or a casual bomb, Olberg said quietly that his idea was to introduce a bomb squad into a May Day parade, have its student members throw five bombs into the leaders and thus—as the startled audience visualized it—possibly wipe out the entire Central Executive Committee.
 
@@ -256,7 +256,7 @@ Olberg said that he drew up the plan and distributed copies of it, detailed a ch
 
 The students would have joined the gay parade and, apparently, thrown their bombs into the leaders before the tomb of Lenin.
 
-‘Gestapo’ Connection
+### ‘Gestapo’ Connection
 
 Olberg caused a further sensation when he said that followers of Trotzky in Germany maintained connections with the German police and added:
 
@@ -268,7 +268,7 @@ E.S. Holzman testified that a copy of the Arabian Nights served as a secret code
 
 He did not remember just how the code worked, he said.
 
-Last Names Disclosed
+### Last Names Disclosed
 
 Only the last names of the 12 additional men involved in the plot were announced. They were Gertik, Grinberg, Gaven, Karev, Ku\<z\>michev, Konstant, Materin, Paul, Oldberg, Radin, Esterman, and Schmidt.
 
@@ -282,11 +282,11 @@ Kamenev made similar admissions. “I was in the Trotzkyist bloc and late in 193
 
 The Pittsburgh Press, August 22, 1936
 
-SURGEON LINKS HITLER IN PLOT TO KILL STALIN
+## SURGEON LINKS HITLER IN PLOT TO KILL STALIN
 
 Doctor Says Assassination Scheme Originated with Nazi Agent
 
-DEFENDANTS DENOUNCED
+### DEFENDANTS DENOUNCED
 
 Prosecutor Lashes 16 for Whom Death Before Firing Squad Looms
 
@@ -308,7 +308,7 @@ In 1932, upon Moses’ instructions, Nathan said he went to Russia where he esta
 
 Nathan claimed he was shocked by knowledge that the Trotzkyists were collaborating with the Nazis, but later decided that since Trotzky’s purpose was terror, they were obliged to achieve that purpose by any means and to use any allies that could be found.
 
-Told to Kill Zhdanov
+### Told to Kill Zhdanov
 
 Nathan said Moses came to Russia in 1935 and instructed him to kill Zhdanov in Leningrad in the May Day parade. He said Veiz ordered one group of the terrorists to kill Stalin in the same parade, but they were unable to get close enough.
 
@@ -316,7 +316,7 @@ Moses, testifying, said that before leaving Berlin for Russia in March 1933, two
 
 Moses  described himself as Nathan’s “chief adviser on terror­istic matters.”
 
-Defendants Lashed
+### Defendants Lashed
 
 The prosecution bitterly denounced today the 16 defendants accused of the terrorist plot, indicating that the death penalty is in sight for some if not all of them.
 
@@ -326,7 +326,7 @@ All have freely confessed their guilt. Prosecutor Andrew Vishinsky, beginning hi
 
 The Pittsburgh Press, August 24, 1936
 
-16 AWAIT DEATH IN STALIN PLOT
+## 16 AWAIT DEATH IN STALIN PLOT
 
 Law Says 72 Hours Must Elapse Before Sentences Can Be Carried Out
 
@@ -350,7 +350,7 @@ The judge, apparently trying to prevent international complications as result of
 
 Ulrich acted when Moses Lurie cited an alleged remark of German Communist leaders that Stalin might have prevented Adolf Hitler’s rise to power with his German National Socialists.
 
-Held Irrelevant
+### Held Irrelevant
 
 Unconsciously paraphrasing Gilbert and Sullivan, the judge said:
 
@@ -360,7 +360,7 @@ Following Kamenev’s calm admission that the death penalty was fully justified
 
 “I admit guilt as chief organizer of the assassination of Kirov,” Zino­viev said.
 
-Hits Zinoviev, Kamenev
+### Hits Zinoviev, Kamenev
 
 In passing sentence, Judge Ulrich said Zinoviev and Kamenev, who once ruled Russia with Stalin, were to be executed because they organ­ized as a united front a Trotzky-Zinovist bloc and plotted individual terrorism.
 
@@ -368,13 +368,13 @@ The crowded courtroom waited three hours for the verdict, although few doubted t
 
 All the accused pleaded guilty. In abject speeches to the court, they said they deserved death for the conspiracy. None had attorneys; all acted as their own counsel.
 
-Admits Responsibility
+### Admits Responsibility
 
 Zinoviev also admitted he was fully responsible for the activities of the terrorist organization up to 1936.
 
 “Of course, my name will not enter history by the side of the names with which it once might have been associated.” Zinoviev said. “It will enter history together with the name of Trotzky but I hope that somewhere it will be said that Zinoviev at the last minute died as a former and not a present   enemy of the state. I want my example to serve as a lesson to all who still continue in the path of Trotzkyism. Let them know that 1 did repent as a man who understood his mistakes, and that I was not born as a counter-revolutionary.
 
-Was Pupil of Lenin
+### Was Pupil of Lenin
 
 “I was even Lenin’s pupil but 1 must say, in this attempt to write my obituary, that even in those times I had a sort of defective bolshevism. Otherwise I could not have fallen so low.”
 
@@ -384,7 +384,7 @@ Kamenev, in his final statement to the court, calmly reviewed his terroristic ac
 
 Zinoviev, tieless, in a rumpled white shirt and with his shock of hair standing on end, in his last statement said:
 
-“Death Is Justified”
+### “Death Is Justified”
 
 “The death penalty is entirely justified and doubtless will be fully supported by toilers at home and abroad, including the embattled workers in Spain.”
 
@@ -394,7 +394,7 @@ He deprecated suggestions of ruthlessness in treatment of the prisoners.
 
 August 25
 
-FIRING SQUAD SHOOTS 16 STALIN PLOTTERS
+## FIRING SQUAD SHOOTS 16 STALIN PLOTTERS
 
 Swift Execution Is Fate of Conspirators Against Soviet Dictator — Five Others Face Same Fate as Government Hunts Out Trotzky Followers
 
@@ -424,7 +424,7 @@ In December, 1934, Sergei Kirov, government official and intimate of Stalin, was
 
 The official newspaper Pravda indicated today that there would be no let-up in the government’s extermination of its enemies. The next step, Pravda said, will be to purge Russia until “Trotzkyism and Zinovievism” is not thought of again.
 
-TROTZKY INCENSED AT EXECUTION NEWS
+## TROTZKY INCENSED AT EXECUTION NEWS
 
 OSLO. Aug. 25—Leon Trotsky, ac­cused of fomenting the “plot” against Josef Stalin for which 16 Bolsheviki were shot today, described their execution “one of the greatest crimes of history.”
 

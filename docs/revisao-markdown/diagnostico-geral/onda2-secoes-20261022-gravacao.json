@@ -1,0 +1,56 @@
+{
+  "batch_id": "onda2-secoes-20261022",
+  "editions_changed": 2,
+  "issue_outcomes": 4,
+  "documents_metadata_changed": [],
+  "closed_issues": 4,
+  "queue_before_sha256": "b4434668bd4b860fdd3594dfbf63c1dbfa60e48edc89b8abbb2aec9be356ff6c",
+  "queue_after_sha256": "048731606f2486e299ba409a2ab9b5f5c9ee13e373a5b189b80aee34339b1232",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R2-secoes_listas-0011",
+      "result_file": "temporario/revisao-onda2/secoes1790/R2-secoes_listas-0011-result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-secoes-20261022/cd08cbb82d96172faf1ff1a02069c953f33d28bf31bed421ee7a5e562c12badd-R2-secoes_listas-0011-result.json",
+      "result_sha256": "cd08cbb82d96172faf1ff1a02069c953f33d28bf31bed421ee7a5e562c12badd",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-1790:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-1790:titulos_ambiguos",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0050",
+      "result_file": "temporario/revisao-onda2/secoes4828/result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-secoes-20261022/c35df66bf74734bd3298fb137990c12aa7a98a6b5cbdc6a491b4deeb6c72a407-result.json",
+      "result_sha256": "c35df66bf74734bd3298fb137990c12aa7a98a6b5cbdc6a491b4deeb6c72a407",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4828:decisao_editorial_pendente",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-4828:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    }
+  ],
+  "saved": true,
+  "history_id": "20261022030827836381-16ac18bef1fd",
+  "document_id": null,
+  "revision": "c909bf8d6be10d68b7eb9c336323b85802d45147bda0a9cee3a28d23329a94f4",
+  "entity": {
+    "kind": "batch",
+    "id": "onda2-secoes-20261022"
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}

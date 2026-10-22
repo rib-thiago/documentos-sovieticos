@@ -35,3 +35,10 @@ Anotação [no alto do documento, a inscrição: ao camarada Dmitriev. Assinatur
 RGASPI, fundo 671, inventário 1, dossiê 120, folhas 64–65.
 
 Publicado em: Roman Nikitin. Kirov — o primeiro, Stalin — o segundo. O caso dos parentes de Leonid Nikolaev. Documentos e estudos. Moscou: ROSSPEN, 2019, pp. 116–117.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A construção da frase com “несмотря на то что постепенно” apresenta ruptura sintática na publicação eletrônica russa. A tradução preserva essa dificuldade sem completar o enunciado por conjectura. Permanece necessário o cotejo com fac-símile ou outro testemunho.

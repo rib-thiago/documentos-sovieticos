@@ -1,0 +1,163 @@
+{
+  "batch_id": "onda2-ezhov-20261022",
+  "editions_changed": 1,
+  "issue_outcomes": 24,
+  "documents_metadata_changed": [],
+  "closed_issues": 18,
+  "queue_before_sha256": "22a08bdc1ca83c83a66789cb226e0a69daa9a03e2541173eb8208c97dbf32477",
+  "queue_after_sha256": "5dc43461b4c80ebb51e181cb746555f6562dc91334b48915351ebaff7d0f1c45",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R2-divergencias_idiomas-0003",
+      "result_file": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0003-result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-ezhov-20261022/ce65abf866543460961d59f540754463f716d7f6a2aa07094c24183b4853c999-R2-divergencias_idiomas-0003-result.json",
+      "result_sha256": "ce65abf866543460961d59f540754463f716d7f6a2aa07094c24183b4853c999",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "confessionezhov-ezh-002:individualizacao",
+          "outcome": "parcial"
+        },
+        {
+          "key": "confessionezhov-ezh-013:individualizacao",
+          "outcome": "parcial"
+        },
+        {
+          "key": "confessionezhov-ezh-015:individualizacao",
+          "outcome": "parcial"
+        },
+        {
+          "key": "confessionezhov-ezh-019:individualizacao",
+          "outcome": "parcial"
+        },
+        {
+          "key": "confessionezhov-ezh-020:individualizacao",
+          "outcome": "parcial"
+        },
+        {
+          "key": "confessionezhov-ezh-025:individualizacao",
+          "outcome": "parcial"
+        },
+        {
+          "key": "confessionezhov-ezh-001:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-divergencias_idiomas-0004",
+      "result_file": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0004-result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-ezhov-20261022/e8ac8a784db663e5e96501033578fbf44448f2d41edda29aa284484fea235ea5-R2-divergencias_idiomas-0004-result.json",
+      "result_sha256": "e8ac8a784db663e5e96501033578fbf44448f2d41edda29aa284484fea235ea5",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "confessionezhov-ezh-003:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-divergencias_idiomas-0005",
+      "result_file": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0005-result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-ezhov-20261022/ce799dcfc194101826516391ceacda1e2c384afebefade3ad9230d828f2f93bb-R2-divergencias_idiomas-0005-result.json",
+      "result_sha256": "ce799dcfc194101826516391ceacda1e2c384afebefade3ad9230d828f2f93bb",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "confessionezhov-ezh-004:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-005:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-006:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-007:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-008:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-009:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-010:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-011:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-012:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-017:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-018:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-divergencias_idiomas-0006",
+      "result_file": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0006-result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-ezhov-20261022/e96ab9ac17291af91f2ef246e703d3d7496fdd54fe5a1aef532d11f77fc532f0-R2-divergencias_idiomas-0006-result.json",
+      "result_sha256": "e96ab9ac17291af91f2ef246e703d3d7496fdd54fe5a1aef532d11f77fc532f0",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "confessionezhov-ezh-021:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-022:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-ezh-023:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-divergencias_idiomas-0007",
+      "result_file": "temporario/revisao-onda2/ezhov/R2-divergencias_idiomas-0007-result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda2-ezhov-20261022/2e7d32eaf3401761073ec7cd79183a27980492dcfd0622355c37b0b1feac1774-R2-divergencias_idiomas-0007-result.json",
+      "result_sha256": "2e7d32eaf3401761073ec7cd79183a27980492dcfd0622355c37b0b1feac1774",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "confessionezhov-ezh-026:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        },
+        {
+          "key": "confessionezhov-revisao-1998:individualizacao",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    }
+  ],
+  "saved": true,
+  "history_id": "20261022030213010022-8d87ece4d0b3",
+  "document_id": null,
+  "revision": "2d98fcdf1270fdd819665e3bd87d4288037c19b9759d806479d5fa4a826666e9",
+  "entity": {
+    "kind": "batch",
+    "id": "onda2-ezhov-20261022"
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}

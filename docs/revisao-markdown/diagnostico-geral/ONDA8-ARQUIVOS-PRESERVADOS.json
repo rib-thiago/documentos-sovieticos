@@ -1,0 +1,590 @@
+{
+  "history_id": "20261022104425402504-d27c70073551",
+  "receipt": "docs/revisao-markdown/diagnostico-geral/onda8-sessoes-anexos-20261022-gravacao.json",
+  "files": [
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0006.result.json",
+      "sha256": "50cb6acdb93753a215bb6f1814ea807bb86aa40156309724949f64aefe2b58d1"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/50cb6acdb93753a215bb6f1814ea807bb86aa40156309724949f64aefe2b58d1-R2-secoes_listas-0006.result.json",
+      "sha256": "50cb6acdb93753a215bb6f1814ea807bb86aa40156309724949f64aefe2b58d1"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0007.result.json",
+      "sha256": "6bb9f40951f7f1a5cefe52a160a3f0323607bf69e3142d4c66db5d90f7973675"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/6bb9f40951f7f1a5cefe52a160a3f0323607bf69e3142d4c66db5d90f7973675-R2-secoes_listas-0007.result.json",
+      "sha256": "6bb9f40951f7f1a5cefe52a160a3f0323607bf69e3142d4c66db5d90f7973675"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0008.result.json",
+      "sha256": "1d5d7f72c9c8e989f2cfee450d2fb352fa800689d11aa3625f20a4f3cb8d18fe"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/1d5d7f72c9c8e989f2cfee450d2fb352fa800689d11aa3625f20a4f3cb8d18fe-R2-secoes_listas-0008.result.json",
+      "sha256": "1d5d7f72c9c8e989f2cfee450d2fb352fa800689d11aa3625f20a4f3cb8d18fe"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0009.result.json",
+      "sha256": "ae03f96e6969920e29ec763fd929273322e5128ab7ab3df6bbb0fdb72b857932"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/ae03f96e6969920e29ec763fd929273322e5128ab7ab3df6bbb0fdb72b857932-R2-secoes_listas-0009.result.json",
+      "sha256": "ae03f96e6969920e29ec763fd929273322e5128ab7ab3df6bbb0fdb72b857932"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0010.result.json",
+      "sha256": "ad8ffba2477c8fb728d147816469cc98849f0cc86496a8c8c911957b2064b3c8"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/ad8ffba2477c8fb728d147816469cc98849f0cc86496a8c8c911957b2064b3c8-R2-secoes_listas-0010.result.json",
+      "sha256": "ad8ffba2477c8fb728d147816469cc98849f0cc86496a8c8c911957b2064b3c8"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0011.result.json",
+      "sha256": "66e4a2dafb28559eca11a9f1c67d24fb8ee83cab8a6981ffd236a27408fbb08f"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/66e4a2dafb28559eca11a9f1c67d24fb8ee83cab8a6981ffd236a27408fbb08f-R2-secoes_listas-0011.result.json",
+      "sha256": "66e4a2dafb28559eca11a9f1c67d24fb8ee83cab8a6981ffd236a27408fbb08f"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0012.result.json",
+      "sha256": "bdab48448eba013ee919ba5cd265421882b12ba787967f39f5cf9b1042cd8796"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/bdab48448eba013ee919ba5cd265421882b12ba787967f39f5cf9b1042cd8796-R2-secoes_listas-0012.result.json",
+      "sha256": "bdab48448eba013ee919ba5cd265421882b12ba787967f39f5cf9b1042cd8796"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0013.result.json",
+      "sha256": "d7ac8996743475ae8e4e61aa1418ec6b8b1ad69e70b10914073b2a1e5c0b270b"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/d7ac8996743475ae8e4e61aa1418ec6b8b1ad69e70b10914073b2a1e5c0b270b-R2-secoes_listas-0013.result.json",
+      "sha256": "d7ac8996743475ae8e4e61aa1418ec6b8b1ad69e70b10914073b2a1e5c0b270b"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0014.result.json",
+      "sha256": "457b449dd77a34df8374c2589d88fb282b4e7fba8902ad9f1b3fe92964447770"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/457b449dd77a34df8374c2589d88fb282b4e7fba8902ad9f1b3fe92964447770-R2-secoes_listas-0014.result.json",
+      "sha256": "457b449dd77a34df8374c2589d88fb282b4e7fba8902ad9f1b3fe92964447770"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0015.result.json",
+      "sha256": "b265fcf0bb53bce1fe1857926b62c51a5927b6ad4413f64ff77203504424f6ac"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/b265fcf0bb53bce1fe1857926b62c51a5927b6ad4413f64ff77203504424f6ac-R2-secoes_listas-0015.result.json",
+      "sha256": "b265fcf0bb53bce1fe1857926b62c51a5927b6ad4413f64ff77203504424f6ac"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0016.result.json",
+      "sha256": "393c41f6edb29ddee60e4ef60345f58be1e715cb30a8e9c4c5ee71dde79458d9"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/393c41f6edb29ddee60e4ef60345f58be1e715cb30a8e9c4c5ee71dde79458d9-R2-secoes_listas-0016.result.json",
+      "sha256": "393c41f6edb29ddee60e4ef60345f58be1e715cb30a8e9c4c5ee71dde79458d9"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0017.result.json",
+      "sha256": "de3e30b1854ae0853146bd5f6b16048475d0f20e0e82114b68444c4223d03311"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/de3e30b1854ae0853146bd5f6b16048475d0f20e0e82114b68444c4223d03311-R2-secoes_listas-0017.result.json",
+      "sha256": "de3e30b1854ae0853146bd5f6b16048475d0f20e0e82114b68444c4223d03311"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0018.result.json",
+      "sha256": "81c809ec4683fe455a8c80f4394424bc56a359dd498dc0d957fe43dbf690eaf9"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/81c809ec4683fe455a8c80f4394424bc56a359dd498dc0d957fe43dbf690eaf9-R2-secoes_listas-0018.result.json",
+      "sha256": "81c809ec4683fe455a8c80f4394424bc56a359dd498dc0d957fe43dbf690eaf9"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0019.result.json",
+      "sha256": "b3fab572a9e134b0b88b5e6b31ad55bcd60ef59a9c7c6549f5f4b58ee06fbaa9"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/b3fab572a9e134b0b88b5e6b31ad55bcd60ef59a9c7c6549f5f4b58ee06fbaa9-R2-secoes_listas-0019.result.json",
+      "sha256": "b3fab572a9e134b0b88b5e6b31ad55bcd60ef59a9c7c6549f5f4b58ee06fbaa9"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0020.result.json",
+      "sha256": "d7095098a7327163d8b1ca768c1096cf08cf6d42f9144c1e04ad4db78fbff022"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/d7095098a7327163d8b1ca768c1096cf08cf6d42f9144c1e04ad4db78fbff022-R2-secoes_listas-0020.result.json",
+      "sha256": "d7095098a7327163d8b1ca768c1096cf08cf6d42f9144c1e04ad4db78fbff022"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0005.result.json",
+      "sha256": "3f65b6b6ea8f8704d03536a8b1c13050c05ebf2e9e3f26ef70289ef6e84985a6"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/3f65b6b6ea8f8704d03536a8b1c13050c05ebf2e9e3f26ef70289ef6e84985a6-R2-secoes_listas-0005.result.json",
+      "sha256": "3f65b6b6ea8f8704d03536a8b1c13050c05ebf2e9e3f26ef70289ef6e84985a6"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0031.result.json",
+      "sha256": "d9ddc11f0363d745128844e076596d2b3ce1ddff23976467b3f19156b8ff4d98"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/d9ddc11f0363d745128844e076596d2b3ce1ddff23976467b3f19156b8ff4d98-R2-secoes_listas-0031.result.json",
+      "sha256": "d9ddc11f0363d745128844e076596d2b3ce1ddff23976467b3f19156b8ff4d98"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0032.result.json",
+      "sha256": "6186c795f67b05410521bc998a50e9367cdf49787647d09aeb1c1d2afebb9e8b"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/6186c795f67b05410521bc998a50e9367cdf49787647d09aeb1c1d2afebb9e8b-R2-secoes_listas-0032.result.json",
+      "sha256": "6186c795f67b05410521bc998a50e9367cdf49787647d09aeb1c1d2afebb9e8b"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0033.result.json",
+      "sha256": "49f8420fca2d032d6b73add4b1ad4eecf732eaa25dc651746ce198003a249874"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/49f8420fca2d032d6b73add4b1ad4eecf732eaa25dc651746ce198003a249874-R2-secoes_listas-0033.result.json",
+      "sha256": "49f8420fca2d032d6b73add4b1ad4eecf732eaa25dc651746ce198003a249874"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0035.result.json",
+      "sha256": "763f2dec748c35e397f62a46097c09e9287b2322e60aff799956b07d4f16f0dd"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/763f2dec748c35e397f62a46097c09e9287b2322e60aff799956b07d4f16f0dd-R2-secoes_listas-0035.result.json",
+      "sha256": "763f2dec748c35e397f62a46097c09e9287b2322e60aff799956b07d4f16f0dd"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0037.result.json",
+      "sha256": "1591448efce5e6dacf20d9e1add9598f31dc2b4751178146057c84ba9c9a58a6"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/1591448efce5e6dacf20d9e1add9598f31dc2b4751178146057c84ba9c9a58a6-R2-secoes_listas-0037.result.json",
+      "sha256": "1591448efce5e6dacf20d9e1add9598f31dc2b4751178146057c84ba9c9a58a6"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0038.result.json",
+      "sha256": "0c646adc0bccfb87b8941377cd698ebd887556216b71d48c55630445296d0e50"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/0c646adc0bccfb87b8941377cd698ebd887556216b71d48c55630445296d0e50-R2-secoes_listas-0038.result.json",
+      "sha256": "0c646adc0bccfb87b8941377cd698ebd887556216b71d48c55630445296d0e50"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0039.result.json",
+      "sha256": "b09625e4d74250e7f181338ffee5a399b585a436e5ec81e8ad87fd61084a201f"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/b09625e4d74250e7f181338ffee5a399b585a436e5ec81e8ad87fd61084a201f-R2-secoes_listas-0039.result.json",
+      "sha256": "b09625e4d74250e7f181338ffee5a399b585a436e5ec81e8ad87fd61084a201f"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0040.result.json",
+      "sha256": "6181c66136a7fb720ea5cd451f49aef0dfe29c5c602ecdfdb0f779b0be50dfc5"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/6181c66136a7fb720ea5cd451f49aef0dfe29c5c602ecdfdb0f779b0be50dfc5-R2-secoes_listas-0040.result.json",
+      "sha256": "6181c66136a7fb720ea5cd451f49aef0dfe29c5c602ecdfdb0f779b0be50dfc5"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0041.result.json",
+      "sha256": "dd6bc672089b86c9142f132369c461e281db29a7d3bfea7bfb8e49d4ba357e91"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/dd6bc672089b86c9142f132369c461e281db29a7d3bfea7bfb8e49d4ba357e91-R2-secoes_listas-0041.result.json",
+      "sha256": "dd6bc672089b86c9142f132369c461e281db29a7d3bfea7bfb8e49d4ba357e91"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0082.result.json",
+      "sha256": "f6774d980981be024c35c9ab5e923a99f2fc81c2782c80f05001e99a6a016a4a"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/f6774d980981be024c35c9ab5e923a99f2fc81c2782c80f05001e99a6a016a4a-R2-secoes_listas-0082.result.json",
+      "sha256": "f6774d980981be024c35c9ab5e923a99f2fc81c2782c80f05001e99a6a016a4a"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0083.result.json",
+      "sha256": "6dc91dac1888c81f0c04a117a49f560608daa148c7c80610c59572377314b52b"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/6dc91dac1888c81f0c04a117a49f560608daa148c7c80610c59572377314b52b-R2-secoes_listas-0083.result.json",
+      "sha256": "6dc91dac1888c81f0c04a117a49f560608daa148c7c80610c59572377314b52b"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0129.result.json",
+      "sha256": "e7d164e3431fff569d713c4fab9e5e42b434b6ff318ed802e25c95f6d472cf05"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/e7d164e3431fff569d713c4fab9e5e42b434b6ff318ed802e25c95f6d472cf05-R2-secoes_listas-0129.result.json",
+      "sha256": "e7d164e3431fff569d713c4fab9e5e42b434b6ff318ed802e25c95f6d472cf05"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0130.result.json",
+      "sha256": "59d61a2ae4038d1d1c663f77dad1d282c996fd5734eb49319b8bc289f4433cde"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/59d61a2ae4038d1d1c663f77dad1d282c996fd5734eb49319b8bc289f4433cde-R2-secoes_listas-0130.result.json",
+      "sha256": "59d61a2ae4038d1d1c663f77dad1d282c996fd5734eb49319b8bc289f4433cde"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0131.result.json",
+      "sha256": "5d1913880dc8529b6c8160a906a17806dc887c5f5cd502427000edf5df645e65"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/5d1913880dc8529b6c8160a906a17806dc887c5f5cd502427000edf5df645e65-R2-secoes_listas-0131.result.json",
+      "sha256": "5d1913880dc8529b6c8160a906a17806dc887c5f5cd502427000edf5df645e65"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0133.result.json",
+      "sha256": "d4719ba154d7f0b7881d368eff81e99ceb49d2e13039003e3aaa4c2c9b5d3437"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/d4719ba154d7f0b7881d368eff81e99ceb49d2e13039003e3aaa4c2c9b5d3437-R2-secoes_listas-0133.result.json",
+      "sha256": "d4719ba154d7f0b7881d368eff81e99ceb49d2e13039003e3aaa4c2c9b5d3437"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0030.result.json",
+      "sha256": "3465c96ece1fe3e2836b4792245d3b7f9b0580796a77883401ad0049e5f34f90"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/3465c96ece1fe3e2836b4792245d3b7f9b0580796a77883401ad0049e5f34f90-R2-secoes_listas-0030.result.json",
+      "sha256": "3465c96ece1fe3e2836b4792245d3b7f9b0580796a77883401ad0049e5f34f90"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0023.result.json",
+      "sha256": "cdad054b4789d6d58d4f7396de50fdd2ea90043c4f16b50b2e2df7669956538e"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/cdad054b4789d6d58d4f7396de50fdd2ea90043c4f16b50b2e2df7669956538e-R2-secoes_listas-0023.result.json",
+      "sha256": "cdad054b4789d6d58d4f7396de50fdd2ea90043c4f16b50b2e2df7669956538e"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0122.result.json",
+      "sha256": "b1d251c54a7369435ef4b53c68621ce3e7da663cdbece6dd80c850ee5803fc84"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/b1d251c54a7369435ef4b53c68621ce3e7da663cdbece6dd80c850ee5803fc84-R2-secoes_listas-0122.result.json",
+      "sha256": "b1d251c54a7369435ef4b53c68621ce3e7da663cdbece6dd80c850ee5803fc84"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0097.result.json",
+      "sha256": "8793afd573d3a0619da932ef3b3cf6e5e0c6747bf15fec3df6f243e5282f4a05"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/8793afd573d3a0619da932ef3b3cf6e5e0c6747bf15fec3df6f243e5282f4a05-R2-secoes_listas-0097.result.json",
+      "sha256": "8793afd573d3a0619da932ef3b3cf6e5e0c6747bf15fec3df6f243e5282f4a05"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0062.result.json",
+      "sha256": "4434c1a12676ad0db87cf9deb4e7e3435f8ab76b8749532a88a22f44798d8d10"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/4434c1a12676ad0db87cf9deb4e7e3435f8ab76b8749532a88a22f44798d8d10-R2-secoes_listas-0062.result.json",
+      "sha256": "4434c1a12676ad0db87cf9deb4e7e3435f8ab76b8749532a88a22f44798d8d10"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0061.result.json",
+      "sha256": "5edbc1c0e493884b20a8d67897f1871288cb8e2840be52baabe794fd2c059dd8"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/5edbc1c0e493884b20a8d67897f1871288cb8e2840be52baabe794fd2c059dd8-R2-secoes_listas-0061.result.json",
+      "sha256": "5edbc1c0e493884b20a8d67897f1871288cb8e2840be52baabe794fd2c059dd8"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0024.result.json",
+      "sha256": "ad3163fa2314a5f1e5625c2737d668ad5ace4845d5deba33c17664275085a8b2"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/ad3163fa2314a5f1e5625c2737d668ad5ace4845d5deba33c17664275085a8b2-R2-secoes_listas-0024.result.json",
+      "sha256": "ad3163fa2314a5f1e5625c2737d668ad5ace4845d5deba33c17664275085a8b2"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0025.result.json",
+      "sha256": "8e8684f3ec7a407c42d8788bb88d669d408948d19630a8908982d3856b39ba9a"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/8e8684f3ec7a407c42d8788bb88d669d408948d19630a8908982d3856b39ba9a-R2-secoes_listas-0025.result.json",
+      "sha256": "8e8684f3ec7a407c42d8788bb88d669d408948d19630a8908982d3856b39ba9a"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0026.result.json",
+      "sha256": "a3672c60b67078689add4186597d0e7badfda05c47e1ea2acd55ac70e4c93200"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/a3672c60b67078689add4186597d0e7badfda05c47e1ea2acd55ac70e4c93200-R2-secoes_listas-0026.result.json",
+      "sha256": "a3672c60b67078689add4186597d0e7badfda05c47e1ea2acd55ac70e4c93200"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0027.result.json",
+      "sha256": "7ced003da90b0634d933c2c9cb5e76d8754c9804452e1e7b0a09c3e4bba47693"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/7ced003da90b0634d933c2c9cb5e76d8754c9804452e1e7b0a09c3e4bba47693-R2-secoes_listas-0027.result.json",
+      "sha256": "7ced003da90b0634d933c2c9cb5e76d8754c9804452e1e7b0a09c3e4bba47693"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0028.result.json",
+      "sha256": "18ee81c97f114db2bec2f6fab8b4997f70aff633ba3b99316489a3ac08d6478a"
+    },
+    {
+      "file": "temporario/revisao-onda1/frozen/onda8-sessoes-anexos-20261022/18ee81c97f114db2bec2f6fab8b4997f70aff633ba3b99316489a3ac08d6478a-R2-secoes_listas-0028.result.json",
+      "sha256": "18ee81c97f114db2bec2f6fab8b4997f70aff633ba3b99316489a3ac08d6478a"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0007/showtrials-2443.evidence.json",
+      "sha256": "54c5540d5f5190e2f71481a82643a0bca6be857a16bd717dbfe8fdb0618a21a4"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0012/showtrials-2521.evidence.json",
+      "sha256": "e67eeaca4b3e4c0ea4aab94d44869470d9f98c860b8ba44e5297fbd50d64bfb1"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0026/showtrials-8951.evidence.json",
+      "sha256": "51f0818213813d851dc9ee666f098376758901103288c2325e0a37058b613a94"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0122/showtrials-810.evidence.json",
+      "sha256": "2a228c7d9c4c69e1606451e5d060aca7557d2679268693c22ded1569ce597545"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0031/showtrials-2479.evidence.json",
+      "sha256": "7f9b2af2c635aa5dc91d5b6541c82d9dc3720a31bfe7efb147415fee8d6e303f"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0033/showtrials-2482.evidence.json",
+      "sha256": "33f341d16104a40425f99ab33e87df97f362030c1feaa2738288421252c0cd67"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0035/showtrials-2508.evidence.json",
+      "sha256": "635841c1aee2ab71e4ba0641abd08e5368f0de6c147e9e43fa89a9b9f9f22434"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0082/showtrials-6312.evidence.json",
+      "sha256": "d9610702aa98bc0a6b1a7de81433a3cb16606db6ba7adbe84dda5a870009d387"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0038/showtrials-4288.evidence.json",
+      "sha256": "68b900433747f9a53f9ab7c09207db7befe7cedb5025b109b67484b9286fc766"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0131/showtrials-8621.evidence.json",
+      "sha256": "2c4d427a3365eeb1517aaa4434ff25c4d7624da0a37387f35e276481bca8b2d4"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0015/showtrials-2525.evidence.json",
+      "sha256": "a204ed0fbc434460d3b89f855ab0b65dae5482b8c65c9c415ab0cb333e00d8d5"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0005/showtrials-11413.evidence.json",
+      "sha256": "65b1e3a39a439b247b0113b81b125d514489885bd1f808e529119fce050a0c02"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0014/showtrials-2523.evidence.json",
+      "sha256": "9ecf36cc675fa2cc851ecc1838216755f490ccafb34fe0fbb90a943a4cd1f54e"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0013/showtrials-2522.evidence.json",
+      "sha256": "b1bb92d6ec210de7c22c6eef29462c2bfb75fa9378d0fd26d30c8226f41c7f38"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0019/showtrials-2539.evidence.json",
+      "sha256": "1d36d1a29102ae7fc5809b69884157c0202189ee4618a7c30956ece9dd4de54d"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0025/showtrials-8946.evidence.json",
+      "sha256": "272d6a3c1f03bbd7328fad861f645abc4dba0b4e4b961c48d92ec5b3a4becfc2"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0024/showtrials-8938.evidence.json",
+      "sha256": "d0a795b1c55d97834ada0cae81bb72dbe30351f51277762ee137b2bdefcd3b70"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0041/showtrials-4665.evidence.json",
+      "sha256": "8d2d31ce4cbf68c79288a36a82c61a73da34ee2e6d26067e5907568e89096259"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0041/showtrials-4581.evidence.json",
+      "sha256": "85471f217db689fdfa53666a06074f97604b26471aa896827531f0ad51cccb7d"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0041/showtrials-4584.evidence.json",
+      "sha256": "f93c208d8cddec5915beaf1c472f5a742fcbef0912138f4d14d51273f7e4cd6c"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0006/showtrials-1847.evidence.json",
+      "sha256": "9e56d51f645eaecc2e20569fb3e90b07e56caa3b40017fc0aa9cad091cf302c8"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0027/showtrials-8954.evidence.json",
+      "sha256": "f64bed6ec0ec8cde6c4678cce55209d624096d780a14fd31d98546ad70102d89"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0130/showtrials-8617.evidence.json",
+      "sha256": "b0132df032b21856605d0db53a31db4bb2d1313e8fdb49155b63ee5e7a3783c7"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0023/showtrials-8173.evidence.json",
+      "sha256": "fb315fe71e62cef676c63248923ed00e9b369a27f76df112b8f9c8305d8c0f3d"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0039/showtrials-4423.evidence.json",
+      "sha256": "e30bdab5b1848fa88448b0a645a5a45578933d095bff1a3e6ca3f3a9d9a3ab06"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0030/showtrials-10470.evidence.json",
+      "sha256": "0e18abc8faa83a13bf1fc1cff3abc6dc8a1d83065d3467873fb5e80d16a06974"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0133/showtrials-9431.evidence.json",
+      "sha256": "3a82a689857013d90ebc73bd94316a5a56854203dcfc5b3c67625b766986ac86"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0009/showtrials-2478.evidence.json",
+      "sha256": "65a9baca968e860d409981b387d397cc637380dce19dad9a4a663c1e62b4ccbc"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0083/showtrials-6354.evidence.json",
+      "sha256": "e5f066675ac45773dd4ebbd95ce308fa09b1279bef98392439b3c637303b680e"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0083/showtrials-6360.evidence.json",
+      "sha256": "a15697b7adb97c725b01991f0e91e26aa7476500cdca48d4c9c42011c1b9e4f7"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0010/showtrials-2480.evidence.json",
+      "sha256": "82977bfd007cf122b2afadcd6e5912fc7005372f81828be39ee6ab1be68ab466"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0020/showtrials-2618.evidence.json",
+      "sha256": "124e9b1884f2633bbb0e95c71c856a177d67d62be570b1fb2193c9af53e6857d"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0040/showtrials-4580.evidence.json",
+      "sha256": "6c9e2f7f2689a847635dcd1c30e6aa8209346f0685b90a5a4c7bb2bb0889dc95"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0040/showtrials-4435.evidence.json",
+      "sha256": "2091ed567a0568676754f3b94622b2a088b395bbccd050b951c30283530319a9"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0097/showtrials-7275.evidence.json",
+      "sha256": "241b6ef2c1ee363526ed711981667c8c95b51475a8c0a60f1965665cfeab78f6"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0062/showtrials-5779.evidence.json",
+      "sha256": "597870aec7ede8e4a107c26e23f6170c306527f03888fb8eb7068cb9ac484f9f"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0011/showtrials-2519.evidence.json",
+      "sha256": "cfefdfca5ba04b70eee037294aa970984fceaeed741dc05c4bedbaa7de804c16"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0061/showtrials-5766.evidence.json",
+      "sha256": "31b9aa036c5e96efede5d6e60026d024b49a6f8c4028a1f0ff5eeff6524eaf8e"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0129/showtrials-8609.evidence.json",
+      "sha256": "4e6038da2a781041bf05642927838abcf98abadbed1ce63b39de28bd5b4d4bf8"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0129/showtrials-8611.evidence.json",
+      "sha256": "f45c68910d99ff2befb2d3f64942afd9d788d2593ab4e58f826bbe9a9145dc57"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0037/showtrials-2540.evidence.json",
+      "sha256": "22c9d47b8716dafebf4c8cec1df5a4238071523dc1b6ff44cddf358b469888bb"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0028/showtrials-8956.evidence.json",
+      "sha256": "77444c877ede47336bf3e4f7ed5c3eccac2854c1d91cb1a7e784865e5353fb65"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0032/showtrials-2481.evidence.json",
+      "sha256": "43a8c30ac1556f234ae4a858f1680417970fc9746749297df9ae301be3095902"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0017/showtrials-2527.evidence.json",
+      "sha256": "a4b7ea0748f900b21e62e1994bfb4ea0c96556f1e8b5a3ec56e5f7dde90c66aa"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0016/showtrials-2526.evidence.json",
+      "sha256": "01f503a2c8fab59c4e819eb22fa03d951e08874bc35a199272ab5122d79343d5"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0008/showtrials-2444.evidence.json",
+      "sha256": "5813e8b4044ac65fe74450aec9f67d7c312d518b8ab6d94b84d12f7db4bf5c99"
+    },
+    {
+      "file": "temporario/revisao-onda8/secoes/R2-secoes_listas-0018/showtrials-2536.evidence.json",
+      "sha256": "3ff83da28e22ac9135b21a8cdff1c8fd52f39966b15f96f2a0ac587202aa22bb"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-2.json",
+      "file": "temporario/revisao-onda8/fontes/7aa11eebfb350a83514e27509a87b4e96a38ed6b038c141b373dfd4324bce754-posts-page-2.json",
+      "sha256": "7aa11eebfb350a83514e27509a87b4e96a38ed6b038c141b373dfd4324bce754"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-7.json",
+      "file": "temporario/revisao-onda8/fontes/dd2aefd5ce4da8ea37d9059fac5510f67b07b1e0f0023cd22b29cee104d158ed-posts-page-7.json",
+      "sha256": "dd2aefd5ce4da8ea37d9059fac5510f67b07b1e0f0023cd22b29cee104d158ed"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-4.json",
+      "file": "temporario/revisao-onda8/fontes/16bab4c205031e63baa51d73f34af64e4c82cf0be7e749a87a7d08d8f72d4b13-posts-page-4.json",
+      "sha256": "16bab4c205031e63baa51d73f34af64e4c82cf0be7e749a87a7d08d8f72d4b13"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-17.json",
+      "file": "temporario/revisao-onda8/fontes/bc40cf382545ea0d23de956dc8cb70fb4e8d325e8b1e8201c14fb5bb5b4c71b2-posts-page-17.json",
+      "sha256": "bc40cf382545ea0d23de956dc8cb70fb4e8d325e8b1e8201c14fb5bb5b4c71b2"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-14.json",
+      "file": "temporario/revisao-onda8/fontes/c7e14f7d3a5966570ed61685c560b0451d22335a49b9fa5460bf6cf306d0b133-posts-page-14.json",
+      "sha256": "c7e14f7d3a5966570ed61685c560b0451d22335a49b9fa5460bf6cf306d0b133"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-3.json",
+      "file": "temporario/revisao-onda8/fontes/674d29df37bf82f71cd510af35d24775030fc221bd511159ac8906ee8058b331-posts-page-3.json",
+      "sha256": "674d29df37bf82f71cd510af35d24775030fc221bd511159ac8906ee8058b331"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-15.json",
+      "file": "temporario/revisao-onda8/fontes/ecc98624b65717f71030aebafafca02bdd7ddb45b05a043a25e6e31ac37fb3d1-posts-page-15.json",
+      "sha256": "ecc98624b65717f71030aebafafca02bdd7ddb45b05a043a25e6e31ac37fb3d1"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-20.json",
+      "file": "temporario/revisao-onda8/fontes/63c847fce16ab03aa44d412acf34fb2ce3dd7bfde91f91a94661c618829ace55-posts-page-20.json",
+      "sha256": "63c847fce16ab03aa44d412acf34fb2ce3dd7bfde91f91a94661c618829ace55"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-1.json",
+      "file": "temporario/revisao-onda8/fontes/a6bd44010be7f644069425747a4a2d6c30823beeeb35d39e28bfce1655d74c52-posts-page-1.json",
+      "sha256": "a6bd44010be7f644069425747a4a2d6c30823beeeb35d39e28bfce1655d74c52"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-21.json",
+      "file": "temporario/revisao-onda8/fontes/0bfb25dc8faa7c8f1474227478411c64b58030fa1032e3eae5cfdd32445b1f15-posts-page-21.json",
+      "sha256": "0bfb25dc8faa7c8f1474227478411c64b58030fa1032e3eae5cfdd32445b1f15"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-16.json",
+      "file": "temporario/revisao-onda8/fontes/35cf3144e7f08abdc8a57ff814a354dbf6c206b29eeb847c31b0c9206bf545fc-posts-page-16.json",
+      "sha256": "35cf3144e7f08abdc8a57ff814a354dbf6c206b29eeb847c31b0c9206bf545fc"
+    },
+    {
+      "source": "temporario/showtrials-metodologia-20261015-141712/original/local/posts-json/posts-page-8.json",
+      "file": "temporario/revisao-onda8/fontes/7715eac890710257520fbc68b6f37a987b818c2f2ab179ed7c9b9e5d8bcedafb-posts-page-8.json",
+      "sha256": "7715eac890710257520fbc68b6f37a987b818c2f2ab179ed7c9b9e5d8bcedafb"
+    }
+  ]
+}

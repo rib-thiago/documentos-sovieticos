@@ -1,0 +1,18 @@
+{
+  "batch_id": "onda1-formato2644-20261021",
+  "editions_changed": 3,
+  "issue_outcomes": 0,
+  "closed_issues": 0,
+  "queue_before_sha256": "9f5cfef2254ac629669eb5adaf4437a3f4b2d64f39ea1c9dd477d99024672419",
+  "queue_after_sha256": "9f5cfef2254ac629669eb5adaf4437a3f4b2d64f39ea1c9dd477d99024672419",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R1-tabelas_imagens-0024-formato",
+      "result_file": "temporario/revisao-onda1/tabela2644-breaks/result.json",
+      "result_sha256": "36b02119f74d67aadc325c87129683739c6a7deb1d33e999b41528b4df529ded",
+      "editions_prepared": 3,
+      "issue_outcomes": []
+    }
+  ]
+}

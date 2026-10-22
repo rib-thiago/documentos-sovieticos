@@ -1,0 +1,376 @@
+{
+  "svitlana-3d0ff93fc3e6f7ae": {
+    "expected_markdown_sha256": "98ad97410d7b2ecd60fb1e5d584d2ee0489b9b3198c0180ce9544ad2239250c1",
+    "expected_raw_sha256": "64b3587314c3b44be86a6de15007b7edcc692cb741e727a3d81e0e08665b9a7e",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "nakhichevan-1937-09-26",
+        "title_literal": "Stalin on the arrests of the leadership of the Nakhichevan ASSR. September 26, 1937",
+        "date_literal": "September 26, 1937",
+        "ready_for_import": true,
+        "reason": "Telegrama nº1566/sh, destinatário Bagirov, cota RGASPI F558 Op11 D57 L99 e final Yusuf Kasimov conferidos; o HTML também não traz assinatura final. Não inventar assinatura.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-c71b5f16ed326005": {
+    "expected_markdown_sha256": "b035c93961dc05bbccb2be3c3b878b188aca6796035e72b4e76a794f10ac3fd1",
+    "expected_raw_sha256": "273f75110bdfa4c9395ddd8e003b197567f8fdda2b1b0d5dbc4550adfd14bdca",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "politburo-1932-06-05",
+        "title_literal": "Stalin ‐ to members of the Politburo on June 5, 1932",
+        "date_literal": "June 5, 1932",
+        "ready_for_import": false,
+        "reason": "Corpo único, RGASPI F558 Op11 D77 L12/12rev, assinatura e hora preservados; termina em 5/VI.32 y.2 sem definição da chamada2 no HTML. Conferir edição ROSSPEN2001 p139 antes de publicar.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus",
+        "issues": [
+          "source_note_definition_missing"
+        ]
+      }
+    ]
+  },
+  "svitlana-887819644036e053": {
+    "expected_markdown_sha256": "6733d0e443bb222600e298e5ee86596a92527baa309cf2a08fd9a259facb7645",
+    "expected_raw_sha256": "c5d95ebfcba9f738f900050178619607dc9a02517b87e90c5dd4b77176f367b3",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "kabakov-1930-03-22",
+        "title_literal": "On the fight against ʺdistortions of the party line in the collective farm movement.ʺ",
+        "date_literal": "March 22, 1930",
+        "ready_for_import": true,
+        "reason": "Telegrama nº26/s com assinatura/data, descrição L176 e nota66 integralmente conferidos. Cota incompleta e tradução Kabakova permanecem literais; não completar arquivo por inferência.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-51788061600c4d83": {
+    "expected_markdown_sha256": "f73c9d6f513e226b0eb4eabb9e8a6eaa0291eb1e32fb8cc926e4e28a31ca72b9",
+    "expected_raw_sha256": "699cb4be7e358637fb46baa3abca2499af00357bc2c60fd8f09737a06c1ab0c3",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-23-6",
+        "title_literal": "On confiscation of church valuables",
+        "date_literal": "March 13, 1922",
+        "ready_for_import": true,
+        "reason": "Peça23-6, corpo encerrado SECRETARY OF THE CC, três testemunhos/cotas e nota1* preservados. Título refere sessão13Mar; consulta11Mar mantida como data interna distinta. Bear e grafias da tradução não corrigidos.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-48df580719b47240": {
+    "expected_markdown_sha256": "3ecf85ce540fe1b58117a1f152d45071265e77d6311840e550c59a8af1d6f4f3",
+    "expected_raw_sha256": "29c6084038f2358c128062532a64d2546181723f2a9af4a7a5005718aba68f29",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-23-24",
+        "title_literal": "Resolution of the Politburo of the Central Committee of the RCP (b) on the exclusion of the amendment by VM Molotov from the resolution of the Politburo \"on the activities of the clergy in connection with the removal of valuables from churches\" dated March 22, 1922. From the minutes of the Politburo meeting No. 116, paragraph 2 of March 23, 1922 g.",
+        "date_literal": "March 23, 1922",
+        "ready_for_import": true,
+        "reason": "Peça23-24, item2, encerramento e variantes de L36/APRF D268 L2 cotejados; lista final dos presentes termina assim também no HTML, sem trecho omitido pelo conversor.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-08117b09c6cfa156": {
+    "expected_markdown_sha256": "fbc9daa4b4dc336f84bc6a852d8ee134c8ec497792904ab95371291291e8567c",
+    "expected_raw_sha256": "26a06b44c1e30975716f8507c5571762e3efc682545c1294e8de0eebccbe4501",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-23-26",
+        "title_literal": "Resolution of the Politburo of the Central Committee of the RCP (b) \"on the removal of valuables from churches.\" From the minutes of the meeting of the Politburo No. 116, paragraph 17 of March 23, 1922.",
+        "date_literal": "March 23, 1922",
+        "ready_for_import": true,
+        "reason": "Peça23-26, item17, corpo Approve/SECRETARY OF THE CC e dois testemunhos preservados; remissão a23-24 é referência externa, não nota perdida.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ],
+    "previous_reviewed_markdown_sha256": "335748213340290ea666fea74e9ed66a0194a1b6c53e588ba49eaac2731b98a1",
+    "reconversion_review": "HTML integral e novo Markdown relidos: corpo23-26 e duas cotas permanecem iguais. Mudança inclui masthead da série e blockquotes de layout, sem documento adicional nem nota omitida. normalize_layout_quotes conserva texto e remove apenas apresentação."
+  },
+  "svitlana-ab9bace9510edaf7": {
+    "expected_markdown_sha256": "319feefcb618ba45cbf1b561984c4b6e5313d5c22532747bd374cf6f5ab5481c",
+    "expected_raw_sha256": "a5eaa9ff37bf47f2427546555709acc2f11513caa6346a5bd12d2349f3965776",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-23-34",
+        "title_literal": "Resolution of the Politburo of the Central Committee of the RCP (b) on the approval of \"practical proposals for the confiscation of valuables.\" From the minutes of the meeting of the Politburo No. 117, paragraph 5 of April 2, 1922.",
+        "date_literal": "April 2, 1922",
+        "ready_for_import": false,
+        "reason": "Chamada HTML _ftnref1 aponta a _ftn1, mas não existe definição; Notes and Comments está vazio no bruto e no Markdown. Recuperar nota antes de aprovar. Data da sessão2Abr e consulta30Mar distintas.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus",
+        "issues": [
+          "source_note_definition_missing"
+        ]
+      }
+    ]
+  },
+  "svitlana-1d7db46f4dc9f588": {
+    "expected_markdown_sha256": "21d7d2bd2566d07173002ecf10ae2868c7457ee51e97c29b4123facc8d8a9a11",
+    "expected_raw_sha256": "cbe4026597b5cb2197fe43eb35cf552389c11e5ca5b8e76ce0d75e794243197c",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-23-35",
+        "title_literal": "Resolution of the Politburo of the Central Committee of the RCP (b) - \"on the inclusion of comrade Muralov in the Commission for the confiscation of valuables.\" From the minutes of the meeting of the Politburo No. 117, paragraph 8 of April 2, 1922",
+        "date_literal": "April 2, 1922",
+        "ready_for_import": true,
+        "reason": "Peça23-35, item8, inclusão de Muralov e duas cotas L49/APRF D269 L19 conferidas. Data da sessão2Abr não substitui consulta30Mar; caráter condicional da data está no aparato.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-d3a501ae3804db98": {
+    "expected_markdown_sha256": "cd8af14843b232ad9819019f23022de70f04316af9935865d36ed4e60d89d127",
+    "expected_raw_sha256": "aeb22c92a2039f35c58f6f94e1fc4f552fab03ce197eda63728aa6106793aaac",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-23-37",
+        "title_literal": "Cipher telegram of the Central Committee of the RCP (b) to the provincial committees of the RCP (b) and the governorate departments of the GPU about the persons leading church policy in the provinces. April 10, 1922",
+        "date_literal": "April 10, 1922",
+        "ready_for_import": true,
+        "reason": "Telegrama23-37, assinatura Stalin, descrição L54, faixa de distribuição e notas1*/36 cotejados integralmente; referência externa à nota18 não transformada em ausência local.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-8d1a585caa8bb31c": {
+    "expected_markdown_sha256": "89a173f308a7848114f2dc5fc3e870a21f65757c5a5b0a7cc59a92eec9b03b24",
+    "expected_raw_sha256": "193bb2deb505694eda369fdd07520d418c2e76083cf5255edd00fae34907d965",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-23-40",
+        "title_literal": "Resolution of the Politburo of the Central Committee of the RCP (b) on the relics of the Monk Varnava Vetluzhsky. From the minutes of the meeting of the Politburo No. 5, paragraph 7 of May 4, 1922",
+        "date_literal": "May 4, 1922",
+        "ready_for_import": true,
+        "reason": "Peça23-40, item7, corpo e duas descrições arquivísticas até lista de presentes Frunze preservados; Barnabas/Varnava mantidos como variantes da fonte.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-cdb790fb4c4b3902": {
+    "expected_markdown_sha256": "1777ad9827187f01704898c533c188f738f09155486cd185c228ed225caa4f98",
+    "expected_raw_sha256": "8a0bd9a2dc44a98ba36fc45eb7625734896c293bb2c85ca498aac4ce271c0ec9",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-23-42",
+        "title_literal": "Resolution of the Politburo of the Central Committee of the RCP (b) on the course of the campaign to confiscate church valuables. From the minutes of the meeting of the Politburo No. 5, paragraph",
+        "date_literal": "May 4, 1922",
+        "ready_for_import": true,
+        "reason": "Peça23-42, item15, corpo/assinatura e testemunhos L62/APRF D274 L14 conferidos; título quebrado em duas linhas não indica duas peças.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-b5a0f3332e560b90": {
+    "expected_markdown_sha256": "a855398436b12e075e8e9b14aebf732825714a9f04d9d1ae57dcdaf5ba8274b7",
+    "expected_raw_sha256": "1cb56939325923462c2956ac53e48e2abfe4d77d9acaf21d941e5aea54e193f8",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-23-43",
+        "title_literal": "A post-telegram from L. D. Trotsky to the Politburo of the Central Committee of the RCP (b) with proposals for agitation for the seizure of church property, adopted by the Politburo. May 6, 1922",
+        "date_literal": "May 6, 1922",
+        "ready_for_import": true,
+        "reason": "Peça23-43, assinatura Trotsky/data6Mai, cópia1958 e original APRF D275 L28 cotejados. Cabeçalho1 IV22 conflita com aparato11.V.22; manter ambos sem harmonizar.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-840418f196a9b8c3": {
+    "expected_markdown_sha256": "adf553cc3f97209f90f1a09f1117334a03720e7459c4bc37153df8f3f64d92b7",
+    "expected_raw_sha256": "80dba6e96576ecf89aa3d5bf13fce1eaf4c029ec9d39ea9646d3739bb1fbf68d",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-24-2",
+        "title_literal": "Record of the results of voting in the Politburo of the Central Committee of the RCP (b) on the proposal of MI Kalinin to abolish the death sentence to two priests in the case of the Shuya clergy and believers [May 2, 1922]",
+        "date_literal": "[May 2, 1922]",
+        "ready_for_import": false,
+        "reason": "Votação24-2: HTML usa disposição visual de nomes e posições, já convertida em sequência ambígua Trotsky/Approve/Revolutionary/Stalin/Tribunal; não publicar como prosa. Precisa reconstruir quadro cotejando fac-símile/edição; não atribuir voto por inferência.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus",
+        "issues": [
+          "voting_layout_requires_reconstruction"
+        ]
+      }
+    ]
+  },
+  "svitlana-f48adeaaa98ae3b5": {
+    "expected_markdown_sha256": "e16453b49bf8355c809ff71d93fcddf353df98a7126b8f437088785a1e89c00f",
+    "expected_raw_sha256": "aec478fecfc9676d03b7b04694f630adaa1493624bb75d55a6bcc9849cb50b62",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-24-3",
+        "title_literal": "Resolution of the Politburo of the Central Committee of the RCP (b) confirming the previously adopted decision on the case of the Shui clergy and believers. From the minutes of the meeting of the Politburo No. 5, paragraph 5 of May 4, 1922",
+        "date_literal": "May 4, 1922",
+        "ready_for_import": true,
+        "reason": "Peça24-3, item5, corpo/assinatura, cotas e notas2/3 completos. Comentário sobre execução é afirmação do aparato da edição, não conclusão histórica do catálogo.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-542fa39d9fda7da9": {
+    "expected_markdown_sha256": "df8013c23bf70e63e3e1cabe52984085cfcf1d17a6b04fba6e199333566b625a",
+    "expected_raw_sha256": "576c119cc4e89f7670d9b34e4b7b7785ae91fd04abbc395ba0c5611f04915038",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "church-24-25",
+        "title_literal": "Resolution of the Politburo of the Central Committee of the RCP (b) on the death sentence in the case of the Moscow clergy and believers. From the minutes of the meeting of the Politburo No. 7, item 13 of May 18, 1922",
+        "date_literal": "May 18, 1922",
+        "ready_for_import": true,
+        "reason": "Peça24-25, item13, duas descrições e notas1*/23 conferidas até See No24-20; nota23 é remissão deliberada, sem inventar conteúdo.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-62501981e8905118": {
+    "expected_markdown_sha256": "60dee9fd4c8b09a97b6311f2dfefde0ab278c4f28cbc9e46e04173c3b95e00ea",
+    "expected_raw_sha256": "d25d34bc5ef78fc3d1f2769c7e2e12780031c8608dbc40a404d088a1fdd04317",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "dzerzhinsky-reingold-1924-06-12",
+        "title_literal": "F. E. Dzerzhinsky - I. I. Reingold",
+        "date_literal": "June 12, 1924",
+        "ready_for_import": true,
+        "reason": "Carta nº182 de Dzerzhinsky a Reingold, saudação, assinatura/data e RTSKHIDNI F76 Op2 D191 L1 conferidos; sem notas locais. Compiladores não são autores.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-f36bed6f0cef1d55": {
+    "expected_markdown_sha256": "3067bb62bc6011e1ff37a3dfc9ba71785372bb0b408923924f6908c4f047ab8b",
+    "expected_raw_sha256": "8ff6f81cbb6e1926552d104fb1a13ca6948878a5069e5794fd8ce162ba6dd9f3",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "pyatakov-stalin-1919-10-13",
+        "title_literal": "G. L. Pyatakov to I. V. Stalin",
+        "date_literal": "October 13, 1919",
+        "ready_for_import": true,
+        "reason": "Carta Pyatakov/Stalin, assinatura Egorka, RTSKHIDNI F85 Op7 D52 L10 e nota1 integralmente conferidos; título real substitui metadado genérico Collection of documents1996.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-7eaa34b7b06d2715": {
+    "expected_markdown_sha256": "64e560c26ecb9f8262a0be2d2b4f35e34eee4fdef633fd2d532f1a2538066aa5",
+    "expected_raw_sha256": "aa8fff00cecc0c6a7a665a8edd62749ad0944daee4e1285d1f2ce55e9eee72ee",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "stalin-budyonny-voroshilov-1920-07-29",
+        "title_literal": "Telegram from I. V. Stalin to S. M. Budyonny and K. E. Voroshilov",
+        "date_literal": "[July 29, 1920]",
+        "ready_for_import": true,
+        "reason": "Telegrama único, destinatários, assinatura, RTSKHIDNI F558 On1 D5549 L2–3 e nota1 completos. Data conjectural em colchetes preservada; Lions da tradução não corrigido silenciosamente.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-dde2d2f60490c92b": {
+    "expected_markdown_sha256": "9fcd739bb5a611968232a410faa635fe1e390e88f92edbd38d3518522f1dbf04",
+    "expected_raw_sha256": "f2768abc5f2935b74f46dcba4b3547644ff09179ae9bf3b571b62e8f143ab0fd",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "ordzhonikidze-stalin-1920-12-08",
+        "title_literal": "Telegram of G. K. Ordzhonikidze to I. V. Stalin",
+        "date_literal": "December 8, 1920",
+        "ready_for_import": true,
+        "reason": "Telegrama Baku8/XII20, assinatura Sergo, RTSKHIDNI F85 Op15 D64 L1 e nota1 sobre trânsito para Armênia completos.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus"
+      }
+    ]
+  },
+  "svitlana-ba31d3213e59900e": {
+    "expected_markdown_sha256": "a1441fa3af4d07a03e3bdbd0e8a7f66264c7a642a8401fdc6de221be5903a0d5",
+    "expected_raw_sha256": "f01325b98e5df86f35b6d6e86c078ada789208de775960d330b2539d53c191c0",
+    "reviewed_at": "2026-10-21",
+    "review_basis": "Leitura integral do texto do HTML bruto e cotejo com Markdown candidato; não revisão filológica da tradução inglesa",
+    "units": [
+      {
+        "suffix": "ordzhonikidze-stalin-1920-12-09",
+        "title_literal": "Telegram to G. K. Ordzhonikidze to I. V. Stalin",
+        "date_literal": "[December 9, 1920]",
+        "ready_for_import": false,
+        "reason": "Corpo, cota F85 Op15 D64 L3 e nota1 completos, porém título/data ficaram colados ao breadcrumb e masthead por ****. Exige recorte editorial explícito do cabeçalho antes de aprovar, sem mudar palavras do documento.",
+        "range": "whole",
+        "normalize_layout_quotes": true,
+        "extent": "single_document_with_source_apparatus",
+        "issues": [
+          "document_header_layout_requires_repair"
+        ]
+      }
+    ]
+  }
+}

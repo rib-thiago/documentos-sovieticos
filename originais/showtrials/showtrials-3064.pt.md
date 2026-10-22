@@ -43,3 +43,10 @@ Confere: —
 RGASPI, fundo 671, inventário 1, dossiê 120, folhas 43–45.
 
 \[1\] Aqui e adiante no texto consta erroneamente “Gaidarova” (Гайдарову), em vez de “Gaiderova”.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A publicação eletrônica russa reúne 1933 e 1934 na frase sobre a viagem de Sochi a Moscou, sem pontuação que esclareça a relação entre as datas. Ambas foram preservadas. O destino Moscou, por si só, não contradiz as visitas posteriores a Leningrado. O cotejo com outro testemunho permanece pendente.

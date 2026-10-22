@@ -39,3 +39,10 @@ CONFERE: M. Koroleva
 RGASPI, fundo 671, inventário 1, dossiê 114, folhas 215–216.
 
 Publicado em: Roman Nikitin. Kirov — o primeiro, Stalin — o segundo. O caso dos parentes de Leonid Nikolaev. Documentos e estudos. Moscou: Rosspen, 219, pp. 135–136.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> O ano bibliográfico “219” foi reproduzido da publicação eletrônica russa. Não foi completado por inferência; a referência à edição impressa requer conferência independente.

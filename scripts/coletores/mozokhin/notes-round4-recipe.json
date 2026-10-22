@@ -1,0 +1,769 @@
+{
+  "decision": "mozokhin-notes-round4-20261021",
+  "scope": "Visual note ownership review; OCR lexical readings retained. Explicit removal of OCR noise -г- in note59 (not present in facsimile).",
+  "units": [
+    {
+      "id": "mozokhin-2013-v1-052",
+      "expected_sha256": "0bde647b677ae00e169f21da66498858a7e69de0a8181cfe76c88b51f6fe9dbb",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "ответа29.",
+          "new": "ответа[^29]."
+        }
+      ],
+      "append_notes": [
+        "[^29]: приложение приводится ниже"
+      ],
+      "reviewed_pdf_pages": [
+        94
+      ],
+      "remaining": null,
+      "expected_result_sha256": "6bb1bab3714c7239148d077ee588f4202d9db1063dabf549e39d2668aa29351e"
+    },
+    {
+      "id": "mozokhin-2013-v1-054",
+      "expected_sha256": "2041bb09cb7e246975c8f68e50a0059d5736b06cc3eadd04210c4edad884fd36",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "29\nприложение приводится ниже",
+          "new": ""
+        },
+        {
+          "old": "\n93\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        94
+      ],
+      "remaining": null,
+      "expected_result_sha256": "25dc7665784b985a42814fb61b75ee9e0cf78482c1cdaad753f8cba39ca849a5"
+    },
+    {
+      "id": "mozokhin-2013-v1-078",
+      "expected_sha256": "2778f346dc1a9de2f9b62e27ec7270b0137548601b48842cb4bbac6c648a008d",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "35\nОпубликовано «Правда» № 240 (2469) 17.10.1926 г.",
+          "new": ""
+        },
+        {
+          "old": "1926 г.35",
+          "new": "1926 г.[^35]"
+        },
+        {
+          "old": "\n116\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^35]: Опубликовано «Правда» № 240 (2469) 17.10.1926 г."
+      ],
+      "reviewed_pdf_pages": [
+        117
+      ],
+      "remaining": null,
+      "expected_result_sha256": "900809d9d3db61a2cbf1ecd9de721e6b8a9d7d156ce7c630fa4e51bd6814df44"
+    },
+    {
+      "id": "mozokhin-2013-v1-107",
+      "expected_sha256": "a3098ef85430b1076dbacd769773fe5f6618fddd35222545cb55bc18d1c03781",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        189
+      ],
+      "remaining": null,
+      "expected_result_sha256": "a3098ef85430b1076dbacd769773fe5f6618fddd35222545cb55bc18d1c03781"
+    },
+    {
+      "id": "mozokhin-2013-v1-108",
+      "expected_sha256": "e8afbd3913d1a7e413330870ce359798617659445b43b16ba4d794e7c1e2fa5b",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        189
+      ],
+      "remaining": null,
+      "expected_result_sha256": "e8afbd3913d1a7e413330870ce359798617659445b43b16ba4d794e7c1e2fa5b"
+    },
+    {
+      "id": "mozokhin-2013-v1-109",
+      "expected_sha256": "e629f15a56da0626ffd8ee410e95063872c6c6f4a4b2a4935bd806da7a14a522",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "42 Подпись не разборчива",
+          "new": ""
+        },
+        {
+          "old": "ПБ42.",
+          "new": "ПБ[^42]."
+        },
+        {
+          "old": "\n188\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^42]: Подпись не разборчива"
+      ],
+      "reviewed_pdf_pages": [
+        189
+      ],
+      "remaining": "Tabela nominal de 41 linhas na página PDF190: reconstruir colunas e linhas quebradas.",
+      "expected_result_sha256": "4ab98238a3fdb364f62011cefa86526624702d43068453f13f8c59e104b471c6"
+    },
+    {
+      "id": "mozokhin-2013-v1-118",
+      "expected_sha256": "db2d9fcafeb11da46ccb53f7dbea29d4011d90ac85630ffdf6d2516cb3254c0b",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "45 Решением Политбюро ЦК от 14.01.1928 г. письмо было опубликовано газете «Правда» № 13 (3845)\nот 15.1.1928 г.",
+          "new": ""
+        },
+        {
+          "old": "в .д .45",
+          "new": "в .д .[^45]"
+        },
+        {
+          "old": "\n198\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^45]: Решением Политбюро ЦК от 14.01.1928 г. письмо было опубликовано газете «Правда» № 13 (3845) от 15.1.1928 г."
+      ],
+      "reviewed_pdf_pages": [
+        199
+      ],
+      "remaining": null,
+      "expected_result_sha256": "271e34b72c130cdb041ef0cc931cda2da1f87018ef3130db882c333f017d3047"
+    },
+    {
+      "id": "mozokhin-2013-v1-135",
+      "expected_sha256": "a0d9087e88550fe272ada73eef090117fc0a0234c7c6a4f410cdf5b6fa35bfcd",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "адресу50:",
+          "new": "адресу[^50]:"
+        }
+      ],
+      "append_notes": [
+        "[^50]: Адрес не указан"
+      ],
+      "reviewed_pdf_pages": [
+        255
+      ],
+      "remaining": null,
+      "expected_result_sha256": "4f0a0870ddb2c7c93f9fc34c7c9c20b6c2154a070f53b3f0273df70f2ffb26ba"
+    },
+    {
+      "id": "mozokhin-2013-v1-136",
+      "expected_sha256": "0173f174d7a82bc40223cd2f75b6f1aec54e40e18292d20b826fc3a1d3517518",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "50 Адрес не указан",
+          "new": ""
+        },
+        {
+          "old": "51 В приложении только списки арестованных.",
+          "new": ""
+        },
+        {
+          "old": "Приложение51:",
+          "new": "Приложение[^51]:"
+        },
+        {
+          "old": "\n254\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^51]: В приложении только списки арестованных."
+      ],
+      "reviewed_pdf_pages": [
+        255
+      ],
+      "remaining": null,
+      "expected_result_sha256": "511dd12053b64edd0f5a39baf3e33d76c340ad2fd65e0a824f80ef4eb5088ce6"
+    },
+    {
+      "id": "mozokhin-2013-v1-137",
+      "expected_sha256": "2a01808241ddf0de2617597d11e2984494b87657cb32a247c644e565370d7827",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "52 Приложение публикуется не полностью",
+          "new": ""
+        },
+        {
+          "old": "Приложение52:",
+          "new": "Приложение[^52]:"
+        },
+        {
+          "old": "\n256\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^52]: Приложение публикуется не полностью"
+      ],
+      "reviewed_pdf_pages": [
+        257
+      ],
+      "remaining": null,
+      "expected_result_sha256": "cd72f8591412a46ea559acb7ac785c7d0837af5683ac9af0c253088e34ab406e"
+    },
+    {
+      "id": "mozokhin-2013-v1-147",
+      "expected_sha256": "42b0ac8a0b692848f963341e86c2b2413c4b62a6a711387dc4674b647fb4eed6",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        293
+      ],
+      "remaining": "Notas53/54 já aparecem no início do extrato, provavelmente rodapé do documento146; conferir páginas291/292 e realocar antes de liberar.",
+      "expected_result_sha256": "42b0ac8a0b692848f963341e86c2b2413c4b62a6a711387dc4674b647fb4eed6"
+    },
+    {
+      "id": "mozokhin-2013-v1-148",
+      "expected_sha256": "e5df32d020d32c0460be9f7f909070fbffd66262985aec5098fee40c5aefd19a",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "55 Публикуется без приложения",
+          "new": ""
+        },
+        {
+          "old": "Приложение55:",
+          "new": "Приложение[^55]:"
+        },
+        {
+          "old": "\n292\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^55]: Публикуется без приложения"
+      ],
+      "reviewed_pdf_pages": [
+        293
+      ],
+      "remaining": null,
+      "expected_result_sha256": "5ce1cb2fc36a927252a50a672676d1774bdb0e038b17d9436227d968874c838b"
+    },
+    {
+      "id": "mozokhin-2013-v1-149",
+      "expected_sha256": "9d9edc7b668648caf0d2329122dfe04bc219fedb8b618420f5613ffee012c5a4",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        293
+      ],
+      "remaining": null,
+      "expected_result_sha256": "9d9edc7b668648caf0d2329122dfe04bc219fedb8b618420f5613ffee012c5a4"
+    },
+    {
+      "id": "mozokhin-2013-v1-162",
+      "expected_sha256": "e78be3e6dba8e79a7190a93ab2b1f1905e782d9758b462a7d97b34a7a928756c",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "57 Приложение публикуется частично.",
+          "new": ""
+        },
+        {
+          "old": "Приложение57:",
+          "new": "Приложение[^57]:"
+        },
+        {
+          "old": "\n342\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^57]: Приложение публикуется частично."
+      ],
+      "reviewed_pdf_pages": [
+        343
+      ],
+      "remaining": null,
+      "expected_result_sha256": "db9af6f4ed4a3152b2b0427c0c5558aa4dee6a374c8244f0fac526db01d02af5"
+    },
+    {
+      "id": "mozokhin-2013-v1-164",
+      "expected_sha256": "85c7aedf15c37b558a6926bcd7ebbc7bb007b52652482ac5c98799063e1adf7e",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "58 Приложение публикуется частично.",
+          "new": ""
+        },
+        {
+          "old": "Приложения58:",
+          "new": "Приложения[^58]:"
+        },
+        {
+          "old": "\n346\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^58]: Приложение публикуется частично."
+      ],
+      "reviewed_pdf_pages": [
+        347
+      ],
+      "remaining": null,
+      "expected_result_sha256": "c5da44126ac00ee1b3362848a3d5e4209e1164fdf25d8bb606e7a59c53892f10"
+    },
+    {
+      "id": "mozokhin-2013-v1-167",
+      "expected_sha256": "543504d2f098103f4c371a5744d89dd522fe8e95411ef4425fd9768baa23467b",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        351
+      ],
+      "remaining": null,
+      "expected_result_sha256": "543504d2f098103f4c371a5744d89dd522fe8e95411ef4425fd9768baa23467b"
+    },
+    {
+      "id": "mozokhin-2013-v1-168",
+      "expected_sha256": "c93d4d0d120b86f01a104ebb35a4e722b91d13674f49198e818eb84668d46cb2",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "59 -г-\nБез приложения",
+          "new": ""
+        },
+        {
+          "old": "Упомянутое59.",
+          "new": "Упомянутое[^59]."
+        },
+        {
+          "old": "\n350\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^59]: Без приложения"
+      ],
+      "reviewed_pdf_pages": [
+        351
+      ],
+      "remaining": null,
+      "expected_result_sha256": "0e7706f376cf6aa2b19bd4b3d327c18c77d5561b92233fbfbd2ae4876cfa598d"
+    },
+    {
+      "id": "mozokhin-2013-v1-169",
+      "expected_sha256": "2ed41df8f7d16d00cdfc471b947c205e6dc4a56135bc588dc75d1f3ac2fa695a",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        351
+      ],
+      "remaining": null,
+      "expected_result_sha256": "2ed41df8f7d16d00cdfc471b947c205e6dc4a56135bc588dc75d1f3ac2fa695a"
+    },
+    {
+      "id": "mozokhin-2013-v1-173",
+      "expected_sha256": "45937a17622a05ae2ad1a5b4dc9fa506e0207d72c5a9f67034a397610817663a",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "ссылке62",
+          "new": "ссылке[^62]"
+        }
+      ],
+      "append_notes": [
+        "[^62]: «О постановлении ГПУ, преступном по существу и незаконном по форме, я был поставлен в известность 20 января 1929 г.». — «Расписка в получении» Троцкого."
+      ],
+      "reviewed_pdf_pages": [
+        361
+      ],
+      "remaining": "Notas60/61 em página357 ainda precisam de conferência do aparato;62 já atribuída.",
+      "expected_result_sha256": "f392c51c4c021dd277effb76244aea460b35f1cbb042479c3cebb04265304820"
+    },
+    {
+      "id": "mozokhin-2013-v1-174",
+      "expected_sha256": "37bf9daac802a3b5ea24dec21cbbbd1e9102d40b5b2b5cbf382b012446ece803",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "62 «О постановлении ГПУ, преступном по существу и незаконном по форме, я был поставлен в\nизвестность 20 января 1929 г.». — «Расписка в получении» Троцкого.",
+          "new": ""
+        },
+        {
+          "old": "\n360\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        361
+      ],
+      "remaining": null,
+      "expected_result_sha256": "d70a4367e787bf7eba275b199ead9407815a6a035a9f8b642d6be28df2d4e894"
+    },
+    {
+      "id": "mozokhin-2013-v1-178",
+      "expected_sha256": "46c935f08d0116823cd28bb7428fe1526b851894125c8422f9e688232d7dd999",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "Ярославский63",
+          "new": "Ярославский[^63]"
+        }
+      ],
+      "append_notes": [
+        "[^63]: Опубликовано в «Правде № 56 - 8 марта 1929 г."
+      ],
+      "reviewed_pdf_pages": [
+        385
+      ],
+      "remaining": null,
+      "expected_result_sha256": "9ada1a4516755c21d2dea9830969d1bc8a9c8ee53b65772a76908892ab22b0ae"
+    },
+    {
+      "id": "mozokhin-2013-v1-179",
+      "expected_sha256": "67c1c2ef4ab5e8df77e821cb73268e366cc9fd0da0899ba9a38c0a95a52ca58d",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [
+        {
+          "old": "63 Опубликовано в «Правде № 56 - 8 марта 1929 г.",
+          "new": ""
+        },
+        {
+          "old": "\n384\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        385
+      ],
+      "remaining": null,
+      "expected_result_sha256": "8fffb59fa45cb5dd895eb2f084de524f8c4bedcd5556411b8b8d6b598a63be40"
+    },
+    {
+      "id": "mozokhin-2013-v1-180",
+      "expected_sha256": "46f8b42682a23e24f3b29ac669fd010461329daf45a0a1dfaf985ebe2a4701fc",
+      "pdf_sha256": "e126b2104b4c2d0b508811388544d0556ecd727d62abe0daa7eafee7fbf0302d",
+      "operations": [],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        385
+      ],
+      "remaining": null,
+      "expected_result_sha256": "46f8b42682a23e24f3b29ac669fd010461329daf45a0a1dfaf985ebe2a4701fc"
+    },
+    {
+      "id": "mozokhin-2013-v2-222",
+      "expected_sha256": "c69a0f31a6b67697a711ab45c6640fc40229082b2847325a306abd43d50968a8",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "1 № 32 пропущен в документе",
+          "new": ""
+        },
+        {
+          "old": "\n321\n",
+          "new": "\n32[^1]\n"
+        },
+        {
+          "old": "\n57\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^1]: № 32 пропущен в документе"
+      ],
+      "reviewed_pdf_pages": [
+        58
+      ],
+      "remaining": null,
+      "expected_result_sha256": "91f74661759aa0cff35d57ce9c8be4ff1a2206aaec2fab71c411a571ec544171"
+    },
+    {
+      "id": "mozokhin-2013-v2-249",
+      "expected_sha256": "e0da335d473e86e245906496543802a3fbbf44aad5977de190cd58c36f1ddc29",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "3 Приложение дано частично",
+          "new": ""
+        },
+        {
+          "old": "Приложение3:",
+          "new": "Приложение[^3]:"
+        },
+        {
+          "old": "\n178\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^3]: Приложение дано частично"
+      ],
+      "reviewed_pdf_pages": [
+        179
+      ],
+      "remaining": null,
+      "expected_result_sha256": "4c12e5f77cf844c91220331af09d61a4bac5aa14abd1ab58df786588f505ad57"
+    },
+    {
+      "id": "mozokhin-2013-v2-253",
+      "expected_sha256": "3260c00e3e64d0c00838b8699daf16dfc1ad897ebda94f4eec195cb9df3f84ef",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "4 На полях абзаца рукописная помета Сталина: «Врет подлец»",
+          "new": ""
+        },
+        {
+          "old": "хранение4.",
+          "new": "хранение[^4]."
+        },
+        {
+          "old": "\n199\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^4]: На полях абзаца рукописная помета Сталина: «Врет подлец»"
+      ],
+      "reviewed_pdf_pages": [
+        200
+      ],
+      "remaining": null,
+      "expected_result_sha256": "b7e2bff4c29ef0d4dc788beac625dbacecf76fe787924025d69c1791b411d116"
+    },
+    {
+      "id": "mozokhin-2013-v2-256",
+      "expected_sha256": "99f7a08cc93263a23f0ff33ce367017978d9bec3d1b921b57bbcf8d80b713b2c",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "5 подписал Г.Е.Прокофьев",
+          "new": ""
+        },
+        {
+          "old": "(Ягода)5",
+          "new": "(Ягода)[^5]"
+        },
+        {
+          "old": "\n211\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^5]: подписал Г.Е.Прокофьев"
+      ],
+      "reviewed_pdf_pages": [
+        212
+      ],
+      "remaining": null,
+      "expected_result_sha256": "683b0dd49887d463bb55e23838b86a9ec72650e26f2efaeff98e530efc6bd8b9"
+    },
+    {
+      "id": "mozokhin-2013-v2-260",
+      "expected_sha256": "19766767edc9774ae0fe391497730bbb325b65cfebc6eec649b1cd5cb884dcf0",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "6 подписано Г.Е.Прокофьевым",
+          "new": ""
+        },
+        {
+          "old": "/Ягода/6",
+          "new": "/Ягода/[^6]"
+        },
+        {
+          "old": "\n220\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^6]: подписано Г.Е.Прокофьевым"
+      ],
+      "reviewed_pdf_pages": [
+        221
+      ],
+      "remaining": null,
+      "expected_result_sha256": "7b05c7f42d75180a38dad94fb4b91caf8bd9bded1dceb60b0c382d6de597975f"
+    },
+    {
+      "id": "mozokhin-2013-v2-269",
+      "expected_sha256": "06da98003eca7a601e75b6006096c8ac559ff14b93ff65963d80bd39894301b6",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "8 Подписано Г.Е.Прокофьевым",
+          "new": ""
+        },
+        {
+          "old": "(Г. Ягода)8",
+          "new": "(Г. Ягода)[^8]"
+        },
+        {
+          "old": "\n266\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^8]: Подписано Г.Е.Прокофьевым"
+      ],
+      "reviewed_pdf_pages": [
+        267
+      ],
+      "remaining": null,
+      "expected_result_sha256": "a7d4fd71d4350fc821b266826339f65010a142532501659f5fc8935aa1462d70"
+    },
+    {
+      "id": "mozokhin-2013-v2-272",
+      "expected_sha256": "0379c462872dd79133e4fdd998f4710497e860272d1a335a295297edc0140fca",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "10 подписано Г.Е.Прокофьевым",
+          "new": ""
+        },
+        {
+          "old": "Г. Ягода10",
+          "new": "Г. Ягода[^10]"
+        },
+        {
+          "old": "\n286\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [
+        "[^10]: подписано Г.Е.Прокофьевым"
+      ],
+      "reviewed_pdf_pages": [
+        287
+      ],
+      "remaining": null,
+      "expected_result_sha256": "af77432c7de658fd8471dae20ac2c5082bff4d06bae87d0ae447b619f249e6c6"
+    },
+    {
+      "id": "mozokhin-2013-v2-278",
+      "expected_sha256": "f16d7b84b2d0aa8d96ba0dc777f430b8aed3d4961d7458d0c4f5e9a14a17e95e",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "(ТАСС)11",
+          "new": "(ТАСС)[^11]"
+        }
+      ],
+      "append_notes": [
+        "[^11]: Опубликовано в «Правде» 30 августа 1936 г. № 239"
+      ],
+      "reviewed_pdf_pages": [
+        311
+      ],
+      "remaining": null,
+      "expected_result_sha256": "389b1b562520a5188cd53ee7a03e9cf92895af5b818e278654aa3c59d8a6b2d1"
+    },
+    {
+      "id": "mozokhin-2013-v2-279",
+      "expected_sha256": "4810dd5e0edfa28721f43fcba4313e7bf6e5e80dc24c3e40353069a3d8841f45",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        311
+      ],
+      "remaining": null,
+      "expected_result_sha256": "4810dd5e0edfa28721f43fcba4313e7bf6e5e80dc24c3e40353069a3d8841f45"
+    },
+    {
+      "id": "mozokhin-2013-v2-280",
+      "expected_sha256": "9070e4dcaf4526d2d33a7efd4db22eb20923a6e8503a41e7c9ed11a3ce0426c3",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "11 Опубликовано в «Правде» 30 августа 1936 г. № 239",
+          "new": ""
+        },
+        {
+          "old": "\n310\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        311
+      ],
+      "remaining": "Triagem de possível tabela nas páginas312–313 ainda não revista; nota11 foi removida e realocada para278.",
+      "expected_result_sha256": "aae7d2ab621664f4115f80c7cdb764b03096a506959873a2221e5e5ea0660b1a"
+    },
+    {
+      "id": "mozokhin-2013-v2-291",
+      "expected_sha256": "c82bbfb9a33aea86c33e6d3a49536bf910a9d39dc4470cefbacf8a9fd06f8973",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "Приложение12:",
+          "new": "Приложение[^12]:"
+        }
+      ],
+      "append_notes": [
+        "[^12]: Без приложения."
+      ],
+      "reviewed_pdf_pages": [
+        387
+      ],
+      "remaining": null,
+      "expected_result_sha256": "f803a2c100c2424dedfaf03d6034a003b98807ac9e4987da561a2f16bff60d13"
+    },
+    {
+      "id": "mozokhin-2013-v2-292",
+      "expected_sha256": "0ecee7a7ff59abf56a8e327215646e97cf37461892c187bc2f76f77afe4cb209",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        387
+      ],
+      "remaining": null,
+      "expected_result_sha256": "0ecee7a7ff59abf56a8e327215646e97cf37461892c187bc2f76f77afe4cb209"
+    },
+    {
+      "id": "mozokhin-2013-v2-293",
+      "expected_sha256": "8f33d85fbbf70c3c1228b941d10ac6754d3381d6ae28952b1f52dacefefad7e7",
+      "pdf_sha256": "eac5b4ed1735f5cdc7f46a9725d65036b03a4e264da1d8a34373954fae906614",
+      "operations": [
+        {
+          "old": "12 Без приложения.",
+          "new": ""
+        },
+        {
+          "old": "\n386\n",
+          "new": "\n"
+        }
+      ],
+      "append_notes": [],
+      "reviewed_pdf_pages": [
+        387
+      ],
+      "remaining": null,
+      "expected_result_sha256": "a3ae528d0edd30efc4da02a167355214921d690c9cf2a45836c360dd8775e89f"
+    }
+  ]
+}

@@ -29,3 +29,10 @@ HEAD OF SECTION I OF THE SPO OF THE GUGB OF THE NKVD OF THE USSR PETROVSKY.
 Certified true: Churbanova
 
 RGASPI, fond 671, inventory 1, file 121, leaf 209.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> For Lyushkov’s position, the Russian electronic publication uses “ГУГВ”, while nearby lines use “ГУГБ”. The translations preserve GUGV on that line; the abbreviation has not been silently normalized.

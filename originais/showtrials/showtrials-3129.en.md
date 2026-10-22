@@ -37,3 +37,10 @@ Annotation: [at the top of the document, the inscription: to Comrade Dmitriev]
 RGASPI, fond 671, inventory 1, file 120, leaves 66–98.
 
 Published in: Roman Nikitin. Kirov First, Stalin Second. The Case of Leonid Nikolaev's Relatives. Documents and Studies. Moscow: ROSSPEN, 2019, pp. 118–119.
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The reference to folios 66–98 appears in the Russian electronic publication and is preserved. This archival reference alone does not establish that pages are missing from the transcription; its extent must be checked against the archival unit.

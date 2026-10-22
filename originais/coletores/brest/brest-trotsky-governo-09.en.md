@@ -1,0 +1,26 @@
+### Official Government Documents from the People’s Commissar for Foreign Affairs
+
+## Leon Trotsky
+
+##### The documents presented here are the official documents and proclamations from the People’s Commissariat for Foreign Affairs, headed by Leon Trotsky from November of 1917 to March of 1918. These documents were originally transcribed by [Brian Baggins](https://www.marxists.org/admin/volunteers/steering.htm) for the [History of the Soviet Government Documents](https://www.marxists.org/history/ussr/index.htm) web site.
+
+---
+
+  
+  
+
+#### EXTRACTS FROM A STATEMENT BY TROTSKY ON POLAND AT THE BREST-LITOVSK CONFERENCE
+
+  
+
+**3 February 1918**
+
+First of all, I must make it clear that neither the German nor the Austro-Hungarian delegation raised the question of inviting the representatives of the Polish Government to the negotiations as representatives of an independent State. That question was only raised when the Russian delegation drew the attention of the other side to the complete contradiction in their attitude, in that the German and Austro-Hungarian Governments, acknowledging in words the sovereign rights of the Polish State, at the same time failed to raise the question of inviting the Polish Government to negotiations concerning the destiny of Poland. Only when the question was raised by us did the other side announce that they were ready to give it favourable consideration. Thus it is very important to underline once again that the German and Austro-Hungarian delegations came to the negotiations without any previous decision having been taken by their Governments about inviting the Polish Government to the negotiations; whereas, if they regard the Polish Ministry as the Government of an independent State, that would have been the inescapable conclusion of their attitude.
+
+We on our side recognize completely and without any limitation the independence of the Polish people and the Polish State ... But for us it is obvious that this independence remains illusory so long as Poland remains under military occupation. Precisely because we recognize the independence of the Polish people and the Polish State, we cannot, without injury to that independence, recognize as plenipotentiary representatives of the Polish people persons nominated by the occupying Powers. We could provisionally only recognize as representatives for independent participation in the peace negotiations a Polish delegation which was sanctioned by the authentic organs of the Polish people themselves. Since the Polish people are rich in political experience, and their social and national aspirations have found expression in strong and stable political parties, we are convinced that the provisional representation of an independent Poland, for the purpose of taking part in the peace negotiations, could quickly be created by voluntary agreement among the Polish political parties, based on the popular masses and in particular on the working class. We for our part are prepared to recognize such a plenipotentiary representation completely and without any limitation. Finally, since the Polish Rada, established in compliance with the wishes of the Central Powers, intends, clearly with the consent of the Central Powers, to take part in the peace negotiations, we assume that the delegations of the Central Powers (the same delegations which declared to us that the Polish Ministry is acting within limits laid down by the German and Austro-Hungarian occupation authorities) could lay down similar terms for the participation of the Polish Ministry in the present negotiations. That would merely be in accordance with the actual state of affairs.
+
+May I remind you that when the question of recognizing the delegation from the Ukrainian Rada was raised here we did not ask the other side to recognize the Ukrainian Republic before the conclusion of the peace treaty. We thought that, in the uncertainty of the situation, relations would be defined in the course of the negotiations themselves. We for our part would welcome participation by the Polish Rada in the negotiations, since it would give the Rada an opportunity to state its views openly, before the Polish people, on such questions as clearing Polish territory of foreign troops and rectifying the frontier at the expense of the independent Polish nation. The declarations and demands of the delegation of the Kucharzewski Ministry would receive all the more thorough and comprehensive consideration here, as our delegation includes a representative of the working masses of Poland.
+
+In conclusion, may I again draw your attention to the logical misunderstanding which has frequently arisen in our negotiations, that the kind of attitude we take towards a Government also holds good for our attitude to a people and a State. If we do not regard the Kucharzewski Ministry, on the facts known to us, as the authoritative Government of the Polish people, that does not by any means signify that we do not recognize the independence of the Polish State and the Polish people. I have not yet heard that the German Government has hastened to recognize the new Finnish Government, but I think that the fact of the existence of a new Finnish Government cannot prevent the German Government from immediately recognizing the independence of the Finnish Republic.
+
+---

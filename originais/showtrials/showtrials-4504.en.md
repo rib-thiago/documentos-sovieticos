@@ -4,83 +4,21 @@ conducted at the NKVD Administration of Leningrad Region by the Assistant Head o
 
 BRICCI, on January 17, 1935.
 
-1.
-
-Surname —
-
-APANASEVICH.
-
-2.
-
-First name, patronymic —
-
-Konstantin Adamovich.
-
-3.
-
-Age —
-
-Born in 1903.
-
-4.
-
-Origin —
-
-Native of Leningrad. Employee of working-class origin. Russian, citizen of the USSR.
-
-5.
-
-Residence —
-
-Leningrad, Romenskaya Street, No. 7, apartment 29.
-
-6.
-
-Occupation —
-
-Responsible instructor of the Presidium of the Regional Trade Union Council.
-
-7.
-
-Marital status —
-
-Single. Mother, Elena Ivanovna, supported by me; sister Antonina, works at Margarine Factory No. 2 as an assistant accountant.
-
-8.
-
-Property status —
-
-Without property.
-
-9.
-
-Educational qualifications —
-
-Incomplete higher education.
-
-10.
-
-Party affiliation —
-
-Member of the All-Union Communist Party (Bolsheviks) since 1921. No Party disciplinary penalties.
-
-11.
-
-Information on convictions —
-
-None.
-
-12.
-
-Military registration category —
-
-Registered in the category of junior technical personnel.
-
-13.
-
-Service with the Whites —
-
-Did not serve.
+|  |  |  |
+| --- | --- | --- |
+| 1. | Surname — | APANASEVICH. |
+| 2. | First name, patronymic — | Konstantin Adamovich. |
+| 3. | Age — | Born in 1903. |
+| 4. | Origin — | Native of Leningrad. Employee of working-class origin. Russian, citizen of the USSR. |
+| 5. | Residence — | Leningrad, Romenskaya Street, No. 7, apartment 29. |
+| 6. | Occupation — | Responsible instructor of the Presidium of the Regional Trade Union Council. |
+| 7. | Marital status — | Single. Mother, Elena Ivanovna, supported by me; sister Antonina, works at Margarine Factory No. 2 as an assistant accountant. |
+| 8. | Property status — | Without property. |
+| 9. | Educational qualifications — | Incomplete higher education. |
+| 10. | Party affiliation — | Member of the All-Union Communist Party (Bolsheviks) since 1921. No Party disciplinary penalties. |
+| 11. | Information on convictions — | None. |
+| 12. | Military registration category — | Registered in the category of junior technical personnel. |
+| 13. | Service with the Whites — | Did not serve. |
 
 Testimony on the substance of the case:
 

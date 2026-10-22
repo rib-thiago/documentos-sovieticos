@@ -25,3 +25,10 @@ CHEFE DA 1ª SEÇÃO DO SPO DA GUGB — PETROVSKY.
 RGASPI, fundo 671, inventário 1, dossiê 114, folhas 161–162.
 
 [1] Provavelmente um erro na redatilografia do protocolo.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> A automenção “АНТОНОВА” e a chamada [i], com nota identificada como [1], constam da publicação eletrônica russa. Foram preservadas, assim como a nota da fonte que sugere erro de redatilografia. Não se substituiu o nome por outro presumido.

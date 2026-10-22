@@ -77,3 +77,10 @@ Certified true:
 RGASPI, fond 671, inventory 1, file 114, fols. 96–99.
 
 [1] The text erroneously gives “Каталыновым” (Katalynov).
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The year “19343” appears in the Russian electronic publication and is preserved. Another passage in the same testimony mentions spring 1934; the former year has not been amended by inference.

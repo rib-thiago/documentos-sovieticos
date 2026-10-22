@@ -1,0 +1,395 @@
+{
+  "artifacts": [
+    {
+      "original": "scripts/revisao_acervo/prepare_wave5_sections.py",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/f2b16c99004188946e3b3212f3a8dee3b979e0d64e1bceea98b536137011a9b5-prepare_wave5_sections.py",
+      "sha256": "f2b16c99004188946e3b3212f3a8dee3b979e0d64e1bceea98b536137011a9b5",
+      "bytes": 9971
+    },
+    {
+      "original": "scripts/revisao_acervo/prepare_local_catalog_dates.py",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/dfeeda9f25c19c5b9ba40b2b86c952221b9d222c2790336e1a98888503825a5e-prepare_local_catalog_dates.py",
+      "sha256": "dfeeda9f25c19c5b9ba40b2b86c952221b9d222c2790336e1a98888503825a5e",
+      "bytes": 4508
+    },
+    {
+      "original": "scripts/revisao_acervo/integrate.py",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/12274047e28faa6fc3bf47d70faad433fa6c8a6b632b4b18061177728a1bc1a3-integrate.py",
+      "sha256": "12274047e28faa6fc3bf47d70faad433fa6c8a6b632b4b18061177728a1bc1a3",
+      "bytes": 11134
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/SUMMARY.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/7c07d5a192a3ab2c96c03cb2490116e2320dbe73e6f62bd8b6c9073d654ba596-SUMMARY.json",
+      "sha256": "7c07d5a192a3ab2c96c03cb2490116e2320dbe73e6f62bd8b6c9073d654ba596",
+      "bytes": 2882
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/SUMMARY.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/e6f4a46cdfe5ac4629e6e5a2a0abd8625bc110bfd2ea244c607de6ebd5d9bb43-SUMMARY.json",
+      "sha256": "e6f4a46cdfe5ac4629e6e5a2a0abd8625bc110bfd2ea244c607de6ebd5d9bb43",
+      "bytes": 2260
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/ep-1-arkhangelsk.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/671f6cfc352535b938ef805e6f7dddddc33a2b31c0ceddf43298611e4a4b0632-ep-1-arkhangelsk.evidence.json",
+      "sha256": "671f6cfc352535b938ef805e6f7dddddc33a2b31c0ceddf43298611e4a4b0632",
+      "bytes": 1233
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/ep-2-the-yaroslavl-uprising.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/9417deba9fa2a0305ca44d87e778c08ef1695b35e99d0c096d7a9cf4f57702f7-ep-2-the-yaroslavl-uprising.evidence.json",
+      "sha256": "9417deba9fa2a0305ca44d87e778c08ef1695b35e99d0c096d7a9cf4f57702f7",
+      "bytes": 1299
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/ep-3-1918-tambov-kostroma-uprisings.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/e1370220a48b0db535a7b0b58b99fca747130ce0e4af772bd1198b42b3730054-ep-3-1918-tambov-kostroma-uprisings.evidence.json",
+      "sha256": "e1370220a48b0db535a7b0b58b99fca747130ce0e4af772bd1198b42b3730054",
+      "bytes": 1347
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/ep-4-komuch-volga-siberia-czechoslovak-mutiny.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/44b310b0fd9058bca7d1ef36aef2f79628a577b2293ad793c7116e7fd9ceeaa7-ep-4-komuch-volga-siberia-czechoslovak-mutiny.evidence.json",
+      "sha256": "44b310b0fd9058bca7d1ef36aef2f79628a577b2293ad793c7116e7fd9ceeaa7",
+      "bytes": 1407
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/ep-5-did-the-bolsheviks-lose-soviet-elections-were-the-bolsheviks-popular-debunking-v-brovkin.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/31fd7e1f4090e7035df2150830b6a35d168cd2aa6b48cc2aaae9ec8b5024e3b7-ep-5-did-the-bolsheviks-lose-soviet-elections-were-the-bolsheviks-popular-debunking-v-brovkin.evidence.json",
+      "sha256": "31fd7e1f4090e7035df2150830b6a35d168cd2aa6b48cc2aaae9ec8b5024e3b7",
+      "bytes": 1695
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/ep-6-the-workers-assemblies-movement-1918-21.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/703a2a7cf90ccbf07bddf4447feb815fe4fe752ee3b94ba0de1950fae6e39538-ep-6-the-workers-assemblies-movement-1918-21.evidence.json",
+      "sha256": "703a2a7cf90ccbf07bddf4447feb815fe4fe752ee3b94ba0de1950fae6e39538",
+      "bytes": 1401
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/ep-7-were-the-soviets-destroyed-who-wanted-to-destroy-them.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/3fa0d335e6fd74890ec9f09f43d95248459fa5f900983b117f0c953473b24826-ep-7-were-the-soviets-destroyed-who-wanted-to-destroy-them.evidence.json",
+      "sha256": "3fa0d335e6fd74890ec9f09f43d95248459fa5f900983b117f0c953473b24826",
+      "bytes": 1485
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/ep-8-arguments-used-by-mensheviks-1917-1920s.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/8530d76a8d217dac296d68ece520cfc4e92c002c67047158b2d81310851b74e4-ep-8-arguments-used-by-mensheviks-1917-1920s.evidence.json",
+      "sha256": "8530d76a8d217dac296d68ece520cfc4e92c002c67047158b2d81310851b74e4",
+      "bytes": 1401
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/ep-9-who-were-the-supporters-of-menshevism.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/3d836749314a792ea70435073d48b3f5dd4c79e20e42cd37706ed97c5a820993-ep-9-who-were-the-supporters-of-menshevism.evidence.json",
+      "sha256": "3d836749314a792ea70435073d48b3f5dd4c79e20e42cd37706ed97c5a820993",
+      "bytes": 1389
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/soviet-polish-relations-to-1920.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/5006511d045a0134c60c3f22091fb7c4461112a8db737d6ae270e3f15041ada1-soviet-polish-relations-to-1920.evidence.json",
+      "sha256": "5006511d045a0134c60c3f22091fb7c4461112a8db737d6ae270e3f15041ada1",
+      "bytes": 1336
+    },
+    {
+      "original": "temporario/revisao-onda5/catalogo-local/trotsky-stalin-and-the-red-army-civil-war-in-the-ussr.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/d039c826b013f86a179f50592ccac35c0f512dfc83a6cd76c2aba958ca40f56d-trotsky-stalin-and-the-red-army-civil-war-in-the-ussr.evidence.json",
+      "sha256": "d039c826b013f86a179f50592ccac35c0f512dfc83a6cd76c2aba958ca40f56d",
+      "bytes": 1349
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0022/showtrials-7995.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/e1ec0516c71ca83b76563e549401ffb3c01fb8e0850ada270a886d5c8b4115ed-showtrials-7995.evidence.json",
+      "sha256": "e1ec0516c71ca83b76563e549401ffb3c01fb8e0850ada270a886d5c8b4115ed",
+      "bytes": 2760
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0030/showtrials-10713.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/a22d38013c20cba2ef79d5f9a603a0cbb520679c737cd4b64a43117814a78505-showtrials-10713.evidence.json",
+      "sha256": "a22d38013c20cba2ef79d5f9a603a0cbb520679c737cd4b64a43117814a78505",
+      "bytes": 1603
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0034/showtrials-2483.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/aaff9993afc89756b51737e77956dd86de5cc596ddcd526fefa9d60338806fea-showtrials-2483.evidence.json",
+      "sha256": "aaff9993afc89756b51737e77956dd86de5cc596ddcd526fefa9d60338806fea",
+      "bytes": 1389
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0036/showtrials-2537.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/4f4c442315b83537972b11e3cc7b2f71f5a9b9cd3021859129f27f8a8d2d0086-showtrials-2537.evidence.json",
+      "sha256": "4f4c442315b83537972b11e3cc7b2f71f5a9b9cd3021859129f27f8a8d2d0086",
+      "bytes": 1605
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0042/showtrials-4796.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/285980658107857e4c616fac7cce36fce7b3c840c979373324c65b00dc8a9b2c-showtrials-4796.evidence.json",
+      "sha256": "285980658107857e4c616fac7cce36fce7b3c840c979373324c65b00dc8a9b2c",
+      "bytes": 2988
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0044/showtrials-4849.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/e1a011df8d6d5f682d1172cda19e0d4683b1d85325c2a6b81fc8b91349719021-showtrials-4849.evidence.json",
+      "sha256": "e1a011df8d6d5f682d1172cda19e0d4683b1d85325c2a6b81fc8b91349719021",
+      "bytes": 4102
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0052/showtrials-5648.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/dfc276898687c7e10f4f63e80e07129c225214821133fb4e7282257c71365f03-showtrials-5648.evidence.json",
+      "sha256": "dfc276898687c7e10f4f63e80e07129c225214821133fb4e7282257c71365f03",
+      "bytes": 1899
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0062/showtrials-5793.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/cee0bdf32a98f82d78810cbd1548ad2b09642a5bce57bbfdd44a3d915943cb5e-showtrials-5793.evidence.json",
+      "sha256": "cee0bdf32a98f82d78810cbd1548ad2b09642a5bce57bbfdd44a3d915943cb5e",
+      "bytes": 915
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0086/showtrials-6762.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/0d30be1025bc8687353899f5cbe6cb1f5c53316d14377be5f62d3d4afc6cdc0f-showtrials-6762.evidence.json",
+      "sha256": "0d30be1025bc8687353899f5cbe6cb1f5c53316d14377be5f62d3d4afc6cdc0f",
+      "bytes": 5858
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0087/showtrials-6958.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/cb94cd43e5ea07ded7e8494d2c51754da855d750301eafbb8231e582337cc372-showtrials-6958.evidence.json",
+      "sha256": "cb94cd43e5ea07ded7e8494d2c51754da855d750301eafbb8231e582337cc372",
+      "bytes": 915
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0096/showtrials-7248.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/43d4d2817584798b41d9402b3ff8ad056b041561bfc963836c2753ac3a75be61-showtrials-7248.evidence.json",
+      "sha256": "43d4d2817584798b41d9402b3ff8ad056b041561bfc963836c2753ac3a75be61",
+      "bytes": 952
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0097/showtrials-7250.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/4e144600afcbb1dfc8a280f4137bb42cd41d89083ccf939fa81b101b9b30ddc7-showtrials-7250.evidence.json",
+      "sha256": "4e144600afcbb1dfc8a280f4137bb42cd41d89083ccf939fa81b101b9b30ddc7",
+      "bytes": 904
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0122/showtrials-8164.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/cde26a281bb2f15e88d5ea9963ceaf71a0f51c21a50fee9d69f5d831a28146b3-showtrials-8164.evidence.json",
+      "sha256": "cde26a281bb2f15e88d5ea9963ceaf71a0f51c21a50fee9d69f5d831a28146b3",
+      "bytes": 4235
+    },
+    {
+      "original": "temporario/revisao-onda5/secoes/R2-secoes_listas-0131/showtrials-8623.evidence.json",
+      "snapshot": "temporario/revisao-onda5/frozen-operational/ab4ca92549af92803c66b753abd3dfd15e80c78220fc7b31ee4604b369457ad8-showtrials-8623.evidence.json",
+      "sha256": "ab4ca92549af92803c66b753abd3dfd15e80c78220fc7b31ee4604b369457ad8",
+      "bytes": 2643
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/03745a0f1b1f6a6ad045b9b6a847da3cf088cb6c68288c7bd59ab70749ecada0-R4-conferencia_colecoes-0143.json",
+      "sha256": "03745a0f1b1f6a6ad045b9b6a847da3cf088cb6c68288c7bd59ab70749ecada0",
+      "bytes": 2314
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/0d30be1025bc8687353899f5cbe6cb1f5c53316d14377be5f62d3d4afc6cdc0f-showtrials-6762.evidence.json",
+      "sha256": "0d30be1025bc8687353899f5cbe6cb1f5c53316d14377be5f62d3d4afc6cdc0f",
+      "bytes": 5858
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/1672a9532a1e135ba5c427cf6ce8d2c9f4d0b8300c21c72639247e4c16f7e8dc-R2-secoes_listas-0036.json",
+      "sha256": "1672a9532a1e135ba5c427cf6ce8d2c9f4d0b8300c21c72639247e4c16f7e8dc",
+      "bytes": 1262
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/1ba7a0c0d257dbc70da27d0af889f2cdf7f4b0d55dc6d65a1a86d0ce8ddfa82a-R2-secoes_listas-0097.json",
+      "sha256": "1ba7a0c0d257dbc70da27d0af889f2cdf7f4b0d55dc6d65a1a86d0ce8ddfa82a",
+      "bytes": 701
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/1e7868b47e04d0aeaa9215df9d8fe09d39ac348bd6d6b94a78887365e37f578a-R4-conferencia_colecoes-0145.json",
+      "sha256": "1e7868b47e04d0aeaa9215df9d8fe09d39ac348bd6d6b94a78887365e37f578a",
+      "bytes": 1249
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/285980658107857e4c616fac7cce36fce7b3c840c979373324c65b00dc8a9b2c-showtrials-4796.evidence.json",
+      "sha256": "285980658107857e4c616fac7cce36fce7b3c840c979373324c65b00dc8a9b2c",
+      "bytes": 2988
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/31fd7e1f4090e7035df2150830b6a35d168cd2aa6b48cc2aaae9ec8b5024e3b7-ep-5-did-the-bolsheviks-lose-soviet-elections-were-the-bolsheviks-popular-debunking-v-brovkin.evidence.json",
+      "sha256": "31fd7e1f4090e7035df2150830b6a35d168cd2aa6b48cc2aaae9ec8b5024e3b7",
+      "bytes": 1695
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/3328480db4187c4790c128049a9f801cc778398b2746febe71daa1e6db9192ff-R2-secoes_listas-0034.json",
+      "sha256": "3328480db4187c4790c128049a9f801cc778398b2746febe71daa1e6db9192ff",
+      "bytes": 1262
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/37f9888ee3cc3e163daeff73619ed6e1111558d585536ee3edda48b85ec973d6-R2-secoes_listas-0042.json",
+      "sha256": "37f9888ee3cc3e163daeff73619ed6e1111558d585536ee3edda48b85ec973d6",
+      "bytes": 1262
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/3d836749314a792ea70435073d48b3f5dd4c79e20e42cd37706ed97c5a820993-ep-9-who-were-the-supporters-of-menshevism.evidence.json",
+      "sha256": "3d836749314a792ea70435073d48b3f5dd4c79e20e42cd37706ed97c5a820993",
+      "bytes": 1389
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/3fa0d335e6fd74890ec9f09f43d95248459fa5f900983b117f0c953473b24826-ep-7-were-the-soviets-destroyed-who-wanted-to-destroy-them.evidence.json",
+      "sha256": "3fa0d335e6fd74890ec9f09f43d95248459fa5f900983b117f0c953473b24826",
+      "bytes": 1485
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/44b310b0fd9058bca7d1ef36aef2f79628a577b2293ad793c7116e7fd9ceeaa7-ep-4-komuch-volga-siberia-czechoslovak-mutiny.evidence.json",
+      "sha256": "44b310b0fd9058bca7d1ef36aef2f79628a577b2293ad793c7116e7fd9ceeaa7",
+      "bytes": 1407
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/4d9fd7f2f6cbbb0495aa6ddf7fc68d09dca2b9f75876a55966b057f808084718-R2-secoes_listas-0044.json",
+      "sha256": "4d9fd7f2f6cbbb0495aa6ddf7fc68d09dca2b9f75876a55966b057f808084718",
+      "bytes": 1262
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/4f4c442315b83537972b11e3cc7b2f71f5a9b9cd3021859129f27f8a8d2d0086-showtrials-2537.evidence.json",
+      "sha256": "4f4c442315b83537972b11e3cc7b2f71f5a9b9cd3021859129f27f8a8d2d0086",
+      "bytes": 1605
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/5006511d045a0134c60c3f22091fb7c4461112a8db737d6ae270e3f15041ada1-soviet-polish-relations-to-1920.evidence.json",
+      "sha256": "5006511d045a0134c60c3f22091fb7c4461112a8db737d6ae270e3f15041ada1",
+      "bytes": 1336
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/5eb57605b86d6c7effd56ec95c14402ebb44990631e0e64e7081ede5724a1346-R4-conferencia_colecoes-0141.json",
+      "sha256": "5eb57605b86d6c7effd56ec95c14402ebb44990631e0e64e7081ede5724a1346",
+      "bytes": 1296
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/607de3152cc880037b6e805332de5aede1df1644f0314911da7708d5e02a22a3-R4-conferencia_colecoes-0140.json",
+      "sha256": "607de3152cc880037b6e805332de5aede1df1644f0314911da7708d5e02a22a3",
+      "bytes": 3008
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/634e05aebb6eb07dd8ca902df9159b97a445cd184d902230ee26a6ff9e6bc318-R4-conferencia_colecoes-0142.json",
+      "sha256": "634e05aebb6eb07dd8ca902df9159b97a445cd184d902230ee26a6ff9e6bc318",
+      "bytes": 1488
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/671f6cfc352535b938ef805e6f7dddddc33a2b31c0ceddf43298611e4a4b0632-ep-1-arkhangelsk.evidence.json",
+      "sha256": "671f6cfc352535b938ef805e6f7dddddc33a2b31c0ceddf43298611e4a4b0632",
+      "bytes": 1233
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/703a2a7cf90ccbf07bddf4447feb815fe4fe752ee3b94ba0de1950fae6e39538-ep-6-the-workers-assemblies-movement-1918-21.evidence.json",
+      "sha256": "703a2a7cf90ccbf07bddf4447feb815fe4fe752ee3b94ba0de1950fae6e39538",
+      "bytes": 1401
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/8530d76a8d217dac296d68ece520cfc4e92c002c67047158b2d81310851b74e4-ep-8-arguments-used-by-mensheviks-1917-1920s.evidence.json",
+      "sha256": "8530d76a8d217dac296d68ece520cfc4e92c002c67047158b2d81310851b74e4",
+      "bytes": 1401
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/861ab8087a38281c4974b8b4b1e2275ac1b3994b00b1585cff4b59c9eb0f3392-R2-secoes_listas-0131.json",
+      "sha256": "861ab8087a38281c4974b8b4b1e2275ac1b3994b00b1585cff4b59c9eb0f3392",
+      "bytes": 1254
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/9246c7ac19a7d0d2d023f798dabd00340ae80330ea8fb17316f3e86dc70acd95-R2-secoes_listas-0052.json",
+      "sha256": "9246c7ac19a7d0d2d023f798dabd00340ae80330ea8fb17316f3e86dc70acd95",
+      "bytes": 1262
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/9417deba9fa2a0305ca44d87e778c08ef1695b35e99d0c096d7a9cf4f57702f7-ep-2-the-yaroslavl-uprising.evidence.json",
+      "sha256": "9417deba9fa2a0305ca44d87e778c08ef1695b35e99d0c096d7a9cf4f57702f7",
+      "bytes": 1299
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/a22d38013c20cba2ef79d5f9a603a0cbb520679c737cd4b64a43117814a78505-showtrials-10713.evidence.json",
+      "sha256": "a22d38013c20cba2ef79d5f9a603a0cbb520679c737cd4b64a43117814a78505",
+      "bytes": 1603
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/aaff9993afc89756b51737e77956dd86de5cc596ddcd526fefa9d60338806fea-showtrials-2483.evidence.json",
+      "sha256": "aaff9993afc89756b51737e77956dd86de5cc596ddcd526fefa9d60338806fea",
+      "bytes": 1389
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/ab4ca92549af92803c66b753abd3dfd15e80c78220fc7b31ee4604b369457ad8-showtrials-8623.evidence.json",
+      "sha256": "ab4ca92549af92803c66b753abd3dfd15e80c78220fc7b31ee4604b369457ad8",
+      "bytes": 2643
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/afae1f10aa4233c18e2d1ebd48b5f0045a37995f4239387bcbcbe6f28f9034fb-R2-secoes_listas-0062.json",
+      "sha256": "afae1f10aa4233c18e2d1ebd48b5f0045a37995f4239387bcbcbe6f28f9034fb",
+      "bytes": 730
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/afcde57b56b535dbf9f263b256bf30e63bbb56ae906d56e12292e47d26f08049-R2-secoes_listas-0087.json",
+      "sha256": "afcde57b56b535dbf9f263b256bf30e63bbb56ae906d56e12292e47d26f08049",
+      "bytes": 730
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/c5643b769de47b948ee133b2b76e173d37e5ad26af70d00b3a6b2fd9fec4fd57-R2-secoes_listas-0096.json",
+      "sha256": "c5643b769de47b948ee133b2b76e173d37e5ad26af70d00b3a6b2fd9fec4fd57",
+      "bytes": 749
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/cde26a281bb2f15e88d5ea9963ceaf71a0f51c21a50fee9d69f5d831a28146b3-showtrials-8164.evidence.json",
+      "sha256": "cde26a281bb2f15e88d5ea9963ceaf71a0f51c21a50fee9d69f5d831a28146b3",
+      "bytes": 4235
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/d039c826b013f86a179f50592ccac35c0f512dfc83a6cd76c2aba958ca40f56d-trotsky-stalin-and-the-red-army-civil-war-in-the-ussr.evidence.json",
+      "sha256": "d039c826b013f86a179f50592ccac35c0f512dfc83a6cd76c2aba958ca40f56d",
+      "bytes": 1349
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/d2a921f2505d51a6dbd54e63a38a56bdbd4caeabdf86082e720268c4614ed899-R2-secoes_listas-0086.json",
+      "sha256": "d2a921f2505d51a6dbd54e63a38a56bdbd4caeabdf86082e720268c4614ed899",
+      "bytes": 1681
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/d884a41a6afc38f2cbd484f1c23f13cbf25ee741e7aaae77d31543f950c538d4-R4-conferencia_colecoes-0144.json",
+      "sha256": "d884a41a6afc38f2cbd484f1c23f13cbf25ee741e7aaae77d31543f950c538d4",
+      "bytes": 2250
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/db9655d968f79c7257f047550c453304aeb29cae9f78865a2e7a957b65498270-R2-secoes_listas-0022.json",
+      "sha256": "db9655d968f79c7257f047550c453304aeb29cae9f78865a2e7a957b65498270",
+      "bytes": 1681
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/dfc276898687c7e10f4f63e80e07129c225214821133fb4e7282257c71365f03-showtrials-5648.evidence.json",
+      "sha256": "dfc276898687c7e10f4f63e80e07129c225214821133fb4e7282257c71365f03",
+      "bytes": 1899
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/e1370220a48b0db535a7b0b58b99fca747130ce0e4af772bd1198b42b3730054-ep-3-1918-tambov-kostroma-uprisings.evidence.json",
+      "sha256": "e1370220a48b0db535a7b0b58b99fca747130ce0e4af772bd1198b42b3730054",
+      "bytes": 1347
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/e1a011df8d6d5f682d1172cda19e0d4683b1d85325c2a6b81fc8b91349719021-showtrials-4849.evidence.json",
+      "sha256": "e1a011df8d6d5f682d1172cda19e0d4683b1d85325c2a6b81fc8b91349719021",
+      "bytes": 4102
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/e1ec0516c71ca83b76563e549401ffb3c01fb8e0850ada270a886d5c8b4115ed-showtrials-7995.evidence.json",
+      "sha256": "e1ec0516c71ca83b76563e549401ffb3c01fb8e0850ada270a886d5c8b4115ed",
+      "bytes": 2760
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/e6a7a875b2adb5e0d17055266f087d089ef5b6fe157f726880c00abb97229c92-R2-secoes_listas-0122.json",
+      "sha256": "e6a7a875b2adb5e0d17055266f087d089ef5b6fe157f726880c00abb97229c92",
+      "bytes": 1262
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/f3aa20bb37f5fb75c4217151b4b7a076387f0e48182a350098c076d1eb906040-R4-conferencia_colecoes-0146.json",
+      "sha256": "f3aa20bb37f5fb75c4217151b4b7a076387f0e48182a350098c076d1eb906040",
+      "bytes": 1317
+    },
+    {
+      "snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/f61949cc44824dd458ed171fd30942799df9aaab3e81a4e3cb201beab352c0f0-R2-secoes_listas-0030.json",
+      "sha256": "f61949cc44824dd458ed171fd30942799df9aaab3e81a4e3cb201beab352c0f0",
+      "bytes": 1268
+    }
+  ],
+  "history_id": "20261022094412895057-b9679b4ff129"
+}

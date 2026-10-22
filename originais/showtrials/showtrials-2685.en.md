@@ -31,3 +31,10 @@ RGASPI, fond 671, inventory 1, file 114, fols. 63–64.
 [1] The text erroneously gives “35”.
 
 [2i] Here and subsequently, the text erroneously gives “Каталынов” (Katalynov).
+
+
+---
+
+> **Editorial note — Documentos Soviéticos**
+>
+> The Russian electronic publication has the callout [2] and the note label [2i]. This numbering discrepancy is preserved; the source note records the spelling “Каталынов”.

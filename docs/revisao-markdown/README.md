@@ -1,5 +1,9 @@
 # Revisão estrutural dos textos
 
+**Última entrega:** [onda 5 — hierarquia, seções e datas](diagnostico-geral/ONDA5-RESULTADO.md): 16 apontamentos encerrados, 45 títulos recuperados e 11 cadastros parcialmente tratados; saldo geral de 716 apontamentos abertos. As decisões de hierarquia e os alertas de reconstrução de links foram tratados com preservação das ressalvas da fonte. As ondas anteriores permanecem registradas: [1](diagnostico-geral/ONDA1-RESULTADO.md), [2](diagnostico-geral/ONDA2-RESULTADO.md), [3](diagnostico-geral/ONDA3-RESULTADO.md) e [4](diagnostico-geral/ONDA4-RESULTADO.md).
+
+**Diagnóstico geral e plano atuais:** [revisão reconciliada do acervo e execução por agentes](diagnostico-geral/PLANO-DE-EXECUCAO.md). Os números históricos abaixo não substituem a fila atual.
+
 ## Estado atual: lote integral
 
 Os **2.179 documentos russos** foram convertidos e selecionados no manifesto. São **167.421 blocos preservados**, com **737 títulos em 487 documentos**. As 31 versões revisadas anteriormente mantêm seus títulos. Os 1.692 documentos sem títulos internos confirmados também estão em Markdown, com sinais literais e parágrafos preservados; podem continuar sem índice.

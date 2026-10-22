@@ -11,3 +11,10 @@ Confere: ilegível
 Reproduzido de: O eco do tiro no Smolny. História da investigação do assassinato de S. M. Kirov segundo os documentos do CC do PCUS // Moscou: Fundação Internacional Democracia, 1917, p. 216.
 
 \[1\] Assim no texto.
+
+
+---
+
+> **Nota editorial — Documentos Soviéticos**
+>
+> As expressões “руководимым центром” e “к-p. революц.” constam da publicação eletrônica russa. A construção pouco clara e a redundância foram preservadas nas traduções, junto com a nota [1] da fonte; não foram normalizadas por conjectura.

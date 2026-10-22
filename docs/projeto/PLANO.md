@@ -129,3 +129,21 @@ Implementados vínculos locais documento/fonte/páginas, separados por contexto,
 ## Entrega conjunta: alinhamento, incorporação e publicação selecionada
 
 Implementados para validação: edição de fronteiras com sucessão de IDs e caixas manuais; incorporação de transcrições conferidas via fluxo editorial/projetos; preparação/aplicação local de fac-símiles estáticos, sem publicação automática. Histórico e integridade foram exercitados em fixtures, inclusive recuperação de escrita e servidor sem backend. O [roteiro das entregas 5–7](pdf-ocr/ENTREGAS-05-07.md) separa as três validações e suas pendências. Código novo sem commit/push até aprovação. Próximas evoluções: unidades multipágina, versões públicas de citação, preparo com progresso/cancelamento e refinamento visual.
+
+
+## Revisão do acervo — diagnóstico e plano de 21/10/2026
+
+O [plano operacional de revisão](../revisao-markdown/diagnostico-geral/PLANO-DE-EXECUCAO.md) registra a fila reconciliada, fontes, lotes por documento, critérios de conclusão, preparação paralela e integração central. A reconciliação administrativa e as correções da [onda 1](../revisao-markdown/diagnostico-geral/ONDA1-RESULTADO.md) foram aplicadas com histórico. A [onda 2](../revisao-markdown/diagnostico-geral/ONDA2-RESULTADO.md) avança nos recortes de Ezhov, ressalvas de Leningrado, títulos e listas. O OCR do julgamento foi adiado em favor dessas correções com fontes locais disponíveis; não é pré-requisito para continuar a revisão. O saldo e os lotes restantes estão no diagnóstico atualizado, sem representar revisão crítica integral do acervo.
+
+A [onda 3](../revisao-markdown/diagnostico-geral/ONDA3-RESULTADO.md) recuperou 98.938 links em 2.022 edições russas e encerrou 2.002 alertas, com dois históricos recuperáveis. As traduções e fronteiras dos parágrafos foram preservadas. Foram ajustadas a renderização de listas no estudo e a extração de rótulos de links para o índice local. Restam 780 apontamentos; as exceções de links estão discriminadas em relatório próprio. Sem testes de aplicação, commit ou push nesta rodada.
+
+A [onda 4](../revisao-markdown/diagnostico-geral/ONDA4-RESULTADO.md) tratou as 38 exceções de links, recuperou 88 títulos em seis documentos e encerrou quatro conferências de notas de Mozokhin. Foram reparados quatro invólucros Markdown de chamadas legadas e preservadas as ambiguidades da publicação com advertências editoriais. O saldo atual é de 732 apontamentos, com catálogo/manifesto/busca atualizados e histórico recuperável. Permanecem seções, decisões editoriais, conferências gerais, divergências e trabalhos delimitados de imagem/OCR. Sem testes de aplicação, commit ou push nesta rodada.
+
+A [onda 5](../revisao-markdown/diagnostico-geral/ONDA5-RESULTADO.md) recuperou 45 títulos em dez documentos e encerrou 16 apontamentos, incluindo as cinco decisões anteriores de hierarquia. Dois textos permaneceram legitimamente contínuos e dois já tinham títulos recuperados. Onze datas já cadastradas receberam representação ISO, sem alterar o rótulo nem confirmar a fonte externa; esses cadastros continuam em revisão. Saldo atual: 716 apontamentos. Catálogo, manifesto e busca atualizados com histórico, sem testes de aplicação, commit ou push.
+
+
+## Consolidação da revisão — 22/10/2026
+
+As ondas [6](../revisao-markdown/diagnostico-geral/ONDA6-RESULTADO.md), [7](../revisao-markdown/diagnostico-geral/ONDA7-RESULTADO.md) e [8](../revisao-markdown/diagnostico-geral/ONDA8-RESULTADO.md) encerraram mais 172 indicadores de seções: 108 títulos recuperados e 91 alertas antigos reconciliados. As categorias se referem a títulos e apontamentos, respectivamente; não devem ser somadas como documentos. A fila atual tem 544 apontamentos: 475 conferências das coletas, 44 indicadores de seções, 11 cadastros locais, seis divergências de Ezhov, seis ressalvas de Leningrado e dois trabalhos de imagem/OCR. A revisão histórica integral e as trilhas complementares continuam abertas.
+
+Os ajustes de leitura/estudo, ZIP e home estão registrados em [Leitura, estudo e exportação](../interface/LEITURA-ESTUDO-E-EXPORTACAO.md); a importação guiada está em [Importação de corpus](../interface/IMPORTACAO-GUIADA-CORPUS.md). O pedido de commits abrange estas entregas e o acervo incorporado; temporários, ambiente e histórico operacional privado continuam apenas locais.

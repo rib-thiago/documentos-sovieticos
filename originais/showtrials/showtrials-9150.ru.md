@@ -30,4 +30,4 @@ P.S. Правление переслало Вам отчет т. Френкел�
 
 В.О.
 
-Harvard, Houghton Library, Leon Trotsky Exile Papers, MS Russ 13.1, 12881.
+Harvard, Houghton Library, Leon Trotsky Exile Papers, MS Russ 13.1, [12881.](<https://iiif.lib.harvard.edu/manifests/view/drs:51287311$1i>)

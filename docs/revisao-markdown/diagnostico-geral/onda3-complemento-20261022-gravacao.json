@@ -1,0 +1,104 @@
+{
+  "batch_id": "onda3-complemento-20261022",
+  "editions_changed": 7,
+  "issue_outcomes": 7,
+  "documents_metadata_changed": [],
+  "closed_issues": 7,
+  "queue_before_sha256": "93def069c6593362d578a0040b837851170e5125f68537b149da1d75ca44712c",
+  "queue_after_sha256": "4d62a2aaf2420d8ca8933fb852ca1d927737be570c6e8bb0f5e1866cbc0f6bf0",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R2-secoes_listas-0024",
+      "result_file": "temporario/revisao-onda3-complemento/links/R2-secoes_listas-0024/result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda3-complemento-20261022/5548263fd0ddc044862d88dd8eee5b039f8bff2c2f3e008a9aec02e58130025e-result.json",
+      "result_sha256": "5548263fd0ddc044862d88dd8eee5b039f8bff2c2f3e008a9aec02e58130025e",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7995:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0098",
+      "result_file": "temporario/revisao-onda3-complemento/links/R2-secoes_listas-0098/result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda3-complemento-20261022/e4ff96db2d0e55f64dcdbf8aacf36966a2844cf9d0a9d92c35c0d1681eee26aa-result.json",
+      "result_sha256": "e4ff96db2d0e55f64dcdbf8aacf36966a2844cf9d0a9d92c35c0d1681eee26aa",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7248:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0124",
+      "result_file": "temporario/revisao-onda3-complemento/links/R2-secoes_listas-0124/result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda3-complemento-20261022/a005664a6c9a974b531920c2da5a6fc4068b8fabb1e8f92d67aeab3101f33c98-result.json",
+      "result_sha256": "a005664a6c9a974b531920c2da5a6fc4068b8fabb1e8f92d67aeab3101f33c98",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8164:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0133",
+      "result_file": "temporario/revisao-onda3-complemento/links/R2-secoes_listas-0133/result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda3-complemento-20261022/615fa202b956cfe364b62e70b0368d9f0d930673d903f8647d12da33f256d823-result.json",
+      "result_sha256": "615fa202b956cfe364b62e70b0368d9f0d930673d903f8647d12da33f256d823",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8623:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R3-recuperacao_links-0140",
+      "result_file": "temporario/revisao-onda3-complemento/links/R3-recuperacao_links-0140/result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda3-complemento-20261022/d530ef093fad38cc0d11fbef5c79cc476bb10ddf76135727617359af7b130220-result.json",
+      "result_sha256": "d530ef093fad38cc0d11fbef5c79cc476bb10ddf76135727617359af7b130220",
+      "editions_prepared": 2,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7980:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-8285:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R3-recuperacao_links-0141",
+      "result_file": "temporario/revisao-onda3-complemento/links/R3-recuperacao_links-0141/result.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda3-complemento-20261022/b201d45fbb036889043e2a80e2d4f4992a3cba168e2863976a244d85ac560f14-result.json",
+      "result_sha256": "b201d45fbb036889043e2a80e2d4f4992a3cba168e2863976a244d85ac560f14",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-9061:links_nao_reconstruidos",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    }
+  ],
+  "saved": true,
+  "history_id": "20261022034546361480-46b5536f5915",
+  "document_id": null,
+  "revision": "246c473c1ae0e5fab62d53afe4301ceffa40fe0374a2edf88741e5f7f9700566",
+  "entity": {
+    "kind": "batch",
+    "id": "onda3-complemento-20261022"
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}

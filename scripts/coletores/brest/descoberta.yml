@@ -1,0 +1,55 @@
+# Somente diretórios/índices explicitamente identificados; sem crawling geral de domínios.
+indices:
+  - id: periodico-kommunist
+    url: https://www.marxists.org/history/ussr/publications/kommunist/index.htm
+    grupo: 05-comunistas-de-esquerda
+    idioma: en
+    prefixo_url: https://www.marxists.org/history/ussr/publications/kommunist/
+    profundidade: 1
+    extensoes: [.htm, .html]
+  - id: bukharin-1918
+    url: https://www.marxists.org/archive/bukharin/library.htm
+    grupo: 05-comunistas-de-esquerda
+    idioma: en
+    prefixo_url: https://www.marxists.org/archive/bukharin/
+    profundidade: 1
+    texto_ancora: '1918|Political Review|State and Revolution|Transitional Period|Anarchy and Scientific|Fundamental Concepts|Programme of the World Revolution'
+    extensoes: [.htm, .html]
+  - id: livro-bukharin
+    url: https://www.marxists.org/archive/bukharin/works/1918/worldrev/index.html
+    grupo: 05-comunistas-de-esquerda
+    idioma: en
+    prefixo_url: https://www.marxists.org/archive/bukharin/works/1918/worldrev/
+    profundidade: 1
+    extensoes: [.htm, .html]
+  - id: vii-congresso-lenin
+    url: https://www.marxists.org/archive/lenin/works/1918/7thcong/index.htm
+    grupo: 06-congressos
+    idioma: en
+    prefixo_url: https://www.marxists.org/archive/lenin/works/1918/7thcong/
+    profundidade: 1
+    extensoes: [.htm, .html]
+  - id: historia-trotsky
+    url: https://www.marxists.org/archive/trotsky/1918/hrr/index.htm
+    grupo: 04-trotsky
+    idioma: en
+    prefixo_url: https://www.marxists.org/archive/trotsky/1918/hrr/
+    profundidade: 1
+    extensoes: [.htm, .html]
+  - id: diplomacia-sovietica
+    url: https://www.marxists.org/history/ussr/government/foreign-relations/1917-1918/index.htm
+    grupo: 07-tratados
+    idioma: en
+    prefixo_url: https://www.marxists.org/history/ussr/government/foreign-relations/1917-1918/
+    profundidade: 2
+    texto_ancora_primeiro_nivel: 'November|December|January|February|March|April|German Relations|Peace and Autonomy|Sokolnikov|Joffe|Trotsky|Lenin|Stalin|Communist Party|Congress of Soviets|Soviet Government'
+    extensoes: [.htm, .html]
+    limite: 250
+  - id: stenogramas-iskra
+    url: https://iskra-research.org/USSR/Brest/1917-12-22.shtml
+    grupo: 01-negociacoes
+    idioma: ru
+    prefixo_url: https://iskra-research.org/USSR/Brest/
+    profundidade: 2
+    extensoes: [.shtml]
+    limite: 150

@@ -1,0 +1,417 @@
+# Estados: html_confirmado = página com texto verificada por pesquisa web;
+# indice_confirmado = índice com ligações verificadas;
+# registro_bibliografico = só referência / página de catálogo, não presumir texto completo;
+# digitalizacao = fac-símile identificado, requer verificar acesso/download;
+# referencia = verificação complementar. A execução confirma acesso HTTP e integridade.
+fontes:
+  - id: iskra-edicao-ioffe-1920
+    titulo: Мирные переговоры в Брест-Литовске — transcrições russas de 1920
+    url: https://iskra-research.org/USSR/Brest/index.shtml
+    grupo: 01-negociacoes
+    idioma: ru
+    tipo: indice
+    estado: indice_identificado_acesso_variavel
+    nota: Alguns acessos ao índice responderam 403; não contornar bloqueios.
+  - id: iskra-primeira-sessao
+    titulo: Sessão diplomática de 22/9 de dezembro de 1917
+    url: https://iskra-research.org/USSR/Brest/1917-12-22.shtml
+    grupo: 01-negociacoes
+    idioma: ru
+    tipo: html
+    estado: html_confirmado
+  - id: iskra-27-dez
+    titulo: Sessão diplomática de 27/14 de dezembro de 1917
+    url: https://iskra-research.org/USSR/Brest/1917-12-27.shtml
+    grupo: 01-negociacoes
+    idioma: ru
+    tipo: html
+    estado: html_confirmado
+  - id: iskra-jan-11
+    titulo: Sessão diplomática de 11 de janeiro de 1918
+    url: https://iskra-research.org/USSR/Brest/1918-1-11.shtml
+    grupo: 01-negociacoes
+    idioma: ru
+    tipo: html
+    estado: html_confirmado
+  - id: iskra-fase-2
+    titulo: Segundo período das negociações (índice e notas de Ioffe)
+    url: https://iskra-research.org/USSR/Brest/1918-2.shtml
+    grupo: 01-negociacoes
+    idioma: ru
+    tipo: html
+    estado: html_confirmado
+  - id: iskra-jan-31
+    titulo: Sessão diplomática de 31 de janeiro de 1918
+    url: https://iskra-research.org/USSR/Brest/1918-1-31.shtml
+    grupo: 01-negociacoes
+    idioma: ru
+    tipo: html
+    estado: html_confirmado
+  - id: iskra-mar-1
+    titulo: Sessão diplomática de 1º de março de 1918
+    url: https://iskra-research.org/USSR/Brest/1918-3-01.shtml
+    grupo: 01-negociacoes
+    idioma: ru
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-jan-07
+    titulo: On the History of the Question of the Unfortunate Peace
+    url: https://www.marxists.org/archive/lenin/works/1918/jan/07.htm
+    grupo: 03-lenin
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-jan-08
+    titulo: Afterword to the Theses on the Question of Peace
+    url: https://www.marxists.org/archive/lenin/works/1918/jan/08.htm
+    grupo: 03-lenin
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-feb-18-manha
+    titulo: Statements at the Morning Sitting of the CC, February 18
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/18.htm
+    grupo: 02-comite-central
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    integralidade: so_intervencoes_de_lenin_e_notas
+  - id: lenin-feb-23-ata
+    titulo: Speeches at the CC Meeting, February 23
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/23c.htm
+    grupo: 02-comite-central
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    integralidade: so_intervencoes_de_lenin_e_notas
+  - id: lenin-feb-23-paz-ou-guerra
+    titulo: Peace or War?
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/23a.htm
+    grupo: 03-lenin
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-feb-24-governo
+    titulo: Decision on Acceptance of German Peace Terms
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/24e.htm
+    grupo: 07-tratados
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-mar-05
+    titulo: A Serious Lesson and a Serious Responsibility
+    url: https://www.marxists.org/archive/lenin/works/1918/mar/05.htm
+    grupo: 03-lenin
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-mar-14
+    titulo: Fourth Congress of Soviets — material para o discurso
+    url: https://www.marxists.org/archive/lenin/works/1918/mar/14b.htm
+    grupo: 06-congressos
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-congresso-sovietes
+    titulo: Extraordinary Fourth All-Russia Congress of Soviets, March 14–16
+    url: https://www.marxists.org/archive/lenin/works/1918/mar/13.htm
+    grupo: 06-congressos
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-mar-comment
+    titulo: Comment on the Behaviour of the Left Communists
+    url: https://www.marxists.org/archive/lenin/works/1918/mar/x01.htm
+    grupo: 03-lenin
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-apr-29
+    titulo: All-Russia CEC — debate sobre comunistas de esquerda
+    url: https://www.marxists.org/archive/lenin/works/1918/apr/29.htm
+    grupo: 09-desdobramentos
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-mai-09
+    titulo: Left-Wing Childishness and the Petty-Bourgeois Mentality
+    url: https://www.marxists.org/archive/lenin/works/1918/may/09.htm
+    grupo: 09-desdobramentos
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-pt-jan
+    titulo: Para a História da Questão da Paz Infeliz (versão portuguesa)
+    url: https://www.marxists.org/portugues/lenin/1918/01/20.htm
+    grupo: 03-lenin
+    idioma: pt
+    tipo: html
+    estado: html_confirmado
+    variante_de: lenin-jan-07
+  - id: lenin-pt-sovietes
+    titulo: IV Congresso Extraordinário dos Sovietes (versão portuguesa)
+    url: https://www.marxists.org/portugues/lenin/1918/03/16.htm
+    grupo: 06-congressos
+    idioma: pt
+    tipo: html
+    estado: html_confirmado
+    variante_de: lenin-congresso-sovietes
+  - id: congresso-vii-lenin-indice
+    titulo: VII Congresso do Partido — intervenções de Lenin, 18 seções
+    url: https://www.marxists.org/archive/lenin/works/1918/7thcong/index.htm
+    grupo: 06-congressos
+    idioma: en
+    tipo: indice
+    estado: indice_confirmado
+  - id: kommunist-moscou-indice
+    titulo: Kommunist 1918 — quatro números de Moscou (artigos em inglês)
+    url: https://www.marxists.org/history/ussr/publications/kommunist/index.htm
+    grupo: 05-comunistas-de-esquerda
+    idioma: en
+    tipo: indice
+    estado: indice_confirmado
+    nota: Não confundir com os 11 números da edição de Petrogrado de março de 1918.
+  - id: kommunist-teses-abril
+    titulo: Theses on the Current Situation, redação da Kommunist
+    url: https://www.marxists.org/history/ussr/publications/kommunist/april01/theses.htm
+    grupo: 05-comunistas-de-esquerda
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: bukharin-indice
+    titulo: Bukharin — catálogo de obras (inclui os textos de 1918)
+    url: https://www.marxists.org/archive/bukharin/library.htm
+    grupo: 05-comunistas-de-esquerda
+    idioma: en
+    tipo: indice
+    estado: indice_confirmado
+  - id: bukharin-programa-indice
+    titulo: Programme of the World Revolution (1918) — capítulos
+    url: https://www.marxists.org/archive/bukharin/works/1918/worldrev/index.html
+    grupo: 05-comunistas-de-esquerda
+    idioma: en
+    tipo: indice
+    estado: indice_confirmado
+  - id: radek-foreign-policy
+    titulo: Radek — The Foreign Policy of the Soviet Republic
+    url: https://www.marxists.org/archive/radek/1918/04/foreign-policy.htm
+    grupo: 05-comunistas-de-esquerda
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: trotsky-1918-historia
+    titulo: History of the Russian Revolution to Brest-Litovsk (1918)
+    url: https://www.marxists.org/archive/trotsky/1918/hrr/index.htm
+    grupo: 04-trotsky
+    idioma: en
+    tipo: indice
+    estado: indice_confirmado
+  - id: trotsky-documentos-governo
+    titulo: Official Government Documents from the Commissariat for Foreign Affairs
+    url: https://www.marxists.org/archive/trotsky/1918/commissar/gov.htm
+    grupo: 04-trotsky
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    nota: Página com múltiplos documentos, segmentar depois de coletar.
+  - id: central-feb-22-alemao
+    titulo: Ata da reunião do Comitê Central, 22/02/1918 (alemão)
+    url: https://sozialistischeklassiker2punkt0.de/sites.google.com/site/sozialistischeklassiker2punkt0/lenin/1918/sitzung-des-zk-der-sdapr-am-22-februar-1918.html
+    grupo: 02-comite-central
+    idioma: de
+    tipo: html
+    estado: html_confirmado
+    integralidade: traduzida_com_resumos
+  - id: central-feb-23-alemao
+    titulo: Ata da reunião do Comitê Central, 23/02/1918 (alemão)
+    url: https://sozialistischeklassiker2punkt0.de/sites.google.com/site/sozialistischeklassiker2punkt0/lenin/1918/sitzung-des-zk-der-sdapr-am-23-februar-1918.html
+    grupo: 02-comite-central
+    idioma: de
+    tipo: html
+    estado: html_confirmado
+    integralidade: traduzida_com_resumos
+  - id: polit-estrangeira-indice
+    titulo: Soviet Documents on Foreign Policy, 1917–1918
+    url: https://www.marxists.org/history/ussr/government/foreign-relations/1917-1918/index.htm
+    grupo: 07-tratados
+    idioma: en
+    tipo: indice
+    estado: indice_confirmado
+  - id: tratado-marxists
+    titulo: Treaty of Peace — 3 March 1918
+    url: https://www.marxists.org/history/ussr/government/foreign-relations/1917-1918/1918/March/3a.htm
+    grupo: 07-tratados
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: tratado-avalon
+    titulo: Tratado de Brest-Litovsk — Avalon Yale
+    url: https://avalon.law.yale.edu/20th_century/brest.asp
+    grupo: 07-tratados
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: rsl-protocolos-1929
+    titulo: Протоколы ЦК РСДРП — август 1917 — февраль 1918 (edição 1929)
+    url: https://search.rsl.ru/ru/record/01009204413
+    grupo: 08-facsimiles
+    idioma: ru
+    tipo: registro
+    estado: digitalizacao_confirmada_em_catalogo
+    nota: Registro da RSL aponta PDF em acesso público; coletor mantém catálogo separado.
+  - id: gpib-stenogramas-1920
+    titulo: Мирные переговоры в Брест-Литовске — vol. 1, 1920 (fac-símile)
+    url: https://elib.shpl.ru/ru/nodes/27547
+    grupo: 08-facsimiles
+    idioma: ru
+    tipo: registro
+    estado: digitalizacao_confirmada_em_catalogo
+  - id: rsl-stenogramas-1920
+    titulo: Мирные переговоры в Брест-Литовске — edição NKID, 1920
+    url: https://search.rsl.ru/ru/record/01009041589
+    grupo: 08-facsimiles
+    idioma: ru
+    tipo: registro
+    estado: digitalizacao_confirmada_em_catalogo
+  - id: ebid-cc-24fev
+    titulo: Comunicado do Comitê Central sobre a paz, 24/02/1918
+    url: https://docs.historyrussia.org/ru/nodes/533847
+    grupo: 08-facsimiles
+    idioma: ru
+    tipo: registro
+    estado: ficha_e_imagem_sem_html_integral_confirmado
+  - id: ebid-cc-11jan
+    titulo: Registro da intervenção de Lenin na reunião de 11/24 janeiro 1918
+    url: https://docs.historyrussia.org/ru/nodes/533841
+    grupo: 08-facsimiles
+    idioma: ru
+    tipo: registro
+    estado: ficha_e_imagem_sem_html_integral_confirmado
+  - id: ebid-tratado
+    titulo: Tratado de Brest — excerto em edição DVP URSS
+    url: https://docs.historyrussia.org/ru/nodes/111841
+    grupo: 08-facsimiles
+    idioma: ru
+    tipo: registro
+    estado: excerto_e_imagem
+  - id: istmat-vii-congresso
+    titulo: VII Congresso Extraordinário — edição russa do relatório estenográfico
+    url: https://istmat.org/node/51513
+    grupo: 08-facsimiles
+    idioma: ru
+    tipo: registro
+    estado: acesso_a_verificar
+  - id: lenin-1920-brest
+    titulo: Left-Wing Communism, an Infantile Disorder — retorno a Brest (1920)
+    url: https://www.marxists.org/archive/lenin/works/1920/lwc/ch04.htm
+    grupo: 10-interpretacoes
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    nota: Retrospectiva de 1920; não é protocolo de 1918.
+  - id: soviet-foreign-policy-historia
+    titulo: Soviet Foreign Policy 1917–1945 — análise retrospectiva
+    url: https://www.marxists.org/history/ussr/government/foreign-relations/sovietforeignpolicy-vol1-1917-45.pdf
+    grupo: 10-interpretacoes
+    idioma: en
+    tipo: pdf
+    estado: pdf_identificado
+  - id: cc-jan-11-lenin
+    titulo: Reunião do CC de 11/24 de janeiro — intervenções de Lenin
+    url: https://www.marxists.org/archive/lenin/works/1918/jan/11.htm
+    grupo: 02-comite-central
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    integralidade: so_intervencoes_de_lenin_e_notas
+  - id: cc-jan-19-lenin
+    titulo: Reunião do CC de 19 janeiro / 1 fevereiro — intervenções de Lenin
+    url: https://www.marxists.org/archive/lenin/works/1918/jan/19.htm
+    grupo: 02-comite-central
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    integralidade: so_intervencoes_de_lenin_e_notas
+  - id: cc-feb-18-noite
+    titulo: Reunião noturna do CC de 18 de fevereiro — Lenin
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/18a.htm
+    grupo: 02-comite-central
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    integralidade: so_intervencoes_de_lenin_e_notas
+  - id: cc-feb-24-lenin
+    titulo: Reunião do CC de 24 de fevereiro — Lenin
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/24b.htm
+    grupo: 02-comite-central
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    integralidade: so_intervencoes_de_lenin_e_notas
+  - id: lenin-phrase
+    titulo: The Revolutionary Phrase (Pravda, 21 de fevereiro de 1918)
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/21a.htm
+    grupo: 03-lenin
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-socialist-fatherland
+    titulo: The Socialist Fatherland is in Danger! — decreto de 21 de fevereiro
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/21b.htm
+    grupo: 07-tratados
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-painful-lesson
+    titulo: A Painful but Necessary Lesson — 25 fevereiro 1918
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/25.htm
+    grupo: 03-lenin
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: lenin-strange-monstrous
+    titulo: Strange and Monstrous — crítica à resolução do Birô de Moscou
+    url: https://www.marxists.org/archive/lenin/works/1918/feb/28.htm
+    grupo: 03-lenin
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: trotsky-peace-negotiations
+    titulo: Peace Negotiations and the Revolution — fevereiro de 1918
+    url: https://www.marxists.org/archive/trotsky/1918/02/peace.htm
+    grupo: 04-trotsky
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    nota: Texto de 1918 em edição inglesa posterior; preservar os dados de edição.
+  - id: trotsky-at-brest
+    titulo: At Brest-Litovsk — discurso de Trotsky, maio de 1918
+    url: https://www.marxists.org/archive/trotsky/1918/05/brestlitovsk.htm
+    grupo: 04-trotsky
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+  - id: bundesarchiv-brest
+    titulo: Bundesarchiv — exposição documental da paz de Brest-Litovsk
+    url: https://weimar.bundesarchiv.de/WEIMAR/DE/Content/Virtuelle-Ausstellungen/Die-besiegte-Nation/2018-03-02_frieden-brest-litowsk.html
+    grupo: 08-facsimiles
+    idioma: de
+    tipo: registro
+    estado: referencias_arquivisticas_e_reproducoes
+    nota: Documentos alemães de dezembro 1917 a agosto 1918, inclusive R 1501/106114 e R 43/5g.
+  - id: bukharin-anarquia-traducao-alternativa
+    titulo: Bukharin — Anarchy and Scientific Communism, tradução alternativa em inglês
+    url: https://www.marxists.org/archive/bukharin/works/1918/ps.htm
+    grupo: 05-comunistas-de-esquerda
+    idioma: en
+    tipo: html
+    estado: html_confirmado
+    nota: Tradução alternativa da mesma obra; relacionar com anarchy.htm como versões do mesmo texto, não dois textos independentes.
+  - id: pravda-acervo-1918
+    titulo: Acervo digital da Pravda de 1918 — edições Petrogrado e Moscou
+    url: https://marxism-leninism.info/paper/pravda_1918-26
+    grupo: 09-desdobramentos
+    idioma: ru
+    tipo: registro
+    estado: indice_edicoes_identificado_sem_transcricoes_conferidas
+    nota: Índice com fascículos digitalizados e visualização dinâmica; não considerar transcrições; requer verificação de edições relacionadas à paz.

@@ -90,7 +90,7 @@ d) с антидиалектической схоластикой – покон
 
 В самом деле, далеко не безразлично, с какой стороны рассматривать большой всемирно-исторический процесс: с точки зрения маленькой узкой группы или с точки зрения миллионных масс; с точки зрения рафинированной “личности” из этой группы или с точки зрения личности из этих миллионных масс; с точки зрения “свободы” первой или с точки зрения свободы второй и т.д.
 
-Посмотри на все дело с точки зрения масс и личности, растущей здесь, и свободы, которая эту личность и эти массы интересует. \[1\] Тогда мы обнаружим без труда следующие основные процессы:
+Посмотри на все дело с точки зрения масс и личности, растущей здесь, и свободы, которая эту личность и эти массы интересует. [\[1\]](<http://showtrials.ru/pismo-n-i-buharina-i-v-stalinu-s-prilozheniem-zapiski-o-stalinskom-rukovodstve/#_edn1>) Тогда мы обнаружим без труда следующие основные процессы:
 
 1\) громадный массовый культурный подъем;
 
@@ -266,7 +266,7 @@ IV) Руководство всем этим предполагает грома
 
 Слава пламенным сердцам\!
 
-Coba, linguam latinam comprehendis. Cur non possibile est mihi possibilitatem dare, meam feminam filiumque videre? Rogo te: causa non est periculosa. Non sanus sum. Vita mea infelix et miserabilis est, vires sunt minimi, omne futurum – nubile et incertum. Rogo te. Tu es Ανάγκη mea. \[2\]
+Coba, linguam latinam comprehendis. Cur non possibile est mihi possibilitatem dare, meam feminam filiumque videre? Rogo te: causa non est periculosa. Non sanus sum. Vita mea infelix et miserabilis est, vires sunt minimi, omne futurum – nubile et incertum. Rogo te. Tu es Ανάγκη mea. [\[2\]](<http://showtrials.ru/pismo-n-i-buharina-i-v-stalinu-s-prilozheniem-zapiski-o-stalinskom-rukovodstve/#_edn2>)
 
 На обороте .
 
@@ -346,6 +346,6 @@ Coba, linguam latinam comprehendis. Cur non possibile est mihi possibilitatem da
 
 РГАСПИ Ф. 17, Оп. 171, Д. 457, Л. 4-11. Автограф.
 
-\[1\] В тексте ошибочно – “… свободы, которую эту личность и эти массы интересуют”.
+[\[1\]](<http://showtrials.ru/pismo-n-i-buharina-i-v-stalinu-s-prilozheniem-zapiski-o-stalinskom-rukovodstve/#_ednref1>) В тексте ошибочно – “… свободы, которую эту личность и эти массы интересуют”.
 
-\[2\] “Коба, ты понимаешь по-латыни. Почему нельзя разрешить мне свидание с женой и ребенком? Умоляю тебя: вреда делу это не причинит. Я нездоров. Жизнь моя несчастна и жалка, силы мои на исходе, будущее – туманно и неопределенно. Умоляю тебя. Ты – мой рок.” Греческое слово Ανάγκη буквально означает “Ананке” – в древнегреческой мифологии – божество необходимости, неизбежности, персонификация рока, судьбы и предопределённости свыше.
+[\[2\]](<http://showtrials.ru/pismo-n-i-buharina-i-v-stalinu-s-prilozheniem-zapiski-o-stalinskom-rukovodstve/#_ednref2>) “Коба, ты понимаешь по-латыни. Почему нельзя разрешить мне свидание с женой и ребенком? Умоляю тебя: вреда делу это не причинит. Я нездоров. Жизнь моя несчастна и жалка, силы мои на исходе, будущее – туманно и неопределенно. Умоляю тебя. Ты – мой рок.” Греческое слово Ανάγκη буквально означает “Ананке” – в древнегреческой мифологии – божество необходимости, неизбежности, персонификация рока, судьбы и предопределённости свыше.

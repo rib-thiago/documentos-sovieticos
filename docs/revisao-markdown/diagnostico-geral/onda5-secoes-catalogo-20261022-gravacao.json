@@ -1,0 +1,331 @@
+{
+  "batch_id": "onda5-secoes-catalogo-20261022",
+  "editions_changed": 10,
+  "issue_outcomes": 27,
+  "documents_metadata_changed": [
+    "ep-1-arkhangelsk",
+    "ep-2-the-yaroslavl-uprising",
+    "ep-3-1918-tambov-kostroma-uprisings",
+    "ep-4-komuch-volga-siberia-czechoslovak-mutiny",
+    "ep-5-did-the-bolsheviks-lose-soviet-elections-were-the-bolsheviks-popular-debunking-v-brovkin",
+    "ep-6-the-workers-assemblies-movement-1918-21",
+    "ep-7-were-the-soviets-destroyed-who-wanted-to-destroy-them",
+    "ep-8-arguments-used-by-mensheviks-1917-1920s",
+    "ep-9-who-were-the-supporters-of-menshevism",
+    "soviet-polish-relations-to-1920",
+    "trotsky-stalin-and-the-red-army-civil-war-in-the-ussr"
+  ],
+  "closed_issues": 16,
+  "queue_before_sha256": "860f8ea24d6cbc817812adfab1996f9eb812183768759f0dcc42eccd772420b7",
+  "queue_after_sha256": "58887a3f1c532c8953401e168e1756d4ea15e3139f963d68bd70d0676655d391",
+  "pdf_anchor_conflicts": [],
+  "batches": [
+    {
+      "batch_id": "R2-secoes_listas-0022",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0022.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/db9655d968f79c7257f047550c453304aeb29cae9f78865a2e7a957b65498270-R2-secoes_listas-0022.json",
+      "result_sha256": "db9655d968f79c7257f047550c453304aeb29cae9f78865a2e7a957b65498270",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7995:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-7995:decisao_editorial_pendente",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0030",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0030.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/f61949cc44824dd458ed171fd30942799df9aaab3e81a4e3cb201beab352c0f0-R2-secoes_listas-0030.json",
+      "result_sha256": "f61949cc44824dd458ed171fd30942799df9aaab3e81a4e3cb201beab352c0f0",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-10713:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0034",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0034.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/3328480db4187c4790c128049a9f801cc778398b2746febe71daa1e6db9192ff-R2-secoes_listas-0034.json",
+      "result_sha256": "3328480db4187c4790c128049a9f801cc778398b2746febe71daa1e6db9192ff",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2483:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0036",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0036.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/1672a9532a1e135ba5c427cf6ce8d2c9f4d0b8300c21c72639247e4c16f7e8dc-R2-secoes_listas-0036.json",
+      "result_sha256": "1672a9532a1e135ba5c427cf6ce8d2c9f4d0b8300c21c72639247e4c16f7e8dc",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-2537:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0042",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0042.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/37f9888ee3cc3e163daeff73619ed6e1111558d585536ee3edda48b85ec973d6-R2-secoes_listas-0042.json",
+      "result_sha256": "37f9888ee3cc3e163daeff73619ed6e1111558d585536ee3edda48b85ec973d6",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4796:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0044",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0044.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/4d9fd7f2f6cbbb0495aa6ddf7fc68d09dca2b9f75876a55966b057f808084718-R2-secoes_listas-0044.json",
+      "result_sha256": "4d9fd7f2f6cbbb0495aa6ddf7fc68d09dca2b9f75876a55966b057f808084718",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-4849:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0052",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0052.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/9246c7ac19a7d0d2d023f798dabd00340ae80330ea8fb17316f3e86dc70acd95-R2-secoes_listas-0052.json",
+      "result_sha256": "9246c7ac19a7d0d2d023f798dabd00340ae80330ea8fb17316f3e86dc70acd95",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5648:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0062",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0062.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/afae1f10aa4233c18e2d1ebd48b5f0045a37995f4239387bcbcbe6f28f9034fb-R2-secoes_listas-0062.json",
+      "result_sha256": "afae1f10aa4233c18e2d1ebd48b5f0045a37995f4239387bcbcbe6f28f9034fb",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-5793:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0086",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0086.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/d2a921f2505d51a6dbd54e63a38a56bdbd4caeabdf86082e720268c4614ed899-R2-secoes_listas-0086.json",
+      "result_sha256": "d2a921f2505d51a6dbd54e63a38a56bdbd4caeabdf86082e720268c4614ed899",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-6762:decisao_editorial_pendente",
+          "outcome": "corrigido_com_evidencia"
+        },
+        {
+          "key": "showtrials-6762:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0087",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0087.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/afcde57b56b535dbf9f263b256bf30e63bbb56ae906d56e12292e47d26f08049-R2-secoes_listas-0087.json",
+      "result_sha256": "afcde57b56b535dbf9f263b256bf30e63bbb56ae906d56e12292e47d26f08049",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-6958:texto_longo_sem_secoes_suficientes",
+          "outcome": "alerta_obsoleto_ou_falso_positivo"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0096",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0096.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/c5643b769de47b948ee133b2b76e173d37e5ad26af70d00b3a6b2fd9fec4fd57-R2-secoes_listas-0096.json",
+      "result_sha256": "c5643b769de47b948ee133b2b76e173d37e5ad26af70d00b3a6b2fd9fec4fd57",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7248:decisao_editorial_pendente",
+          "outcome": "fonte_continua_legitima"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0097",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0097.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/1ba7a0c0d257dbc70da27d0af889f2cdf7f4b0d55dc6d65a1a86d0ce8ddfa82a-R2-secoes_listas-0097.json",
+      "result_sha256": "1ba7a0c0d257dbc70da27d0af889f2cdf7f4b0d55dc6d65a1a86d0ce8ddfa82a",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-7250:decisao_editorial_pendente",
+          "outcome": "fonte_continua_legitima"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0122",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0122.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/e6a7a875b2adb5e0d17055266f087d089ef5b6fe157f726880c00abb97229c92-R2-secoes_listas-0122.json",
+      "result_sha256": "e6a7a875b2adb5e0d17055266f087d089ef5b6fe157f726880c00abb97229c92",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8164:texto_longo_sem_secoes_suficientes",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R2-secoes_listas-0131",
+      "result_file": "temporario/revisao-onda5/merged/R2-secoes_listas-0131.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/861ab8087a38281c4974b8b4b1e2275ac1b3994b00b1585cff4b59c9eb0f3392-R2-secoes_listas-0131.json",
+      "result_sha256": "861ab8087a38281c4974b8b4b1e2275ac1b3994b00b1585cff4b59c9eb0f3392",
+      "editions_prepared": 1,
+      "issue_outcomes": [
+        {
+          "key": "showtrials-8623:decisao_editorial_pendente",
+          "outcome": "corrigido_com_evidencia"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0140",
+      "result_file": "temporario/revisao-onda5/merged/R4-conferencia_colecoes-0140.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/607de3152cc880037b6e805332de5aede1df1644f0314911da7708d5e02a22a3-R4-conferencia_colecoes-0140.json",
+      "result_sha256": "607de3152cc880037b6e805332de5aede1df1644f0314911da7708d5e02a22a3",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "ep-1-arkhangelsk:cadastro_local",
+          "outcome": "parcial"
+        },
+        {
+          "key": "ep-2-the-yaroslavl-uprising:cadastro_local",
+          "outcome": "parcial"
+        },
+        {
+          "key": "ep-3-1918-tambov-kostroma-uprisings:cadastro_local",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0141",
+      "result_file": "temporario/revisao-onda5/merged/R4-conferencia_colecoes-0141.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/5eb57605b86d6c7effd56ec95c14402ebb44990631e0e64e7081ede5724a1346-R4-conferencia_colecoes-0141.json",
+      "result_sha256": "5eb57605b86d6c7effd56ec95c14402ebb44990631e0e64e7081ede5724a1346",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "ep-4-komuch-volga-siberia-czechoslovak-mutiny:cadastro_local",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0142",
+      "result_file": "temporario/revisao-onda5/merged/R4-conferencia_colecoes-0142.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/634e05aebb6eb07dd8ca902df9159b97a445cd184d902230ee26a6ff9e6bc318-R4-conferencia_colecoes-0142.json",
+      "result_sha256": "634e05aebb6eb07dd8ca902df9159b97a445cd184d902230ee26a6ff9e6bc318",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "ep-5-did-the-bolsheviks-lose-soviet-elections-were-the-bolsheviks-popular-debunking-v-brovkin:cadastro_local",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0143",
+      "result_file": "temporario/revisao-onda5/merged/R4-conferencia_colecoes-0143.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/03745a0f1b1f6a6ad045b9b6a847da3cf088cb6c68288c7bd59ab70749ecada0-R4-conferencia_colecoes-0143.json",
+      "result_sha256": "03745a0f1b1f6a6ad045b9b6a847da3cf088cb6c68288c7bd59ab70749ecada0",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "ep-6-the-workers-assemblies-movement-1918-21:cadastro_local",
+          "outcome": "parcial"
+        },
+        {
+          "key": "ep-7-were-the-soviets-destroyed-who-wanted-to-destroy-them:cadastro_local",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0144",
+      "result_file": "temporario/revisao-onda5/merged/R4-conferencia_colecoes-0144.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/d884a41a6afc38f2cbd484f1c23f13cbf25ee741e7aaae77d31543f950c538d4-R4-conferencia_colecoes-0144.json",
+      "result_sha256": "d884a41a6afc38f2cbd484f1c23f13cbf25ee741e7aaae77d31543f950c538d4",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "ep-8-arguments-used-by-mensheviks-1917-1920s:cadastro_local",
+          "outcome": "parcial"
+        },
+        {
+          "key": "ep-9-who-were-the-supporters-of-menshevism:cadastro_local",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0145",
+      "result_file": "temporario/revisao-onda5/merged/R4-conferencia_colecoes-0145.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/1e7868b47e04d0aeaa9215df9d8fe09d39ac348bd6d6b94a78887365e37f578a-R4-conferencia_colecoes-0145.json",
+      "result_sha256": "1e7868b47e04d0aeaa9215df9d8fe09d39ac348bd6d6b94a78887365e37f578a",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "soviet-polish-relations-to-1920:cadastro_local",
+          "outcome": "parcial"
+        }
+      ]
+    },
+    {
+      "batch_id": "R4-conferencia_colecoes-0146",
+      "result_file": "temporario/revisao-onda5/merged/R4-conferencia_colecoes-0146.json",
+      "result_snapshot": "temporario/revisao-onda1/frozen/onda5-secoes-catalogo-20261022/f3aa20bb37f5fb75c4217151b4b7a076387f0e48182a350098c076d1eb906040-R4-conferencia_colecoes-0146.json",
+      "result_sha256": "f3aa20bb37f5fb75c4217151b4b7a076387f0e48182a350098c076d1eb906040",
+      "editions_prepared": 0,
+      "issue_outcomes": [
+        {
+          "key": "trotsky-stalin-and-the-red-army-civil-war-in-the-ussr:cadastro_local",
+          "outcome": "parcial"
+        }
+      ]
+    }
+  ],
+  "saved": true,
+  "history_id": "20261022094412895057-b9679b4ff129",
+  "document_id": null,
+  "revision": "82d4646d017a3c9e09e6e51a2dd22e2fa39bfa5a10dee38c6320d9a184ce33b7",
+  "entity": {
+    "kind": "batch",
+    "id": "onda5-secoes-catalogo-20261022"
+  },
+  "document_exists": false,
+  "message": "Alterações salvas. Catálogo, manifesto e busca estão atualizados."
+}
