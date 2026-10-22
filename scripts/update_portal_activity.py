@@ -43,9 +43,18 @@ def main():
         group["source_examples"] = [{"id": document_id, "languages": languages}
                                     for document_id, languages in docs.items() if "ru" in languages][:4]
         events.append(group)
+    # Coletas incorporadas ainda sem commit também têm data explícita de proveniência.
+    editions = json.loads((root / "data/catalog/editions.json").read_text(encoding="utf-8"))
+    for edition in editions:
+        provenance = edition.get("extra", {}).get("collector_provenance", {})
+        stamp = provenance.get("collected_at")
+        if stamp and edition["document_id"] in documents:
+            events.append({"recorded_at": stamp, "basis": "Data de coleta registrada na proveniência",
+                           "examples": [{"id": edition["document_id"], "languages": [edition["language"]]}], "source_examples": [{"id": edition["document_id"], "languages": [edition["language"]]}]})
+    events.sort(key=lambda event: event["recorded_at"], reverse=True)
     destination = root / "assets/acervo-activity.json"
     destination.write_text(json.dumps({
-        "basis": "Adição de arquivos no histórico Git local; não equivale à data de publicação online.",
+        "basis": "Histórico Git e datas de coleta na proveniência; não equivalem à publicação online.",
         "events": events,
     }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"{len(events)} registros preparados em {destination.relative_to(root)}. Nada foi publicado.")

@@ -1,6 +1,804 @@
 {
-  "basis": "Adição de arquivos no histórico Git local; não equivale à data de publicação online.",
+  "basis": "Histórico Git e datas de coleta na proveniência; não equivalem à publicação online.",
   "events": [
+    {
+      "commit": "3e96a12",
+      "recorded_at": "2026-10-22T07:47:43-03:00",
+      "summary": "Incorpora coleções e consolida oito ondas de revisão documental",
+      "document_count": 486,
+      "version_count": 500,
+      "examples": [
+        {
+          "id": "brest-cc-feb-18-noite",
+          "languages": [
+            "en"
+          ]
+        },
+        {
+          "id": "brest-cc-feb-24-lenin",
+          "languages": [
+            "en"
+          ]
+        },
+        {
+          "id": "brest-cc-jan-11-lenin",
+          "languages": [
+            "en"
+          ]
+        },
+        {
+          "id": "brest-cc-jan-19-lenin",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "brest-iskra-27-dez",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "brest-iskra-fase-2-apresentacao",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "brest-iskra-fase-2-delegacoes",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "brest-iskra-fase-2-ioffe",
+          "languages": [
+            "ru"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T20:05:07.827976+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-dde2d2f60490c92b-ordzhonikidze-stalin-1920-12-08",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-dde2d2f60490c92b-ordzhonikidze-stalin-1920-12-08",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T20:04:44.059480+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-7eaa34b7b06d2715-stalin-budyonny-voroshilov-1920-07-29",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-7eaa34b7b06d2715-stalin-budyonny-voroshilov-1920-07-29",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T20:03:57.063494+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-f36bed6f0cef1d55-pyatakov-stalin-1919-10-13",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-f36bed6f0cef1d55-pyatakov-stalin-1919-10-13",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T20:01:41.353841+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-62501981e8905118-dzerzhinsky-reingold-1924-06-12",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-62501981e8905118-dzerzhinsky-reingold-1924-06-12",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:15:03.313935+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-542fa39d9fda7da9-church-24-25",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-542fa39d9fda7da9-church-24-25",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:14:27.807850+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-f48adeaaa98ae3b5-church-24-3",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-f48adeaaa98ae3b5-church-24-3",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:13:41.691143+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-b5a0f3332e560b90-church-23-43",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-b5a0f3332e560b90-church-23-43",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:13:39.054958+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-cdb790fb4c4b3902-church-23-42",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-cdb790fb4c4b3902-church-23-42",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:13:34.021975+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-8d1a585caa8bb31c-church-23-40",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-8d1a585caa8bb31c-church-23-40",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:13:26.317031+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-d3a501ae3804db98-church-23-37",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-d3a501ae3804db98-church-23-37",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:13:20.951734+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-1d7db46f4dc9f588-church-23-35",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-1d7db46f4dc9f588-church-23-35",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:12:51.412724+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-08117b09c6cfa156-church-23-26",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-08117b09c6cfa156-church-23-26",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:12:46.946642+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-48df580719b47240-church-23-24",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-48df580719b47240-church-23-24",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T17:11:53.511238+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-51788061600c4d83-church-23-6",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-51788061600c4d83-church-23-6",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T16:19:22.803388+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-3d0ff93fc3e6f7ae-nakhichevan-1937-09-26",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-3d0ff93fc3e6f7ae-nakhichevan-1937-09-26",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T15:43:59.203462+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-887819644036e053-kabakov-1930-03-22",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-887819644036e053-kabakov-1930-03-22",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T15:40:27.624335+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-4a97a2173e8f980f-correspondents-1933-02-19",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-4a97a2173e8f980f-correspondents-1933-02-19",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T15:37:57.304709+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-9f0c1698988a39f0-boytsov-1938-12-12",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-9f0c1698988a39f0-boytsov-1938-12-12",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T15:36:49.984460+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-ec79e8c3b631d152-state-farms-1931-11-28",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-ec79e8c3b631d152-state-farms-1931-11-28",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T02:08:41.387159+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-6b2926270ce20d42-ostrovityanov-1952-02-07",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-6b2926270ce20d42-ostrovityanov-1952-02-07",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T02:07:56.059424+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-11af007562ceaa14-repair-plants-1938-01-29",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-11af007562ceaa14-repair-plants-1938-01-29",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T02:07:22.154495+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-72884aff564b53a6-bakhmut-1920-11-25",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-72884aff564b53a6-bakhmut-1920-11-25",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T02:07:17.632980+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-1fbcb9e9dc8f0d85-ezhov-1937-02-02",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-1fbcb9e9dc8f0d85-ezhov-1937-02-02",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T02:05:59.965294+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-577e70a9559cdd6f-georgia-1924-09-02",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-577e70a9559cdd6f-georgia-1924-09-02",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:53:33.398984+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-c5ed6f188cc197d3-preliminary-peace-1920-10-12",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-c5ed6f188cc197d3-preliminary-peace-1920-10-12",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:53:33.398984+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-c5ed6f188cc197d3-armistice-annex-2-1920-10-12",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-c5ed6f188cc197d3-armistice-annex-2-1920-10-12",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:53:33.398984+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-c5ed6f188cc197d3-ratification-1920-10-23",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-c5ed6f188cc197d3-ratification-1920-10-23",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:53:30.876095+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-4898e43af1b5adac-ezhov-cover-1938-04-15",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-4898e43af1b5adac-ezhov-cover-1938-04-15",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:53:30.876095+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-4898e43af1b5adac-uspensky-telegram-926",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-4898e43af1b5adac-uspensky-telegram-926",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:53:24.429312+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-c07a09902a9439f2-politburo-1925-10-26",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-c07a09902a9439f2-politburo-1925-10-26",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:52:20.832806+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-8e787b136fb8a966-circular-30-1923",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-8e787b136fb8a966-circular-30-1923",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:52:16.421239+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-cf7c0161d6bb507f-24-7",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-cf7c0161d6bb507f-24-7",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:52:16.421239+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-cf7c0161d6bb507f-24-1",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-cf7c0161d6bb507f-24-1",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-10-21T01:52:13.697562+00:00",
+      "basis": "Data de coleta registrada na proveniência",
+      "examples": [
+        {
+          "id": "svitlana-aa02ccdf0bad5a13-tiflis-1903",
+          "languages": [
+            "en"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "svitlana-aa02ccdf0bad5a13-tiflis-1903",
+          "languages": [
+            "en"
+          ]
+        }
+      ]
+    },
+    {
+      "commit": "d1953f3",
+      "recorded_at": "2026-10-20T18:15:34-03:00",
+      "summary": "Incorpora coleção Tukhachevsky e fontes militares de 1937",
+      "document_count": 11,
+      "version_count": 11,
+      "examples": [
+        {
+          "id": "tukhachevsky-nko37-01-pm",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "tukhachevsky-nko37-02-am",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "tukhachevsky-nko37-02-pm",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "tukhachevsky-nko37-03-am",
+          "languages": [
+            "ru"
+          ]
+        }
+      ],
+      "source_examples": [
+        {
+          "id": "tukhachevsky-nko37-01-pm",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "tukhachevsky-nko37-02-am",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "tukhachevsky-nko37-02-pm",
+          "languages": [
+            "ru"
+          ]
+        },
+        {
+          "id": "tukhachevsky-nko37-03-am",
+          "languages": [
+            "ru"
+          ]
+        }
+      ]
+    },
     {
       "commit": "97cb7f8",
       "recorded_at": "2026-10-19T18:06:55-03:00",

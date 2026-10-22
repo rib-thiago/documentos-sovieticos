@@ -28,3 +28,24 @@
 .portal-primary{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--accent);border-radius:9px;padding:.65rem 1rem;background:var(--accent);color:white;text-decoration:none;font:.76rem/1.5 var(--font-ui)}.portal-primary:hover{background:var(--accent-strong)}
 @media(max-width:1100px){.portal-hero{gap:30px}.portal-feature{gap:16px;padding:24px 20px}.portal-feature h2{font-size:1.5rem}.update-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.portal-lower{gap:30px}.acervo-strip{flex-wrap:wrap}}
 @media(max-width:760px){.portal-hero{grid-template-columns:1fr;gap:18px;padding-top:4px}.portal-intro h1{font-size:3rem}.portal-lead{font-size:.85rem}.portal-feature{grid-template-columns:100px 1fr;min-height:0;padding:22px;border-radius:18px 18px 40px 18px}.feature-cover{height:150px}.portal-feature h2{font-size:1.6rem}.acervo-strip{gap:14px;padding:20px 0;margin-bottom:28px}.acervo-strip>span{width:calc(50% - 10px);font-size:.65rem}.acervo-strip strong{font-size:1.25rem}.portal-opening .archive-section-heading{align-items:flex-start}.portal-opening .archive-section-heading h2{font-size:1.55rem}.portal-text-link{font-size:.65rem;max-width:100px;text-align:right}.update-grid{gap:12px}.update-card{padding:17px;border-radius:13px}.update-card h3{font-size:1.2rem}.update-top{flex-wrap:wrap;margin-bottom:15px}.portal-lower{grid-template-columns:1fr;gap:28px;margin:35px 0}.research-invitation{padding:27px}.research-invitation h2{max-width:none}.home-search{padding:.45rem .5rem;gap:.4rem}.home-search input[type=search]{padding:.5rem;font-size:.75rem}.home-search .search-submit{font-size:.72rem;padding:.5rem .75rem}}
+
+/* Percursos navegáveis, sem avanço automático durante a leitura. */
+.portal-carousel{min-width:0}
+.portal-carousel-stage .portal-feature{min-height:315px}
+.carousel-controls{display:flex;align-items:center;justify-content:flex-end;gap:.8rem;margin-top:.8rem;color:var(--muted);font:.75rem var(--font-ui)}
+.carousel-controls button{display:inline-flex;align-items:center;justify-content:center;min-height:36px;min-width:38px;padding:.4rem .75rem;border:1px solid var(--rule);border-radius:var(--control-radius);background:var(--paper);color:var(--accent);font:500 .75rem var(--font-ui);cursor:pointer;transition:background .15s,border-color .15s}
+.carousel-controls button:hover{background:var(--accent-soft);border-color:var(--accent)}
+.carousel-controls button:disabled{opacity:.4;cursor:default}
+.carousel-counter{font-variant-numeric:tabular-nums;min-width:3.5rem;text-align:center}
+.activity-controls{margin-bottom:1rem}
+.feature-cover>.archive-icon{width:4rem;height:4rem;color:var(--accent)}
+@media(max-width:760px){.portal-carousel-stage .portal-feature{min-height:220px}.carousel-controls{gap:.6rem}}
+
+/* Mantém a mesma geometria em todas as páginas de incorporações. */
+.update-grid{grid-auto-rows:20rem}
+.update-grid .update-card{height:100%;box-sizing:border-box;min-width:0;overflow:hidden}
+.update-card .update-top{flex-shrink:0}
+.update-card h3{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;overflow-wrap:anywhere;flex-shrink:0}
+.update-card p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere;flex-shrink:0}
+.update-card .update-link{flex-shrink:0}
+@media(max-width:760px){.update-grid{grid-auto-rows:18rem}}

@@ -77,9 +77,18 @@ function parseStudyMarkdown(md) {
 
     const lines = chunk.split("\n").map(l => l.trim()).filter(Boolean);
 
-    if (lines.length && lines.every(l => l.startsWith("- "))) {
-      push({ type: "list", text: lines.join("\n") });
+    if (lines.length > 1 && lines[0].includes("|") &&
+        markdown().parse(chunk, {}).some(token => token.type === "table_open")) {
+      push({ type: "table", text: chunk });
       continue;
+    }
+
+    if (/^(?:[-+*]|\d+[.)])\s/.test(chunk)) {
+      const first = markdown().parse(chunk, {})[0];
+      if (first && ["ordered_list_open", "bullet_list_open"].includes(first.type)) {
+        push({ type: "list", text: chunk });
+        continue;
+      }
     }
     if (lines.length && lines.every(l => l.startsWith(">"))) {
       const quoted = lines.map(l => l.replace(/^>\s?/, "")).join(" ");
@@ -94,7 +103,7 @@ function parseStudyMarkdown(md) {
 /* ---------- Alinhamento N-ário ---------- */
 
 function zipBlocks(langs) {
-  const rank = { h1: 0, h2: 1, h3: 2, h4: 3, h5: 4, h6: 5, image: 6, list: 7, quote: 7, p: 8, text: 8 };
+  const rank = { h1: 0, h2: 1, h3: 2, h4: 3, h5: 4, h6: 5, image: 6, list: 7, quote: 7, table: 8, p: 8, text: 8 };
   const n = Math.max(...langs.map(l => l.blocks.length));
   const out = [];
   for (let i = 0; i < n; i++) {
@@ -251,8 +260,11 @@ function refreshDocument(preservePosition=true) {
 
 function setViewMode(mode) {
   if (!["reading", "study"].includes(mode) || state.viewMode === mode) return;
+  if(mode === "study" && !state.workspaceMode){
+    location.hash=archiveWorkspace.url(state.activeDocument.meta.id,location.hash,true);
+    return;
+  }
   state.viewMode = mode;
-  try { localStorage.setItem("documentViewMode", mode); } catch (e) {}
   refreshDocument();
 }
 
@@ -430,15 +442,9 @@ function renderCellContent(block, code) {
   }
 
   if (block.type === "list") {
-    const ul = el("ul");
-    for (const line of raw.split("\n")) {
-      const t = line.replace(/^-\s+/, "").trim();
-      if (!t) continue;
-      const li = el("li");
-      li.innerHTML = inline(t);
-      ul.appendChild(li);
-    }
-    frag.appendChild(ul);
+    const list = el("div", { class: "reading-content study-list" });
+    list.innerHTML = safeMarkdown(raw);
+    frag.appendChild(list);
     return frag;
   }
 
@@ -446,6 +452,13 @@ function renderCellContent(block, code) {
     const bq = el("blockquote");
     bq.innerHTML = inline(raw);
     frag.appendChild(bq);
+    return frag;
+  }
+
+  if (block.type === "table") {
+    const table = el("div", { class: "reading-content study-table" });
+    table.innerHTML = safeMarkdown(raw);
+    frag.appendChild(table);
     return frag;
   }
 
@@ -754,7 +767,7 @@ function renderToolbar(langs, meta) {
     });
     panels.set(className,{group,tab});tabs.append(tab);controls.append(group);return body;
   };
-  const viewing=section("Leitura e idiomas","control-viewing","read","Escolha como ler o documento e comparar suas versões.");
+  const viewing=section("Visualização","control-viewing","read","Escolha como ler o documento e comparar suas versões.");
   const navigation=section("Índice e posição","control-navigation","compass","Navegue pelas seções ou retome o parágrafo marcado.");
   navigation.append(el("div",{class:"reading-tools",role:"group","aria-label":"Índice e marcador do documento",hidden:"hidden"}));
   const documentActions=section("Edição e arquivos","control-document-actions","edit","Trabalhe com as versões do documento e baixe o Markdown.");
@@ -806,15 +819,6 @@ function renderToolbar(langs, meta) {
       const studyMenu=el("div",{class:"study-layout-switch"},[el("span",{class:"toolbar-label",text:"Organização do estudo"}),submodes]);
       studyMenu.dataset.control="study";viewing.appendChild(studyMenu);
     }
-    {
-      const languageGroup = el("div", { class: "toolbar-group" });
-      languageGroup.appendChild(el("span", { class: "toolbar-label", text: "Idioma:" }));
-      const field = languageField(langs, "reading-language", "Idioma de leitura", readingLanguage(meta, langs));
-      const select=field.select;
-      select.addEventListener("change", () => setReadingLanguage(meta, langs, select.value));
-      languageGroup.appendChild(field.element);
-      const readingMenu=menu("Idioma de leitura",languageGroup);readingMenu.dataset.control="reading";viewing.appendChild(readingMenu);
-    }
   } else {
     viewing.appendChild(el("p",{class:"control-help",text:"Uma versão disponível: "+(langs[0].label||langs[0].code.toUpperCase())+"."}));
     const modes=el("div",{class:"toolbar-group",role:"group","aria-label":"Modo de visualização"});
@@ -852,9 +856,18 @@ function renderToolbar(langs, meta) {
   quickDownload.addEventListener("click",()=>downloadMarkdown(meta,langs.find(lang=>lang.code===documentActionLanguage(meta,langs))||langs[0]));
   const workspaceLink=el("a",{class:"panel-button panel-workspace",href:archiveWorkspace.url(meta.id,location.hash,state.workspaceMode!==true),text:state.workspaceMode?"Leitor":"Bancada"});
   workspaceLink.prepend(archiveIcon(state.workspaceMode?"read":"edit"));
-  actions.append(quickResume,workspaceLink,editorialQuickAction(meta,langs),quickDownload,pin,expand);
+  const quickLanguage=el("select",{class:"panel-button panel-language","aria-label":"Idioma do documento"});
+  for(const lang of langs)quickLanguage.append(el("option",{value:lang.code,text:lang.code.toUpperCase()+" · "+(lang.label||lang.code.toUpperCase())}));
+  quickLanguage.addEventListener("change",()=>{
+    if(state.viewMode==="study"&&state.studyMode==="parallel")setParallelCols("left",quickLanguage.value);
+    else setReadingLanguage(meta,langs,quickLanguage.value);
+  });
+  workspaceLink.lastChild.textContent=state.workspaceMode?"Leitor":"Estudar";
+  workspaceLink.addEventListener("click",()=>{state.pendingEditorialContext=captureEditorialReading();});
+  actions.append(quickResume,quickLanguage,workspaceLink,editorialQuickAction(meta,langs),quickDownload,pin,expand);
   bar.updateViewing=()=>{
     const study=state.viewMode==="study";
+    quickLanguage.value=documentActionLanguage(meta,langs);
     bar.querySelector(".reader-panel-status").textContent=(study?"Estudo":"Leitura")+" · "+documentActionLanguage(meta,langs).toUpperCase();
     for(const select of bar.querySelectorAll(".reading-language,.export-language,.editorial-language")){
       if(select.classList.contains("reading-language"))select.value=readingLanguage(meta,langs);
@@ -929,10 +942,16 @@ function savedReadingProgress(meta, langs) {
   return record;
 }
 
-function resolveReadingBlock(record, blocks) {
+function resolveReadingBlock(record, blocks, sourceSignature) {
   const atIndex = blocks[record.blockIndex];
-  if (atIndex && readingFingerprint(atIndex.textContent) === record.signature) return atIndex;
-  return blocks.find(block => readingFingerprint(block.textContent) === record.signature) || null;
+  const sameSource = typeof record.sourceSignature === "string" && record.sourceSignature === sourceSignature;
+  if (sameSource && atIndex && readingFingerprint(atIndex.textContent) === record.signature) return atIndex;
+  const matches = blocks.filter(block => readingFingerprint(block.textContent) === record.signature);
+  if (matches.length !== 1) return null;
+  // After a revision, short cell values can also occur elsewhere in the text.
+  // Old marks have no source signature: never relocate those values by guesswork.
+  if (!sameSource && matches[0].textContent.trim().replace(/\s+/g, " ").length < 80) return null;
+  return matches[0];
 }
 
 function readingLayoutMetrics() {
@@ -1002,7 +1021,8 @@ function buildReadingIndex(headings) {
 
 function resolveMarkedEntry(record, entries) {
   const sameLanguage = entries.filter(entry => entry.language === record.language);
-  const block = resolveReadingBlock(record, sameLanguage.map(entry => entry.node));
+  const language = state.activeDocument?.langs.find(language => language.code === record.language);
+  const block = resolveReadingBlock(record, sameLanguage.map(entry => entry.node), language?.sourceSignature);
   return sameLanguage.find(entry => entry.node === block) || null;
 }
 
@@ -1043,6 +1063,7 @@ function markReadingEntry(entry) {
   const record = {
     version: 1, language: entry.language, blockIndex: entry.blockIndex,
     signature: readingFingerprint(entry.node.textContent), offset: 0,
+    sourceSignature: tracker.langs.find(language => language.code === entry.language)?.sourceSignature,
     mode: tracker.mode, studyMode: state.studyMode, parallelCols: { ...state.parallelCols },
   };
   const previousEntry=previous&&resolveMarkedEntry(previous,tracker.entries);
@@ -1078,7 +1099,7 @@ function handleParagraphMark(event) {
 function resumeReading(meta, langs, record) {
   stopReadingTracking();
   const study = record.mode === "study";
-  state.viewMode = study ? "study" : "reading";
+  state.viewMode = state.workspaceMode && study ? "study" : "reading";
   if (study && ["paragraph", "parallel"].includes(record.studyMode)) state.studyMode = record.studyMode;
   state.readingLanguages.set(meta.id, record.language);
   try {
@@ -1345,6 +1366,7 @@ async function loadDocument(collection, docMeta, subcollection) {
         code: l.code,
         label: l.label,
         source,
+        sourceSignature: readingFingerprint(JSON.stringify(source)),
         format,
         blocks: format === "text" ? parsePlainText(source) : parseStudyMarkdown(source),
       };
@@ -1392,6 +1414,7 @@ function renderCollection(collection, subcollection = null, showAll = false, req
     hero.appendChild(el("p", { class: "collection-subtitle", text: collection.subtitle_pt }));
   if (collection.description_pt)
     hero.appendChild(el("p", { class: "collection-description", text: collection.description_pt }));
+  hero.append(collectionZipControl(collection,subcollection));
   wrap.appendChild(hero);
 
   if (collection.subcollections?.length && !subcollection && !showAll) {
@@ -1628,6 +1651,7 @@ async function route() {
       const editorialContext = editorialReadingContext(doc.id)||archiveWorkspace.context(doc.id);
       const language = new URLSearchParams(location.hash.split("?")[1] || "").get("idioma");
       applyEditorialReading(editorialContext,doc);
+      state.viewMode=state.workspaceMode?"study":"reading";
       if (doc.languages.some(l => l.code === language)) state.readingLanguages.set(doc.id, language);
       const sub = c.subcollections?.find(s => s.id === r.subcollectionId && s.document_ids.includes(doc.id));
       await loadDocument(c, doc, sub);
@@ -1635,6 +1659,7 @@ async function route() {
       if(parseRoute().id===doc.id&&parseRoute().workspace===true)await archiveWorkspace.mount(state.activeDocument);
       if(state.routeVersion!==routeVersion)return;
       if(parseRoute().id===doc.id)restoreEditorialReading(editorialContext);
+      state.pendingEditorialContext=null;
     }
   } catch (err) {
     console.error(err);
@@ -1649,8 +1674,7 @@ async function main() {
   try {
     await archiveResearchProjects.initializeContext();
     try {
-      const saved = localStorage.getItem("documentViewMode");
-      if (saved === "reading" || saved === "study") state.viewMode = saved;
+
       const studyMode = localStorage.getItem("studyMode");
       if (studyMode === "paragraph" || studyMode === "parallel") state.studyMode = studyMode;
     } catch (e) {}

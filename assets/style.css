@@ -1,9 +1,9 @@
 @import url("css/tokens.css?v=carmim-1");
 /* Entrada do leitor. Ordem: tema/site → catálogo → documento → painel → correção. */
 @import url("css/site.css?v=carmim-1");
-@import url("css/portal.css?v=carmim-1");
+@import url("css/portal.css?v=cards-height-20261022");
 @import url("css/catalog.css?v=carmim-1");
 @import url("css/reader.css?v=carmim-1");
-@import url("css/reader-panel.css?v=carmim-1");
+@import url("css/reader-panel.css?v=portal-carousel-20261022");
 @import url("css/study-editor.css?v=carmim-1");
 @import url("css/workbench.css?v=carmim-1");

@@ -428,3 +428,16 @@
 .reader-panel-heading>.ui-icon { width:30px; height:30px; padding:6px; border-radius:9px; background:var(--accent-soft); color:var(--accent); }
 .doc-toolbar .panel-workspace { gap:.4rem; text-decoration:none; }
 .reader-panel-tabs { border-radius:0 0 var(--radius) var(--radius); }
+
+/* Idioma sempre disponível na faixa compacta. */
+.doc-toolbar select.panel-language { max-width:13rem; min-width:5rem; text-overflow:ellipsis; padding-right:1.5rem; }
+.collection-download { display:flex; align-items:center; gap:.75rem; flex-wrap:wrap; margin-top:1rem; }
+.collection-download button { border:1px solid var(--rule); border-radius:var(--control-radius); background:var(--paper); color:var(--ink); padding:.6rem .9rem; cursor:pointer; font:inherit; }
+.collection-download button:hover { color:var(--accent, #9b2335); }
+.collection-download button:disabled { opacity:.65; cursor:wait; }
+.collection-download [role=status] { font-size:.8rem; }
+
+/* A exportação de coleção segue os controles carmim do portal. */
+.collection-hero .collection-download button.panel-button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:42px;padding:.7rem 1.05rem;border:1px solid var(--accent);border-radius:var(--control-radius);background:var(--accent);color:#fff;box-shadow:0 3px 10px #58283a12;font:500 .78rem/1.4 var(--font-ui);text-decoration:none;cursor:pointer;transition:background .15s,box-shadow .15s}
+.collection-hero .collection-download button.panel-button:hover{background:var(--accent-strong);border-color:var(--accent-strong);color:#fff;box-shadow:0 5px 14px #58283a20}
+.collection-hero .collection-download button.panel-button:disabled{opacity:.65;cursor:wait}
