@@ -8,18 +8,18 @@ function archiveDocuments() {
 
 function createPortalIntro() {
   const documents=[...archiveDocuments().values()],format=new Intl.NumberFormat("pt-BR");
-  const wrap=el("div",{class:"portal-opening"});
-  const hero=el("section",{class:"portal-hero"});
+  const wrap=el("div",{class:"portal-opening portal-frontpage"});
+  const hero=el("section",{class:"portal-hero portal-hero-v2"});
   const intro=el("div",{class:"portal-intro"},[
     el("p",{class:"doc-eyebrow",text:"Documentos Soviéticos / Edição digital de fontes"}),
-    el("h1",{},["Um arquivo aberto",el("br"),"à ",el("em",{text:"pesquisa."})]),
-    el("p",{class:"portal-lead",text:"História política da União Soviética em documentos, traduções e percursos de leitura. Das coleções à comparação entre fontes."})
+    el("h1",{},["História soviética.",el("br"),el("em",{text:"Fontes para investigar."})]),
+    el("p",{class:"portal-lead",text:"Leia documentos históricos, percorra as coleções e compare originais e traduções em uma mesma mesa de estudo."})
   ]);
   const search=el("form",{class:"home-search",role:"search","aria-label":"Buscar no acervo"});
   const query=el("input",{type:"search",name:"q",maxlength:"500",placeholder:"Encontre uma fonte, um nome, uma expressão…","aria-label":"Palavras para buscar no acervo"});
   search.append(query,el("button",{type:"submit",class:"search-submit",text:"Buscar →"}));
   search.addEventListener("submit",event=>{event.preventDefault();const params=new URLSearchParams();if(query.value.trim())params.set("q",query.value.trim());location.hash=searchURL(params);});
-  intro.append(search,el("p",{class:"home-search-hint",text:"Coleções, originais e traduções em português, russo e inglês."}));
+  intro.append(search,el("div",{class:"portal-entry-links"},[el("a",{href:"#/colecoes",text:"Explorar as coleções →"}),el("a",{href:"#/estudo",text:"Abrir mesa de estudo ↗"})]));
   hero.append(intro);
   const collections=[...state.manifest.collections];
   const carousel=el("section",{class:"portal-carousel",role:"region","aria-roledescription":"carrossel","aria-label":"Percursos pelo acervo"});
@@ -43,27 +43,29 @@ function createPortalIntro() {
   previous.onclick=()=>show(current-1);next.onclick=()=>show(current+1);
   carousel.addEventListener("keydown",event=>{if(event.key==="ArrowLeft"||event.key==="ArrowRight"){event.preventDefault();show(current+(event.key==="ArrowRight"?1:-1));}});
   carousel.append(stage,el("div",{class:"carousel-controls"},[previous,counter,next]));
-  if(collections.length){show(0);hero.append(carousel);}
-  const strip=el("div",{class:"acervo-strip","aria-label":"Dados do catálogo"});
+  if(collections.length)show(0);
+  const strip=el("div",{class:"acervo-strip portal-snapshot","aria-label":"Dados atuais do catálogo"});strip.append(el("p",{class:"doc-eyebrow",text:"O acervo, hoje"}));
   for(const [number,label] of [[documents.length,"documentos únicos"],[state.manifest.collections.length,"coleções"],
     [documents.filter(d=>d.languages?.some(l=>l.code==="pt")).length,"documentos em português"],
     [documents.reduce((sum,d)=>sum+(d.languages?.length||0),0),"versões linguísticas"]])
     strip.append(el("span",{},[el("strong",{text:format.format(number)})," "+label]));
   const updates=el("section",{class:"portal-updates","aria-label":"Incorporações registradas no acervo"},[
-    el("div",{class:"archive-section-heading"},[el("div",{},[el("p",{class:"doc-eyebrow",text:"Acervo em movimento"}),el("h2",{text:"Traduções e versões incorporadas"})]),
+    el("div",{class:"archive-section-heading"},[el("div",{},[el("p",{class:"doc-eyebrow",text:"Acervo em movimento"}),el("h2",{text:"Para continuar a pesquisa"})]),
       el("a",{class:"portal-text-link",href:"#/busca",text:"Consultar o catálogo ↗"})]),
     el("div",{class:"update-grid",role:"status",text:"Carregando os registros de incorporação…"}),
     el("p",{class:"activity-note",text:"Datas de incorporação no Git ou de coleta registrada na proveniência; não são datas históricas dos documentos."})
   ]);
   const feed=el("div",{class:"portal-source-area"},[el("div",{class:"archive-section-heading"},[
-    el("div",{},[el("p",{class:"doc-eyebrow",text:"Entradas no histórico"}),el("h2",{text:"Fontes incorporadas"})])]),el("div",{class:"source-feed"})]);
+    el("div",{},[el("p",{class:"doc-eyebrow",text:"Entradas no histórico"}),el("h2",{text:"Documentos incorporados"})])]),el("div",{class:"source-feed"})]);
   const invitation=el("aside",{class:"research-invitation"},[
-    el("p",{class:"doc-eyebrow",text:"Além da leitura"}),el("h2",{text:"Seu espaço de trabalho com as fontes."}),
-    el("p",{text:"Abra documentos em abas. Consulte o Markdown ao lado do texto, compare versões e reúna notas de trabalho."}),
-    el("a",{class:"portal-primary",href:archiveWorkspace.defaultURL(),text:"Abrir a bancada →"}),
-    el("p",{class:"portal-small",text:"Leitura e rascunhos no navegador. Gravações editoriais disponíveis com o backend local."})
+    el("p",{class:"doc-eyebrow",text:"Além da leitura"}),el("h2",{text:"Coloque as fontes em diálogo."}),
+    el("p",{text:"Compare idiomas e documentos lado a lado. Destaque o índice, consulte a ficha e reúna suas notas de leitura."}),
+    el("a",{class:"portal-primary",href:archiveWorkspace.defaultURL(),text:"Abrir a mesa de estudo →"}),
+    el("p",{class:"portal-small",text:"Consulta e notas pessoais no navegador. Edição do acervo no Estúdio local."})
   ]);
-  wrap.append(hero,strip,updates,el("section",{class:"portal-lower"},[feed,invitation]));return wrap;
+  hero.append(strip);
+  const aside=el('aside',{class:'portal-discovery'},[el('div',{class:'archive-section-heading'},[el('h2',{text:'Coleção em foco'}),el('a',{href:'#/colecoes',text:'Ver todas →'})]),carousel,invitation]);
+  wrap.append(hero,el('div',{class:'portal-content-grid'},[updates,aside]),el('section',{class:'portal-recent-sources'},[feed]));return wrap;
 }
 
 async function loadPortalActivity(root) {

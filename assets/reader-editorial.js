@@ -70,7 +70,7 @@ function editorialLink(meta, langs, title, destination, icon="edit") {
     const code=document.querySelector(".editorial-language")?.value||documentActionLanguage(meta,langs);
     const params=new URLSearchParams({idioma:code,leitor:capture?editorialReturnAddress():"/"+location.hash});
     if(state.workspaceProject){
-      link.href='#/doc/'+encodeURIComponent(meta.id)+'?'+new URLSearchParams({bancada:'1',projeto:state.workspaceProject.id,idioma:code});
+      link.href='/estudio/#/doc/'+encodeURIComponent(meta.id)+'?'+new URLSearchParams({bancada:'1',projeto:state.workspaceProject.id,idioma:code});
       return;
     }
     let path;
@@ -81,7 +81,7 @@ function editorialLink(meta, langs, title, destination, icon="edit") {
   };
   update(false);
   link.addEventListener("pointerdown",()=>update(true));
-  link.addEventListener("click",event=>{update(true);if(state.workspaceProject){event.preventDefault();history.replaceState(null,'',link.getAttribute('href'));archiveWorkspace.showTool(destination==='documento'?'metadata':'markdown');}});
+  link.addEventListener("click",event=>{update(true);if(state.workspaceProject){event.preventDefault();location.href=link.href;}});
   return link;
 }
 
@@ -133,7 +133,7 @@ async function detectReaderEditorial() {
   state.editorialDetection=(async()=>{
     const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),15000);
     try {
-      const response=await fetch("/api/editorial/capabilities",{cache:"no-store",signal:controller.signal});
+      const response=await fetch(absURL("api/editorial/capabilities"),{cache:"no-store",signal:controller.signal});
       const data=response.ok&&(response.headers.get("content-type")||"").includes("application/json")?await response.json():null;
       const local=data?.mode==="local_editorial";
       state.passageAvailable=local&&data.features?.includes("study_passage_edit")===true;

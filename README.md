@@ -2,11 +2,15 @@
 
 Site estático de fontes primárias e ensaios históricos, em russo e em edições com traduções para português e inglês.
 
-O leitor e a bancada de pesquisa continuam acessíveis pela home. Com o backend
-local, `/editorial` oferece cadastro, catálogo, traduções e PDF/OCR, com a linguagem
-visual da bancada e os fluxos completos de prévia e histórico. A adaptação visual
-não substitui os documentos e painéis da bancada. Ver
-[organização e conferência manual](docs/projeto/EDITORIAL-IDE.md).
+A interface oficial reúne o **portal público de leitura e estudo** e o **Estúdio local de pesquisa e edição**.
+
+- `/`: entrada pública, coleções, busca e leitor.
+- `#/estudo`: mesa pública com documentos em abas e comparação entre idiomas.
+- `/estudio/`: ambiente editorial local; `/editorial` encaminha para ele.
+
+O Estúdio conserva cadastro, catálogo, traduções, projetos, PDF/OCR, prévias e histórico. Salvar modifica somente o ambiente local; publicar continua exigindo commit/push autorizados. A publicação estática não oferece gravações editoriais.
+
+Adoção aprovada em 27/10/2026. Consulte o [registro da interface oficial](docs/interface/INTERFACE-OFICIAL.md), o [manual do Estúdio](prototipo/estudio/README.md) e o [roteiro do portal](docs/interface/PORTAL-LEITURA-ESTUDO-IMPLEMENTACAO.md).
 
 ## Acervo
 
@@ -26,7 +30,7 @@ Um documento pode pertencer a várias coleções. As quantidades acima não deve
 
 Os títulos individuais do novo acervo permanecem em russo. Traduções podem ser acrescentadas por documento.
 
-A barra superior oferece um seletor com todas as coleções e indica a coleção atual. Na página de cada documento, o botão **Exportar Markdown** baixa a versão escolhida com o mesmo nome do arquivo no projeto, trocando apenas a extensão `.txt` por `.md` quando necessário. Edições já em Markdown mantêm o arquivo original; textos importados recebem título, fonte, ID e idioma. A exportação usa o texto completo carregado, independentemente do modo de leitura ou dos parágrafos expandidos.
+A navegação superior oferece Início, Coleções, Buscar, Estudo e Sobre. Na página de cada documento, **Baixar** exporta o Markdown com o nome do arquivo no projeto. Coleções e subcoleções também podem ser baixadas em ZIP. As exportações usam as versões completas disponíveis, independentemente das páginas da listagem ou dos trechos expandidos.
 
 No ShowTrials, o cabeçalho de identificação da exportação é gerado uma única vez. Envelopes reconhecidos de exportações anteriores ficam fora do corpo na leitura, no estudo, na busca e na comparação estrutural da importação; os metadados continuam no cabeçalho comum do documento. Essa separação não reescreve os arquivos armazenados nem remove títulos próprios do texto.
 
@@ -36,11 +40,11 @@ No ShowTrials, o cabeçalho de identificação da exportação é gerado uma ún
 - **Estudo → Por parágrafo**: versão principal com botões para expandir os outros idiomas por bloco.
 - **Estudo → Paralelo**: duas versões lado a lado; documentos trilíngues permitem escolher as colunas.
 
-Documentos com um único idioma oferecem leitura contínua. O modo e o submodo escolhidos são lembrados pelo navegador; o idioma de leitura é lembrado por documento. A preferência antiga de Leitura/Paralelo não altera o novo padrão inicial. A exportação segue disponível nos dois modos e acompanha o idioma selecionado na leitura, com opção de escolher outra versão para baixar.
+A leitura contínua é o padrão ao abrir um documento. A mesa de estudo acrescenta vistas numeradas ou paralelas e expansão dos outros idiomas por trecho. Leitura, Parágrafos e Paralelo alternam na mesma aba. A barra compartilhada acompanha o idioma e o modo da aba ativa; não altera as outras vistas. Documentos com um único idioma continuam legíveis e estudáveis.
 
-A leitura Markdown usa markdown-it com suporte a notas de rodapé e sanitização por DOMPurify. HTML bruto permanece desativado. Os textos `.txt` são apresentados como texto, preservando parágrafos, abreviações e sinais. As ferramentas de estudo mantêm a segmentação anterior; a leitura contínua independe do alinhamento entre idiomas. Nenhum arquivo de conteúdo é reescrito para alternar entre os modos.
+Markdown usa markdown-it, notas de rodapé e sanitização DOMPurify, com HTML bruto desativado. TXT permanece texto. Os blocos por ordem não representam alinhamento editorial validado. Trocar a apresentação não reescreve as fontes.
 
-As bibliotecas estão incluídas em `assets/vendor/`, com versões fixas e licenças. **Não é necessário npm, instalação ou compilação** para usar ou publicar o site. A procedência e os hashes estão em `assets/vendor/manifest.json`.
+As distribuições locais ficam em `assets/vendor/` e `prototipo/oficina/vendor/`, com versões, licenças e manifests registrados. **Não é necessário npm, instalação ou compilação** para usar o site. Os caminhos `prototipo/` de implementação e dependências foram preservados por compatibilidade; não indicam uma interface alternativa que o usuário precise escolher.
 
 ### Índice e marcador de leitura na sessão
 

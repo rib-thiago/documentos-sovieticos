@@ -387,6 +387,7 @@ function updateParallelSelects() {
 /* ---------- Navegação no topo ---------- */
 
 function renderNav() {
+  if(window.archivePortal){archivePortal.navigation();return;}
   const nav = document.getElementById("docNav");
   nav.innerHTML = "";
   nav.appendChild(el("a", { class: "nav-link", href: "#/", text: "Acervo" }));
@@ -413,6 +414,7 @@ function setActiveNav(collectionId) {
   }
   document.querySelector(".nav-workbench")?.toggleAttribute("aria-current",false);
   if(state.workspaceMode)document.querySelector(".nav-workbench")?.setAttribute("aria-current","page");
+  archivePortal.activeNav();
 }
 
 /* ---------- Renderização: documento ---------- */
@@ -722,6 +724,7 @@ function languageField(langs,className,label,code) {
 }
 
 function renderToolbar(langs, meta) {
+  if(window.archivePortal)return archivePortal.toolbar(meta,langs);
   const bar = el("section", { class: "doc-toolbar", "aria-label":"Painel do documento" });
   const controls=el("div",{class:"reader-panel-controls",id:"reader-panel-controls"});
   const tabs=el("div",{class:"reader-panel-tabs",role:"tablist","aria-label":"Ferramentas do documento"});
@@ -1119,7 +1122,7 @@ function resumeReading(meta, langs, record) {
     updateMarkerControls(meta, langs, "O texto mudou; não foi possível localizar o parágrafo marcado.");
     return;
   }
-  if (study) {
+  if (study && state.viewMode === "study") {
     const cell = entry.node.closest(".cell");
     if (state.studyMode === "paragraph" && cell.classList.contains("secondary")) {
       cell.classList.add("visible");
@@ -1514,6 +1517,7 @@ function renderHome() {
   const wrap = el("section", { class: "home" });
 
   wrap.appendChild(createPortalIntro());
+  wrap.appendChild(archivePortal.recent());
   const collectionHeading = el("div", { class: "archive-section-heading" });
   collectionHeading.appendChild(el("h2", { text: "Explore as coleções" }));
   const collectionCount=el("p",{role:"status","aria-live":"polite",text:state.manifest.collections.length+" coleções"});
@@ -1594,6 +1598,9 @@ function parseRoute() {
   if (!hash) return { view: "home" };
   const [path, query = ""] = hash.split("?");
   const parts = path.split("/");
+  if(parts[0]==="estudo")return {view:"study"};
+  if(parts[0]==="sobre")return {view:"about"};
+  if(parts[0]==="colecoes")return {view:"shelf"};
   if(parts[0]==="bancada")return {view:"workspace",workspace:true,projectId:new URLSearchParams(query).get("projeto")};
   if (parts[0] === "busca") return { view: "search", params: new URLSearchParams(query) };
   if (parts[0] === "colecao" && parts[1]) return {
@@ -1620,9 +1627,19 @@ async function route() {
   stopReadingTracking();
   stopPanelLayoutTracking();
   const r = parseRoute();
+  document.body.classList.remove("portal-shelf");
+  document.body.classList.toggle("portal-reading",r.view==="document");
+  document.body.classList.toggle("portal-home",r.view==="home");
+  if(r.workspace){
+    if(r.projectId){document.getElementById('view').replaceChildren(el('p',{text:'Este endereço pertence a um projeto privado. Abra-o no Estúdio local.'}));return;}
+    location.replace(r.id?archivePortal.studyURL(r.id,new URLSearchParams(location.hash.split('?')[1]||'').get('idioma'),'#/doc/'+r.id):'#/estudo');return;
+  }
   state.workspaceMode=r.workspace===true;
   state.workspaceProject=null;
   archiveWorkspace.prepare(state.workspaceMode);
+  await archivePortal.route(["study","about"].includes(r.view)?r.view:null);
+  if(state.routeVersion!==routeVersion)return;
+  if(["study","about"].includes(r.view)){setActiveNav(null);return;}
   try {
     if(state.workspaceMode&&r.projectId){
       const project=await archiveProjectEditor.api('/api/editorial/projects/'+encodeURIComponent(r.projectId));
@@ -1631,8 +1648,9 @@ async function route() {
     }
     if(r.view==="workspace"){
       await archiveWorkspace.mountEmpty();
-    } else if (r.view === "home") {
+    } else if (r.view === "home"||r.view === "shelf") {
       renderHome();
+      document.body.classList.toggle("portal-shelf",r.view==="shelf");
     } else if (r.view === "search") {
       await renderSearch(r.params);
     } else if (r.view === "collection") {
@@ -1659,6 +1677,7 @@ async function route() {
       if(parseRoute().id===doc.id&&parseRoute().workspace===true)await archiveWorkspace.mount(state.activeDocument);
       if(state.routeVersion!==routeVersion)return;
       if(parseRoute().id===doc.id)restoreEditorialReading(editorialContext);
+      if(new URLSearchParams(location.hash.split("?")[1]||"").get("retomar")==="1"){const record=savedReadingProgress(doc,state.activeDocument.langs);if(record)resumeReading(doc,state.activeDocument.langs,record);}
       state.pendingEditorialContext=null;
     }
   } catch (err) {
@@ -1672,7 +1691,7 @@ async function route() {
 
 async function main() {
   try {
-    await archiveResearchProjects.initializeContext();
+    // Public reading starts without private project initialization.
     try {
 
       const studyMode = localStorage.getItem("studyMode");
