@@ -1,5 +1,10 @@
 /* Interface exclusiva do backend local. Não depende do leitor público. */
-(() => {
+window.archiveEditorialEngine=(()=>{
+ function mount(options=null){
+  const document=options?.document||globalThis.document;
+  const window=options?.window||globalThis.window;
+  const location=options?.location||globalThis.location;
+  const history=options?.history||globalThis.history;
   const view = document.getElementById("editorial-view");
   function setupSidebar() {
     const shell=document.querySelector(".editorial-shell");
@@ -56,11 +61,15 @@
     element.classList.toggle("error", error);
   }
   async function api(path, body, signal) {
-    const response = await fetch(path, {cache:"no-store",signal,method:body ? "POST" : "GET",
-      headers:body ? {"Content-Type":"application/json","X-Editorial-Token":session.token} : {},
-      body:body ? JSON.stringify(body) : undefined});
-    const data = await response.json();
-    if (!response.ok) throw new Error(data.error || "Não foi possível concluir a operação");
+    let data;
+    if(options?.api)data=await options.api(path,body,signal);
+    else{
+      const response = await fetch(path, {cache:"no-store",signal,method:body ? "POST" : "GET",
+        headers:body ? {"Content-Type":"application/json","X-Editorial-Token":session.token} : {},
+        body:body ? JSON.stringify(body) : undefined});
+      data = await response.json();
+      if (!response.ok) throw new Error(data.error || "Não foi possível concluir a operação");
+    }
     if(path==="/api/editorial/save"&&data.saved) {
       if(session)session.revision=data.revision;
       if(data.document_exists===false&&(documentContext?.document.id===data.document_id||data.entity?.document_ids?.includes(documentContext?.document.id))){
@@ -69,6 +78,7 @@
       }
       try{localStorage.setItem("editorialCatalogChanged",Date.now()+":"+data.history_id);}catch{}
     }
+    if(body&&/\/(save|promote|apply|activate)$/.test(path))options?.onSaved?.({path,...data});
     return data;
   }
   function safeReaderReturn(value) {
@@ -131,7 +141,7 @@
     const form=node("form",{class:"editorial-query-bar"});
     const filters=node("div",{class:"filters"});
     const inputs=[field(queue?"Título, ID ou motivo":"Título ou ID exato", "q",params.get("q"))];
-    if(queue) inputs.push(field("Status","status",params.has("status")?params.get("status"):"pendente",{choices:[["","Todos"],...session.statuses.map(v=>[v,label(v)])]}),
+    if(queue) inputs.push(field("Status","status",params.has("status")?params.get("status"):(options?"abertos":"pendente"),{choices:[...(options?[["abertos","Em aberto"]]:[]),["","Todos"],...session.statuses.map(v=>[v,label(v)])]}),
       field("Prioridade","priority",params.get("priority"),{choices:[["","Todas"],...session.priorities.map(v=>[v,label(v)])]}));
     inputs.push(field("Coleção","collection",params.get("collection"),{choices:[["","Todas"],...collections.map(c=>[c.id,c.titles.pt||c.id])]}));
     inputs[0].input.placeholder=queue?"Buscar documento, motivo ou identificador…":"Buscar por título ou identificador…";
@@ -182,7 +192,7 @@
       view.append(item);
     }
     const visible=new URLSearchParams(params);
-    if(queue&&!visible.has("status")) visible.set("status","pendente");
+    if(queue&&!visible.has("status")) visible.set("status",options?"abertos":"pendente");
     paging(data,path,visible,view);
   }
   function navigate(hash) {hash=withReaderContext(hash);if(location.hash===hash) route();else location.hash=hash;}
@@ -287,6 +297,7 @@
     });
     panel.append(node("div",{class:"actions"},[save,cancel]));container.append(panel);
     panel.focus();panel.scrollIntoView({block:"start",behavior:"smooth"});
+    options?.onPreview?.(preview,panel);
     return panel;
   }
   function setDocumentContext(catalogDocument,editions,preferred) {
@@ -983,11 +994,11 @@
       const [freshSession,freshCollections]=await Promise.all([api("/api/editorial/session",null,signal),api("/api/collections",null,signal)]);
       if(signal.aborted)return;
       session=freshSession;collections=freshCollections.items;view.replaceChildren();
-      await archiveResearchProjects.mountContext(api,signal);
+      if(!options)await archiveResearchProjects.mountContext(api,signal);
       if(signal.aborted)return;
-      if(path==="projetos"||path.startsWith("projetos/"))await archiveResearchProjects.render({view,path,params,signal,api,collections,setDirty:value=>{dirty=value;},setSaving:value=>{saving=value;}});
+      if(path==="projetos"||path.startsWith("projetos/"))await archiveResearchProjects.render({view,path,params,signal,api,collections,navigate:options?.navigate,reload:options?.reload,setDirty:value=>{dirty=value;},setSaving:value=>{saving=value;}});
       else if(path==="pdf/ferramentas")await archivePDFTools.render(view,{api,projectId:params.get('projeto')||'',sourceId:params.get('fonte')||'',operationId:params.get('tarefa')||'',signal,setDirty:value=>{dirty=value;},setSaving:value=>{saving=value;}});
-      else if(path==="pdf"||path.startsWith("pdf/"))await archivePDFSources.render({view,path,params,signal,api,collections,session,setDirty:value=>{dirty=value;},setSaving:value=>{saving=value;}});
+      else if(path==="pdf"||path.startsWith("pdf/"))await archivePDFSources.render({view,path,params,signal,api,collections,session,navigate:options?.navigate,reloadView:options?.reload,setDirty:value=>{dirty=value;},setSaving:value=>{saving=value;}});
       else if(path==="lote")await batchPage(params,signal);
       else if(path==="novo-documento")await newDocumentPage(params,signal);
       else if(path==="colecoes")await collectionsPage(params,signal);
@@ -1000,6 +1011,7 @@
       else if(path==="historico")await historyPage(params,signal);
       else if(path==="inicio")view.append(node("h1",{text:"Área editorial"}),node("p",{class:"help",text:"Nenhuma tarefa aberta. Escolha uma atividade na lateral para continuar."}),node("div",{class:"actions"},[node("a",{href:"#/novo-documento",text:"Novo documento"}),node("a",{href:"#/catalogo",text:"Catálogo"}),node("a",{href:"#/pdf",text:"Fontes PDF"})]));
       else await listPage(path==="catalogo"?"catalogo":"fila",params,signal);
+      if(!signal.aborted)options?.onRendered?.({path,params,session,collections,view,api});
     }catch(error){
       if(error.name!=="AbortError") {
         const reload=node("button",{type:"button",text:"Recarregar a área editorial"});
@@ -1009,7 +1021,7 @@
     }
   }
   window.addEventListener("beforeunload",event=>{if(dirty||saving){event.preventDefault();event.returnValue="";}});
-  const refreshProjectContext=()=>{if(controller&&!controller.signal.aborted)archiveResearchProjects.mountContext(api,controller.signal).catch(()=>{});};
+  const refreshProjectContext=()=>{if(!options&&controller&&!controller.signal.aborted)archiveResearchProjects.mountContext(api,controller.signal).catch(()=>{});};
   document.addEventListener("archive:projects-changed",refreshProjectContext);
   window.addEventListener("storage",event=>{if(event.key==="researchProjectsChanged")refreshProjectContext();});
   document.addEventListener("click",event=>{
@@ -1018,11 +1030,15 @@
   });
   async function start() {
     try {
-      await archiveResearchProjects.initializeContext();
+      if(!options)await archiveResearchProjects.initializeContext();
       vocabularies=await api("/api/vocabularies");
       window.addEventListener("hashchange",route);await route();
     }catch(error){
       view.querySelector(".editorial-loading")?.remove();view.replaceChildren(node("p",{role:"alert",class:"status error",text:error.message+". Reinicie com python3 -m backend e recarregue esta página."}));}
   }
-  start();
+  const ready=start();
+  return{ready,canClose:()=>!dirty&&!saving,isSaving:()=>saving,reload:()=>route(),dispose:()=>{controller?.abort();options?.dispose?.();}};
+ }
+ if(globalThis.document.getElementById('editorial-view'))mount();
+ return{mount};
 })();

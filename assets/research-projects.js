@@ -6,6 +6,7 @@ window.archiveResearchProjects=(()=>{
   const name=item=>item.titles?.pt||item.titles?.ru||item.title||item.id;
   const route=id=>'#/projetos/'+id;
   async function initializeContext(){
+    if(window.parent!==window&&window.frameElement?.dataset.oficina==='true')return;
     const navigation=window.performance?.getEntriesByType?.('navigation')?.[0];
     const reload=navigation?.type==='reload';
     const [path,raw='']=location.hash.split('?');const params=new URLSearchParams(raw);
@@ -39,7 +40,7 @@ window.archiveResearchProjects=(()=>{
     select.onchange=async()=>{select.disabled=true;try{await api('/api/editorial/projects/activate',{project_id:select.value||null},signal);announce();message.textContent='Projeto ativo atualizado. Operações já abertas mantêm o destino escolhido.';}catch(e){message.textContent=e.message;select.value=result.active_id||'';}finally{select.disabled=false;}};
     host.replaceChildren(node('label',{class:'field',text:'Projeto de pesquisa'},[select]),message);
   }
-  async function render({view,path,params,signal,api,collections,setDirty,setSaving}){
+  async function render({view,path,params,signal,api,collections,navigate=hash=>{location.hash=hash;},reload=()=>location.reload(),setDirty,setSaving}){
     const all=await api('/api/editorial/projects',null,signal);if(signal.aborted)return;
     const notice=node('p',{class:'status',role:'status'});
     const fail=e=>{notice.textContent=e.message;notice.classList.add('error');};
@@ -49,7 +50,7 @@ window.archiveResearchProjects=(()=>{
       if(!all.items.length)view.append(node('p',{text:'Nenhum projeto criado. Comece com um projeto vazio ou use uma coleção como ponto de partida.'}));
       for(const project of all.items){
         const active=all.active_id===project.id;
-        const activate=button(active?'Projeto ativo':'Ativar projeto',async()=>{activate.disabled=true;try{await api('/api/editorial/projects/activate',{project_id:project.id},signal);announce();location.href='/#/bancada?projeto='+project.id;}catch(e){fail(e);activate.disabled=false;}});
+        const activate=button(active?'Projeto ativo':'Ativar projeto',async()=>{activate.disabled=true;try{await api('/api/editorial/projects/activate',{project_id:project.id},signal);announce();navigate('/#/bancada?projeto='+project.id);}catch(e){fail(e);activate.disabled=false;}});
         activate.disabled=active||project.archived;
         view.append(node('article',{class:'panel'},[node('h2',{text:project.title+(project.archived?' · Arquivado':'')}),node('p',{text:project.description||'Sem descrição'}),node('p',{text:project.document_ids.length+' documentos · '+project.source_ids.length+' fontes PDF · Local'}),node('div',{class:'actions'},[link('Abrir projeto',route(project.id)),activate])]));
       }
@@ -108,7 +109,7 @@ window.archiveResearchProjects=(()=>{
       const diff=node('details',{},[node('summary',{text:'Conferir todos os campos e vínculos alterados'})]);diff.append(node('pre',{class:'project-diff',text:JSON.stringify({antes:result.before,depois:result.after},null,2)}));preview.append(diff);
       const save=button('Confirmar gravação local',async()=>{
         setSaving(true);save.disabled=true;const fields=[...form.querySelectorAll('input,textarea,select,button')];const previous=fields.map(el=>el.disabled);fields.forEach(el=>el.disabled=true);
-        try{const saved=await api('/api/editorial/projects/save',{preview_id:result.preview_id},signal);setDirty(false);setSaving(false);announce();location.hash=route(saved.project_id);if(!creating)location.reload();}
+        try{const saved=await api('/api/editorial/projects/save',{preview_id:result.preview_id},signal);setDirty(false);setSaving(false);announce();navigate(route(saved.project_id));if(!creating)reload();}
         catch(e){fail(e);}finally{fields.forEach((el,index)=>el.disabled=previous[index]);save.disabled=false;setSaving(false);}
       });preview.append(save);preview.hidden=false;
     }

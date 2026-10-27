@@ -1,0 +1,73 @@
+/* Mesa de revisão: uma área delimitada; imagem, editor e OCR no mesmo contexto. */
+.workspace-pdf-task{container:pdfdesk/inline-size}
+.workspace-pdf-task[data-workspace-phase=review]{overflow:hidden}
+.native-editorial.workspace-pdf-task{padding:8px 12px}
+.workspace-pdf-task .workspace-source-steps{position:static;align-items:center;flex-wrap:nowrap;padding:3px 0;margin:0 0 4px;min-height:32px;gap:5px}
+.workspace-source-more,.workspace-source-actions-menu,.workspace-review-more,.workspace-view-settings{position:relative;margin:0}
+.workspace-source-more>summary,.workspace-source-actions-menu>summary,.workspace-review-more>summary,.workspace-view-settings>summary{cursor:pointer;font:500 11px/1.5 system-ui;color:#8c2844;padding:5px 8px;white-space:nowrap}
+.workspace-source-more{margin-left:auto}
+.workspace-source-more[open],.workspace-source-actions-menu[open],.workspace-review-more[open],.workspace-view-settings[open]{z-index:40}
+.workspace-menu-items{position:absolute;right:0;top:100%;display:flex;flex-direction:column;min-width:190px;max-width:min(300px,80vw);padding:5px;background:#fff;border:1px solid #dbc3cd;border-radius:7px;box-shadow:0 8px 22px #45212e16;z-index:40}
+.workspace-menu-items>button,.workspace-menu-items>a{display:flex;width:100%;box-sizing:border-box;text-align:left;justify-content:flex-start;margin:0!important;border:0!important;background:#fff!important;color:#75344b!important;white-space:normal;font:11px/1.5 system-ui!important;padding:7px 9px!important;text-decoration:none}
+.workspace-menu-items>button:hover,.workspace-menu-items>a:hover{background:#f8eaf0!important}
+.workspace-source-steps button{min-height:28px;padding:4px 8px}
+.workspace-source-steps>.workspace-ocr-toggle[aria-expanded=true]{background:#f4e0e8;color:#8d2241}
+.workspace-pdf-task>[data-workspace-source-actions]{flex-wrap:nowrap;min-height:26px;margin:0 0 3px}
+.workspace-pdf-task [data-workspace-source-actions]>[data-workspace-source-title]{font-size:11px;flex:1}
+.workspace-pdf-task>.pdf-source-status{margin:1px 0;font-size:10px}
+.workspace-page-views{margin:0 0 4px;padding:3px 0;gap:3px;min-height:32px;align-items:center}
+.workspace-page-views>.pdf-source-toolbar{position:static;display:flex;align-items:center;gap:3px;flex-wrap:nowrap;margin:0 auto 0 0;padding:0;border:0;background:transparent}
+.workspace-page-views>.pdf-source-toolbar button,.workspace-page-views>button{font-size:10px;padding:4px 6px;min-height:26px}
+.workspace-page-views>.pdf-source-toolbar input[type=number]{width:50px!important;min-height:26px;padding:3px!important;font:11px system-ui!important}
+.workspace-view-settings{margin-left:auto}
+.workspace-view-settings-body{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:10px;background:#fff;border:1px solid #dbc3cd;border-radius:7px;box-shadow:0 8px 22px #45212e16;position:absolute;right:0;top:100%;width:260px;z-index:40}
+.workspace-page-views .workspace-view-settings input[type=range]{display:block;width:100px;margin:0}
+.workspace-pdf-task .pdf-source-grid{position:relative;min-height:240px;gap:8px;flex-shrink:0;grid-template-rows:minmax(0,1fr)}
+.workspace-pdf-task .workspace-page-transcript{position:relative;overflow:hidden;padding:6px 9px;box-sizing:border-box}
+.workspace-page-editor{flex:1 1 auto;min-height:0;overflow:hidden}
+.workspace-page-editor>.help,.workspace-page-editor>h3{display:none}
+.workspace-page-editor>.status{font-size:10px;padding:2px 0;margin:0;flex-shrink:0}
+.workspace-page-editor .workspace-review-sections{margin:0 0 4px;padding:0 0 3px;min-height:27px;align-items:start}
+.workspace-page-editor .workspace-review-sections button{min-height:26px}
+.workspace-page-editor [data-workspace-review-pane]:not(form){flex:1;min-height:0;max-height:none;overflow:auto}
+.workspace-page-editor .pdf-review-form{position:relative;flex:1 1 auto;min-height:0;overflow:hidden}
+.workspace-page-editor .pdf-review-form>fieldset{grid-template-rows:minmax(0,1fr) auto auto auto;min-height:0;gap:4px}
+.workspace-page-editor .pdf-review-text{min-height:0!important;resize:none}
+.native-editorial .pdf-source-grid [data-workspace-review-field=transcription]>.native-code{height:auto;min-height:0;flex:1;margin:0;overflow:hidden}
+.workspace-page-editor .pdf-review-form [data-workspace-review-field=transcription]{min-height:0;overflow:hidden}
+.workspace-page-editor .pdf-review-form .pdf-preview:not([hidden]){position:absolute;inset:0;z-index:20;overflow:auto;margin:0;padding:10px;background:#fffafc}
+.workspace-page-editor .pdf-preview .pdf-raw-text{max-height:none;overflow:visible;white-space:pre-wrap;overflow-wrap:anywhere}
+.workspace-page-height-handle{height:9px;margin-bottom:0;flex-shrink:0}
+.workspace-ocr-drawer{position:absolute;top:0;bottom:0;right:0;left:calc(var(--workspace-image-ratio,58%) + 4px);z-index:25;background:#fffafc;display:flex;flex-direction:column;min-height:0;border-radius:7px}
+.workspace-ocr-drawer[hidden]{display:none}.pdf-source-grid[data-workspace-page-mode=text]>.workspace-ocr-drawer{left:0}
+.workspace-ocr-drawer>header{display:flex!important;align-items:center;justify-content:space-between;gap:7px;flex-shrink:0;padding:7px 10px!important;background:#f6e8ee!important;border-bottom:1px solid #e4cfd8!important;min-height:32px}
+.workspace-ocr-drawer>header strong{font:600 11px system-ui;color:#8d2241}
+.workspace-ocr-drawer>header button{font-size:10px;padding:4px 7px}
+.workspace-ocr-drawer-body{flex:1;min-height:0;overflow:auto;padding:10px}
+.workspace-pdf-task .workspace-ocr-drawer .pdf-ocr-controls{margin:0;padding:0!important;max-width:none;border:0}
+.workspace-ocr-drawer .pdf-ocr-controls>summary{display:none}
+.workspace-pdf-task .workspace-ocr-drawer [data-workspace-ocr-pane=progress]{max-height:none;overflow:visible}
+.workspace-pdf-task .workspace-ocr-drawer .pdf-raw-text{max-height:none;overflow:visible;white-space:pre-wrap}
+.workspace-pdf-task .workspace-ocr-drawer .pdf-ocr-controls>form{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@container pdfdesk (max-width:650px){
+ .workspace-pdf-task .pdf-source-grid[data-workspace-page-mode=compare]{height:var(--workspace-page-height);grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) minmax(0,1fr);overflow:hidden}
+ .workspace-pdf-task .workspace-ocr-drawer .pdf-ocr-controls>form{grid-template-columns:1fr}
+ .workspace-page-views{flex-wrap:wrap}
+}
+/* Controles da bancada e de contexto são recolhíveis sem destruir as abas. */
+#commands-toggle{font-size:10px;margin-left:auto;white-space:nowrap}
+.workspace-commands-collapsed .commandbar{padding:5px 12px;min-height:31px;flex-wrap:nowrap}
+.workspace-commands-collapsed .commandbar>.commands{display:none}
+.workspace-commands-collapsed #commands-toggle{order:2}
+#focus-mode{font:500 10px system-ui;padding:3px 8px;background:#fff5f8;color:#8d2241;border:0;white-space:nowrap;order:10;margin-left:auto}
+.workspace-focused>header,.workspace-focused .shell>.rail,.workspace-focused .shell>aside,.workspace-focused .commandbar{display:none}
+.workspace-focused .shell{grid-template-columns:minmax(0,1fr)}
+.workspace-focused #workspace{grid-column:1}
+.workspace-focused .native-tool-heading{min-height:30px;padding:3px 10px}
+.native-tool-heading .native-inspector-toggle,.native-tool-heading .native-focus-toggle{font:10px system-ui;padding:4px 7px;white-space:nowrap;flex-shrink:0}
+.native-tool.native-inspector-collapsed .native-tool-main{grid-template-columns:minmax(0,1fr)}
+.native-tool.native-inspector-collapsed .native-tool-inspector{display:none}
+.native-tool[data-tool=pdf] .native-inspector-toggle,.native-tool[data-tool=markdown] .native-inspector-toggle{display:none}
+.workspace-focused .native-focus-toggle{display:none}
+
+.native-editorial .pdf-source-grid .native-code{display:flex;flex-direction:column;resize:none;overflow:hidden}.native-editorial .pdf-source-grid .native-code .cm-editor{flex:1;min-height:0;height:auto}.native-editorial .pdf-source-grid .native-keyboard{flex-shrink:0;max-height:110px;overflow:auto}.native-tool-heading h1{flex:1;min-width:0}.native-tool-heading .native-tool-state{margin-left:0}

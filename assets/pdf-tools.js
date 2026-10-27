@@ -6,7 +6,7 @@ window.archivePDFTools=(()=>{
   const button=(text,fn)=>{const e=node('button',{type:'button',text});e.onclick=fn;return e;};
   const link=(text,href)=>node('a',{class:'button',text,href});
   function ranges(pages){const parts=[];for(let i=0;i<pages.length;i++){const start=pages[i];let end=start;while(i+1<pages.length&&pages[i+1]===end+1)end=pages[++i];parts.push(start===end?String(start):start+'–'+end);}return parts.join(', ');}
-  async function render(host,{api,projectId='',sourceId='',operationId='',signal=null,setDirty=()=>{},setSaving=()=>{}}){
+  async function render(host,{api,projectId='',sourceId='',operationId='',signal=null,setDirty=()=>{},setSaving=()=>{},onOpenSource=null,onNavigate=null}){
     const shell=node('section',{class:'pdf-tools pdf-operation-studio'});host.replaceChildren(shell);
     const alive=()=>shell.isConnected&&!signal?.aborted;
     const notice=node('p',{class:'status',role:'status'});
@@ -30,7 +30,7 @@ window.archivePDFTools=(()=>{
     const reviewArea=node('section',{class:'pdf-tool-review'});shell.append(reviewArea);
     sourceStage.append(button('Revisar fonte / executar OCR',async()=>{
       if(!source.value){error(new Error('Escolha uma fonte PDF.'));return;}
-      try{await archivePDFReview.renderSource(reviewArea,{api,sourceId:source.value,projectId:destination.value,signal,setDirty,setSaving});reviewArea.scrollIntoView({block:'start'});}catch(e){error(e);}
+      try{if(onOpenSource){await onOpenSource(source.value);return;}await archivePDFReview.renderSource(reviewArea,{api,sourceId:source.value,projectId:destination.value,signal,setDirty,setSaving});reviewArea.scrollIntoView({block:'start'});}catch(e){error(e);}
     }));
     fieldHost=recipeStage;
     const modeField=add('mode','Operação','extract',[['extract','Extrair páginas em um PDF'],['split','Dividir em vários PDFs']]);const mode=modeField.input;modeField.wrap.hidden=true;

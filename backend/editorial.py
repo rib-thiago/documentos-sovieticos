@@ -93,7 +93,10 @@ class Editorial:
         collection = params.get("collection")
         members = {m["document_id"] for m in repository.catalog["memberships"] if m["collection_id"] == collection}
         def include(row):
-            if params.get("status") and row["status"] != params["status"]:
+            if params.get("status") == "abertos":
+                if row["status"] == "corrigido":
+                    return False
+            elif params.get("status") and row["status"] != params["status"]:
                 return False
             if params.get("priority") and row["prioridade"] != params["priority"]:
                 return False
@@ -383,7 +386,7 @@ class Editorial:
                     "before": {"file": edition["file"], "sha256": edition["sha256"], "bytes": edition["bytes"]},
                     "after": {"file": edition["file"], "sha256": changed["sha256"], "bytes": changed["bytes"]}}]
         detail = {"edition_id": edition["id"], "language": edition["language"], "file": edition["file"],
-                  "content": content, "diff": translations.line_diff(data["content"], content)}
+                  "content": content, "current_content": data["content"], "diff": translations.line_diff(data["content"], content)}
         return self.store_preview(data["revision"], candidate, files, edition["document_id"], changes, markdown_edit=detail)
 
     def preview_passage(self, repository, payload):

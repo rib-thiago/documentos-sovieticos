@@ -35,6 +35,19 @@ class LocalServer(ThreadingHTTPServer):
 
 
 def handler_for(repository, editorial):
+    # Resolve the pinned distribution once, not a recursive filesystem walk
+    # on every HTML, CSS, JavaScript and image request.
+    distribution_manifest = repository.root / "prototipo/oficina/vendor/bookreader-manifest.json"
+    try:
+        distribution = json.loads(distribution_manifest.read_text(encoding="utf-8"))
+        if not isinstance(distribution, dict):
+            raise ValueError("Manifesto de distribuição inválido")
+        bookreader_files = {"prototipo/oficina/vendor/bookreader/" + name
+                            for name in distribution.get("files_sha256", {})
+                            if isinstance(name, str) and not Path(name).is_absolute()
+                            and ".." not in Path(name).parts}
+    except (OSError, ValueError, TypeError):
+        bookreader_files = set()
     class Handler(BaseHTTPRequestHandler):
         server_version = "DocumentosSovieticos/1"
 
@@ -229,7 +242,7 @@ def handler_for(repository, editorial):
             path = unquote(urlsplit(self.path).path)
             # Recursos estáticos e capacidades não leem o estado mutável do catálogo.
             # Uma conexão lenta não deve impedir o leitor de descobrir a edição local.
-            if not path.startswith("/api/") or path == "/api/editorial/capabilities" or path.startswith("/api/editorial/pdf/") or path.startswith("/api/editorial/projects"):
+            if not path.startswith("/api/") or path == "/api/editorial/capabilities" or path.startswith("/api/editorial/pdf/") or path.startswith("/api/editorial/pdf-pilots") or path.startswith("/api/editorial/projects"):
                 self.get_locked()
             else:
                 with editorial.lock:
@@ -245,10 +258,28 @@ def handler_for(repository, editorial):
                 if any(len(values) != 1 for values in raw_params.values()):
                     raise QueryError("Use cada parâmetro somente uma vez")
                 params = {key: values[0] for key, values in raw_params.items()}
-                if path in {"/editorial", "/editorial/", "/editorial/form", "/editorial/form/"}:
+                if path in {"/editorial", "/editorial/", "/prototipo/oficina", "/prototipo/oficina/"}:
+                    self.require_local_editorial()
+                    self.send_response(302)
+                    self.send_header("Location", "/estudio/")
+                    self.send_header("Content-Length", "0")
+                    self.end_headers()
+                elif path in {"/editorial/form", "/editorial/form/"}:
                     self.require_local_editorial()
                     page = (Path(__file__).parent / "editorial.html").read_bytes()
                     self.send_data(page, "text/html; charset=utf-8")
+                elif path == "/api/editorial/pdf-pilots":
+                    self.require_local_editorial()
+                    from .pdf_pilots import listing
+                    self.send_json(listing(repository.root))
+                elif path.startswith("/api/editorial/pdf-pilots/"):
+                    self.require_local_editorial()
+                    from .pdf_pilots import pilot_file
+                    parts = path.split("/")
+                    target = pilot_file(repository.root, parts[4]) if len(parts) == 6 and parts[5] == "file" else None
+                    if target is None:
+                        raise EditorialError("Fonte piloto indisponível", 404)
+                    self.send_pdf(None, file_path=target, filename=target.name)
                 elif path.startswith("/api/editorial/"):
                     self.require_local_editorial()
                     if path == "/api/editorial/workspace/document":
@@ -285,7 +316,7 @@ def handler_for(repository, editorial):
                         elif suffix.startswith("operations/"):
                             self.send_json(editorial.pdf_sources.operations.get(suffix.removeprefix("operations/")))
                         elif suffix == "sources":
-                            self.send_json(editorial.pdf_sources.listing())
+                            self.send_json(editorial.pdf_sources.listing(include_capabilities=params.get("light") != "1"))
                         elif suffix == "capabilities":
                             self.send_json(editorial.pdf_sources.capabilities())
                         else:
@@ -448,20 +479,31 @@ def handler_for(repository, editorial):
             self.send_data(page.encode("utf-8"), "text/html; charset=utf-8")
 
         def static_file(self, path):
-            if path in {"/prototipo", "/prototipo/ide"}:
+            if path in {"/prototipo", "/prototipo/ide", "/prototipo/oficina", "/prototipo/estudio", "/estudio"}:
                 self.send_response(302)
                 self.send_header("Location", path + "/")
                 self.send_header("Content-Length", "0")
                 self.end_headers()
                 return
+            if path == "/estudio/" or path.startswith("/estudio/"):
+                self.require_local_editorial()
+                path = "/prototipo/estudio/" + path.removeprefix("/estudio/")
             relative = path.lstrip("/") or "index.html"
-            if relative in {"prototipo/", "prototipo/ide/"}:
+            if relative in {"prototipo/", "prototipo/ide/", "prototipo/oficina/", "prototipo/estudio/"}:
                 relative += "index.html"
             # Apenas os recursos publicados do site; não expõe temporario/, Git ou o banco.
             # Fontes já incorporadas à coleção de 1937; não abrir fontes/ em geral.
             legacy_pdfs = {"fontes/tukhachevsky/julgamento-1937-06-11.ru.pdf", "fontes/tukhachevsky/julgamento-1937-06-11.en.pdf"}
             prototype_files = {"prototipo/index.html", "prototipo/prototype.css", "prototipo/prototype.js",
                                "prototipo/ide/index.html", "prototipo/ide/workspace.css", "prototipo/ide/workspace.js"}
+            prototype_files.update({"prototipo/estudio/" + name for name in (
+                "index.html", "studio.css", "app.js", "api.js", "models.js", "panels.js", "image-worker.js", "russian-keyboard.js", "catalog-tools.js", "loaders.js", "editorial-host.js", "document-tools.js", "study.js", "visualizers.js")})
+            prototype_files.update({"prototipo/oficina/" + name for name in (
+                "index.html", "oficina.css", "oficina.js", "workspace.js", "embedded.js", "embedded.css",
+                "pdf-frame.html", "pdf-frame.js", "pdf-frame.css", "book-frame.html", "book-frame.js", "book-frame.css", "book-view.js", "editorial-native.js", "editorial-native.css", "host-boot.js", "vendor/libraries.js",
+                "vendor/dockview.css", "vendor/pdf_viewer.css", "vendor/pdf.mjs", "vendor/bookreader-manifest.json", "vendor/bookreader-5.0.0-66.tgz",
+                "vendor/pdf.worker.mjs", "vendor/paged.polyfill.js")})
+            prototype_files.update(bookreader_files)
             if not (relative == "index.html" or relative in {"data/manifest.json","data/facsimiles.json"} or relative in prototype_files or relative in legacy_pdfs or relative.startswith(("assets/", "originais/"))):
                 self.send_json({"error": "Recurso não publicado"}, 404)
                 return

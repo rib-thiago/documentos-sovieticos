@@ -203,10 +203,13 @@ class PDFSources:
         result['provenance'] = self.operations.provenance(source_id)
         return result
 
-    def listing(self):
+    def listing(self, *, include_capabilities=True):
         with self.db() as db:
             rows = db.execute('SELECT id,filename,created_at,state,page_count,confirmed,metadata FROM pdf_sources ORDER BY created_at DESC').fetchall()
-        return {'items': [{**dict(row), 'metadata': json.loads(row['metadata'])} for row in rows], 'capabilities': self.capabilities()}
+        result = {'items': [{**dict(row), 'metadata': json.loads(row['metadata'])} for row in rows]}
+        if include_capabilities:
+            result['capabilities'] = self.capabilities()
+        return result
 
     def page(self, source_id, number):
         self.file_path(source_id)

@@ -15,7 +15,7 @@ window.archivePDFSources = (() => {
   const button = (text,action) => {const el=node('button',{type:'button',text});el.onclick=action;return el;};
   const title = c => c.titles?.pt || c.titles?.ru || c.id;
   const url = id => '#/pdf/'+id;
-  async function render({view, path, params, signal, api, collections, session, setDirty, setSaving}) {
+  async function render({view, path, params, signal, api, collections, session, navigate=hash=>{location.hash=hash;}, reloadView=()=>location.reload(), setDirty, setSaving}) {
     let ownDirty = false;
     const dirtyGuard = event => {if(ownDirty){event.preventDefault();event.returnValue='';}};
     window.addEventListener('beforeunload',dirtyGuard);
@@ -79,7 +79,7 @@ window.archivePDFSources = (() => {
           const result=await response.json();if(!response.ok)throw new Error(result.error||'Falha no envio');
           if(result.warning)alert(result.warning);
           if(selectedProject)archiveResearchProjects.announce();
-          ownDirty=false;setDirty(false);location.hash=url(result.source_id)+(selectedProject?'?projeto='+selectedProject:'');
+          ownDirty=false;setDirty(false);navigate(url(result.source_id)+(selectedProject?'?projeto='+selectedProject:''));
         }catch(e){if(e.name!=='AbortError')error(e);}
         finally{submit.disabled=false;ownDirty=false;setDirty(false);setSaving(false);}
       };
@@ -96,6 +96,7 @@ window.archivePDFSources = (() => {
     const progress=node('p',{class:'pdf-source-status',role:'status'}), actions=node('div',{class:'actions','data-workspace-source-actions':''});
     view.append(progress,node('p',{class:'pdf-source-id','data-workspace-zone':'metadata',text:'Fonte: '+id+' · SHA-256: '+source.sha256}),actions);
     actions.append(link('Extrair / dividir esta fonte','#/pdf/ferramentas?'+new URLSearchParams({fonte:id,...(project?{projeto:project.id}:{})})),node('a',{class:'button',href:'/api/editorial/pdf/'+id+'/file?download=1',download:source.filename,text:'Baixar PDF original desta fonte'}));
+    actions.append(node('a',{class:'button',href:'/prototipo/oficina/#/facsimile/'+id,'data-bookreader-source':id,text:'Ler fac-símiles · BookReader'}));
     if(source.provenance?.length){
       const provenance=node('details',{'data-workspace-zone':'metadata'},[node('summary',{text:'Proveniência e correspondência de páginas'})]);
       for(const origin of source.provenance){
@@ -107,7 +108,7 @@ window.archivePDFSources = (() => {
       resume.disabled=true;
       try{source=await api('/api/editorial/pdf/action',{action:'resume',source_id:id},signal);updateProgress();schedule();}catch(e){error(e);}finally{resume.disabled=false;}
     });actions.append(resume);
-    const pageNumber=node('input',{type:'number',min:'1',value:String(source.last_page||1),'aria-label':'Número físico da página'});
+    const pageNumber=node('input',{type:'number',min:'1',value:String(Math.max(1,Math.min(source.page_count||1500,Number(params.get('pagina'))||source.last_page||1))),'aria-label':'Número físico da página'});
     const pageStatus=node('p',{class:'help'});
     const raw=node('pre',{class:'pdf-raw-text',tabindex:'0'});
     const units=node('details',{},[node('summary',{text:'Referências candidatas de parágrafo'})]);
@@ -165,7 +166,7 @@ window.archivePDFSources = (() => {
     updateProgress();schedule();
     const initialized=await Promise.allSettled([archivePDFReview.mountOCR(ocrHost,{api,sourceId:id,currentPage:()=>current,signal}),openPage(current)]);
     if(signal.aborted)return;
-    if(initialized[0].status==='rejected')ocrHost.replaceChildren(node('p',{class:'status error',text:'Não foi possível carregar o OCR: '+initialized[0].reason.message}),button('Tentar novamente',()=>{location.reload();}));
+    if(initialized[0].status==='rejected')ocrHost.replaceChildren(node('p',{class:'status error',text:'Não foi possível carregar o OCR: '+initialized[0].reason.message}),button('Tentar novamente',()=>{reloadView();}));
     const bindings=node('details',{class:'panel','data-workspace-zone':'links'},[node('summary',{text:'Vincular esta fonte a um documento'})]),bindingsHost=node('section');bindings.append(bindingsHost);view.append(bindings);
     let bindingsLoaded=false;bindings.addEventListener('toggle',async()=>{if(!bindings.open||bindingsLoaded)return;try{await archivePDFLinks.renderManager(bindingsHost,{api,sourceId:id,projectId:project?.id||'',signal});bindingsLoaded=true;}catch(e){bindingsHost.textContent=e.message;}});
     const form=node('form',{class:'panel pdf-source-form','data-workspace-zone':'metadata'}), inputs={};
@@ -205,7 +206,7 @@ window.archivePDFSources = (() => {
     async function showHistory(){
       const result=await api('/api/editorial/pdf/'+id+'/history',null,signal);if(signal.aborted)return;records.replaceChildren();
       for(const record of result.items){const entry=node('div',{class:'panel'},[node('p',{text:record.created_at}),node('pre',{class:'pdf-raw-text',text:JSON.stringify(record.before_state,null,2)})]);
-        const restore=button('Restaurar este estado anterior',async()=>{if(!confirm('Restaurar o cadastro anterior mostrado? A fonte PDF e a extração serão preservadas.'))return;restore.disabled=true;try{await api('/api/editorial/pdf/action',{action:'restore',source_id:id,revision:source.revision,history_id:record.id},signal);location.reload();}catch(e){error(e);restore.disabled=false;}});entry.append(restore);records.append(entry);}
+        const restore=button('Restaurar este estado anterior',async()=>{if(!confirm('Restaurar o cadastro anterior mostrado? A fonte PDF e a extração serão preservadas.'))return;restore.disabled=true;try{await api('/api/editorial/pdf/action',{action:'restore',source_id:id,revision:source.revision,history_id:record.id},signal);reloadView();}catch(e){error(e);restore.disabled=false;}});entry.append(restore);records.append(entry);}
       if(!result.items.length)records.append(node('p',{text:'Nenhuma confirmação de cadastro ainda.'}));
     }
     await showHistory();

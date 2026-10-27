@@ -99,5 +99,14 @@ window.archiveProjectEditor=(()=>{
     select.onchange=()=>{const [path,raw='']=location.hash.split('?');const params=new URLSearchParams(raw);params.set('idioma',select.value);history.replaceState(null,'',path+'?'+params);load();};await load();
   }
   window.addEventListener('beforeunload',event=>{if(drafts.size){event.preventDefault();event.returnValue='';}});
-  return {render,api};
+  async function receiveDraft(payload){
+    const projectId=state.workspaceProject?.id,editionId=payload.document_id+':'+payload.language;
+    if(!projectId||projectId!==payload.project_id||state.activeDocument?.meta.id!==payload.document_id)throw new Error('Contexto do rascunho não corresponde ao projeto aberto.');
+    const data=await api('/api/editorial/workspace/edition?'+query(projectId,editionId));
+    if(data.content_sha256!==payload.baseline_sha256||data.revision!==payload.revision)throw new Error('A versão do projeto mudou. O rascunho não foi aplicado; baixe uma cópia e compare.');
+    if(typeof payload.content!=='string')throw new Error('Rascunho inválido.');
+    drafts.set(projectId+'|'+editionId,{text:payload.content,filename:'',base:data});
+    await archiveWorkspace.showTool('markdown');return true;
+  }
+  return {render,api,receiveDraft};
 })();
