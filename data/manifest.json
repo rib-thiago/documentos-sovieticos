@@ -1064,6 +1064,86 @@
             }
           ],
           "original_language": "ru"
+        },
+        {
+          "id": "frinovsky-1939-04-11",
+          "type": "document",
+          "languages": [
+            {
+              "code": "ru",
+              "label": "Texto em russo",
+              "file": "originais/locais/frinovsky-1939-04-11.ru.md",
+              "format": "markdown",
+              "editorial_reviews": [
+                {
+                  "batch_id": "frinovsky-fontes-furr-20261027",
+                  "reviewed_at": "2026-10-27T16:03:30.845913+00:00",
+                  "report": "docs/revisao-markdown/frinovsky-1939-04-11/README.md",
+                  "evidence": "docs/revisao-markdown/frinovsky-1939-04-11/evidence.json",
+                  "source_comparison": "docs/revisao-markdown/frinovsky-1939-04-11/source-comparison.json",
+                  "scope": "Formatação, proveniência e cobertura das versões RU/EN/PT; cotejo lexical RU/EN contra páginas indicadas. Sem manuscrito, certificação histórica ou emenda silenciosa da fonte.",
+                  "before_sha256": "4f94d3d498fbca1ab0b77b2119a37f057f05e2215880555b1c233db09e39a7c4",
+                  "after_sha256": "908614c8ad1c33a66ebe6bae157aab5cd4dfb44eda797a4c4877e1aaa3e6ba11",
+                  "translation_status_unchanged": true
+                }
+              ],
+              "source_url": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html"
+            },
+            {
+              "code": "pt",
+              "label": "Tradução portuguesa",
+              "file": "originais/locais/frinovsky-1939-04-11.pt.md",
+              "format": "markdown",
+              "editorial_reviews": [
+                {
+                  "batch_id": "frinovsky-fontes-furr-20261027",
+                  "reviewed_at": "2026-10-27T16:03:30.845913+00:00",
+                  "report": "docs/revisao-markdown/frinovsky-1939-04-11/README.md",
+                  "evidence": "docs/revisao-markdown/frinovsky-1939-04-11/evidence.json",
+                  "source_comparison": "docs/revisao-markdown/frinovsky-1939-04-11/source-comparison.json",
+                  "scope": "Formatação, proveniência e cobertura das versões RU/EN/PT; cotejo lexical RU/EN contra páginas indicadas. Sem manuscrito, certificação histórica ou emenda silenciosa da fonte.",
+                  "before_sha256": "d6249e90d141f06602b94ba8462adbc683ef89c3e4e9719949db197e570e00fd",
+                  "after_sha256": "b11182768ba8eb2f8cc771943e29eb9bae73e2c7ce525e2de4237e15ca209e1a",
+                  "translation_status_unchanged": true
+                }
+              ],
+              "source_urls": [
+                "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html",
+                "https://msuweb.montclair.edu/~furrg/research/frinovskyeng.html"
+              ]
+            },
+            {
+              "code": "en",
+              "label": "Tradução inglesa",
+              "file": "originais/locais/frinovsky-1939-04-11.en.md",
+              "format": "markdown",
+              "editorial_reviews": [
+                {
+                  "batch_id": "frinovsky-fontes-furr-20261027",
+                  "reviewed_at": "2026-10-27T16:03:30.845913+00:00",
+                  "report": "docs/revisao-markdown/frinovsky-1939-04-11/README.md",
+                  "evidence": "docs/revisao-markdown/frinovsky-1939-04-11/evidence.json",
+                  "source_comparison": "docs/revisao-markdown/frinovsky-1939-04-11/source-comparison.json",
+                  "scope": "Formatação, proveniência e cobertura das versões RU/EN/PT; cotejo lexical RU/EN contra páginas indicadas. Sem manuscrito, certificação histórica ou emenda silenciosa da fonte.",
+                  "before_sha256": "12d7e5b38c35aa662c8976e859ca7552847fcf203d96d32b200984b2c1f1a591",
+                  "after_sha256": "0c19221e4f9b614dab6c5813b21de5605907bd24a0b0ea30a90e566145bf53a8",
+                  "translation_status_unchanged": true
+                }
+              ],
+              "source_url": "https://msuweb.montclair.edu/~furrg/research/frinovskyeng.html"
+            }
+          ],
+          "title_pt": "Declaração de M. P. Frinovsky de 11 de abril de 1939",
+          "title_ru": "Заявление М. П. Фриновского от 11 апреля 1939 года",
+          "title_en": "Statement by M. P. Frinovsky of April 11, 1939",
+          "date": "1939-04-11",
+          "original_language": "ru",
+          "archive": "АП РФ. Ф. 3. Оп. 24. Д. 373. Л. 3—44.",
+          "author": "М. П. Фриновский",
+          "source_name": "Grover Furr / Montclair State University",
+          "source_url": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html",
+          "document_type": "statement",
+          "format": "markdown"
         }
       ]
     },
@@ -136601,6 +136681,86 @@
           }
         }
       ]
+    },
+    {
+      "id": "frinovsky-1939-04-11",
+      "type": "document",
+      "languages": [
+        {
+          "code": "ru",
+          "label": "Texto em russo",
+          "file": "originais/locais/frinovsky-1939-04-11.ru.md",
+          "format": "markdown",
+          "editorial_reviews": [
+            {
+              "batch_id": "frinovsky-fontes-furr-20261027",
+              "reviewed_at": "2026-10-27T16:03:30.845913+00:00",
+              "report": "docs/revisao-markdown/frinovsky-1939-04-11/README.md",
+              "evidence": "docs/revisao-markdown/frinovsky-1939-04-11/evidence.json",
+              "source_comparison": "docs/revisao-markdown/frinovsky-1939-04-11/source-comparison.json",
+              "scope": "Formatação, proveniência e cobertura das versões RU/EN/PT; cotejo lexical RU/EN contra páginas indicadas. Sem manuscrito, certificação histórica ou emenda silenciosa da fonte.",
+              "before_sha256": "4f94d3d498fbca1ab0b77b2119a37f057f05e2215880555b1c233db09e39a7c4",
+              "after_sha256": "908614c8ad1c33a66ebe6bae157aab5cd4dfb44eda797a4c4877e1aaa3e6ba11",
+              "translation_status_unchanged": true
+            }
+          ],
+          "source_url": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html"
+        },
+        {
+          "code": "pt",
+          "label": "Tradução portuguesa",
+          "file": "originais/locais/frinovsky-1939-04-11.pt.md",
+          "format": "markdown",
+          "editorial_reviews": [
+            {
+              "batch_id": "frinovsky-fontes-furr-20261027",
+              "reviewed_at": "2026-10-27T16:03:30.845913+00:00",
+              "report": "docs/revisao-markdown/frinovsky-1939-04-11/README.md",
+              "evidence": "docs/revisao-markdown/frinovsky-1939-04-11/evidence.json",
+              "source_comparison": "docs/revisao-markdown/frinovsky-1939-04-11/source-comparison.json",
+              "scope": "Formatação, proveniência e cobertura das versões RU/EN/PT; cotejo lexical RU/EN contra páginas indicadas. Sem manuscrito, certificação histórica ou emenda silenciosa da fonte.",
+              "before_sha256": "d6249e90d141f06602b94ba8462adbc683ef89c3e4e9719949db197e570e00fd",
+              "after_sha256": "b11182768ba8eb2f8cc771943e29eb9bae73e2c7ce525e2de4237e15ca209e1a",
+              "translation_status_unchanged": true
+            }
+          ],
+          "source_urls": [
+            "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html",
+            "https://msuweb.montclair.edu/~furrg/research/frinovskyeng.html"
+          ]
+        },
+        {
+          "code": "en",
+          "label": "Tradução inglesa",
+          "file": "originais/locais/frinovsky-1939-04-11.en.md",
+          "format": "markdown",
+          "editorial_reviews": [
+            {
+              "batch_id": "frinovsky-fontes-furr-20261027",
+              "reviewed_at": "2026-10-27T16:03:30.845913+00:00",
+              "report": "docs/revisao-markdown/frinovsky-1939-04-11/README.md",
+              "evidence": "docs/revisao-markdown/frinovsky-1939-04-11/evidence.json",
+              "source_comparison": "docs/revisao-markdown/frinovsky-1939-04-11/source-comparison.json",
+              "scope": "Formatação, proveniência e cobertura das versões RU/EN/PT; cotejo lexical RU/EN contra páginas indicadas. Sem manuscrito, certificação histórica ou emenda silenciosa da fonte.",
+              "before_sha256": "12d7e5b38c35aa662c8976e859ca7552847fcf203d96d32b200984b2c1f1a591",
+              "after_sha256": "0c19221e4f9b614dab6c5813b21de5605907bd24a0b0ea30a90e566145bf53a8",
+              "translation_status_unchanged": true
+            }
+          ],
+          "source_url": "https://msuweb.montclair.edu/~furrg/research/frinovskyeng.html"
+        }
+      ],
+      "title_pt": "Declaração de M. P. Frinovsky de 11 de abril de 1939",
+      "title_ru": "Заявление М. П. Фриновского от 11 апреля 1939 года",
+      "title_en": "Statement by M. P. Frinovsky of April 11, 1939",
+      "date": "1939-04-11",
+      "original_language": "ru",
+      "archive": "АП РФ. Ф. 3. Оп. 24. Д. 373. Л. 3—44.",
+      "author": "М. П. Фриновский",
+      "source_name": "Grover Furr / Montclair State University",
+      "source_url": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html",
+      "document_type": "statement",
+      "format": "markdown"
     }
   ]
 }

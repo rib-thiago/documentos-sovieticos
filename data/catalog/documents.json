@@ -152213,5 +152213,79 @@
       "format",
       "languages"
     ]
+  },
+  {
+    "id": "frinovsky-1939-04-11",
+    "kind": "document",
+    "titles": {
+      "ru": "Заявление М. П. Фриновского от 11 апреля 1939 года",
+      "pt": "Declaração de M. P. Frinovsky de 11 de abril de 1939",
+      "en": "Statement by M. P. Frinovsky of April 11, 1939"
+    },
+    "document_type": "statement",
+    "historical_date": {
+      "display": "1939-04-11",
+      "value": "1939-04-11",
+      "precision": "day"
+    },
+    "archive_reference": "АП РФ. Ф. 3. Оп. 24. Д. 373. Л. 3—44.",
+    "author_label": "М. П. Фриновский",
+    "source": {
+      "name": "Grover Furr / Montclair State University",
+      "id": null,
+      "url": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html"
+    },
+    "source_metadata": {
+      "original_language": "ru",
+      "imported_filename": "frinovsky-1939-04-11.ru.md",
+      "editorial_reviews": [
+        {
+          "batch_id": "onda16-quadro-mozokhin-cadastros-20261025",
+          "source_evidence": "temporario/revisao-onda16/cadastros/frinovsky-1939-04-11.evidence.json",
+          "before_fields": {
+            "historical_date": {
+              "display": "1939-04-11",
+              "value": null,
+              "precision": "not_recorded"
+            },
+            "author_label": null,
+            "archive_reference": null
+          },
+          "before_historical_date": {
+            "display": "1939-04-11",
+            "value": null,
+            "precision": "not_recorded"
+          },
+          "source_evidence_snapshot": "temporario/revisao-onda1/frozen/onda16-quadro-mozokhin-cadastros-20261025/69c9b7ac19d137d7108bf853a583a6262d82bae15f4d54cca031de38e14b650b-frinovsky-1939-04-11.evidence.json"
+        },
+        {
+          "batch_id": "frinovsky-fontes-furr-20261027",
+          "reviewed_at": "2026-10-27T16:03:30.845913+00:00",
+          "report": "docs/revisao-markdown/frinovsky-1939-04-11/README.md",
+          "evidence": "docs/revisao-markdown/frinovsky-1939-04-11/evidence.json",
+          "source_comparison": "docs/revisao-markdown/frinovsky-1939-04-11/source-comparison.json",
+          "scope": "Formatação, proveniência e cobertura das versões RU/EN/PT; cotejo lexical RU/EN contra páginas indicadas. Sem manuscrito, certificação histórica ou emenda silenciosa da fonte."
+        }
+      ],
+      "source_urls": {
+        "ru": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html",
+        "en": "https://msuweb.montclair.edu/~furrg/research/frinovskyeng.html"
+      },
+      "printed_edition": {
+        "title": "ЛУБЯНКА. Сталин и НКВД — НКГБ — ГУКР «СМЕРШ». 1939 — март 1946",
+        "place": "Москва",
+        "year": "2006",
+        "pages": "33–50",
+        "basis": "Indicação bibliográfica das páginas HTML; livro físico não cotejado."
+      }
+    },
+    "default_format": "markdown",
+    "presentation": {},
+    "extra": {},
+    "compatibility_fields": [
+      "id",
+      "type",
+      "languages"
+    ]
   }
 ]

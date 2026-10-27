@@ -1,0 +1,204 @@
+{
+  "id": "frinovsky-1939-04-11",
+  "sources": [
+    {
+      "language": "ru",
+      "url": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html",
+      "sha256": "dc59f92f5cd03ae3c0959011c94ff4c416a94df519e25aca1f98166a2114228a",
+      "bytes": 54548,
+      "encoding": "windows-1251",
+      "workspace_copy": "temporario/revisao-frinovsky-20261027/source.ru.html"
+    },
+    {
+      "language": "en",
+      "url": "https://msuweb.montclair.edu/~furrg/research/frinovskyeng.html",
+      "sha256": "58e607debd6e1ee6e7a0fa1b87c637322d27d0f6fe7d338fb639b02d0334ffdd",
+      "bytes": 68962,
+      "encoding": "windows-1252",
+      "workspace_copy": "temporario/revisao-frinovsky-20261027/source.en.html"
+    }
+  ],
+  "editions": [
+    {
+      "language": "ru",
+      "file": "originais/locais/frinovsky-1939-04-11.ru.md",
+      "before_sha256": "4f94d3d498fbca1ab0b77b2119a37f057f05e2215880555b1c233db09e39a7c4",
+      "after_sha256": "908614c8ad1c33a66ebe6bae157aab5cd4dfb44eda797a4c4877e1aaa3e6ba11",
+      "body_words_unchanged": true,
+      "footnote_definitions": 10,
+      "footnote_calls": 12,
+      "candidate": "temporario/revisao-frinovsky-20261027/candidates/frinovsky-1939-04-11.ru.md",
+      "exact_replacements": [
+        [
+          "РОШАЛЯ надо обломать\\*",
+          "РОШАЛЯ надо обломать[^stalin-1]"
+        ],
+        [
+          "*имеются свои люди в дивизии*",
+          "имеются свои люди в дивизии[^stalin-2]"
+        ],
+        [
+          "САРОЦКИМ\\*\\*",
+          "САРОЦКИМ[^stalin-3]"
+        ],
+        [
+          "КУЛЕШОМ\\*\\*",
+          "КУЛЕШОМ[^stalin-3]"
+        ],
+        [
+          "СЕМЕНОВЫМ\\*\\*",
+          "СЕМЕНОВЫМ[^stalin-3]"
+        ],
+        [
+          "**войсковая группа из состава дивизии**",
+          "войсковая группа из состава дивизии[^stalin-4]"
+        ],
+        [
+          "участников заговора\\*\\*\\*",
+          "участников заговора[^stalin-5]"
+        ],
+        [
+          "***БОЯРА, ДЯТКИНА и ШАЦКОГО***",
+          "БОЯРА, ДЯТКИНА и ШАЦКОГО[^stalin-6]"
+        ],
+        [
+          "26—27 августа\\*\\*\\*\\*",
+          "26—27 августа[^stalin-7]"
+        ],
+        [
+          "ЯМНИЦКИЙ **** и другие****",
+          "ЯМНИЦКИЙ и другие[^stalin-8]"
+        ],
+        [
+          "показаний об этом не дали*****",
+          "показаний об этом не дали[^stalin-9]"
+        ],
+        [
+          "*****БЕЛОВА*****",
+          "БЕЛОВА[^stalin-10]"
+        ]
+      ]
+    },
+    {
+      "language": "pt",
+      "file": "originais/locais/frinovsky-1939-04-11.pt.md",
+      "before_sha256": "d6249e90d141f06602b94ba8462adbc683ef89c3e4e9719949db197e570e00fd",
+      "after_sha256": "b11182768ba8eb2f8cc771943e29eb9bae73e2c7ce525e2de4237e15ca209e1a",
+      "body_words_unchanged": true,
+      "footnote_definitions": 10,
+      "footnote_calls": 12,
+      "candidate": "temporario/revisao-frinovsky-20261027/candidates/frinovsky-1939-04-11.pt.md",
+      "exact_replacements": [
+        [
+          "É preciso dobrar Roshal\\*",
+          "É preciso dobrar Roshal[^stalin-1]"
+        ],
+        [
+          "*tinha seus próprios homens na divisão*",
+          "tinha seus próprios homens na divisão[^stalin-2]"
+        ],
+        [
+          "Sarotsky\\*\\*",
+          "Sarotsky[^stalin-3]"
+        ],
+        [
+          "Kulesh\\*\\*",
+          "Kulesh[^stalin-3]"
+        ],
+        [
+          "Semionov\\*\\*",
+          "Semionov[^stalin-3]"
+        ],
+        [
+          "**grupo militar formado por integrantes da divisão**",
+          "grupo militar formado por integrantes da divisão[^stalin-4]"
+        ],
+        [
+          "participantes da conspiração\\*\\*\\*",
+          "participantes da conspiração[^stalin-5]"
+        ],
+        [
+          "***Boiar, Diatkin e Shatsky***",
+          "Boiar, Diatkin e Shatsky[^stalin-6]"
+        ],
+        [
+          "26 e 27 de agosto\\*\\*\\*\\*",
+          "26 e 27 de agosto[^stalin-7]"
+        ],
+        [
+          "Iamnitsky**** e outros****",
+          "Iamnitsky e outros[^stalin-8]"
+        ],
+        [
+          "depoimentos a respeito*****",
+          "depoimentos a respeito[^stalin-9]"
+        ],
+        [
+          "*****Belov*****",
+          "Belov[^stalin-10]"
+        ]
+      ]
+    },
+    {
+      "language": "en",
+      "file": "originais/locais/frinovsky-1939-04-11.en.md",
+      "before_sha256": "12d7e5b38c35aa662c8976e859ca7552847fcf203d96d32b200984b2c1f1a591",
+      "after_sha256": "0c19221e4f9b614dab6c5813b21de5605907bd24a0b0ea30a90e566145bf53a8",
+      "body_words_unchanged": true,
+      "footnote_definitions": 10,
+      "footnote_calls": 12,
+      "candidate": "temporario/revisao-frinovsky-20261027/candidates/frinovsky-1939-04-11.en.md",
+      "exact_replacements": [
+        [
+          "You should cut off Roshal’ and take",
+          "You should cut off Roshal’[^stalin-1] and take"
+        ],
+        [
+          "Kondrat’ev had his own people in this division.",
+          "Kondrat’ev had his own people in this division[^stalin-2]."
+        ],
+        [
+          "UPVO Sarotsky,",
+          "UPVO Sarotsky[^stalin-3],"
+        ],
+        [
+          "Odessa, Kulesh,",
+          "Odessa, Kulesh[^stalin-3],"
+        ],
+        [
+          "Ukraine, Semenov.",
+          "Ukraine, Semenov[^stalin-3]."
+        ],
+        [
+          "a military group from the members of the division which",
+          "a military group from the members of the division[^stalin-4] which"
+        ],
+        [
+          "from the group of members of the conspiracy.",
+          "from the group of members of the conspiracy[^stalin-5]."
+        ],
+        [
+          "Boiar, Diatkin, and Shatsky.",
+          "Boiar, Diatkin, and Shatsky[^stalin-6]."
+        ],
+        [
+          "had been shot August 26 – 27.",
+          "had been shot August 26 – 27[^stalin-7]."
+        ],
+        [
+          "Iamnitsky, and others.",
+          "Iamnitsky, and others[^stalin-8]."
+        ],
+        [
+          "did not confess about it.",
+          "did not confess about it[^stalin-9]."
+        ],
+        [
+          "Uritsky had recanted his confessions against Belov when",
+          "Uritsky had recanted his confessions against Belov[^stalin-10] when"
+        ]
+      ]
+    }
+  ],
+  "scope": "Cotejo lexical RU/EN contra HTML indicado; cobertura e leitura editorial PT; reparo de aparato Markdown. Não certifica a acurácia histórica das alegações nem revisão independente de manuscrito."
+}

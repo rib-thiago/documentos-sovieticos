@@ -1,0 +1,48 @@
+{
+  "ru": {
+    "source_tokens": 8070,
+    "local_tokens": 8070,
+    "lexical_differences": [],
+    "source_line_hyphens_joined": [
+      "ПОГРЕ-БИНСКИМ",
+      "ПОГРЕ-БИНСКИЙ",
+      "ГОРШЕНИ-НА",
+      "КРУЧИНКИ-НЫМ",
+      "ЯГО-ДИНСКИЙ",
+      "ГЛЕ-БОВА",
+      "КО-ДАЦКИЙ",
+      "ЯМНИЦ-КИЙ",
+      "МАРЬЯСИ-НУ",
+      "ЛЮШ-КОВ"
+    ],
+    "special_page_breaks": {
+      "ru": "расска /35/ зал → рассказал",
+      "en": "vice- /42/ commissar → vice-commissar"
+    },
+    "normalization": "Caso/pontuação/marcadores de página; junção de palavras partidas. Biblio inicial HTML excluída; título digital excluído; em EN excluídos os dois acréscimos editoriais explicitamente identificados na edição local (parágrafo e aparato).",
+    "candidate_narrative_verified_unchanged": "evidence.json"
+  },
+  "en": {
+    "source_tokens": 10766,
+    "local_tokens": 10766,
+    "lexical_differences": [],
+    "source_line_hyphens_joined": [
+      "ПОГРЕ-БИНСКИМ",
+      "ПОГРЕ-БИНСКИЙ",
+      "ГОРШЕНИ-НА",
+      "КРУЧИНКИ-НЫМ",
+      "ЯГО-ДИНСКИЙ",
+      "ГЛЕ-БОВА",
+      "КО-ДАЦКИЙ",
+      "ЯМНИЦ-КИЙ",
+      "МАРЬЯСИ-НУ",
+      "ЛЮШ-КОВ"
+    ],
+    "special_page_breaks": {
+      "ru": "расска /35/ зал → рассказал",
+      "en": "vice- /42/ commissar → vice-commissar"
+    },
+    "normalization": "Caso/pontuação/marcadores de página; junção de palavras partidas. Biblio inicial HTML excluída; título digital excluído; em EN excluídos os dois acréscimos editoriais explicitamente identificados na edição local (parágrafo e aparato).",
+    "candidate_narrative_verified_unchanged": "evidence.json"
+  }
+}

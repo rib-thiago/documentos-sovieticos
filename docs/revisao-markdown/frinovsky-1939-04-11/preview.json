@@ -1,0 +1,84 @@
+{
+  "preview_id": "tzHjXWn_uCvzW8yQNcGqZJsiomRTa6Yc",
+  "changes": [
+    {
+      "field": "source_and_editorial_review",
+      "document_id": "frinovsky-1939-04-11",
+      "before": {
+        "name": null,
+        "id": null,
+        "url": null
+      },
+      "after": {
+        "name": "Grover Furr / Montclair State University",
+        "id": null,
+        "url": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html"
+      }
+    },
+    {
+      "field": "frinovsky-1939-04-11:ru",
+      "before": "4f94d3d498fbca1ab0b77b2119a37f057f05e2215880555b1c233db09e39a7c4",
+      "after": "908614c8ad1c33a66ebe6bae157aab5cd4dfb44eda797a4c4877e1aaa3e6ba11"
+    },
+    {
+      "field": "frinovsky-1939-04-11:pt",
+      "before": "d6249e90d141f06602b94ba8462adbc683ef89c3e4e9719949db197e570e00fd",
+      "after": "b11182768ba8eb2f8cc771943e29eb9bae73e2c7ce525e2de4237e15ca209e1a"
+    },
+    {
+      "field": "frinovsky-1939-04-11:en",
+      "before": "12d7e5b38c35aa662c8976e859ca7552847fcf203d96d32b200984b2c1f1a591",
+      "after": "0c19221e4f9b614dab6c5813b21de5605907bd24a0b0ea30a90e566145bf53a8"
+    },
+    {
+      "field": "frinovsky-1939-04-11:cadastro_local",
+      "before": {
+        "chave": "frinovsky-1939-04-11:cadastro_local",
+        "prioridade": "media",
+        "dificuldade": "baixa",
+        "status": "em_revisao",
+        "id": "frinovsky-1939-04-11",
+        "colecoes": "Yezhov vs Stalin",
+        "titulo_ru": "Заявление М. П. Фриновского от 11 апреля 1939 года",
+        "problema": "cadastro_local",
+        "dificuldade_encontrada": "Documento novo: conferir metadados, conteúdo e apresentação no leitor.",
+        "acao_sugerida": "Data, autoria nominal e cota completadas a partir do corpo RU e testemunho local Yezhov2. DEPENDE DE EVIDÊNCIA EXTERNA: fac-símile/edição verificável para variantes лаче/паче, ВАКОВСКОГО/ЗАКОВСКОГО, notas marginais e identificação da proveniência EN/PT; não emendar com base apenas em cópias divergentes.",
+        "arquivo_markdown": "originais/locais/frinovsky-1939-04-11.ru.md",
+        "url_teste": "/#/doc/frinovsky-1939-04-11",
+        "fonte": "",
+        "trechos": "[]",
+        "notas_do_revisor": "Revisão onda16-quadro-mozokhin-cadastros-20261025 / R16-cadastros: parcial. Evidência: temporario/revisao-onda16/cadastros/frinovsky-1939-04-11.evidence.json Snapshot: temporario/revisao-onda1/frozen/onda16-quadro-mozokhin-cadastros-20261025/69c9b7ac19d137d7108bf853a583a6262d82bae15f4d54cca031de38e14b650b-frinovsky-1939-04-11.evidence.json Próxima ação: Data, autoria nominal e cota completadas a partir do corpo RU e testemunho local Yezhov2. DEPENDE DE EVIDÊNCIA EXTERNA: fac-símile/edição verificável para variantes лаче/паче, ВАКОВСКОГО/ЗАКОВСКОГО, notas marginais e identificação da proveniência EN/PT; não emendar com base apenas em cópias divergentes."
+      },
+      "after": {
+        "chave": "frinovsky-1939-04-11:cadastro_local",
+        "prioridade": "media",
+        "dificuldade": "baixa",
+        "status": "corrigido",
+        "id": "frinovsky-1939-04-11",
+        "colecoes": "Yezhov vs Stalin",
+        "titulo_ru": "Заявление М. П. Фриновского от 11 апреля 1939 года",
+        "problema": "cadastro_local",
+        "dificuldade_encontrada": "Revisão operacional concluída contra os HTML RU/EN indicados. Variantes e acréscimos editoriais explicitados; aparato Markdown corrigido sem exigir fac-símile.",
+        "acao_sugerida": "Nenhuma pendência operacional deste cadastro. Conferir notas clicáveis e fontes no leitor; variantes literais preservadas e documentadas no relatório.",
+        "arquivo_markdown": "originais/locais/frinovsky-1939-04-11.ru.md",
+        "url_teste": "/#/doc/frinovsky-1939-04-11",
+        "fonte": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html",
+        "trechos": "[]",
+        "notas_do_revisor": "Revisão onda16-quadro-mozokhin-cadastros-20261025 / R16-cadastros: parcial. Evidência: temporario/revisao-onda16/cadastros/frinovsky-1939-04-11.evidence.json Snapshot: temporario/revisao-onda1/frozen/onda16-quadro-mozokhin-cadastros-20261025/69c9b7ac19d137d7108bf853a583a6262d82bae15f4d54cca031de38e14b650b-frinovsky-1939-04-11.evidence.json Próxima ação: Data, autoria nominal e cota completadas a partir do corpo RU e testemunho local Yezhov2. DEPENDE DE EVIDÊNCIA EXTERNA: fac-símile/edição verificável para variantes лаче/паче, ВАКОВСКОГО/ЗАКОВСКОГО, notas marginais e identificação da proveniência EN/PT; não emendar com base apenas em cópias divergentes. | frinovsky-fontes-furr-20261027: cotejo de fonte e formatação concluído; 10 notas e 12 chamadas por idioma, narrativa preservada. Relatório: docs/revisao-markdown/frinovsky-1939-04-11/README.md"
+      }
+    }
+  ],
+  "document_id": "frinovsky-1939-04-11",
+  "expires_in": 900,
+  "updates_index": true,
+  "translation": null,
+  "file_diffs": [],
+  "requires_acknowledgement": false,
+  "changes_content": true,
+  "markdown_edit": null,
+  "entity": {
+    "kind": "document",
+    "id": "frinovsky-1939-04-11"
+  },
+  "creation": null
+}

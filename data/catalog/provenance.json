@@ -2672,7 +2672,8 @@
       "svitlana-f36bed6f0cef1d55-pyatakov-stalin-1919-10-13",
       "svitlana-7eaa34b7b06d2715-stalin-budyonny-voroshilov-1920-07-29",
       "svitlana-dde2d2f60490c92b-ordzhonikidze-stalin-1920-12-08",
-      "mozokhin-2013-v1-100"
+      "mozokhin-2013-v1-100",
+      "frinovsky-1939-04-11"
     ]
   },
   "source_tables": [
@@ -2744,5 +2745,34 @@
     },
     "parent_files_unchanged": true,
     "historical_validation": "Não realizada; divergências preservadas no relatório e nos metadados."
-  }
+  },
+  "editorial_source_reviews": [
+    {
+      "document_id": "frinovsky-1939-04-11",
+      "batch_id": "frinovsky-fontes-furr-20261027",
+      "reviewed_at": "2026-10-27T16:03:30.845913+00:00",
+      "report": "docs/revisao-markdown/frinovsky-1939-04-11/README.md",
+      "evidence": "docs/revisao-markdown/frinovsky-1939-04-11/evidence.json",
+      "source_comparison": "docs/revisao-markdown/frinovsky-1939-04-11/source-comparison.json",
+      "scope": "Formatação, proveniência e cobertura das versões RU/EN/PT; cotejo lexical RU/EN contra páginas indicadas. Sem manuscrito, certificação histórica ou emenda silenciosa da fonte.",
+      "sources": [
+        {
+          "language": "ru",
+          "url": "https://msuweb.montclair.edu/~furrg/research/frinovskyru.html",
+          "sha256": "dc59f92f5cd03ae3c0959011c94ff4c416a94df519e25aca1f98166a2114228a",
+          "bytes": 54548,
+          "encoding": "windows-1251",
+          "workspace_copy": "temporario/revisao-frinovsky-20261027/source.ru.html"
+        },
+        {
+          "language": "en",
+          "url": "https://msuweb.montclair.edu/~furrg/research/frinovskyeng.html",
+          "sha256": "58e607debd6e1ee6e7a0fa1b87c637322d27d0f6fe7d338fb639b02d0334ffdd",
+          "bytes": 68962,
+          "encoding": "windows-1252",
+          "workspace_copy": "temporario/revisao-frinovsky-20261027/source.en.html"
+        }
+      ]
+    }
+  ]
 }
