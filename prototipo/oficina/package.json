@@ -1,0 +1,1 @@
+{"private":true,"type":"module","scripts":{"build":"esbuild src/libraries.js --bundle --format=esm --minify --outfile=vendor/libraries.js"},"dependencies":{"codemirror":"6.0.2","@codemirror/lang-markdown":"6.3.4","@codemirror/merge":"6.10.2","dockview-core":"4.11.0","pdfjs-dist":"4.10.38","pagedjs":"0.4.3","openseadragon":"5.0.1"},"devDependencies":{"esbuild":"0.25.0"}}

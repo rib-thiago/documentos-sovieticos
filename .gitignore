@@ -7,3 +7,6 @@ __pycache__/
 # Lixo de editor
 .DS_Store
 .vscode/
+
+# Dependências de desenvolvimento do protótipo
+prototipo/oficina/node_modules/

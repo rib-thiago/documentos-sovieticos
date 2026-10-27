@@ -1,0 +1,126 @@
+/* Viewer layout belongs to the component, independently of the old Oficina page. */
+.document-book-viewer,
+.document-image-viewer,
+.document-print-viewer {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.document-book-viewer > .pane-toolbar {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: min(160px, 25dvh);
+  overflow: auto;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--line, #e6d9db);
+  background: var(--paper, #fffdf9);
+  font: 11px/1.5 var(--font-ui, system-ui, sans-serif);
+}
+.document-book-viewer > .pane-toolbar :is(button, select, input) {
+  max-width: 100%;
+  min-width: 0;
+  font: inherit;
+  padding: 5px 8px;
+  border: 1px solid var(--line, #e6d9db);
+  border-radius: 6px;
+  color: var(--ink, #392f33);
+  background: #fffdf9;
+}
+.document-book-viewer > .pane-toolbar button { cursor: pointer; }
+.document-book-viewer > .pane-toolbar input[type="file"] { width: 210px; }
+.document-book-viewer > .pane-toolbar select { flex: 1 1 180px; max-width: 350px; }
+.document-book-viewer > .pane-toolbar button:disabled { opacity: .5; cursor: default; }
+.document-book-viewer > .pane-toolbar .hint {
+  flex: 1 1 210px;
+  min-width: 0;
+  color: var(--muted, #8a727b);
+  font-size: 10px;
+}
+.document-book-viewer > .pane-toolbar a {
+  font-size: 10px;
+  color: var(--wine, #a52946);
+  text-underline-offset: 3px;
+}
+.document-book-viewer > .notice {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--line, #e6d9db);
+  color: var(--muted, #8a727b);
+  background: #faf4f1;
+  font: 10px/1.6 var(--font-ui, system-ui, sans-serif);
+}
+.document-book-viewer > .book-stage {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #e9e1df;
+}
+.document-book-viewer .book-frame {
+  display: block;
+  flex: 1 1 0;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  border: 0;
+}
+/* Public facsimiles and print editions follow the same flexible size contract. */
+.public-book { display: flex; flex-direction: column; flex: 1 1 0; min-width: 0; min-height: 0; overflow: hidden; }
+.public-book-frame,
+.document-print-viewer > .edition-frame {
+  display: block;
+  flex: 1 1 0;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  border: 0;
+  background: #eee7e3;
+}
+.document-print-viewer > :is(.panel-bar, .panel-note) { flex: 0 0 auto; }
+.document-image-viewer > .zoom-image,
+.public-book > .study-image-detail {
+  flex: 1 1 0;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+/* Embedded previews in editorial tools must not fall back to a 300 × 150 iframe. */
+.studio-task .pdf-facsimile {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 55dvh, 780px);
+  border: 1px solid var(--line, #e6d9db);
+  border-radius: 8px;
+  background: #eee7e3;
+}
+.studio-task :is(img, canvas) { max-width: 100%; }
+@media (max-width: 700px) {
+  .document-book-viewer > .pane-toolbar { padding: 5px 7px; gap: 4px; max-height: min(145px, 28dvh); }
+  .document-book-viewer > .pane-toolbar input[type="file"] { width: 165px; }
+  .document-book-viewer > .pane-toolbar select { flex-basis: 140px; }
+  .document-book-viewer > .notice { padding: 4px 8px; font-size: 9px; }
+  .studio-task .pdf-facsimile { height: 50dvh; }
+}
+/* BookReader controls can live in the IDE's shared command strip. */
+.book-controls{display:flex;align-items:center;flex-wrap:wrap;gap:5px;min-width:0;flex:0 0 auto;padding:5px 8px;border-bottom:1px solid var(--line,#e6d9db);background:var(--paper,#fffdf9);font:11px/1.5 var(--font-ui,system-ui,sans-serif)}
+.book-controls button,.book-controls summary{font:inherit;color:var(--wine,#a52946);background:transparent;border:1px solid transparent;border-radius:6px;padding:5px 9px;cursor:pointer;white-space:nowrap}
+.book-controls button:hover,.book-controls summary:hover,.book-picker[open]>summary{background:#f5e4eb}
+.book-controls button:disabled{opacity:.45;cursor:default}.book-controls .hint{font-size:10px;color:var(--muted,#8a727b);margin-left:auto}
+.book-picker{position:relative}.book-picker>summary{list-style:none}.book-picker>summary::-webkit-details-marker{display:none}.book-picker>summary:after{content:'⌄';padding-left:7px;color:#ad8494}
+.book-picker-body{position:absolute;left:0;top:calc(100% + 5px);z-index:1000;display:flex;flex-direction:column;align-items:stretch;gap:8px;width:min(330px,80vw);max-height:65dvh;overflow:auto;padding:15px;background:#fffdf9;border:1px solid #dfc8d2;border-radius:10px;box-shadow:0 12px 35px #542b3920;font:11px/1.6 var(--font-ui,system-ui,sans-serif);color:#705661}
+.book-picker-body label{font-size:10px;color:#957381}.book-picker-body input,.book-picker-body select{width:100%;max-width:100%;min-width:0;padding:7px;border:1px solid #e6d9db;border-radius:6px;font:11px system-ui;background:white}.book-picker-body a{display:block;color:#a52946}.book-picker-body button{text-align:left;white-space:normal}.book-picker-body .notice{padding:0;margin:3px 0 0;font-size:10px;color:#947b83}.book-about .book-picker-body{width:190px}
+.document-book-viewer{position:relative}.viewer-fullscreen-exit{position:absolute;z-index:2147483647;top:10px;right:12px;border:1px solid #dfb8c6;border-radius:7px;padding:7px 11px;background:#fff9f4;color:#92213f;box-shadow:0 3px 18px #49203125;font:11px/1.4 system-ui;cursor:pointer}
+.viewer-overlay{position:fixed!important;inset:0!important;z-index:2147483000!important;width:100vw!important;height:100dvh!important;max-width:none!important;max-height:none!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:#f4ede8;display:flex;flex-direction:column;overflow:hidden!important}
+.viewer-overlay-open{overflow:hidden!important}.document-book-viewer:fullscreen,.public-book:fullscreen{display:flex;flex-direction:column;width:100%;height:100%;background:#f4ede8}.viewer-overlay>.book-stage,.viewer-overlay>.public-book-frame{flex:1 1 0;min-height:0}.viewer-overlay .viewer-fullscreen-exit{display:block}
+@media(max-width:700px){.book-controls{gap:2px;padding:3px}.book-controls button,.book-controls summary{font-size:10px;padding:4px 6px}.book-about .book-picker-body{left:auto;right:0}.viewer-fullscreen-exit{top:6px;right:7px;font-size:10px}}
