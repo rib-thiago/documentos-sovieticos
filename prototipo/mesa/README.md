@@ -1,6 +1,6 @@
-# Biblioteca + Mesa
+# Biblioteca + Mesa — interface oficial
 
-Piloto separado da interface oficial: `/prototipo/mesa/`.
+Interface oficial desde 15/11/2026, acessível em `/`. A pasta conserva o nome de implementação do piloto; `/prototipo/mesa/` é um alias para a entrada oficial. Consulte [o registro de adoção](../../docs/interface/INTERFACE-OFICIAL.md).
 
 Inicie `python3 -m backend` na raiz. Reinicie um backend que já estava aberto para carregar novas permissões de módulos.
 

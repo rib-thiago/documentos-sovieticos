@@ -25,7 +25,7 @@ class MesaPilotHTTPTests(unittest.TestCase):
         source = Path(__file__).resolve().parents[1] / 'prototipo/mesa'
         target = cls.root / 'prototipo/mesa'
         target.mkdir(parents=True)
-        for name in ('index.html', 'pilot.css', 'app.js', 'data.js', 'pdf.js', 'session.js', 'editorial.js', 'organization.js', 'pdf-workflow.js', 'controls.js', 'preparation.js', 'corpus.js', 'review.js', 'source-links.js', 'projects.js', 'passage-edit.js', 'library-tools.js', 'library-home.js', 'parity.js'):
+        for name in ('index.html', 'pilot.css', 'app.js', 'data.js', 'pdf.js', 'session.js', 'editorial.js', 'organization.js', 'pdf-workflow.js', 'controls.js', 'preparation.js', 'corpus.js', 'review.js', 'source-links.js', 'projects.js', 'passage-edit.js', 'library-tools.js', 'library-home.js', 'parity.js', 'entry.js'):
             shutil.copyfile(source / name, target / name)
         shutil.copyfile(Path(__file__).resolve().parents[1]/'assets/collection-zip.js',cls.root/'assets/collection-zip.js')
         (target / 'README.md').write_text('Arquivo privado para este teste')
@@ -49,7 +49,7 @@ class MesaPilotHTTPTests(unittest.TestCase):
 
     def test_explicit_assets_and_mime(self):
         for name, mime in [('pilot.css', 'text/css'), ('app.js', 'javascript'),
-                           ('data.js', 'javascript'), ('pdf.js', 'javascript'), ('session.js', 'javascript'), ('editorial.js', 'javascript'), ('organization.js', 'javascript'), ('pdf-workflow.js', 'javascript'), ('controls.js', 'javascript'), ('preparation.js', 'javascript'), ('corpus.js', 'javascript'), ('review.js', 'javascript'), ('source-links.js', 'javascript'), ('projects.js', 'javascript'), ('passage-edit.js', 'javascript'), ('library-tools.js', 'javascript'), ('library-home.js', 'javascript'), ('parity.js', 'javascript')]:
+                           ('data.js', 'javascript'), ('pdf.js', 'javascript'), ('session.js', 'javascript'), ('editorial.js', 'javascript'), ('organization.js', 'javascript'), ('pdf-workflow.js', 'javascript'), ('controls.js', 'javascript'), ('preparation.js', 'javascript'), ('corpus.js', 'javascript'), ('review.js', 'javascript'), ('source-links.js', 'javascript'), ('projects.js', 'javascript'), ('passage-edit.js', 'javascript'), ('library-tools.js', 'javascript'), ('library-home.js', 'javascript'), ('parity.js', 'javascript'), ('entry.js', 'javascript')]:
             with self.subTest(name=name), urlopen(self.url + '/prototipo/mesa/' + name) as response:
                 self.assertIn(mime, response.headers['Content-Type'])
                 self.assertGreater(len(response.read()), 50)

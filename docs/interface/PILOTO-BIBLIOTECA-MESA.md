@@ -1,3 +1,5 @@
+> **Adotado como interface oficial em 15/11/2026.** Acesse `/`; `/prototipo/mesa/` encaminha para essa entrada. O conteúdo abaixo registra a evolução e os testes do piloto, incluindo decisões históricas. Estado atual: [Interface oficial](INTERFACE-OFICIAL.md).
+
 # Piloto Biblioteca + Mesa — 14/11/2026
 
 Implementação separada aprovada para experimentação. **Não substitui a interface oficial**. Nesta evolução, edição Markdown e importação individual de tradução podem modificar o acervo local **somente após prévia e confirmação específicas**, usando o backend existente. Guardar rascunhos continua restrito à sessão; catálogo, metadados e coleções/subcoleções agora também oferecem gravação real com confirmação. Importação de corpus permanece demonstrativa. Base: [proposta de redesenho](PROPOSTA-REDESENHO-2026-11-14.md).

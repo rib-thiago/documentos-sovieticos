@@ -1,3 +1,4 @@
+import {entryRoute,materialURL} from './entry.js';
 import {associatePassage,documentAssociations,alignPage,printDocument,bodyDigest,associatedTextRange,editAssociation} from './parity.js';
 import {mountHomeActivity} from './library-home.js';
 import {mountLibraryTools} from './library-tools.js';
@@ -71,10 +72,10 @@ function navigate(hash) { remember(); if (location.hash === '#' + hash)
     render();
 else
     location.hash = hash; }
-function openDocument(doc,project=null) { remember();projectContext=project;const key=projectDocumentKey(doc.id,project?.id);let m = materials.find(x => x.key === key); if (!m) {
+function openDocument(doc,project=null,{defer=false}={}) { remember();projectContext=project;const key=projectDocumentKey(doc.id,project?.id);let m = materials.find(x => x.key === key); if (!m) {
     m = { key, kind: 'document', doc,projectId:project?.id,project, lang: doc.languages?.some(x => x.code === 'pt') ? 'pt' : doc.languages?.[0]?.code, mode: 'read', scroll: 0 };
     materials.push(m);
-}if(project){m.project=project;}else m.doc=doc;active = m.key;updateScope(); closePanel(); if (location.hash === '#mesa')
+}if(project){m.project=project;}else m.doc=doc;active = m.key;updateScope(); closePanel();if(defer)return m; if (location.hash.split('?')[0] === '#mesa')
     render();
 else
     location.hash = 'mesa'; }
@@ -90,7 +91,7 @@ function closeMaterial(material){
  render();
 }
 function tabs(){
- const host=$('#materials-tabs'),count=materials.length;host.replaceChildren();const visible=count>0&&location.hash==='#mesa';host.hidden=!visible;
+ const host=$('#materials-tabs'),count=materials.length;host.replaceChildren();const visible=count>0&&location.hash.split('?')[0]==='#mesa';host.hidden=!visible;
  document.documentElement.style.setProperty('--tabs',visible?'28px':'0px');
  $('#tab-count').textContent='';const mesa=document.querySelector('[data-nav="desk"]');mesa.title=`Uma Mesa de pesquisa · ${count} materiais abertos`;mesa.setAttribute('aria-label',mesa.title);
  if(!visible)return;
@@ -273,7 +274,7 @@ async function documentView(m,version){
         return;
     }
     const workspace = n('section', { class: 'workspace' }), scroll = n('div', { class: 'document-scroll' }), article = n('article', { class: 'reading' + (m.mode === 'paragraphs' ? ' numbered' : '') });
-    article.append(n('header', { class: 'document-heading' }, [documentContext(m),n('p', { class: 'eyebrow', text: [dateLabel(m.doc), m.doc.source_name].filter(Boolean).join(' · ') }), n('h1', { text: label(m.doc) }),n('p',{class:'transcription-origin'},[n('span',{text:'Fonte da transcrição: '}),m.doc.source_url?n('a',{href:m.doc.source_url,target:'_blank',rel:'noopener',text:m.doc.source_name||'Fonte cadastrada'}):n('span',{text:m.doc.source_name||'Não informada'})]), n('p', { class: 'edition-caption', text: !m.showCanonical&&saved.drafts[draftKey(m)] !== undefined ? 'Rascunho do piloto · o texto do acervo está preservado' : `${LANGUAGES[m.lang]} · Clique em um parágrafo para marcar ou desmarcar.` })]));
+    article.append(n('header', { class: 'document-heading' }, [documentContext(m),n('p', { class: 'eyebrow', text: [dateLabel(m.doc), m.doc.source_name].filter(Boolean).join(' · ') }), n('h1', { text: label(m.doc) }),n('p',{class:'transcription-origin'},[n('span',{text:'Fonte da transcrição: '}),m.doc.source_url?n('a',{href:m.doc.source_url,target:'_blank',rel:'noopener',text:m.doc.source_name||'Fonte cadastrada'}):n('span',{text:m.doc.source_name||'Não informada'})]), n('p', { class: 'edition-caption', text: !m.showCanonical&&saved.drafts[draftKey(m)] !== undefined ? 'Rascunho da sessão · o texto do acervo está preservado' : `${LANGUAGES[m.lang]} · Clique em um parágrafo para marcar ou desmarcar.` })]));
     const text = n('div', { class: 'edition-body', lang: m.lang });
     m.renderedBodies={[m.lang]:{body:data.body,format:data.edition.format}};
     text.innerHTML = renderMarkdown(data.body, data.edition.format,true);
@@ -550,7 +551,7 @@ function rangeForText(host,start,end){
 function clearLocatedPhrase(){globalThis.CSS?.highlights?.delete('mesa-note-phrase');}
 async function locatePassage(m,passage){
  remember();active=m.key;m.lang=passage.lang;m.mode='paragraphs';closePanel();hidePassageActions();
- if(location.hash!=='#mesa'){location.hash='mesa';await new Promise(resolve=>setTimeout(resolve,0));}
+ if(location.hash.split('?')[0]!=='#mesa'){location.hash='mesa';await new Promise(resolve=>setTimeout(resolve,0));}
  await render();
  const candidates=[...content.querySelectorAll('[data-unit],[data-comparison-unit]')]
    .filter(e=>e.closest('[lang]')?.lang===passage.lang)
@@ -791,12 +792,12 @@ function localPdf(file) { if (!file)
 function pickPdf() { const input = n('input', { type: 'file', accept: 'application/pdf,.pdf' }); input.onchange = () => localPdf(input.files[0]); input.click(); }
 async function openBackendSource(id,project=null,focus=null){
  remember();const token=generation;
- try{const info=await editorialRequest('/api/editorial/pdf/'+encodeURIComponent(id));if(token!==generation)return;if(project){project=await editorialRequest('/api/editorial/projects/'+project.id);if(token!==generation)return;if(!project.source_ids.includes(id))throw Error('Esta fonte não está vinculada ao projeto.');}const key='source:'+id+(project?'@'+project.id:'');let m=materials.find(item=>item.key===key);if(!m){m={key,kind:'pdf',backendSource:id,pdfUrl:sourceFile(id),page:info.last_page||1,title:info.metadata?.title||info.filename,count:info.page_count||0};materials.push(m);}m.project=project;m.projectId=project?.id||null;if(focus){m.page=focus.page;m.openRegionEditor=true;m.regionUnitId=focus.unitId;m.regionTask='regions';m.associationReturn=focus.returnTo;}projectContext=project;updateScope();m.needsFile=false;active=key;closePanel();navigate('mesa');}catch(error){toast(error.message);}
+ try{const info=await editorialRequest('/api/editorial/pdf/'+encodeURIComponent(id));if(token!==generation)return;if(project){project=await editorialRequest('/api/editorial/projects/'+project.id);if(token!==generation)return;if(!project.source_ids.includes(id))throw Error('Esta fonte não está vinculada ao projeto.');}const key='source:'+id+(project?'@'+project.id:'');let m=materials.find(item=>item.key===key);if(!m){m={key,kind:'pdf',backendSource:id,pdfUrl:sourceFile(id),page:info.last_page||1,title:info.metadata?.title||info.filename,count:info.page_count||0};materials.push(m);}m.project=project;m.projectId=project?.id||null;if(focus){m.page=focus.page;m.openRegionEditor=focus.openRegions!==false;m.regionUnitId=focus.unitId;m.regionTask='regions';if(focus.returnTo)m.associationReturn=focus.returnTo;}projectContext=project;updateScope();m.needsFile=false;active=key;closePanel();navigate('mesa');}catch(error){toast(error.message);}
 }
 function pdfEnvironment(version,m=null){
  const project=m?m.project:projectContext;
  return {project,projectId:project?.id||'',backToAssociation:()=>returnToAssociation(m),alignPage:()=>alignPage(parityEnvironment(m),m),content,controls,catalog,button,select,heading,toast,dialog,closeDialog:()=>$('#dialog').close(),saved,canWrite:backendAvailable&&saved.scope==='acervo'&&!project?.archived,current:()=>generation===version&&(!m||current()===m),remember,store:queueSession,panel,togglePanel,preview:proposal=>{if(!(backendAvailable&&saved.scope==='acervo')||project?.archived){toast('Reabra o projeto ou escolha Mesa principal para confirmar operações reais na fonte.');return;}previewChange(proposal);},acknowledged:()=>previewWarningsAccepted,rerender:()=>render(),updated:tabs,open:id=>openBackendSource(id,project),
-  back:async source=>{preview=null;active=source.key;persist();if(location.hash==='#mesa')await render();else navigate('mesa');},
+  back:async source=>{preview=null;active=source.key;persist();if(location.hash.split('?')[0]==='#mesa')await render();else navigate('mesa');},
   refreshFacsimiles:async()=>{catalog=await loadCatalog();},
   openDocument:async(id,language,activity)=>{clearEditionCache();catalog=await loadCatalog();const doc=catalog.documents.get(id);if(!doc){toast('O documento não está no catálogo atual. Confira seu histórico.');return;}openDocument(doc,project);if(language)current().lang=language;if(activity)current().mode=activity;render();},
   incorporated:async(source,receipt,language)=>{
@@ -948,7 +949,7 @@ async function organizationHistory(id,returnRoute){
 function catalogView(id) {
     const shell = n('section', { class: 'page-shell' }, [heading('Organizar o acervo', 'Catálogo de trabalho', '1. Localize um documento · 2. Ajuste a ficha ao lado · 3. Confira antes de guardar. Só o rascunho do piloto será alterado.')]);
     const grid = n('div', { class: 'catalog-layout' }), list = n('div'), sheet = n('div', { class: 'property-sheet' }), search = n('input', { type: 'search', placeholder: 'Localizar documento…', 'aria-label': 'Localizar documento no catálogo' });
-    function edit(doc) { sheet.replaceChildren(n('h2', { text: label(doc) }), n('p', { class: 'hint', text: doc.id + ' · rascunho do piloto' })); const previous = saved.metadata[doc.id] || {}; const fields = ['title_pt', 'date', 'author', 'archive']; const names = ['Título em português', 'Data histórica', 'Autoria', 'Referência arquivística']; const entries = fields.map((key, i) => { const value = saved.catalogWork[doc.id]?.[key] ?? previous[key] ?? doc[key] ?? ''; const f = field(names[i], typeof value === 'string' ? value : JSON.stringify(value)); f.input.oninput=()=>{(saved.catalogWork[doc.id]||={})[key]=f.input.value;queueSession();};sheet.append(f.element); return [key, f.input]; }); sheet.append(button('Conferir alterações', () => { const after = Object.fromEntries(entries.map(([key, input]) => [key, input.value])); previewChange({ title: 'Conferir ficha catalográfica', before: JSON.stringify(Object.fromEntries(fields.map(k => [k, previous[k] ?? doc[k] ?? ''])), null, 2), after: JSON.stringify(after, null, 2), confirm: () => { record('metadata', doc.id, previous); saved.metadata[doc.id] = after;delete saved.catalogWork[doc.id]; persist(); navigate('catalogo/' + doc.id); toast('Ficha guardada como rascunho do piloto.'); } }); }, 'primary')); }
+    function edit(doc) { sheet.replaceChildren(n('h2', { text: label(doc) }), n('p', { class: 'hint', text: doc.id + ' · rascunho da sessão' })); const previous = saved.metadata[doc.id] || {}; const fields = ['title_pt', 'date', 'author', 'archive']; const names = ['Título em português', 'Data histórica', 'Autoria', 'Referência arquivística']; const entries = fields.map((key, i) => { const value = saved.catalogWork[doc.id]?.[key] ?? previous[key] ?? doc[key] ?? ''; const f = field(names[i], typeof value === 'string' ? value : JSON.stringify(value)); f.input.oninput=()=>{(saved.catalogWork[doc.id]||={})[key]=f.input.value;queueSession();};sheet.append(f.element); return [key, f.input]; }); sheet.append(button('Conferir alterações', () => { const after = Object.fromEntries(entries.map(([key, input]) => [key, input.value])); previewChange({ title: 'Conferir ficha catalográfica', before: JSON.stringify(Object.fromEntries(fields.map(k => [k, previous[k] ?? doc[k] ?? ''])), null, 2), after: JSON.stringify(after, null, 2), confirm: () => { record('metadata', doc.id, previous); saved.metadata[doc.id] = after;delete saved.catalogWork[doc.id]; persist(); navigate('catalogo/' + doc.id); toast('Ficha guardada como rascunho da sessão.'); } }); }, 'primary')); }
     const entries=n('div');list.append(search,entries);
     function filter() { entries.replaceChildren(); const docs = catalog.all.filter(d => normalize(label(d) + ' ' + d.id).includes(normalize(search.value))).slice(0, 35); for (const d of docs)
         entries.append(b(label(d), () => edit(d), 'catalog-entry')); }
@@ -981,16 +982,17 @@ function tools(){
    {title:'Histórico dos rascunhos',description:'Consultar versões anteriores da sessão.',run:historyPanel},
    current()&&{title:'Fechar material ativo',description:'Preservar versões salvas e conferir alterações pendentes.',run:()=>{closePanel();if(current())closeMaterial(current());}}
   ]),
-  menuGroup('Ajuda', [{title:'Sobre o piloto',description:'Capacidades, destinos de gravação e interface oficial.',run:about}])
+  menuGroup('Ajuda', [{title:'Sobre Biblioteca e Mesa',description:'Capacidades e destinos de gravação.',run:about}])
  ];panel('Ações e materiais',[menuSearch(groups),...groups]);
 }
-function about() { dialog('Biblioteca + Mesa', [n('p', { text: 'Um piloto de organização do trabalho: os materiais ficam abertos; ler, comparar e editar são atividades sobre eles.' }), n('p', { text: 'Usa documentos reais e permite rascunhos da sessão, além de gravação editorial local explicitamente confirmada quando o backend está disponível. Guardar rascunhos não modifica o acervo. Com o backend local, editar Markdown ou importar tradução também oferece gravação real, com prévia e confirmação explícitas. PDFs enviados permanecem no navegador e precisam ser reabertos após recarregar.' }), n('p', { text: 'A extração de texto pesquisável funciona com PDF.js. Fontes cadastradas permitem OCR e preparação de imagem/PDF. A importação de corpus, traduções e edição Markdown podem gravar no acervo local mediante prévia e confirmação.' }), button('Exportar meus rascunhos', exportSession), n('a', { href: asset('index.html'), text: 'Voltar à interface oficial' })]); }
-async function render() { if(globalKeyboardOpen)requestAnimationFrame(describeKeyboardTarget);content.classList.remove('task-scroll');updateScope();clearLocatedPhrase();globalThis.CSS?.highlights?.delete('mesa-facsimile-phrase');hidePassageActions();persist();content.dataset.material=''; const version = ++generation; cleanup(); cleanup = () => { }; controls.replaceChildren(); content.replaceChildren(); closePanel(); tabs(); const route = location.hash.slice(1) || 'biblioteca'; const working = route === 'mesa'; document.body.classList.toggle('working', working); document.querySelectorAll('[data-nav]').forEach(el => el.classList.toggle('active', el.dataset.nav === (working ? 'desk' : 'library'))); if (preview) {
+function about() { dialog('Biblioteca + Mesa', [n('p', { text: 'Biblioteca e Mesa é a interface de consulta, estudo e edição de Documentos Soviéticos. Os materiais ficam abertos; ler, comparar e editar são atividades sobre eles.' }), n('p', { text: 'Usa documentos reais e permite rascunhos da sessão, além de gravação editorial local explicitamente confirmada quando o backend está disponível. Guardar rascunhos não modifica o acervo. Com o backend local, editar Markdown ou importar tradução também oferece gravação real, com prévia e confirmação explícitas. PDFs enviados permanecem no navegador e precisam ser reabertos após recarregar.' }), n('p', { text: 'A extração de texto pesquisável funciona com PDF.js. Fontes cadastradas permitem OCR e preparação de imagem/PDF. A importação de corpus, traduções e edição Markdown podem gravar no acervo local mediante prévia e confirmação.' }), button('Exportar meus rascunhos', exportSession), button('Abrir Biblioteca',()=>{$('#dialog').close();navigate('biblioteca');})]); }
+async function render() { if(globalKeyboardOpen)requestAnimationFrame(describeKeyboardTarget);content.classList.remove('task-scroll');updateScope();clearLocatedPhrase();globalThis.CSS?.highlights?.delete('mesa-facsimile-phrase');hidePassageActions();persist();content.dataset.material=''; const version = ++generation; cleanup(); cleanup = () => { }; controls.replaceChildren(); content.replaceChildren(); closePanel(); tabs(); const route = location.hash.slice(1).split('?')[0] || 'biblioteca'; const working = route === 'mesa'; document.body.classList.toggle('working', working); document.querySelectorAll('[data-nav]').forEach(el => el.classList.toggle('active', el.dataset.nav === (working ? 'desk' : 'library'))); if (preview) {
     showPreview();
     return;
 } try {
     if (route === 'mesa') {
         const m = current();
+        if(m)history.replaceState(null,'',materialURL(m));
         if(m)content.dataset.material=m.key;
         if (!m) {
             content.append(n('section', { class: 'empty-desk' }, [n('p', { class: 'eyebrow', text: 'Sua mesa de pesquisa' }), n('h1', { text: 'Comece por uma fonte.' }), n('p', { text: 'Abra documentos da biblioteca, compare idiomas e guarde rascunhos sem sair do mesmo material.' }), button('Escolher documento', tools, 'primary'), backendAvailable&&button('Fontes PDF / OCR',()=>navigate('fontes')),button('PDF temporário', pickPdf)]));
@@ -1113,15 +1115,48 @@ async function scopeDialog(){
   ...response.items.filter(p=>!p.archived).map(project=>button(project.title,()=>{$('#dialog').close();projectContext=project;updateScope();projectMaterials(projectEnvironment(generation),project.id);})),
   button('Organizar / criar projetos',()=>{$('#dialog').close();navigate('projetos');},'quiet'),button('Rascunhos e recuperação',()=>{$('#dialog').close();draftsPanel();},'quiet')]);}catch(error){toast(error.message);}
 }
-function updateScope(){const project=location.hash==='#mesa'?current()?.project:projectContext,button=$('#scope-button');button.textContent=project?'Projeto: '+project.title+' ⌄':saved.scope==='projeto-piloto'?'Caderno legado · sessão ⌄':'Acervo local ⌄';button.title=project?'Versões privadas do projeto '+project.title:'Sem projeto ativo. Cada gravação indica seu destino.';}
+function updateScope(){const project=location.hash.split('?')[0]==='#mesa'?current()?.project:projectContext,button=$('#scope-button');button.textContent=project?'Projeto: '+project.title+' ⌄':saved.scope==='projeto-piloto'?'Caderno legado · sessão ⌄':'Acervo local ⌄';button.title=project?'Versões privadas do projeto '+project.title:'Sem projeto ativo. Cada gravação indica seu destino.';}
 $('#scope-button').onclick=scopeDialog;
 document.addEventListener('keydown', e => { if (e.key === 'Escape'){if(globalKeyboardOpen){setGlobalKeyboard(false);return;}hidePassageActions();closePanel();} });
-window.addEventListener('hashchange', () => { preview = null; render(); });
+// Notas de rodapé navegam dentro do texto, sem substituir a rota da Mesa.
+content.addEventListener('click',event=>{
+ const link=event.target.closest?.('.footnote-ref a,a.footnote-backref');if(!link)return;
+ const href=link.getAttribute('href');if(!href?.startsWith('#'))return;
+ let id;try{id=decodeURIComponent(href.slice(1));}catch{return;}
+ const scope=link.closest('.edition-body')||content,target=[...scope.querySelectorAll('[id]')].find(el=>el.id===id);
+ if(target){event.preventDefault();target.scrollIntoView({block:'center',behavior:'smooth'});}
+});
+let entryVersion=0;
+async function enterLocation(){
+ const version=++entryVersion;
+ try{
+  const entry=entryRoute(location.hash,location.search);
+  if(!entry){await render();return;}
+  if(entry.kind==='document'){
+   const doc=catalog.documents.get(entry.id);if(!doc)throw Error('Documento não encontrado no catálogo: '+entry.id);
+   let project=null;if(entry.project){if(!backendAvailable)throw Error('Este link pertence a um projeto privado. Abra-o com o backend local.');project=await editorialRequest('/api/editorial/projects/'+encodeURIComponent(entry.project));if(version!==entryVersion)return;if(!project.document_ids.includes(doc.id))throw Error('O documento não pertence ao projeto indicado.');}
+   const m=openDocument(doc,project,{defer:true});if(entry.language&&(doc.languages.some(e=>e.code===entry.language)||project&&['ru','pt','en'].includes(entry.language)))m.lang=entry.language;
+   m.mode=['read','paragraphs','parallel','facsimile','edit','import-translation'].includes(entry.mode)?entry.mode:'read';
+   history.replaceState(null,'',materialURL(m));await render();return;
+  }
+  if(entry.kind==='source'){
+   if(!backendAvailable)throw Error('Fontes locais exigem o backend local.');let project=null;if(entry.project){project=await editorialRequest('/api/editorial/projects/'+encodeURIComponent(entry.project));if(version!==entryVersion)return;}
+   await openBackendSource(entry.id,project,{page:entry.page,openRegions:false});return;
+  }
+  if(entry.kind==='library'||entry.kind==='search'){
+   const root=catalog.collections.find(c=>c.id===entry.collection),sub=root?.subcollections?.find(c=>c.id===entry.sub||c.id===root.id+'/'+entry.sub);
+   Object.assign(libraryState,{q:entry.q||'',collection:root?.id||'',sub:sub?.id||'',language:entry.language||'',scope:entry.scope||'catalog',offset:entry.kind==='library'?((entry.page||1)-1)*20:0,view:entry.kind==='search'?'search':root?'collection':'home'});
+   history.replaceState(null,'','#biblioteca');await render();return;
+  }
+  history.replaceState(null,'','#'+entry.route);await render();
+ }catch(error){content.replaceChildren(n('section',{class:'page-shell'},[heading('Abrir endereço','Não foi possível abrir este contexto',error.message),button('Abrir Biblioteca',()=>navigate('biblioteca'))]));}
+}
+window.addEventListener('hashchange', () => { preview = null; enterLocation(); });
 window.addEventListener('beforeunload', () => { remember(); persist(); });
 try {
     [catalog,backendAvailable]=await Promise.all([loadCatalog(),detectEditorial()]);
     const restored=restoreDesk(saved.workspace,catalog);materials=restored.materials;active=restored.active;Object.assign(libraryState,restored.library);if(current()?.projectId)active=materials.find(m=>!m.projectId)?.key;updateScope();
-    await render();
+    await enterLocation();
 }
 catch (e) {
     content.replaceChildren(n('div', { class: 'page-shell' }, [n('h1', { text: 'A biblioteca não carregou.' }), n('p', { text: e.message }), button('Tentar novamente', () => location.reload())]));

@@ -2,15 +2,16 @@
 
 Site estático de fontes primárias e ensaios históricos, em russo e em edições com traduções para português e inglês.
 
-A interface oficial reúne o **portal público de leitura e estudo** e o **Estúdio local de pesquisa e edição**.
+A interface oficial é **Biblioteca e Mesa**, aprovada em 15/11/2026.
 
-- `/`: entrada pública, coleções, busca e leitor.
-- `#/estudo`: mesa pública com documentos em abas e comparação entre idiomas.
-- `/estudio/`: ambiente editorial local; `/editorial` encaminha para ele.
+- `/`: Biblioteca, com capas, coleções, busca e novidades.
+- `#mesa`: documentos e fontes em abas; leitura, estudo e edição no contexto do material.
+- `#/doc/ID` e links anteriores de coleções/estudo continuam abrindo na nova interface.
+- `/editorial` e `/estudio/`: acessos locais encaminhados à nova Mesa.
 
-O Estúdio conserva cadastro, catálogo, traduções, projetos, PDF/OCR, prévias e histórico. Salvar modifica somente o ambiente local; publicar continua exigindo commit/push autorizados. A publicação estática não oferece gravações editoriais.
+Inicie `python3 -m backend` e abra **http://127.0.0.1:8000/**. Pelo menu ☰, acesse catálogo, coleções, importação, revisão, projetos e fontes PDF/OCR. A publicação estática mantém leitura e estudo; gravações e ferramentas editoriais exigem backend local. Salvar modifica apenas os arquivos locais; publicar continua exigindo commit/push autorizados.
 
-Adoção aprovada em 27/10/2026. Consulte o [registro da interface oficial](docs/interface/INTERFACE-OFICIAL.md), o [manual do Estúdio](prototipo/estudio/README.md) e o [roteiro do portal](docs/interface/PORTAL-LEITURA-ESTUDO-IMPLEMENTACAO.md).
+Consulte o [registro da interface oficial](docs/interface/INTERFACE-OFICIAL.md) e o [manual de Biblioteca e Mesa](docs/interface/PILOTO-BIBLIOTECA-MESA.md). O piloto aprovado está preservado nos commits anteriores à adoção.
 
 ## Acervo
 
@@ -30,7 +31,7 @@ Um documento pode pertencer a várias coleções. As quantidades acima não deve
 
 Os títulos individuais do novo acervo permanecem em russo. Traduções podem ser acrescentadas por documento.
 
-A navegação superior oferece Início, Coleções, Buscar, Estudo e Sobre. Na página de cada documento, **Baixar** exporta o Markdown com o nome do arquivo no projeto. Coleções e subcoleções também podem ser baixadas em ZIP. As exportações usam as versões completas disponíveis, independentemente das páginas da listagem ou dos trechos expandidos.
+A entrada destaca as capas das coleções; busca e Mesa ficam disponíveis no cabeçalho. No menu do documento, **Baixar Markdown** exporta a versão no idioma aberto com o nome do arquivo no projeto. Coleções e subcoleções também podem ser baixadas em ZIP. As exportações usam as versões completas disponíveis, independentemente das páginas da listagem ou dos trechos expandidos.
 
 No ShowTrials, o cabeçalho de identificação da exportação é gerado uma única vez. Envelopes reconhecidos de exportações anteriores ficam fora do corpo na leitura, no estudo, na busca e na comparação estrutural da importação; os metadados continuam no cabeçalho comum do documento. Essa separação não reescreve os arquivos armazenados nem remove títulos próprios do texto.
 

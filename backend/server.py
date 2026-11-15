@@ -265,7 +265,7 @@ def handler_for(repository, editorial):
                 if path in {"/editorial", "/editorial/", "/prototipo/oficina", "/prototipo/oficina/"}:
                     self.require_local_editorial()
                     self.send_response(302)
-                    self.send_header("Location", "/estudio/")
+                    self.send_header("Location", "/?ambiente=local" + ("&" + request.query if request.query else ""))
                     self.send_header("Content-Length", "0")
                     self.end_headers()
                 elif path in {"/editorial/form", "/editorial/form/"}:
@@ -488,7 +488,15 @@ def handler_for(repository, editorial):
             self.send_data(page.encode("utf-8"), "text/html; charset=utf-8")
 
         def static_file(self, path):
-            if path in {"/prototipo", "/prototipo/ide", "/prototipo/oficina", "/prototipo/estudio", "/prototipo/mesa", "/estudio"}:
+            if path in {"/estudio", "/estudio/"}:
+                self.require_local_editorial()
+                self.send_response(302)
+                query = urlsplit(self.path).query
+                self.send_header("Location", "/?ambiente=local" + ("&" + query if query else ""))
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+                return
+            if path in {"/prototipo", "/prototipo/ide", "/prototipo/oficina", "/prototipo/estudio", "/prototipo/mesa"}:
                 self.send_response(302)
                 self.send_header("Location", path + "/")
                 self.send_header("Content-Length", "0")
@@ -513,7 +521,7 @@ def handler_for(repository, editorial):
                 "vendor/dockview.css", "vendor/pdf_viewer.css", "vendor/pdf.mjs", "vendor/bookreader-manifest.json", "vendor/bookreader-5.0.0-66.tgz",
                 "vendor/pdf.worker.mjs", "vendor/paged.polyfill.js")})
             prototype_files.update({"prototipo/mesa/" + name for name in (
-                "index.html", "pilot.css", "app.js", "data.js", "pdf.js", "session.js", "editorial.js", "organization.js", "pdf-workflow.js", "controls.js", "preparation.js", "corpus.js", "review.js", "source-links.js", "projects.js", "passage-edit.js", "library-tools.js", "library-home.js", "parity.js")})
+                "index.html", "pilot.css", "app.js", "data.js", "pdf.js", "session.js", "editorial.js", "organization.js", "pdf-workflow.js", "controls.js", "preparation.js", "corpus.js", "review.js", "source-links.js", "projects.js", "passage-edit.js", "library-tools.js", "library-home.js", "parity.js", "entry.js")})
             prototype_files.update(bookreader_files)
             if not (relative == "index.html" or relative in {"data/manifest.json","data/facsimiles.json"} or relative in prototype_files or relative in legacy_pdfs or relative.startswith(("assets/", "originais/"))):
                 self.send_json({"error": "Recurso não publicado"}, 404)

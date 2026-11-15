@@ -1,3 +1,5 @@
+> **Proposta implementada e adotada em 15/11/2026.** A descrição de piloto separado abaixo é histórica. Consulte [a interface oficial](INTERFACE-OFICIAL.md).
+
 # Proposta de redesenho integral — Biblioteca e Mesa
 
 14/11/2026. Proposta conceitual solicitada pelo responsável, baseada na estrutura atual do portal e do Estúdio. Piloto separado implementado após aprovação; não adotado como interface oficial. A adoção de 27/10 permanece vigente até nova aprovação. A proposta original não alterou o acervo. A implementação posterior acrescenta somente `/prototipo/mesa/`, preservando as entradas oficiais. Roteiro: [Piloto Biblioteca + Mesa](PILOTO-BIBLIOTECA-MESA.md).

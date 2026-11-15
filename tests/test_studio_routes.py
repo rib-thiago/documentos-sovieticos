@@ -37,13 +37,42 @@ class StudioRoutes(unittest.TestCase):
             with self.subTest(path=path):
                 h, _ = self.handler(path)
                 self.assertEqual(h.status, 302)
-                self.assertEqual(h.response_headers['Location'], '/estudio/')
+                self.assertEqual(h.response_headers['Location'], '/?ambiente=local')
 
     def test_canonical_entry_serves_new_interface(self):
         h, _ = self.handler('/estudio/')
-        self.assertEqual(h.status, 200)
-        self.assertIn(b'Est\xc3\xbadio', h.wfile.getvalue())
-        self.assertIn(b'doc-language', h.wfile.getvalue())
+        self.assertEqual(h.status, 302)
+        self.assertEqual(h.response_headers['Location'], '/?ambiente=local')
+        root, _ = self.handler('/')
+        self.assertEqual(root.status, 200)
+        self.assertIn(b'prototipo/mesa/app.js', root.wfile.getvalue())
+        self.assertNotIn(b'assets/studio-entry.js', root.wfile.getvalue())
+
+    def test_entry_redirect_keeps_editorial_query_context(self):
+        for path in ['/editorial?documento=showtrials-1665', '/estudio/?documento=showtrials-1665']:
+            h, _ = self.handler(path)
+            self.assertEqual(h.response_headers['Location'], '/?ambiente=local&documento=showtrials-1665')
+
+    def test_new_official_root_assets_and_compatibility_entry(self):
+        from html.parser import HTMLParser
+        from urllib.parse import urlsplit
+        class Assets(HTMLParser):
+            paths=[]
+            def handle_starttag(self,tag,attrs):
+                values=dict(attrs)
+                for field in ['src','href']:
+                    value=values.get(field,'')
+                    if value and not value.startswith('#'):
+                        self.paths.append(urlsplit(value).path)
+        parser=Assets();parser.feed((ROOT/'index.html').read_text())
+        for path in parser.paths:
+            with self.subTest(path=path):
+                h,_=self.handler('/'+path)
+                self.assertEqual(h.status,200)
+        h,_=self.handler('/prototipo/mesa/')
+        self.assertIn(b'location.replace',h.wfile.getvalue())
+        h,_=self.handler('/prototipo/mesa/entry.js')
+        self.assertEqual(h.status,200)
 
     def test_official_module_resources_are_allowed(self):
         for name in ['app.js', 'editorial-host.js', 'document-tools.js', 'study.js', 'visualizers.js', 'loaders.js']:

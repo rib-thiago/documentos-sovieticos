@@ -1,42 +1,48 @@
-# Interface oficial — Documentos Soviéticos e Estúdio
+# Interface oficial — Biblioteca e Mesa
 
-Aprovada pelo responsável em 27/10/2026 após testes manuais e refinamentos do protótipo. Esta é a interface adotada para o trabalho e a consulta; não exige escolher uma versão experimental.
+Adotada em 15/11/2026 após aprovação do piloto e dos testes manuais. Substitui a entrada visual anterior de portal/Estúdio. A entrada do projeto continua sendo a home em `/`; consulta, estudo e edição usam a mesma interface, com ferramentas conforme as capacidades do ambiente.
 
-## Acessos
+## Entradas e compatibilidade
 
-| Entrada | Papel |
+| Endereço | Comportamento |
 |---|---|
-| `/` | Portal público: home, coleções/subcoleções, busca e leitor |
-| `#/doc/ID` | Leitura normal, preservando URLs existentes |
-| `#/estudo` / `#/estudo/ID` | Mesa pública de estudo e comparação |
-| `/estudio/` | Ambiente local oficial de pesquisa e edição |
-| `/editorial` | Encaminha ao Estúdio |
-| `/editorial/form` | Compatibilidade para recuperação; não é o percurso normal |
+| `/` | Biblioteca: capas, coleções, busca e novidades; dados do acervo no rodapé. |
+| `#mesa` | Materiais abertos em abas; ler, comparar e editar são atividades do material. |
+| `#mesa?documento=ID&idioma=ru&atividade=parallel` | Abre documento/idioma/atividade; a URL acompanha a aba ativa. |
+| `#/doc/ID?idioma=pt` | Link anterior preservado: abre o documento na nova Mesa. |
+| `#/colecao/ID/subcolecao/SUB` e `#/busca?q=…` | Links anteriores preservados: abrem a coleção ou a busca. |
+| `#/estudo` / `#/estudo/ID` | Abrem a Mesa ou o documento em estudo por trecho. |
+| `/editorial` e `/estudio/` | No backend local, encaminham à Mesa da interface oficial. Hash e consulta de contexto são tratados pela nova entrada. |
+| `/prototipo/mesa/` | Alias que encaminha para a raiz, conservando consulta e fragmento. |
+| `/editorial/form` | Formulário anterior de recuperação, mantido fora do percurso normal. |
 
-Iniciar com `python3 -m backend` e abrir http://127.0.0.1:8000/. O site público continua estático e utilizável sem backend; as capacidades editoriais ficam no ambiente local.
+Exemplo local: `http://127.0.0.1:8000/#/doc/showtrials-1665?idioma=ru`. A publicação GitHub Pages usa os mesmos fragmentos sob o prefixo do repositório. Recursos são resolvidos relativamente ao módulo/repositório; não dependem de npm ou de rotas de servidor na hospedagem estática.
 
-## Continuidade funcional
+## Uso público e local
 
-O Estúdio disponibiliza cadastro de documento/coleção/subcoleção, catálogo e metadados, importação de corpus e traduções, edição Markdown, prévias, histórico, fila de revisão, projetos e versões privadas, upload/manipulação PDF, OCR, candidatos, transcrição por página, teclado russo, vínculos e preparação selecionada de fac-símiles públicos. Os controladores e APIs existentes foram reutilizados; acervo e URLs não foram migrados para outro sistema.
+Com `python3 -m backend`, abrir `http://127.0.0.1:8000/`. Reiniciar um backend que já estava aberto para carregar novas rotas e permissões. Atualizar o navegador com Ctrl+Shift+R após a migração.
 
-O portal disponibiliza consulta, exportação Markdown/ZIP, leitura com índice/marca/retomada, idiomas, estudo por parágrafos/paralelo, expansão de versões, abas e painéis, notas pessoais, citações, impressão e fontes publicadas. Editar ou importar versões encaminha ao Estúdio com o documento e idioma.
+Sem backend: Biblioteca, busca por metadados, leitura/idiomas, estudo por trechos/paralelo, expansão de tradução, índice, marcador, notas/citação, Markdown, ZIP, impressão e fac-símiles previamente publicados. PDFs temporários e rascunhos usam o navegador. A busca integral e as gravações editoriais exigem backend.
 
-A barra de leitura acompanha a aba ativa. BookReader é uma atividade própria: seleciona PDF/fontes em menu compacto, oferece ida explícita à revisão e tela inteira fora dos limites da mesa. Não herda comandos da transcrição apenas por ter sido aberto a partir de uma fonte.
+Com backend: menu ☰ e Organizar acervo dão acesso a catálogo/metadados, coleções/subcoleções, cadastro/importação de corpus, traduções, Markdown, correção de trechos, fila, projetos/versões privadas, fontes PDF, extração/divisão, OCR, imagem, revisão por página, unidades/regiões, associações e históricos. A fonte OCR tem revisão compartilhada; versões textuais e vínculos de projetos mantêm seu contexto privado. Cada gravação real tem prévia e confirmação. Leitor e fonte permanecem em abas distintas quando necessário; fechar o fac-símile não fecha o texto.
 
-## Código e distribuição
+Associações permitem editar/reconfirmar pela lista e acessar diretamente a página/unidade no PDF, com retorno ao documento. Texto e região são destacados ao consultar uma associação válida. Alterações da fonte geram aviso e exigem reconfirmação; mudanças do corpo textual não são reconciliadas por aproximação.
 
-`prototipo/estudio/` contém a implementação do Estúdio servida pelo endereço oficial `/estudio/`. `prototipo/oficina/` preserva distribuições locais, o adaptador de páginas BookReader e compatibilidade. Esses caminhos foram mantidos para evitar quebrar importações e recursos; sua permanência não mantém uma escolha de interfaces experimentais no percurso oficial.
+Salvar modifica apenas o ambiente local. Preparar fac-símiles para o portal modifica arquivos locais selecionados; publicar exige commit/push autorizados. Não foi implementada publicação automática.
 
-Bibliotecas e licenças são versionadas localmente. Não se exige npm para iniciar ou publicar. `node_modules/`, `.local/`, PDFs de teste e `temporario/` não integram esta entrega da interface. O histórico de alterações individuais não substitui backup do ambiente local.
+## Código, sessão e preservação
 
-## Critério desta aprovação e limites
+`index.html` contém a entrada oficial; `prototipo/mesa/` conserva os módulos aprovados e o CSS. O nome da pasta é histórico, não uma escolha de interface experimental. `entry.js` trata URLs anteriores e endereços compartilháveis da Mesa. Dependências locais em `prototipo/oficina/`, utilitários em `prototipo/estudio/` e distribuições em `assets/vendor/` são reutilizados. Recursos antigos permanecem disponíveis para compatibilidade/recuperação; não são carregados como uma segunda interface na entrada normal.
 
-O responsável avaliou manualmente os percursos e autorizou a adoção/commits. Verificações isoladas de rotas, recursos, catálogo e repositório e simulações de controles/retomada/tela inteira estão registradas nos roteiros. Não se declara cobertura universal de navegadores ou certificação de todo o conteúdo histórico.
+A chave de sessão do piloto foi preservada para manter abas, notas, marcadores e rascunhos já validados. Um projeto não é escolhido automaticamente na entrada sem contexto explícito. Arquivos PDF temporários precisam ser reabertos após recarregar; PDFs cadastrados são recuperados pelo backend. Sessões da interface antiga não são convertidas nem apagadas por esta entrega.
 
-EPUB, busca integral estática, entidades/relações, identificadores persistentes de unidades, sincronização por alinhamento validado e integração ImageMagick→OCR permanecem entregas posteriores. Não representam recursos anteriores removidos. A revisão documental e as novas incorporações mantêm sua fila separada.
+Esta migração não altera documentos, traduções, catálogo, manifesto, PDFs, banco local ou fila. Materiais de teste e alterações pendentes das outras frentes não entram no commit da interface. Os dois commits anteriores preservam o piloto aprovado antes da adoção.
 
-Esta adoção não altera textos, traduções ou cadastros. As alterações documentais locais ainda pendentes ficam fora dos commits desta entrega. Nenhum push é realizado sem instrução.
+## Validação e limites
 
-- [Manual do Estúdio](../../prototipo/estudio/README.md)
-- [Portal: implementação, ajustes e validação](PORTAL-LEITURA-ESTUDO-IMPLEMENTACAO.md)
-- [Plano de evolução do portal](PORTAL-LEITURA-ESTUDO-PLANO.md)
+Testes manuais aprovados no piloto: leitura/comparação, edição/importação e seus históricos, projetos, upload/derivados, unidades, desenho com rolagem, associações, destaques, invalidação, reconfirmação e recuperação. Isolamento de associações privadas coberto também por teste automatizado. Na adoção, verificadas rotas, recursos da home, resolução no GitHub Pages, tratamento dos links anteriores e redirecionamentos locais; não se declara teste de navegador adicional nesta etapa.
+
+EPUB, busca integral estática, sincronização automática entre idiomas, entidades/relações históricas e novas incorporações documentais continuam evoluções separadas. A implantação não certifica o conteúdo histórico nem altera o estado de revisão do acervo.
+
+- [Manual e registro dos testes de Biblioteca e Mesa](PILOTO-BIBLIOTECA-MESA.md)
+- [Proposta conceitual original](PROPOSTA-REDESENHO-2026-11-14.md)

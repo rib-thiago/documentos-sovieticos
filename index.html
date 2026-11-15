@@ -1,57 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <script src="assets/studio-entry.js?v=official-1"></script>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Documentos Soviéticos — Acervo e traduções</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=cards-height-20261022">
-  <link rel="stylesheet" href="assets/css/portal-reader.css?v=portal-4">
-  <link rel="stylesheet" href="assets/css/document-viewers.css?v=viewers-2">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Documentos Soviéticos — Biblioteca e Mesa</title>
+  <link rel="stylesheet" href="prototipo/mesa/pilot.css?v=official-mesa-1">
 </head>
 <body>
-
-<a class="skip-link" href="#page-content">Ir para o conteúdo</a>
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="#/" aria-label="Documentos Soviéticos — início">
-      <span class="brand-mark">§</span>
-      <span class="brand-text">
-        <strong>Documentos Soviéticos</strong>
-        <small>Russo · Português · Inglês</small>
-      </span>
-    </a>
-    <nav class="doc-nav" id="docNav" aria-label="Coleções"></nav>
-  </div>
-</header>
-
-  <div id="archive-workspace" class="archive-workspace">
-    <aside id="workspace-instruments" class="workspace-instruments" hidden aria-label="Instrumentos do documento"></aside>
-    <div class="workspace-surface">
-      <nav id="document-tabs" class="document-tabs" aria-label="Documentos abertos na bancada" hidden></nav>
-      <main class="page" id="page-content" tabindex="-1"><div id="view"></div></main>
-    </div>
-  </div>
-
-  <footer class="site-footer">
-    <p>Documentos e ensaios de diferentes fontes. Consulte as referências de cada texto e os links de procedência do acervo ShowTrials.</p>
-    <p class="muted">Fins de estudo. Traduções de trabalho — não substituem a fonte original.</p>
-  </footer>
-
+  <a class="skip-link" href="#content">Ir ao conteúdo</a>
+  <header class="app-header">
+    <a class="identity" href="#biblioteca" aria-label="Documentos Soviéticos · Biblioteca"><span class="seal">д</span><span class="identity-text">Documentos<br><strong>Soviéticos</strong></span></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a href="#biblioteca" data-nav="library">Biblioteca</a><a href="#mesa" data-nav="desk">Mesa <span id="tab-count"></span></a></nav>
+    <div id="task-controls" class="task-controls"></div>
+    <div class="global-controls"><button id="scope-button" class="scope-button" aria-label="Contexto de trabalho">Rascunhos · sessão <span>⌄</span></button><button id="open-tools" class="icon-button" aria-label="Abrir ações e materiais" title="Ações e materiais">☰</button><button id="help-button" class="pilot-label" title="Sobre Biblioteca e Mesa">Sobre</button></div>
+  </header>
+  <nav id="materials-tabs" class="materials-tabs" aria-label="Documentos e fontes abertos na mesma Mesa" hidden></nav>
+  <main id="content" tabindex="-1"><div class="loading-screen"><span class="seal">д</span><h1>Preparando a biblioteca.</h1><p>Carregando o catálogo do acervo…</p></div></main>
+  <div id="panel-backdrop" class="panel-backdrop" hidden></div>
+  <aside id="auxiliary" class="auxiliary" aria-label="Painel auxiliar" hidden></aside>
+  <dialog id="dialog" class="dialog"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
   <script src="assets/vendor/markdown-it/markdown-it.umd.min.js"></script>
   <script src="assets/vendor/markdown-it-footnote/markdown-it-footnote.min.js"></script>
   <script src="assets/vendor/dompurify/purify.min.js"></script>
-  <script src="assets/catalog-ui.js?v=carmim-1"></script>
-  <script src="assets/search.js?v=carmim-1"></script>
-  <script src="assets/export-header.js?v=3"></script>
-  <script src="assets/reader-editorial.js?v=workspace-restored-1"></script>
-  <script src="assets/interface.js?v=carmim-1"></script>
-  <script src="assets/portal.js?v=portal-4"></script>
+  <script src="assets/export-header.js"></script>
   <script src="assets/collection-zip.js?v=1"></script>
-  <script src="assets/portal-ui.js?v=portal-4"></script>
-  <script src="assets/app.js?v=portal-4"></script>
+  <script type="module" src="prototipo/mesa/app.js?v=official-mesa-1"></script>
 </body>
 </html>

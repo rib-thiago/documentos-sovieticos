@@ -1,30 +1,4 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <title>Biblioteca & Mesa · Documentos Soviéticos</title>
-  <link rel="stylesheet" href="pilot.css?v=38">
-</head>
-<body>
-  <a class="skip-link" href="#content">Ir ao conteúdo</a>
-  <header class="app-header">
-    <a class="identity" href="#biblioteca" aria-label="Documentos Soviéticos · Biblioteca"><span class="seal">д</span><span class="identity-text">Documentos<br><strong>Soviéticos</strong></span></a>
-    <nav class="main-nav" aria-label="Navegação principal"><a href="#biblioteca" data-nav="library">Biblioteca</a><a href="#mesa" data-nav="desk">Mesa <span id="tab-count"></span></a></nav>
-    <div id="task-controls" class="task-controls"></div>
-    <div class="global-controls"><button id="scope-button" class="scope-button" aria-label="Rascunhos da sessão">Rascunhos · sessão <span>⌄</span></button><button id="open-tools" class="icon-button" aria-label="Abrir ações e materiais" title="Ações e materiais">☰</button><button id="help-button" class="pilot-label" title="Sobre este piloto">PILOTO</button></div>
-  </header>
-  <nav id="materials-tabs" class="materials-tabs" aria-label="Documentos e fontes abertos na mesma Mesa" hidden></nav>
-  <main id="content" tabindex="-1"><div class="loading-screen"><span class="seal">д</span><h1>Preparando a biblioteca.</h1><p>Carregando o catálogo do acervo…</p></div></main>
-  <div id="panel-backdrop" class="panel-backdrop" hidden></div>
-  <aside id="auxiliary" class="auxiliary" aria-label="Painel auxiliar" hidden></aside>
-  <dialog id="dialog" class="dialog"></dialog>
-  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
-  <script src="../../assets/vendor/markdown-it/markdown-it.umd.min.js"></script>
-  <script src="../../assets/vendor/markdown-it-footnote/markdown-it-footnote.min.js"></script>
-  <script src="../../assets/vendor/dompurify/purify.min.js"></script>
-  <script src="../../assets/export-header.js"></script>
-  <script src="../../assets/collection-zip.js?v=1"></script>
-  <script type="module" src="app.js?v=38"></script>
-</body>
-</html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Biblioteca & Mesa · Interface oficial</title></head>
+<body><p>Biblioteca & Mesa agora é a interface oficial. <a id="entry" href="../../">Abrir Documentos Soviéticos</a></p>
+<script>const target=new URL('../../',location.href);target.search=location.search;target.hash=location.hash;document.getElementById('entry').href=target.href;location.replace(target.href);</script></body></html>
