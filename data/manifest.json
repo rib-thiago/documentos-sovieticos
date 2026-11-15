@@ -6427,7 +6427,8 @@
           ],
           "original_language": "ru"
         }
-      ]
+      ],
+      "cover": "assets/covers/Exército e indústria de defesa.png"
     },
     {
       "id": "caso-tukhachevsky-1937",
@@ -6688,7 +6689,8 @@
           ],
           "original_language": "ru"
         }
-      ]
+      ],
+      "cover": "assets/covers/Caso Tukhachevsky_ Dossiê Militar de 1937.png"
     },
     {
       "id": "sakharov-testamento-lenin-2003",
@@ -9299,7 +9301,8 @@
           "subtitle_pt": "Fontes e edições de pesquisa",
           "accent": "#982d40"
         }
-      ]
+      ],
+      "cover": "assets/covers/O Testamento Político de Lenin.png"
     },
     {
       "id": "transcricoes-arquivos-sovieticos",
@@ -10999,7 +11002,8 @@
           "subtitle_pt": "Fontes e edições de pesquisa",
           "accent": "#982d40"
         }
-      ]
+      ],
+      "cover": "assets/covers/Transcrições dos arquivos soviéticos.png"
     },
     {
       "id": "politburo-trotsky-mozokhin",
@@ -24897,7 +24901,8 @@
           "subtitle_pt": "Fontes e edições de pesquisa",
           "accent": "#982d40"
         }
-      ]
+      ],
+      "cover": "assets/covers/Colagem histórica_ Politburo e Trotsky.png"
     },
     {
       "id": "brest-litovsk",
@@ -31607,7 +31612,8 @@
           "subtitle_pt": "Fontes e edições de pesquisa",
           "accent": "#982d40"
         }
-      ]
+      ],
+      "cover": "assets/covers/Brest-Litovsk_ Negociações Políticas.png"
     },
     {
       "id": "revolucao-russa-e-guerra-civil-1917-1922",
@@ -31615,7 +31621,7 @@
       "title_ru": "Русская революция и гражданская война (1917–1922)",
       "subtitle_pt": null,
       "description_pt": null,
-      "cover": null,
+      "cover": "assets/covers/Revolução Russa em Fotografias Históricas.png",
       "accent": "#8b2c2c",
       "documents": [
         {

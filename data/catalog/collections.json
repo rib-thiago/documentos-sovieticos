@@ -1126,7 +1126,9 @@
     "subtitle": "Documentação em russo",
     "description": "Documentos do Conselho Militar de 1935 e da indústria de defesa de 1934–1936, em russo. Inclui notas e referências das edições publicadas.",
     "source": {},
-    "presentation": {},
+    "presentation": {
+      "cover": "assets/covers/Exército e indústria de defesa.png"
+    },
     "extra": {},
     "compatibility_fields": [
       "id",
@@ -1189,7 +1191,9 @@
     "subtitle": "Documentação em russo",
     "description": "Documentação de 1937: Conselho Militar, reuniões do NKO, depoimentos e fonte digitalizada do julgamento. Os tipos e contextos documentais permanecem distintos.",
     "source": {},
-    "presentation": {},
+    "presentation": {
+      "cover": "assets/covers/Caso Tukhachevsky_ Dossiê Militar de 1937.png"
+    },
     "extra": {},
     "compatibility_fields": [
       "id",
@@ -1295,7 +1299,8 @@
     "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
     "source": {},
     "presentation": {
-      "accent": "#982d40"
+      "accent": "#982d40",
+      "cover": "assets/covers/O Testamento Político de Lenin.png"
     },
     "extra": {},
     "compatibility_fields": [
@@ -1474,7 +1479,8 @@
     "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
     "source": {},
     "presentation": {
-      "accent": "#982d40"
+      "accent": "#982d40",
+      "cover": "assets/covers/Transcrições dos arquivos soviéticos.png"
     },
     "extra": {},
     "compatibility_fields": [
@@ -1587,7 +1593,8 @@
     "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
     "source": {},
     "presentation": {
-      "accent": "#982d40"
+      "accent": "#982d40",
+      "cover": "assets/covers/Colagem histórica_ Politburo e Trotsky.png"
     },
     "extra": {},
     "compatibility_fields": [
@@ -1656,7 +1663,8 @@
     "description": "Textos com fontes preservadas e proveniência registrada. Revisão editorial indicada por documento.",
     "source": {},
     "presentation": {
-      "accent": "#982d40"
+      "accent": "#982d40",
+      "cover": "assets/covers/Brest-Litovsk_ Negociações Políticas.png"
     },
     "extra": {},
     "compatibility_fields": [
@@ -1836,7 +1844,8 @@
     "description": null,
     "source": {},
     "presentation": {
-      "accent": "#8b2c2c"
+      "accent": "#8b2c2c",
+      "cover": "assets/covers/Revolução Russa em Fotografias Históricas.png"
     },
     "extra": {},
     "compatibility_fields": [
