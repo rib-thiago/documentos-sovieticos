@@ -79,7 +79,7 @@ def handler_for(repository, editorial):
             try:
                 self.require_local_editorial()
                 request_path = urlsplit(self.path).path
-                if request_path not in {"/api/editorial/pdf/publication/preview", "/api/editorial/pdf/publication/apply", "/api/editorial/pdf/alignment/preview", "/api/editorial/pdf/incorporation/preview", "/api/editorial/pdf/incorporation/save", "/api/editorial/pdf/incorporation/finish", "/api/editorial/pdf/links/preview", "/api/editorial/pdf/links/save", "/api/editorial/pdf/review/preview", "/api/editorial/pdf/review/save", "/api/editorial/pdf/ocr/preview", "/api/editorial/pdf/ocr/start", "/api/editorial/pdf/ocr/resume", "/api/editorial/pdf/operations/preview", "/api/editorial/pdf/operations/start", "/api/editorial/pdf/operations/resume", "/api/editorial/workspace/preview", "/api/editorial/workspace/save", "/api/editorial/workspace/promotion-preview", "/api/editorial/workspace/promote", "/api/editorial/projects/preview", "/api/editorial/projects/save", "/api/editorial/projects/activate", "/api/editorial/pdf/upload", "/api/editorial/pdf/action", "/api/editorial/preview", "/api/editorial/save", "/api/editorial/translations/preview", "/api/editorial/markdown/preview", "/api/editorial/passages/preview", "/api/editorial/documents/preview", "/api/editorial/collections/preview", "/api/editorial/batches/preview"}:
+                if request_path not in {"/api/editorial/pdf/image/preview", "/api/editorial/pdf/publication/preview", "/api/editorial/pdf/publication/apply", "/api/editorial/pdf/alignment/preview", "/api/editorial/pdf/incorporation/preview", "/api/editorial/pdf/incorporation/save", "/api/editorial/pdf/incorporation/finish", "/api/editorial/pdf/links/preview", "/api/editorial/pdf/links/save", "/api/editorial/pdf/review/preview", "/api/editorial/pdf/review/save", "/api/editorial/pdf/ocr/preview", "/api/editorial/pdf/ocr/start", "/api/editorial/pdf/ocr/resume", "/api/editorial/pdf/operations/preview", "/api/editorial/pdf/operations/start", "/api/editorial/pdf/operations/resume", "/api/editorial/workspace/preview", "/api/editorial/workspace/save", "/api/editorial/workspace/promotion-preview", "/api/editorial/workspace/promote", "/api/editorial/projects/preview", "/api/editorial/projects/save", "/api/editorial/projects/activate", "/api/editorial/pdf/upload", "/api/editorial/pdf/action", "/api/editorial/preview", "/api/editorial/save", "/api/editorial/translations/preview", "/api/editorial/markdown/preview", "/api/editorial/passages/preview", "/api/editorial/documents/preview", "/api/editorial/collections/preview", "/api/editorial/batches/preview"}:
                     self.send_json({"error": "Operação não permitida"}, 405)
                     return
                 if self.headers.get("Origin") != "http://" + self.headers.get("Host", ""):
@@ -120,6 +120,10 @@ def handler_for(repository, editorial):
                     raise EditorialError("Pedido vazio ou maior que o limite permitido", 413)
                 self.connection.settimeout(30)
                 payload = json.loads(self.rfile.read(length))
+                if request_path == "/api/editorial/pdf/image/preview":
+                    from .pdf_preparation import PDFPreparation
+                    self.send_json(PDFPreparation(editorial.pdf_sources).preview(payload))
+                    return
                 if request_path.startswith("/api/editorial/pdf/publication/"):
                     if not isinstance(payload,dict):raise EditorialError("Pedido inválido")
                     operation=request_path.rsplit("/",1)[1]
@@ -300,7 +304,12 @@ def handler_for(repository, editorial):
                             raise EditorialError("Recurso de projeto não encontrado", 404)
                     elif path.startswith("/api/editorial/pdf/"):
                         suffix = path.removeprefix("/api/editorial/pdf/")
-                        if suffix == "publication":
+                        if suffix.startswith("image/") and suffix.endswith("/image.png"):
+                            from .pdf_preparation import PDFPreparation
+                            parts=suffix.split("/")
+                            if len(parts)!=3:raise EditorialError("Derivado não encontrado",404)
+                            self.send_data(PDFPreparation(editorial.pdf_sources).artifact(parts[1]).read_bytes(),"image/png")
+                        elif suffix == "publication":
                             self.send_json(editorial.pdf_sources.publication.listing())
                         elif suffix.startswith("publication/") and suffix.endswith("/preview.pdf"):
                             parts=suffix.split("/")
@@ -479,7 +488,7 @@ def handler_for(repository, editorial):
             self.send_data(page.encode("utf-8"), "text/html; charset=utf-8")
 
         def static_file(self, path):
-            if path in {"/prototipo", "/prototipo/ide", "/prototipo/oficina", "/prototipo/estudio", "/estudio"}:
+            if path in {"/prototipo", "/prototipo/ide", "/prototipo/oficina", "/prototipo/estudio", "/prototipo/mesa", "/estudio"}:
                 self.send_response(302)
                 self.send_header("Location", path + "/")
                 self.send_header("Content-Length", "0")
@@ -489,7 +498,7 @@ def handler_for(repository, editorial):
                 self.require_local_editorial()
                 path = "/prototipo/estudio/" + path.removeprefix("/estudio/")
             relative = path.lstrip("/") or "index.html"
-            if relative in {"prototipo/", "prototipo/ide/", "prototipo/oficina/", "prototipo/estudio/"}:
+            if relative in {"prototipo/", "prototipo/ide/", "prototipo/oficina/", "prototipo/estudio/", "prototipo/mesa/"}:
                 relative += "index.html"
             # Apenas os recursos publicados do site; não expõe temporario/, Git ou o banco.
             # Fontes já incorporadas à coleção de 1937; não abrir fontes/ em geral.
@@ -503,6 +512,8 @@ def handler_for(repository, editorial):
                 "pdf-frame.html", "pdf-frame.js", "pdf-frame.css", "book-frame.html", "book-frame.js", "book-frame.css", "book-view.js", "editorial-native.js", "editorial-native.css", "host-boot.js", "vendor/libraries.js",
                 "vendor/dockview.css", "vendor/pdf_viewer.css", "vendor/pdf.mjs", "vendor/bookreader-manifest.json", "vendor/bookreader-5.0.0-66.tgz",
                 "vendor/pdf.worker.mjs", "vendor/paged.polyfill.js")})
+            prototype_files.update({"prototipo/mesa/" + name for name in (
+                "index.html", "pilot.css", "app.js", "data.js", "pdf.js", "session.js", "editorial.js", "organization.js", "pdf-workflow.js", "controls.js", "preparation.js", "corpus.js", "review.js", "source-links.js", "projects.js", "passage-edit.js", "library-tools.js", "library-home.js", "parity.js")})
             prototype_files.update(bookreader_files)
             if not (relative == "index.html" or relative in {"data/manifest.json","data/facsimiles.json"} or relative in prototype_files or relative in legacy_pdfs or relative.startswith(("assets/", "originais/"))):
                 self.send_json({"error": "Recurso não publicado"}, 404)

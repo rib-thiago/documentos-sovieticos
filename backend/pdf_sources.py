@@ -102,7 +102,8 @@ class PDFSources:
             connection.close()
 
     def capabilities(self):
-        return {'extraction': importlib.util.find_spec('pypdf') is not None,
+        from .pdf_preparation import image_capabilities
+        return {'image':image_capabilities(),'extraction': importlib.util.find_spec('pypdf') is not None,
                 'installation': 'python3 -m pip install -r backend/requirements-pdf.txt',
                 'ocr': self.ocr_capabilities(), 'planned_ocr_languages': ['rus', 'eng', 'por'],
                 'max_bytes': self.max_bytes, 'max_pages': MAX_PAGES, 'pdf_operations': ['extract', 'split'], 'max_outputs': 200}

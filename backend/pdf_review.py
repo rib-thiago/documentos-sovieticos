@@ -205,6 +205,11 @@ class PDFReview:
             if type(dpi) is not int or dpi not in (150, 200, 300) or type(psm) is not int or psm not in (3, 6):
                 raise EditorialError('Use 150, 200 ou 300 DPI; segmentação automática ou bloco único')
             plan = {'source_id': source['id'], 'source_sha256': source['sha256'], 'recipe': {'version': 'ocr-v1', 'pages': pages, 'languages': languages, 'dpi': dpi, 'psm': psm, 'tessdata_dir': capabilities['tessdata_dir']}}
+            if payload.get('image_recipe') is not None:
+                from .pdf_preparation import image_recipe,image_capabilities
+                if not image_capabilities()['available']:raise EditorialError('ImageMagick indisponível para aplicar tratamento ao OCR',409)
+                plan['recipe']['image_recipe']=image_recipe(payload['image_recipe'])
+                plan['recipe']['version']='ocr-image-v1'
             return {'preview_id': self.stash('ocr', plan), **plan}
 
     def ocr_start(self, payload):

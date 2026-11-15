@@ -42,13 +42,18 @@ def run(root, job_id):
             if db.execute('SELECT 1 FROM pdf_ocr_candidates WHERE job_id=? AND page_number=?', (job_id, number)).fetchone():
                 continue
             page = reader.pages[number-1]
+            from .pdf_preparation import bounded_pixels,apply_image
+            bounded_pixels(page.mediabox.width,page.mediabox.height,recipe['dpi'],recipe.get('image_recipe'))
             w, h = float(page.mediabox.width)*recipe['dpi']/72, float(page.mediabox.height)*recipe['dpi']/72
             if max(w, h) > 10000 or w*h > 40000000:
                 raise ValueError(f'Página {number} excede o limite de imagem. Tente DPI menor.')
             with tempfile.TemporaryDirectory(prefix='ocr-', dir=Path(root)/'.local/research') as temporary:
                 prefix = str(Path(temporary)/'page')
                 subprocess.run(['pdftoppm', '-f', str(number), '-l', str(number), '-singlefile', '-r', str(recipe['dpi']), '-png', str(source), prefix], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, timeout=90, check=True)
-                subprocess.run(['tesseract', prefix+'.png', prefix, '-l', '+'.join(recipe['languages']), '--psm', str(recipe['psm'])] + (['--tessdata-dir', recipe['tessdata_dir']] if recipe.get('tessdata_dir') else []) + ['txt', 'tsv'], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, timeout=180, env=env, check=True)
+                ocr_input=prefix+'.png'
+                if recipe.get('image_recipe'):
+                    ocr_input=str(Path(temporary)/'treated.png');apply_image(prefix+'.png',ocr_input,recipe['image_recipe'])
+                subprocess.run(['tesseract', ocr_input, prefix, '-l', '+'.join(recipe['languages']), '--psm', str(recipe['psm'])] + (['--tessdata-dir', recipe['tessdata_dir']] if recipe.get('tessdata_dir') else []) + ['txt', 'tsv'], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, timeout=180, env=env, check=True)
                 raw_path, geometry_path = Path(prefix+'.txt'), Path(prefix+'.tsv')
                 if raw_path.stat().st_size > 8*1024**2 or geometry_path.stat().st_size > 16*1024**2:
                     raise ValueError('Resultado OCR excedeu o limite por página.')
@@ -56,7 +61,10 @@ def run(root, job_id):
                 if len(value) > 2000000:
                     raise ValueError('Texto OCR excedeu o limite por página.')
                 geometry = geometry_path.read_text(encoding='utf-8')
-                engine = f'{version}; {renderer_version}; ocr-v1; '+json.dumps(recipe, ensure_ascii=False)
+                engine = f'{version}; {renderer_version}; {recipe.get('version', 'ocr-v1')}; '+json.dumps(recipe, ensure_ascii=False)
+                if recipe.get('image_recipe'):
+                    from .pdf_preparation import image_engine_version
+                    engine+='; '+str(image_engine_version())
                 db.execute('INSERT INTO pdf_ocr_candidates VALUES(?,?,?,?,?,?,?,?,?)', ('ocrpage-'+__import__('secrets').token_hex(16), job_id, job['source_id'], number, value, hashlib.sha256(value.encode()).hexdigest(), engine, geometry, now()))
                 db.execute('UPDATE pdf_ocr_jobs SET updated_at=? WHERE id=?', (now(), job_id)); db.commit()
         db.execute("UPDATE pdf_ocr_jobs SET state='completed',error=NULL,updated_at=? WHERE id=?", (now(), job_id)); db.commit()
